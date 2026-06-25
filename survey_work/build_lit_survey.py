@@ -240,10 +240,36 @@ def safe_slug(value: str, max_len: int = 58) -> str:
     return value[:max_len].rstrip("-") or "paper"
 
 
+def venue_without_year(value: str) -> str:
+    value = re.sub(r"\b20\d{2}\b", "", value or "")
+    value = re.sub(r"\s+", " ", value)
+    return value.strip(" -_/")
+
+
+def venue_bucket(value: str) -> str:
+    value = venue_without_year(value)
+    value = re.sub(r"\b(SpotlightPoster|Poster|Spotlight|Oral|regular)\b", "", value, flags=re.I)
+    value = re.sub(r"\s+", " ", value)
+    return value.strip(" -_/") or "venue"
+
+
 def folder_name(paper: dict) -> str:
     short = paper.get("short") or safe_slug(paper["title"])
-    venue = safe_slug(paper["venue"], 24)
-    return f"{paper['year']}_{venue}_{short}"
+    venue = safe_slug(venue_bucket(paper["venue"]), 24)
+    return f"{paper['year']}/{venue}/{paper['year']}_{venue}_{short}"
+
+
+def venue_display(value: str) -> str:
+    label = venue_without_year(value)
+    label = re.sub(r"\bSpotlightPoster\b", "Spotlight/Poster", label, flags=re.I)
+    label = re.sub(r"\bregular\b", "", label, flags=re.I)
+    label = re.sub(r"\s+", " ", label)
+    return label.strip(" -_/") or value
+
+
+def venue_for_registry(value: str) -> str:
+    return venue_display(value)
+
 
 
 def load_cvf_map() -> dict[str, dict]:
@@ -647,9 +673,11 @@ def write_notes(p: dict) -> None:
     project = p.get("project", "not identified")
     authors = p.get("authors", "not extracted")
 
+    venue_label = venue_display(p["venue"])
+
     overview = f"""# {p['title']}
 
-- Year/Venue: {p['year']} / {p['venue']}
+- Year/Venue: {p['year']} / {venue_label}
 - Category: {p['category']}
 - Tags: {', '.join(tags)}
 - Authors: {authors}
@@ -815,7 +843,8 @@ def write_registry(papers: list[dict]) -> None:
                 proj_cell = f"[link]({proj})"
             else:
                 proj_cell = proj
-            lines.append(f"| {p['year']} | {p['venue']} | {title_link} | {', '.join(p.get('tags', []))} | {pdf_link} | {proj_cell} |")
+            venue_label = venue_for_registry(p["venue"])
+            lines.append(f"| {p['year']} | {venue_label} | {title_link} | {', '.join(p.get('tags', []))} | {pdf_link} | {proj_cell} |")
         lines.append("")
 
     lines += [
