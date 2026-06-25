@@ -1,0 +1,1233 @@
+[
+  {
+    "title": "QUAR-VLA: Vision-Language-Action Model for Quadruped Robots",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "VLA",
+      "Vision-Language Model",
+      "Robotics"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00808.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/808_ECCV_2024_paper.php",
+    "authors": "Pengxiang Ding, Han Zhao, Wenjie Zhang, Wenxuan Song, Min Zhang, Siteng Huang, Ningxi Yang, Donglin Wang*"
+  },
+  {
+    "title": "SceneVerse: Scaling 3D Vision-Language Learning for Grounded Scene Understanding",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "Vision-Language Model",
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01407.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/1407_ECCV_2024_paper.php",
+    "authors": "Baoxiong Jia*, Yixin Chen, Huangyue Yu, Yan Wang, Xuesong Niu, Tengyu Liu, Qing Li, Siyuan Huang"
+  },
+  {
+    "title": "Uni3DL: A Unified Model for 3D Vision-Language Understanding",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "Vision-Language Model",
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03330.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3330_ECCV_2024_paper.php",
+    "authors": "Xiang Li*, Jian Ding, Zhaoyang Chen, Mohamed Elhoseiny"
+  },
+  {
+    "title": "Unifying 3D Vision-Language Understanding via Promptable Queries",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "Vision-Language Model",
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06043.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/6043_ECCV_2024_paper.php",
+    "authors": "ziyu zhu*, Zhuofan Zhang, Xiaojian Ma, Xuesong Niu, Yixin Chen, Baoxiong Jia, Zhidong Deng*, Siyuan Huang*, Qing Li*"
+  },
+  {
+    "title": "3D Open-Vocabulary Panoptic Segmentation with 2D-3D Vision-Language Distillation",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "Vision-Language Model",
+      "3D Vision",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5642_ECCV_2024_paper.php",
+    "authors": "Zihao Xiao*, Longlong Jing, Shangxuan Wu, Alex Zihao Zhu, Jingwei Ji, Chiyu Max Jiang, Wei-Chih Hung, Thomas Funkhouser, Weicheng Kuo, Anelia Angelova, Yin Zhou, Shiwei Sheng"
+  },
+  {
+    "title": "3D Weakly Supervised Semantic Segmentation with 2D Vision-Language Guidance",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "Vision-Language Model",
+      "3D Vision",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09223.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/9223_ECCV_2024_paper.php",
+    "authors": "Xiaoxu Xu, Yitian Yuan, Jinlong Li, Qiudan Zhang, Zequn Jie, Lin Ma, Hao Tang, Nicu Sebe, Xu Wang*"
+  },
+  {
+    "title": "Dense Multimodal Alignment for Open-Vocabulary 3D Scene Understanding",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06612.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/6612_ECCV_2024_paper.php",
+    "authors": "Ruihuang Li*, Zhengqiang ZHANG, Chenhang He, Zhiyuan Ma, Vishal Patel, Lei Zhang"
+  },
+  {
+    "title": "Open-Vocabulary 3D Semantic Segmentation with Text-to-Image Diffusion Models",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision",
+      "Diffusion",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04252.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/4252_ECCV_2024_paper.php",
+    "authors": "Xiaoyu Zhu*, Hao Zhou, Pengfei Xing, Long Zhao, Hao Xu, Junwei Liang, Alexander G. Hauptmann, Ting Liu, Andrew Gallagher"
+  },
+  {
+    "title": "Global-Local Collaborative Inference with LLM for Lidar-Based Open-Vocabulary Detection",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5197_ECCV_2024_paper.php",
+    "authors": "Xingyu Peng, Yan Bai, Chen Gao, Lirong Yang, Fei Xia, Beipeng Mu, Xiaofei Wang, Si Liu*"
+  },
+  {
+    "title": "ManiGaussian: Dynamic Gaussian Splatting for Multi-task Robotic Manipulation",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "Robotics",
+      "Gaussian Splatting"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05194.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5194_ECCV_2024_paper.php",
+    "authors": "Guanxing Lu, Shiyi Zhang, Ziwei Wang*, Changliu Liu, Jiwen Lu, Yansong Tang"
+  },
+  {
+    "title": "NavGPT-2: Unleashing Navigational Reasoning Capability for Large Vision-Language Models",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "Navigation and Embodied AI",
+    "tags": [
+      "Vision-Language Model",
+      "Navigation"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01143.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/1143_ECCV_2024_paper.php",
+    "authors": "Gengze Zhou*, Yicong Hong, Zun Wang, Xin Eric Wang, Qi Wu"
+  },
+  {
+    "title": "SceneGraphLoc: Cross-Modal Coarse Visual Localization on 3D Scene Graphs",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Scene Graphs and Graph Reasoning",
+    "tags": [
+      "3D Vision",
+      "Graph Reasoning"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/1255_ECCV_2024_paper.php",
+    "authors": "Yang Miao, Francis Engelmann, Olga Vysotska, Federico Tombari, Marc Pollefeys, Daniel Barath*"
+  },
+  {
+    "title": "Heterogeneous Graph Learning for Scene Graph Prediction in 3D Point Clouds",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Scene Graphs and Graph Reasoning",
+    "tags": [
+      "3D Vision",
+      "Graph Reasoning"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03785.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3785_ECCV_2024_paper.php",
+    "authors": "Yanni Ma, Hao Liu, Yun Pei, Yulan Guo*"
+  },
+  {
+    "title": "OpenIns3D: Snap and Lookup for 3D Open-vocabulary Instance Segmentation",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07914.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/7914_ECCV_2024_paper.php",
+    "authors": "Zhening Huang, Xiaoyang Wu, Xi Chen, Hengshuang Zhao*, Lei Zhu, Joan Lasenby*"
+  },
+  {
+    "title": "SGS-SLAM: Semantic Gaussian Splatting For Neural Dense SLAM",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04516.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/4516_ECCV_2024_paper.php",
+    "authors": "Mingrui Li, Shuhong Liu, Heng Zhou, Guohao Zhu, Na Cheng, Tianchen Deng, Hongyu Wang*"
+  },
+  {
+    "title": "TCLC-GS: Tightly Coupled LiDAR-Camera Gaussian Splatting for Autonomous Driving",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "Gaussian Splatting"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07983.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/7983_ECCV_2024_paper.php",
+    "authors": "Cheng Zhao*, su sun, Ruoyu Wang, Yuliang Guo, Jun-Jun Wan, Zhou Huang, Xinyu Huang, Yingjie Victor Chen, Liu Ren"
+  },
+  {
+    "title": "GaussianFormer: Scene as Gaussians for Vision-Based 3D Semantic Occupancy Prediction",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "3D Vision",
+      "Gaussian Splatting",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03958.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3958_ECCV_2024_paper.php",
+    "authors": "Yuanhui Huang, Wenzhao Zheng, Yunpeng Zhang, Jie Zhou, Jiwen Lu*"
+  },
+  {
+    "title": "DreamScene360: Unconstrained Text-to-3D Scene Generation with Panoramic Gaussian Splatting",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "3D Vision",
+      "Gaussian Splatting"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/996_ECCV_2024_paper.php",
+    "authors": "Shijie Zhou*, Zhiwen Fan, Dejia Xu, Haoran Chang, Pradyumna Chari, Tejas K Bharadwaj, Suya You, Zhangyang Wang, Achuta Kadambi"
+  },
+  {
+    "title": "EchoScene: Indoor Scene Generation via Information Echo over Scene Graph Diffusion",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Scene Graphs and Graph Reasoning",
+    "tags": [
+      "Graph Reasoning",
+      "Diffusion"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03146.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3146_ECCV_2024_paper.php",
+    "authors": "Guangyao Zhai*, Evin Pınar Örnek, Dave Zhenyu Chen, Ruotong Liao, Yan Di, Nassir Navab, Federico Tombari, Benjamin Busam"
+  },
+  {
+    "title": "BlenderAlchemy: Editing 3D Graphics with Vision-Language Models",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "Vision-Language Model",
+      "3D Vision",
+      "Graph Reasoning"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/12578.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/12578_ECCV_2024_paper.php",
+    "authors": "Ian Huang*, Guandao Yang, Leonidas Guibas"
+  },
+  {
+    "title": "Exploiting Semantic Reconstruction to Mitigate Hallucinations in Vision-Language Models",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "Vision-Language Model",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/11636.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/11636_ECCV_2024_paper.php",
+    "authors": "Minchan Kim, Minyeong Kim, Junik Bae, Suhwan Choi, Sungkyung Kim, Buru Chang*"
+  },
+  {
+    "title": "Egocentric Action-aware Inertial Localization in Point Clouds with Vision-Language Guidance",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "Vision-Language Model"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.html"
+  },
+  {
+    "title": "Identity-aware Language Gaussian Splatting for Open-vocabulary 3D Semantic Segmentation",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "3D Vision",
+      "Gaussian Splatting",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Jang_Identity-aware_Language_Gaussian_Splatting_for_Open-vocabulary_3D_Semantic_Segmentation_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Jang_Identity-aware_Language_Gaussian_Splatting_for_Open-vocabulary_3D_Semantic_Segmentation_ICCV_2025_paper.html"
+  },
+  {
+    "title": "Baking Gaussian Splatting into Diffusion Denoiser for Fast and Scalable Single-stage Image-to-3D Generation and Reconstruction",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "3D Vision",
+      "Gaussian Splatting",
+      "Diffusion"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Cai_Baking_Gaussian_Splatting_into_Diffusion_Denoiser_for_Fast_and_Scalable_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Cai_Baking_Gaussian_Splatting_into_Diffusion_Denoiser_for_Fast_and_Scalable_ICCV_2025_paper.html"
+  },
+  {
+    "title": "OV-SCAN: Semantically Consistent Alignment for Novel Object Discovery in Open-Vocabulary 3D Object Detection",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Chow_OV-SCAN_Semantically_Consistent_Alignment_for_Novel_Object_Discovery_in_Open-Vocabulary_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Chow_OV-SCAN_Semantically_Consistent_Alignment_for_Novel_Object_Discovery_in_Open-Vocabulary_ICCV_2025_paper.html"
+  },
+  {
+    "title": "CCL-LGS: Contrastive Codebook Learning for 3D Language Gaussian Splatting",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "3D Vision",
+      "Gaussian Splatting"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.html"
+  },
+  {
+    "title": "CLIP-GS: Unifying Vision-Language Representation with 3D Gaussian Splatting",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "Vision-Language Model",
+      "3D Vision",
+      "Gaussian Splatting"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Jiao_CLIP-GS_Unifying_Vision-Language_Representation_with_3D_Gaussian_Splatting_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Jiao_CLIP-GS_Unifying_Vision-Language_Representation_with_3D_Gaussian_Splatting_ICCV_2025_paper.html"
+  },
+  {
+    "title": "DiSCO-3D : Discovering and Segmenting Sub-Concepts from Open-vocabulary Queries in NeRF",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "3D Vision",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Petit_DiSCO-3D__Discovering_and_Segmenting_Sub-Concepts_from_Open-vocabulary_Queries_in_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Petit_DiSCO-3D__Discovering_and_Segmenting_Sub-Concepts_from_Open-vocabulary_Queries_in_ICCV_2025_paper.html"
+  },
+  {
+    "title": "EmbodiedOcc: Embodied 3D Occupancy Prediction for Vision-based Online Scene Understanding",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.html"
+  },
+  {
+    "title": "FedVLA: Federated Vision-Language-Action Learning with Dual Gating Mixture-of-Experts for Robotic Manipulation",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "VLA",
+      "Vision-Language Model",
+      "Robotics"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Miao_FedVLA_Federated_Vision-Language-Action_Learning_with_Dual_Gating_Mixture-of-Experts_for_Robotic_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Miao_FedVLA_Federated_Vision-Language-Action_Learning_with_Dual_Gating_Mixture-of-Experts_for_Robotic_ICCV_2025_paper.html"
+  },
+  {
+    "title": "GroundFlow: A Plug-in Module for Temporal Reasoning on 3D Point Cloud Sequential Grounding",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Vision-Language Grounding",
+    "tags": [
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Lin_GroundFlow_A_Plug-in_Module_for_Temporal_Reasoning_on_3D_Point_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Lin_GroundFlow_A_Plug-in_Module_for_Temporal_Reasoning_on_3D_Point_ICCV_2025_paper.html"
+  },
+  {
+    "title": "IGL-Nav: Incremental 3D Gaussian Localization for Image-goal Navigation",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Navigation and Embodied AI",
+    "tags": [
+      "3D Vision",
+      "Navigation",
+      "Gaussian Splatting"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.html"
+  },
+  {
+    "title": "LangScene-X: Reconstruct Generalizable 3D Language-Embedded Scenes with TriMap Video Diffusion",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision",
+      "Diffusion"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Liu_LangScene-X_Reconstruct_Generalizable_3D_Language-Embedded_Scenes_with_TriMap_Video_Diffusion_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Liu_LangScene-X_Reconstruct_Generalizable_3D_Language-Embedded_Scenes_with_TriMap_Video_Diffusion_ICCV_2025_paper.html"
+  },
+  {
+    "title": "ORION: A Holistic End-to-End Autonomous Driving Framework by Vision-Language Instructed Action Generation",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "Vision-Language Model"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Fu_ORION_A_Holistic_End-to-End_Autonomous_Driving_Framework_by_Vision-Language_Instructed_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Fu_ORION_A_Holistic_End-to-End_Autonomous_Driving_Framework_by_Vision-Language_Instructed_ICCV_2025_paper.html"
+  },
+  {
+    "title": "PhysSplat: Efficient Physics Simulation for 3D Scenes via MLLM-Guided Gaussian Splatting",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "3D Vision",
+      "Gaussian Splatting"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Zhao_PhysSplat_Efficient_Physics_Simulation_for_3D_Scenes_via_MLLM-Guided_Gaussian_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Zhao_PhysSplat_Efficient_Physics_Simulation_for_3D_Scenes_via_MLLM-Guided_Gaussian_ICCV_2025_paper.html"
+  },
+  {
+    "title": "CoA-VLA: Improving Vision-Language-Action Models via Visual-Text Chain-of-Affordance",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "VLA",
+      "Vision-Language Model"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.html"
+  },
+  {
+    "title": "Details Matter for Indoor Open-vocabulary 3D Instance Segmentation",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.html"
+  },
+  {
+    "title": "Exploiting Vision Language Model for Training-Free 3D Point Cloud OOD Detection via Graph Score Propagation",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision",
+      "Graph Reasoning"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_Exploiting_Vision_Language_Model_for_Training-Free_3D_Point_Cloud_OOD_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Chen_Exploiting_Vision_Language_Model_for_Training-Free_3D_Point_Cloud_OOD_ICCV_2025_paper.html"
+  },
+  {
+    "title": "Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "VLA",
+      "Vision-Language Model",
+      "Robotics"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.html"
+  },
+  {
+    "title": "GeoProg3D: Compositional Visual Reasoning for City-Scale 3D Language Fields",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Yasuki_GeoProg3D_Compositional_Visual_Reasoning_for_City-Scale_3D_Language_Fields_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Yasuki_GeoProg3D_Compositional_Visual_Reasoning_for_City-Scale_3D_Language_Fields_ICCV_2025_paper.html"
+  },
+  {
+    "title": "Kestrel: 3D Multimodal LLM for Part-Aware Grounded Description",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Ahmed_Kestrel_3D_Multimodal_LLM_for_Part-Aware_Grounded_Description_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Ahmed_Kestrel_3D_Multimodal_LLM_for_Part-Aware_Grounded_Description_ICCV_2025_paper.html"
+  },
+  {
+    "title": "LIRA: Reasoning Reconstruction via Multimodal Large Language Models",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision",
+      "Vision-Language"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_LIRA_Reasoning_Reconstruction_via_Multimodal_Large_Language_Models_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Zhou_LIRA_Reasoning_Reconstruction_via_Multimodal_Large_Language_Models_ICCV_2025_paper.html"
+  },
+  {
+    "title": "MM-Spatial: Exploring 3D Spatial Understanding in Multimodal LLMs",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.html"
+  },
+  {
+    "title": "Moto: Latent Motion Token as the Bridging Language for Learning Robot Manipulation from Videos",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "Robotics"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_Moto_Latent_Motion_Token_as_the_Bridging_Language_for_Learning_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Chen_Moto_Latent_Motion_Token_as_the_Bridging_Language_for_Learning_ICCV_2025_paper.html"
+  },
+  {
+    "title": "OVA-Fields: Weakly Supervised Open-Vocabulary Affordance Fields for Robot Operational Part Detection",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "Robotics",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Su_OVA-Fields_Weakly_Supervised_Open-Vocabulary_Affordance_Fields_for_Robot_Operational_Part_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Su_OVA-Fields_Weakly_Supervised_Open-Vocabulary_Affordance_Fields_for_Robot_Operational_Part_ICCV_2025_paper.html"
+  },
+  {
+    "title": "Open-Vocabulary Octree-Graph for 3D Scene Understanding",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision",
+      "Graph Reasoning",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.html"
+  },
+  {
+    "title": "Towards Long-Horizon Vision-Language-Action System: Reasoning, Acting and Memory",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "VLA",
+      "Vision-Language Model"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Li_Towards_Long-Horizon_Vision-Language-Action_System_Reasoning_Acting_and_Memory_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Li_Towards_Long-Horizon_Vision-Language-Action_System_Reasoning_Acting_and_Memory_ICCV_2025_paper.html"
+  },
+  {
+    "title": "VGMamba: Attribute-to-Location Clue Reasoning for Quantity-Agnostic 3D Visual Grounding",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Vision-Language Grounding",
+    "tags": [
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_VGMamba_Attribute-to-Location_Clue_Reasoning_for_Quantity-Agnostic_3D_Visual_Grounding_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Zhu_VGMamba_Attribute-to-Location_Clue_Reasoning_for_Quantity-Agnostic_3D_Visual_Grounding_ICCV_2025_paper.html"
+  },
+  {
+    "title": "VLR-Driver: Large Vision-Language-Reasoning Models for Embodied Autonomous Driving",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "Vision-Language Model"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.html"
+  },
+  {
+    "title": "VQ-VLA: Improving Vision-Language-Action Models via Scaling Vector-Quantized Action Tokenizers",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "VLA",
+      "Vision-Language Model"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.html"
+  },
+  {
+    "title": "ViewSRD: 3D Visual Grounding via Structured Multi-View Decomposition",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Vision-Language Grounding",
+    "tags": [
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Huang_ViewSRD_3D_Visual_Grounding_via_Structured_Multi-View_Decomposition_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Huang_ViewSRD_3D_Visual_Grounding_via_Structured_Multi-View_Decomposition_ICCV_2025_paper.html"
+  },
+  {
+    "title": "Mamba-3VL: Taming State Space Model for 3D Vision Language Learning",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.html"
+  },
+  {
+    "title": "MeshLLM: Empowering Large Language Models to Progressively Understand and Generate 3D Mesh",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.html"
+  },
+  {
+    "title": "On-Device Diffusion Transformer Policy for Efficient Robot Manipulation",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "Robotics",
+      "Diffusion"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_On-Device_Diffusion_Transformer_Policy_for_Efficient_Robot_Manipulation_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Wu_On-Device_Diffusion_Transformer_Policy_for_Efficient_Robot_Manipulation_ICCV_2025_paper.html"
+  },
+  {
+    "title": "PASG: A Closed-Loop Framework for Automated Geometric Primitive Extraction and Semantic Anchoring in Robotic Manipulation",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "Robotics",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_PASG_A_Closed-Loop_Framework_for_Automated_Geometric_Primitive_Extraction_and_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Zhu_PASG_A_Closed-Loop_Framework_for_Automated_Geometric_Primitive_Extraction_and_ICCV_2025_paper.html"
+  },
+  {
+    "title": "PlaceIt3D: Language-Guided Object Placement in Real 3D Scenes",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.html"
+  },
+  {
+    "title": "Boost 3D Reconstruction using Diffusion-based Monocular Camera Calibration",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision",
+      "Diffusion"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.html"
+  },
+  {
+    "title": "FROSS: Faster-Than-Real-Time Online 3D Semantic Scene Graph Generation from RGB-D Images",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Scene Graphs and Graph Reasoning",
+    "tags": [
+      "3D Vision",
+      "Graph Reasoning",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.html"
+  },
+  {
+    "title": "Vision-Language Interactive Relation Mining for Open-Vocabulary Scene Graph Generation",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Scene Graphs and Graph Reasoning",
+    "tags": [
+      "Vision-Language Model",
+      "Graph Reasoning",
+      "semantic"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.html"
+  },
+  {
+    "title": "ZeroKey: Point-Level Reasoning and Zero-Shot 3D Keypoint Detection from Large Language Models",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Gong_ZeroKey_Point-Level_Reasoning_and_Zero-Shot_3D_Keypoint_Detection_from_Large_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Gong_ZeroKey_Point-Level_Reasoning_and_Zero-Shot_3D_Keypoint_Detection_from_Large_ICCV_2025_paper.html"
+  },
+  {
+    "title": "LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models",
+    "year": 2026,
+    "venue": "ECCV 2026",
+    "category": "Benchmarks and Datasets",
+    "tags": [
+      "VLA",
+      "Vision-Language Model",
+      "Benchmark",
+      "semantic"
+    ],
+    "project": "https://libero-safety.github.io/",
+    "arxiv": "2606.23686"
+  },
+  {
+    "title": "VLA Knows Its Limits: Adaptive Execution Horizons for Robot Policies",
+    "year": 2026,
+    "venue": "ECCV 2026",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "VLA",
+      "Robotics"
+    ],
+    "project": "https://hatchetproject.github.io/",
+    "arxiv": "2602.21445"
+  },
+  {
+    "title": "PolicyTrim: Boosting Intrinsic Policy Efficiency of Vision-Language-Action Models",
+    "year": 2026,
+    "venue": "ECCV 2026",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "VLA",
+      "Vision-Language Model"
+    ],
+    "project": "https://inceptionwang.github.io/PolicyTrim/",
+    "arxiv": "2606.22540"
+  },
+  {
+    "title": "GaussianGrasper: 3D Language Gaussian Splatting for Open-vocabulary Robotic Grasping",
+    "year": 2024,
+    "venue": "RA-L",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "Robotics",
+      "3D Vision",
+      "Gaussian Splatting",
+      "semantic"
+    ],
+    "project": "https://github.com/MrSecant/GaussianGrasper",
+    "arxiv": "2403.09637"
+  },
+  {
+    "title": "Clio: Real-time Task-Driven Open-Set 3D Scene Graphs",
+    "year": 2024,
+    "venue": "RA-L",
+    "category": "3D Scene Graphs and Graph Reasoning",
+    "tags": [
+      "3D Vision",
+      "Graph Reasoning"
+    ],
+    "project": "https://github.com/MIT-SPARK/Clio",
+    "arxiv": "2404.13696"
+  },
+  {
+    "title": "FM-Fusion: Instance-aware Semantic Mapping Boosted by Vision-Language Foundation Models",
+    "year": 2024,
+    "venue": "RA-L",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "Vision-Language Model",
+      "semantic"
+    ],
+    "project": "https://github.com/HKUST-Aerial-Robotics/FM-Fusion",
+    "arxiv": "2402.04555"
+  },
+  {
+    "title": "Language-Grounded Dynamic Scene Graphs for Interactive Object Search with Mobile Manipulation",
+    "year": 2024,
+    "venue": "RA-L",
+    "category": "3D Scene Graphs and Graph Reasoning",
+    "tags": [
+      "Robotics",
+      "Graph Reasoning"
+    ],
+    "project": "https://moma-llm.cs.uni-freiburg.de/",
+    "arxiv": "2403.08605"
+  },
+  {
+    "title": "S3E: A Multi-Robot Multimodal Dataset for Collaborative SLAM",
+    "year": 2024,
+    "venue": "RA-L",
+    "category": "Benchmarks and Datasets",
+    "tags": [
+      "Robotics"
+    ],
+    "project": "https://pengyu-team.github.io/S3E/",
+    "arxiv": "2210.13723"
+  },
+  {
+    "title": "Search3D: Hierarchical Open-Vocabulary 3D Segmentation",
+    "year": 2025,
+    "venue": "RA-L",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision",
+      "semantic"
+    ],
+    "project": "http://search3d-segmentation.github.io/",
+    "arxiv": "2409.18431"
+  },
+  {
+    "title": "TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
+    "year": 2025,
+    "venue": "RA-L",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "VLA",
+      "Vision-Language Model",
+      "Robotics"
+    ],
+    "project": "https://tiny-vla.github.io/",
+    "arxiv": "2409.12514"
+  },
+  {
+    "title": "Dynamic Open-Vocabulary 3D Scene Graphs for Long-term Language-Guided Mobile Manipulation",
+    "year": 2025,
+    "venue": "RA-L",
+    "category": "3D Scene Graphs and Graph Reasoning",
+    "tags": [
+      "Robotics",
+      "3D Vision",
+      "Graph Reasoning",
+      "semantic"
+    ],
+    "project": "https://github.com/BJHYZJ/DovSG",
+    "arxiv": "2410.11989"
+  },
+  {
+    "title": "HAMMER: Heterogeneous, Multi-Robot Semantic Gaussian Splatting",
+    "year": 2025,
+    "venue": "RA-L",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "Robotics",
+      "Gaussian Splatting",
+      "semantic"
+    ],
+    "project": "https://hammer-project.github.io/",
+    "arxiv": "2501.14147"
+  },
+  {
+    "title": "ActiveGS: Active Scene Reconstruction using Gaussian Splatting",
+    "year": 2025,
+    "venue": "RA-L",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "Gaussian Splatting"
+    ],
+    "project": "https://github.com/dmar-bonn/active-gs",
+    "arxiv": "2412.17769"
+  },
+  {
+    "title": "PointVLA: Injecting the 3D World into Vision-Language-Action Models",
+    "year": 2026,
+    "venue": "RA-L",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "VLA",
+      "Vision-Language Model",
+      "3D Vision",
+      "Reinforcement Learning"
+    ],
+    "project": "not identified",
+    "arxiv": "2503.07511"
+  },
+  {
+    "title": "LAMP: Implicit Language Map for Robot Navigation",
+    "year": 2026,
+    "venue": "RA-L",
+    "category": "Navigation and Embodied AI",
+    "tags": [
+      "Robotics",
+      "Navigation"
+    ],
+    "project": "https://lab-of-ai-and-robotics.github.io/LAMP/",
+    "arxiv": "2602.11862"
+  },
+  {
+    "title": "CLARE: Continual Learning for Vision-Language-Action Models via Autonomous Adapter Routing and Expansion",
+    "year": 2026,
+    "venue": "RA-L",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "VLA",
+      "Vision-Language Model"
+    ],
+    "project": "https://tum-lsy.github.io/CLARE/",
+    "arxiv": "2601.09512"
+  },
+  {
+    "title": "ReaDy-Go: Real-to-Sim Dynamic 3D Gaussian Splatting Simulation for Environment-Specific Visual Navigation with Moving Obstacles",
+    "year": 2026,
+    "venue": "RA-L",
+    "category": "Navigation and Embodied AI",
+    "tags": [
+      "3D Vision",
+      "Navigation",
+      "Gaussian Splatting"
+    ],
+    "project": "https://syeon-yoo.github.io/readygo/",
+    "arxiv": "2602.11575"
+  },
+  {
+    "title": "Compact Object-Level Representations with Open-Vocabulary Understanding for Indoor Visual Relocalization",
+    "year": 2026,
+    "venue": "RA-L",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "semantic"
+    ],
+    "project": "not identified",
+    "arxiv": "2606.24767"
+  },
+  {
+    "title": "VLM See, Robot Do: Human Demo Video to Robot Action Plan via Vision Language Model",
+    "year": 2025,
+    "venue": "IROS 2025",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "Vision-Language Model",
+      "Robotics"
+    ],
+    "project": "https://ai4ce.github.io/SeeDo/",
+    "arxiv": "2410.08792"
+  },
+  {
+    "title": "PD-VLA: Accelerating Vision-Language-Action Model Integrated with Action Chunking via Parallel Decoding",
+    "year": 2025,
+    "venue": "IROS 2025",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "VLA",
+      "Vision-Language Model"
+    ],
+    "project": "not identified",
+    "arxiv": "2503.02310"
+  },
+  {
+    "title": "WMNav: Integrating Vision-Language Models into World Models for Object Goal Navigation",
+    "year": 2025,
+    "venue": "IROS 2025",
+    "category": "Navigation and Embodied AI",
+    "tags": [
+      "Vision-Language Model",
+      "Navigation",
+      "Reinforcement Learning"
+    ],
+    "project": "https://b0b8k1ng.github.io/WMNav/",
+    "arxiv": "2503.02247"
+  },
+  {
+    "title": "Helpful DoggyBot: Open-World Object Fetching using Legged Robots and Vision-Language Models",
+    "year": 2025,
+    "venue": "IROS 2025",
+    "category": "Vision-Language-Action and Robot Manipulation",
+    "tags": [
+      "Vision-Language Model",
+      "Robotics",
+      "Reinforcement Learning"
+    ],
+    "project": "https://helpful-doggybot.github.io/",
+    "arxiv": "2410.00231"
+  },
+  {
+    "title": "OpenGS-Fusion: Open-Vocabulary Dense Mapping with Hybrid 3D Gaussian Splatting for Refined Object-Level Understanding",
+    "year": 2025,
+    "venue": "IROS 2025",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "3D Vision",
+      "Gaussian Splatting",
+      "semantic"
+    ],
+    "project": "not identified",
+    "arxiv": "2508.01150"
+  },
+  {
+    "title": "LiV-GS: LiDAR-Vision Integration for 3D Gaussian Splatting SLAM in Outdoor Environments",
+    "year": 2025,
+    "venue": "IROS 2025",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "3D Vision",
+      "Gaussian Splatting"
+    ],
+    "project": "not identified",
+    "arxiv": "2411.12185"
+  },
+  {
+    "title": "MR-COGraphs: Communication-efficient Multi-Robot Open-vocabulary Mapping System via 3D Scene Graphs",
+    "year": 2025,
+    "venue": "IROS 2025",
+    "category": "3D Scene Graphs and Graph Reasoning",
+    "tags": [
+      "Robotics",
+      "3D Vision",
+      "Graph Reasoning",
+      "semantic"
+    ],
+    "project": "not identified",
+    "arxiv": "2412.18381"
+  },
+  {
+    "title": "Splat-Nav: Safe Real-Time Robot Navigation in Gaussian Splatting Maps",
+    "year": 2025,
+    "venue": "IROS 2025",
+    "category": "Navigation and Embodied AI",
+    "tags": [
+      "Robotics",
+      "Navigation",
+      "Gaussian Splatting"
+    ],
+    "project": "not identified",
+    "arxiv": "2403.02751"
+  },
+  {
+    "title": "OpenObject-NAV: Open-Vocabulary Object-Oriented Navigation Based on Dynamic Carrier-Relationship Scene Graph",
+    "year": 2025,
+    "venue": "IROS 2025",
+    "category": "Navigation and Embodied AI",
+    "tags": [
+      "Navigation",
+      "Graph Reasoning",
+      "semantic"
+    ],
+    "project": "not identified",
+    "arxiv": "2409.18743"
+  },
+  {
+    "title": "SORT3D: Spatial Object-centric Reasoning Toolbox for Zero-Shot 3D Grounding Using Large Language Models",
+    "year": 2025,
+    "venue": "IROS 2025",
+    "category": "3D Vision-Language Grounding",
+    "tags": [
+      "3D Vision"
+    ],
+    "project": "not identified",
+    "arxiv": "2504.18684"
+  },
+  {
+    "title": "FunGraph: Functionality Aware 3D Scene Graphs for Language-Prompted Scene Interaction",
+    "year": 2025,
+    "venue": "IROS 2025",
+    "category": "3D Scene Graphs and Graph Reasoning",
+    "tags": [
+      "3D Vision",
+      "Graph Reasoning"
+    ],
+    "project": "not identified",
+    "arxiv": "2503.07909"
+  },
+  {
+    "title": "FOCI: Trajectory Optimization on Gaussian Splats",
+    "year": 2025,
+    "venue": "IROS 2025",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "Gaussian Splatting"
+    ],
+    "project": "https://rffr.leggedrobotics.com/works/foci/",
+    "arxiv": "2505.08510"
+  },
+  {
+    "title": "GSplatVNM: Point-of-View Synthesis for Visual Navigation Models Using Gaussian Splatting",
+    "year": 2025,
+    "venue": "IROS 2025",
+    "category": "Navigation and Embodied AI",
+    "tags": [
+      "Navigation",
+      "Gaussian Splatting"
+    ],
+    "project": "not identified",
+    "arxiv": "2503.05152"
+  },
+  {
+    "title": "GRaD-Nav: Efficiently Learning Visual Drone Navigation with Gaussian Radiance Fields and Differentiable Dynamics",
+    "year": 2025,
+    "venue": "IROS 2025",
+    "category": "Navigation and Embodied AI",
+    "tags": [
+      "Navigation",
+      "Gaussian Splatting"
+    ],
+    "project": "https://qianzhong-chen.github.io/gradnav.github.io/",
+    "arxiv": "2503.03984"
+  },
+  {
+    "title": "LIT-GS: LiDAR-Inertial-Thermal Gaussian Splatting for Illumination-Robust Mapping",
+    "year": 2026,
+    "venue": "IROS 2026",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "Gaussian Splatting"
+    ],
+    "project": "not identified",
+    "arxiv": "2606.20424"
+  },
+  {
+    "title": "FAST-LIVGO: A Degeneracy-Robust LiDAR-Inertial-Visual-GNSS Fusion Odometry",
+    "year": 2026,
+    "venue": "IROS 2026",
+    "category": "3D Large Multimodal Models",
+    "tags": [
+      "3D Vision",
+      "Vision-Language"
+    ],
+    "project": "not identified",
+    "arxiv": "2606.19190"
+  },
+  {
+    "title": "SAGE-Nav: Leveraging LLM Planning and Alignment Fusion for Hierarchical Scene Graph-Guided Navigation",
+    "year": 2026,
+    "venue": "IROS 2026",
+    "category": "Navigation and Embodied AI",
+    "tags": [
+      "Navigation",
+      "Graph Reasoning"
+    ],
+    "project": "not identified",
+    "arxiv": "2606.25497"
+  }
+]

@@ -1,0 +1,30 @@
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Python / cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.cache/
+
+# Logs / temp
+*.log
+tmp/
+temp/
+
+# Large or generated files
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.mp4
+*.mov
+*.avi
+
+# Optional: downloaded paper PDFs
+# If you want to upload only your own notes/reviews, keep this enabled.
+*.pdf
