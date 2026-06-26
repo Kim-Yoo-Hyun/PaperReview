@@ -3,7 +3,7 @@
 - Year/Venue: 2026 / CVPR
 - Category: Navigation and Embodied AI
 - Tags: 3D Vision, Vision-Language, Planning, Navigation
-- Authors: Zihan Wang, Seungjun Lee, Guangzhao Dai, Gim Hee Lee ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026, pp. 32463-32474
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2026/html/Wang_D3D-VLP_Dynamic_3D_Vision-Language-Planning_Model_for_Embodied_Grounding_and_Navigation_CVPR_2026_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Embodied agents face a critical dilemma that end-to-end models lack interpretability and explicit 3D reasoning, while modular systems ignore cross-component interdependencies and synergies.
-- Method cue: To bridge this gap, we propose the Dynamic 3D Vision-Language-Planning Model (D3D-VLP).
-- Result cue: Our D3D-VLP achieves state-of-the-art results on multiple benchmarks, including Vision-and-Language Navigation (R2R-CE, REVERIE-CE, NavRAG-CE), Object-goal Navigation (HM3D-OVON), and Task-oriented Sequential Grounding and Navigation (SG3D).
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language/navigation goal plus egocentric observations or 3D maps. Output: waypoint, action, route, or grounded target decision.
@@ -32,4 +32,3 @@ Input: language/navigation goal plus egocentric observations or 3D maps. Output:
 ## Contribution
 - embodied navigation and spatial planning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: 3D Vision, Vision-Language, Planning, Navigation.
-- 초록에서 확인되는 주요 cue: Embodied, Dynamic, Vision-Language-Planning, Model, D3D-VLP, Our, Chain-of-Thought, CoT.

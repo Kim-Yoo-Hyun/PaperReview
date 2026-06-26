@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: Open-Vocabulary 3D Mapping
 - Tags: point-language, open-world, semantic
-- Authors: Jihan Yang, Runyu Ding, Weipeng Deng, Zhe Wang, Xiaojuan Qi ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024, pp. 19823-19832
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Yang_RegionPLC_Regional_Point-Language_Contrastive_Learning_for_Open-World_3D_Scene_Understanding_CVPR_2024_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: We propose a lightweight and scalable Regional Point-Language Contrastive learning framework namely RegionPLC for open-world 3D scene understanding aiming to identify and recognize open-set ...
-- Method cue: We propose a lightweight and scalable Regional Point-Language Contrastive learning framework namely RegionPLC for open-world 3D scene understanding aiming to identify and recognize open-set ...
-- Result cue: We carry out extensive experiments on ScanNet ScanNet200 and nuScenes datasets and our model outperforms prior 3D open-world scene understanding approaches by an average ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input/Output follows the paper task formulation; see PDF for the exact interface.
@@ -32,4 +32,3 @@ Input/Output follows the paper task formulation; see PDF for the exact interface
 ## Contribution
 - open-vocabulary 3D semantic understanding 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: point-language, open-world, semantic.
-- 초록에서 확인되는 주요 cue: Regional, Point-Language, Contrastive, RegionPLC, Specifically, SFusion, Subsequently, ScanNet.

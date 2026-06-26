@@ -3,7 +3,7 @@
 - Year/Venue: 2025 / CVPR
 - Category: Equivariance, Diffusion, and 3D Action
 - Tags: Diffusion, Robotics, 3D action
-- Authors: Jingyi Tian, Le Wang, Sanping Zhou, Sen Wang, Jiayi Li, Haowen Sun, Wei Tang ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025, pp. 15757-15767
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2025/html/Tian_PDFactor_Learning_Tri-Perspective_View_Policy_Diffusion_Field_for_Multi-Task_Robotic_CVPR_2025_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Robotic manipulation based on visual observations and natural language instructions is a long-standing challenge in robotics.
-- Method cue: In response, we propose PDFactor, a novel framework that models action distribution with a hybrid triplane representation.
-- Result cue: Yet prevailing approaches model action distribution by adopting explicit or implicit representations, which often struggle to achieve a trade-off between accuracy and efficiency.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - diffusion-based generation or policy learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Diffusion, Robotics, 3D action.
-- 초록에서 확인되는 주요 cue: Robotic, Yet, PDFactor, DoF, This, Experiments, RLBench, Moreover.

@@ -15,9 +15,9 @@
 핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: "We present EchoScene, an interactive and controllable generative model that generates 3D indoor scenes on scene graphs.
-- Method cue: "We present EchoScene, an interactive and controllable generative model that generates 3D indoor scenes on scene graphs.
-- Result cue: This is achieved through an information echo scheme in both shape and layout branches.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input/Output follows the paper task formulation; see PDF for the exact interface.
@@ -32,4 +32,3 @@ Input/Output follows the paper task formulation; see PDF for the exact interface
 ## Contribution
 - diffusion-based generation or policy learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Graph Reasoning, Diffusion.
-- 초록에서 확인되는 주요 cue: EchoScene, Existing, This, The, Extensive, Moreover, Our.

@@ -17,7 +17,7 @@ Recall@K, mean Recall@K, relationship accuracy, zero-shot relation accuracy, IoU
 - 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
 
 ## Main Results
-- Abstract result cue: Extensive evaluations in the i-THOR and RoboTHOR environments demonstrate that SAGE-Nav achieves state-of-the-art performance, delivering substantial gains in navigation efficiency and zero-shot generalization while ...
+- Abstract result cue: 자동 추출 없음.
 - 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
 
 ## Reproducibility Notes

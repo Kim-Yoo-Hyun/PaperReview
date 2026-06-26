@@ -17,7 +17,7 @@ task-specific accuracy, generalization gap, ablation metrics, IoU, AP, success r
 - 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
 
 ## Main Results
-- Abstract result cue: Despite its potential, straightforward adoption of Mamba to 3D-VL tasks encounters two obstacles: (1) how to perceive the position of 3D objects and understand ...
+- Abstract result cue: 자동 추출 없음.
 - 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
 
 ## Reproducibility Notes

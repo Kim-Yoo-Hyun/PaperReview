@@ -3,7 +3,7 @@
 - Year/Venue: 2025 / WACV
 - Category: 3D Large Multimodal Models
 - Tags: LLM, 3D visual reasoning, Vision-Language
-- Authors: Rao Fu, Jingyu Liu, Xilun Chen, Yixin Nie, Wenhan Xiong ; Proceedings of the Winter Conference on Applications of Computer Vision (WACV), 2025, pp. 2195-2206
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/WACV2025/html/Fu_Scene-LLM_Extending_Language_Model_for_3D_Visual_Reasoning_WACV_2025_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@ VLM/LLM은 강한 semantic prior를 갖지만 3D 위치, 거리, 관점, afforda
 핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: This paper introduces Scene-LLM a 3D-visual-language model that enhances embodied agents' abilities in interactive 3D indoor environments by integrating the reasoning strengths of Large ...
-- Method cue: Unique to our approach is the integration of both scene-level and egocentric 3D information with a compact hybrid representation.
-- Result cue: Our experiments with Scene-LLM demonstrate its strong capabilities in scene captioning question answering and interactive planning.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: 2D/3D observations, point/scene tokens, and natural-language prompts. Output: spatial answer, grounding result, caption, plan, or embodied reasoning response.
@@ -32,4 +32,3 @@ Input: 2D/3D observations, point/scene tokens, and natural-language prompts. Out
 ## Contribution
 - 3D vision-language spatial reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: LLM, 3D visual reasoning, Vision-Language.
-- 초록에서 확인되는 주요 cue: This, Scene-LLM, Large, Language, Models, LLMs, The, Unique.

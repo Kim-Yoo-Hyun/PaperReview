@@ -4,7 +4,7 @@
 핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
 
 ## Abstract Method Cue
-We designed a series of long-sequence navigation tasks for frequently used everyday items in the Habitat simulator.
+자동 추출 없음.
 
 ## 원리적 동기
 - 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.

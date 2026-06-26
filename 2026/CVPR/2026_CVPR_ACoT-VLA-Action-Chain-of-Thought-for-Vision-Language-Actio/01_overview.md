@@ -3,7 +3,7 @@
 - Year/Venue: 2026 / CVPR
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLA, Chain-of-Thought, Planning
-- Authors: Linqing Zhong, Yi Liu, Yifei Wei, Ziyu Xiong, Si Liu, Guanghui Ren ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026, pp. 8152-8162
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2026/html/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Vision-Language-Action models have emerged as essential generalist robot policies for diverse manipulation tasks, conventionally relying on directly translating multimodal inputs into actions via Vision-Language ...
-- Method cue: We introduce Action Chain-of-Thought (ACoT), a paradigm where the reasoning process itself is formulated as a structured sequence of coarse action intents that guide ...
-- Result cue: Extensive experiments in real-world and simulation environments demonstrate the superiority of our proposed method.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: VLA, Chain-of-Thought, Planning.
-- 초록에서 확인되는 주요 cue: Vision-Language-Action, Vision-Language, Model, Recent, However, Instead, Action, Chain-of-Thought.

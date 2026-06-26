@@ -3,7 +3,7 @@
 - Year/Venue: 2025 / ICCV
 - Category: 3D Scene Graphs and Graph Reasoning
 - Tags: Vision-Language Model, Graph Reasoning, semantic
-- Authors: Yukuan Min, Muli Yang, Jinhao Zhang, Yuxuan Wang, Aming Wu, Cheng Deng ; Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2025, pp. 16755-16764
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified
@@ -15,9 +15,9 @@
 핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: To promote the deployment of scenario understanding in the real world, Open-Vocabulary Scene Graph Generation (OV-SGG) has attracted much attention recently, aiming to generalize ...
-- Method cue: To this end, we propose a novel Vision-Language Interactive Relation Mining model (VL-IRM) for OV-SGG, which explores learning generalized relation-aware knowledge through multi-modal interaction.
-- Result cue: Extensive experiments demonstrate the superior OV-SGG performance of our method.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: image/3D observations and natural language. Output: aligned representation, answer, reasoning trace, caption, or grounded decision.
@@ -32,4 +32,3 @@ Input: image/3D observations and natural language. Output: aligned representatio
 ## Contribution
 - structured 3D scene graph reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Vision-Language Model, Graph Reasoning, semantic.
-- 초록에서 확인되는 주요 cue: Open-Vocabulary, Scene, Graph, Generation, OV-SGG, Towards, VLMs, However.

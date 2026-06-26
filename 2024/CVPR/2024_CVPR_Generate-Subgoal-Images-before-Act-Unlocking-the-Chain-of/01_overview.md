@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: Diffusion, VLA, Planning
-- Authors: Fei Ni, Jianye Hao, Shiguang Wu, Longxin Kou, Jiashun Liu, Yan Zheng, Bin Wang, Yuzheng Zhuang ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024, pp. 13991-14000
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Ni_Generate_Subgoal_Images_before_Act_Unlocking_the_Chain-of-Thought_Reasoning_in_CVPR_2024_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Robotics agents often struggle to understand and follow the multi-modal prompts in complex manipulation scenes which are challenging to be sufficiently and accurately described ...
-- Method cue: Inspired by the great success of diffusion model in image generation tasks we propose a novel hierarchical framework named as CoTDiffusion that incorporates diffusion ...
-- Result cue: CoTDiffusion achieves outstanding performance gain compared to the baselines without explicit subgoal generation which proves that a subgoal image is worth a thousand words ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - diffusion-based generation or policy learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Diffusion, VLA, Planning.
-- 초록에서 확인되는 주요 cue: Robotics, Moreover, For, Inspired, CoTDiffusion, Additionally, The.

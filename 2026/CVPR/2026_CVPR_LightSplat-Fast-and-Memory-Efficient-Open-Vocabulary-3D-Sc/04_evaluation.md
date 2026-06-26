@@ -17,7 +17,7 @@ mIoU, AP, mAP, open-vocabulary accuracy, long-tail performance, Acc@0.25, IoU, S
 - 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
 
 ## Main Results
-- Abstract result cue: As a result, LightSplat achieves state-of-the-art performance with up to 50-400x speedup and 64x lower memory, enabling scalable language-driven 3D understanding.
+- Abstract result cue: 자동 추출 없음.
 - 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
 
 ## Reproducibility Notes

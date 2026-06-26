@@ -15,9 +15,9 @@ NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary sem
 핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: "Performing language-conditioned robotic manipulation tasks in unstructured environments is highly demanded for general intelligent robots.
-- Method cue: In this paper, we propose a dynamic Gaussian Splatting method named ManiGaussian for multi-task robotic manipulation, which mines scene dynamics via future scene reconstruction.
-- Result cue: We evaluate our ManiGaussian on 10 RLBench tasks with 166 variations, and the results demonstrate our framework can outperform the state-of-the-art methods by 13.1% ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Robotics, Gaussian Splatting.
-- 초록에서 확인되는 주요 cue: Performing, Conventional, Gaussian, Splatting, ManiGaussian, Specifically, Then, RLBench.

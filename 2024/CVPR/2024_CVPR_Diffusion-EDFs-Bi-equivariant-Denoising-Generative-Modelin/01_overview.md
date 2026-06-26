@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: Equivariance, Diffusion, and 3D Action
 - Tags: equivariant, Diffusion, Robotics
-- Authors: Hyunwoo Ryu, Jiwoo Kim, Hyunseok An, Junwoo Chang, Joohwan Seo, Taehan Kim, Yubin Kim, Chaewon Hwang, Jongeun Choi, Roberto Horowitz ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024, pp. 18007-18018
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Diffusion generative modeling has become a promising approach for learning robotic manipulation tasks from stochastic human demonstrations.
-- Method cue: In this paper we present Diffusion-EDFs a novel SE(3)-equivariant diffusion-based approach for visual robotic manipulation tasks.
-- Result cue: We show that our proposed method achieves remarkable data efficiency requiring only 5 to 10 human demonstrations for effective end-to-end training in less than ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - diffusion-based generation or policy learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: equivariant, Diffusion, Robotics.
-- 초록에서 확인되는 주요 cue: Diffusion, Diffusion-EDFs, Furthermore, Lastly.

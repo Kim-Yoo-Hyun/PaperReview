@@ -4,7 +4,7 @@
 핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
 
 ## Abstract Method Cue
-We present a text-to-3D 360◦ scene generation pipeline that facilitates the creation of comprehensive 360◦ scenes for in-the-wild environments in a matter of minutes.
+자동 추출 없음.
 
 ## 원리적 동기
 - 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.

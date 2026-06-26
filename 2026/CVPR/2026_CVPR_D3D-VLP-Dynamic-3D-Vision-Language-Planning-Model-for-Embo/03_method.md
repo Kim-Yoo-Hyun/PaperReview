@@ -4,7 +4,7 @@
 핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
 
 ## Abstract Method Cue
-To bridge this gap, we propose the Dynamic 3D Vision-Language-Planning Model (D3D-VLP).
+자동 추출 없음.
 
 ## 원리적 동기
 - 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.

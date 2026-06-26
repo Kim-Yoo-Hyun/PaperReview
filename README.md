@@ -27,27 +27,28 @@ Secondary keywords include:
 
 | Item | Count |
 |---|---:|
-| Papers | 350 |
-| PDFs | 350 |
-| Per-paper markdown notes | 1,750 |
+| Papers | 538 |
+| PDFs | 538 |
+| Per-paper markdown notes | 2,690 |
 | Years covered | 2015-2026 |
 
 ## Venue Coverage
 
 | Venue | Count |
 |---|---:|
-| CVPR | 58 |
-| ICCV | 51 |
-| ICLR | 43 |
-| ICML | 43 |
-| NeurIPS | 34 |
+| CVPR | 128 |
+| ICCV | 77 |
+| ICLR | 69 |
+| ICML | 60 |
+| NeurIPS | 50 |
+| ECCV | 42 |
 | ICRA | 33 |
-| ECCV | 29 |
 | IROS | 17 |
 | RA-L | 16 |
 | CoRL | 15 |
+| 3DV | 15 |
 
-Additional papers are included from RSS, WACV, TMLR, SIGGRAPH, T-RO, NAACL, and arXiv when they are foundational or directly relevant.
+Additional papers are included from RSS, WACV, TMLR, SIGGRAPH, T-RO, TOG, AAAI, NAACL, and arXiv when they are foundational or directly relevant.
 
 ## Directory Layout
 
@@ -96,6 +97,11 @@ It groups papers by research theme:
 - 3D Large Multimodal Models
 - Navigation and Embodied AI
 - Language-Embedded NeRF and Gaussian Fields
+- 3D Scene Representations and Neural Fields
+- 3D Generative Modeling and Diffusion
+- Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- 3D Semantic Understanding and Alignment
+- 3D Equivariance, Calibration, and Registration
 - 3D Vision-Language Grounding
 - 3D Scene Graphs and Graph Reasoning
 - Open-Vocabulary 3D Mapping
@@ -121,6 +127,14 @@ For 3D vision-language and embodied spatial reasoning:
 
 - Start with ScanRefer, ReferIt3D, 3DVG-Transformer, 3D-VisTA, 3D-LLM, SpatialVLM, SceneVerse, Uni3DL, RoboSpatial.
 - Then read open-vocabulary 3D mapping and Gaussian-language field papers such as LERF, CLIP-Fields, ConceptFusion, OpenScene, LangSplat, SceneSplat, ReasonGrounder, and related 3DGS works.
+
+For 3D computer vision-first research:
+
+- Start with PointNet/PointNet++, DGCNN, KPConv, MinkowskiNet, Point Transformer, Point-BERT, Point-MAE, CenterPoint, PV-RCNN, PETR, BEVDepth, VoxFormer.
+- Then read modern geometry and reconstruction work such as DUSt3R, MASt3R, VGGT, CUT3R, Dens3R, MASt3R-SfM, FlowMap, Flash3D, VGGT-Motion, WorldMirror.
+- For neural scene representations, read 3D Gaussian Splatting, SuGaR, pixelSplat, MVSplat, SplaTAM, SplatFormer, No Pose No Problem, TokenSplat, Uni3R, SDGS, VarSplat.
+- For sensor fusion and autonomous 3D perception, read BEVFormer, BEVFusion, VoxFormer, GaussianFormer, RIOcc, V2X-R, SplatAD, L3DR, RadarSplat, SimULi, UniSplat.
+- For diffusion and generative 3D, read Marigold, Depth Anything, ReconFusion, LaGeM, DiffSplat, G4Splat, HAD, GaussFusion, PartGen, SeaLion, CraftsMan3D.
 
 ## Curation Policy
 

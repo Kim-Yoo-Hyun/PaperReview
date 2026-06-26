@@ -3,7 +3,7 @@
 - Year/Venue: 2025 / ICCV
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLA, Vision-Language Model
-- Authors: Yating Wang, Haoyi Zhu, Mingyu Liu, Jiange Yang, Hao-Shu Fang, Tong He ; Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2025, pp. 11089-11099
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified
@@ -15,9 +15,9 @@
 핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: In this paper, we introduce an innovative vector quantization based action tokenizer built upon the largest-scale action trajectory dataset to date, leveraging over 100 ...
-- Method cue: In this paper, we introduce an innovative vector quantization based action tokenizer built upon the largest-scale action trajectory dataset to date, leveraging over 100 ...
-- Result cue: The results demonstrate that as the volume of synthetic trajectory data increases, the performance of our tokenizer on downstream tasks improves significantly-most notably, achieving ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: VLA, Vision-Language Model.
-- 초록에서 확인되는 주요 cue: This, Once, The, These.

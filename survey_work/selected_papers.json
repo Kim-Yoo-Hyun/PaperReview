@@ -4575,6 +4575,3099 @@
     "pdf_status": "downloaded"
   },
   {
+    "title": "Dynamic Graph CNN for Learning on Point Clouds",
+    "year": 2019,
+    "venue": "TOG",
+    "category": "Foundations: 3D Representation Learning",
+    "tags": [
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2019/TOG/2019_TOG_Dynamic-Graph-CNN-for-Learning-on-Point-Clouds",
+    "pdf": "https://arxiv.org/pdf/1801.07829",
+    "page": "https://arxiv.org/abs/1801.07829",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "KPConv: Flexible and Deformable Convolution for Point Clouds",
+    "year": 2019,
+    "venue": "ICCV",
+    "category": "Foundations: 3D Representation Learning",
+    "tags": [
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud",
+    "pdf": "https://arxiv.org/pdf/1904.08889",
+    "page": "https://arxiv.org/abs/1904.08889",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "4D Spatio-Temporal ConvNets: Minkowski Convolutional Neural Networks",
+    "year": 2019,
+    "venue": "CVPR",
+    "category": "Foundations: 3D Representation Learning",
+    "tags": [
+      "3D Vision"
+    ],
+    "folder": "2019/CVPR/2019_CVPR_4D-Spatio-Temporal-ConvNets-Minkowski-Convolutional-Neural",
+    "pdf": "https://arxiv.org/pdf/1904.08755",
+    "page": "https://arxiv.org/abs/1904.08755",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Point Transformer",
+    "year": 2021,
+    "venue": "ICCV",
+    "category": "Foundations: 3D Representation Learning",
+    "tags": [
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2021/ICCV/2021_ICCV_Point-Transformer",
+    "pdf": "https://arxiv.org/pdf/2012.09164",
+    "page": "https://arxiv.org/abs/2012.09164",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "CenterPoint: Center-based 3D Object Detection and Tracking",
+    "year": 2021,
+    "venue": "CVPR",
+    "category": "Foundations: 3D Detection and BEV Perception",
+    "tags": [
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2021/CVPR/2021_CVPR_CenterPoint-Center-based-3D-Object-Detection-and-Tracking",
+    "pdf": "https://arxiv.org/pdf/2006.11275",
+    "page": "https://arxiv.org/abs/2006.11275",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Point-BERT: Pre-training 3D Point Cloud Transformers with Masked Point Modeling",
+    "year": 2022,
+    "venue": "CVPR",
+    "category": "Foundations: 3D Representation Learning",
+    "tags": [
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2022/CVPR/2022_CVPR_Point-BERT-Pre-training-3D-Point-Cloud-Transformers-with-M",
+    "pdf": "https://arxiv.org/pdf/2111.14819",
+    "page": "https://arxiv.org/abs/2111.14819",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Point-MAE: Masked Autoencoders for Point Cloud Self-supervised Learning",
+    "year": 2022,
+    "venue": "ECCV",
+    "category": "Foundations: 3D Representation Learning",
+    "tags": [
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2022/ECCV/2022_ECCV_Point-MAE-Masked-Autoencoders-for-Point-Cloud-Self-supervi",
+    "pdf": "https://arxiv.org/pdf/2203.06604",
+    "page": "https://arxiv.org/abs/2203.06604",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "PV-RCNN: Point-Voxel Feature Set Abstraction for 3D Object Detection",
+    "year": 2020,
+    "venue": "CVPR",
+    "category": "Foundations: 3D Detection and BEV Perception",
+    "tags": [
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2020/CVPR/2020_CVPR_PV-RCNN-Point-Voxel-Feature-Set-Abstraction-for-3D-Object",
+    "pdf": "https://arxiv.org/pdf/1912.13192",
+    "page": "https://arxiv.org/abs/1912.13192",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "PETR: Position Embedding Transformation for Multi-View 3D Object Detection",
+    "year": 2022,
+    "venue": "ECCV",
+    "category": "Foundations: 3D Detection and BEV Perception",
+    "tags": [
+      "3D Vision"
+    ],
+    "folder": "2022/ECCV/2022_ECCV_PETR-Position-Embedding-Transformation-for-Multi-View-3D-O",
+    "pdf": "https://arxiv.org/pdf/2203.05625",
+    "page": "https://arxiv.org/abs/2203.05625",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "BEVDepth: Acquisition of Reliable Depth for Multi-view 3D Object Detection",
+    "year": 2023,
+    "venue": "AAAI",
+    "category": "Foundations: 3D Detection and BEV Perception",
+    "tags": [
+      "depth",
+      "3D Vision"
+    ],
+    "folder": "2023/AAAI/2023_AAAI_BEVDepth-Acquisition-of-Reliable-Depth-for-Multi-view-3D-O",
+    "pdf": "https://arxiv.org/pdf/2206.10092",
+    "page": "https://arxiv.org/abs/2206.10092",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "VoxFormer: Sparse Voxel Transformer for Camera-based 3D Semantic Scene Completion",
+    "year": 2023,
+    "venue": "CVPR",
+    "category": "Foundations: 3D Semantic Occupancy",
+    "tags": [
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2023/CVPR/2023_CVPR_VoxFormer-Sparse-Voxel-Transformer-for-Camera-based-3D-Sem",
+    "pdf": "https://arxiv.org/pdf/2302.12251",
+    "page": "https://arxiv.org/abs/2302.12251",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data",
+    "year": 2024,
+    "venue": "CVPR",
+    "category": "Foundations: Monocular Geometry",
+    "tags": [
+      "depth",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_Depth-Anything-Unleashing-the-Power-of-Large-Scale-Unlabel",
+    "pdf": "https://arxiv.org/pdf/2401.10891",
+    "page": "https://arxiv.org/abs/2401.10891",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Marigold: Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation",
+    "year": 2024,
+    "venue": "CVPR",
+    "category": "Foundations: Monocular Geometry",
+    "tags": [
+      "Diffusion",
+      "Generation",
+      "depth",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_Marigold-Repurposing-Diffusion-Based-Image-Generators-for",
+    "pdf": "https://arxiv.org/pdf/2312.02145",
+    "page": "https://arxiv.org/abs/2312.02145",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Depth Anything V2",
+    "year": 2024,
+    "venue": "NeurIPS",
+    "category": "Foundations: Monocular Geometry",
+    "tags": [
+      "depth",
+      "3D Vision"
+    ],
+    "folder": "2024/NeurIPS/2024_NeurIPS_Depth-Anything-V2",
+    "pdf": "https://arxiv.org/pdf/2406.09414",
+    "page": "https://arxiv.org/abs/2406.09414",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "UniDepth: Universal Monocular Metric Depth Estimation",
+    "year": 2024,
+    "venue": "CVPR",
+    "category": "Foundations: Monocular Geometry",
+    "tags": [
+      "depth",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_UniDepth-Universal-Monocular-Metric-Depth-Estimation",
+    "pdf": "https://arxiv.org/pdf/2403.18913",
+    "page": "https://arxiv.org/abs/2403.18913",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "pixelSplat: 3D Gaussian Splats from Image Pairs for Scalable Generalizable 3D Reconstruction",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_pixelSplat-3D-Gaussian-Splats-from-Image-Pairs-for-Scalabl",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Charatan_pixelSplat_3D_Gaussian_Splats_from_Image_Pairs_for_Scalable_Generalizable_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Charatan_pixelSplat_3D_Gaussian_Splats_from_Image_Pairs_for_Scalable_Generalizable_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SuGaR: Surface-Aligned Gaussian Splatting for Efficient 3D Mesh Reconstruction and High-Quality Mesh Rendering",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_SuGaR-Surface-Aligned-Gaussian-Splatting-for-Efficient-3D",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SplaTAM: Splat Track & Map 3D Gaussians for Dense RGB-D SLAM",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_SplaTAM-Splat-Track-and-Map-3D-Gaussians-for-Dense-RGB-D-S",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "ReconFusion: 3D Reconstruction with Diffusion Priors",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "3D reconstruction",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_ReconFusion-3D-Reconstruction-with-Diffusion-Priors",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Scaling Diffusion Models to Real-World 3D LiDAR Scene Completion",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_Scaling-Diffusion-Models-to-Real-World-3D-LiDAR-Scene-Comp",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Nunes_Scaling_Diffusion_Models_to_Real-World_3D_LiDAR_Scene_Completion_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Nunes_Scaling_Diffusion_Models_to_Real-World_3D_LiDAR_Scene_Completion_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Diffusion 3D Features (Diff3F): Decorating Untextured Shapes with Distilled Semantic Features",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "semantic",
+      "alignment",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_Diffusion-3D-Features-Diff3F-Decorating-Untextured-Shapes",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Dutt_Diffusion_3D_Features_Diff3F_Decorating_Untextured_Shapes_with_Distilled_Semantic_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Dutt_Diffusion_3D_Features_Diff3F_Decorating_Untextured_Shapes_with_Distilled_Semantic_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "3DiffTection: 3D Object Detection with Geometry-Aware Diffusion Features",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_3DiffTection-3D-Object-Detection-with-Geometry-Aware-Diffu",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SG-PGM: Partial Graph Matching Network with Semantic Geometric Fusion for 3D Scene Graph Alignment and Its Downstream Tasks",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_SG-PGM-Partial-Graph-Matching-Network-with-Semantic-Geomet",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "HandDiff: 3D Hand Pose Estimation with Diffusion on Image-Point Cloud",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "geometry",
+      "Diffusion",
+      "Generation",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_HandDiff-3D-Hand-Pose-Estimation-with-Diffusion-on-Image-P",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "IPoD: Implicit Field Learning with Point Diffusion for Generalizable 3D Object Reconstruction from Single RGB-D Images",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "3D reconstruction",
+      "Diffusion",
+      "Generation",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_IPoD-Implicit-Field-Learning-with-Point-Diffusion-for-Gene",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_IPoD_Implicit_Field_Learning_with_Point_Diffusion_for_Generalizable_3D_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Wu_IPoD_Implicit_Field_Learning_with_Point_Diffusion_for_Generalizable_3D_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Triplane Meets Gaussian Splatting: Fast and Generalizable Single-View 3D Reconstruction with Transformers",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_Triplane-Meets-Gaussian-Splatting-Fast-and-Generalizable-S",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Zou_Triplane_Meets_Gaussian_Splatting_Fast_and_Generalizable_Single-View_3D_Reconstruction_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Zou_Triplane_Meets_Gaussian_Splatting_Fast_and_Generalizable_Single-View_3D_Reconstruction_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Total-Decom: Decomposed 3D Scene Reconstruction with Minimal Interaction",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Reconstruction, Geometry, and SLAM",
+    "tags": [
+      "3D reconstruction",
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_Total-Decom-Decomposed-3D-Scene-Reconstruction-with-Minima",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "PlatoNeRF: 3D Reconstruction in Plato's Cave via Single-View Two-Bounce Lidar",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "NeRF",
+      "3D reconstruction",
+      "sensor fusion",
+      "LiDAR",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_PlatoNeRF-3D-Reconstruction-in-Plato-s-Cave-via-Single-Vie",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Klinghoffer_PlatoNeRF_3D_Reconstruction_in_Platos_Cave_via_Single-View_Two-Bounce_Lidar_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Klinghoffer_PlatoNeRF_3D_Reconstruction_in_Platos_Cave_via_Single-View_Two-Bounce_Lidar_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "3D Geometry-Aware Deformable Gaussian Splatting for Dynamic View Synthesis",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_3D-Geometry-Aware-Deformable-Gaussian-Splatting-for-Dynami",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "MVIP-NeRF: Multi-view 3D Inpainting on NeRF Scenes via Diffusion Prior",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "NeRF",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_MVIP-NeRF-Multi-view-3D-Inpainting-on-NeRF-Scenes-via-Diff",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_MVIP-NeRF_Multi-view_3D_Inpainting_on_NeRF_Scenes_via_Diffusion_Prior_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Chen_MVIP-NeRF_Multi-view_3D_Inpainting_on_NeRF_Scenes_via_Diffusion_Prior_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Bayesian Diffusion Models for 3D Shape Reconstruction",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "3D reconstruction",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_Bayesian-Diffusion-Models-for-3D-Shape-Reconstruction",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Neural Point Cloud Diffusion for Disentangled 3D Shape and Appearance Generation",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Diffusion",
+      "Generation",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_Neural-Point-Cloud-Diffusion-for-Disentangled-3D-Shape-and",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "TIGER: Time-Varying Denoising Model for 3D Point Cloud Generation with Diffusion Process",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Diffusion",
+      "Generation",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_TIGER-Time-Varying-Denoising-Model-for-3D-Point-Cloud-Gene",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Ren_TIGER_Time-Varying_Denoising_Model_for_3D_Point_Cloud_Generation_with_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Ren_TIGER_Time-Varying_Denoising_Model_for_3D_Point_Cloud_Generation_with_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GaussianDreamer: Fast Generation from Text to 3D Gaussians by Bridging 2D and 3D Diffusion Models",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Gaussian Splatting",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_GaussianDreamer-Fast-Generation-from-Text-to-3D-Gaussians",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Yi_GaussianDreamer_Fast_Generation_from_Text_to_3D_Gaussians_by_Bridging_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Yi_GaussianDreamer_Fast_Generation_from_Text_to_3D_Gaussians_by_Bridging_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Align Your Gaussians: Text-to-4D with Dynamic 3D Gaussians and Composed Diffusion Models",
+    "year": 2024,
+    "venue": "CVPR 2024",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Gaussian Splatting",
+      "geometry",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2024/CVPR/2024_CVPR_Align-Your-Gaussians-Text-to-4D-with-Dynamic-3D-Gaussians",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Ling_Align_Your_Gaussians_Text-to-4D_with_Dynamic_3D_Gaussians_and_Composed_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Ling_Align_Your_Gaussians_Text-to-4D_with_Dynamic_3D_Gaussians_and_Composed_CVPR_2024_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SPARS3R: Semantic Prior Alignment and Regularization for Sparse 3D Reconstruction",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "3D reconstruction",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_SPARS3R-Semantic-Prior-Alignment-and-Regularization-for-Sp",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Tang_SPARS3R_Semantic_Prior_Alignment_and_Regularization_for_Sparse_3D_Reconstruction_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Tang_SPARS3R_Semantic_Prior_Alignment_and_Regularization_for_Sparse_3D_Reconstruction_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "UniPre3D: Unified Pre-training of 3D Point Cloud Models with Cross-Modal Gaussian Splatting",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_UniPre3D-Unified-Pre-training-of-3D-Point-Cloud-Models-wit",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_UniPre3D_Unified_Pre-training_of_3D_Point_Cloud_Models_with_Cross-Modal_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Wang_UniPre3D_Unified_Pre-training_of_3D_Point_Cloud_Models_with_Cross-Modal_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "DroneSplat: 3D Gaussian Splatting for Robust 3D Reconstruction from In-the-Wild Drone Imagery",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_DroneSplat-3D-Gaussian-Splatting-for-Robust-3D-Reconstruct",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Tang_DroneSplat_3D_Gaussian_Splatting_for_Robust_3D_Reconstruction_from_In-the-Wild_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Tang_DroneSplat_3D_Gaussian_Splatting_for_Robust_3D_Reconstruction_from_In-the-Wild_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SplatAD: Real-Time Lidar and Camera Rendering with 3D Gaussian Splatting for Autonomous Driving",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "Gaussian Splatting",
+      "sensor fusion",
+      "LiDAR",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_SplatAD-Real-Time-Lidar-and-Camera-Rendering-with-3D-Gauss",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Rethinking Temporal Fusion with a Unified Gradient Descent View for 3D Semantic Occupancy Prediction",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_Rethinking-Temporal-Fusion-with-a-Unified-Gradient-Descent",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "V2X-R: Cooperative LiDAR-4D Radar Fusion with Denoising Diffusion for 3D Object Detection",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_V2X-R-Cooperative-LiDAR-4D-Radar-Fusion-with-Denoising-Dif",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Touch2Shape: Touch-Conditioned 3D Diffusion for Shape Exploration and Reconstruction",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "3D reconstruction",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_Touch2Shape-Touch-Conditioned-3D-Diffusion-for-Shape-Explo",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "CraftsMan3D: High-fidelity Mesh Generation with 3D Native Diffusion and Interactive Geometry Refiner",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "3D reconstruction",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_CraftsMan3D-High-fidelity-Mesh-Generation-with-3D-Native-D",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "PartGen: Part-level 3D Generation and Reconstruction with Multi-view Diffusion Models",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "3D reconstruction",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_PartGen-Part-level-3D-Generation-and-Reconstruction-with-M",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SeaLion: Semantic Part-Aware Latent Point Diffusion Models for 3D Generation",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "semantic",
+      "alignment",
+      "Diffusion",
+      "Generation",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_SeaLion-Semantic-Part-Aware-Latent-Point-Diffusion-Models",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "DIFIX3D+: Improving 3D Reconstructions with Single-Step Diffusion Models",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "3D reconstruction",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_DIFIX3D+-Improving-3D-Reconstructions-with-Single-Step-Dif",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Wu_DIFIX3D_Improving_3D_Reconstructions_with_Single-Step_Diffusion_Models_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Wu_DIFIX3D_Improving_3D_Reconstructions_with_Single-Step_Diffusion_Models_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "DiET-GS: Diffusion Prior and Event Stream-Assisted Motion Deblurring 3D Gaussian Splatting",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Gaussian Splatting",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_DiET-GS-Diffusion-Prior-and-Event-Stream-Assisted-Motion-D",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "EAP-GS: Efficient Augmentation of Pointcloud for 3D Gaussian Splatting in Few-shot Scene Reconstruction",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_EAP-GS-Efficient-Augmentation-of-Pointcloud-for-3D-Gaussia",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Dai_EAP-GS_Efficient_Augmentation_of_Pointcloud_for_3D_Gaussian_Splatting_in_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Dai_EAP-GS_Efficient_Augmentation_of_Pointcloud_for_3D_Gaussian_Splatting_in_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Taming Video Diffusion Prior with Scene-Grounding Guidance for 3D Gaussian Splatting from Sparse Inputs",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Gaussian Splatting",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_Taming-Video-Diffusion-Prior-with-Scene-Grounding-Guidance",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "High-fidelity 3D Object Generation from Single Image with RGBN-Volume Gaussian Reconstruction Model",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_High-fidelity-3D-Object-Generation-from-Single-Image-with",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Light Transport-aware Diffusion Posterior Sampling for Single-View Reconstruction of 3D Volumes",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "3D reconstruction",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_Light-Transport-aware-Diffusion-Posterior-Sampling-for-Sin",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "G3Flow: Generative 3D Semantic Flow for Pose-aware and Generalizable Object Manipulation",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "geometry",
+      "semantic",
+      "alignment",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/CVPR/2025_CVPR_G3Flow-Generative-3D-Semantic-Flow-for-Pose-aware-and-Gene",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Uni3R: Unified 3D Reconstruction and Semantic Understanding via Generalizable Gaussian Splatting from Unposed Multi-View Images",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "geometry",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_Uni3R-Unified-3D-Reconstruction-and-Semantic-Understanding",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "TokenSplat: Token-aligned 3D Gaussian Splatting for Feed-forward Pose-free Reconstruction",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_TokenSplat-Token-aligned-3D-Gaussian-Splatting-for-Feed-fo",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "E2EGS: Event-to-Edge Gaussian Splatting for Pose-Free 3D Reconstruction",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_E2EGS-Event-to-Edge-Gaussian-Splatting-for-Pose-Free-3D-Re",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "ExtrinSplat: Decoupling Geometry and Semantics for Open-Vocabulary Understanding in 3D Gaussian Splatting",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "Gaussian Splatting",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_ExtrinSplat-Decoupling-Geometry-and-Semantics-for-Open-Voc",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Ding_ExtrinSplat_Decoupling_Geometry_and_Semantics_for_Open-Vocabulary_Understanding_in_3D_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Ding_ExtrinSplat_Decoupling_Geometry_and_Semantics_for_Open-Vocabulary_Understanding_in_3D_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Gau-Occ: Geometry-Completed Gaussians for Multi-Modal 3D Occupancy Prediction",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "Gaussian Splatting",
+      "sensor fusion",
+      "LiDAR",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_Gau-Occ-Geometry-Completed-Gaussians-for-Multi-Modal-3D-Oc",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "PointGS: Semantic-Consistent Unsupervised 3D Point Cloud Segmentation with 3D Gaussian Splatting",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "Gaussian Splatting",
+      "semantic",
+      "alignment",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_PointGS-Semantic-Consistent-Unsupervised-3D-Point-Cloud-Se",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "3D Gaussian Splatting with Self-Constrained Priors for High Fidelity Surface Reconstruction",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_3D-Gaussian-Splatting-with-Self-Constrained-Priors-for-Hig",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "AERGS-SLAM: Auto-Exposure-Robust Stereo 3D Gaussian Splatting SLAM",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_AERGS-SLAM-Auto-Exposure-Robust-Stereo-3D-Gaussian-Splatti",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "BA-GS: Bayesian Adaptive Gaussian Splatting for SFM-Free 3D Reconstruction",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_BA-GS-Bayesian-Adaptive-Gaussian-Splatting-for-SFM-Free-3D",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "C-GenReg: Training-Free 3D Point Cloud Registration by Multi-View-Consistent Geometry-to-Image Generation with Probabilistic Modalities Fusion",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "geometry",
+      "sensor fusion",
+      "LiDAR",
+      "Diffusion",
+      "Generation",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_C-GenReg-Training-Free-3D-Point-Cloud-Registration-by-Mult",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Distilling Unsigned Distance Function for Surface Reconstruction from 3D Gaussian Splatting",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_Distilling-Unsigned-Distance-Function-for-Surface-Reconstr",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Distilling_Unsigned_Distance_Function_for_Surface_Reconstruction_from_3D_Gaussian_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_Distilling_Unsigned_Distance_Function_for_Surface_Reconstruction_from_3D_Gaussian_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "DualSplat: Robust 3D Gaussian Splatting via Pseudo-Mask Bootstrapping from Reconstruction Failures",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_DualSplat-Robust-3D-Gaussian-Splatting-via-Pseudo-Mask-Boo",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GaussFusion: Improving 3D Reconstruction in the Wild with A Geometry-Informed Video Generator",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Reconstruction, Geometry, and SLAM",
+    "tags": [
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_GaussFusion-Improving-3D-Reconstruction-in-the-Wild-with-A",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GaussianZoom: Progressive Zoom-in Generative 3D Gaussian Splatting with Geometric and Semantic Guidance",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Gaussian Splatting",
+      "semantic",
+      "alignment",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_GaussianZoom-Progressive-Zoom-in-Generative-3D-Gaussian-Sp",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Shi_GaussianZoom_Progressive_Zoom-in_Generative_3D_Gaussian_Splatting_with_Geometric_and_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Shi_GaussianZoom_Progressive_Zoom-in_Generative_3D_Gaussian_Splatting_with_Geometric_and_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Geometry-Aware Cross-Modal Graph Alignment for Referring Segmentation in 3D Gaussian Splatting",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "Gaussian Splatting",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_Geometry-Aware-Cross-Modal-Graph-Alignment-for-Referring-S",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "HAD: Hallucination-Aware Diffusion Priors for 3D Reconstruction",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "3D reconstruction",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_HAD-Hallucination-Aware-Diffusion-Priors-for-3D-Reconstruc",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "L3DR: 3D-aware LiDAR Diffusion and Rectification",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_L3DR-3D-aware-LiDAR-Diffusion-and-Rectification",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "MAPo: Motion-Aware Partitioning of Deformable 3D Gaussian Splatting for High-Fidelity Dynamic Scene Reconstruction",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_MAPo-Motion-Aware-Partitioning-of-Deformable-3D-Gaussian-S",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "NG-GS: NeRF-guided 3D Gaussian Splatting Segmentation",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "Gaussian Splatting",
+      "NeRF",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_NG-GS-NeRF-guided-3D-Gaussian-Splatting-Segmentation",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Ov3R: Open-Vocabulary Semantic 3D Reconstruction from RGB Videos",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "3D reconstruction",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_Ov3R-Open-Vocabulary-Semantic-3D-Reconstruction-from-RGB-V",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SDGS: Spatial Difference Guided Gaussian Splatting for Simultaneous Localization and 3D Reconstruction",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_SDGS-Spatial-Difference-Guided-Gaussian-Splatting-for-Simu",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SR3R: Rethinking Super-Resolution 3D Reconstruction With Feed-Forward Gaussian Splatting",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_SR3R-Rethinking-Super-Resolution-3D-Reconstruction-With-Fe",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Urban-GS: A Unified 3D Gaussian Splatting Framework for Compact and High-Fidelity Aerial-to-Street Reconstruction",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_Urban-GS-A-Unified-3D-Gaussian-Splatting-Framework-for-Com",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "VarSplat: Uncertainty-aware 3D Gaussian Splatting for Robust RGB-D SLAM",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_VarSplat-Uncertainty-aware-3D-Gaussian-Splatting-for-Robus",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GaussianGrow: Geometry-aware Gaussian Growing from 3D Point Clouds with Text Guidance",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2026/CVPR/2026_CVPR_GaussianGrow-Geometry-aware-Gaussian-Growing-from-3D-Point",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_GaussianGrow_Geometry-aware_Gaussian_Growing_from_3D_Point_Clouds_with_Text_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_GaussianGrow_Geometry-aware_Gaussian_Growing_from_3D_Point_Clouds_with_Text_CVPR_2026_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Dream-to-Recon: Monocular 3D Reconstruction with Diffusion-Depth Distillation from Single Images",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "3D reconstruction",
+      "Diffusion",
+      "Generation",
+      "depth",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_Dream-to-Recon-Monocular-3D-Reconstruction-with-Diffusion",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "FreeSplatter: Pose-free Gaussian Splatting for Sparse-view 3D Reconstruction",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_FreeSplatter-Pose-free-Gaussian-Splatting-for-Sparse-view",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "RayletDF: Raylet Distance Fields for Generalizable 3D Surface Reconstruction from Point Clouds or Gaussians",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_RayletDF-Raylet-Distance-Fields-for-Generalizable-3D-Surfa",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "RIOcc: Efficient Cross-Modal Fusion Transformer with Collaborative Feature Refinement for 3D Semantic Occupancy Prediction",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_RIOcc-Efficient-Cross-Modal-Fusion-Transformer-with-Collab",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Distilling Diffusion Models to Efficient 3D LiDAR Scene Completion",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_Distilling-Diffusion-Models-to-Efficient-3D-LiDAR-Scene-Co",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "RadarSplat: Radar Gaussian Splatting for High-Fidelity Data Synthesis and 3D Reconstruction of Autonomous Driving Scenes",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "sensor fusion",
+      "LiDAR",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_RadarSplat-Radar-Gaussian-Splatting-for-High-Fidelity-Data",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GaussianOcc: Fully Self-supervised and Efficient 3D Occupancy Estimation with Gaussian Splatting",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "Gaussian Splatting",
+      "sensor fusion",
+      "LiDAR",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_GaussianOcc-Fully-Self-supervised-and-Efficient-3D-Occupan",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SEGS-SLAM: Structure-enhanced 3D Gaussian Splatting SLAM with Appearance Embedding",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_SEGS-SLAM-Structure-enhanced-3D-Gaussian-Splatting-SLAM-wi",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SpatialSplat: Efficient Semantic 3D from Sparse Unposed Images",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "Gaussian Splatting",
+      "geometry",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_SpatialSplat-Efficient-Semantic-3D-from-Sparse-Unposed-Ima",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Sheng_SpatialSplat_Efficient_Semantic_3D_from_Sparse_Unposed_Images_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Sheng_SpatialSplat_Efficient_Semantic_3D_from_Sparse_Unposed_Images_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "MGSR: 2D/3D Mutual-boosted Gaussian Splatting for High-fidelity Surface Reconstruction under Various Light Conditions",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_MGSR-2D-3D-Mutual-boosted-Gaussian-Splatting-for-High-fide",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "QuickSplat: Fast 3D Surface Reconstruction via Learned Gaussian Initialization",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_QuickSplat-Fast-3D-Surface-Reconstruction-via-Learned-Gaus",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Liu_QuickSplat_Fast_3D_Surface_Reconstruction_via_Learned_Gaussian_Initialization_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Liu_QuickSplat_Fast_3D_Surface_Reconstruction_via_Learned_Gaussian_Initialization_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "DeGauss: Dynamic-Static Decomposition with Gaussian Splatting for Distractor-free 3D Reconstruction",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_DeGauss-Dynamic-Static-Decomposition-with-Gaussian-Splatti",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "ExploreGS: Explorable 3D Scene Reconstruction with Virtual Camera Samplings and Diffusion Priors",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "3D reconstruction",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_ExploreGS-Explorable-3D-Scene-Reconstruction-with-Virtual",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GSV3D: Gaussian Splatting-based Geometric Distillation with Stable Video Diffusion for Single-Image 3D Object Generation",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Gaussian Splatting",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_GSV3D-Gaussian-Splatting-based-Geometric-Distillation-with",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Tao_GSV3D_Gaussian_Splatting-based_Geometric_Distillation_with_Stable_Video_Diffusion_for_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Tao_GSV3D_Gaussian_Splatting-based_Geometric_Distillation_with_Stable_Video_Diffusion_for_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "A Lesson in Splats: Teacher-Guided Diffusion for 3D Gaussian Splats Generation with 2D Supervision",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Gaussian Splatting",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_A-Lesson-in-Splats-Teacher-Guided-Diffusion-for-3D-Gaussia",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Generative Gaussian Splatting: Generating 3D Scenes with Video Diffusion Priors",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Gaussian Splatting",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_Generative-Gaussian-Splatting-Generating-3D-Scenes-with-Vi",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Schwarz_Generative_Gaussian_Splatting_Generating_3D_Scenes_with_Video_Diffusion_Priors_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Schwarz_Generative_Gaussian_Splatting_Generating_3D_Scenes_with_Video_Diffusion_Priors_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "NeRF Is a Valuable Assistant for 3D Gaussian Splatting",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "NeRF",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_NeRF-Is-a-Valuable-Assistant-for-3D-Gaussian-Splatting",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Liberated-GS: 3D Gaussian Splatting Independent from SfM Point Clouds",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "Gaussian Splatting",
+      "geometry",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_Liberated-GS-3D-Gaussian-Splatting-Independent-from-SfM-Po",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "DiGA3D: Coarse-to-Fine Diffusional Propagation of Geometry and Appearance for Versatile 3D Inpainting",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_DiGA3D-Coarse-to-Fine-Diffusional-Propagation-of-Geometry",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Tree Skeletonization from 3D Point Clouds by Denoising Diffusion",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Diffusion",
+      "Generation",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_Tree-Skeletonization-from-3D-Point-Clouds-by-Denoising-Dif",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Marks_Tree_Skeletonization_from_3D_Point_Clouds_by_Denoising_Diffusion_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Marks_Tree_Skeletonization_from_3D_Point_Clouds_by_Denoising_Diffusion_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "VideoRFSplat: Direct Scene-Level Text-to-3D Gaussian Splatting Generation with Flexible Pose and Multi-View Joint Modeling",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Gaussian Splatting",
+      "geometry",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_VideoRFSplat-Direct-Scene-Level-Text-to-3D-Gaussian-Splatt",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Repurposing 2D Diffusion Models with Gaussian Atlas for 3D Generation",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Gaussian Splatting",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_Repurposing-2D-Diffusion-Models-with-Gaussian-Atlas-for-3D",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Xiang_Repurposing_2D_Diffusion_Models_with_Gaussian_Atlas_for_3D_Generation_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Xiang_Repurposing_2D_Diffusion_Models_with_Gaussian_Atlas_for_3D_Generation_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Robust and Efficient 3D Gaussian Splatting for Urban Scene Reconstruction",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_Robust-and-Efficient-3D-Gaussian-Splatting-for-Urban-Scene",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Learning 3D Object Spatial Relationships from Pre-trained 2D Diffusion Models",
+    "year": 2025,
+    "venue": "ICCV 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/ICCV/2025_ICCV_Learning-3D-Object-Spatial-Relationships-from-Pre-trained",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Baik_Learning_3D_Object_Spatial_Relationships_from_Pre-trained_2D_Diffusion_Models_ICCV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Baik_Learning_3D_Object_Spatial_Relationships_from_Pre-trained_2D_Diffusion_Models_ICCV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "DepthSSC: Monocular 3D Semantic Scene Completion via Depth-Spatial Alignment and Voxel Adaptation",
+    "year": 2025,
+    "venue": "WACV 2025",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "semantic",
+      "alignment",
+      "depth",
+      "3D Vision"
+    ],
+    "folder": "2025/WACV/2025_WACV_DepthSSC-Monocular-3D-Semantic-Scene-Completion-via-Depth",
+    "pdf": "https://openaccess.thecvf.com/content/WACV2025/papers/Yao_DepthSSC_Monocular_3D_Semantic_Scene_Completion_via_Depth-Spatial_Alignment_and_WACV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/WACV2025/html/Yao_DepthSSC_Monocular_3D_Semantic_Scene_Completion_via_Depth-Spatial_Alignment_and_WACV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Test-Time Adaptation of 3D Point Clouds via Denoising Diffusion Models",
+    "year": 2025,
+    "venue": "WACV 2025",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Diffusion",
+      "Generation",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/WACV/2025_WACV_Test-Time-Adaptation-of-3D-Point-Clouds-via-Denoising-Diff",
+    "pdf": "https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/WACV2025/html/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "UW-GS: Distractor-Aware 3D Gaussian Splatting for Enhanced Underwater Scene Reconstruction",
+    "year": 2025,
+    "venue": "WACV 2025",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2025/WACV/2025_WACV_UW-GS-Distractor-Aware-3D-Gaussian-Splatting-for-Enhanced",
+    "pdf": "https://openaccess.thecvf.com/content/WACV2025/papers/Wang_UW-GS_Distractor-Aware_3D_Gaussian_Splatting_for_Enhanced_Underwater_Scene_Reconstruction_WACV_2025_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/WACV2025/html/Wang_UW-GS_Distractor-Aware_3D_Gaussian_Splatting_for_Enhanced_Underwater_Scene_Reconstruction_WACV_2025_paper.html",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "MVSplat: Efficient 3D Gaussian Splatting from Sparse Multi-View Images",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D Vision"
+    ],
+    "folder": "2024/ECCV/2024_ECCV_MVSplat-Efficient-3D-Gaussian-Splatting-from-Sparse-Multi",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03187.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3187_ECCV_2024_paper.php",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GS-LRM: Large Reconstruction Model for 3D Gaussian Splatting",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2024/ECCV/2024_ECCV_GS-LRM-Large-Reconstruction-Model-for-3D-Gaussian-Splattin",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3212_ECCV_2024_paper.php",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "MVSGaussian: Fast Generalizable Gaussian Splatting Reconstruction from Multi-View Stereo",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2024/ECCV/2024_ECCV_MVSGaussian-Fast-Generalizable-Gaussian-Splatting-Reconstr",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02662.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2662_ECCV_2024_paper.php",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GeoCalib: Learning Single-image Calibration with Geometric Optimization",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2024/ECCV/2024_ECCV_GeoCalib-Learning-Single-image-Calibration-with-Geometric",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05636.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5636_ECCV_2024_paper.php",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "CG-SLAM: Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware 3D Gaussian Field",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2024/ECCV/2024_ECCV_CG-SLAM-Efficient-Dense-RGB-D-SLAM-in-a-Consistent-Uncerta",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03580.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3580_ECCV_2024_paper.php",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D Vision"
+    ],
+    "folder": "2024/ECCV/2024_ECCV_GeoGaussian-Geometry-aware-Gaussian-Splatting-for-Scene-Re",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05218.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5218_ECCV_2024_paper.php",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GaussReg: Fast 3D Registration with Gaussian Splatting",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "Gaussian Splatting",
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2024/ECCV/2024_ECCV_GaussReg-Fast-3D-Registration-with-Gaussian-Splatting",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2380_ECCV_2024_paper.php",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SAGS: Structure-Aware 3D Gaussian Splatting",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D Vision"
+    ],
+    "folder": "2024/ECCV/2024_ECCV_SAGS-Structure-Aware-3D-Gaussian-Splatting",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02887.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2887_ECCV_2024_paper.php",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Surface Reconstruction for 3D Gaussian Splatting via Local Structural Hints",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2024/ECCV/2024_ECCV_Surface-Reconstruction-for-3D-Gaussian-Splatting-via-Local",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/274_ECCV_2024_paper.php",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Gaussian Grouping: Segment and Edit Anything in 3D Scenes",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D Vision"
+    ],
+    "folder": "2024/ECCV/2024_ECCV_Gaussian-Grouping-Segment-and-Edit-Anything-in-3D-Scenes",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04195.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/4195_ECCV_2024_paper.php",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SG-NeRF: Neural Surface Reconstruction with Scene Graph Optimization",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "NeRF",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2024/ECCV/2024_ECCV_SG-NeRF-Neural-Surface-Reconstruction-with-Scene-Graph-Opt",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08870.pdf",
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/8870_ECCV_2024_paper.php",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "No Pose, No Problem: Surprisingly Simple 3D Gaussian Splats from Sparse Unposed Images",
+    "year": 2025,
+    "venue": "ICLR 2025 Oral",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2025/ICLR/2025_ICLR_No-Pose-No-Problem-Surprisingly-Simple-3D-Gaussian-Splats",
+    "pdf": "https://openreview.net/pdf/b115e0eb446ac0910842794d2c92d02decc591a0.pdf",
+    "page": "https://openreview.net/forum?id=P4o9akekdf",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SplatFormer: Point Transformer for Robust 3D Gaussian Splatting",
+    "year": 2025,
+    "venue": "ICLR 2025 Spotlight",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/ICLR/2025_ICLR_SplatFormer-Point-Transformer-for-Robust-3D-Gaussian-Splat",
+    "pdf": "https://openreview.net/pdf/b05fcaaffbc6f81e70f605c033bb30f44fe43513.pdf",
+    "page": "https://openreview.net/forum?id=9NfHbWKqMF",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "CityGaussianV2: Efficient and Geometrically Accurate Reconstruction for Large-Scale Scenes",
+    "year": 2025,
+    "venue": "ICLR 2025 Poster",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2025/ICLR/2025_ICLR_CityGaussianV2-Efficient-and-Geometrically-Accurate-Recons",
+    "pdf": "https://openreview.net/pdf/602b5d6d17415fb9e6df86e7df8a1fe5990406d7.pdf",
+    "page": "https://openreview.net/forum?id=a3ptUbuzbW",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GS-LiDAR: Generating Realistic LiDAR Point Clouds with Panoramic Gaussian Splatting",
+    "year": 2025,
+    "venue": "ICLR 2025 Poster",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "Gaussian Splatting",
+      "sensor fusion",
+      "LiDAR",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/ICLR/2025_ICLR_GS-LiDAR-Generating-Realistic-LiDAR-Point-Clouds-with-Pano",
+    "pdf": "https://openreview.net/pdf/a7ebe3e9ae8605b40c3a104d0b74ef8ce5d5750e.pdf",
+    "page": "https://openreview.net/forum?id=RMaRBE9s2H",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "ComPC: Completing a 3D Point Cloud with 2D Diffusion Priors",
+    "year": 2025,
+    "venue": "ICLR 2025 Poster",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Diffusion",
+      "Generation",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/ICLR/2025_ICLR_ComPC-Completing-a-3D-Point-Cloud-with-2D-Diffusion-Priors",
+    "pdf": "https://openreview.net/pdf/07e0e163b5ab2a3918ebbccd045080a0decea42e.pdf",
+    "page": "https://openreview.net/forum?id=SoUwcVplq4",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Flow Distillation Sampling: Regularizing 3D Gaussians with Pre-trained Matching Priors",
+    "year": 2025,
+    "venue": "ICLR 2025 Poster",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D Vision"
+    ],
+    "folder": "2025/ICLR/2025_ICLR_Flow-Distillation-Sampling-Regularizing-3D-Gaussians-with",
+    "pdf": "https://openreview.net/pdf/ffe6227a13abb930769074659592a90242e4ed81.pdf",
+    "page": "https://openreview.net/forum?id=BzsjHiBfLk",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "DiffSplat: Repurposing Image Diffusion Models for Scalable Gaussian Splat Generation",
+    "year": 2025,
+    "venue": "ICLR 2025 Poster",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Gaussian Splatting",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/ICLR/2025_ICLR_DiffSplat-Repurposing-Image-Diffusion-Models-for-Scalable",
+    "pdf": "https://openreview.net/pdf/b34ae6f6d924f7fa749267cf44d0839eaad40dba.pdf",
+    "page": "https://openreview.net/forum?id=eajZpoQkGK",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GotenNet: Rethinking Efficient 3D Equivariant Graph Neural Networks",
+    "year": 2025,
+    "venue": "ICLR 2025 Poster",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "equivariant",
+      "3D Vision"
+    ],
+    "folder": "2025/ICLR/2025_ICLR_GotenNet-Rethinking-Efficient-3D-Equivariant-Graph-Neural",
+    "pdf": "https://openreview.net/pdf/a1396f1d1e7975177c314f3bddd7e718fc87796e.pdf",
+    "page": "https://openreview.net/forum?id=5wxCQDtbMo",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "LaGeM: A Large Geometry Model for 3D Representation Learning and Diffusion",
+    "year": 2025,
+    "venue": "ICLR 2025 Poster",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/ICLR/2025_ICLR_LaGeM-A-Large-Geometry-Model-for-3D-Representation-Learnin",
+    "pdf": "https://openreview.net/pdf/fadb73da860f028d2b7db1267acefa4519a291e3.pdf",
+    "page": "https://openreview.net/forum?id=72OSO38a2z",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SC-OmniGS: Self-Calibrating Omnidirectional Gaussian Splatting",
+    "year": 2025,
+    "venue": "ICLR 2025 Poster",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D Vision"
+    ],
+    "folder": "2025/ICLR/2025_ICLR_SC-OmniGS-Self-Calibrating-Omnidirectional-Gaussian-Splatt",
+    "pdf": "https://openreview.net/pdf/01fcd20c921bde26c615c92937bbfdc3b4a81e87.pdf",
+    "page": "https://openreview.net/forum?id=7idCpuEAiR",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "ThermalGaussian: Thermal 3D Gaussian Splatting",
+    "year": 2025,
+    "venue": "ICLR 2025 Poster",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D Vision"
+    ],
+    "folder": "2025/ICLR/2025_ICLR_ThermalGaussian-Thermal-3D-Gaussian-Splatting",
+    "pdf": "https://openreview.net/pdf/4daa89ce065b5e5cc408ac37b25bc7f3c49e924d.pdf",
+    "page": "https://openreview.net/forum?id=ybFRoGxZjs",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Multimodality Helps Few-shot 3D Point Cloud Semantic Segmentation",
+    "year": 2025,
+    "venue": "ICLR 2025 Spotlight",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "semantic",
+      "alignment",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/ICLR/2025_ICLR_Multimodality-Helps-Few-shot-3D-Point-Cloud-Semantic-Segme",
+    "pdf": "https://openreview.net/pdf/8fd72e10cf4596642e77049c226ea9fd50cd5c23.pdf",
+    "page": "https://openreview.net/forum?id=jXvwJ51vcK",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Segment Any 3D Object with Language",
+    "year": 2025,
+    "venue": "ICLR 2025 Poster",
+    "category": "3D Representation Learning and Foundation Models",
+    "tags": [
+      "3D Vision"
+    ],
+    "folder": "2025/ICLR/2025_ICLR_Segment-Any-3D-Object-with-Language",
+    "pdf": "https://openreview.net/pdf/49d9ee59e578038d8529a39c19e31d4c61cdc5fe.pdf",
+    "page": "https://openreview.net/forum?id=ENv1CeTwxc",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Dens3R: A Foundation Model for 3D Geometry Prediction",
+    "year": 2026,
+    "venue": "ICLR 2026 Poster",
+    "category": "3D Representation Learning and Foundation Models",
+    "tags": [
+      "3D Vision"
+    ],
+    "folder": "2026/ICLR/2026_ICLR_Dens3R-A-Foundation-Model-for-3D-Geometry-Prediction",
+    "pdf": "https://openreview.net/pdf/f8af5ab61a9d33b6aaa32fa274fb76ff5e2fd0dd.pdf",
+    "page": "https://openreview.net/forum?id=kxVjQhkAWz",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "G4Splat: Geometry-Guided Gaussian Splatting with Generative Prior",
+    "year": 2026,
+    "venue": "ICLR 2026 Poster",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Gaussian Splatting",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2026/ICLR/2026_ICLR_G4Splat-Geometry-Guided-Gaussian-Splatting-with-Generative",
+    "pdf": "https://openreview.net/pdf/b60a6180eda7d6c25e55daf8272250755abe4e62.pdf",
+    "page": "https://openreview.net/forum?id=kdPmsMVhZf",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Flash-Mono: Feed-Forward Accelerated Gaussian Splatting Monocular SLAM",
+    "year": 2026,
+    "venue": "ICLR 2026 Poster",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "geometry",
+      "depth",
+      "3D Vision"
+    ],
+    "folder": "2026/ICLR/2026_ICLR_Flash-Mono-Feed-Forward-Accelerated-Gaussian-Splatting-Mon",
+    "pdf": "https://openreview.net/pdf/ce5eea9035c4d8402dead443e2ba7c72e0bad7bf.pdf",
+    "page": "https://openreview.net/forum?id=nv3q3crc5D",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GaussianFusion: Unified 3D Gaussian Representation for Multi-Modal Fusion Perception",
+    "year": 2026,
+    "venue": "ICLR 2026 Poster",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "Gaussian Splatting",
+      "sensor fusion",
+      "LiDAR",
+      "3D Vision"
+    ],
+    "folder": "2026/ICLR/2026_ICLR_GaussianFusion-Unified-3D-Gaussian-Representation-for-Mult",
+    "pdf": "https://openreview.net/pdf/78d270155a0832fed3175dbc6f35687fe7e3c822.pdf",
+    "page": "https://openreview.net/forum?id=7jXxQ9bGoU",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GeoPurify: A Data-Efficient Geometric Distillation Framework for Open-Vocabulary 3D Segmentation",
+    "year": 2026,
+    "venue": "ICLR 2026 Poster",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2026/ICLR/2026_ICLR_GeoPurify-A-Data-Efficient-Geometric-Distillation-Framewor",
+    "pdf": "https://openreview.net/pdf/57fa2e7334b7e5972b3c62c83d3aecf630a1f0e3.pdf",
+    "page": "https://openreview.net/forum?id=mN49LupE8l",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "RayI2P: Learning Rays for Image-to-Point Cloud Registration",
+    "year": 2026,
+    "venue": "ICLR 2026 Poster",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "geometry",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2026/ICLR/2026_ICLR_RayI2P-Learning-Rays-for-Image-to-Point-Cloud-Registration",
+    "pdf": "https://openreview.net/pdf/09c38982c905d883a78e5402e6aec9db26ab7455.pdf",
+    "page": "https://openreview.net/forum?id=arfeGsDWoq",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SurfSplat: Conquering Feedforward 2D Gaussian Splatting with Surface Continuity Priors",
+    "year": 2026,
+    "venue": "ICLR 2026 Poster",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2026/ICLR/2026_ICLR_SurfSplat-Conquering-Feedforward-2D-Gaussian-Splatting-wit",
+    "pdf": "https://openreview.net/pdf/2b748f586856383d970839527439157443d1cc87.pdf",
+    "page": "https://openreview.net/forum?id=o1sF4XaFdY",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "UniSplat: Unified Spatio-Temporal Fusion via 3D Latent Scaffolds for Dynamic Driving Scene Reconstruction",
+    "year": 2026,
+    "venue": "ICLR 2026 Poster",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "sensor fusion",
+      "LiDAR",
+      "3D Vision"
+    ],
+    "folder": "2026/ICLR/2026_ICLR_UniSplat-Unified-Spatio-Temporal-Fusion-via-3D-Latent-Scaf",
+    "pdf": "https://openreview.net/pdf/bffc1758ee48ad880448c1cf829c2cac0fee26e6.pdf",
+    "page": "https://openreview.net/forum?id=Ng2VDbKD4r",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "UrbanGS: Efficient and Scalable Architecture for Geometrically Accurate Large-Scene Reconstruction",
+    "year": 2026,
+    "venue": "ICLR 2026 Poster",
+    "category": "3D Reconstruction, Geometry, and SLAM",
+    "tags": [
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2026/ICLR/2026_ICLR_UrbanGS-Efficient-and-Scalable-Architecture-for-Geometrica",
+    "pdf": "https://openreview.net/pdf/70a7369a6ae491beaef4468fc740fac95b5b8a76.pdf",
+    "page": "https://openreview.net/forum?id=L3utaw6SD9",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "WorldSplat: Gaussian-Centric Feed-Forward 4D Scene Generation for Autonomous Driving",
+    "year": 2026,
+    "venue": "ICLR 2026 Poster",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Gaussian Splatting",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2026/ICLR/2026_ICLR_WorldSplat-Gaussian-Centric-Feed-Forward-4D-Scene-Generati",
+    "pdf": "https://openreview.net/pdf/26fbb3a9ef84175c8a2efe7918a32cd5a0082627.pdf",
+    "page": "https://openreview.net/forum?id=KWeX6tYno6",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "IGGT: Instance-Grounded Geometry Transformer for Semantic 3D Reconstruction",
+    "year": 2026,
+    "venue": "ICLR 2026 Poster",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "3D reconstruction",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2026/ICLR/2026_ICLR_IGGT-Instance-Grounded-Geometry-Transformer-for-Semantic-3",
+    "pdf": "https://openreview.net/pdf/817142b3bbdc845776217fe32eb67c0abcce545d.pdf",
+    "page": "https://openreview.net/forum?id=swiL18PmUV",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SimULi: Real-Time LiDAR and Camera Simulation with Unscented Transforms",
+    "year": 2026,
+    "venue": "ICLR 2026 Poster",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "3D Vision"
+    ],
+    "folder": "2026/ICLR/2026_ICLR_SimULi-Real-Time-LiDAR-and-Camera-Simulation-with-Unscente",
+    "pdf": "https://openreview.net/pdf/ef221d27302d56bbadab6a1b5f71203b078ccc4f.pdf",
+    "page": "https://openreview.net/forum?id=osxP6FafPZ",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Geometry Forcing: Marrying Video Diffusion and 3D Representation for Consistent World Modeling",
+    "year": 2026,
+    "venue": "ICLR 2026 Poster",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2026/ICLR/2026_ICLR_Geometry-Forcing-Marrying-Video-Diffusion-and-3D-Represent",
+    "pdf": "https://openreview.net/pdf/dea370a01f4626162b2a827d9926302e6c125e13.pdf",
+    "page": "https://openreview.net/forum?id=ULXYZCms41",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "EAG3R: Event-Augmented 3D Geometry Estimation for Dynamic and Extreme-Lighting Scenes",
+    "year": 2025,
+    "venue": "NeurIPS 2025 spotlight",
+    "category": "3D Representation Learning and Foundation Models",
+    "tags": [
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_EAG3R-Event-Augmented-3D-Geometry-Estimation-for-Dynamic-a",
+    "pdf": "https://openreview.net/pdf/6b343e53056650c33b45d7572916a5fd82bd516c.pdf",
+    "page": "https://openreview.net/forum?id=Lf0W2gmNBg",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SIU3R: Simultaneous Scene Understanding and 3D Reconstruction Beyond Feature Alignment",
+    "year": 2025,
+    "venue": "NeurIPS 2025 spotlight",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "3D reconstruction",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_SIU3R-Simultaneous-Scene-Understanding-and-3D-Reconstructi",
+    "pdf": "https://openreview.net/pdf/fe4aa0ae2832afb0c90d1b334f1ddb76078909eb.pdf",
+    "page": "https://openreview.net/forum?id=GtImvTta8x",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "OnlineSplatter: Pose-Free Online 3D Reconstruction for Free-Moving Objects",
+    "year": 2025,
+    "venue": "NeurIPS 2025 spotlight",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_OnlineSplatter-Pose-Free-Online-3D-Reconstruction-for-Free",
+    "pdf": "https://openreview.net/pdf/561349dc7bef7809d41f05247cf1a1df95e7712f.pdf",
+    "page": "https://openreview.net/forum?id=Y9AdTCCEgI",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Fin3R: Fine-tuning Feed-forward 3D Reconstruction Models via Monocular Knowledge Distillation",
+    "year": 2025,
+    "venue": "NeurIPS 2025 poster",
+    "category": "3D Reconstruction, Geometry, and SLAM",
+    "tags": [
+      "3D reconstruction",
+      "depth",
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_Fin3R-Fine-tuning-Feed-forward-3D-Reconstruction-Models-vi",
+    "pdf": "https://openreview.net/pdf/7543305cf2956c454b415330b7bf04eda9e451f9.pdf",
+    "page": "https://openreview.net/forum?id=pZIeK0Xvph",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "PLANA3R: Zero-shot Metric Planar 3D Reconstruction via Feed-forward Planar Splatting",
+    "year": 2025,
+    "venue": "NeurIPS 2025 poster",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_PLANA3R-Zero-shot-Metric-Planar-3D-Reconstruction-via-Feed",
+    "pdf": "https://openreview.net/pdf/97ce495e96b390789b58ad6d64e1a93cade2a0cf.pdf",
+    "page": "https://openreview.net/forum?id=YTwRZP8mNO",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GeGS-PCR: Fast and Robust Color 3D Point Cloud Registration with Two-Stage Geometric-3DGS Fusion",
+    "year": 2025,
+    "venue": "NeurIPS 2025 poster",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "geometry",
+      "sensor fusion",
+      "LiDAR",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_GeGS-PCR-Fast-and-Robust-Color-3D-Point-Cloud-Registration",
+    "pdf": "https://openreview.net/pdf/b288be2e77239176daf3dd0989250da05bea4f5d.pdf",
+    "page": "https://openreview.net/forum?id=UkBwyp3aXG",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "MS-GS: Multi-Appearance Sparse-View 3D Gaussian Splatting in the Wild",
+    "year": 2025,
+    "venue": "NeurIPS 2025 poster",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_MS-GS-Multi-Appearance-Sparse-View-3D-Gaussian-Splatting-i",
+    "pdf": "https://openreview.net/pdf/804e98743d0bf960af90c596755d72e4736d2c39.pdf",
+    "page": "https://openreview.net/forum?id=efDNv5XvVo",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Multimodal LiDAR-Camera Novel View Synthesis with Unified Pose-free Neural Fields",
+    "year": 2025,
+    "venue": "NeurIPS 2025 poster",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "geometry",
+      "sensor fusion",
+      "LiDAR",
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_Multimodal-LiDAR-Camera-Novel-View-Synthesis-with-Unified",
+    "pdf": "https://openreview.net/pdf/81f57d1abb2e9779707b1274c08b3260d8f44d29.pdf",
+    "page": "https://openreview.net/forum?id=GQHUET0V6f",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Object-X: Learning to Reconstruct Multi-Modal 3D Object Representations",
+    "year": 2025,
+    "venue": "NeurIPS 2025 poster",
+    "category": "3D Representation Learning and Foundation Models",
+    "tags": [
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_Object-X-Learning-to-Reconstruct-Multi-Modal-3D-Object-Rep",
+    "pdf": "https://openreview.net/pdf/cd7e09ca72d630a0363a9ec8424f3ecb4a20a578.pdf",
+    "page": "https://openreview.net/forum?id=nI7wKr4eop",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Spiral: Semantic-Aware Progressive LiDAR Scene Generation and Understanding",
+    "year": 2025,
+    "venue": "NeurIPS 2025 poster",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "semantic",
+      "alignment",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_Spiral-Semantic-Aware-Progressive-LiDAR-Scene-Generation-a",
+    "pdf": "https://openreview.net/pdf/b1b7493189ab7bb4d33ec2f618e7c920cfa17565.pdf",
+    "page": "https://openreview.net/forum?id=SoqzNbcBjy",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "ODG: Occupancy Prediction Using Dual Gaussians",
+    "year": 2025,
+    "venue": "NeurIPS 2025 poster",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "Gaussian Splatting",
+      "sensor fusion",
+      "LiDAR",
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_ODG-Occupancy-Prediction-Using-Dual-Gaussians",
+    "pdf": "https://openreview.net/pdf/ace387ee7e9dada09fa110400dbde09112d691f9.pdf",
+    "page": "https://openreview.net/forum?id=CkmLys7ipp",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "U-CAN: Unsupervised Point Cloud Denoising with Consistency-Aware Noise2Noise Matching",
+    "year": 2025,
+    "venue": "NeurIPS 2025 poster",
+    "category": "3D Representation Learning and Foundation Models",
+    "tags": [
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_U-CAN-Unsupervised-Point-Cloud-Denoising-with-Consistency",
+    "pdf": "https://openreview.net/pdf/10f812616b46ab0990fdce9c1a84e358babba988.pdf",
+    "page": "https://openreview.net/forum?id=hVFtXE19Me",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Point-MaDi: Masked Autoencoding with Diffusion for Point Cloud Pre-training",
+    "year": 2025,
+    "venue": "NeurIPS 2025 poster",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Diffusion",
+      "Generation",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_Point-MaDi-Masked-Autoencoding-with-Diffusion-for-Point-Cl",
+    "pdf": "https://openreview.net/pdf/62bf13ac3402b1f0fcc04ba494b5fba2e1214fa0.pdf",
+    "page": "https://openreview.net/forum?id=sYeE1obXGG",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "QuadricFormer: Scene as Superquadrics for 3D Semantic Occupancy Prediction",
+    "year": 2025,
+    "venue": "NeurIPS 2025 poster",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_QuadricFormer-Scene-as-Superquadrics-for-3D-Semantic-Occup",
+    "pdf": "https://openreview.net/pdf/cc6e0a2d054469a238a6da05b30dce8f439f11f3.pdf",
+    "page": "https://openreview.net/forum?id=eZNdkwJYbN",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "VA-GS: Enhancing the Geometric Representation of Gaussian Splatting via View Alignment",
+    "year": 2025,
+    "venue": "NeurIPS 2025 poster",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "Gaussian Splatting",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2025/NeurIPS/2025_NeurIPS_VA-GS-Enhancing-the-Geometric-Representation-of-Gaussian-S",
+    "pdf": "https://openreview.net/pdf/74577aad9a08ae8d5d8bdf6091974f7d026891a3.pdf",
+    "page": "https://openreview.net/forum?id=ZnsR3waLUo",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Generative Point Cloud Registration",
+    "year": 2025,
+    "venue": "ICML 2025 poster",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "geometry",
+      "Diffusion",
+      "Generation",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/ICML/2025_ICML_Generative-Point-Cloud-Registration",
+    "pdf": "https://openreview.net/pdf/21029630f918c57f19a095303310a01e9559a351.pdf",
+    "page": "https://openreview.net/forum?id=yoaErYlGE9",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "PF3plat: Pose-Free Feed-Forward 3D Gaussian Splatting for Novel View Synthesis",
+    "year": 2025,
+    "venue": "ICML 2025 poster",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2025/ICML/2025_ICML_PF3plat-Pose-Free-Feed-Forward-3D-Gaussian-Splatting-for-N",
+    "pdf": "https://openreview.net/pdf/1de18a350e0bb48018a9598f9f8511c407b8b26b.pdf",
+    "page": "https://openreview.net/forum?id=VjI1NnsW4t",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GAPrompt: Geometry-Aware Point Cloud Prompt for 3D Vision Model",
+    "year": 2025,
+    "venue": "ICML 2025 poster",
+    "category": "3D Representation Learning and Foundation Models",
+    "tags": [
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/ICML/2025_ICML_GAPrompt-Geometry-Aware-Point-Cloud-Prompt-for-3D-Vision-M",
+    "pdf": "https://openreview.net/pdf/4789cd82aac069c8a7cd1f2ccef5c8c864a271d7.pdf",
+    "page": "https://openreview.net/forum?id=4SsNofUQf1",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Thickness-aware E(3)-Equivariant 3D Mesh Neural Networks",
+    "year": 2025,
+    "venue": "ICML 2025 poster",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "3D reconstruction",
+      "equivariant",
+      "3D Vision"
+    ],
+    "folder": "2025/ICML/2025_ICML_Thickness-aware-E3-Equivariant-3D-Mesh-Neural-Networks",
+    "pdf": "https://openreview.net/pdf/9288751ce812b90a105565d83b7d5b425b2f11d7.pdf",
+    "page": "https://openreview.net/forum?id=Ya2ksKuNMh",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Towards Learning to Complete Anything in Lidar",
+    "year": 2025,
+    "venue": "ICML 2025 poster",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "3D Vision"
+    ],
+    "folder": "2025/ICML/2025_ICML_Towards-Learning-to-Complete-Anything-in-Lidar",
+    "pdf": "https://openreview.net/pdf/8fbe2a59d85d4f1be15c6351679cc46349d858df.pdf",
+    "page": "https://openreview.net/forum?id=vWPzKn6usZ",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Scalable Non-Equivariant 3D Molecule Generation via Rotational Alignment",
+    "year": 2025,
+    "venue": "ICML 2025 poster",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "semantic",
+      "alignment",
+      "Diffusion",
+      "Generation",
+      "equivariant",
+      "3D Vision"
+    ],
+    "folder": "2025/ICML/2025_ICML_Scalable-Non-Equivariant-3D-Molecule-Generation-via-Rotati",
+    "pdf": "https://openreview.net/pdf/d526a2c92e7570f45137984e599cd180fcdcf5b6.pdf",
+    "page": "https://openreview.net/forum?id=l5KpQ5MmaD",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "VGGT-Motion: Motion-Aware Calibration-Free Monocular SLAM for Long-Range Consistency",
+    "year": 2026,
+    "venue": "ICML 2026 spotlight",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "geometry",
+      "depth",
+      "3D Vision"
+    ],
+    "folder": "2026/ICML/2026_ICML_VGGT-Motion-Motion-Aware-Calibration-Free-Monocular-SLAM-f",
+    "pdf": "https://openreview.net/pdf/dd631f65ff2ca6199a6897ee3816879152720eef.pdf",
+    "page": "https://openreview.net/forum?id=GyRMbsYFiG",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "WorldMirror: Universal 3D World Reconstruction with Any-Prior Prompting",
+    "year": 2026,
+    "venue": "ICML 2026 regular",
+    "category": "3D Reconstruction, Geometry, and SLAM",
+    "tags": [
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2026/ICML/2026_ICML_WorldMirror-Universal-3D-World-Reconstruction-with-Any-Pri",
+    "pdf": "https://openreview.net/pdf/d37648c3826e3031b270765b6a36790ab19140f8.pdf",
+    "page": "https://openreview.net/forum?id=HFNJOpXHfm",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "PRISM: Learning Realistic Depth via Physics-Grounded Noise Disentanglement with Semantic-Geometric Collaboration",
+    "year": 2026,
+    "venue": "ICML 2026 regular",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "semantic",
+      "alignment",
+      "depth",
+      "3D Vision"
+    ],
+    "folder": "2026/ICML/2026_ICML_PRISM-Learning-Realistic-Depth-via-Physics-Grounded-Noise",
+    "pdf": "https://openreview.net/pdf/9655ce373e592ae3473dc14dddd5cc2be47a3b47.pdf",
+    "page": "https://openreview.net/forum?id=AnofTirXgv",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "PointDiT: Pixel-Space Diffusion for Monocular Geometry Estimation",
+    "year": 2026,
+    "venue": "ICML 2026 regular",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Diffusion",
+      "Generation",
+      "depth",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2026/ICML/2026_ICML_PointDiT-Pixel-Space-Diffusion-for-Monocular-Geometry-Esti",
+    "pdf": "https://openreview.net/pdf/859969c4505c940b506d06cb01ee1bce1e5d07d0.pdf",
+    "page": "https://openreview.net/forum?id=hQWwTWGAyu",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Rh-3DGS: Robust Open-Vocabulary Scene Understanding via Riemannian Huber Distillation and Manifold-Aware Sampling",
+    "year": 2026,
+    "venue": "ICML 2026 regular",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2026/ICML/2026_ICML_Rh-3DGS-Robust-Open-Vocabulary-Scene-Understanding-via-Rie",
+    "pdf": "https://openreview.net/pdf/8310d4c5a6346eaadb420914138e1711121a0ff8.pdf",
+    "page": "https://openreview.net/forum?id=bjtuHOb3vN",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "S2GS: Streaming Semantic Gaussian Splatting for Online Scene Understanding and Reconstruction",
+    "year": 2026,
+    "venue": "ICML 2026 regular",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen",
+    "pdf": "https://openreview.net/pdf/fec4864d5571755c82ad1d076f9a8e3e4ca69cf8.pdf",
+    "page": "https://openreview.net/forum?id=CbWCaD8tRC",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "EnerGS: Energy-Based Gaussian Splatting under Partial Geometric Priors",
+    "year": 2026,
+    "venue": "ICML 2026 regular",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D Vision"
+    ],
+    "folder": "2026/ICML/2026_ICML_EnerGS-Energy-Based-Gaussian-Splatting-under-Partial-Geome",
+    "pdf": "https://openreview.net/pdf/bfce7f71c1e37001e68263ecce2837ec77904739.pdf",
+    "page": "https://openreview.net/forum?id=ebt72acjt6",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Flow Equivariant World Models: Structured Memory for Dynamic Environments",
+    "year": 2026,
+    "venue": "ICML 2026 regular",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "equivariant",
+      "3D Vision"
+    ],
+    "folder": "2026/ICML/2026_ICML_Flow-Equivariant-World-Models-Structured-Memory-for-Dynami",
+    "pdf": "https://openreview.net/pdf/25b19208166528c9c48b16cdd741d730218a8089.pdf",
+    "page": "https://openreview.net/forum?id=jgqFnXEDGG",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Affine-Equivariant Kernel Space Encoding for NeRF Editing",
+    "year": 2026,
+    "venue": "ICML 2026 regular",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "NeRF",
+      "equivariant",
+      "3D Vision"
+    ],
+    "folder": "2026/ICML/2026_ICML_Affine-Equivariant-Kernel-Space-Encoding-for-NeRF-Editing",
+    "pdf": "https://openreview.net/pdf/048e4b5756022f2faa8898f0f2d379b85079ab58.pdf",
+    "page": "https://openreview.net/forum?id=fAj3MJghc0",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Rethinking Serialization in Linear 3D Vision: Decoupling Anisotropic Geometry from Isotropic Semantics",
+    "year": 2026,
+    "venue": "ICML 2026 regular",
+    "category": "3D Semantic Understanding and Alignment",
+    "tags": [
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2026/ICML/2026_ICML_Rethinking-Serialization-in-Linear-3D-Vision-Decoupling-An",
+    "pdf": "https://openreview.net/pdf/fa9e033b756ac063d19be2b3bb91daea759e1ae1.pdf",
+    "page": "https://openreview.net/forum?id=MSVQM8Ub2y",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Weakly Supervised Cross-Modal Learning for 4D Radar Scene Flow Estimation",
+    "year": 2026,
+    "venue": "ICML 2026 regular",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "3D Vision"
+    ],
+    "folder": "2026/ICML/2026_ICML_Weakly-Supervised-Cross-Modal-Learning-for-4D-Radar-Scene",
+    "pdf": "https://openreview.net/pdf/ed47436b3c090baac63dc92adf3fafca0e15cc01.pdf",
+    "page": "https://openreview.net/forum?id=MCu8SOjPad",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "MASt3R-SfM: a Fully-Integrated Solution for Unconstrained Structure-from-Motion",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "geometry",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_MASt3R-SfM-a-Fully-Integrated-Solution-for-Unconstrained-S",
+    "pdf": "https://openreview.net/attachment?id=5uw1GRBFoT&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "FlowMap: High-Quality Camera Poses, Intrinsics, and Depth via Gradient Descent",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "3D Reconstruction, Geometry, and SLAM",
+    "tags": [
+      "geometry",
+      "depth",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_FlowMap-High-Quality-Camera-Poses-Intrinsics-and-Depth-via",
+    "pdf": "https://openreview.net/attachment?id=QI6HrBseVF&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "3D Reconstruction, Geometry, and SLAM",
+    "tags": [
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_Flash3D-Feed-Forward-Generalisable-3D-Scene-Reconstruction",
+    "pdf": "https://openreview.net/attachment?id=05T81ScPFb&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "AGS-Mesh: Adaptive Gaussian Splatting and Meshing with Geometric Priors for Indoor Room Reconstruction Using Smartphones",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_AGS-Mesh-Adaptive-Gaussian-Splatting-and-Meshing-with-Geom",
+    "pdf": "https://openreview.net/attachment?id=fTJrKaBKZk&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "LoopSplat: Loop Closure by Registering 3D Gaussian Splats",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_LoopSplat-Loop-Closure-by-Registering-3D-Gaussian-Splats",
+    "pdf": "https://openreview.net/attachment?id=0CNSbBa85A&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "WaterSplatting: Fast Underwater 3D Scene Reconstruction using Gaussian Splatting",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_WaterSplatting-Fast-Underwater-3D-Scene-Reconstruction-usi",
+    "pdf": "https://openreview.net/attachment?id=Z9yn9YgNIz&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SparseGS: Sparse View Synthesis using 3D Gaussian Splatting",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "3D Scene Representations and Neural Fields",
+    "tags": [
+      "Gaussian Splatting",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_SparseGS-Sparse-View-Synthesis-using-3D-Gaussian-Splatting",
+    "pdf": "https://openreview.net/attachment?id=O9GMl5UJbe&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "LangOcc: Open Vocabulary Occupancy Estimation via Volume Rendering",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_LangOcc-Open-Vocabulary-Occupancy-Estimation-via-Volume-Re",
+    "pdf": "https://openreview.net/attachment?id=KhjlXNbYea&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Efficient Continuous Group Convolutions for Local SE(3) Equivariance in 3D Point Clouds",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "equivariant",
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_Efficient-Continuous-Group-Convolutions-for-Local-SE3-Equi",
+    "pdf": "https://openreview.net/attachment?id=c6RR0bqNVI&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SSRFlow: Semantic-aware Fusion with Spatial Temporal Re-embedding for Real-world Scene Flow",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "semantic",
+      "alignment",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_SSRFlow-Semantic-aware-Fusion-with-Spatial-Temporal-Re-emb",
+    "pdf": "https://openreview.net/attachment?id=9abfUtE6iQ&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SMORE: Simultaneous Map and Object REconstruction",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "3D Reconstruction, Geometry, and SLAM",
+    "tags": [
+      "3D reconstruction",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_SMORE-Simultaneous-Map-and-Object-REconstruction",
+    "pdf": "https://openreview.net/attachment?id=1NhnG9BvQB&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "iFusion: Inverting Diffusion for Pose-Free Reconstruction from Sparse Views",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "3D reconstruction",
+      "geometry",
+      "Diffusion",
+      "Generation",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_iFusion-Inverting-Diffusion-for-Pose-Free-Reconstruction-f",
+    "pdf": "https://openreview.net/attachment?id=W7vOFBCGPm&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "GRIN: Zero-Shot Metric Depth with Pixel-Level Diffusion",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "Diffusion",
+      "Generation",
+      "depth",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_GRIN-Zero-Shot-Metric-Depth-with-Pixel-Level-Diffusion",
+    "pdf": "https://openreview.net/attachment?id=VSG65wVNuL&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "CoE: Deep Coupled Embedding for Non-Rigid Point Cloud Correspondences",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "3D Representation Learning and Foundation Models",
+    "tags": [
+      "point cloud",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_CoE-Deep-Coupled-Embedding-for-Non-Rigid-Point-Cloud-Corre",
+    "pdf": "https://openreview.net/attachment?id=pIDl4wuZoG&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "LSSInst: Improving Geometric Modeling in LSS-Based BEV Perception with Instance Representation",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "sensor fusion",
+      "LiDAR",
+      "3D Vision"
+    ],
+    "folder": "2025/3DV/2025_3DV_LSSInst-Improving-Geometric-Modeling-in-LSS-Based-BEV-Perc",
+    "pdf": "https://openreview.net/attachment?id=MaN2x3O2Rk&name=pdf",
+    "page": "https://3dvconf.github.io/2025/accepted-papers/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
     "title": "LangSplat: 3D Language Gaussian Splatting",
     "year": 2024,
     "venue": "CVPR 2024",

@@ -3,7 +3,7 @@
 - Year/Venue: 2025 / IROS
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: Vision-Language Model, Robotics, Reinforcement Learning
-- Authors: Qi Wu, Zipeng Fu, Xuxin Cheng, Xiaolong Wang, Chelsea Finn
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/2410.00231
 - PDF status: downloaded
 - GitHub/Project: https://helpful-doggybot.github.io/
@@ -15,9 +15,9 @@
 핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Learning-based methods have achieved strong performance for quadrupedal locomotion.
-- Method cue: We present a system for quadrupedal mobile manipulation in indoor environments.
-- Result cue: Learning-based methods have achieved strong performance for quadrupedal locomotion.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Vision-Language Model, Robotics, Reinforcement Learning.
-- 초록에서 확인되는 주요 cue: Learning-based, However, VLMs, RGB, Our, Project.

@@ -3,7 +3,7 @@
 - Year/Venue: 2025 / CVPR
 - Category: Language-Embedded NeRF and Gaussian Fields
 - Tags: Gaussian Splatting, language embedding, grounding
-- Authors: Kim Jun-Seong, GeonU Kim, Kim Yu-Ji, Yu-Chiang Frank Wang, Jaesung Choe, Tae-Hyun Oh ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025, pp. 14137-14146
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2025/html/Jun-Seong_Dr._Splat_Directly_Referring_3D_Gaussian_Splatting_via_Direct_Language_CVPR_2025_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@ NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary sem
 핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Splat, a novel approach for open-vocabulary 3D scene understanding leveraging 3D Gaussian Splatting.
-- Method cue: Unlike existing language-embedded 3DGS methods, which rely on a rendering process, our method directly associates language-aligned CLIP embeddings with 3D Gaussians for holistic 3D ...
-- Result cue: Experiments demonstrate that our approach significantly outperforms existing approaches in 3D perception benchmarks, such as open-vocabulary 3D semantic segmentation, 3D object localization, and 3D ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
@@ -32,4 +32,3 @@ Input: multi-view images/poses or reconstructed scenes plus language query. Outp
 ## Contribution
 - language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Gaussian Splatting, language embedding, grounding.
-- 초록에서 확인되는 주요 cue: Splat, Gaussian, Splatting, Unlike, CLIP, Gaussians, The, Moreover.

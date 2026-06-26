@@ -17,7 +17,7 @@ task-specific accuracy, generalization gap, ablation metrics, IoU, AP, mAP, SR, 
 - 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
 
 ## Main Results
-- Abstract result cue: Extensive experiments and user studies demonstrate that our PhysSplat achieves more realistic motion than state-of-the-art methods within 2 minutes on a single GPU.
+- Abstract result cue: 자동 추출 없음.
 - 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
 
 ## Reproducibility Notes

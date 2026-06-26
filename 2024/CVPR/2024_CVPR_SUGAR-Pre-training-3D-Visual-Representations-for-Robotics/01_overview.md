@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: 3D representation, Robotics, pretraining
-- Authors: Shizhe Chen, Ricardo Garcia, Ivan Laptev, Cordelia Schmid ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024, pp. 18049-18060
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Learning generalizable visual representations from Internet data has yielded promising results for robotics.
-- Method cue: To address these limitations we introduce a novel 3D pre-training framework for robotics named SUGAR that captures semantic geometric and affordance properties of objects ...
-- Result cue: Experimental results show that SUGAR's 3D representation outperforms state-of-the-art 2D and 3D representations.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: 3D representation, Robotics, pretraining.
-- 초록에서 확인되는 주요 cue: Learning, Internet, Yet, Meanwhile, SUGAR, Experimental.

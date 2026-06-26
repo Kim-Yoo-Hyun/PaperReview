@@ -17,7 +17,7 @@ SR, SPL, nDTW, goal distance, collision rate, mIoU, IoU, AP
 - 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
 
 ## Main Results
-- Abstract result cue: To achieve a comprehensive 3D representation with fine-grained details we introduce a Volumetric Environment Representation (VER) which voxelizes the physical world into structured 3D ...
+- Abstract result cue: 자동 추출 없음.
 - 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
 
 ## Reproducibility Notes

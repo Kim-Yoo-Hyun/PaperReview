@@ -4,7 +4,7 @@
 핵심은 radiance field의 공간 좌표/뷰 의존 표현에 CLIP/VLM feature를 결합해 3D 위치에서 언어적 의미를 조회할 수 있게 하는 것이다.
 
 ## Abstract Method Cue
-To address these issues we propose the pre-trained hierarchical neural radiance representation model (HNR) to produce multi-level semantic features for future environments which are ...
+자동 추출 없음.
 
 ## 원리적 동기
 - 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.

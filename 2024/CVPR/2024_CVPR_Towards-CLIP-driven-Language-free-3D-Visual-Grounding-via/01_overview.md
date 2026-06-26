@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: 3D Vision-Language Grounding
 - Tags: 3D visual grounding, CLIP, consistency
-- Authors: Yuqi Zhang, Han Luo, Yinjie Lei ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024, pp. 13063-13072
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Zhang_Towards_CLIP-driven_Language-free_3D_Visual_Grounding_via_2D-3D_Relational_Enhancement_CVPR_2024_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: 3D visual grounding plays a crucial role in scene understanding with extensive applications in AR/VR.
-- Method cue: To tackle the above issues in this paper we introduce a language-free training framework for 3D visual grounding.
-- Result cue: Extensive experiments demonstrate that our proposed language-free 3D visual grounding approach can obtain promising performance across three widely used datasets --ScanRefer Nr3D and Sr3D.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: 3D scene representation plus free-form natural language. Output: target object, 3D box, mask, or referring expression result.
@@ -32,4 +32,3 @@ Input: 3D scene representation plus free-form natural language. Output: target o
 ## Contribution
 - vision-language alignment and multimodal reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: 3D visual grounding, CLIP, consistency.
-- 초록에서 확인되는 주요 cue: Despite, Nevertheless, Neighboring, Relation-aware, Modeling, Cross-modality, Relation, Consistency.

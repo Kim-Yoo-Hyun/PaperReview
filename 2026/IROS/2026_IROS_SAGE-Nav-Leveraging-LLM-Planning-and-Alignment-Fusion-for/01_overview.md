@@ -3,7 +3,7 @@
 - Year/Venue: 2026 / IROS
 - Category: Navigation and Embodied AI
 - Tags: Navigation, Graph Reasoning
-- Authors: Hao Su, Yuehao Huang, Yukai Ma, Yong Liu, Jiajun Lv
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/2606.25497
 - PDF status: downloaded
 - GitHub/Project: not identified
@@ -15,9 +15,9 @@
 핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Object-Goal Navigation (ObjNav) requires embodied agents to autonomously locate specified targets using only egocentric visual observations.
-- Method cue: To address these limitations, we propose SAGE-Nav, a novel hierarchical framework that integrates the reasoning capabilities of Large Language Models (LLMs) with dynamic scene ...
-- Result cue: Extensive evaluations in the i-THOR and RoboTHOR environments demonstrate that SAGE-Nav achieves state-of-the-art performance, delivering substantial gains in navigation efficiency and zero-shot generalization while ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language/navigation goal plus egocentric observations or 3D maps. Output: waypoint, action, route, or grounded target decision.
@@ -32,4 +32,3 @@ Input: language/navigation goal plus egocentric observations or 3D maps. Output:
 ## Contribution
 - structured 3D scene graph reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Navigation, Graph Reasoning.
-- 초록에서 확인되는 주요 cue: Object-Goal, Navigation, ObjNav, Existing, SAGE-Nav, Large, Language, Models.

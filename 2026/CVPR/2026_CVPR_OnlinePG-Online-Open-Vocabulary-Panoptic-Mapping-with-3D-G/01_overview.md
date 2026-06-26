@@ -3,7 +3,7 @@
 - Year/Venue: 2026 / CVPR
 - Category: Open-Vocabulary 3D Mapping
 - Tags: Gaussian Splatting, semantic mapping, open-vocabulary
-- Authors: Hongjia Zhai, Qi Zhang, Xiaokun Pan, Xiyu Zhang, Yitong Dong, Huaqi Zhang, Dan Xu, Guofeng Zhang ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026, pp. 33269-33279
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2026/html/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@ NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary sem
 핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Open-vocabulary scene understanding with online panoptic mapping is essential for embodied applications to perceive and interact with environments.
-- Method cue: In this paper, we propose OnlinePG, a novel and effective system that integrates geometric reconstruction and open-vocabulary perception using 3D Gaussian Splatting in an ...
-- Result cue: Technically, to achieve online panoptic mapping, we employ an efficient local-to-global paradigm with a sliding window.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
@@ -32,4 +32,3 @@ Input: multi-view images/poses or reconstructed scenes plus language query. Outp
 ## Contribution
 - language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Gaussian Splatting, semantic mapping, open-vocabulary.
-- 초록에서 확인되는 주요 cue: Open-vocabulary, However, OnlinePG, Gaussian, Splatting, Technically, Subsequently, Finally.

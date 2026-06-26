@@ -3,7 +3,7 @@
 - Year/Venue: 2025 / ICCV
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLA, Diffusion, Transformer
-- Authors: Zhi Hou, Tianyi Zhang, Yuwen Xiong, Haonan Duan, Hengjun Pu, Ronglei Tong, Chengyang Zhao, Xizhou Zhu, Yu Qiao, Jifeng Dai, Yuntao Chen ; Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2025, pp. 7686-7697
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Hou_Dita_Scaling_Diffusion_Transformer_for_Generalist_Vision-Language-Action_Policy_ICCV_2025_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: While recent vision-language-action models trained on diverse robot datasets exhibit promising generalization capabilities with limited in-domain data, their reliance on compact action heads to ...
-- Method cue: We present Dita, a scalable framework that leverages Transformer architectures to directly denoise continuous action sequences through a unified multimodal diffusion process.
-- Result cue: Evaluations across extensive benchmarks demonstrate state-of-the-art or comparative performance in simulation.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - diffusion-based generation or policy learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: VLA, Diffusion, Transformer.
-- 초록에서 확인되는 주요 cue: While, Dita, Transformer, Departing, This, Evaluations, Notably, The.

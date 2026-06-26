@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: Navigation and Embodied AI
 - Tags: Vision-Language Navigation, NeRF, Planning
-- Authors: Zihan Wang, Xiangyang Li, Jiahao Yang, Yeqi Liu, Junjie Hu, Ming Jiang, Shuqiang Jiang ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024, pp. 13753-13762
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,8 +15,8 @@ NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary sem
 핵심은 radiance field의 공간 좌표/뷰 의존 표현에 CLIP/VLM feature를 결합해 3D 위치에서 언어적 의미를 조회할 수 있게 하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Vision-and-language navigation (VLN) enables the agent to navigate to a remote location following the natural language instruction in 3D environments.
-- Method cue: To address these issues we propose the pre-trained hierarchical neural radiance representation model (HNR) to produce multi-level semantic features for future environments which are ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
 - Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
@@ -32,4 +32,3 @@ Input: language/navigation goal plus egocentric observations or 3D maps. Output:
 ## Contribution
 - language-aware neural radiance field representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Vision-Language Navigation, NeRF, Planning.
-- 초록에서 확인되는 주요 cue: Vision-and-language, VLN, For, RGB, HNR, Furthermore, Extensive, VLN-CE.

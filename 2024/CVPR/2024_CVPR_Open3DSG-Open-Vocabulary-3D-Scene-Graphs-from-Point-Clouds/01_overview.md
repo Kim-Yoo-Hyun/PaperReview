@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: 3D Scene Graphs and Graph Reasoning
 - Tags: 3D Scene Graph, open-vocabulary, Graph Reasoning
-- Authors: Sebastian Koch, Narunas Vaskevicius, Mirco Colosi, Pedro Hermosilla, Timo Ropinski ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024, pp. 14183-14193
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Current approaches for 3D scene graph prediction rely on labeled datasets to train models for a fixed set of known object classes and relationship ...
-- Method cue: We present Open3DSG an alternative approach to learn 3D scene graph prediction in an open world without requiring labeled scene graph data.
-- Result cue: Our experiments show that Open3DSG is effective at predicting arbitrary object classes as well as their complex inter-object relationships describing spatial supportive semantic and ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input/Output follows the paper task formulation; see PDF for the exact interface.
@@ -32,4 +32,3 @@ Input/Output follows the paper task formulation; see PDF for the exact interface
 ## Contribution
 - structured 3D scene graph reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: 3D Scene Graph, open-vocabulary, Graph Reasoning.
-- 초록에서 확인되는 주요 cue: Current, Open3DSG, This, LLM, Our.

@@ -3,7 +3,7 @@
 - Year/Venue: 2025 / ICCV
 - Category: Benchmarks and Datasets
 - Tags: VLA, Benchmark, long-horizon
-- Authors: Shiduo Zhang, Zhe Xu, Peiju Liu, Xiaopeng Yu, Yuan Li, Qinghui Gao, Zhaoye Fei, Zhangyue Yin, Zuxuan Wu, Yu-Gang Jiang, Xipeng Qiu ; Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2025, pp. 11142-11152
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: General-purposed embodied agents are designed to understand the users' natural instructions or intentions and act precisely to complete universal tasks.
-- Method cue: To better define such general-purpose tasks in the context of LLMs and advance the research in VLAs, we present VLABench, an open-source benchmark for ...
-- Result cue: Recently, methods based on foundation models especially Vision-Language-Action models (VLAs) have shown a substantial potential to solve language-conditioned manipulation (LCM) tasks well.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: benchmark-specific observations/instructions. Output: standardized labels, tasks, or evaluation scores for comparing models.
@@ -32,4 +32,3 @@ Input: benchmark-specific observations/instructions. Output: standardized labels
 ## Contribution
 - robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: VLA, Benchmark, long-horizon.
-- 초록에서 확인되는 주요 cue: General-purposed, Recently, Vision-Language-Action, VLAs, LCM, However, LLMs, VLABench.

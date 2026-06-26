@@ -15,9 +15,9 @@ NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary sem
 핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: "3D semantic occupancy prediction aims to obtain 3D fine-grained geometry and semantics of the surrounding scene and is an important task for the robustness ...
-- Method cue: To address this, we propose an object-centric representation to describe 3D scenes with sparse 3D semantic Gaussians where each Gaussian represents a flexible region ...
-- Result cue: Experimental results demonstrate that GaussianFormer achieves comparable performance with state-of-the-art methods with only 17.8% - 24.8% of their memory consumption.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
@@ -32,4 +32,3 @@ Input: multi-view images/poses or reconstructed scenes plus language query. Outp
 ## Contribution
 - language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: 3D Vision, Gaussian Splatting, semantic.
-- 초록에서 확인되는 주요 cue: Most, Gaussians, Gaussian, Gaussian-to-voxel, KITTI-360, Experimental, GaussianFormer, Code.

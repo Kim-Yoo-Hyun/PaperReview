@@ -3,7 +3,7 @@
 - Year/Venue: 2026 / CVPR
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLA, 3D-2D alignment, Robotics
-- Authors: Yunlong Zhao, Xiaoheng Deng, Yichao Cao, Yi Chen, Xiangjian He, Shan You, Shuo Yang, Lei Fan, Fei Wang, Xiu Su ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026, pp. 20812-20822
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_Localizing_Structuring_and_Rendering_Bridging_3D_and_2D_Vision-Language-Action_Models_CVPR_2026_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Robotic manipulation in complex 3D environments requires unifying spatial reasoning with intuitive visual perception, which is a capability that current Vision-Language-Action paradigms address separately.
-- Method cue: We introduce DiffRender-VLA, a differentiable rendering-based framework that bridges 3D and 2D Vision-Language-Action models through gradient-consistent visual mediation.
-- Result cue: This closed differentiable loop unifies reasoning and perception, substantially improving performance under occlusion, clutter, and complex spatial manipulation tasks, achieving average improvements of +12.1% ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: VLA, 3D-2D alignment, Robotics.
-- 초록에서 확인되는 주요 cue: Robotic, Vision-Language-Action, While, VLAs, DiffRender-VLA, These, This, Codes.

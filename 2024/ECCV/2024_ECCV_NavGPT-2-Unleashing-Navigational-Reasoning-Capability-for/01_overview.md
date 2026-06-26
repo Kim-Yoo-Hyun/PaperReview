@@ -15,9 +15,9 @@
 핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: "Capitalizing on the remarkable advancements in Large Language Models (LLMs), there is a burgeoning initiative to harness LLMs for instruction following robotic navigation.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
 - Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: We demonstrate the data efficiency of the proposed methods and eliminate the gap between LM-based agents and state-of-the-art VLN specialists.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language/navigation goal plus egocentric observations or 3D maps. Output: waypoint, action, route, or grounded target decision.
@@ -32,4 +32,3 @@ Input: language/navigation goal plus egocentric observations or 3D maps. Output:
 ## Contribution
 - embodied navigation and spatial planning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Vision-Language Model, Navigation.
-- 초록에서 확인되는 주요 cue: Capitalizing, Large, Language, Models, LLMs, Such, However, Vision-and-Language.

@@ -3,7 +3,7 @@
 - Year/Venue: 2026 / CVPR
 - Category: 3D Large Multimodal Models
 - Tags: geometry, VLM, spatial reasoning
-- Authors: Jian Zhang, Shijie Zhou, Bangya Liu, Achuta Kadambi, Zhiwen Fan ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026, pp. 38678-38688
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_SpatialStack_Layered_Geometry-Language_Fusion_for_3D_VLM_Spatial_Reasoning_CVPR_2026_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@ VLM/LLM은 강한 semantic prior를 갖지만 3D 위치, 거리, 관점, afforda
 핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Large vision-language models (VLMs) still struggle with reliable 3D spatial reasoning, a core capability for embodied and physical AI systems.
-- Method cue: To overcome this, we propose SpatialStack, a general hierarchical fusion framework that progressively aligns vision, geometry, and language representations across the model hierarchy.
-- Result cue: Building upon this framework, we develop VLM-SpatialStack, a model that achieves state-of-the-art performance on multiple 3D spatial reasoning benchmarks.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: 2D/3D observations, point/scene tokens, and natural-language prompts. Output: spatial answer, grounding result, caption, plan, or embodied reasoning response.
@@ -32,4 +32,3 @@ Input: 2D/3D observations, point/scene tokens, and natural-language prompts. Out
 ## Contribution
 - 3D vision-language spatial reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: geometry, VLM, spatial reasoning.
-- 초록에서 확인되는 주요 cue: Large, VLMs, This, While, SpatialStack, Moving, Building, VLM-SpatialStack.

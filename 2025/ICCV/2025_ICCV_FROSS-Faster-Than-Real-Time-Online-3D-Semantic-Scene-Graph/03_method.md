@@ -4,7 +4,7 @@
 핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
 
 ## Abstract Method Cue
-To address this issue, we propose FROSS (Faster-than-Real-Time Online 3D Semantic Scene Graph Generation), an innovative approach for online and faster-than-real-time 3D SSG generation ...
+자동 추출 없음.
 
 ## 원리적 동기
 - 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.

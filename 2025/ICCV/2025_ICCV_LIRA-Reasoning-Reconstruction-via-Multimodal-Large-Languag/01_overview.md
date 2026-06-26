@@ -3,7 +3,7 @@
 - Year/Venue: 2025 / ICCV
 - Category: 3D Large Multimodal Models
 - Tags: 3D Vision, Vision-Language
-- Authors: Zhen Zhou, Tong Wang, Yunkai Ma, Xiao Tan, Fengshui Jing ; Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2025, pp. 1762-1772
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Zhou_LIRA_Reasoning_Reconstruction_via_Multimodal_Large_Language_Models_ICCV_2025_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified
@@ -15,9 +15,9 @@ VLM/LLM은 강한 semantic prior를 갖지만 3D 위치, 거리, 관점, afforda
 핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Existing language instruction-guided online 3D reconstruction systems mainly rely on explicit instructions or queryable maps, showing inadequate capability to handle implicit and complex instructions.
-- Method cue: To handle this task, we propose LIRA: Language Instructed Reconstruction Assistant.
-- Result cue: Existing language instruction-guided online 3D reconstruction systems mainly rely on explicit instructions or queryable maps, showing inadequate capability to handle implicit and complex instructions.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: 2D/3D observations, point/scene tokens, and natural-language prompts. Output: spatial answer, grounding result, caption, plan, or embodied reasoning response.
@@ -32,4 +32,3 @@ Input: 2D/3D observations, point/scene tokens, and natural-language prompts. Out
 ## Contribution
 - 3D vision-language spatial reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: 3D Vision, Vision-Language.
-- 초록에서 확인되는 주요 cue: Existing, This, RGB-D, LIRA, Language, Instructed, Reconstruction, Assistant.

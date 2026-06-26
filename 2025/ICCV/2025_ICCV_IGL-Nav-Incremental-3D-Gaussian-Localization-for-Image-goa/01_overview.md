@@ -3,7 +3,7 @@
 - Year/Venue: 2025 / ICCV
 - Category: Navigation and Embodied AI
 - Tags: 3D Vision, Navigation, Gaussian Splatting
-- Authors: Wenxuan Guo, Xiuwei Xu, Hang Yin, Ziwei Wang, Jianjiang Feng, Jie Zhou, Jiwen Lu ; Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2025, pp. 6808-6817
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified
@@ -15,9 +15,9 @@ NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary sem
 핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Visual navigation with an image as goal is a fundamental and challenging problem.
-- Method cue: To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework for efficient and 3D-aware image-goal navigation.
-- Result cue: The proposed IGL-Nav outperforms existing state-of-the-art methods by a large margin across diverse experimental configurations.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language/navigation goal plus egocentric observations or 3D maps. Output: waypoint, action, route, or grounded target decision.
@@ -32,4 +32,3 @@ Input: language/navigation goal plus egocentric observations or 3D maps. Output:
 ## Contribution
 - language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: 3D Vision, Navigation, Gaussian Splatting.
-- 초록에서 확인되는 주요 cue: Visual, Conventional, BEV, However, DoF, IGL-Nav, Incremental, Gaussian.

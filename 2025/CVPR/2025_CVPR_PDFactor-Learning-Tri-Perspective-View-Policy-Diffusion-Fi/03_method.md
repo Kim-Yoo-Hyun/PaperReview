@@ -4,7 +4,7 @@
 핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
 
 ## Abstract Method Cue
-In response, we propose PDFactor, a novel framework that models action distribution with a hybrid triplane representation.
+자동 추출 없음.
 
 ## 원리적 동기
 - 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.

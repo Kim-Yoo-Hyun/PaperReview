@@ -29,6 +29,7 @@ CVF_CANDIDATES = WORK / "cvf_candidates.json"
 EXTRA_PAPERS_FILES = [
     WORK / "extra_papers_2025_2026.json",
     WORK / "extra_papers_eccv_iccv_ral_iros.json",
+    WORK / "extra_papers_3d_cv.json",
 ]
 
 HEADERS = {
@@ -374,6 +375,9 @@ def fetch_arxiv_metadata(papers: list[dict]) -> None:
 
 def fetch_page_metadata(p: dict) -> None:
     if p.get("abstract") or not p.get("page"):
+        return
+    page = p.get("page", "")
+    if any(host in page for host in ["openaccess.thecvf.com", "ecva.net", "openreview.net", "3dvconf.github.io"]):
         return
     text = fetch(p["page"])
     if not text:

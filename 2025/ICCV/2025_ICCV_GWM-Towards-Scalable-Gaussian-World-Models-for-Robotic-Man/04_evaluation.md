@@ -17,7 +17,7 @@ task-specific accuracy, generalization gap, ablation metrics, IoU, AP, mAP, succ
 - 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
 
 ## Main Results
-- Abstract result cue: The established image-based world models and policies have shown prior success, but lack robust geometric information that requires consistent spatial and physical understanding of ...
+- Abstract result cue: 자동 추출 없음.
 - 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
 
 ## Reproducibility Notes

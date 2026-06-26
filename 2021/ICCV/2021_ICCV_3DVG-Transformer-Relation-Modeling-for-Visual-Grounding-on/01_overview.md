@@ -3,7 +3,7 @@
 - Year/Venue: 2021 / ICCV
 - Category: 3D Vision-Language Grounding
 - Tags: 3D visual grounding, graph reasoning, Transformer
-- Authors: Lichen Zhao, Daigang Cai, Lu Sheng, Dong Xu ; Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2021, pp. 2928-2937
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/ICCV2021/html/Zhao_3DVG-Transformer_Relation_Modeling_for_Visual_Grounding_on_Point_Clouds_ICCV_2021_paper.html
 - PDF status: downloaded
 - GitHub/Project: https://github.com/zlccccc/3DVG-Transformer
@@ -15,9 +15,9 @@
 핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Visual grounding on 3D point clouds is an emerging vision and language task that benefits various applications in understanding the 3D visual world.
-- Method cue: Inspired by the well-known transformer architecture, we propose a relation-aware visual grounding method on 3D point clouds, named as 3DVG-Transformer, to fully utilize the ...
-- Result cue: We validate that our 3DVG-Transformer outperforms the state-of-the-art methods by a large margin, on two point cloud-based visual grounding datasets, ScanRefer and Nr3D/Sr3D from ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: 3D scene representation plus free-form natural language. Output: target object, 3D box, mask, or referring expression result.
@@ -32,4 +32,3 @@ Input: 3D scene representation plus free-form natural language. Output: target o
 ## Contribution
 - structured 3D scene graph reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: 3D visual grounding, graph reasoning, Transformer.
-- 초록에서 확인되는 주요 cue: Visual, Inspired, Transformer, CCA, ScanRefer, Nr3D, Sr3D, ReferIt3D.

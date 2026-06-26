@@ -17,7 +17,7 @@ mIoU, AP, mAP, open-vocabulary accuracy, long-tail performance, IoU, SR, SPL
 - 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
 
 ## Main Results
-- Abstract result cue: We carry out extensive experiments on ScanNet ScanNet200 and nuScenes datasets and our model outperforms prior 3D open-world scene understanding approaches by an average ...
+- Abstract result cue: 자동 추출 없음.
 - 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
 
 ## Reproducibility Notes

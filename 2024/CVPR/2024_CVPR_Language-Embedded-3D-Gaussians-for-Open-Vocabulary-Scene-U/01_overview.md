@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: Language-Embedded NeRF and Gaussian Fields
 - Tags: Gaussian Splatting, open-vocabulary, semantic
-- Authors: Jin-Chuan Shi, Miao Wang, Hao-Bin Duan, Shao-Hua Guan ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024, pp. 5333-5343
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@ NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary sem
 핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Open-vocabulary querying in 3D space is challenging but essential for scene understanding tasks such as object localization and segmentation.
-- Method cue: In this work we introduce Language Embedded 3D Gaussians a novel scene representation for open-vocabulary query tasks.
-- Result cue: Instead of embedding high-dimensional raw semantic features on 3D Gaussians we propose a dedicated quantization scheme that drastically alleviates the memory requirement and a ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
@@ -32,4 +32,3 @@ Input: multi-view images/poses or reconstructed scenes plus language query. Outp
 ## Contribution
 - language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Gaussian Splatting, open-vocabulary, semantic.
-- 초록에서 확인되는 주요 cue: Open-vocabulary, Language-embedded, However, Although, Gaussians, Language, Embedded, Instead.

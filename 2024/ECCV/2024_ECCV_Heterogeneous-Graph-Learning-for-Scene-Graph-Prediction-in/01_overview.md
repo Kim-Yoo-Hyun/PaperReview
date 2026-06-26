@@ -15,9 +15,9 @@
 핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: "3D Scene Graph Prediction (SGP) aims to recognize the objects and predict their semantic and spatial relationships in a 3D scene.
-- Method cue: In this paper, we propose a 3D Heterogeneous Scene Graph Prediction (3D-HetSGP) framework, which performs graph reasoning on the 3D scene graph in a ...
-- Result cue: Extensive experiments show that our method achieves comparable or superior performance to existing methods on 3DSSG dataset."
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input/Output follows the paper task formulation; see PDF for the exact interface.
@@ -32,4 +32,3 @@ Input/Output follows the paper task formulation; see PDF for the exact interface
 ## Contribution
 - structured 3D scene graph reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: 3D Vision, Graph Reasoning.
-- 초록에서 확인되는 주요 cue: Scene, Graph, Prediction, SGP, Existing, However, Heterogeneous, HetSGP.

@@ -3,7 +3,7 @@
 - Year/Venue: 2025 / CVPR
 - Category: Language-Embedded NeRF and Gaussian Fields
 - Tags: Gaussian Splatting, semantic, grounding
-- Authors: Jiaxin Shi, Mingyue Xiang, Hao Sun, Yixuan Huang, Zhi Weng ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025, pp. 24560-24569
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2025/html/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@ NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary sem
 핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: 3D Vision Grounding (3DVG) is a fundamental research area that enables agents to perceive and interact with the 3D world.
-- Method cue: To address this challenge, we propose a zero-shot neuro-symbolic framework that utilizes a large language model (LLM) as neuro-symbolic functions to ground the object ...
-- Result cue: Notably, our method surpasses current state-of-the-art zero-shot methods on the Nr3D dataset.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
@@ -32,4 +32,3 @@ Input: multi-view images/poses or reconstructed scenes plus language query. Outp
 ## Contribution
 - language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Gaussian Splatting, semantic, grounding.
-- 초록에서 확인되는 주요 cue: Vision, Grounding, The, LLM, Gaussian, Splatting, Given, Additionally.

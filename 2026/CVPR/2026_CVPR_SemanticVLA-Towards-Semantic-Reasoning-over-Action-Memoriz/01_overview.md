@@ -3,7 +3,7 @@
 - Year/Venue: 2026 / CVPR
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLA, semantic reasoning, Planning
-- Authors: Fei Ni, Zhuo Chen, Yifu Yuan, Zibin Dong, Xianze Yao, Shan Luo, Jianye Hao, Jiankang Deng, Stefanos Zafeiriou ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026, pp. 12237-12247
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2026/html/Ni_SemanticVLA_Towards_Semantic_Reasoning_over_Action_Memorization_via_Synergistic_Explicit_CVPR_2026_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Vision-Language-Action (VLA) models have emerged as a promising paradigm where pretrained Vision-Language Models (VLMs) serve as System 2 for high-level reasoning, connected to action ...
-- Method cue: Vision-Language-Action (VLA) models have emerged as a promising paradigm where pretrained Vision-Language Models (VLMs) serve as System 2 for high-level reasoning, connected to action ...
-- Result cue: This synergy enables trace reasoning to leverage VLM's multimodal understanding for refining latent token prediction, while latent tokens provide stable and grounded guidance that ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: VLA, semantic reasoning, Planning.
-- 초록에서 확인되는 주요 cue: Vision-Language-Action, VLA, Vision-Language, Models, VLMs, System, However, VLM.

@@ -4,7 +4,7 @@
 핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
 
 ## Abstract Method Cue
-"In this work, we introduce OpenIns3D, a new 3D-input-only framework for 3D open-vocabulary scene understanding.
+자동 추출 없음.
 
 ## 원리적 동기
 - 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.

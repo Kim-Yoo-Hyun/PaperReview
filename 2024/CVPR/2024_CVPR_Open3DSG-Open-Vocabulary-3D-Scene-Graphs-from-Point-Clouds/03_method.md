@@ -4,7 +4,7 @@
 핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
 
 ## Abstract Method Cue
-We present Open3DSG an alternative approach to learn 3D scene graph prediction in an open world without requiring labeled scene graph data.
+자동 추출 없음.
 
 ## 원리적 동기
 - 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.

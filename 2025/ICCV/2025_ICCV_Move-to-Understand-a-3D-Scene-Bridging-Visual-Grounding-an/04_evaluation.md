@@ -17,7 +17,7 @@ SR, SPL, nDTW, goal distance, collision rate, IoU, AP, mAP
 - 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
 
 ## Main Results
-- Abstract result cue: This is achieved by three key innovations 1) Online query-based representation learning, enabling direct spatial memory construction from RGB-D frames, eliminating the need for ...
+- Abstract result cue: 자동 추출 없음.
 - 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
 
 ## Reproducibility Notes

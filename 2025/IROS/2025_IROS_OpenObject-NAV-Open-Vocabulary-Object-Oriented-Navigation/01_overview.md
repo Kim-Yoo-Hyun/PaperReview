@@ -3,7 +3,7 @@
 - Year/Venue: 2025 / IROS
 - Category: Navigation and Embodied AI
 - Tags: Navigation, Graph Reasoning, semantic
-- Authors: Yujie Tang, Meiling Wang, Yinan Deng, Zibo Zheng, Jiagui Zhong, Yufeng Yue
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/2409.18743
 - PDF status: downloaded
 - GitHub/Project: not identified
@@ -15,9 +15,9 @@
 핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: In everyday life, frequently used objects like cups often have unfixed positions and multiple instances within the same category, and their carriers frequently change ...
-- Method cue: We designed a series of long-sequence navigation tasks for frequently used everyday items in the Habitat simulator.
-- Result cue: The results demonstrate that by updating the CRSG, the robot can efficiently navigate to moved targets.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language/navigation goal plus egocentric observations or 3D maps. Output: waypoint, action, route, or grounded target decision.
@@ -32,4 +32,3 @@ Input: language/navigation goal plus egocentric observations or 3D maps. Output:
 ## Contribution
 - structured 3D scene graph reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Navigation, Graph Reasoning, semantic.
-- 초록에서 확인되는 주요 cue: However, This, Carrier-Relationship, Scene, Graph, CRSG, Based, Markov.

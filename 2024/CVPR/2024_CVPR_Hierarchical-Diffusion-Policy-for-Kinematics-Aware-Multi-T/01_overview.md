@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: Equivariance, Diffusion, and 3D Action
 - Tags: Diffusion, Robotics, Imitation Learning
-- Authors: Xiao Ma, Sumit Patidar, Iain Haughton, Stephen James ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024, pp. 18081-18090
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Ma_Hierarchical_Diffusion_Policy_for_Kinematics-Aware_Multi-Task_Robotic_Manipulation_CVPR_2024_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: This paper introduces Hierarchical Diffusion Policy (HDP) a hierarchical agent for multi-task robotic manipulation.
-- Method cue: To generate context-aware motion trajectories while satisfying robot kinematics constraints we present a novel kinematics-aware goal-conditioned control agent Robot Kinematics Diffuser (RK-Diffuser).
-- Result cue: Empirically we show that HDP achieves a significantly higher success rate than the state-of-the-art methods in both simulation and real-world.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - diffusion-based generation or policy learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Diffusion, Robotics, Imitation Learning.
-- 초록에서 확인되는 주요 cue: This, Hierarchical, Diffusion, Policy, HDP, NBP, The, Robot.

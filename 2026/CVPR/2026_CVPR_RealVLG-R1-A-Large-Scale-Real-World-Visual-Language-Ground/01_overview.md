@@ -3,7 +3,7 @@
 - Year/Venue: 2026 / CVPR
 - Category: Benchmarks and Datasets
 - Tags: Visual-Language Grounding, Benchmark, Robotics
-- Authors: Linfei Li, Lin Zhang, Ying Shen ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026, pp. 42396-42407
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2026/html/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Visual-language grounding aims to establish semantic correspondences between natural language and visual entities, enabling models to accurately identify and localize target objects based on ...
-- Method cue: To address these limitations, we propose the RealVLG framework, which integrates the RealVLG-11B dataset and the RealVLG-R1 model to unify real-world visual-language grounding and ...
-- Result cue: Experimental results demonstrate that RealVLG supports zero-shot perception and manipulation in real-world unseen environments, establishing a unified semantic-visual multimodal benchmark that provides a comprehensive ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: benchmark-specific observations/instructions. Output: standardized labels, tasks, or evaluation scores for comparing models.
@@ -32,4 +32,3 @@ Input: benchmark-specific observations/instructions. Output: standardized labels
 ## Contribution
 - robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Visual-Language Grounding, Benchmark, Robotics.
-- 초록에서 확인되는 주요 cue: Visual-language, Existing, VLG, RealVLG, RealVLG-11B, RealVLG-R1, Building, Reinforcement.

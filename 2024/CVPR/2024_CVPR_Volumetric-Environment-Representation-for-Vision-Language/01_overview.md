@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: Navigation and Embodied AI
 - Tags: Vision-Language Navigation, 3D geometry, representation
-- Authors: Rui Liu, Wenguan Wang, Yi Yang ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024, pp. 16317-16328
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Vision-language navigation (VLN) requires an agent to navigate through an 3D environment based on visual observations and natural language instructions.
-- Method cue: To achieve a comprehensive 3D representation with fine-grained details we introduce a Volumetric Environment Representation (VER) which voxelizes the physical world into structured 3D ...
-- Result cue: To achieve a comprehensive 3D representation with fine-grained details we introduce a Volumetric Environment Representation (VER) which voxelizes the physical world into structured 3D ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language/navigation goal plus egocentric observations or 3D maps. Output: waypoint, action, route, or grounded target decision.
@@ -32,4 +32,3 @@ Input: language/navigation goal plus egocentric observations or 3D maps. Output:
 ## Contribution
 - embodied navigation and spatial planning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Vision-Language Navigation, 3D geometry, representation.
-- 초록에서 확인되는 주요 cue: Vision-language, VLN, Previous, Though, Volumetric, Environment, Representation, VER.

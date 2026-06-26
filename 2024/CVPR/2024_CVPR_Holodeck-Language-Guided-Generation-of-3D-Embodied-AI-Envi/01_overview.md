@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: Navigation and Embodied AI
 - Tags: Generation, 3D scene, Embodied AI
-- Authors: Yue Yang, Fan-Yun Sun, Luca Weihs, Eli VanderBilt, Alvaro Herrasti, Winson Han, Jiajun Wu, Nick Haber, Ranjay Krishna, Lingjie Liu, Chris Callison-Burch, Mark Yatskar, Aniruddha Kembhavi, Christopher Clark ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024, pp. 16227-16237
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: 3D simulated environments play a critical role in Embodied AI but their creation requires expertise and extensive manual effort restricting their diversity and scope.
-- Method cue: To mitigate this limitation we present Holodeck a system that generates 3D environments to match a user-supplied prompt fully automatedly.
-- Result cue: Our large-scale human evaluation shows that annotators prefer Holodeck over manually designed procedural baselines in residential scenes and that Holodeck can produce high-quality outputs ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language/navigation goal plus egocentric observations or 3D maps. Output: waypoint, action, route, or grounded target decision.
@@ -32,4 +32,3 @@ Input: language/navigation goal plus egocentric observations or 3D maps. Output:
 ## Contribution
 - embodied navigation and spatial planning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Generation, 3D scene, Embodied AI.
-- 초록에서 확인되는 주요 cue: Embodied, Holodeck, Star, Wars, GPT-4, Objaverse, Our.

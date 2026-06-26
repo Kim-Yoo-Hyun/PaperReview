@@ -3,7 +3,7 @@
 - Year/Venue: 2025 / ICCV
 - Category: Language-Embedded NeRF and Gaussian Fields
 - Tags: Vision-Language Model, 3D Vision, Gaussian Splatting
-- Authors: Siyu Jiao, Haoye Dong, Yuyang Yin, Zequn Jie, Yinlong Qian, Yao Zhao, Humphrey Shi, Yunchao Wei ; Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2025, pp. 4670-4680
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Jiao_CLIP-GS_Unifying_Vision-Language_Representation_with_3D_Gaussian_Splatting_ICCV_2025_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified
@@ -15,9 +15,9 @@ NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary sem
 핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Recent works in 3D representation learning and multimodal pre-training have made remarkable progress.
-- Method cue: In this paper, we present CLIP-GS, a novel multimodal representation learning framework grounded in 3DGS.
-- Result cue: Leveraging the well-aligned multimodal representations, CLIP-GS demonstrates versatility and outperforms point cloud-based models on various 3D tasks, including multimodal retrieval, zero-shot, and few-shot classification.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
@@ -32,4 +32,3 @@ Input: multi-view images/poses or reconstructed scenes plus language query. Outp
 ## Contribution
 - language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Vision-Language Model, 3D Vision, Gaussian Splatting.
-- 초록에서 확인되는 주요 cue: Recent, However, Compared, Gaussian, Splatting, This, CLIP-GS, Tokenizer.

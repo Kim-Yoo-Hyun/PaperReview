@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: Benchmarks and Datasets
 - Tags: 3D Vision, Embodied AI, dataset
-- Authors: Tai Wang, Xiaohan Mao, Chenming Zhu, Runsen Xu, Ruiyuan Lyu, Peisen Li, Xiao Chen, Wenwei Zhang, Kai Chen, Tianfan Xue, Xihui Liu, Cewu Lu, Dahua Lin, Jiangmiao Pang ; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024, pp. 19757-19767
+- Authors: not extracted
 - Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Wang_EmbodiedScan_A_Holistic_Multi-Modal_3D_Perception_Suite_Towards_Embodied_AI_CVPR_2024_paper.html
 - PDF status: downloaded
 - GitHub/Project: not identified from primary page
@@ -15,9 +15,9 @@
 핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: In the realm of computer vision and robotics embodied agents are expected to explore their environment and carry out human instructions.
-- Method cue: To address the gap we introduce EmbodiedScan a multi-modal ego-centric 3D perception dataset and benchmark for holistic 3D scene understanding.
-- Result cue: It is capable of processing an arbitrary number of multi-modal inputs and demonstrates remarkable 3D perception capabilities both within the two series of benchmarks ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: benchmark-specific observations/instructions. Output: standardized labels, tasks, or evaluation scores for comparing models.
@@ -32,4 +32,3 @@ Input: benchmark-specific observations/instructions. Output: standardized labels
 ## Contribution
 - 3D vision and embodied AI 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: 3D Vision, Embodied AI, dataset.
-- 초록에서 확인되는 주요 cue: This, However, EmbodiedScan, RGB-D, LVIS, Building, Embodied, Perceptron.
