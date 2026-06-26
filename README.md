@@ -5,6 +5,7 @@ This repository is a structured literature survey for research at the intersecti
 It collects papers, PDFs, and compact reading notes for topics such as vision-language-action models, 3D scene graphs, embodied navigation, Gaussian Splatting, NeRF, SLAM, sensor fusion, grounding, calibration, planning, reinforcement learning, imitation learning, and foundation models.
 
 The full paper registry is maintained in [PAPER.md](./PAPER.md).
+Research idea sketches derived from the registry are maintained in [RESEARCH_IDEAS.md](./RESEARCH_IDEAS.md).
 
 ## Scope
 
