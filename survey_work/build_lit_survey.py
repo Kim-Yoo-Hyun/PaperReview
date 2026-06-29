@@ -30,6 +30,7 @@ EXTRA_PAPERS_FILES = [
     WORK / "extra_papers_2025_2026.json",
     WORK / "extra_papers_eccv_iccv_ral_iros.json",
     WORK / "extra_papers_3d_cv.json",
+    WORK / "extra_papers_priority_foundations.json",
 ]
 
 HEADERS = {
@@ -824,12 +825,6 @@ def write_registry(papers: list[dict]) -> None:
         f"- Total papers with folders: {len(papers_sorted)}",
         "- Scope: 3D Vision + Robotics + Vision-Language, with recent top-tier CVF/PMLR/arXiv primary PDFs and foundational CV/LLM/robotics papers.",
         "- Note: `survey_work/cvf_candidates.json` contains the broad CVF keyword census used for the 2024-current screening pass.",
-        "",
-        "## Reading Priority",
-        "1. VLA/robotics: OpenVLA, Octo, RT-2, Diffusion Policy, PerAct, RVT, VoxPoser, ReKep, 3DS-VLA, CoT-VLA, ActiveVLA.",
-        "2. 3D language grounding: ScanRefer, ReferIt3D, 3DVG-Transformer, 3D-VisTA, VLM-Grounder, RoboSpatial, ReasonGrounder.",
-        "3. 3D semantic memory/fields: CLIP-Fields, ConceptFusion, LERF, OpenScene, LangSplat, Open3DSG, OnlinePG.",
-        "4. Geometry backbone: PointNet/PointNet++, NeRF, 3DGS, DUSt3R, MASt3R, VGGT, CUT3R, DROID-SLAM.",
         "",
     ]
 

@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: Foundations: Monocular Geometry
 - Tags: depth, 3D Vision
-- Authors: Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, Hengshuang Zhao
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/2401.10891
 - PDF status: downloaded
 - GitHub/Project: not identified
@@ -15,7 +15,7 @@
 핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: This work presents Depth Anything, a highly practical solution for robust monocular depth estimation.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
 - Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
 - Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
@@ -32,4 +32,3 @@ Input/Output follows the foundational formulation: tokens, images, point sets, t
 ## Contribution
 - 3D reconstruction, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: depth, 3D Vision.
-- 초록에서 확인되는 주요 cue: This, Depth, Anything, Without, First, Second, Further, NYUv2.

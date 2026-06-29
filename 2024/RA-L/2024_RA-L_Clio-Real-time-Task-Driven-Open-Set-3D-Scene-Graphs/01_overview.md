@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / RA-L
 - Category: 3D Scene Graphs and Graph Reasoning
 - Tags: 3D Vision, Graph Reasoning
-- Authors: Dominic Maggio, Yun Chang, Nathan Hughes, Matthew Trang, Dan Griffith, Carlyn Dougherty
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/2404.13696
 - PDF status: downloaded
 - GitHub/Project: https://github.com/MIT-SPARK/Clio
@@ -15,9 +15,9 @@
 핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Modern tools for class-agnostic image segmentation (e.g., SegmentAnything) and open-set semantic understanding (e.g., CLIP) provide unprecedented opportunities for robot perception and mapping.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
 - Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: We show that this problem can be naturally formulated using the Information Bottleneck (IB), an established information-theoretic framework.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input/Output follows the paper task formulation; see PDF for the exact interface.
@@ -32,4 +32,3 @@ Input/Output follows the paper task formulation; see PDF for the exact interface
 ## Contribution
 - structured 3D scene graph reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: 3D Vision, Graph Reasoning.
-- 초록에서 확인되는 주요 cue: Modern, SegmentAnything, CLIP, While, This, The, Information, Bottleneck.

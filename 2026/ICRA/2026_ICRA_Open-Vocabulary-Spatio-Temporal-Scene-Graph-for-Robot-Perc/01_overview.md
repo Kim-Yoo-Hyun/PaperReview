@@ -3,7 +3,7 @@
 - Year/Venue: 2026 / ICRA
 - Category: 3D Scene Graphs and Graph Reasoning
 - Tags: Robotics, Graph Reasoning, semantic
-- Authors: Yi Wang, Zeyu Xue, Mujie Liu, Tongqin Zhang, Yan Hu, Zhou Zhao
+- Authors: 
 - Paper: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_5.html
 - PDF status: downloaded
 - GitHub/Project: not identified from venue audit
@@ -15,9 +15,9 @@
 핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Teleoperation via natural-language reduces operator workload and enhances safety in high-risk or remote settings.
-- Method cue: To mitigate this, we introduce the Spatio-Temporal Open-Vocabulary Scene Graph (ST-OVSG), a representation that enriches open-vocabulary perception with temporal dynamics and lightweight latency annotations.
-- Result cue: Experiments show that our method achieves 74 percent node accuracy on the Replica benchmark, outperforming ConceptGraph.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - structured 3D scene graph reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Robotics, Graph Reasoning, semantic.
-- 초록에서 확인되는 주요 cue: Teleoperation, However, Spatio-Temporal, Open-Vocabulary, Scene, Graph, ST-OVSG, LVLMs.

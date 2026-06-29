@@ -4,7 +4,7 @@
 핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
 
 ## Abstract Method Cue
-We propose a new model, UniDepth, capable of reconstructing metric 3D scenes from solely single images across domains.
+자동 추출 없음.
 
 ## 원리적 동기
 - 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.

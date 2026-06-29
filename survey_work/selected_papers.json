@@ -7668,6 +7668,1143 @@
     "pdf_status": "downloaded"
   },
   {
+    "title": "Fully Convolutional Geometric Features",
+    "year": 2019,
+    "venue": "ICCV",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "3D Vision",
+      "registration",
+      "3D geometry",
+      "representation"
+    ],
+    "folder": "2019/ICCV/2019_ICCV_Fully-Convolutional-Geometric-Features",
+    "pdf": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Choy_Fully_Convolutional_Geometric_Features_ICCV_2019_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content_ICCV_2019/html/Choy_Fully_Convolutional_Geometric_Features_ICCV_2019_paper.html",
+    "project": "https://github.com/chrischoy/FCGF",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Deep Closest Point: Learning Representations for Point Cloud Registration",
+    "year": 2019,
+    "venue": "ICCV",
+    "category": "3D Equivariance, Calibration, and Registration",
+    "tags": [
+      "3D Vision",
+      "registration",
+      "point cloud",
+      "alignment"
+    ],
+    "folder": "2019/ICCV/2019_ICCV_Deep-Closest-Point-Learning-Representations-for-Point-Clou",
+    "pdf": "https://arxiv.org/pdf/1905.03304",
+    "page": "https://arxiv.org/abs/1905.03304",
+    "project": "https://github.com/WangYueFt/dcp",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Score-Based Generative Modeling through Stochastic Differential Equations",
+    "year": 2021,
+    "venue": "ICLR",
+    "category": "Foundations: Diffusion and Generative Models",
+    "tags": [
+      "Diffusion",
+      "score model",
+      "generation"
+    ],
+    "folder": "2021/ICLR/2021_ICLR_Score-Based-Generative-Modeling-through-Stochastic-Differe",
+    "pdf": "https://arxiv.org/pdf/2011.13456",
+    "page": "https://arxiv.org/abs/2011.13456",
+    "project": "https://github.com/yang-song/score_sde",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "DreamFusion: Text-to-3D using 2D Diffusion",
+    "year": 2023,
+    "venue": "ICLR",
+    "category": "3D Generative Modeling and Diffusion",
+    "tags": [
+      "3D Vision",
+      "Diffusion",
+      "Generation",
+      "text-to-3D"
+    ],
+    "folder": "2023/ICLR/2023_ICLR_DreamFusion-Text-to-3D-using-2D-Diffusion",
+    "pdf": "https://arxiv.org/pdf/2209.14988",
+    "page": "https://arxiv.org/abs/2209.14988",
+    "project": "https://dreamfusion3d.github.io/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Flamingo: a Visual Language Model for Few-Shot Learning",
+    "year": 2022,
+    "venue": "NeurIPS",
+    "category": "Foundations: Vision-Language Models",
+    "tags": [
+      "Vision-Language Model",
+      "few-shot",
+      "alignment"
+    ],
+    "folder": "2022/NeurIPS/2022_NeurIPS_Flamingo-a-Visual-Language-Model-for-Few-Shot-Learning",
+    "pdf": "https://arxiv.org/pdf/2204.14198",
+    "page": "https://arxiv.org/abs/2204.14198",
+    "project": "not released",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models",
+    "year": 2023,
+    "venue": "ICML",
+    "category": "Foundations: Vision-Language Models",
+    "tags": [
+      "Vision-Language Model",
+      "LLM",
+      "alignment"
+    ],
+    "folder": "2023/ICML/2023_ICML_BLIP-2-Bootstrapping-Language-Image-Pre-training-with-Froz",
+    "pdf": "https://arxiv.org/pdf/2301.12597",
+    "page": "https://arxiv.org/abs/2301.12597",
+    "project": "https://github.com/salesforce/LAVIS",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Structure-from-Motion Revisited",
+    "year": 2016,
+    "venue": "CVPR",
+    "category": "3D Reconstruction, Geometry, and SLAM",
+    "tags": [
+      "3D Vision",
+      "3D reconstruction",
+      "SLAM",
+      "geometry"
+    ],
+    "folder": "2016/CVPR/2016_CVPR_Structure-from-Motion-Revisited",
+    "pdf": "https://openaccess.thecvf.com/content_cvpr_2016/papers/Schonberger_Structure-From-Motion_Revisited_CVPR_2016_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content_cvpr_2016/html/Schonberger_Structure-From-Motion_Revisited_CVPR_2016_paper.html",
+    "project": "https://colmap.github.io/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "KinectFusion: Real-Time Dense Surface Mapping and Tracking",
+    "year": 2011,
+    "venue": "ISMAR",
+    "category": "3D Reconstruction, Geometry, and SLAM",
+    "tags": [
+      "3D Vision",
+      "SLAM",
+      "RGB-D",
+      "3D reconstruction"
+    ],
+    "folder": "2011/ISMAR/2011_ISMAR_KinectFusion-Real-Time-Dense-Surface-Mapping-and-Tracking",
+    "pdf": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf",
+    "page": "https://www.microsoft.com/en-us/research/publication/kinectfusion-real-time-dense-surface-mapping-and-tracking/",
+    "project": "not released",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "BundleFusion: Real-time Globally Consistent 3D Reconstruction using On-the-fly Surface Reintegration",
+    "year": 2017,
+    "venue": "TOG",
+    "category": "3D Reconstruction, Geometry, and SLAM",
+    "tags": [
+      "3D Vision",
+      "SLAM",
+      "RGB-D",
+      "3D reconstruction"
+    ],
+    "folder": "2017/TOG/2017_TOG_BundleFusion-Real-time-Globally-Consistent-3D-Reconstructi",
+    "pdf": "https://arxiv.org/pdf/1604.01093",
+    "page": "https://arxiv.org/abs/1604.01093",
+    "project": "https://graphics.stanford.edu/projects/bundlefusion/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "PointContrast: Unsupervised Pre-training for 3D Point Cloud Understanding",
+    "year": 2020,
+    "venue": "ECCV",
+    "category": "Foundations: 3D Representation Learning",
+    "tags": [
+      "3D Vision",
+      "point cloud",
+      "representation",
+      "self-supervised"
+    ],
+    "folder": "2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud",
+    "pdf": "https://arxiv.org/pdf/2007.10985",
+    "page": "https://arxiv.org/abs/2007.10985",
+    "project": "https://github.com/facebookresearch/PointContrast",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "ULIP: Learning a Unified Representation of Language, Images, and Point Clouds for 3D Understanding",
+    "year": 2023,
+    "venue": "CVPR",
+    "category": "3D Representation Learning and Foundation Models",
+    "tags": [
+      "3D Vision",
+      "Vision-Language Model",
+      "point cloud",
+      "alignment"
+    ],
+    "folder": "2023/CVPR/2023_CVPR_ULIP-Learning-a-Unified-Representation-of-Language-Images",
+    "pdf": "https://arxiv.org/pdf/2212.05171",
+    "page": "https://arxiv.org/abs/2212.05171",
+    "project": "https://github.com/salesforce/ULIP",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "3D Scene Graph: A Structure for Unified Semantics, 3D Space, and Camera",
+    "year": 2019,
+    "venue": "ICCV",
+    "category": "3D Scene Graphs and Graph Reasoning",
+    "tags": [
+      "3D Scene Graph",
+      "semantic",
+      "geometry",
+      "Graph Reasoning"
+    ],
+    "folder": "2019/ICCV/2019_ICCV_3D-Scene-Graph-A-Structure-for-Unified-Semantics-3D-Space",
+    "pdf": "https://arxiv.org/pdf/1910.02527",
+    "page": "https://arxiv.org/abs/1910.02527",
+    "project": "https://3dscenegraph.stanford.edu/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields",
+    "year": 2021,
+    "venue": "ICCV",
+    "category": "Foundations: 3D Scene Representations",
+    "tags": [
+      "NeRF",
+      "3D Vision",
+      "representation",
+      "geometry"
+    ],
+    "folder": "2021/ICCV/2021_ICCV_Mip-NeRF-A-Multiscale-Representation-for-Anti-Aliasing-Neu",
+    "pdf": "https://arxiv.org/pdf/2103.13415",
+    "page": "https://arxiv.org/abs/2103.13415",
+    "project": "https://jonbarron.info/mipnerf/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Instant Neural Graphics Primitives with a Multiresolution Hash Encoding",
+    "year": 2022,
+    "venue": "SIGGRAPH",
+    "category": "Foundations: 3D Scene Representations",
+    "tags": [
+      "NeRF",
+      "3D Vision",
+      "representation",
+      "efficiency"
+    ],
+    "folder": "2022/SIGGRAPH/2022_SIGGRAPH_Instant-Neural-Graphics-Primitives-with-a-Multiresolution",
+    "pdf": "https://arxiv.org/pdf/2201.05989",
+    "page": "https://arxiv.org/abs/2201.05989",
+    "project": "https://nvlabs.github.io/instant-ngp/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "ScanNet: Richly-annotated 3D Reconstructions of Indoor Scenes",
+    "year": 2017,
+    "venue": "CVPR",
+    "category": "Benchmarks and Datasets",
+    "tags": [
+      "3D Vision",
+      "Dataset",
+      "semantic",
+      "3D reconstruction"
+    ],
+    "folder": "2017/CVPR/2017_CVPR_ScanNet-Richly-annotated-3D-Reconstructions-of-Indoor-Scen",
+    "pdf": "https://arxiv.org/pdf/1702.04405",
+    "page": "https://arxiv.org/abs/1702.04405",
+    "project": "http://www.scan-net.org/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SemanticKITTI: A Dataset for Semantic Scene Understanding of LiDAR Sequences",
+    "year": 2019,
+    "venue": "ICCV",
+    "category": "Benchmarks and Datasets",
+    "tags": [
+      "3D Vision",
+      "LiDAR",
+      "semantic",
+      "Dataset"
+    ],
+    "folder": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o",
+    "pdf": "https://arxiv.org/pdf/1904.01416",
+    "page": "https://arxiv.org/abs/1904.01416",
+    "project": "http://semantic-kitti.org/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "ScanQA: 3D Question Answering for Spatial Scene Understanding",
+    "year": 2022,
+    "venue": "CVPR",
+    "category": "3D Vision-Language Grounding",
+    "tags": [
+      "3D Vision",
+      "Vision-Language",
+      "grounding",
+      "3D QA"
+    ],
+    "folder": "2022/CVPR/2022_CVPR_ScanQA-3D-Question-Answering-for-Spatial-Scene-Understandi",
+    "pdf": "https://arxiv.org/pdf/2112.10482",
+    "page": "https://arxiv.org/abs/2112.10482",
+    "project": "https://github.com/ATR-DBI/ScanQA",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Matterport3D: Learning from RGB-D Data in Indoor Environments",
+    "year": 2017,
+    "venue": "3DV",
+    "category": "Benchmarks and Datasets",
+    "tags": [
+      "3D Vision",
+      "Dataset",
+      "RGB-D",
+      "Navigation"
+    ],
+    "folder": "2017/3DV/2017_3DV_Matterport3D-Learning-from-RGB-D-Data-in-Indoor-Environmen",
+    "pdf": "https://arxiv.org/pdf/1709.06158",
+    "page": "https://arxiv.org/abs/1709.06158",
+    "project": "https://niessner.github.io/Matterport/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Habitat: A Platform for Embodied AI Research",
+    "year": 2019,
+    "venue": "ICCV",
+    "category": "Benchmarks and Datasets",
+    "tags": [
+      "Robotics",
+      "Navigation",
+      "Embodied AI",
+      "Benchmark"
+    ],
+    "folder": "2019/ICCV/2019_ICCV_Habitat-A-Platform-for-Embodied-AI-Research",
+    "pdf": "https://arxiv.org/pdf/1904.01201",
+    "page": "https://arxiv.org/abs/1904.01201",
+    "project": "https://aihabitat.org/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Transporter Networks: Rearranging the Visual World for Robotic Manipulation",
+    "year": 2020,
+    "venue": "CoRL",
+    "category": "Equivariance, Diffusion, and 3D Action",
+    "tags": [
+      "Robotics",
+      "Vision-Language Action",
+      "equivariance",
+      "Imitation Learning"
+    ],
+    "folder": "2020/CoRL/2020_CoRL_Transporter-Networks-Rearranging-the-Visual-World-for-Robo",
+    "pdf": "https://arxiv.org/pdf/2010.14406",
+    "page": "https://arxiv.org/abs/2010.14406",
+    "project": "https://github.com/google-research/ravens",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "CLIPort: What and Where Pathways for Robotic Manipulation",
+    "year": 2021,
+    "venue": "CoRL",
+    "category": "Foundations: Vision-Language-Action and Robotics",
+    "tags": [
+      "Robotics",
+      "Vision-Language Action",
+      "CLIP",
+      "manipulation"
+    ],
+    "folder": "2021/CoRL/2021_CoRL_CLIPort-What-and-Where-Pathways-for-Robotic-Manipulation",
+    "pdf": "https://arxiv.org/pdf/2109.12098",
+    "page": "https://arxiv.org/abs/2109.12098",
+    "project": "https://cliport.github.io/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Neural Descriptor Fields: SE(3)-Equivariant Object Representations for Manipulation",
+    "year": 2021,
+    "venue": "CoRL",
+    "category": "Equivariance, Diffusion, and 3D Action",
+    "tags": [
+      "Robotics",
+      "equivariant",
+      "3D geometry",
+      "manipulation"
+    ],
+    "folder": "2021/CoRL/2021_CoRL_Neural-Descriptor-Fields-SE3-Equivariant-Object-Representa",
+    "pdf": "https://arxiv.org/pdf/2112.05124",
+    "page": "https://arxiv.org/abs/2112.05124",
+    "project": "https://github.com/anthonysimeonov/ndf_robot",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection",
+    "year": 2018,
+    "venue": "CVPR",
+    "category": "Foundations: 3D Detection and BEV Perception",
+    "tags": [
+      "3D Vision",
+      "LiDAR",
+      "3D detection",
+      "sensor fusion"
+    ],
+    "folder": "2018/CVPR/2018_CVPR_VoxelNet-End-to-End-Learning-for-Point-Cloud-Based-3D-Obje",
+    "pdf": "https://arxiv.org/pdf/1711.06396",
+    "page": "https://arxiv.org/abs/1711.06396",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "PointPillars: Fast Encoders for Object Detection from Point Clouds",
+    "year": 2019,
+    "venue": "CVPR",
+    "category": "Foundations: 3D Detection and BEV Perception",
+    "tags": [
+      "3D Vision",
+      "LiDAR",
+      "3D detection",
+      "BEV"
+    ],
+    "folder": "2019/CVPR/2019_CVPR_PointPillars-Fast-Encoders-for-Object-Detection-from-Point",
+    "pdf": "https://arxiv.org/pdf/1812.05784",
+    "page": "https://arxiv.org/abs/1812.05784",
+    "project": "https://github.com/nutonomy/second.pytorch",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Lift, Splat, Shoot: Encoding Images from Arbitrary Camera Rigs by Implicitly Unprojecting to 3D",
+    "year": 2020,
+    "venue": "ECCV",
+    "category": "Foundations: 3D Detection and BEV Perception",
+    "tags": [
+      "3D Vision",
+      "BEV",
+      "sensor fusion",
+      "camera"
+    ],
+    "folder": "2020/ECCV/2020_ECCV_Lift-Splat-Shoot-Encoding-Images-from-Arbitrary-Camera-Rig",
+    "pdf": "https://arxiv.org/pdf/2008.05711",
+    "page": "https://arxiv.org/abs/2008.05711",
+    "project": "https://github.com/nv-tlabs/lift-splat-shoot",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "ShapeNet: An Information-Rich 3D Model Repository",
+    "year": 2015,
+    "venue": "arxiv",
+    "category": "Benchmarks and Datasets",
+    "tags": [
+      "3D Vision",
+      "Dataset",
+      "shape",
+      "representation"
+    ],
+    "folder": "2015/arxiv/2015_arxiv_ShapeNet-An-Information-Rich-3D-Model-Repository",
+    "pdf": "https://arxiv.org/pdf/1512.03012",
+    "page": "https://arxiv.org/abs/1512.03012",
+    "project": "https://shapenet.org/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "PointCNN: Convolution On X-Transformed Points",
+    "year": 2018,
+    "venue": "NeurIPS",
+    "category": "Foundations: 3D Geometry and Point Clouds",
+    "tags": [
+      "3D Vision",
+      "point cloud",
+      "geometry",
+      "representation"
+    ],
+    "folder": "2018/NeurIPS/2018_NeurIPS_PointCNN-Convolution-On-X-Transformed-Points",
+    "pdf": "https://arxiv.org/pdf/1801.07791",
+    "page": "https://arxiv.org/abs/1801.07791",
+    "project": "https://github.com/yangyanli/PointCNN",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Self-Supervised Pretraining of 3D Features on any Point-Cloud",
+    "year": 2021,
+    "venue": "ICCV",
+    "category": "Foundations: 3D Representation Learning",
+    "tags": [
+      "3D Vision",
+      "point cloud",
+      "representation",
+      "self-supervised"
+    ],
+    "folder": "2021/ICCV/2021_ICCV_Self-Supervised-Pretraining-of-3D-Features-on-any-Point-Cl",
+    "pdf": "https://arxiv.org/pdf/2101.02691",
+    "page": "https://arxiv.org/abs/2101.02691",
+    "project": "https://github.com/facebookresearch/DepthContrast",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+    "year": 2022,
+    "venue": "CVPR",
+    "category": "Foundations: 3D Scene Representations",
+    "tags": [
+      "NeRF",
+      "3D Vision",
+      "representation",
+      "geometry"
+    ],
+    "folder": "2022/CVPR/2022_CVPR_Mip-NeRF-360-Unbounded-Anti-Aliased-Neural-Radiance-Fields",
+    "pdf": "https://arxiv.org/pdf/2111.12077",
+    "page": "https://arxiv.org/abs/2111.12077",
+    "project": "https://jonbarron.info/mipnerf360/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "NeuS: Learning Neural Implicit Surfaces by Volume Rendering for Multi-view Reconstruction",
+    "year": 2021,
+    "venue": "NeurIPS",
+    "category": "Foundations: 3D Scene Representations",
+    "tags": [
+      "3D Vision",
+      "NeRF",
+      "surface reconstruction",
+      "geometry"
+    ],
+    "folder": "2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering",
+    "pdf": "https://arxiv.org/pdf/2106.10689",
+    "page": "https://arxiv.org/abs/2106.10689",
+    "project": "https://lingjie0206.github.io/papers/NeuS/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "SSCNet: Semantic Scene Completion from a Single Depth Image",
+    "year": 2017,
+    "venue": "CVPR",
+    "category": "Foundations: 3D Semantic Occupancy",
+    "tags": [
+      "3D Vision",
+      "semantic",
+      "occupancy",
+      "geometry"
+    ],
+    "folder": "2017/CVPR/2017_CVPR_SSCNet-Semantic-Scene-Completion-from-a-Single-Depth-Image",
+    "pdf": "https://arxiv.org/pdf/1611.08974",
+    "page": "https://arxiv.org/abs/1611.08974",
+    "project": "https://github.com/shurans/sscnet",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "MonoScene: Monocular 3D Semantic Scene Completion",
+    "year": 2022,
+    "venue": "CVPR",
+    "category": "Foundations: 3D Semantic Occupancy",
+    "tags": [
+      "3D Vision",
+      "semantic",
+      "occupancy",
+      "monocular geometry"
+    ],
+    "folder": "2022/CVPR/2022_CVPR_MonoScene-Monocular-3D-Semantic-Scene-Completion",
+    "pdf": "https://arxiv.org/pdf/2112.00726",
+    "page": "https://arxiv.org/abs/2112.00726",
+    "project": "https://github.com/cv-rits/MonoScene",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "OccFormer: Dual-path Transformer for Vision-based 3D Semantic Occupancy Prediction",
+    "year": 2023,
+    "venue": "ICCV",
+    "category": "Foundations: 3D Semantic Occupancy",
+    "tags": [
+      "3D Vision",
+      "semantic",
+      "occupancy",
+      "Transformer"
+    ],
+    "folder": "2023/ICCV/2023_ICCV_OccFormer-Dual-path-Transformer-for-Vision-based-3D-Semant",
+    "pdf": "https://arxiv.org/pdf/2304.05316",
+    "page": "https://arxiv.org/abs/2304.05316",
+    "project": "https://github.com/zhangyp15/OccFormer",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Denoising Diffusion Implicit Models",
+    "year": 2021,
+    "venue": "ICLR",
+    "category": "Foundations: Diffusion and Generative Models",
+    "tags": [
+      "Diffusion",
+      "sampling",
+      "generation"
+    ],
+    "folder": "2021/ICLR/2021_ICLR_Denoising-Diffusion-Implicit-Models",
+    "pdf": "https://arxiv.org/pdf/2010.02502",
+    "page": "https://arxiv.org/abs/2010.02502",
+    "project": "https://github.com/ermongroup/ddim",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Classifier-Free Diffusion Guidance",
+    "year": 2022,
+    "venue": "arxiv",
+    "category": "Foundations: Diffusion and Generative Models",
+    "tags": [
+      "Diffusion",
+      "guidance",
+      "generation"
+    ],
+    "folder": "2022/arxiv/2022_arxiv_Classifier-Free-Diffusion-Guidance",
+    "pdf": "https://arxiv.org/pdf/2207.12598",
+    "page": "https://arxiv.org/abs/2207.12598",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Tensor Field Networks: Rotation- and Translation-Equivariant Neural Networks for 3D Point Clouds",
+    "year": 2018,
+    "venue": "arxiv",
+    "category": "Foundations: Equivariance and Geometry",
+    "tags": [
+      "3D Vision",
+      "equivariant",
+      "3D geometry",
+      "point cloud"
+    ],
+    "folder": "2018/arxiv/2018_arxiv_Tensor-Field-Networks-Rotation-and-Translation-Equivariant",
+    "pdf": "https://arxiv.org/pdf/1802.08219",
+    "page": "https://arxiv.org/abs/1802.08219",
+    "project": "https://github.com/tensorfieldnetworks/tensorfieldnetworks",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Group Equivariant Convolutional Networks",
+    "year": 2016,
+    "venue": "ICML",
+    "category": "Foundations: Equivariance and Geometry",
+    "tags": [
+      "equivariant",
+      "representation",
+      "geometry"
+    ],
+    "folder": "2016/ICML/2016_ICML_Group-Equivariant-Convolutional-Networks",
+    "pdf": "https://arxiv.org/pdf/1602.07576",
+    "page": "https://arxiv.org/abs/1602.07576",
+    "project": "https://github.com/tscohen/gconv_experiments",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Depth Map Prediction from a Single Image using a Multi-Scale Deep Network",
+    "year": 2014,
+    "venue": "NeurIPS",
+    "category": "Foundations: Monocular Geometry",
+    "tags": [
+      "3D Vision",
+      "monocular depth",
+      "geometry"
+    ],
+    "folder": "2014/NeurIPS/2014_NeurIPS_Depth-Map-Prediction-from-a-Single-Image-using-a-Multi-Sca",
+    "pdf": "https://arxiv.org/pdf/1406.2283",
+    "page": "https://arxiv.org/abs/1406.2283",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Digging Into Self-Supervised Monocular Depth Estimation",
+    "year": 2019,
+    "venue": "ICCV",
+    "category": "Foundations: Monocular Geometry",
+    "tags": [
+      "3D Vision",
+      "monocular depth",
+      "self-supervised",
+      "geometry"
+    ],
+    "folder": "2019/ICCV/2019_ICCV_Digging-Into-Self-Supervised-Monocular-Depth-Estimation",
+    "pdf": "https://arxiv.org/pdf/1806.01260",
+    "page": "https://arxiv.org/abs/1806.01260",
+    "project": "https://github.com/nianticlabs/monodepth2",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Vision Transformers for Dense Prediction",
+    "year": 2021,
+    "venue": "ICCV",
+    "category": "Foundations: Monocular Geometry",
+    "tags": [
+      "3D Vision",
+      "monocular depth",
+      "Vision Transformer",
+      "geometry"
+    ],
+    "folder": "2021/ICCV/2021_ICCV_Vision-Transformers-for-Dense-Prediction",
+    "pdf": "https://arxiv.org/pdf/2103.13413",
+    "page": "https://arxiv.org/abs/2103.13413",
+    "project": "https://github.com/isl-org/DPT",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning",
+    "year": 2011,
+    "venue": "AISTATS",
+    "category": "Foundations: RL and Imitation Learning",
+    "tags": [
+      "Robotics",
+      "Imitation Learning",
+      "policy learning"
+    ],
+    "folder": "2011/AISTATS/2011_AISTATS_A-Reduction-of-Imitation-Learning-and-Structured-Predictio",
+    "pdf": "https://www.ri.cmu.edu/pub_files/2011/4/Ross-AISTATS11-NoRegret.pdf",
+    "page": "https://www.ri.cmu.edu/publications/a-reduction-of-imitation-learning-and-structured-prediction-to-no-regret-online-learning/",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Generative Adversarial Imitation Learning",
+    "year": 2016,
+    "venue": "NeurIPS",
+    "category": "Foundations: RL and Imitation Learning",
+    "tags": [
+      "Robotics",
+      "Imitation Learning",
+      "Reinforcement Learning"
+    ],
+    "folder": "2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning",
+    "pdf": "https://arxiv.org/pdf/1606.03476",
+    "page": "https://arxiv.org/abs/1606.03476",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Proximal Policy Optimization Algorithms",
+    "year": 2017,
+    "venue": "arxiv",
+    "category": "Foundations: RL and Imitation Learning",
+    "tags": [
+      "Reinforcement Learning",
+      "policy learning",
+      "Robotics"
+    ],
+    "folder": "2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms",
+    "pdf": "https://arxiv.org/pdf/1707.06347",
+    "page": "https://arxiv.org/abs/1707.06347",
+    "project": "https://github.com/openai/baselines",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "PTAM: Parallel Tracking and Mapping for Small AR Workspaces",
+    "year": 2007,
+    "venue": "ISMAR",
+    "category": "Foundations: SLAM and Sensor Geometry",
+    "tags": [
+      "3D Vision",
+      "SLAM",
+      "geometry",
+      "camera pose"
+    ],
+    "folder": "2007/ISMAR/2007_ISMAR_PTAM-Parallel-Tracking-and-Mapping-for-Small-AR-Workspaces",
+    "pdf": "https://www.robots.ox.ac.uk/~gk/publications/KleinMurray2007ISMAR.pdf",
+    "page": "https://www.robots.ox.ac.uk/~gk/PTAM/",
+    "project": "https://www.robots.ox.ac.uk/~gk/PTAM/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "LSD-SLAM: Large-Scale Direct Monocular SLAM",
+    "year": 2014,
+    "venue": "ECCV",
+    "category": "Foundations: SLAM and Sensor Geometry",
+    "tags": [
+      "3D Vision",
+      "SLAM",
+      "monocular geometry",
+      "3D reconstruction"
+    ],
+    "folder": "2014/ECCV/2014_ECCV_LSD-SLAM-Large-Scale-Direct-Monocular-SLAM",
+    "pdf": "https://jakobengel.github.io/pdf/engel14eccv.pdf",
+    "page": "https://cvg.cit.tum.de/research/vslam/lsdslam",
+    "project": "https://github.com/tum-vision/lsd_slam",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "ElasticFusion: Dense SLAM Without A Pose Graph",
+    "year": 2015,
+    "venue": "RSS",
+    "category": "Foundations: SLAM and Sensor Geometry",
+    "tags": [
+      "3D Vision",
+      "SLAM",
+      "RGB-D",
+      "3D reconstruction"
+    ],
+    "folder": "2015/RSS/2015_RSS_ElasticFusion-Dense-SLAM-Without-A-Pose-Graph",
+    "pdf": "https://www.roboticsproceedings.org/rss11/p01.pdf",
+    "page": "https://www.roboticsproceedings.org/rss11/p01.html",
+    "project": "https://github.com/mp3guy/ElasticFusion",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Training language models to follow instructions with human feedback",
+    "year": 2022,
+    "venue": "NeurIPS",
+    "category": "Foundations: Transformer and Language Models",
+    "tags": [
+      "LLM",
+      "instruction tuning",
+      "alignment"
+    ],
+    "folder": "2022/NeurIPS/2022_NeurIPS_Training-language-models-to-follow-instructions-with-human",
+    "pdf": "https://arxiv.org/pdf/2203.02155",
+    "page": "https://arxiv.org/abs/2203.02155",
+    "project": "not released",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+    "year": 2022,
+    "venue": "NeurIPS",
+    "category": "Foundations: Transformer and Language Models",
+    "tags": [
+      "LLM",
+      "reasoning",
+      "Chain-of-Thought"
+    ],
+    "folder": "2022/NeurIPS/2022_NeurIPS_Chain-of-Thought-Prompting-Elicits-Reasoning-in-Large-Lang",
+    "pdf": "https://arxiv.org/pdf/2201.11903",
+    "page": "https://arxiv.org/abs/2201.11903",
+    "project": "not identified",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Masked Autoencoders Are Scalable Vision Learners",
+    "year": 2022,
+    "venue": "CVPR",
+    "category": "Foundations: Vision Foundation Models",
+    "tags": [
+      "Vision Foundation Model",
+      "self-supervised",
+      "representation"
+    ],
+    "folder": "2022/CVPR/2022_CVPR_Masked-Autoencoders-Are-Scalable-Vision-Learners",
+    "pdf": "https://arxiv.org/pdf/2111.06377",
+    "page": "https://arxiv.org/abs/2111.06377",
+    "project": "https://github.com/facebookresearch/mae",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Emerging Properties in Self-Supervised Vision Transformers",
+    "year": 2021,
+    "venue": "ICCV",
+    "category": "Foundations: Vision Foundation Models",
+    "tags": [
+      "Vision Foundation Model",
+      "self-supervised",
+      "representation"
+    ],
+    "folder": "2021/ICCV/2021_ICCV_Emerging-Properties-in-Self-Supervised-Vision-Transformers",
+    "pdf": "https://arxiv.org/pdf/2104.14294",
+    "page": "https://arxiv.org/abs/2104.14294",
+    "project": "https://github.com/facebookresearch/dino",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "Foundations: Vision Foundation Models",
+    "tags": [
+      "Vision Foundation Model",
+      "grounding",
+      "open-vocabulary"
+    ],
+    "folder": "2024/ECCV/2024_ECCV_Grounding-DINO-Marrying-DINO-with-Grounded-Pre-Training-fo",
+    "pdf": "https://arxiv.org/pdf/2303.05499",
+    "page": "https://arxiv.org/abs/2303.05499",
+    "project": "https://github.com/IDEA-Research/GroundingDINO",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "ALIGN: Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision",
+    "year": 2021,
+    "venue": "ICML",
+    "category": "Foundations: Vision-Language Models",
+    "tags": [
+      "Vision-Language Model",
+      "alignment",
+      "representation"
+    ],
+    "folder": "2021/ICML/2021_ICML_ALIGN-Scaling-Up-Visual-and-Vision-Language-Representation",
+    "pdf": "https://arxiv.org/pdf/2102.05918",
+    "page": "https://arxiv.org/abs/2102.05918",
+    "project": "not released",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation",
+    "year": 2022,
+    "venue": "ICML",
+    "category": "Foundations: Vision-Language Models",
+    "tags": [
+      "Vision-Language Model",
+      "alignment",
+      "generation"
+    ],
+    "folder": "2022/ICML/2022_ICML_BLIP-Bootstrapping-Language-Image-Pre-training-for-Unified",
+    "pdf": "https://arxiv.org/pdf/2201.12086",
+    "page": "https://arxiv.org/abs/2201.12086",
+    "project": "https://github.com/salesforce/BLIP",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Visual Instruction Tuning",
+    "year": 2023,
+    "venue": "NeurIPS",
+    "category": "Foundations: Vision-Language Models",
+    "tags": [
+      "Vision-Language Model",
+      "LLM",
+      "instruction tuning"
+    ],
+    "folder": "2023/NeurIPS/2023_NeurIPS_Visual-Instruction-Tuning",
+    "pdf": "https://arxiv.org/pdf/2304.08485",
+    "page": "https://arxiv.org/abs/2304.08485",
+    "project": "https://github.com/haotian-liu/LLaVA",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning",
+    "year": 2022,
+    "venue": "CoRL",
+    "category": "Foundations: Vision-Language-Action and Robotics",
+    "tags": [
+      "Robotics",
+      "Imitation Learning",
+      "Vision-Language Action"
+    ],
+    "folder": "2022/CoRL/2022_CoRL_BC-Z-Zero-Shot-Task-Generalization-with-Robotic-Imitation",
+    "pdf": "https://arxiv.org/pdf/2202.02005",
+    "page": "https://arxiv.org/abs/2202.02005",
+    "project": "https://sites.google.com/view/bc-z/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "In-Place Scene Labelling and Understanding with Implicit Scene Representation",
+    "year": 2021,
+    "venue": "ICCV",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "NeRF",
+      "semantic",
+      "3D Vision",
+      "alignment"
+    ],
+    "folder": "2021/ICCV/2021_ICCV_In-Place-Scene-Labelling-and-Understanding-with-Implicit-S",
+    "pdf": "https://arxiv.org/pdf/2103.15875",
+    "page": "https://arxiv.org/abs/2103.15875",
+    "project": "https://shuaifengzhi.com/Semantic-NeRF/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation",
+    "year": 2023,
+    "venue": "CoRL",
+    "category": "Language-Embedded NeRF and Gaussian Fields",
+    "tags": [
+      "Robotics",
+      "NeRF",
+      "Vision-Language",
+      "manipulation"
+    ],
+    "folder": "2023/CoRL/2023_CoRL_Distilled-Feature-Fields-Enable-Few-Shot-Language-Guided-M",
+    "pdf": "https://proceedings.mlr.press/v229/shen23a/shen23a.pdf",
+    "page": "https://proceedings.mlr.press/v229/shen23a.html",
+    "project": "https://f3rm.github.io/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Vision-and-Language Navigation: Interpreting Visually-Grounded Navigation Instructions in Real Environments",
+    "year": 2018,
+    "venue": "CVPR",
+    "category": "Navigation and Embodied AI",
+    "tags": [
+      "Vision-Language Navigation",
+      "Robotics",
+      "Navigation",
+      "Benchmark"
+    ],
+    "folder": "2018/CVPR/2018_CVPR_Vision-and-Language-Navigation-Interpreting-Visually-Groun",
+    "pdf": "https://arxiv.org/pdf/1711.07280",
+    "page": "https://arxiv.org/abs/1711.07280",
+    "project": "https://bringmeaspoon.org/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation",
+    "year": 2024,
+    "venue": "ICRA",
+    "category": "Navigation and Embodied AI",
+    "tags": [
+      "Vision-Language Navigation",
+      "Robotics",
+      "Navigation",
+      "semantic"
+    ],
+    "folder": "2024/ICRA/2024_ICRA_VLFM-Vision-Language-Frontier-Maps-for-Zero-Shot-Semantic",
+    "pdf": "https://arxiv.org/pdf/2312.03275",
+    "page": "https://arxiv.org/abs/2312.03275",
+    "project": "https://github.com/bdaiinstitute/vlfm",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Beyond the Nav-Graph: Vision-and-Language Navigation in Continuous Environments",
+    "year": 2020,
+    "venue": "ECCV",
+    "category": "Navigation and Embodied AI",
+    "tags": [
+      "Vision-Language Navigation",
+      "Robotics",
+      "Navigation",
+      "Benchmark"
+    ],
+    "folder": "2020/ECCV/2020_ECCV_Beyond-the-Nav-Graph-Vision-and-Language-Navigation-in-Con",
+    "pdf": "https://arxiv.org/pdf/2004.02857",
+    "page": "https://arxiv.org/abs/2004.02857",
+    "project": "https://jacobkrantz.github.io/vlnce/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Room-Across-Room: Multilingual Vision-and-Language Navigation with Dense Spatiotemporal Grounding",
+    "year": 2020,
+    "venue": "EMNLP",
+    "category": "Navigation and Embodied AI",
+    "tags": [
+      "Vision-Language Navigation",
+      "Navigation",
+      "grounding",
+      "Benchmark"
+    ],
+    "folder": "2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati",
+    "pdf": "https://aclanthology.org/2020.emnlp-main.356.pdf",
+    "page": "https://aclanthology.org/2020.emnlp-main.356/",
+    "project": "https://github.com/google-research-datasets/RxR",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Language-driven Semantic Segmentation",
+    "year": 2022,
+    "venue": "ICLR",
+    "category": "Open-Vocabulary 3D Mapping",
+    "tags": [
+      "Vision-Language Model",
+      "semantic",
+      "open-vocabulary",
+      "alignment"
+    ],
+    "folder": "2022/ICLR/2022_ICLR_Language-driven-Semantic-Segmentation",
+    "pdf": "https://arxiv.org/pdf/2201.03546",
+    "page": "https://arxiv.org/abs/2201.03546",
+    "project": "https://github.com/isl-org/lang-seg",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "OpenSeg: Scaling Open-Vocabulary Image Segmentation with Image-Level Labels",
+    "year": 2022,
+    "venue": "ECCV",
+    "category": "Open-Vocabulary 3D Mapping",
+    "tags": [
+      "Vision-Language Model",
+      "semantic",
+      "open-vocabulary",
+      "segmentation"
+    ],
+    "folder": "2022/ECCV/2022_ECCV_OpenSeg-Scaling-Open-Vocabulary-Image-Segmentation-with-Im",
+    "pdf": "https://arxiv.org/pdf/2112.12143",
+    "page": "https://arxiv.org/abs/2112.12143",
+    "project": "https://github.com/tensorflow/tpu/tree/master/models/official/detection/projects/openseg",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Detecting Twenty-thousand Classes using Image-level Supervision",
+    "year": 2022,
+    "venue": "ECCV",
+    "category": "Open-Vocabulary 3D Mapping",
+    "tags": [
+      "Vision-Language Model",
+      "open-vocabulary",
+      "detection",
+      "semantic"
+    ],
+    "folder": "2022/ECCV/2022_ECCV_Detecting-Twenty-thousand-Classes-using-Image-level-Superv",
+    "pdf": "https://arxiv.org/pdf/2201.02605",
+    "page": "https://arxiv.org/abs/2201.02605",
+    "project": "https://github.com/facebookresearch/Detic",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "nuScenes: A Multimodal Dataset for Autonomous Driving",
+    "year": 2020,
+    "venue": "CVPR",
+    "category": "Benchmarks and Datasets",
+    "tags": [
+      "3D Vision",
+      "LiDAR",
+      "sensor fusion",
+      "Dataset"
+    ],
+    "folder": "2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving",
+    "pdf": "https://arxiv.org/pdf/1903.11027",
+    "page": "https://arxiv.org/abs/1903.11027",
+    "project": "https://www.nuscenes.org/nuscenes",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Occ3D: A Large-Scale 3D Occupancy Prediction Benchmark for Autonomous Driving",
+    "year": 2023,
+    "venue": "NeurIPS",
+    "category": "Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception",
+    "tags": [
+      "3D Vision",
+      "occupancy",
+      "sensor fusion",
+      "Benchmark"
+    ],
+    "folder": "2023/NeurIPS/2023_NeurIPS_Occ3D-A-Large-Scale-3D-Occupancy-Prediction-Benchmark-for",
+    "pdf": "https://arxiv.org/pdf/2304.14365",
+    "page": "https://arxiv.org/abs/2304.14365",
+    "project": "https://tsinghua-mars-lab.github.io/Occ3D/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "Waymo Open Dataset: An Autonomous Driving Dataset",
+    "year": 2020,
+    "venue": "CVPR",
+    "category": "Benchmarks and Datasets",
+    "tags": [
+      "3D Vision",
+      "LiDAR",
+      "sensor fusion",
+      "Dataset"
+    ],
+    "folder": "2020/CVPR/2020_CVPR_Waymo-Open-Dataset-An-Autonomous-Driving-Dataset",
+    "pdf": "https://arxiv.org/pdf/1912.04838",
+    "page": "https://arxiv.org/abs/1912.04838",
+    "project": "https://waymo.com/open/",
+    "pdf_status": "downloaded"
+  },
+  {
+    "title": "DETR3D: 3D Object Detection from Multi-view Images via 3D-to-2D Queries",
+    "year": 2021,
+    "venue": "CoRL",
+    "category": "Sensor Fusion, LiDAR, and Autonomous Driving",
+    "tags": [
+      "3D Vision",
+      "BEV",
+      "3D detection",
+      "camera"
+    ],
+    "folder": "2021/CoRL/2021_CoRL_DETR3D-3D-Object-Detection-from-Multi-view-Images-via-3D-t",
+    "pdf": "https://arxiv.org/pdf/2110.06922",
+    "page": "https://arxiv.org/abs/2110.06922",
+    "project": "https://github.com/WangYueFt/detr3d",
+    "pdf_status": "downloaded"
+  },
+  {
     "title": "LangSplat: 3D Language Gaussian Splatting",
     "year": 2024,
     "venue": "CVPR 2024",

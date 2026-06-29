@@ -3,7 +3,7 @@
 - Year/Venue: 2023 / ICCV
 - Category: Foundations: Vision Foundation Models
 - Tags: segmentation, foundation model, prompting
-- Authors: Alexander Kirillov, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/2304.02643
 - PDF status: downloaded
 - GitHub/Project: https://github.com/facebookresearch/segment-anything
@@ -15,8 +15,8 @@
 핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: We introduce the Segment Anything (SA) project: a new task, model, and dataset for image segmentation.
-- Method cue: We introduce the Segment Anything (SA) project: a new task, model, and dataset for image segmentation.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
 - Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
@@ -32,4 +32,3 @@ Input/Output follows the foundational formulation: tokens, images, point sets, t
 ## Contribution
 - vision or vision-language foundation model pretraining 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: segmentation, foundation model, prompting.
-- 초록에서 확인되는 주요 cue: Segment, Anything, Using, The, Model, SAM, SA-1B.

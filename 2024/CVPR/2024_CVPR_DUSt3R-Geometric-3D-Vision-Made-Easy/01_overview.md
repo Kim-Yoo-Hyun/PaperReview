@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: 3D Reconstruction, Geometry, and SLAM
 - Tags: 3D reconstruction, calibration, geometry
-- Authors: Shuzhe Wang, Vincent Leroy, Yohann Cabon, Boris Chidlovskii, Jerome Revaud
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/2312.14132
 - PDF status: downloaded
 - GitHub/Project: https://github.com/naver/dust3r
@@ -15,9 +15,9 @@
 핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Multi-view stereo reconstruction (MVS) in the wild requires to first estimate the camera parameters e.g. intrinsic and extrinsic parameters.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
 - Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: We show that this formulation smoothly unifies the monocular and binocular reconstruction cases.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: one or more images/RGB-D/LiDAR observations. Output: depth, camera pose, point map, dense reconstruction, or consistent map.
@@ -32,4 +32,3 @@ Input: one or more images/RGB-D/LiDAR observations. Output: depth, camera pose, 
 ## Contribution
 - 3D reconstruction, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: 3D reconstruction, calibration, geometry.
-- 초록에서 확인되는 주요 cue: Multi-view, MVS, These, DUSt3R, Dense, Unconstrained, Stereo, Reconstruction.

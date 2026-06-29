@@ -3,7 +3,7 @@
 - Year/Venue: 2026 / ICRA
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLA, Vision-Language Model, Robotics
-- Authors: Samarth Chopra, Alex McMoil, Ben Carnovale, Evan Sokolson, Rajkumar Kubendran, Samuel Dickerson
+- Authors: 
 - Paper: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_3.html
 - PDF status: downloaded
 - GitHub/Project: not identified from venue audit
@@ -15,9 +15,9 @@
 핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: While Vision-Language-Action (VLA) models map visual inputs and language instructions directly to robot actions, they often rely on costly hardware and struggle in novel ...
-- Method cue: We introduce EverydayVLA, a 6-DOF manipulator that can be assembled for under $300, capable of modest payloads and workspace.
-- Result cue: On LIBERO, EverydayVLA matches state-of-the-art success rates, and in real-world tests it outperforms prior methods by 49% in-distribution and 34.9% out-of-distribution.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: VLA, Vision-Language Model, Robotics.
-- 초록에서 확인되는 주요 cue: While, Vision-Language-Action, VLA, EverydayVLA, DOF, LIBERO, Experiment.

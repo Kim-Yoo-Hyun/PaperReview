@@ -3,7 +3,7 @@
 - Year/Venue: 2026 / ICRA
 - Category: Navigation and Embodied AI
 - Tags: Vision-Language Model, Navigation
-- Authors: Maximilian Adang, JunEn Low, Ola Shorinwa, Mac Schwager
+- Authors: 
 - Paper: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_3.html
 - PDF status: downloaded
 - GitHub/Project: not identified from venue audit
@@ -15,9 +15,9 @@
 핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Large vision-language models have driven remarkable progress in open-vocabulary robot policies, e.g., generalist robot manipulation policies, that enable robots to complete complex tasks specified ...
-- Method cue: In this work, we present SINGER for language-guided autonomous drone navigation in the open world using only onboard sensing and compute.
-- Result cue: Through extensive hardware flight experiments, we demonstrate superior zero-shot sim-to-real transfer of our policy to unseen environments and unseen language-conditioned goal objects.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language/navigation goal plus egocentric observations or 3D maps. Output: waypoint, action, route, or grounded target decision.
@@ -32,4 +32,3 @@ Input: language/navigation goal plus egocentric observations or 3D maps. Output:
 ## Contribution
 - embodied navigation and spatial planning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Vision-Language Model, Navigation.
-- 초록에서 확인되는 주요 cue: Large, Despite, SINGER, Gaussian, Splatting, RRT-inspired, Through, When.

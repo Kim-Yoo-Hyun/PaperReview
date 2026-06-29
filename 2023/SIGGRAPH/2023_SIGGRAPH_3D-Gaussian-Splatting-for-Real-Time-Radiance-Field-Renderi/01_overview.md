@@ -3,7 +3,7 @@
 - Year/Venue: 2023 / SIGGRAPH
 - Category: Foundations: 3D Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, representation
-- Authors: Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/2308.04079
 - PDF status: downloaded
 - GitHub/Project: https://github.com/graphdeco-inria/gaussian-splatting
@@ -15,9 +15,9 @@
 핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Radiance Field methods have recently revolutionized novel-view synthesis of scenes captured with multiple photos or videos.
-- Method cue: We introduce three key elements that allow us to achieve state-of-the-art visual quality while maintaining competitive training times and importantly allow high-quality real-time (>= ...
-- Result cue: For unbounded and complete scenes (rather than isolated objects) and 1080p resolution rendering, no current method can achieve real-time display rates.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
@@ -32,4 +32,3 @@ Input/Output follows the foundational formulation: tokens, images, point sets, t
 ## Contribution
 - core 3D geometry and scene representation learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Gaussian Splatting, 3D reconstruction, representation.
-- 초록에서 확인되는 주요 cue: Radiance, Field, However, For, First, Gaussians, Second, Third.

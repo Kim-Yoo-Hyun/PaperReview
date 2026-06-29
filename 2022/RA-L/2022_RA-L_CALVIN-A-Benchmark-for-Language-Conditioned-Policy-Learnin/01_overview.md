@@ -3,7 +3,7 @@
 - Year/Venue: 2022 / RA-L
 - Category: Benchmarks and Datasets
 - Tags: Vision-Language Action, Benchmark, Robotics
-- Authors: Oier Mees, Lukas Hermann, Erick Rosete-Beas, Wolfram Burgard
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/2112.03227
 - PDF status: downloaded
 - GitHub/Project: https://calvin.cs.uni-freiburg.de/
@@ -15,9 +15,9 @@
 핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: General-purpose robots coexisting with humans in their environment must learn to relate human language to their perceptions and actions to be useful in a ...
-- Method cue: In this paper, we present CALVIN (Composing Actions from Language and Vision), an open-source simulated benchmark to learn long-horizon language-conditioned tasks.
-- Result cue: We show that a baseline model based on multi-context imitation learning performs poorly on CALVIN, suggesting that there is significant room for developing innovative ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: benchmark-specific observations/instructions. Output: standardized labels, tasks, or evaluation scores for comparing models.
@@ -32,4 +32,3 @@ Input: benchmark-specific observations/instructions. Output: standardized labels
 ## Contribution
 - robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Vision-Language Action, Benchmark, Robotics.
-- 초록에서 확인되는 주요 cue: General-purpose, Moreover, CALVIN, Composing, Actions, Language, Vision, Our.

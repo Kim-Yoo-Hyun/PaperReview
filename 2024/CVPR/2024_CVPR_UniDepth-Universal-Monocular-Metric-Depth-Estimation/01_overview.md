@@ -3,7 +3,7 @@
 - Year/Venue: 2024 / CVPR
 - Category: Foundations: Monocular Geometry
 - Tags: depth, 3D Vision
-- Authors: Luigi Piccinelli, Yung-Hsu Yang, Christos Sakaridis, Mattia Segu, Siyuan Li, Luc Van Gool
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/2403.18913
 - PDF status: downloaded
 - GitHub/Project: not identified
@@ -15,9 +15,9 @@
 핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Accurate monocular metric depth estimation (MMDE) is crucial to solving downstream tasks in 3D perception and modeling.
-- Method cue: We propose a new model, UniDepth, capable of reconstructing metric 3D scenes from solely single images across domains.
-- Result cue: Thorough evaluations on ten datasets in a zero-shot regime consistently demonstrate the superior performance of UniDepth, even when compared with methods directly trained on ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
@@ -32,4 +32,3 @@ Input/Output follows the foundational formulation: tokens, images, point sets, t
 ## Contribution
 - 3D reconstruction, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: depth, 3D Vision.
-- 초록에서 확인되는 주요 cue: Accurate, MMDE, However, These, UniDepth, Departing, Our, Thorough.

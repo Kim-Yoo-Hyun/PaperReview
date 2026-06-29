@@ -3,7 +3,7 @@
 - Year/Venue: 2025 / IROS
 - Category: 3D Scene Graphs and Graph Reasoning
 - Tags: Robotics, 3D Vision, Graph Reasoning, semantic
-- Authors: Qiuyi Gu, Zhaocheng Ye, Jincheng Yu, Jiahao Tang, Tinghao Yi, Yuhan Dong
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/2412.18381
 - PDF status: downloaded
 - GitHub/Project: not identified
@@ -15,9 +15,9 @@
 핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Collaborative perception in unknown environments is crucial for multi-robot systems.
-- Method cue: To address this challenge, we develop a method to construct a graph-structured 3D representation called COGraph, where nodes represent objects with semantic features and ...
-- Result cue: With the emergence of foundation models, robots can now not only perceive geometric information but also achieve open-vocabulary scene understanding.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
@@ -32,4 +32,3 @@ Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Outpu
 ## Contribution
 - structured 3D scene graph reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: Robotics, 3D Vision, Graph Reasoning, semantic.
-- 초록에서 확인되는 주요 cue: Collaborative, With, However, COGraph, Before, Upon, COGraphs, The.

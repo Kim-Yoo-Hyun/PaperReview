@@ -4,7 +4,7 @@
 핵심은 attention 기반 sequence modeling을 통해 장거리 의존성과 modality alignment를 scale-up 가능한 방식으로 학습하는 것이다.
 
 ## Abstract Method Cue
-We introduce the SE(3)-Transformer, a variant of the self-attention module for 3D point clouds and graphs, which is equivariant under continuous 3D roto-translations.
+자동 추출 없음.
 
 ## 원리적 동기
 - 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.

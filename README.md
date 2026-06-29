@@ -5,7 +5,9 @@ This repository is a structured literature survey for research at the intersecti
 It collects papers, PDFs, and compact reading notes for topics such as vision-language-action models, 3D scene graphs, embodied navigation, Gaussian Splatting, NeRF, SLAM, sensor fusion, grounding, calibration, planning, reinforcement learning, imitation learning, and foundation models.
 
 The full paper registry is maintained in [PAPER.md](./PAPER.md).
+Category-wise reading priority is maintained in [PRIORITY.md](./PRIORITY.md).
 Research idea sketches derived from the registry are maintained in [RESEARCH_IDEAS.md](./RESEARCH_IDEAS.md).
+Survey update notes are tracked in [report.md](./report.md).
 
 ## Scope
 
@@ -28,28 +30,28 @@ Secondary keywords include:
 
 | Item | Count |
 |---|---:|
-| Papers | 538 |
-| PDFs | 538 |
-| Per-paper markdown notes | 2,690 |
-| Years covered | 2015-2026 |
+| Papers | 606 |
+| PDFs | 606 |
+| Per-paper markdown notes | 3,030 |
+| Years covered | 2007-2026 |
 
 ## Venue Coverage
 
 | Venue | Count |
 |---|---:|
-| CVPR | 128 |
-| ICCV | 77 |
-| ICLR | 69 |
-| ICML | 60 |
-| NeurIPS | 50 |
-| ECCV | 42 |
-| ICRA | 33 |
+| CVPR | 141 |
+| ICCV | 89 |
+| ICLR | 73 |
+| ICML | 64 |
+| NeurIPS | 59 |
+| ECCV | 49 |
+| ICRA | 34 |
+| CoRL | 21 |
 | IROS | 17 |
 | RA-L | 16 |
-| CoRL | 15 |
-| 3DV | 15 |
+| 3DV | 16 |
 
-Additional papers are included from RSS, WACV, TMLR, SIGGRAPH, T-RO, TOG, AAAI, NAACL, and arXiv when they are foundational or directly relevant.
+Additional papers are included from RSS, WACV, TMLR, SIGGRAPH, T-RO, TOG, AAAI, NAACL, AISTATS, EMNLP, ISMAR, and arXiv when they are foundational or directly relevant.
 
 ## Directory Layout
 
@@ -90,7 +92,7 @@ Each paper is summarized with the same structure:
 
 ## Main Registry
 
-Use [PAPER.md](./PAPER.md) as the primary navigation file.
+Use [PAPER.md](./PAPER.md) as the primary navigation file. Use [PRIORITY.md](./PRIORITY.md) when deciding what to read first by category.
 
 It groups papers by research theme:
 

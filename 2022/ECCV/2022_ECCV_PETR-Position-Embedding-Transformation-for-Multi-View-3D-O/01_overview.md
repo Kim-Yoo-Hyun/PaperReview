@@ -3,7 +3,7 @@
 - Year/Venue: 2022 / ECCV
 - Category: Foundations: 3D Detection and BEV Perception
 - Tags: 3D Vision
-- Authors: Yingfei Liu, Tiancai Wang, Xiangyu Zhang, Jian Sun
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/2203.05625
 - PDF status: downloaded
 - GitHub/Project: not identified
@@ -15,9 +15,9 @@
 핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: In this paper, we develop position embedding transformation (PETR) for multi-view 3D object detection.
-- Method cue: In this paper, we develop position embedding transformation (PETR) for multi-view 3D object detection.
-- Result cue: PETR achieves state-of-the-art performance (50.4% NDS and 44.1% mAP) on standard nuScenes dataset and ranks 1st place on the benchmark.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
@@ -32,4 +32,3 @@ Input/Output follows the foundational formulation: tokens, images, point sets, t
 ## Contribution
 - core 3D geometry and scene representation learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: 3D Vision.
-- 초록에서 확인되는 주요 cue: PETR, Object, NDS, Code.

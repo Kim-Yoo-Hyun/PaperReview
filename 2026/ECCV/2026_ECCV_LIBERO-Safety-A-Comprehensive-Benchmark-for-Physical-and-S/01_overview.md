@@ -3,7 +3,7 @@
 - Year/Venue: 2026 / ECCV
 - Category: Benchmarks and Datasets
 - Tags: VLA, Vision-Language Model, Benchmark, semantic
-- Authors: Rongxu Cui, Zongzheng Zhang, Jingrui Pang, Haohan Chi, Jinbang Guo, Saining Zhang
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/2606.23686
 - PDF status: downloaded
 - GitHub/Project: https://libero-safety.github.io/
@@ -15,8 +15,8 @@
 핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Despite the impressive manipulation capabilities of Vision-Language-Action (VLA) models, their operational safety under strict constraints remains largely unverified.
-- Method cue: To address this, we introduce a parametric safety benchmark to procedurally generate safety-critical scenarios with comprehensive stochasticity.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
 - Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
@@ -32,4 +32,3 @@ Input: benchmark-specific observations/instructions. Output: standardized labels
 ## Contribution
 - robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: VLA, Vision-Language Model, Benchmark, semantic.
-- 초록에서 확인되는 주요 cue: Despite, Vision-Language-Action, VLA, Leveraging, Our, LIBERO-Safety.

@@ -3,7 +3,7 @@
 - Year/Venue: 2021 / ICCV
 - Category: Foundations: 3D Representation Learning
 - Tags: point cloud, 3D Vision
-- Authors: Hengshuang Zhao, Li Jiang, Jiaya Jia, Philip Torr, Vladlen Koltun
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/2012.09164
 - PDF status: downloaded
 - GitHub/Project: not identified
@@ -15,9 +15,9 @@
 핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: Self-attention networks have revolutionized natural language processing and are making impressive strides in image analysis tasks such as image classification and object detection.
-- Method cue: We design self-attention layers for point clouds and use these to construct self-attention networks for tasks such as semantic scene segmentation, object part segmentation, ...
-- Result cue: Our Point Transformer design improves upon prior work across domains and tasks.
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
@@ -32,4 +32,3 @@ Input/Output follows the foundational formulation: tokens, images, point sets, t
 ## Contribution
 - core 3D geometry and scene representation learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: point cloud, 3D Vision.
-- 초록에서 확인되는 주요 cue: Self-attention, Inspired, Our, Point, Transformer, For, S3DIS, Area.

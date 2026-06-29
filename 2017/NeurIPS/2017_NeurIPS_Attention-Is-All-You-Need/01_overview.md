@@ -3,7 +3,7 @@
 - Year/Venue: 2017 / NeurIPS
 - Category: Foundations: Transformer and Language Models
 - Tags: LLM, Transformer, representation
-- Authors: Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez
+- Authors: not extracted
 - Paper: https://arxiv.org/abs/1706.03762
 - PDF status: downloaded
 - GitHub/Project: https://github.com/tensorflow/tensor2tensor
@@ -15,9 +15,9 @@
 핵심은 attention 기반 sequence modeling을 통해 장거리 의존성과 modality alignment를 scale-up 가능한 방식으로 학습하는 것이다.
 
 ## Paper-Specific Cues
-- Topic cue: The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration.
-- Method cue: We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.
-- Result cue: Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to ...
+- Topic cue: 초록 cue를 자동 추출하지 못함.
+- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
+- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
 
 ## Input / Output
 Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
@@ -32,4 +32,3 @@ Input/Output follows the foundational formulation: tokens, images, point sets, t
 ## Contribution
 - sequence/representation learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
 - 핵심 키워드: LLM, Transformer, representation.
-- 초록에서 확인되는 주요 cue: The, Transformer, Experiments, Our, BLEU, WMT, English-to-German, English-to-French.
