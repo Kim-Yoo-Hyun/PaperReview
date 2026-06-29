@@ -4,12 +4,21 @@
 - Total papers with folders: 538
 - Scope: 3D Vision + Robotics + Vision-Language, with recent top-tier CVF/PMLR/arXiv primary PDFs and foundational CV/LLM/robotics papers.
 - Note: `survey_work/cvf_candidates.json` contains the broad CVF keyword census used for the 2024-current screening pass.
+- Reading priority updated: 2026-06-29 KST.
 
 ## Reading Priority
-1. VLA/robotics: OpenVLA, Octo, RT-2, Diffusion Policy, PerAct, RVT, VoxPoser, ReKep, 3DS-VLA, CoT-VLA, ActiveVLA.
-2. 3D language grounding: ScanRefer, ReferIt3D, 3DVG-Transformer, 3D-VisTA, VLM-Grounder, RoboSpatial, ReasonGrounder.
-3. 3D semantic memory/fields: CLIP-Fields, ConceptFusion, LERF, OpenScene, LangSplat, Open3DSG, OnlinePG.
-4. Geometry backbone: PointNet/PointNet++, NeRF, 3DGS, DUSt3R, MASt3R, VGGT, CUT3R, DROID-SLAM.
+
+Ranking is based on fit to the current research direction: 3D computer vision first, robotics extensibility, clarity of research gap, evaluability, implementation difficulty, dataset accessibility, and potential paper contribution.
+
+1. P0 - 3D geometry, reconstruction, SLAM, and representation backbones: PointNet/PointNet++, DGCNN, KPConv, Point Transformer, Point-BERT, Point-MAE, NeRF, 3D Gaussian Splatting, DROID-SLAM, DUSt3R, MASt3R, VGGT, VGGT-Motion, FlowMap, pixelSplat, SplaTAM, SplatFormer, UniPre3D, Dens3R.
+2. P0 - Open-vocabulary 3D semantic understanding and language-embedded fields: CLIP-Fields, ConceptFusion, OpenScene, OpenMask3D, OpenIns3D, LERF, LangSplat, LightSplat, S2GS, FM-Fusion, Search3D, ExtrinSplat, Rh-3DGS, GeoPurify, OV-SCAN.
+3. P1 - 3D LMMs, spatial reasoning, and 3D grounding: ScanRefer, ReferIt3D, 3DVG-Transformer, 3D-LLM, 3D-VisTA, SceneVerse, Uni3DL, SpatialVLM, RoboSpatial, SpatialLLM, MM-Spatial, G2VLM, Grounded 3D-Aware Spatial Vision-Language Modeling, SpatialStack, SpatioLM, GPT4Scene.
+4. P1 - 3D scene graphs, embodied memory, and navigation: VLMaps, BeliefMapNav, D3D-VLP, GA-VLN, ImagineNav, Move to Understand a 3D Scene, Splat-Nav, VISTA, OpenObject-NAV, Open3DSG, MomaGraph, Clio, Dynamic Open-Vocabulary 3D Scene Graphs, Graph2Nav, Point2Graph.
+5. P1 - Vision-language-action and manipulation with explicit 3D state: Diffusion Policy, Perceiver-Actor, RVT, VoxPoser, ReKep, OpenVLA, Octo, 3DS-VLA, RoboGround, DenseMatcher, MemoryVLA, Long-VLA, TraceVLA, VQ-VLA, BridgeVLA, SafeVLA.
+6. P2 - 3D diffusion, generation, and world-model priors: Denoising Diffusion Probabilistic Models, Latent Diffusion Models, ReconFusion, Diffusion 3D Features, PartGen, Touch2Shape, Point-MaDi, LaGeM, Taming Video Diffusion Prior, HAD, PointDiT, WorldSplat, Geometry Forcing.
+7. P2 - Sensor fusion, calibration, occupancy, and autonomous 3D perception: BEVFormer, BEVFusion, BEVDepth, PETR, CenterPoint, VoxFormer, RIOcc, Gau-Occ, QuadricFormer, V2X-R, How Do Images Align and Complement LiDAR, FAST-LIVGO, TCLC-GS, GeoCalib, ORION.
+8. P2 - Equivariance, registration, and action geometry: SE(3)-Transformers, E(n) Equivariant Graph Neural Networks, GaussReg, GeGS-PCR, RayI2P, C-GenReg, GotenNet, Generative Point Cloud Registration, Diffusion-EDFs, ET-SEED, EquAct, SE(3)-Equivariant Diffusion Policy.
+9. P3 - Benchmarks, safety, and evaluation suites to read alongside experiments: EmbodiedScan, VLABench, RoboSpatial, MM-Spatial, IRef-VLA, LIBERO-Safety, RealVLG-R1, EmbodiedBench, PARTNR, RobotArena, RoboTwin 2.0.
 
 ## 3D Equivariance, Calibration, and Registration
 
