@@ -30,9 +30,9 @@ Secondary keywords include:
 
 | Item | Count |
 |---|---:|
-| Papers | 606 |
-| PDFs | 606 |
-| Per-paper markdown notes | 3,030 |
+| Papers | 607 |
+| PDFs | 607 |
+| Per-paper markdown notes | 3,035 |
 | Years covered | 2007-2026 |
 
 ## Venue Coverage
@@ -41,7 +41,7 @@ Secondary keywords include:
 |---|---:|
 | CVPR | 141 |
 | ICCV | 89 |
-| ICLR | 73 |
+| ICLR | 74 |
 | ICML | 64 |
 | NeurIPS | 59 |
 | ECCV | 49 |

@@ -1,7 +1,17 @@
 # Survey Update Report
 
-- Last updated: 2026-06-29 KST
+- Last updated: 2026-06-30 KST
 - Scope: 3D Vision + Robotics + Vision-Language survey in `/home/yoohyun/KAIST/Paper`
+
+## 2026-06-30 Update
+
+- Added `SAM 2: Segment Anything in Images and Videos` to the registry and the vision foundation reading priority.
+- Current `PAPER.md` registry size is 607 papers with 607 downloaded PDFs.
+- Updated `RESEARCH_IDEAS.md` using the full current registry and `PRIORITY.md`.
+- Re-ranked every category so that `Idea 1` is the highest-priority direction within that category.
+- The updated `RESEARCH_IDEAS.md` now contains 31 categories and 93 ideas, with 3 ideas per category.
+- Each idea now explicitly records the starting limitation, problem definition, method rationale, expected datasets/benchmarks/metrics, and full-name reference papers.
+- Synchronized `README.md` snapshot counts after the SAM 2 addition.
 
 ## 2026-06-29 Update
 
