@@ -3,32 +3,34 @@
 - Year/Venue: 2023 / ICML
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: Vision-Language-Action, Imitation Learning, Robotics
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2210.03094
-- PDF status: downloaded
-- GitHub/Project: https://vimalabs.github.io/
+- Paper link: ./2023/ICML/2023_ICML_VIMA-General-Robot-Manipulation-with-Multimodal-Prompts/paper.pdf
+- Code/Project: https://vimalabs.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- the same model to perform question answering, machine translation, text summarization, etc.
+- Prompt-based learning provides an accessible and flexible interface to communicate a natural language understanding task to a general-purpose model.
+- Prompt-based learning has emerged as a successful paradigm in natural language processing, where a single general-purpose language model can be instructed to perform any task specified by input ...
 
 ## Core Idea
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- Accordingly, we develop a new simulation benchmark that consists of thousands of procedurally-generated tabletop tasks with multimodal prompts, 600K+ expert trajectories for imitation learning, and a four-level evaluation ...
+- With 10× less training data, VIMA still performs 2.7× better than the best competing variant.
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `robot manipulation and vision-language-action control`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- VIMA features a recipe that achieves strong model scalability and data efficiency.
+- It outperforms alternative designs in the hardest zero-shot generalization setting by up to 2.9× task success rate given the same training data.
+- We show that a wide spectrum of robot manipulation tasks can be expressed with multimodal prompts, interleaving textual and visual tokens.
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Vision-Language-Action, Imitation Learning, Robotics.
+- Accordingly, we develop a new simulation benchmark that consists of thousands of procedurally-generated tabletop tasks with multimodal prompts, 600K+ expert trajectories for imitation learning, and a four-level evaluation ...
+- It outperforms alternative designs in the hardest zero-shot generalization setting by up to 2.9× task success rate given the same training data.
+- With 10× less training data, VIMA still performs 2.7× better than the best competing variant.
+
+## Abstract Cue
+- the same model to perform question answering, machine translation, text summarization, etc.

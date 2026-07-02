@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2023 / CVPR
+- Category: Open-Vocabulary 3D Mapping
+- Tags: open-vocabulary, 3D semantic, CLIP
+- Paper link: ./2023/CVPR/2023_CVPR_OpenScene-3D-Scene-Understanding-with-Open-Vocabularies/paper.pdf
+- Code/Project: https://pengsongyou.github.io/openscene
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose OpenScene, an alternative approach where a model predicts dense features for 3D scene points that are co-embedded with text and image pixels in CLIP feature space.
+- Our approach is effective at identifying objects, materials, affordances, activities, and room types in complex 3D scenes, all using a single model trained without any labeled 3D data.
+- This zero-shot approach enables taskagnostic training and open-vocabulary queries.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- posed RGB images, the goal is to infer the semantics, affordances, functions, and physical properties of every 3D point.
+- For example, given the house shown in Figure 1, we would like to predict which surfaces are part of a fan (semantics), made of metal (materials), within a ...
+- We propose OpenScene, an alternative approach where a model predicts dense features for 3D scene points that are co-embedded with text and image pixels in CLIP feature space.
 
 ## 핵심 방법론
-- Task family: open-vocabulary 3D semantic understanding
-- Representation: 3D semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

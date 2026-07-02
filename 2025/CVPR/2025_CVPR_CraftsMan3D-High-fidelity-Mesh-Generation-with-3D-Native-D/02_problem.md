@@ -1,15 +1,20 @@
 # Problem
 
+- Year/Venue: 2025 / CVPR
+- Category: 3D Generative Modeling and Diffusion
+- Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
+- Paper link: ./2025/CVPR/2025_CVPR_CraftsMan3D-High-fidelity-Mesh-Generation-with-3D-Native-D/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-생성 모델 또는 policy 모델이 3D 구조와 물리 제약을 보존하지 못하면 로봇 실행이나 3D 장면 생성에서 일관성이 깨진다.
+- Despite the significant advancements in 3D generation, existing methods still struggle with lengthy optimization processes, self-occlusion, irregular mesh topologies, and difficulties in accommodating user editing, consequently impeding their ...
+- Specifically, we first introduce a robust data preprocessing pipeline that utilizes visibility check and winding mumber to maximize the use of existing 3D data.
 
 ## 해결하려는 문제
-- 연구 유형: diffusion-based generation or policy learning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Extensive experiments demonstrate that our method achieves high efficacy in producing superior quality 3D meshes compared to existing methods.
+- While these methods significantly improve generation efficiency and robustness, the resulting 3D assets tend to have artifacts and struggle to generate assets of complex geometric structures. iii) 3D ...
+- We present a novel generative 3D modeling system, coined CraftsMan3D, which can generate high-fidelity 3D geometries with highly varied shapes, detailed surfaces, and, notably, allows for refining the ...
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `3D reconstruction, Diffusion, Generation, 3D Vision` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

@@ -1,26 +1,29 @@
 # Evaluation
 
-## Dataset
-LIBERO, BridgeData, Open X-Embodiment, OXE, Objaverse, SynGrasp
+- Year/Venue: 2025 / CoRL
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, grasping, synthetic data
+- Paper link: ./2025/CoRL/2025_CoRL_GraspVLA-a-Grasping-Foundation-Model-Pre-trained-on-Billio/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `robot manipulation and vision-language-action control`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- Objaverse
+- LIBERO
 
 ## Metrics
-success rate, task completion, language-conditioned generalization, real/sim transfer, IoU, AP, mAP, SR
+- SPL
+- SR
+- success rate
+- collision
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- We evaluate GraspVLA to answer the following questions: (1) How does GraspVLA compare with existing work under various generalization factors? (2) How does GraspVLA scale with the amount ...
+- Extensive evaluations across real-world and simulation benchmarks demonstrate GraspVLA’s advanced zero-shot generalizability and few-shot adaptability to specific human preferences.
+- We will release SynGrasp We evaluate GraspVLA to answer the following questions: (1) How does GraspVLA compare with existing work under various generalization factors? (2) How does GraspVLA ...
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: Extensive evaluations across real-world and simulation benchmarks demonstrate GraspVLA’s advanced zero-shot generalizability and few-shot adaptability to specific human preferences.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- We evaluate GraspVLA to answer the following questions: (1) How does GraspVLA compare with existing work under various generalization factors? (2) How does GraspVLA scale with the amount ...
 
 ## Reproducibility Notes
-- Code/Project: not identified
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

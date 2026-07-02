@@ -3,32 +3,34 @@
 - Year/Venue: 2021 / NeurIPS
 - Category: Foundations: 3D Scene Representations
 - Tags: 3D Vision, NeRF, surface reconstruction, geometry
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2106.10689
-- PDF status: downloaded
-- GitHub/Project: https://lingjie0206.github.io/papers/NeuS/
+- Paper link: ./2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering/paper.pdf
+- Code/Project: https://lingjie0206.github.io/papers/NeuS/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Reconstructing surfaces from multi-view images is a fundamental problem in computer vision and computer graphics.
+- The cause of this limitation is that the surface rendering method used in IDR only considers a single surface intersection point for each ray.
+- 3D reconstruction with neural implicit representations has recently become a highly promising alternative to classical reconstruction approaches due to its high reconstruction quality and its potential to reconstruct ...
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- In NeuS, we propose to represent a surface as the zero-level set of a signed distance function (SDF) and develop a new volume rendering method to train a ...
+- We present a novel neural surface reconstruction method, called NeuS, for reconstructing objects and scenes with high fidelity from 2D image inputs.
 
 ## Input / Output
-Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `core 3D geometry and scene representation learning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Experiments on the DTU dataset and the BlendedMVS dataset show that NeuS outperforms the state-of-the-arts in high-quality surface reconstruction, especially for objects and scenes with complex structures and ...
+- The results show that our approach outperforms the baseline methods on the DTU dataset in both settings – w/ and w/o mask in terms of the Chamfer distance.
+- COLMAP results are achieved by trim=0.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- One limitation of our method is that although our method does not heavily rely on correspondence matching of texture features, the performance would still degrade for textureless objects ...
 
 ## Contribution
-- core 3D geometry and scene representation learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D Vision, NeRF, surface reconstruction, geometry.
+- Experiments on the DTU dataset and the BlendedMVS dataset show that NeuS outperforms the state-of-the-arts in high-quality surface reconstruction, especially for objects and scenes with complex structures and ...
+- In NeuS, we propose to represent a surface as the zero-level set of a signed distance function (SDF) and develop a new volume rendering method to train a ...
+- We present a novel neural surface reconstruction method, called NeuS, for reconstructing objects and scenes with high fidelity from 2D image inputs.
+
+## Abstract Cue
+- We present a novel neural surface reconstruction method, called NeuS, for reconstructing objects and scenes with high fidelity from 2D image inputs.

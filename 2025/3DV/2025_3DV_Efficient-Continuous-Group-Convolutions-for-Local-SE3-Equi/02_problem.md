@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2025 / 3DV
+- Category: 3D Equivariance, Calibration, and Registration
+- Tags: equivariant, point cloud, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_Efficient-Continuous-Group-Convolutions-for-Local-SE3-Equi/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Approaches learning directly from 3D data often take inspiration from the success in 2D vision and address two of the main challenges in such data representation, order invariance ...
+- While efforts have been made to develop efficient SE(3) equivariant networks, existing approaches rely on discretization or only introduce global rotation equivariance.
+- While global equivariant designs ensure robustness to whole-scene rotations, they fail with randomly rotated scene parts or elements.
 
 ## 해결하려는 문제
-- 연구 유형: geometry-aware equivariant modeling
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: However, extending the equivariant properties of a convolution layer comes at a computational cost.
+- Our experiments show that our approach achieves competitive or superior performance across a range of datasets and tasks, including object classification and semantic segmentation, with negligible computational overhead.
+- In the past years, several neural network architectures have been proposed to process such data .
+- In particular, for 3D data, expanding equivariance to the SE(3) group (rotation and translation) results in a 6D convolution operation, which is not tractable for larger data samples ...
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `equivariant, point cloud, 3D Vision` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

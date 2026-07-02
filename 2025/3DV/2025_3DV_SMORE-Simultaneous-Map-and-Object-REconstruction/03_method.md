@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2025 / 3DV
+- Category: 3D Reconstruction, Geometry, and SLAM
+- Tags: 3D reconstruction, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_SMORE-Simultaneous-Map-and-Object-REconstruction/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We present a method for dynamic surface reconstruction of large-scale urban scenes from LiDAR.
+## Brief Method
+- Beyond pursuing dynamic reconstruction as a goal in and of itself, we propose that such a system can be used to auto-label partially annotated sequences and produce ground ...
+- We present a method for dynamic surface reconstruction of large-scale urban scenes from LiDAR.
+- We developed an optimization framework for understanding this problem and provided a simple yet effective solution based on decomposing the problem into well-studied sub-components.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Beyond pursuing dynamic reconstruction as a goal in and of itself, we propose that such a system can be used to auto-label partially annotated sequences and produce ground ...
+- To achieve this, we take inspiration from recent novel view synthesis methods and frame the reconstruction problem as a global optimization over neural surfaces, ego poses, and object ...
+- Beyond pursuing dynamic reconstruction as a goal in and of itself, we propose that such a system can be used to auto-label partially annotated sequences and produce ground ...
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We developed an optimization framework for understanding this problem and provided a simple yet effective solution based on decomposing the problem into well-studied sub-components.
+- We compare our method to linearly interpolating the poses as is commonly done to create scene-flow labels . aggregation errors, leading to poor surface reconstructions.
+- Pose accuracy evaluation on nuScenes (using NuScene’s default ATE metric), measured by comparing the bounding box locations predicted by our method to held-out ground truth labels provided at ...
+- Ego-pose evaluation by fitting a SOTA NeRF method to: the poses provided by nuScenes, those from a LiDAR odometry method, and the ones produced by our method.
+- We hope that this method will not only be useful for creating training and evaluation data for other perception tasks but will also promote active research in this ...

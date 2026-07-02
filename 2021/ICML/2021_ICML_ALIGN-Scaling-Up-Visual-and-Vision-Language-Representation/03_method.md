@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2021 / ICML
+- Category: Foundations: Vision-Language Models
+- Tags: Vision-Language Model, alignment, representation
+- Paper link: ./2021/ICML/2021_ICML_ALIGN-Scaling-Up-Visual-and-Vision-Language-Representation/paper.pdf
+- Code/Project: not released
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- A simple dual-encoder architecture learns to align visual and language representations of the image and text pairs using a contrastive loss.
+- While representation learning in NLP has transitioned to training on raw text without human annotations, visual and vision-language representations still rely heavily on curated training datasets that are ...
+- Pre-training has also become the de-facto approach in vision-language modeling (Lu et al., 2019; Chen et al., 2020c; Li et al., 2020).
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Introduction In the existing literature, visual and vision-language representation learning are mostly studied separately with different training data sources.
+- Curation of such pre-training datasets requires heavy work on data gathering, sampling, and human annotation, and hence is difficult to scale.
+- A simple dual-encoder architecture learns to align visual and language representations of the image and text pairs using a contrastive loss.
 
 ## 핵심 방법론
-- Task family: vision or vision-language foundation model pretraining
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

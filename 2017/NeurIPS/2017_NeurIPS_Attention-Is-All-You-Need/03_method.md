@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 attention 기반 sequence modeling을 통해 장거리 의존성과 modality alignment를 scale-up 가능한 방식으로 학습하는 것이다.
+- Year/Venue: 2017 / NeurIPS
+- Category: Foundations: Transformer and Language Models
+- Tags: LLM, Transformer, representation
+- Paper link: ./2017/NeurIPS/2017_NeurIPS_Attention-Is-All-You-Need/paper.pdf
+- Code/Project: https://github.com/tensorflow/tensor2tensor
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.
+- The best performing models also connect the encoder and decoder through an attention mechanism.
+- The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Recurrent neural networks, long short-term memory and gated recurrent neural networks in particular, have been firmly established as state of the art approaches in sequence modeling and transduction ...
+- This inherently sequential nature precludes parallelization within training examples, which becomes critical at longer sequence lengths, as memory constraints limit batching across examples.
+- We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.
 
 ## 핵심 방법론
-- Task family: sequence/representation learning
-- Representation: LLM
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Most competitive neural sequence transduction models have an encoder-decoder structure .
+- Here, the encoder maps an input sequence of symbol representations (x1 , ..., xn ) to a sequence of continuous representations z = (z1 , ..., zn ).
+- Given z, the decoder then generates an output sequence (y1 , ..., ym ) of symbols one element at a time.

@@ -3,33 +3,31 @@
 - Year/Venue: 2025 / 3DV
 - Category: 3D Scene Representations and Neural Fields
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
-- Authors: Xuqian Ren, Matias Turkulainen, Jiepeng Wang, Otto Seiskari, Iaroslav Melekhov, Juho Kannala, Esa Rahtu
-- Paper: https://3dvconf.github.io/2025/accepted-papers/
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/3DV/2025_3DV_AGS-Mesh-Adaptive-Gaussian-Splatting-and-Meshing-with-Geom/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- Traditional approaches have addressed the problem by creating textured meshes that can be rendered using conventional graphics pipelines.
+- Depth sensors, such as high-precision 3D LiDAR scanners or Kinect sensors, are often used to aid geometric reconstruction; however, these devices are generally expensive for consumer users and ...
 
 ## Core Idea
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Geometric priors are often used to enhance 3D reconstruction.
-- Method cue: In this work, we propose an approach for joint surface depth and normal refinement of Gaussian Splatting methods for accurate 3D reconstruction of indoor ...
-- Result cue: Our filtering strategy and optimization design demonstrate significant improvements in both mesh estimation and novel-view synthesis for both 3D and 2D Gaussian Splatting-based methods ...
+- In this work, we propose an approach for joint surface depth and normal refinement of Gaussian Splatting methods for accurate 3D reconstruction of indoor scenes.
+- Moreover, we present a promising alternative to traditional meshing techniques using a depth adaptive TSDF and IsoOctree meshing method that can extract finer details from a Gaussian scene.
 
 ## Input / Output
-Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `language-aware Gaussian/implicit 3D scene representation`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Our filtering strategy and optimization design demonstrate significant improvements in both mesh estimation and novel-view synthesis for both 3D and 2D Gaussian Splatting-based methods on challeng- 1.
 
 ## Limitation
-3DGS/NeRF 기반 방법은 scene reconstruction 품질, 카메라 포즈, memory/runtime, dynamic scene 처리에 민감하다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Gaussian Splatting, 3D reconstruction, 3D Vision.
-- 초록에서 확인되는 주요 cue: Geometric, With, However, Gaussian, Splatting, Our, Splatting-based, Furthermore.
+- Our filtering strategy and optimization design demonstrate significant improvements in both mesh estimation and novel-view synthesis for both 3D and 2D Gaussian Splatting-based methods on challeng- 1.
+- In this work, we propose an approach for joint surface depth and normal refinement of Gaussian Splatting methods for accurate 3D reconstruction of indoor scenes.
+- We develop a scale-aware meshing strategy inspired by TSDF and octree-based isosurface extraction, which recovers finer details from Gaussian models compared to other commonly used open-source meshing tools.
+
+## Abstract Cue
+- Furthermore, we explore the use of alternative meshing strategies for finer geometry extraction.

@@ -3,33 +3,29 @@
 - Year/Venue: 2026 / ICLR Oral
 - Category: 3D Scene Graphs and Graph Reasoning
 - Tags: Vision-Language Model, Robotics, 3D Vision, Graph Reasoning
-- Authors: Yuanchen Ju, Yongyuan Liang, Yen-Jen Wang, Gireesh Nandiraju, Yuanliang Ju, Seungjae Lee, Qiao Gu, Elvis Hsieh
-- Paper: https://openreview.net/forum?id=3eTr9dGwJv
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-3D scene graph는 객체와 관계를 구조화하지만 closed vocabulary, annotation cost, geometric relation ambiguity 때문에 실제 로봇 질의에 확장하기 어렵다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Core Idea
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Mobile manipulators in households must both navigate and manipulate.
-- Method cue: To overcome these shortcomings, we introduce MomaGraph, a unified scene representation for embodied agents that integrates spatial-functional relationships and part-level interactive elements.
-- Result cue: Extensive experiments show that our model achieves state-of-the-art results among open-source models, reaching 71.6% accuracy on the benchmark (+11.4% over the best baseline), while ...
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `structured 3D scene graph reasoning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Our MomaGraph-R1 achieves state-of-the-art performance among open-source VLMs, leading by 3.8% on BLINK and 4.8% on our correspondence benchmark compared to the best competing open-source models.
+- However, the consistent gap reduction achieved by MomaGraph-R1 shows that reinforcement learning with graphstructured intermediate representations can substantially narrow the divide, offering a practical path toward competitive open-source ...
+- Our MomaGraph-R1 achieves performance on par with closed-source giants like Claude-4.5-Sonnet and GPT-5, while clearly surpassing all leading opensource VLMs.
 
 ## Limitation
-2D foundation model에서 온 semantic feature가 3D geometry와 완벽히 정렬되지 않으며, long-tail 관계/속성 평가는 여전히 어렵다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- structured 3D scene graph reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Vision-Language Model, Robotics, 3D Vision, Graph Reasoning.
-- 초록에서 확인되는 주요 cue: Mobile, This, Scene, MomaGraph, However, MomaGraph-Scenes, MomaGraph-Bench, Built.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+
+## Abstract Cue
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

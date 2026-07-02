@@ -3,32 +3,32 @@
 - Year/Venue: 2025 / ICCV
 - Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
 - Tags: sensor fusion, LiDAR, Diffusion, Generation, 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/ICCV/2025_ICCV_Distilling-Diffusion-Models-to-Efficient-3D-LiDAR-Scene-Co/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-생성 모델 또는 policy 모델이 3D 구조와 물리 제약을 보존하지 못하면 로봇 실행이나 3D 장면 생성에서 일관성이 깨진다.
+- Among different types of sensors, 3D LiDAR has become one of the most pletion results under sparse point cloud conditions to progressively approach the multi-step iterative reconstruction quality ...
 
 ## Core Idea
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- Finally, we introduce a Structural Loss consisting of a scene-wise term and a point-wise term constraining the key landmark points and their relative configuration.
+- Diffusion models have been applied to 3D LiDAR scene completion due to their strong training stability and high completion quality.
 
 ## Input / Output
-Input/Output follows the paper task formulation; see PDF for the exact interface.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `diffusion-based generation or policy learning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive experiments demonstrate that ScoreLiDAR significantly accelerates the completion time from 30.55 to 5.37 seconds per frame (>5×) on SemanticKITTI and achieves superior performance compared to state-of-the-art 3D ...
+- This paper proposes a novel distillation method tailored for 3D LiDAR scene completion models, dubbed ScoreLiDAR, which achieves efficient yet high-quality scene completion.
+- To improve completion quality, we also introduce a novel Structural Loss, which encourages the distilled model to capture the geometric structure of the 3D LiDAR scene.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- diffusion-based generation or policy learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: sensor fusion, LiDAR, Diffusion, Generation, 3D Vision.
+- Extensive experiments demonstrate that ScoreLiDAR significantly accelerates the completion time from 30.55 to 5.37 seconds per frame (>5×) on SemanticKITTI and achieves superior performance compared to state-of-the-art 3D ...
+- Finally, we introduce a Structural Loss consisting of a scene-wise term and a point-wise term constraining the key landmark points and their relative configuration.
+- Diffusion models have been applied to 3D LiDAR scene completion due to their strong training stability and high completion quality.
+
+## Abstract Cue
+- a scene-wise term constraining the holistic structure and a point-wise term constraining the key landmark points and their relative configuration.

@@ -3,32 +3,32 @@
 - Year/Venue: 2026 / CVPR
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLA, active perception, Robotics
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified from primary page
+- Paper link: ./2026/CVPR/2026_CVPR_SaPaVe-Towards-Active-Perception-and-Manipulation-in-Visio/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- Existing methods struggle to unify semantic-driven perception actively with robust, viewpoint-invariant execution accordingly.
 
 ## Core Idea
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We compare our method against several strong baselines: (1) In the first experiment, we compare our model with current powerful VLM, including the general models (e.g., Qwen2.5-VL-72B , ...
+- To this end, we propose SaPaVe, an end-to-end framework that jointly learns these capabilities in a data-efficient manner.
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `robot manipulation and vision-language-action control`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive experiments in both simulation and real-world settings show that SaPaVe outperforms recent VLA models such as GR00T N1 and π0 , achieving up to 31.25% higher success ...
+- Our results show that tightly coupled perception and execution, when trained with decoupled yet coordinated strategies, enable efficient and generalizable active manipulation.
+- To support this, we introduce ActiveViewPose-200K, comprising 200k image-language-camera movement pairs for semantic camera movement learning, and a 3D geometry-aware module that improves execution robustness under dynamic viewpoints.
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: VLA, active perception, Robotics.
+- To support this, we introduce ActiveViewPose-200K, comprising 200k image-language-camera movement pairs for semantic camera movement learning, and a 3D geometry-aware module that improves execution robustness under dynamic viewpoints.
+- Extensive experiments in both simulation and real-world settings show that SaPaVe outperforms recent VLA models such as GR00T N1 and π0 , achieving up to 31.25% higher success ...
+- To this end, we propose SaPaVe, an end-to-end framework that jointly learns these capabilities in a data-efficient manner.
+
+## Abstract Cue
+- Active perception and manipulation are crucial for robots to interact with complex scenes.

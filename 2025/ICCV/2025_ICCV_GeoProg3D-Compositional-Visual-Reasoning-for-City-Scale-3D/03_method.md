@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Large Multimodal Models
+- Tags: 3D Vision
+- Paper link: ./2025/ICCV/2025_ICCV_GeoProg3D-Compositional-Visual-Reasoning-for-City-Scale-3D/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To overcome these limitations, we propose GeoProg3D, a visual programming framework that enables natural language-driven interactions with city-scale highfidelity 3D scenes.
+- To validate the effectiveness, we introduce novel tasks designed to assess urban-scale geographic visual reasoning capabilities and present GeoEval3D, a benchmark dataset specifically developed for this task.
+- To assess performance in city-scale reasoning, we introduce GeoEval3D, a comprehensive benchmark The advancement of 3D language fields has enabled intuitive interactions with 3D scenes via natural language.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, existing approaches are typically limited to smallscale environments, lacking the scalability and compositional reasoning capabilities necessary for large, complex urban settings.
+- To overcome these limitations, we propose GeoProg3D, a visual programming framework that enables natural language-driven interactions with city-scale highfidelity 3D scenes.
+- To overcome these limitations, we propose GeoProg3D, a visual programming framework that enables natural language-driven interactions with city-scale highfidelity 3D scenes.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We compare our methods with baselines, including LangSplat , which is the SOTA method for high-resolution 3D scene localization.
+- Notably, our method excelled in the MESD (distance measurement) task, demonstrating precise horizontal spatial assessment capabilities.

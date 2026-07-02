@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ICRA
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model, Robotics
+- Paper link: ./2026/ICRA/2026_ICRA_EveryDayVLA-A-Vision-Language-Action-Model-for-Affordable/paper.pdf
+- Code/Project: not identified from venue audit
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To address these challenges, we present a full-stack system, and present three distinct contributions. • Collaborative training with adaptive horizon control (AdaHorizon).
+- We introduce EverydayVLA, a 6DOF manipulator that can be assembled for $300, capable of modest payloads and workspaces.
+- Yet, even with internet-scale pretraining, they remain brittle under unfamiliar lighting , novel objects , and visual distractors , and often fail to generalize to out-ofdistribution tasks .
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To address these challenges, we present a full-stack system, and present three distinct contributions. • Collaborative training with adaptive horizon control (AdaHorizon).
+- This high hardware cost and system complexity—coupled with the tedious, expensive process of teleoperated data collection for fine-tuning models —severely limit accessibility and slow progress toward wider adoption ...
+- To address these challenges, we present a full-stack system, and present three distinct contributions. • Collaborative training with adaptive horizon control (AdaHorizon).
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Inference Rate (Hz) ↑ Latency (sec) ↓ 4.2 109.7 54.2–108.4 0.2396 0.0729 0.0738 OpenVLA OpenVLA-OFT Oursli Dynamic Scene TABLE IV G ENERALIZATION AND ROBUSTNESS TO UNSEEN TASKS , ...

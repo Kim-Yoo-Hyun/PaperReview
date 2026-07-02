@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2020 / ECCV
+- Category: Foundations: 3D Representation Learning
+- Tags: 3D Vision, point cloud, representation, self-supervised
+- Paper link: ./2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/paper.pdf
+- Code/Project: https://github.com/facebookresearch/PointContrast
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Our findings are extremely encouraging: using a unified triplet of architecture, source dataset, and contrastive loss for pre-training, we achieve improvement over recent best results in segmentation and ...
+- Notably, using SR-UNet backbone architecture already boosts performance; yet, pre-training is able to provide further gains, especially when training data is scarce.
+- To this end, we select a suite of diverse datasets and tasks to measure the effect of unsupervised pre-training on a large source set of 3D scenes.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Different from previous works, we focus on high-level scene understanding tasks.
+- Our findings are extremely encouraging: using a unified triplet of architecture, source dataset, and contrastive loss for pre-training, we achieve improvement over recent best results in segmentation and ...
 
 ## 핵심 방법론
-- Task family: core 3D geometry and scene representation learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Notably, using SR-UNet backbone architecture already boosts performance; yet, pre-training is able to provide further gains, especially when training data is scarce.
+- Replacing the backbone architecture with SR-UNet already boosts performance.
+- When using 100% of the training data, pre-training provides a class-balancing effect, as it boosts performance more on underrepresented (tail) classes.
+- PointContrast pre-training further adds a significant gain, and outshines where labels are most limited. from each model for classification and 2048 points for part segmentation.
+- 1%-10%) of training data to fine-tune the pre-trained model.

@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Gaussian Splatting, Vision-Language, grounding
+- Paper link: ./2024/CVPR/2024_CVPR_LangSplat-3D-Language-Gaussian-Splatting/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Modeling a 3D language field to support open-ended language queries in 3D has gained increasing attention recently.
+- Instead of directly learning CLIP embeddings, LangSplat first trains a scene-wise language autoencoder and then learns language features on the scene-specific latent space, bed bench room sofa lawn ...
+- Unlike existing methods that ground CLIP language embeddings in a NeRF model, LangSplat advances the field by utilizing a collection of 3D Gaussians, each encoding language features distilled ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Unlike existing methods that ground CLIP language embeddings in a NeRF model, LangSplat advances the field by utilizing a collection of 3D Gaussians, each encoding language features distilled ...
+- By employing a tile-based splatting technique for rendering language features, we circumvent the costly rendering process inherent in NeRF.
+- Modeling a 3D language field to support open-ended language queries in 3D has gained increasing attention recently.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- bed bench room sofa lawn overall further demonstrates the effectiveness of our LangSplat.
+- LSeg ODISE OV-Seg 56.0 52.6 79.8 6.0 24.1 88.9 19.2 4.5 17.5 52.5 48.3 39.8 71.4 66.1 81.2 20.6 43.5 77.5 5.
+- Conclusion FFD 56.6 LERF 73.5 3D-OVS 89.5 6.1 53.2 89.3 25.1 46.6 92.8 42.9 73.7 88.2 26.9 54.8 86.8 92.5 94.2 94.1 90.0 96.1 93.4 LangSplat 3.7 27

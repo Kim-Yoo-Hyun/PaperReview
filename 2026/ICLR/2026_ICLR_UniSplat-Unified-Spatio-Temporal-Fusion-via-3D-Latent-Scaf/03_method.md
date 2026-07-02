@@ -1,18 +1,19 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Tags: Gaussian Splatting, 3D reconstruction, sensor fusion, LiDAR, 3D Vision
+- Paper link: ./2026/ICLR/2026_ICLR_UniSplat-Unified-Spatio-Temporal-Fusion-via-3D-Latent-Scaf/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We present UniSplat, a general feed-forward framework that learns robust dynamic scene reconstruction through unified latent spatio-temporal fusion.
+## Brief Method
+- Method PixelSplat∗ (Charatan et al., 2024) MVSplat∗ (Chen et al., 2024) Omin-Scene (Wei et al., 2025) UniSplat PSNR↑ 21.51 21.61 24.27 25.37 SSIM↑ 0.616 0.658 0.736 0.765 LPIPS↓ ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- EvolSplat (Miao et al., 2025) integrates multi-frame geometric information from front-view monocular sequences using 3D-CNN, but ignores semantic fusion and lacks mechanisms for dynamic handling.
+- These methods typically encode inter-view correlations within the image domain via cross-attention or by constructing a multi-view stereo (MVS) cost volume, and subsequently decode the Gaussian primitives from ...
+- Method PixelSplat∗ (Charatan et al., 2024) MVSplat∗ (Chen et al., 2024) Omin-Scene (Wei et al., 2025) UniSplat PSNR↑ 21.51 21.61 24.27 25.37 SSIM↑ 0.616 0.658 0.736 0.765 LPIPS↓ ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Method PixelSplat∗ (Charatan et al., 2024) MVSplat∗ (Chen et al., 2024) Omin-Scene (Wei et al., 2025) UniSplat PSNR↑ 21.51 21.61 24.27 25.37 SSIM↑ 0.616 0.658 0.736 0.765 LPIPS↓ ...

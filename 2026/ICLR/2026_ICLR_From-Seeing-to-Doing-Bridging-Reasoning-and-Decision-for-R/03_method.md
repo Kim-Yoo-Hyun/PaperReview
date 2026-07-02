@@ -1,18 +1,19 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Vision-Language Model, Robotics, 3D Vision
+- Paper link: ./2026/ICLR/2026_ICLR_From-Seeing-to-Doing-Bridging-Reasoning-and-Decision-for-R/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address these limitations, we propose FSD (From Seeing to Doing), a novel vision-language model that generates intermediate representations through spatial relationship reasoning, providing ...
+## Brief Method
+- Zejun Li, FSD-4p FSD-8p (default) FSD-16p L.3 RMSE ↓ MAE ↓ GPT Score ↑ 102.1 78.3 85.2 82.6 63.4 67.1 5.0 6.2 5.7 M ORE C OMPARISON ON ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Linyi Jin, Jianming Zhang, Yannick Hold-Geoffroy, Oliver Wang, Kevin Blackburn-Matzen, Matthew Sticha, and David F Fouhey.
+- Moo Jin Kim, Karl Pertsch, Siddharth Karamcheti, Ted Xiao, Ashwin Balakrishna, Suraj Nair, Rafael Rafailov, Ethan Foster, Grace Lam, Pannag Sanketi, et al.
+- Zejun Li, FSD-4p FSD-8p (default) FSD-16p L.3 RMSE ↓ MAE ↓ GPT Score ↑ 102.1 78.3 85.2 82.6 63.4 67.1 5.0 6.2 5.7 M ORE C OMPARISON ON ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- FSD-4p FSD-8p (default) FSD-16p L.3 RMSE ↓ MAE ↓ GPT Score ↑ 102.1 78.3 85.2 82.6 63.4 67.1 5.0 6.2 5.7 M ORE C OMPARISON ON R EAL ...

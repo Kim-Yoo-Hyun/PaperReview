@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2024 / ECCV
+- Category: 3D Large Multimodal Models
+- Tags: Vision-Language Model, 3D Vision, semantic
+- Paper link: ./2024/ECCV/2024_ECCV_3D-Open-Vocabulary-Panoptic-Segmentation-with-2D-3D-Vision/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-VLM/LLM은 강한 semantic prior를 갖지만 3D 위치, 거리, 관점, affordance 같은 metric spatial reasoning에는 취약하다.
+- Although prior 3D panoptic segmentation approaches have achieved great performance on closedset benchmarks, generalizing these approaches to unseen things and unseen stuff categories remains an open problem.
 
 ## 해결하려는 문제
-- 연구 유형: 3D vision-language spatial reasoning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Our experiments on the nuScenes and SemanticKITTI datasets show that our method outperforms the strong baseline by a large margin.
+- To further improve the classification performance on novel classes and leverage the CLIP model, we propose two novel loss functions: objectlevel distillation loss and voxel-level distillation loss.
+- Although prior 3D panoptic segmentation approaches have achieved great performance on closedset benchmarks, generalizing these approaches to unseen things and unseen stuff categories remains an open problem.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Vision-Language Model, 3D Vision, semantic` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 3D panoptic segmentation is a crucial task in computer vision with many realworld applications, most notably in autonomous driving.
+- It combines 3D semantic and instance segmentation to produce per-point predictions for two different types of objects: things (e.g., car) and stuff (e.g., road).
+- To date, there has been significant progress in 3D panoptic segmentation .

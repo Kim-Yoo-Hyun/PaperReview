@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ICML
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model, Robotics
+- Paper link: ./2026/ICML/2026_ICML_HiMe-Hierarchical-Embodied-Memory-for-Long-Horizon-Vision/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To resolve this architectural misalignment, we propose **HiMe**, a Hierarchical Embodied Memory framework that decouples embodied intelligence into a high-frequency Executor for execution, a ...
+## Brief Method
+- To resolve this architectural misalignment, we propose HiMe, a Hierarchical Embodied Memory framework that decouples embodied intelligence into a high-frequency Executor for execution, a Sentry for working memory, ...
+- Most existing architectures rely on the Markov assumption, where the policy is conditioned only on the transient observation at the current time step.
+- HiMe addresses this challenge by organizing embodied intelligence into a hierarchical structure that separates fast execution from memory-driven reasoning over long time scales. tion with large-scale internet-level pretraining.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Existing solutions face a “frequency-competence paradox,” where stronger reasoning models are too slow for real-time control, while faster models lack sufficient reasoning capabilities.
+- HiMe addresses this challenge by organizing embodied intelligence into a hierarchical structure that separates fast execution from memory-driven reasoning over long time scales. tion with large-scale internet-level pretraining.
+- To resolve this architectural misalignment, we propose HiMe, a Hierarchical Embodied Memory framework that decouples embodied intelligence into a high-frequency Executor for execution, a Sentry for working memory, ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- HiMe (Ours) Flat Memory Components Object Search Counting Rearrangement Sentry Memory Management Memory Size API Calls (↓) Memory Hit (↑) Avg.
+- Progress (↑) API Calls (↓) Memory Hit (↑) Avg.
+- Progress (↑) API Calls (↓) Memory Hit (↑) Avg.
+- Progress (↑) ✓ × ✓ × inf inite recent 8 1.8 5.4 94% 68% 92% 64% 2.6 4.8 98% 61% 92% 58% 1.4 6.2 92% 76% 87% 73% ...
+- In Flat memory methods, the Planner is often queried every step to interpret the visual buffer, placing the expensive LLM in a high-frequency control loop.

@@ -3,32 +3,32 @@
 - Year/Venue: 2026 / CVPR
 - Category: 3D Reconstruction, Geometry, and SLAM
 - Tags: 3D reconstruction, 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2026/html/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2026/CVPR/2026_CVPR_GaussFusion-Improving-3D-Reconstruction-in-the-Wild-with-A/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- We plan to release our code and model. [Project Page] Photorealistic 3D reconstruction and novel-view synthesis are fundamental problems in computer vision, with applications in virtual reality, autonomous ...
+- Given an existing reconstruction, we render a Gaussian primitives video buffer encoding depth, normals, opacity, and covariance, which the generator refines to produce temporally coherent, artifact-free frames.
+- To address these limitations, several methods have explored leveraging generative priors to enhance 3D reconstruction by generating dense novel-view images.
 
 ## Core Idea
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- Introduction We present GaussFusion, a novel approach for improving 3D Gaussian splatting (3DGS) reconstructions in the wild through geometry-informed video generation.
+- Unlike prior RGB-based approaches limited to a single reconstruction pipeline, our method introduces a geometryinformed video-to-video generator that refines 3DGS renderings across both optimization-based and feed-forward methods.
 
 ## Input / Output
-Input: one or more images/RGB-D/LiDAR observations. Output: depth, camera pose, point map, dense reconstruction, or consistent map.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D reconstruction, calibration, and geometric consistency`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- GaussFusion achieves state-of-the-art performance on novel view synthesis benchmarks, and an efficient variant runs in real time at 16 FPS while maintaining similar performance, enabling interactive 3D applications.
 
 ## Limitation
-강한 benchmark 성능이 실제 로봇 센서 노이즈, rolling shutter, 동적 객체, 저조도 환경까지 보장하지는 않는다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D reconstruction, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D reconstruction, 3D Vision.
+- Introduction We present GaussFusion, a novel approach for improving 3D Gaussian splatting (3DGS) reconstructions in the wild through geometry-informed video generation.
+- GaussFusion achieves state-of-the-art performance on novel view synthesis benchmarks, and an efficient variant runs in real time at 16 FPS while maintaining similar performance, enabling interactive 3D applications.
+- Given an existing reconstruction, we render a Gaussian primitives video buffer encoding depth, normals, opacity, and covariance, which the generator refines to produce temporally coherent, artifact-free frames.
+
+## Abstract Cue
+- Introduction We present GaussFusion, a novel approach for improving 3D Gaussian splatting (3DGS) reconstructions in the wild through geometry-informed video generation.

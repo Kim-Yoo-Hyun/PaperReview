@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2024 / RA-L
+- Category: 3D Large Multimodal Models
+- Tags: Vision-Language Model, semantic
+- Paper link: ./2024/RA-L/2024_RA-L_FM-Fusion-Instance-aware-Semantic-Mapping-Boosted-by-Visio/paper.pdf
+- Code/Project: https://github.com/HKUST-Aerial-Robotics/FM-Fusion
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose a probabilistic label fusion method to predict close-set semantic classes from open-set label measurements.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- —Semantic mapping based on the supervised object detectors is sensitive to image distribution.
+- In real-world environments, the object detection and segmentation performance can lead to a major drop, preventing the use of semantic mapping in a wider domain.
+- We propose a probabilistic label fusion method to predict close-set semantic classes from open-set label measurements.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- M-CNN& Kimera M-CNN& Fusion++ M-CNN∗ & Kimera M-CNN∗ & Fusion++ G-SAM &Kimera G-SAM & Ours cab.
+- 0.0 0.0 27.8 7.1 32.5 4.6 bed 6.4 27.1 55.5 22.0 21.0 46.2 cha.
+- 17.3 4.4 0.0 13.3 21.7 37.3 door 0.0 0.0 16.5 12.5 26.0 19.5 win.

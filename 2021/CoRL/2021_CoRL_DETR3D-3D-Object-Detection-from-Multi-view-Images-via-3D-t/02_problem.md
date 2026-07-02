@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2021 / CoRL
+- Category: Sensor Fusion, LiDAR, and Autonomous Driving
+- Tags: 3D Vision, BEV, 3D detection, camera
+- Paper link: ./2021/CoRL/2021_CoRL_DETR3D-3D-Object-Detection-from-Multi-view-Images-via-3D-t/paper.pdf
+- Code/Project: https://github.com/WangYueFt/detr3d
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- 3D object detection from visual information is a long-standing challenge for low-cost autonomous driving systems.
+- Our framework, termed DETR3D (Multi-View 3D Detection), addresses this problem in a top-down fashion.
+- Different from existing works that combine object predictions from the different camera views in a final stage, our method fuses information from all the camera views in each ...
 
 ## 해결하려는 문제
-- 연구 유형: 3D vision and embodied AI
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- We achieve state-of-the-art performance on the nuScenes autonomous driving benchmark.
+- In contrast to existing works, which estimate 3D bounding boxes directly from monocular images or use depth prediction networks to generate input for 3D object detection from 2D ...
+- : We introduce a framework for multi-camera 3D object detection.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `3D Vision, BEV, 3D detection, camera` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 3D object detection from visual information is a long-standing challenge for low-cost autonomous driving systems.
+- Different from existing works that combine object predictions from the different camera views in a final stage, our method fuses information from all the camera views in each ...
+- It does not suffer from inaccurate depth predictions from a secondary network, and seamlessly uses information from multiple cameras by back-projecting 3D information onto all available frames. • ...

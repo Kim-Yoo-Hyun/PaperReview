@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2025 / ICML poster
+- Category: 3D Equivariance, Calibration, and Registration
+- Tags: geometry, Diffusion, Generation, point cloud, 3D Vision
+- Paper link: ./2025/ICML/2025_ICML_Generative-Point-Cloud-Registration/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-생성 모델 또는 policy 모델이 3D 구조와 물리 제약을 보존하지 못하면 로봇 실행이나 3D 장면 생성에서 일관성이 깨진다.
+- Unlike geometry-only matching in previous methods, our approach introduces MatchControlNet, a matching-specific 2D generative model that generates cross-view images pairs from point cloud data, providing rich color cues ...
+- Introduction Point cloud registration is a problem of finding the optimal rigid transformation, comprising a 3D rotation and a 3D translation, which aligns the source and target point ...
+- Existing 3D registration methods can be roughly categorized into traditional approaches and data-driven deep methods.
 
 ## 해결하려는 문제
-- 연구 유형: diffusion-based generation or policy learning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Unlike geometry-only matching in previous methods, our approach introduces MatchControlNet, a matching-specific 2D generative model that generates cross-view images pairs from point cloud data, providing rich color cues ...
+- Recent RGB-D registration studies (Yuan et al., 2023; Mu et al., 2024) have shown images would significantly enhance the distinctiveness of point cloud descriptors, leading to improved matching ...
+- However, real-world Despite the impressive performance achieved by current point cloud registration methods, their robustness remains limited in challenging scenarios that contain low overlap, repetitive patterns, or noisy ...
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `geometry, Diffusion, Generation, point cloud` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

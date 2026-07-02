@@ -1,18 +1,20 @@
 # Method
 
-## Brief Method
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
+- Year/Venue: 2025 / RA-L
+- Category: 3D Scene Graphs and Graph Reasoning
+- Tags: Robotics, 3D Vision, Graph Reasoning, semantic
+- Paper link: ./2025/RA-L/2025_RA-L_Dynamic-Open-Vocabulary-3D-Scene-Graphs-for-Long-term-Lang/paper.pdf
+- Code/Project: https://github.com/BJHYZJ/DovSG
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To overcome these limitations, we present DovSG, a novel mobile manipulation framework that leverages dynamic open-vocabulary 3D scene graphs and a language-guided task planning module for longterm task ...
+- This detailed evaluation provides a comprehensive analysis of the effectiveness of our method across different components of task execution.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To overcome these limitations, we present DovSG, a novel mobile manipulation framework that leverages dynamic open-vocabulary 3D scene graphs and a language-guided task planning module for longterm task ...
+- —Enabling mobile robots to perform long-term tasks in dynamic real-world environments is a formidable challenge, especially when the environment changes frequently due to humanrobot interactions or the robot’s ...
+- To overcome these limitations, we present DovSG, a novel mobile manipulation framework that leverages dynamic open-vocabulary 3D scene graphs and a language-guided task planning module for longterm task ...
 
 ## 핵심 방법론
-- Task family: structured 3D scene graph reasoning
-- Representation: 3D Vision, Graph Reasoning, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- This detailed evaluation provides a comprehensive analysis of the effectiveness of our method across different components of task execution.

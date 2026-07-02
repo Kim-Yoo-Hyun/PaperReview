@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2025 / NeurIPS Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model, Reinforcement Learning
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_ChatVLA-2-Vision-Language-Action-Model-with-Open-World-Rea/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this work, we introduce **ChatVLA-2**, a novel mixture-of-expert VLA model coupled with a specialized three-stage training pipeline designed to preserve the VLM’s original ...
+## Brief Method
+- In contrast, our approach deals with diverse, novel reasoning types not encountered in the training data.
+- We introduce an enhanced reasoning-following module designed to improve reasoning capabilities in action models.
+- Therefore, our method requires a more robust and flexible VLA model capable of effectively following complex, out-of-distribution reasoning.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Intuitively, pre-training a VLA model consists of a powerful, pre-trained VLMs, such as PaliGemma or Qwen-VL , should equip the robot with not only stronger vision-language feature embeddings ...
+- As a result, the VLA model may fail to accomplish tasks that seem trivial to humans, simply because these tasks were absent from the training dataset.
+- In contrast, our approach deals with diverse, novel reasoning types not encountered in the training data.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- In contrast, our approach deals with diverse, novel reasoning types not encountered in the training data.
+- We introduce an enhanced reasoning-following module designed to improve reasoning capabilities in action models.
+- Therefore, our method requires a more robust and flexible VLA model capable of effectively following complex, out-of-distribution reasoning.
+- A distinctive feature of our method is that the model not only follows given instructions but also aligns robotic actions closely with the generated reasoning.
+- Specifically, our approach utilizes an adaptive routing strategy where expert modules are dynamically selected based on the characteristics of the visual and textual inputs.

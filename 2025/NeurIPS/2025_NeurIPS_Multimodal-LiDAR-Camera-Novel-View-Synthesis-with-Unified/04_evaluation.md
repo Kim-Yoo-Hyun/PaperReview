@@ -1,26 +1,38 @@
 # Evaluation
 
-## Dataset
-Replica, nuScenes, KITTI
+- Year/Venue: 2025 / NeurIPS poster
+- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Tags: geometry, sensor fusion, LiDAR, 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_Multimodal-LiDAR-Camera-Novel-View-Synthesis-with-Unified/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `3D reconstruction, calibration, and geometric consistency`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- KITTI
+- nuScenes
 
 ## Metrics
-PSNR, SSIM, LPIPS, ATE, RPE, Chamfer, F-score, pose AUC
+- accuracy
+- mAP
+- Chamfer
+- F-score
+- PSNR
+- SSIM
+- LPIPS
+- ATE
+- RPE
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Thus, compared to single-modality methods and i-NGP that with and without point clouds for depth supervision, we achieve highquality NVS and the best results across both modalities.
+- The results indicate that relying solely on NeRF’s implicit pose optimization fails to achieve accurate pose estimates and leads to convergence at local optima.
+- Therefore, we exclude the MMG and conduct ablation experiments with GT pose to further demonstrate the advantages of our Uniﬁed NeRF with the multimodal-speciﬁc coarseto-ﬁne training strategy (MSC2F) ...
+- We conducted experiments unsetting(bottom).P2IR: Point2Image Regular- der GT-poses to demonstrate the effectiveness of our method in modal fusion. ization.
+- Thus, compared to single-modality methods and i-NGP that with and without point clouds for depth supervision, we achieve highquality NVS and the best results across both modalities.
+- The results indicate that relying solely on NeRF’s implicit pose optimization fails to achieve accurate pose estimates and leads to convergence at local optima.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: Extensive experiments on KITTI-360 and NuScenes datasets demonstrate MUP's superiority in accomplishing geometry-aware, modality-consistent, and pose-free 3D reconstruction.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- Comparison and Ablation in Pose-free Setting Baselines.
+- Thus, compared to single-modality methods and i-NGP that with and without point clouds for depth supervision, we achieve highquality NVS and the best results across both modalities.
 
 ## Reproducibility Notes
-- Code/Project: not identified
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 radiance field의 공간 좌표/뷰 의존 표현에 CLIP/VLM feature를 결합해 3D 위치에서 언어적 의미를 조회할 수 있게 하는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: 3D Scene Representations and Neural Fields
+- Tags: NeRF, 3D reconstruction, 3D Vision
+- Paper link: ./2024/ECCV/2024_ECCV_SG-NeRF-Neural-Surface-Reconstruction-with-Scene-Graph-Opt/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Then, we present our joint optimization method for training the radiance field and updating the scene graph (Sec.
+- Lastly, we introduce a coarse-to-fine training strategy to ensure an efficient and stable training process (Sec.
+- The byproduct of our method is the optimized camera pose Pi = (Ri , ti ) for each training image, where Ri ∈ SO(3) and ti ∈ R3 ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To tackle this challenge, we present a novel approach that optimizes radiance fields with scene graphs to mitigate the influence of outlier poses.
+- Experimental results on various datasets consistently demonstrate the effectiveness and superiority of our method over existing approaches, showcasing its robustness in handling outliers and producing high-quality 3D reconstructions.
+- Then, we present our joint optimization method for training the radiance field and updating the scene graph (Sec.
 
 ## 핵심 방법론
-- Task family: language-aware neural radiance field representation
-- Representation: NeRF, 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Then, we present our joint optimization method for training the radiance field and updating the scene graph (Sec.
+- Lastly, we introduce a coarse-to-fine training strategy to ensure an efficient and stable training process (Sec.
+- The byproduct of our method is the optimized camera pose Pi = (Ri , ti ) for each training image, where Ri ∈ SO(3) and ti ∈ R3 ...
+- Given the training images, we first apply a widely used Structure-from-Motion (SfM) algorithm, i.e., COLMAP , to construct an initial scene graph of the images, where the keypoint ...
+- After training, we extract the 3D scene mesh from the density of the optimized radiance field.

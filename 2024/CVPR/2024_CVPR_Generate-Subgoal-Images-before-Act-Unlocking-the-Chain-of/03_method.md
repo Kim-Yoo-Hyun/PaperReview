@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Diffusion, VLA, Planning
+- Paper link: ./2024/CVPR/2024_CVPR_Generate-Subgoal-Images-before-Act-Unlocking-the-Chain-of/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Inspired by the great success of diffusion model in image generation tasks, we propose a novel hierarchical framework named as CoTDiffusion that incorporates diffusion model as a high-level ...
+- Additionally, we propose bi-directional generation and frame concat mechanism to further enhance the fidelity of generated subgoal images and the accuracy of instruction following.
+- The coarse-to-fine semantic alignment training training allows developing spatial reasoning prior to synthesis.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Moreover, for long-horizon manipulation tasks, the deviation from general instruction tends to accumulate if lack of intermediate guidance from high-level subgoals.
+- Inspired by the great success of diffusion model in image generation tasks, we propose a novel hierarchical framework named as CoTDiffusion that incorporates diffusion model as a high-level ...
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- The coarse-to-fine semantic alignment training training allows developing spatial reasoning prior to synthesis.
+- Additionally, ablating coarse pretraining and bi-directional generation degrades performance, validating their benefits.
+- We attribute this to two potential reasons: First, accurate and grounded subgoal images generated in visual planners provide supplemental visual context, which can partly compensate for the insufficient ...
+- With step-wise sub-prompts decomposed in advance, the performance of SuSIE gets largely raised but still underperforms CoTDiffusion, which has no need to explicitly decompose the general prompts and ...
+- Rearrange Reasoning Constraints Overall Gato Flamingo VIMA 6.4 ± 1.3 17.5 ± 1.6 43.1 ± 3.3 2.5 ± 0.4 3.0 ± 0.5 38.2 ± 4.4 25.2 ± 3.1 ...

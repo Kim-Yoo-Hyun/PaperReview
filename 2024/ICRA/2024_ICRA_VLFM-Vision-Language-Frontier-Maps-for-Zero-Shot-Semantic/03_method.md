@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
+- Year/Venue: 2024 / ICRA
+- Category: Navigation and Embodied AI
+- Tags: Vision-Language Navigation, Robotics, Navigation, semantic
+- Paper link: ./2024/ICRA/2024_ICRA_VLFM-Vision-Language-Frontier-Maps-for-Zero-Shot-Semantic/paper.pdf
+- Code/Project: https://github.com/bdaiinstitute/vlfm
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We introduce a zero-shot navigation approach, Vision-Language Frontier Maps (VLFM), which is inspired by human reasoning and designed to navigate towards unseen semantic objects in novel environments.
+- Demonstrations in an office building on a Spot Arm platform prove the viability of our method in real-world scenarios.
+- Toutanova, “BERT: Pretraining of Deep Bidirectional Transformers for Language Understanding,” in Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- — Understanding how humans leverage semantic knowledge to navigate unfamiliar environments and decide where to explore next is pivotal for developing robots capable of human-like search behaviors.
+- We introduce a zero-shot navigation approach, Vision-Language Frontier Maps (VLFM), which is inspired by human reasoning and designed to navigate towards unseen semantic objects in novel environments.
+- We introduce a zero-shot navigation approach, Vision-Language Frontier Maps (VLFM), which is inspired by human reasoning and designed to navigate towards unseen semantic objects in novel environments.
 
 ## 핵심 방법론
-- Task family: embodied navigation and spatial planning
-- Representation: semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Demonstrations in an office building on a Spot Arm platform prove the viability of our method in real-world scenarios.
+- Toutanova, “BERT: Pretraining of Deep Bidirectional Transformers for Language Understanding,” in Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human ...
+- Yu, “How To Not Train Your Dragon: Training-free Embodied Object Navigation with Semantic Frontiers,” in RSS, 2023.
+- Hoi, “BLIP-2: Bootstrapping Language-Image Pre-Training with Frozen Image Encoders and Large Language Models,” arXiv preprint arXiv:2301.12597, 2023.
+- Zhu, et al., “Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection,” arXiv preprint arXiv:2303.05499, 2023.

@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: Equivariance, Diffusion, and 3D Action
+- Tags: equivariant, Diffusion, Robotics
+- Paper link: ./2024/CVPR/2024_CVPR_Diffusion-EDFs-Bi-equivariant-Denoising-Generative-Modelin/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In this paper, we present Diffuion-EDFs, a diffusionbased alternative to EDFs with a significantly reduced training time (×15 faster).
+- This enables our method to be trained end-to-end from only 5∼10 human demonstrations without requiring any pre-training and object segmentation, yet are highly generalizable to out-of-distribution object configurations.
+- In this paper, we present Diffusion-EDFs, a novel SE(3)-equivariant diffusion-based approach for visual robotic manipulation tasks.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Diffusion generative modeling has become a promising approach for learning robotic manipulation tasks from stochastic human demonstrations.
+- In this paper, we present Diffusion-EDFs, a novel SE(3)-equivariant diffusion-based approach for visual robotic manipulation tasks.
+- In this paper, we present Diffuion-EDFs, a diffusionbased alternative to EDFs with a significantly reduced training time (×15 faster).
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- R-NDFs Default (Trained Setup) SE(3)-DiffusionFields Diffusion-EDFs (Ours) R-NDFs Previously Unseen Instances SE(3)-DiffusionFields Diffusion-EDFs (Ours) R-NDFs Previously Unseen Poses SE(3)-DiffusionFields SE(3)-DiffusionFields Diffusion-EDFs (Ours) § Models with segmented inputs are ...
+- 5) Diffusion-EDFs infer the gripper pose to place the grasped object on the placement target.
+- 2) Diffusion-EDFs infer the gripper pose to pick up the target object.

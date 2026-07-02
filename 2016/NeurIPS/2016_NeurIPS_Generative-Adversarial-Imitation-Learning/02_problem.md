@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2016 / NeurIPS
+- Category: Foundations: RL and Imitation Learning
+- Tags: Robotics, Imitation Learning, Reinforcement Learning
+- Paper link: ./2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- There are two main approaches suitable for this setting: behavioral cloning , which learns a policy as a supervised learning problem over state-action pairs from expert trajectories; and ...
+- Inverse reinforcement learning (IRL), on the other hand, learns a cost function that prioritizes entire trajectories over others, so compounding error, a problem for methods that fit single-timestep ...
+- We are interested in a specific setting of imitation learning—the problem of learning to perform a task from expert demonstrations—in which the learner is given only samples of ...
 
 ## 해결하려는 문제
-- 연구 유형: RL and imitation learning for policies
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- We propose a new general framework for directly extracting a policy from data, as if it were obtained by reinforcement learning following inverse reinforcement learning.
+- We show that a certain instantiation of our framework draws an analogy between imitation learning and generative adversarial networks, from which we derive a model-free imitation learning algorithm ...
+- One approach is to recover the expert’s cost function with inverse reinforcement learning, then extract a policy from that cost function with reinforcement learning.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Robotics, Imitation Learning, Reinforcement Learning` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- There are two main approaches suitable for this setting: behavioral cloning , which learns a policy as a supervised learning problem over state-action pairs from expert trajectories; and ...
+- Inverse reinforcement learning (IRL), on the other hand, learns a cost function that prioritizes entire trajectories over others, so compounding error, a problem for methods that fit single-timestep ...
+- Given that learner’s true goal often is to take actions imitating the expert—indeed, many IRL algorithms are evaluated on the quality of the optimal actions of the costs ...

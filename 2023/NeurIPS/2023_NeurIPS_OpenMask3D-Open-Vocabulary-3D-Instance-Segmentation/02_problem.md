@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2023 / NeurIPS
+- Category: Open-Vocabulary 3D Mapping
+- Tags: open-vocabulary, 3D segmentation, CLIP
+- Paper link: ./2023/NeurIPS/2023_NeurIPS_OpenMask3D-Open-Vocabulary-3D-Instance-Segmentation/paper.pdf
+- Code/Project: https://openmask3d.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-3D semantic perception은 라벨 공간이 제한적이고 long-tail 객체/속성/affordance를 다루기 어려워 foundation model alignment가 필요하다.
+- Hence, the second key problem with closed-vocabulary approaches is their inherent limitation to recognize only object classes that are predefined at training time.
+- We argue that there are two key problems with closed-vocabulary 3D instance segmentation.
+- Our approach is intrinsically different from the existing 3D open-vocabulary scene understanding approaches as we propose an instance-based feature computation approach instead of a point-based one.
 
 ## 해결하려는 문제
-- 연구 유형: open-vocabulary 3D semantic understanding
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Experiments and ablation studies on ScanNet200 and Replica show that OpenMask3D outperforms other open-vocabulary methods, especially on the long-tail distribution.
+- We introduce the task of open-vocabulary 3D instance segmentation.
+- Qualitative experiments further showcase OpenMask3D’s ability to segment object properties based on free-form queries describing geometry, affordances, and materials.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `open-vocabulary, 3D segmentation, CLIP` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- Hence, the second key problem with closed-vocabulary approaches is their inherent limitation to recognize only object classes that are predefined at training time.
+- Our approach is intrinsically different from the existing 3D open-vocabulary scene understanding approaches as we propose an instance-based feature computation approach instead of a point-based one.
+- We argue that there are two key problems with closed-vocabulary 3D instance segmentation.

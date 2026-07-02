@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: 3D Equivariance, Calibration, and Registration
+- Tags: geometry, point cloud, 3D Vision
+- Paper link: ./2026/ICLR/2026_ICLR_RayI2P-Learning-Rays-for-Image-to-Point-Cloud-Registration/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address these issues, we propose a novel ray-based registration framework that first predicts patch-wise 3D ray bundles connecting image patches to the 3D ...
+## Brief Method
+- Following standard protocol (Li & Lee, 2021), we use sequences 0–8 for training and sequences 9–10 for testing.
+- For the 3D backbone, we use a 4-stage KPConv (Thomas et al., 2019) where the output channel dimension is also 512.
+- We follow the official train/test split, using 850 scenes for training and 150 scenes for testing.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Following standard protocol (Li & Lee, 2021), we use sequences 0–8 for training and sequences 9–10 for testing.
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: geometry, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Following standard protocol (Li & Lee, 2021), we use sequences 0–8 for training and sequences 9–10 for testing.
+- For the 3D backbone, we use a 4-stage KPConv (Thomas et al., 2019) where the output channel dimension is also 512.
+- We follow the official train/test split, using 850 scenes for training and 150 scenes for testing.
+- All input images are resized to a resolution of 160 × 512, and point clouds are uniformly downsampled to 40,960 points for both training and evaluation. nuScenes (Caesar ...
+- All the attention layers have 512 features channels with 4 attention heads and ReLU activation.

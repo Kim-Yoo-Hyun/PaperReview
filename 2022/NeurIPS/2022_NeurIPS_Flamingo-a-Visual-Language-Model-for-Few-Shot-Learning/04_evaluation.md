@@ -1,26 +1,30 @@
 # Evaluation
 
-## Dataset
-COCO, ImageNet, LAION, EuRoC
+- Year/Venue: 2022 / NeurIPS
+- Category: Foundations: Vision-Language Models
+- Tags: Vision-Language Model, few-shot, alignment
+- Paper link: ./2022/NeurIPS/2022_NeurIPS_Flamingo-a-Visual-Language-Model-for-Few-Shot-Learning/paper.pdf
+- Code/Project: not released
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `vision or vision-language foundation model pretraining`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- ImageNet
+- COCO
 
 ## Metrics
-task-specific accuracy, generalization gap, ablation metrics, IoU, AP, mAP, SR, SPL
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- This is achieved with as few as four examples per task, demonstrating practical and efficient adaptation of vision models to new tasks.
+- Flamingo outperforms by a large margin all previous zero-shot or few-shot methods on the 16 benchmarks considered.
+- On six tasks, Flamingo even outperforms the fine-tuned SotA despite using a single set of model weights and only 32 task-specific examples.
+- We report the results of the Flamingo models on few-shot learning in Section 3.1.
+- Left: Our largest model, dubbed Flamingo, outperforms state-of-the-art fine-tuned models on 6 of the 16 tasks we consider with no fine-tuning.
+- This is achieved with as few as four examples per task, demonstrating practical and efficient adaptation of vision models to new tasks.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- Flamingo outperforms by a large margin all previous zero-shot or few-shot methods on the 16 benchmarks considered.
+- More importantly, Flamingo is often competitive with state-of-the-art methods additionally fine-tuned on up to hundreds of thousands of annotated examples.
 
 ## Reproducibility Notes
-- Code/Project: not released
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

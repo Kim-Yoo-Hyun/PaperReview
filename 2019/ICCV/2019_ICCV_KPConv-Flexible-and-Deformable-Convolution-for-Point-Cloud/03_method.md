@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2019 / ICCV
+- Category: Foundations: 3D Representation Learning
+- Tags: point cloud, 3D Vision
+- Paper link: ./2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- For this task, we use KP-FCNN architecture with the same parameters as in the classification task, adding the positions (x, y, z) as additional features to the constant ...
+- We present Kernel Point Convolution1 (KPConv), a new design of point convolution, i.e. that operates on point clouds without any intermediate representation.
+- Like , we advocate the use of Area-5 as test scene to better measure the generalization ability of our method.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Such a point cloud is a sparse structure that has the property to be unordered, which makes it very different from a grid.
+- For this task, we use KP-FCNN architecture with the same parameters as in the classification task, adding the positions (x, y, z) as additional features to the constant ...
 
 ## 핵심 방법론
-- Task family: core 3D geometry and scene representation learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- For this task, we use KP-FCNN architecture with the same parameters as in the classification task, adding the positions (x, y, z) as additional features to the constant ...
+- Like , we advocate the use of Area-5 as test scene to better measure the generalization ability of our method.
+- Our second experiment shows how our segmentation architecture generalizes to real indoor and outdoor data.

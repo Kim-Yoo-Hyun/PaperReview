@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
+- Year/Venue: 2026 / IROS
+- Category: Navigation and Embodied AI
+- Tags: Navigation, Graph Reasoning
+- Paper link: ./2026/IROS/2026_IROS_SAGE-Nav-Leveraging-LLM-Planning-and-Alignment-Fusion-for/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To address these limitations, we propose SAGE-Nav, a novel hierarchical framework that integrates the reasoning capabilities of Large Language Models (LLMs) with dynamic scene graphs.
+- Furthermore, we develop the Goal-aware Alignment-Fusion Network (GAFN) to dynamically fuse realtime perception with these structural priors.
+- Following the experimental protocols of prior studies , we select six object categories :Bowl, DeskLamp, Laptop, LightSwitch, Plate, and StoveBurner that are excluded during the training phase but ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To address these limitations, we propose SAGE-Nav, a novel hierarchical framework that integrates the reasoning capabilities of Large Language Models (LLMs) with dynamic scene graphs.
+- This challenge has also motivated recent efforts toward unified embodied navigation paradigms , which emphasize the importance of data generation, simulation, evaluation, an
+- To address these limitations, we propose SAGE-Nav, a novel hierarchical framework that integrates the reasoning capabilities of Large Language Models (LLMs) with dynamic scene graphs.
 
 ## 핵심 방법론
-- Task family: structured 3D scene graph reasoning
-- Representation: Graph Reasoning
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Following the experimental protocols of prior studies , we select six object categories :Bowl, DeskLamp, Laptop, LightSwitch, Plate, and StoveBurner that are excluded during the training phase but ...

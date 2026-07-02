@@ -3,32 +3,34 @@
 - Year/Venue: 2025 / CVPR
 - Category: 3D Large Multimodal Models
 - Tags: LLM, spatial reasoning, 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2025/html/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified from primary page
+- Paper link: ./2025/CVPR/2025_CVPR_SpatialLLM-A-Compound-3D-Informed-Design-towards-Spatially/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-VLM/LLM은 강한 semantic prior를 갖지만 3D 위치, 거리, 관점, affordance 같은 metric spatial reasoning에는 취약하다.
+- To address data limitations, we develop two types of 3D-informed training datasets: (1) 3D-informed probing data focused on object’s 3D location and orientation, and (2) 3D-informed conversation data ...
+- The primary challenge lies in the scarcity of high-quality 3D spatial relationship data, which prevents models from learning effective 3D spatial reasoning.
+- Collecting a small set of high-quality 3D-aware data to tackle the first challenge is feasible, albeit labor-intensive, using readily available tools.
 
 ## Core Idea
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- To address data limitations, we develop two types of 3D-informed training datasets: (1) 3D-informed probing data focused on object’s 3D location and orientation, and (2) 3D-informed conversation data ...
+- We systematically study the impact of 3D-informed data, architecture, and training setups, introducing SpatialLLM, an LMM with advanced 3D spatial reasoning abilities.
 
 ## Input / Output
-Input: 2D/3D observations, point/scene tokens, and natural-language prompts. Output: spatial answer, grounding result, caption, plan, or embodied reasoning response.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D vision-language spatial reasoning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Humans naturally understand 3D spatial relationships, enabling complex reasoning like predicting collisions of vehicles from different directions.
+- Current large multimodal models (LMMs), however, lack of this capability of 3D spatial reasoning.
+- This limitation stems from the scarcity of 3D training data and the bias in current model designs toward 2D data.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D vision-language spatial reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: LLM, spatial reasoning, 3D Vision.
+- To address data limitations, we develop two types of 3D-informed training datasets: (1) 3D-informed probing data focused on object’s 3D location and orientation, and (2) 3D-informed conversation data ...
+- In this paper, we systematically study the impact of 3D-informed data, architecture, and training setups, introducing SpatialLLM, a large multi-modal model with advanced 3D spatial reasoning abilities.
+- We systematically study the impact of 3D-informed data, architecture, and training setups, introducing SpatialLLM, an LMM with advanced 3D spatial reasoning abilities.
+
+## Abstract Cue
+- Humans naturally understand 3D spatial relationships, enabling complex reasoning like predicting collisions of vehicles from different directions.

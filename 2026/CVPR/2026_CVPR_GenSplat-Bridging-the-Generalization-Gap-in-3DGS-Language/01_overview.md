@@ -3,32 +3,34 @@
 - Year/Venue: 2026 / CVPR
 - Category: Language-Embedded NeRF and Gaussian Fields
 - Tags: Gaussian Splatting, language, generalization
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_GenSplat_Bridging_the_Generalization_Gap_in_3DGS_Language_Comprehension_CVPR_2026_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified from primary page
+- Paper link: ./2026/CVPR/2026_CVPR_GenSplat-Bridging-the-Generalization-Gap-in-3DGS-Language/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- Our key insight for this problem is to formulate a structured learning process to progressively align linguistic concepts with 3D Gaussians.
+- However, they inherently lack cross-scene generalization (as they require per-scene optimization) and do not support comprehensive spatial reasoning beyond segmentation, e.g., for visual question answering (VQA) or captioning ...
+- Although large-scale training enables the generalization of SceneSplat across scenes, its formulation remains restricted to a predefined vocabulary and thus fails to handle free-form language queries.
 
 ## Core Idea
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- In this paper, we propose GenSplat, a novel approach for language comprehension in 3D Gaussian Splatting (3DGS).
+- Following , we use diverse datasets for training, including ScanRefer , Nr3D , Sr3D , Multi3DRefer , ScanQA , SQA3D , Scan2Cap and Nr3DCaptioning .
 
 ## Input / Output
-Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `language-aware Gaussian/implicit 3D scene representation`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive cross-task evaluations (including 3D referring segmentation, 3D visual question answering, and 3D open-vocabulary understanding) demonstrate state-of-the-art performances and strong generalization capability of GenSplat.
+- ing this gap to achieve fine-grained language-guided understanding across 3DGS representations is highly desirable.
+- Unlike previous methods that either achieve cross-scene generalization by being bounded to a predefined vocabulary or handle free-form language by overfitting to individual scenes, GenSplat is robust to ...
 
 ## Limitation
-3DGS/NeRF 기반 방법은 scene reconstruction 품질, 카메라 포즈, memory/runtime, dynamic scene 처리에 민감하다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Gaussian Splatting, language, generalization.
+- To further improve spatial alignment and computational efficiency, we introduce a Geometry-Aware Frame Selector (GAFS), which adaptively selects the most informative views based on Gaussian and textural cues.
+- In this paper, we propose GenSplat, a novel approach for language comprehension in 3D Gaussian Splatting (3DGS).
+- Our key insight for this problem is to formulate a structured learning process to progressively align linguistic concepts with 3D Gaussians.
+
+## Abstract Cue
+- ing this gap to achieve fine-grained language-guided understanding across 3DGS representations is highly desirable.

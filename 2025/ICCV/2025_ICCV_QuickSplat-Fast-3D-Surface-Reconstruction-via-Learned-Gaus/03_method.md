@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Paper link: ./2025/ICCV/2025_ICCV_QuickSplat-Fast-3D-Surface-Reconstruction-via-Learned-Gaus/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Both our method without post-training (“w/o opt”) and with additional SGD iterations (“w/ opt”) obtain better geometry while achieving orders of magnitude faster runtime. # Initializer Densifier (a) ...
+- We introduce QuickSplat, which learns datadriven priors to generate dense initializations for 2D gaussian splatting optimization of large-scale indoor scenes.
+- In con- trast, our method learns scene priors directly in the Gaussian representation space, allowing it to perform more robustly under such conditions.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- In particular, achieving both high fidelity as well as efficient and fast reconstruction for large scenes remains a difficult problem.
+- Surface reconstruction of large, real-world scenes is a key problem in computer vision and graphics.
+- Both our method without post-training (“w/o opt”) and with additional SGD iterations (“w/ opt”) obtain better geometry while achieving orders of magnitude faster runtime. # Initializer Densifier (a) ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Both our method without post-training (“w/o opt”) and with additional SGD iterations (“w/ opt”) obtain better geometry while achieving orders of magnitude faster runtime. # Initializer Densifier (a) ...
+- In con- trast, our method learns scene priors directly in the Gaussian representation space, allowing it to perform more robustly under such conditions.
+- Our method more accurately models flat wall structures and objects details, while producing fewer floating geometry artifacts.
+- Our method matches MonoSDF in accuracy while running substantially faster.
+- Most importantly, via the learned initializer and densifieroptimizer, our method converges much faster.

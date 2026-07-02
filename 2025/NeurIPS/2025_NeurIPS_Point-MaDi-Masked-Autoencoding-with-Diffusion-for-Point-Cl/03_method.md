@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / NeurIPS poster
+- Category: 3D Generative Modeling and Diffusion
+- Tags: Diffusion, Generation, point cloud, 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_Point-MaDi-Masked-Autoencoding-with-Diffusion-for-Point-Cl/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task into an ...
+## Brief Method
+- In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task into an MAE architecture to address ...
+- Specifically, we introduce a center diffusion mechanism in the encoder, noising and predicting the coordinates of both visible and masked patch centers without ground-truth positional embeddings.
+- This dual-diffusion design drives comprehensive global semantic and local geometric representations during pre-training, eliminating external geometric priors.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Recent studies have begun to address these challenges by integrating diffusion frameworks into MAEs; this structure naturally complements diffusion models: the encoder can operate on partially observed data, ...
+- Despite their strengths, existing diffusion-based methods mainly rely on global context aggregation or predefined conditioning mechanisms, such as class labels or auxiliary features, to guide the denoising process.
+- In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task into an MAE architecture to address ...
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- These results underscore the effectiveness of Point-MaDi’s dualdiffusion pre-training in capturing complex scene semantics and fine-grained geometric details.
+- Inst. mIoU mAcc mIoU 83.7 85.2 – 49.0 – – 41.1 – – 68.6 – 70.1 69.9 – 69.5 71.0 +1.1 60.0 – 61.0 60.8 – 60.2 61.2 ...

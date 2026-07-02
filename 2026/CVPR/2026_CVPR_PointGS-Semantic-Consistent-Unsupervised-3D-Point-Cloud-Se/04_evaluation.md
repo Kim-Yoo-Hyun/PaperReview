@@ -1,26 +1,27 @@
 # Evaluation
 
-## Dataset
-ScanNet, S3DIS, OXE
+- Year/Venue: 2026 / CVPR
+- Category: 3D Semantic Understanding and Alignment
+- Tags: Gaussian Splatting, semantic, alignment, point cloud, 3D Vision
+- Paper link: ./2026/CVPR/2026_CVPR_PointGS-Semantic-Consistent-Unsupervised-3D-Point-Cloud-Se/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `language-aware Gaussian/implicit 3D scene representation`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- ScanNet
+- S3DIS
 
 ## Metrics
-mIoU, AP, mAP, open-vocabulary accuracy, long-tail performance, IoU, SR, SPL
+- accuracy
+- mIoU
+- RMSE
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Experiments demonstrate that PointGS outperforms state-ofthe-art unsupervised methods, achieving +0.9% mIoU on ScanNet-V2 and +2.8% mIoU on S3DIS. and Its Semantics of Sparse Point Cloud and Its Semantics ...
+- In the conference room scene, the upper part of the figure shows that the sparse point cloud causes the foreground points and background points to overlap, while the ...
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Reproducibility Notes
-- Code/Project: not identified
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

@@ -1,15 +1,20 @@
 # Problem
 
+- Year/Venue: 2025 / 3DV
+- Category: 3D Reconstruction, Geometry, and SLAM
+- Tags: geometry, depth, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_FlowMap-High-Quality-Camera-Poses-Intrinsics-and-Depth-via/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- Introduction Reconstructing a 3D scene from video is one of the most fundamental problems in vision and has been studied for over five decades.
+- These approaches extract sparse correspondences across frames, match them, discard outliers, and then optimize the correspondences’ 3D positions alongside the camera parameters by minimizing reprojection error .
 
 ## 해결하려는 문제
-- 연구 유형: 3D reconstruction, calibration, and geometric consistency
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- We empirically show that camera parameters and dense depth recovered by our method enable photo-realistic novel view synthesis on 360◦ trajectories using Gaussian Splatting.
+- Our method not only far outperforms prior gradientdescent based bundle adjustment methods, but surprisingly approaches the accuracy of COLMAP, the state-ofthe-art SfM method, on the downstream task of ...
+- Alongside the use of point tracks to encourage long-term geometric consistency, we introduce differentiable re-parameterizations of depth, intrinsics, and pose that are amenable to first-order optimization.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `geometry, depth, 3D Vision` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

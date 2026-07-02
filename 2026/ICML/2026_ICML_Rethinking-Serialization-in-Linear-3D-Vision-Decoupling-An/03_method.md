@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2026 / ICML
+- Category: 3D Semantic Understanding and Alignment
+- Tags: semantic, alignment, 3D Vision
+- Paper link: ./2026/ICML/2026_ICML_Rethinking-Serialization-in-Linear-3D-Vision-Decoupling-An/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We propose AnIsoNet, a framework that decouples anisotropic geometry from isotropic semantics via two dedicated modules: Local Anisotropy Geometric Modeling (LAGM) and Global Isotropy ...
+## Brief Method
+- We propose AnIsoNet, a framework that decouples anisotropic geometry from isotropic semantics via two dedicated modules: Local Anisotropy Geometric Modeling (LAGM) and Global Isotropy Semantic Aggregation (GISA).
+- Sonata (dec.) reaches 79.1%, which is 0.6% higher than our result, but it uses quadratic decoder attention together with large-scale external pre-training, whereas our model is trained entirely ...
+- Architectural comparison of our method with serialization-based methods.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Existing SSM/mamba methods force 3D point clouds into 1D sequences (top), introducing artificial ordering that disrupts spatial continuity.
+- Introduction Effective 3D point cloud understanding must reconcile local anisotropic geometry with global isotropic semantics, but the irregular and unordered nature of point sets makes this difficult.
+- We propose AnIsoNet, a framework that decouples anisotropic geometry from isotropic semantics via two dedicated modules: Local Anisotropy Geometric Modeling (LAGM) and Global Isotropy Semantic Aggregation (GISA).
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: semantic, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Sonata (dec.) reaches 79.1%, which is 0.6% higher than our result, but it uses quadratic decoder attention together with large-scale external pre-training, whereas our model is trained entirely ...
+- Underline denotes second-best without pre-training.
+- Methods marked with † use external pre-training data. ∗ Best among methods without pre-training.
+- Compared with PTv3, it is 1.0% higher on the validation split without external pre-training.
+- Our encoder follows DeLA (Chen et al., 2023) with ellipsoidal spectral encoding.

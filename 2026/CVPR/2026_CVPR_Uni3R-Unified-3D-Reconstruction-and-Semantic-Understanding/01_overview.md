@@ -3,32 +3,32 @@
 - Year/Venue: 2026 / CVPR
 - Category: 3D Semantic Understanding and Alignment
 - Tags: Gaussian Splatting, 3D reconstruction, geometry, semantic, alignment, 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2026/html/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2026/CVPR/2026_CVPR_Uni3R-Unified-3D-Reconstruction-and-Semantic-Understanding/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- Reconstructing and semantically interpreting 3D scenes from sparse 2D views remains a fundamental challenge in computer vision.
+- Conventional methods often decouple semantic understanding from reconstruction or necessitate costly per-scene optimization, thereby restricting their scalability and generalizability.
+- Introduction The ability to perceive and interpret the 3D world from sparse images is a cornerstone of computer vision, holding profound implications for robotics, autonomous driving, and augmented ...
 
 ## Core Idea
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- Our approach leverages a Cross-View Transformer to robustly integrate information across arbitrary multi-view inputs, which then regresses a set of 3D Gaussian primitives endowed with semantic feature fields.
+- Implementation Details We use DINOv2 as the image encoder, with a patch size of 16, and set the CrossView Transformer layers as L = 24.
 
 ## Input / Output
-Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `language-aware Gaussian/implicit 3D scene representation`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive experiments demonstrate that Uni3R sets a new state of the art across multiple benchmarks, including indomain datasets such as RE10K and ScanNet, as well as the out-of-domain ...
 
 ## Limitation
-3DGS/NeRF 기반 방법은 scene reconstruction 품질, 카메라 포즈, memory/runtime, dynamic scene 처리에 민감하다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Gaussian Splatting, 3D reconstruction, geometry, semantic, alignment, 3D Vision.
+- Our approach leverages a Cross-View Transformer to robustly integrate information across arbitrary multi-view inputs, which then regresses a set of 3D Gaussian primitives endowed with semantic feature fields.
+- Extensive experiments demonstrate that Uni3R sets a new state of the art across multiple benchmarks, including indomain datasets such as RE10K and ScanNet, as well as the out-of-domain ...
+- In this paper, we introduce Uni3R, a novel feed-forward framework that jointly reconstructs a unified 3D scene representation enriched with open-vocabulary semantics, directly from unposed multiview images.
+
+## Abstract Cue
+- Reconstructing and semantically interpreting 3D scenes from sparse 2D views remains a fundamental challenge in computer vision.

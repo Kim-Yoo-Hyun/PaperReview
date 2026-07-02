@@ -3,32 +3,34 @@
 - Year/Venue: 2025 / CVPR
 - Category: Language-Embedded NeRF and Gaussian Fields
 - Tags: Gaussian Splatting, semantic, grounding
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2025/html/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified from primary page
+- Paper link: ./2025/CVPR/2025_CVPR_Chain-of-Semantics-Programming-in-3D-Gaussian-Splatting-Re/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- To address this challenge, we propose a zero-shot neuro-symbolic framework that utilizes a large language model (LLM) as neurosymbolic functions to ground the object within the 3D Gaussian ...
+- The challenge of the 3DVG task lies in understanding fine-grained semantics and spatial relationships within both the utterance and 3D scene.
+- Introduction Some prior works have explored the introduction of 2D information to gain extra semantics [4, 36, 39–41].
 
 ## Core Idea
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- To address this challenge, we propose a zero-shot neuro-symbolic framework that utilizes a large language model (LLM) as neurosymbolic functions to ground the object within the 3D Gaussian ...
+- Notably, our method surpasses current state-of-theart zero-shot methods on the Nr3D dataset.
 
 ## Input / Output
-Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `language-aware Gaussian/implicit 3D scene representation`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- In addition, it outperforms the recent supervised models on the Sr3D dataset.
+- We evaluate our method using two publicly available datasets, Nr3D and Sr3D, achieving accuracies of 60.8% and 91.4%, respectively.
+- While these methods demonstrate strong performance, they often rely on generating synthetic 2D images from the point cloud, using real 2D images, or mapping 3D information onto 2D ...
 
 ## Limitation
-3DGS/NeRF 기반 방법은 scene reconstruction 품질, 카메라 포즈, memory/runtime, dynamic scene 처리에 민감하다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Gaussian Splatting, semantic, grounding.
+- To address this challenge, we propose a zero-shot neuro-symbolic framework that utilizes a large language model (LLM) as neurosymbolic functions to ground the object within the 3D Gaussian ...
+- We evaluate our method using two publicly available datasets, Nr3D and Sr3D, achieving accuracies of 60.8% and 91.4%, respectively.
+- Notably, our method surpasses current state-of-theart zero-shot methods on the Nr3D dataset.
+
+## Abstract Cue
+- 3D Scene Reconstruction Utterance Semantics Parsing Chain of Semantics 3D Vision Grounding (3DVG) is a fundamental research area that enables agents to perceive and interact with the 3D world.

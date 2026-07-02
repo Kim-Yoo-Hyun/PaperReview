@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2026 / RA-L
+- Category: 3D Large Multimodal Models
+- Tags: semantic
+- Paper link: ./2026/RA-L/2026_RA-L_Compact-Object-Level-Representations-with-Open-Vocabulary/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To this end, we propose OpenReLoc, a camera relocalization system designed to provide scene understanding and accurate pose estimation capabilities.
+- Compared to PixLoc, our method This factor explains GoReloc’s poor success rate.
+- Against GoReloc , our method substantially increases the success rate by around 5∼10 times.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Building fail to generalize to long-tail categories and complex scenarios. on this design, a DIOU-based (Distance-IOU) retrieval strategy Recent progress in 2D vision-language foundation models, is also deriv
+- To this end, we propose OpenReLoc, a camera relocalization system designed to provide scene understanding and accurate pose estimation capabilities.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Compared to PixLoc, our method This factor explains GoReloc’s poor success rate.
+- Against GoReloc , our method substantially increases the success rate by around 5∼10 times.
+- CoordiNet Metric 0568 0101 0673 0108 0166 0378 0092 0603 Recall[%]↑ 36 / 6 17 / 3 32 / 8 18 / 4 61 / 21 44 / ...
+- 23.2 / 18.6 43.4 / 35.8 46.8 / 9.4 41.7 / 31.5 27.4 / 21.2 33.4 / 34.2 15.3 / 12.7 25.5 / 22.0 MTE[m]↓ 0.23 / 0.14 ...

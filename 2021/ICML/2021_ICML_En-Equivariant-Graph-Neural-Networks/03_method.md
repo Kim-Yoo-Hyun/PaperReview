@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2021 / ICML
+- Category: Foundations: Equivariance and Geometry
+- Tags: equivariant, graph reasoning, 3D geometry
+- Paper link: ./2021/ICML/2021_ICML_En-Equivariant-Graph-Neural-Networks/paper.pdf
+- Code/Project: https://github.com/vgsatorras/egnn
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We will explain how Graph Autoencoders can benefit from equivariance and we will show how our method outperforms standard GNN autoencoders in the provided datasets.
+- We demonstrate the effectiveness of our method on dynamical systems modelling, representation learning in graph autoencoders and predicting molecular properties.
+- In this experiment section we use our EGNN to build an Equivariant Graph Autoencoder.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- An effective method to restrict neural networks to relevant functions is to exploit the symmetry of problems by enforcing equivariance with respect to transformations from a certain symmetry ...
+- Many problems exhibit 3D translation and rotation symmetries.
+- We will explain how Graph Autoencoders can benefit from equivariance and we will show how our method outperforms standard GNN autoencoders in the provided datasets.
 
 ## 핵심 방법론
-- Task family: geometry-aware equivariant modeling
-- Representation: graph reasoning, 3D geometry
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We will explain how Graph Autoencoders can benefit from equivariance and we will show how our method outperforms standard GNN autoencoders in the provided datasets.
+- In this experiment section we use our EGNN to build an Equivariant Graph Autoencoder.
+- We use n = 8 dimensions for the embedding space.
+- We sampled 5.000 graphs for training, 500 for validation and 500 for test for both datasets.
+- In the following, we report on a similar experiment as above, but instead of using 3.000 training samples we generated a new training partition of E(n) Equivariant Graph ...

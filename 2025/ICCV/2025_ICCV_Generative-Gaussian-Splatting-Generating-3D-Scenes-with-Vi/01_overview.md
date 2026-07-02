@@ -3,32 +3,34 @@
 - Year/Venue: 2025 / ICCV
 - Category: 3D Generative Modeling and Diffusion
 - Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Schwarz_Generative_Gaussian_Splatting_Generating_3D_Scenes_with_Video_Diffusion_Priors_ICCV_2025_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/ICCV/2025_ICCV_Generative-Gaussian-Splatting-Generating-3D-Scenes-with-Vi/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-생성 모델 또는 policy 모델이 3D 구조와 물리 제약을 보존하지 못하면 로봇 실행이나 3D 장면 생성에서 일관성이 깨진다.
+- Introduction Synthesizing consistent and photorealistic 3D scenes is an open problem in computer vision.
+- Video diffusion models generate impressive videos but cannot directly synthesize 3D representations, i.e., lack 3D consistency in the generated sequences.
+- In addition, directly training generative 3D models is challenging due to a lack of 3D training data at scale.
 
 ## Core Idea
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- In this work, we present Generative Gaussian Splatting (GGS) – a novel approach that integrates a 3D representation with a pre-trained latent video diffusion model.
+- However, these works cannot leverage pre-trained video diffusion models, because of their custom network architectures for incorporating the 3D representation.
 
 ## Input / Output
-Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `diffusion-based generation or policy learning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- We evaluate our approach on two common benchmark datasets for scene synthesis, RealEstate10K and ScanNet++, and find that our proposed GGS model significantly improves both the 3D consistency ...
+- In this work, we investigate how 3D representations can be directly integrated with powerful video diffusion priors to improve the consistency of the generated images and thereby the ...
+- One challenge is that state-of-the-art diffusion models
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- diffusion-based generation or policy learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Gaussian Splatting, Diffusion, Generation, 3D Vision.
+- In this work, we present Generative Gaussian Splatting (GGS) – a novel approach that integrates a 3D representation with a pre-trained latent video diffusion model.
+- We evaluate our approach on two common benchmark datasets for scene synthesis, RealEstate10K and ScanNet++, and find that our proposed GGS model significantly improves both the 3D consistency ...
+- One challenge is that state-of-the-art diffusion models
+
+## Abstract Cue
+- Introduction Synthesizing consistent and photorealistic 3D scenes is an open problem in computer vision.

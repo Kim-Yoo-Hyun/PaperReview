@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2025 / 3DV
+- Category: 3D Equivariance, Calibration, and Registration
+- Tags: geometry, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_MASt3R-SfM-a-Fully-Integrated-Solution-for-Unconstrained-S/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this paper, we propose instead to build upon a recently released foundation model for 3D vision that can robustly produce local 3D reconstructions ...
+## Brief Method
+- We note that 14 scenes of T&T are part of MegaDepth , which is used for training the MASt3R checkpoint we used.
+- Our approach compares favorably to existing methods, particularly when the number of input images is low.
+- We use the same grid spacing of δ = 8 pixels for extracting sparse correspondences with fastNN (Sec.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- The presence of outliers, e.g. wrong pixel matches, poses additional challenges and compels existing methods to resort to hypothesis formulation and verification at multiple occasions in the pipeline, ...
+- Since finding the global minimum in such a landscape is too challenging to be done directly, traditional SfM approaches such as COLMAP decomposes the problem as a series ...
+- We note that 14 scenes of T&T are part of MegaDepth , which is used for training the MASt3R checkpoint we used.
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: geometry, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We note that 14 scenes of T&T are part of MegaDepth , which is used for training the MASt3R checkpoint we used.
+- Our approach compares favorably to existing methods, particularly when the number of input images is low.
+- We use the same grid spacing of δ = 8 pixels for extracting sparse correspondences with fastNN (Sec.
+- For the two gradient descents, we use the Adam optimizer with a learning rate of 0.07 (resp.
+- Assuming we use retrieval, we further ablate the scene graph building strategy from the similarity matrix in Tab.

@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: LLM, Robotics, Vision-Language
+- Paper link: ./2024/CVPR/2024_CVPR_ManipLLM-Embodied-Multimodal-Large-Language-Model-for-Obje/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Therefore, we introduce an innovative approach for robot manipulation that leverages the robust reasoning capabilities of Multimodal Large Language Models (MLLMs) to enhance the stability and generalization of ...
+- During inference, our approach utilizes an RGB image and text prompt to predict the end effector’s pose in chain of thoughts.
+- Specifically, we randomly select n positive pixels with an affordance score higher than 0.8 and select n negative pixels with an affordance score lower than 0.2 as training ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Robot manipulation relies on accurately predicting contact points and end-effector directions to ensure successful operation.
+- However, learning-based robot manipulation, trained on a limited category within a simulator, often struggles to achieve generalizability, especially when confronted with extensive categories.
+- Therefore, we introduce an innovative approach for robot manipulation that leverages the robust reasoning capabilities of Multimodal Large Language Models (MLLMs) to enhance the stability and generalization of ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: LLM
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Specifically, we randomly select n positive pixels with an affordance score higher than 0.8 and select n negative pixels with an affordance score lower than 0.2 as training ...
+- In the simulator, when pre-collecting training data, if the manipulation is successful, we record the RGB image and the corresponding end-effector pose, which are used as model input ...
+- 3.1.2 Fine-tuning Tasks Formulation We design a training paradigm to fine-tune the MLLM and stimulate the model to generate interpretable pose predictions for object-centric manipulation.
+- Since we only have a language decoder (LLaMa) instead of a visual decoder, the model is not able to generate an affordance map directly.

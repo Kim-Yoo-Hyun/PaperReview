@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / CVPR
+- Category: 3D Generative Modeling and Diffusion
+- Tags: geometry, semantic, alignment, Diffusion, Generation, 3D Vision
+- Paper link: ./2025/CVPR/2025_CVPR_G3Flow-Generative-3D-Semantic-Flow-for-Pose-aware-and-Gene/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We present G3Flow, a novel framework that constructs real-time semantic flow, a dynamic, object-centric 3D semantic representation by leveraging foundation models.
+- Conclusion In this paper, we introduced G3Flow, a novel framework that leverages foundation models to construct realtime semantic flow for enhanced robotic manipulation.
+- Tool Adjust (G) egory (Shoe Place (G), Dual Shoes Place (G), Diverse Bottles Pick (G)), our method maintains optimal performance, indicating that G3Flow encompasses a genuine semantic understanding ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, these geometrycentric methods, despite their advantages, often lack the crucial semantic understanding, necessary for sophisticated manipulation tasks.
+- By incorporating semantic flow into diffusion policies, extensive experiments across five simulation tasks show that G3Flow consistently outperforms existing approaches, achieving up to 68.3% and 50.1% success rates ...
+- We present G3Flow, a novel framework that constructs real-time semantic flow, a dynamic, object-centric 3D semantic representation by leveraging foundation models.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: geometry, semantic, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Conclusion In this paper, we introduced G3Flow, a novel framework that leverages foundation models to construct realtime semantic flow for enhanced robotic manipulation.
+- Tool Adjust (G) egory (Shoe Place (G), Dual Shoes Place (G), Diverse Bottles Pick (G)), our method maintains optimal performance, indicating that G3Flow encompasses a genuine semantic understanding ...
+- This result confirms the capability of our method to transfer learned operational skills across different object categories. • Scale Variation: In the Diverse Bottles Pick (G) task, G3Flow ...
+- Success rates of G3Flow implemented with different VFMs (our method uses DINOv2) on the Shoe Place (T) task.
+- Looking forward, our method establishes a foundation for semantic - aware robotic manipulation.

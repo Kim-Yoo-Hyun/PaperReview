@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2021 / NeurIPS
+- Category: Foundations: SLAM and Sensor Geometry
+- Tags: SLAM, RGB-D, geometry
+- Paper link: ./2021/NeurIPS/2021_NeurIPS_DROID-SLAM-Deep-Visual-SLAM-for-Monocular-Stereo-and-RGB-D/paper.pdf
+- Code/Project: https://github.com/princeton-vl/DROID-SLAM
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We introduce DROID-SLAM, a new deep learning based SLAM system.
+- DROIDSLAM consists of recurrent iterative updates of camera pose and pixelwise depth through a Dense Bundle Adjustment layer.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- The SLAM problem has been approached from a number of different angles.
+- A key element for accuracy has been full Bundle Adjustment (BA), which jointly optimizes the camera poses and the 3D map in a single optimization problem.
+- We introduce DROID-SLAM, a new deep learning based SLAM system.
 
 ## 핵심 방법론
-- Task family: SLAM, calibration, and geometric consistency
-- Representation: SLAM, geometry
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- AUC (train) AUC (test) BundleFusion ElasticFusion RFusion DVO-SLAM ORB-SLAM2 BAD-SLAM 84.10 89.06 17.37 193.89 156.10 280.05 33.84 34.02 51.94 71.83 104.28 153.47 Ours 340.42 207.79 # successful datasets ...
+- It successfully tracks all 9 sequences while achieving 83% lower ATE than DeepFactors and which succeeds on all videos and 90% lower ATE than DeepV2D .
+- 30 25 20 15 10 5 0 ETH-3D SLAM Benchmark Ours BAD SLAM ORB-SLAM2 DVO-SLAM BundleFusion 0 1 2 3

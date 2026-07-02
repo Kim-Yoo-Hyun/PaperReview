@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2026 / ICML
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model, Robotics, Diffusion
+- Paper link: ./2026/ICML/2026_ICML_Discrete-Diffusion-VLA-Bringing-Discrete-Diffusion-to-Acti/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-Instead, we present Discrete Diffusion VLA that discretizes action chunks and models them with discrete diffusion pattern retaining progressive refinement inside the unified transformer ...
+## Brief Method
+- Instead, we present Discrete Diffusion VLA that discretizes action chunks and models them with discrete diffusion pattern retaining progressive refinement inside the unified transformer backbone.
+- On out-of-distribution tests of LIBERO-Goal, our method exhibits only 0.8% language degradation versus 8.0% of parallel decoding, and 20.4% vision degradation versus 29.0% for continuous diffusion, demonstrating well ...
+- However, prevailing VLAs either generate actions autoregressively in a fixed left-to-right order with poor performance or attach separate diffusion heads outside the backbone that fragments information pathways and ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Continuous diffusion over action chunks (left) versus discrete token decoders: AR (sequential), BERT-style (parallel), and our discrete diffusion with re-masking.
+- Diffusion AR Action Chunk Sequential BERT Discrete Iterative Diffusion Refine Parallel Action Chunk Gen.
+- Instead, we present Discrete Diffusion VLA that discretizes action chunks and models them with discrete diffusion pattern retaining progressive refinement inside the unified transformer backbone.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Out-of-distribution performance on LIBERO-Spatial Method Original Lang Aug Vision Aug OpenVLA-OFT (Discrete) 96.2% 94.6% (↓1.6%) 95.0% (↓1.2%) OpenVLA-OFT (Diffusion) 96.9% 94.3% (↓2.6%) 91.1% (↓5.8%) 97.6% 96.2% (↓1.4%) 96.0% ...
+- This joint evaluation directly tests whether our unified architecture preserves VLM priors while achieving strong action decoding.
+- Tables 2 and 3 reveal a key advantage of our unified architecture in preserving visionlanguage capabilities under distribution shift.
+- Meanwhile, bidirectional attention over action chunks and confidence-based decoding order yield consistent gains over AR decoding as shown above.
+- Original Lang Aug Vision Aug OpenVLA-OFT (Discrete) 95.6% 87.6% (↓8.0%) 73.0% (↓22.6%) OpenVLA-OFT (Diffusion) 96.0% 93.6% (↓2.4%) 67.0% (↓29.0%) OpenVLA-OFT (L1) 97.9% 94.7% (↓3.2%) 74.7% (↓23.2%) Discrete Diffusion ...

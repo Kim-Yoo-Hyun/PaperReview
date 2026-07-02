@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, point cloud, 3D Vision
+- Paper link: ./2026/CVPR/2026_CVPR_GaussianGrow-Geometry-aware-Gaussian-Growing-from-3D-Point/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Our method leverages a text-guided multiview diffusion model for appearance synthesis while constraining novel views to reduce fusion artifacts.
+- For com- pleting the hard-to-observe regions, we propose to iteratively detect the camera pose by observing the largest ungrown regions in point clouds and inpainting them by inpainting ...
+- In this section, we present a comprehensive evaluation of GaussianGrow’s performance across multiple scenarios.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Existing methods have explored predicting point maps as geometric references for inferring Gaussian primitives, while the unreliable estimated geometries may lead to poor generations.
+- 3D Gaussian Splatting has demonstrated superior performance in rendering efficiency and quality, yet the generation of 3D Gaussians still remains a challenge without proper geometric priors.
+- Our method leverages a text-guided multiview diffusion model for appearance synthesis while constraining novel views to reduce fusion artifacts.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Our method leverages a text-guided multiview diffusion model for appearance synthesis while constraining novel views to reduce fusion artifacts.
+- In this section, we present a comprehensive evaluation of GaussianGrow’s performance across multiple scenarios.
+- 18975 We introduce GaussianGrow, a novel approach for generating 3D Gaussians by growing them from readily available point clouds.
+- TriplaneGaussian was adapted by bypassing its point cloud decoder for direct point-to-Gaussian conversion and integrating Stable Diffusion for text guidance.
+- We modified DreamGaussian by replacing its random initialization with point cloud guidance, enabling direct point input.

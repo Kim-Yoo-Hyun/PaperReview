@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / ICRA
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Robotics, Gaussian Splatting
+- Paper link: ./2025/ICRA/2025_ICRA_Gaussian-Splatting-Visual-MPC-for-Granular-Media-Manipulat/paper.pdf
+- Code/Project: not identified from venue audit
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this work, we propose a novel approach that learns a visual dynamics model over Gaussian splatting representations of scenes and leverages this model ...
+## Brief Method
+- In this work, we propose a novel approach that learns a visual dynamics model over Gaussian splatting representations of scenes and leverages this model for manipulating granular media ...
+- Our method enables efficient optimization for complex manipulation tasks on piles of granular media.
+- Manipulating granular materials such as beans, nuts, rice, oats, and other such objects common in daily life remains a challenging problem, so in this paper, we address the ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Manipulating granular materials such as beans, nuts, rice, oats, and other such objects common in daily life remains a challenging problem, so in this paper, we address the ...
+- Third, visually identifying and tracking individual granular particles in a pile is nearly impossible due to their selfsimilarity, which leads to data association problems, and due to the ...
+- In this work, we propose a novel approach that learns a visual dynamics model over Gaussian splatting representations of scenes and leverages this model for manipulating granular media ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

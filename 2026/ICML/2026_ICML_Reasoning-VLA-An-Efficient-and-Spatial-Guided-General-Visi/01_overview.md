@@ -3,33 +3,34 @@
 - Year/Venue: 2026 / ICML
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLA, Vision-Language Model, Robotics, 3D Vision, Reinforcement Learning
-- Authors: Dapeng Zhang, Zhenlong Yuan, Zhangquan Chen, Chih-Ting Liao, Yinda Chen, Fei Shen, Qingguo Zhou, Tat-Seng Chua
-- Paper: https://openreview.net/forum?id=c4iSIrb6Iv
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2026/ICML/2026_ICML_Reasoning-VLA-An-Efficient-and-Spatial-Guided-General-Visi/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- These limitations hinder their generalization ability to new driving scenarios.
+- However, existing VLAs often struggle with achieving efficient inference and generalizing to novel autonomous vehicle configurations and driving scenarios.
+- Building on these advancements, contemporary frameworks in robotic manipulation and autonomous driving increasingly adopt vision–language generative paradigms (e.g., autoregressive or diffusion-based models (Black et al., 2024; Kim et ...
 
 ## Core Idea
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Vision-Language-Action (VLA) models have recently shown strong decision-making capabilities in autonomous driving.
-- Method cue: In this paper, we propose Reasoning-VLA, a general and efficient action-generation VLA framework.
-- Result cue: Vision-Language-Action (VLA) models have recently shown strong decision-making capabilities in autonomous driving.
+- These results indicate that our approach provides significant improvements in open-loop evaluation, highlighting the strong generalization capability of the Reasoning-VLA architecture.
+- In this paper, we propose Reasoning-VLA, a general and efficient action-generation VLA framework.
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `robot manipulation and vision-language-action control`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Leveraging both supervised learning and reinforcement learning fine-tuning, extensive empirical evaluations across multiple benchmarks demonstrate that Reasoning-VLA achieves stateof-the-art performance, strong generalization capability, and the excellent inference speed ...
+- Leveraging large-scale pretrained foundation models, recent approaches such as DriveMOE (Yang et al., 2025) have achieved strong benchmark performance while simultaneously improving interpretability and robustness capabilities in autonomous ...
+- Despite these promising results, se
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: VLA, Vision-Language Model, Robotics, 3D Vision, Reinforcement Learning.
-- 초록에서 확인되는 주요 cue: Vision-Language-Action, VLA, However, VLAs, Reasoning-VLA, The, These, Chain-of-Thought.
+- Leveraging both supervised learning and reinforcement learning fine-tuning, extensive empirical evaluations across multiple benchmarks demonstrate that Reasoning-VLA achieves stateof-the-art performance, strong generalization capability, and the excellent inference speed ...
+- Recently, foundation models—especially large language and vision–language models like CLIP, Qwen2.5-VL, and DeepSeek-V3 (Radford et al., 2021; Bai et al., 2025; Liu et al., 2025)—have shown remarkable generalization ...
+- In this paper, we propose Reasoning-VLA, a general and efficient action-generation VLA framework.
+
+## Abstract Cue
+- as poor scalability, cumulative errors, and limited generalization across hardware and datasets.

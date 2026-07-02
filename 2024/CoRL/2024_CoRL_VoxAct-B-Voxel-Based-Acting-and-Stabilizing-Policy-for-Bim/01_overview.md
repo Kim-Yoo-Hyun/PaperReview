@@ -3,33 +3,33 @@
 - Year/Venue: 2024 / CoRL
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLM, 3D manipulation, bimanual, Robotics
-- Authors: not extracted
-- Paper: https://proceedings.mlr.press/v270/liu25i.html
-- PDF status: downloaded
-- GitHub/Project: https://voxact-b.github.io/
+- Paper link: ./2024/CoRL/2024_CoRL_VoxAct-B-Voxel-Based-Acting-and-Stabilizing-Policy-for-Bim/paper.pdf
+- Code/Project: https://voxact-b.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- This substantially reduces the overall physical dimensions of the areas used to construct a voxel grid, enabling an increase in voxel resolution without incurring computational costs.
+- Prior works leverage large amounts of data and primitive actions to address this problem, but may suffer from sample inefficiency and limited generalization across various tasks.
 
 ## Core Idea
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Bimanual manipulation is critical to many robotics applications.
-- Method cue: To this end, we propose VoxAct-B, a language-conditioned, voxel-based method that leverages Vision Language Models (VLMs) to prioritize key regions within the scene and ...
-- Result cue: In simulation, we show that VoxAct-B outperforms strong baselines on fine-grained bimanual manipulation tasks.
+- This allows our method to learn to map the appropriate acting or stabilizing actions to a given arm during training.
+- During training, the language goal is given in the data, but during evaluation, we use VLMs to determine which language goal, ℓas or ℓsa , to use based ...
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `robot manipulation and vision-language-action control`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- In simulation, we show that VoxAct-B outperforms strong baselines on fine-grained bimanual manipulation tasks.
+- For simulation experiments, we build on top of RLBench , a popular robot manipulation benchmark widely used in prior work, including VoxPoser and PerAct.
+- We adapt the Mobile ALOHA repository for ACT and a CNN-based Diffusion Policy, and we tune their parameters (e.g., chunk size and action horizon) to improve performance.
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- We hope that this inspires future work in asymmetric bimanual manipulation tasks.
 
 ## Contribution
-- robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: VLM, 3D manipulation, bimanual, Robotics.
-- 초록에서 확인되는 주요 cue: Bimanual, Prior, VoxAct-B, Vision, Language, Models, VLMs, This.
+- In simulation, we show that VoxAct-B outperforms strong baselines on fine-grained bimanual manipulation tasks.
+- To this end, we propose VoxAct-B, a language-conditioned, voxel-based method that leverages Vision Language Models (VLMs) to prioritize key regions within the scene and reconstruct a voxel grid.
+- Prior works leverage large amounts of data and primitive actions to address this problem, but may suffer from sample inefficiency and limited generalization across various tasks.
+
+## Abstract Cue
+- : Bimanual manipulation is critical to many robotics applications.

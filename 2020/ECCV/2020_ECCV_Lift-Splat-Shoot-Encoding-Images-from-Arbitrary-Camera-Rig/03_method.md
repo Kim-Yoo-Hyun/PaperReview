@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2020 / ECCV
+- Category: Foundations: 3D Detection and BEV Perception
+- Tags: 3D Vision, BEV, sensor fusion, camera
+- Paper link: ./2020/ECCV/2020_ECCV_Lift-Splat-Shoot-Encoding-Images-from-Arbitrary-Camera-Rig/paper.pdf
+- Code/Project: https://github.com/nv-tlabs/lift-splat-shoot
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In this section, we present our approach for learning bird’s-eye-view representations of scenes from image data captured by an arbitrary camera rig.
+- We propose a new end-to-end architecture that directly extracts a bird’s-eye-view representation of a scene given image data from an arbitrary number of cameras.
+- The core idea behind our approach is to “lift” each image individually into a frustum of features for each camera, then “splat” all frustums into a rasterized bird’s-eyeview ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- For instance, for the problem of 3D object detection from n cameras, one can apply a single-image detector to all input images individually, then rotate and translate each ...
+- On standard bird’seye-view tasks such as object segmentation and map segmentation, our model outperforms all baselines and prior work.
+- In this section, we present our approach for learning bird’s-eye-view representations of scenes from image data captured by an arbitrary camera rig.
 
 ## 핵심 방법론
-- Task family: core 3D geometry and scene representation learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- In this section, we present our approach for learning bird’s-eye-view representations of scenes from image data captured by an arbitrary camera rig.

@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2025 / ICRA
+- Category: Navigation and Embodied AI
+- Tags: Robotics, 3D Vision, Navigation, Graph Reasoning, semantic
+- Paper link: ./2025/ICRA/2025_ICRA_Point2Graph-An-End-To-End-Point-Cloud-Based-3D-Open-Vocabu/paper.pdf
+- Code/Project: not identified from venue audit
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-3D scene graph는 객체와 관계를 구조화하지만 closed vocabulary, annotation cost, geometric relation ambiguity 때문에 실제 로봇 질의에 확장하기 어렵다.
+- To solve this problem, we propose Point2Graph, a novel end-to-end point cloud-based 3D open-vocabulary scene graph generation framework in which the requirement of posed RGB-D image series is ...
+- One of the main challenges for both closed and open vocabulary 3D scene graph generation is the scarcity of largescale 3D-text datasets, especially compared to the abundance of ...
+- Lacking 3D-text pair data leads to poor performance in 3D object and room segmentation and classication.
 
 ## 해결하려는 문제
-- 연구 유형: structured 3D scene graph reasoning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: Current open-vocabulary scene graph generation algorithms highly rely on both 3D scene point cloud data and posed RGB-D images and thus have limited applications ...
+- Our evaluation results show that our framework can outperform the current state-ofthe-art (SOTA) open-vocabulary object and room segmentation and classication algorithm on widely used real-scene datasets.
+- To solve this problem, we propose Point2Graph, a novel end-to-end point cloud-based 3D open-vocabulary scene graph generation framework in which the requirement of posed RGB-D image series is ...
+- The recent success of Large Language Model (LLM) and Visual Language Model (VLM) demonstrates that open-vocabulary capabilities are crucial for 3D scene graphs.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Robotics, 3D Vision, Navigation, Graph Reasoning` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

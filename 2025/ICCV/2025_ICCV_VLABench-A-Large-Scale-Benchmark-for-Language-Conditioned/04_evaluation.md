@@ -1,26 +1,34 @@
 # Evaluation
 
-## Dataset
-Habitat, RLBench, CALVIN, LIBERO, BridgeData, Open X-Embodiment, ManiSkill, Objaverse
+- Year/Venue: 2025 / ICCV
+- Category: Benchmarks and Datasets
+- Tags: VLA, Benchmark, long-horizon
+- Paper link: ./2025/ICCV/2025_ICCV_VLABench-A-Large-Scale-Benchmark-for-Language-Conditioned/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `robot manipulation and vision-language-action control`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- Habitat
+- RLBench
+- CALVIN
+- LIBERO
+- ManiSkill
+- VLABench
 
 ## Metrics
-success rate, task completion, language-conditioned generalization, real/sim transfer, IoU, AP, mAP, SR
+- accuracy
+- SR
+- success rate
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- We demonstrate the superiority of our data framework through comparative experiments.
+- Subsequently, the selected skills generate trajectories using RRT , with quaternion interpolation achieved through spherical linear interpolation.
+- Step 3: The two operation sequences are evaluated using four metrics, which are weighted and summed to produce the final score.
+- We demonstrate the superiority of our data framework through comparative experiments.
+- Subsequently, the selected skills generate trajectories using RRT , with quaternion interpolation achieved through spherical linear interpolation.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- The progress score refers to the completion level of subtasks in a long-horizon task and serves as a softer process supervision metric compared to the success rate.
 
 ## Reproducibility Notes
-- Code/Project: not identified from primary page
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

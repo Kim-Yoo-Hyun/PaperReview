@@ -1,26 +1,31 @@
 # Evaluation
 
-## Dataset
-Replica, RLBench, CALVIN, LIBERO, BridgeData, Open X-Embodiment, OXE, Meta-World, ImageNet, LAION
+- Year/Venue: 2026 / ICLR Poster
+- Category: Benchmarks and Datasets
+- Tags: Robotics, Benchmark
+- Paper link: ./2026/ICLR/2026_ICLR_RobotArena-infty-Scalable-Robot-Benchmarking-via-Real-to-S/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `robot manipulation and vision-language-action control`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- RLBench
+- CALVIN
+- LIBERO
+- Open X-Embodiment
 
 ## Metrics
-success rate, task completion, language-conditioned generalization, real/sim transfer, IoU, AP, mAP, SR
+- mAP
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- The advantage of Figure 3: Automated robot-camera calibraour modular design is long-term upgradability; tion through differentiable rendering of poseeach module can be replaced with stronger modconditioned 3D robot ...
+- We estimate the camera-to-robot transformation using differentiable rendering, shown in Figure 3.
+- Specifically, we first construct a joint angle–conditioned 3D Gaussian model of the robot via differentiable rendering in simulation based on its URDF file, following DR-Robot (Liu et al., ...
+- Given a robot demonstration video annotated with per-frame joint angles, we then render the Gaussian robot model and optimize the camera’s 3D translation and orientation to minimize a ...
+- The advantage of Figure 3: Automated robot-camera calibraour modular design is long-term upgradability; tion through differentiable rendering of poseeach module can be replaced with stronger modconditioned 3D robot ...
+- We estimate the camera-to-robot transformation using differentiable rendering, shown in Figure 3.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- To recover each object’s correct 3D pose, we render 2D image views of the reconstructed 3D mesh and compare them against the 2D object crop using correspondence estimation ...
 
 ## Reproducibility Notes
-- Code/Project: not identified from OpenReview
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

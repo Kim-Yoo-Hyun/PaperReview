@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2022 / ECCV
+- Category: Foundations: 3D Representation Learning
+- Tags: point cloud, 3D Vision
+- Paper link: ./2022/ECCV/2022_ECCV_Point-MAE-Masked-Autoencoders-for-Point-Cloud-Self-supervi/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Inspired by this, we propose a neat scheme of masked autoencoders for point cloud self-supervised learning, addressing the challenges posed by point cloud’s properties, including leakage of location ...
+- We show with our scheme, a simple architecture entirely based on standard Transformers can surpass dedicated Transformer models from supervised learning.
+- Furthermore, our work inspires the feasibility of applying unified architectures from languages and images to the point cloud.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Inspired by this, we propose a neat scheme of masked autoencoders for point cloud self-supervised learning, addressing the challenges posed by point cloud’s properties, including leakage of location ...
+- Inspired by this, we propose a neat scheme of masked autoencoders for point cloud self-supervised learning, addressing the challenges posed by point cloud’s properties, including leakage of location ...
 
 ## 핵심 방법론
-- Task family: core 3D geometry and scene representation learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We follow standard protocols to split ModelNet40 into 9843 instances for the training set and 2468 for the testing set.
+- ModelNet40 consists of 12,311 clean 3D CAD models, covering 40 object categories.
+- Standard random scaling and random translation are applied for data augmentation during training.

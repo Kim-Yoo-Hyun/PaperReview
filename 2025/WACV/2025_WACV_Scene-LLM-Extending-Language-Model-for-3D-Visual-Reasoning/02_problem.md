@@ -1,15 +1,19 @@
 # Problem
 
+- Year/Venue: 2025 / WACV
+- Category: 3D Large Multimodal Models
+- Tags: LLM, 3D visual reasoning, Vision-Language
+- Paper link: ./2025/WACV/2025_WACV_Scene-LLM-Extending-Language-Model-for-3D-Visual-Reasoning/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-VLM/LLM은 강한 semantic prior를 갖지만 3D 위치, 거리, 관점, affordance 같은 metric spatial reasoning에는 취약하다.
+- While existing visuallanguage models (VLMs) have made strides in 2D visual-language understanding, their limited grasp of persistent 3D spatial information often renders them less effective compared to those ...
 
 ## 해결하려는 문제
-- 연구 유형: 3D vision-language spatial reasoning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Our experiments with Scene-LLM demonstrate its strong capabilities in scene captioning, question answering, and interactive planning.
+- In this paper, we introduce Scene-LLM, a 3D-visual-language model (3D-VLM) with large language models (LLMs) as it’s backbone, to address a spectrum of 3D visual understanding and reasoning ...
+- Unique to our approach is the integration of both scene-level and egocentric 3D information with a compact hybrid representation.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `LLM, 3D visual reasoning, Vision-Language` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

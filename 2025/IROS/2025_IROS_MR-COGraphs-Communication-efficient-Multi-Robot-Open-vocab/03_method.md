@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
+- Year/Venue: 2025 / IROS
+- Category: 3D Scene Graphs and Graph Reasoning
+- Tags: Robotics, 3D Vision, Graph Reasoning, semantic
+- Paper link: ./2025/IROS/2025_IROS_MR-COGraphs-Communication-efficient-Multi-Robot-Open-vocab/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To facilitate mapping and query evaluation, we develop a ROS wrapper 1 to extract RGB-D sequences and ground-truth poses from the dataset, transforming them into ROS bag files ...
+- To address this challenge, we develop a method to construct a graph-structured 3D representation called COGraph, where nodes represent objects with semantic features and edges capture their spatial ...
+- E XPERIMENTS In this section, we 1) conduct experimental evaluations comparing our approach with state-of-the-art methods (Section IVA), 2) analyze the open-vocabulary capabilities and design insights of our ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, existing map representations that support open-vocabulary queries often involve large data volumes, which becomes a bottleneck for multi-robot transmission in communication-limited environments.
+- To address this challenge, we develop a method to construct a graph-structured 3D representation called COGraph, where nodes represent objects with semantic features and edges capture their spatial ...
+- To facilitate mapping and query evaluation, we develop a ROS wrapper 1 to extract RGB-D sequences and ground-truth poses from the dataset, transforming them into ROS bag files ...
 
 ## 핵심 방법론
-- Task family: structured 3D scene graph reasoning
-- Representation: 3D Vision, Graph Reasoning, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- To facilitate mapping and query evaluation, we develop a ROS wrapper 1 to extract RGB-D sequences and ground-truth poses from the dataset, transforming them into ROS bag files ...
+- E XPERIMENTS In this section, we 1) conduct experimental evaluations comparing our approach with state-of-the-art methods (Section IVA), 2) analyze the open-vocabulary capabilities and design insights of our ...
+- We also test COGraph-512, a variant of our method without feature compression.
+- 3) Baselines: We compare our approach with ConceptGraphs and HOV-SG .
+- Robj R@1 R@5 TPF(s) Size(MB) ConceptGraphs HOV-SG COGraph-512 COGraphs(ours) 85.7 76.2 85.7 85.7 66.7 47.6 42.9 57.1 76.2 71.4 76.2 66.7 9.0 48.0 0.145 0.140 15.8 141.0 0.0202 ...

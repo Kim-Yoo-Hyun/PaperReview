@@ -1,26 +1,33 @@
 # Evaluation
 
-## Dataset
-OXE, nuScenes, Waymo, KITTI
+- Year/Venue: 2023 / AAAI
+- Category: Foundations: 3D Detection and BEV Perception
+- Tags: depth, 3D Vision
+- Paper link: ./2023/AAAI/2023_AAAI_BEVDepth-Acquisition-of-Reliable-Depth-for-Multi-view-3D-O/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `core 3D geometry and scene representation learning`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- KITTI
+- nuScenes
+- Waymo
 
 ## Metrics
-PSNR, SSIM, LPIPS, ATE, RPE, Chamfer, F-score, pose AUC
+- accuracy
+- mAP
+- NDS
+- AbsRel
+- RMSE
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Then, comprehensive experiments are conducted on BEVDepth to validate the effects of our proposed components.
+- For the ablation study, all experiments are trained for
+- 2020) dataset is a large-scale autonomous driving benchmark containing data from six cameras, one LiDAR, and five radars.
+- Aided by customized Efficient Voxel Pooling and multi-frame mechanism, BEVDepth achieves the new stateof-the-art 60.9% NDS on the challenging nuScenes test set while maintaining high efficiency.
+- Then, comprehensive experiments are conducted on BEVDepth to validate the effects of our proposed components.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- Comparisons with other leading camera 3D detection models are presented in the end.
 
 ## Reproducibility Notes
-- Code/Project: not identified
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

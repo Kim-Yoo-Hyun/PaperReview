@@ -3,32 +3,32 @@
 - Year/Venue: 2023 / ICRA
 - Category: Navigation and Embodied AI
 - Tags: Vision-Language Navigation, semantic map, Robotics
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2210.05714
-- PDF status: downloaded
-- GitHub/Project: https://vlmaps.github.io/
+- Paper link: ./2023/ICRA/2023_ICRA_VLMaps-Visual-Language-Maps-for-Robot-Navigation/paper.pdf
+- Code/Project: https://vlmaps.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-실내/실외 이동 에이전트는 언어 목표와 3D 공간 구조를 연결해야 하며, partial observation과 탐색-활용 균형 때문에 단순 2D 인식만으로는 안정적이지 않다.
+- To address this problem, we propose VLMaps, a spatial map representation that directly fuses pretrained visual-language features with a 3D reconstruction of the physical world.
+- Specifically, when combined with large language models (LLMs), VLMaps can be used to (i) translate natural language commands into a sequence of open-vocabulary navigation goals (which, beyond prior ...
+- While this is useful for matching images to natural language descriptions of object goals, it remains disjoint from the process of mapping the environment, so that it lacks ...
 
 ## Core Idea
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- To address this problem, we propose VLMaps, a spatial map representation that directly fuses pretrained visual-language features with a 3D reconstruction of the physical world.
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `embodied navigation and spatial planning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive experiments carried out in simulated and real-world environments show that VLMaps enable navigation according to more complex language instructions than existing methods.
+- Meanwhile, recent works show that visual-language models (VLMs) , pretrained on Internet-scale data (e.g., image captions) can be used out-of-the-box to ground language to the visual observations of ...
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- embodied navigation and spatial planning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Vision-Language Navigation, semantic map, Robotics.
+- To address this problem, we propose VLMaps, a spatial map representation that directly fuses pretrained visual-language features with a 3D reconstruction of the physical world.
+- Extensive experiments carried out in simulated and real-world environments show that VLMaps enable navigation according to more complex language instructions than existing methods.
+- Meanwhile, recent works show that visual-language models (VLMs) , pretrained on Internet-scale data (e.g., image captions) can be used out-of-the-box to ground language to the visual observations of ...
+
+## Abstract Cue
+- — Grounding language to the visual observations of a navigating agent can be performed using off-the-shelf visuallanguage models pretrained on Internet-scale data (e.g., image captions).

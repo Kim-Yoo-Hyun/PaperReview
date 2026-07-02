@@ -3,33 +3,34 @@
 - Year/Venue: 2026 / ICML
 - Category: 3D Scene Representations and Neural Fields
 - Tags: Gaussian Splatting, 3D Vision
-- Authors: Rui Song, Tianhui Cai, Markus Gross, Yun Zhang, Walter Zimmer, Zhiyu Huang, Olaf Wysocki, Jiaqi Ma
-- Paper: https://openreview.net/forum?id=ebt72acjt6
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2026/ICML/2026_ICML_EnerGS-Energy-Based-Gaussian-Splatting-under-Partial-Geome/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- In such sparse-view regimes, the reconstruction problem becomes inherently ill-posed.
+- To address this challenge, we model partially observable geometry as a continuous energy field induced by geometric evidence and propose EnerGS.
+- 3D Gaussian Splatting (3DGS) has been widely adopted for scene reconstruction, where training inherently constitutes a highly coupled and nonconvex optimization problem.
 
 ## Core Idea
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 3D Gaussian Splatting (3DGS) has been widely adopted for scene reconstruction, where training inherently constitutes a highly coupled and non-convex optimization problem.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: Extensive experiments on large-scale outdoor scenes demonstrate that, under both sparse multi-view and monocular settings, EnerGS consistently improves photometric quality and geometric stability, while ...
+- Our method renders significantly finer details in these areas compared to baselines, aligning with our theoretical expectation that the adaptive energy field facilitates robust reconstruction in sensor blind ...
+- Without sufficient constraints, the optimization often gravitates towards geometrically invalid local minima, spawning floaters or near-camera artifacts to overfit training views [46, 29 Photometry Waymo Open Dataset Geometry ...
 
 ## Input / Output
-Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `language-aware Gaussian/implicit 3D scene representation`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive experiments on large-scale outdoor scenes demonstrate that, under both sparse multi-view and monocular settings, EnerGS consistently improves photometric quality and geometric stability, while effectively mitigating overfitting during ...
+- EnerGS addresses this limitation by partitioning space into occupied, free, and unknown regions and guiding the spatial distribution of Gaussians with a geometric energy field, enabling more stable ...
+- Accurate geometric priors can significantly improve Gaussian initialization and optimization (e.g., via point clouds from LiDAR).
 
 ## Limitation
-3DGS/NeRF 기반 방법은 scene reconstruction 품질, 카메라 포즈, memory/runtime, dynamic scene 처리에 민감하다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Gaussian Splatting, 3D Vision.
-- 초록에서 확인되는 주요 cue: Gaussian, Splatting, Recent, LiDAR, However, EnerGS, Rather, Extensive.
+- Extensive experiments on large-scale outdoor scenes demonstrate that, under both sparse multi-view and monocular settings, EnerGS consistently improves photometric quality and geometric stability, while effectively mitigating overfitting during ...
+- 3D Gaussian Splatting (3DGS) has been widely adopted for scene reconstruction, where training inherently constitutes a highly coupled and nonconvex optimization problem.
+- EnerGS addresses this limitation by partitioning space into occupied, free, and unknown regions and guiding the spatial distribution of Gaussians with a geometric energy field, enabling more stable ...
+
+## Abstract Cue
+- 3D Gaussian Splatting (3DGS) has been widely adopted for scene reconstruction, where training inherently constitutes a highly coupled and nonconvex optimization problem.

@@ -1,26 +1,29 @@
 # Evaluation
 
-## Dataset
-ScanNet, S3DIS, OXE, nuScenes, Waymo, COCO, ImageNet
+- Year/Venue: 2025 / WACV
+- Category: Open-Vocabulary 3D Mapping
+- Tags: open-vocabulary, semantic, alignment
+- Paper link: ./2025/WACV/2025_WACV_AIDE-Improving-3D-Open-Vocabulary-Semantic-Segmentation-by/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `open-vocabulary 3D semantic understanding`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- ImageNet
+- ScanNet
+- S3DIS
+- nuScenes
 
 ## Metrics
-mIoU, AP, mAP, open-vocabulary accuracy, long-tail performance, IoU, SR, SPL
+- mIoU
+- IoU
+- mAP
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Extensive experiments show that A I D E outperforms previous methods by a large margin on three representative benchmarks, demonstrating its effectiveness.
+- In this paper, to address these issues and improve generalization performance, we propose an AlIgned 3D Open-Vocabulary S Emantic Segmentation framework, called A I D E, with two ...
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Reproducibility Notes
-- Code/Project: not identified from primary page
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

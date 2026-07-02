@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: Navigation and Embodied AI
+- Tags: 3D Vision, Vision-Language, Planning, Navigation
+- Paper link: ./2026/CVPR/2026_CVPR_D3D-VLP-Dynamic-3D-Vision-Language-Planning-Model-for-Embo/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To overcome data scarcity, we propose the Synergistic Learning from Fragmented Supervision (SLFS) strategy for effective training on a large-scale hybrid dataset.
+- To bridge this gap, we propose the Dynamic 3D Vision-Language-Planning Model (D3DVLP).
+- This result strongly suggests that our 3D CoT and unified architecture are the main contributors to the SOTA performance, and not merely from the strong 3D perception backbone.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Introduction the ability to output precise target locations and introduces limitations for tasks that require long-horizon planning or handling multiple targets.
+- End-to-End Model Instruction Embodied agents face a critical dilemma that end-to-end models lack interpretability and explicit 3D reasoning, while modular systems ignore cross-component interdependencies and synergies.
+- To overcome data scarcity, we propose the Synergistic Learning from Fragmented Supervision (SLFS) strategy for effective training on a large-scale hybrid dataset.
 
 ## 핵심 방법론
-- Task family: embodied navigation and spatial planning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- To overcome data scarcity, we propose the Synergistic Learning from Fragmented Supervision (SLFS) strategy for effective training on a large-scale hybrid dataset.
+- This result strongly suggests that our 3D CoT and unified architecture are the main contributors to the SOTA performance, and not merely from the strong 3D perception backbone.
+- This task consists of sub-tasks including navigation, grounding and grasping the target, and 32470 Acknowledgment.
+- Training only on samples with planning annotations (w/ Tplan , types 1–3 in Table 1) leads to a large performance drop (SR 61.3% → 46.2% on R2R-CE; t-ACC ...
+- Synergistic Learning (SLFS) and Training Data.

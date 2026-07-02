@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2025 / ICML poster
+- Category: 3D Representation Learning and Foundation Models
+- Tags: point cloud, 3D Vision
+- Paper link: ./2025/ICML/2025_ICML_GAPrompt-Geometry-Aware-Point-Cloud-Prompt-for-3D-Vision-M/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address this challenge, we propose a novel Geometry-Aware Point Cloud Prompt (GAPrompt) that leverages geometric cues to enhance the adaptability of 3D vision ...
+## Brief Method
+- To address this challenge, we propose a novel Geometry-Aware Point Cloud Prompt (GAPrompt) that leverages geometric cues to enhance the adaptability of 3D vision models.
+- Additionally, we present a Point Shift Prompter designed to extract global shape information from the point cloud, enabling instance-specific geometric adjustments at the input level.
+- First, we introduce a Point Prompt that serves as an auxiliary input alongside the original point cloud, explicitly guiding the model to capture fine-grained geometric details.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To address this challenge, we propose a novel Geometry-Aware Point Cloud Prompt (GAPrompt) that leverages geometric cues to enhance the adaptability of 3D vision models.
+- Our GAPrompt compares to full fine-tuning and existing PEFT methods.
+- To address this challenge, we propose a novel Geometry-Aware Point Cloud Prompt (GAPrompt) that leverages geometric cues to enhance the adaptability of 3D vision models.
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Reference Param.(M) ↓ ScanObjectNN FLOPs(G) ↓ OBJ BG ModelNet40 OBJ ONLY PB T50 RS Acc. (%) ↑ 85.54 88.12 89.30 88.29 88.81 93.12 96.60 93.29 78.79 83.07 84.60 ...
+- While existing methods often struggle to capture fine-grained geometric features due to their token-level adaptation constraints, our Point Prompt and Point Shift Prompter mechanisms directly modulate hi in ...
+- 18, enabling precise latent space adjustments at the point level.
+- This fundamental difference in operational granularity contributes to enhanced geometric feature representation and more effective model adaptation for point cloud models.
+- FEMAE (Zha et al., 2024) as baselines.

@@ -3,33 +3,34 @@
 - Year/Venue: 2025 / 3DV
 - Category: 3D Scene Representations and Neural Fields
 - Tags: Gaussian Splatting, 3D Vision
-- Authors: Liyuan Zhu, Yue Li, Erik Sandström, Shengyu Huang, Konrad Schindler, Iro Armeni
-- Paper: https://3dvconf.github.io/2025/accepted-papers/
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/3DV/2025_3DV_LoopSplat-Loop-Closure-by-Registering-3D-Gaussian-Splats/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- However, existing 3DGS-based methods fail to address the global consistency of the scene via loop closure and/or global bundle adjustment.
+- Existing methods can be split into two categories, decoupled and coupled, where decoupled methods do not leverage the dense map for the tracking task, while the coupled methods ...
+- On the other hand, all coupled 3DGS SLAM methods lack strategies for achieving global consistency on the map and the poses, which leads to an accumulation of pose ...
 
 ## Core Idea
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Simultaneous Localization and Mapping (SLAM) based on 3D Gaussian Splats (3DGS) has recently shown promise towards more accurate, dense 3D scene maps.
-- Method cue: To this end, we propose LoopSplat, which takes RGB-D images as input and performs dense mapping with 3DGS submaps and frame-to-model tracking.
-- Result cue: Simultaneous Localization and Mapping (SLAM) based on 3D Gaussian Splats (3DGS) has recently shown promise towards more accurate, dense 3D scene maps.
+- To this end, we propose LoopSplat, which takes RGB-D images as input and performs dense mapping with 3DGS submaps and frame-to-model tracking.
+- We use the same RGB-D sequences as .
 
 ## Input / Output
-Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `language-aware Gaussian/implicit 3D scene representation`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- It uses a robust pose graph optimization formulation and rigidly aligns the submaps to achieve global consistency.
+- LoopSplat triggers loop closure online and computes relative loop edge constraints between submaps directly via 3DGS registration, leading to improvements in efficiency and accuracy over traditional global-to-local point ...
+- Evaluation on the synthetic Replica and real-world TUM-RGBD, ScanNet, and ScanNet++ datasets demonstrates competitive or superior tracking, mapping, and rendering compared to existing methods for dense RGB-D SLAM.
 
 ## Limitation
-3DGS/NeRF 기반 방법은 scene reconstruction 품질, 카메라 포즈, memory/runtime, dynamic scene 처리에 민감하다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Gaussian Splatting, 3D Vision.
-- 초록에서 확인되는 주요 cue: Simultaneous, Localization, Mapping, SLAM, Gaussian, Splats, However, LoopSplat.
+- Among the recent methods that enforce global consistency via loop closure and/or global bundle adjustment (BA), GO-SLAM requires costly retraining of the hash grid features to de- Simultaneous ...
+- To this end, we propose LoopSplat, which takes RGB-D images as input and performs dense mapping with 3DGS submaps and frame-to-model tracking.
+- Evaluation on the synthetic Replica and real-world TUM-RGBD, ScanNet, and ScanNet++ datasets demonstrates competitive or superior tracking, mapping, and rendering compared to existing methods for dense RGB-D SLAM.
+
+## Abstract Cue
+- Introduction Dense Simultaneous Localization and Mapping (SLAM) with RGB-D cameras has seen steady progress throughout the years from traditional approaches to neural implicit methods and recent methods that employ 3D Gaussians as the scene representation .

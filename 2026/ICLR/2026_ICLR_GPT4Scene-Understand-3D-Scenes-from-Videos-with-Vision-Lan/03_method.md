@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: 3D Large Multimodal Models
+- Tags: Vision-Language Model, 3D Vision
+- Paper link: ./2026/ICLR/2026_ICLR_GPT4Scene-Understand-3D-Scenes-from-Videos-with-Vision-Lan/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-However, we propose exploring a purely vision-based solution inspired by human perception, which merely relies on visual cues for 3D spatial understanding.
+## Brief Method
+- We propose a novel GPT Score for 3D QA assessment, using the state-of-the-art 3D LLM Chat-scene Huang et al. (2024a) as the baseline.
+- While training is fundamental, the inference components provide a further enhancement, pushing the model to its peak performance when combined.
+- This study clearly validates the dual effectiveness of the GPT4Scene framework in both empowering the model through training and enhancing its capabilities at inference.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- We propose a novel GPT Score for 3D QA assessment, using the state-of-the-art 3D LLM Chat-scene Huang et al. (2024a) as the baseline.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We propose a novel GPT Score for 3D QA assessment, using the state-of-the-art 3D LLM Chat-scene Huang et al. (2024a) as the baseline.
+- While training is fundamental, the inference components provide a further enhancement, pushing the model to its peak performance when combined.
+- This study clearly validates the dual effectiveness of the GPT4Scene framework in both empowering the model through training and enhancing its capabilities at inference.
+- The effectiveness during training and inference.
+- Point Encoder Vision Encoder ✓ ✓ ✓ ✓ ScanQA (val) SQA3D (val) BLEU-1 BLEU-4 METEOR ROUGE CIDEr EM-1 EM-R1 ✗ ✗ ✗ ✗ 30.2 30.5 - 10.1 11.2 ...

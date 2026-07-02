@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / CVPR
+- Category: 3D Generative Modeling and Diffusion
+- Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
+- Paper link: ./2025/CVPR/2025_CVPR_DIFIX3D+-Improving-3D-Reconstructions-with-Single-Step-Dif/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In this work, we introduce D IFIX 3D+, a novel pipeline designed to enhance 3D reconstruction and novel-view synthesis through single-step diffusion models.
+- At the core of our approach is D IFIX, a single-step image diffusion model trained to enhance and remove artifacts in rendered novel views caused by underconstrained regions ...
+- First, it is used during the reconstruction phase to clean up pseudo-training views that */ PSNR↑ Nerfbusters Dataset SSIM↑ LPIPS↓ FID↓ PSNR↑ DL3DV Dataset SSIM↑ LPIPS↓ FID↓ Nerfbusters ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Neural Radiance Fields and 3D Gaussian Splatting have revolutionized 3D reconstruction and novel-view synthesis task.
+- However, achieving photorealistic rendering from extreme novel viewpoints remains challenging, as artifacts persist across representations.
+- In this work, we introduce D IFIX 3D+, a novel pipeline designed to enhance 3D reconstruction and novel-view synthesis through single-step diffusion models.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Our method outperforms all comparison methods by a signifi- D IFIX training.
+- We use the gsplat library2 for 3DGS-based experiments and the official implementation for all other methods and baselines. cant margin across all metrics.
+- We partition each scene into a set of reference views used during training and evaluate on the left-out target views.
+- We also compare to Nerfbusters , which uses a 3D diffusion model to remove artifacts from NeRF1 , GANeRF , which train per-scene GAN that is used to ...

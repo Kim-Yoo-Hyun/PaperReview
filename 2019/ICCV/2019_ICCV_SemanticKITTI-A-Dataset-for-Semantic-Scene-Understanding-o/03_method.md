@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2019 / ICCV
+- Category: Benchmarks and Datasets
+- Tags: 3D Vision, LiDAR, semantic, Dataset
+- Paper link: ./2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/paper.pdf
+- Code/Project: http://semantic-kitti.org/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose three benchmark tasks based on this dataset: (i) semantic segmentation of point clouds using a single scan, (ii) semantic segmentation using multiple past scans, and (iii) ...
+- In this paper, we introduce a large dataset to propel research on laser-based semantic segmentation.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Despite the relevance of semantic scene understanding for this application, there is a lack of a large dataset for this task which is based on an automotive LiDAR.
+- Complementary sensor modalities enable to cope with deficits or failures of particular sensors.
+- We propose three benchmark tasks based on this dataset: (i) semantic segmentation of point clouds using a single scan, (ii) semantic segmentation using multiple past scans, and (iii) ...
 
 ## 핵심 방법론
-- Task family: open-vocabulary 3D semantic understanding
-- Representation: 3D Vision, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- mIoU road sidewalk parking other-ground building car truck bicycle motorcycle other-vehicle vegetation trunk terrain person bicyclist motorcyclist fence pole traffic sign PointNet SPGraph SPLATNet PointNet++ SqueezeSeg SqueezeSegV2 TangentConv ...
+- All methods were trained on sequences 00 to 10, except for sequence 08 which is used as validation set.
+- PointNet PointNet++ SPGraph SPLATNet TangentConv SqueezeSeg SqueezeSegV2 DarkNet21Seg DarkNet53Seg Approach PointNet PointNet++ SPGraph TangentConv SPLATNet SqueezeSeg SqueezeSegV2 DarkNet21Seg DarkNet53Seg

@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2025 / CoRL
+- Category: Navigation and Embodied AI
+- Tags: VLM, Navigation, Benchmark
+- Paper link: ./2025/CoRL/2025_CoRL_SocialNav-SUB-Benchmarking-VLMs-for-Scene-Understanding-in/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-실내/실외 이동 에이전트는 언어 목표와 3D 공간 구조를 연결해야 하며, partial observation과 탐색-활용 균형 때문에 단순 2D 인식만으로는 안정적이지 않다.
+- Existing evaluations have offered only partial assessments , often focusing on controlled settings or lacking temporal components, leading to an incomplete picture of how effectively large VLMs can ...
+- By bridging the gap between VLM capabilities and the challenges of social robot navigation, our work provides a foundation for advancing the use of VLMs for social robot ...
+- While some recent works have explored the use of VLMs in social robot navigation, no existing work systematically evaluates their ability to meet these necessary conditions.
 
 ## 해결하려는 문제
-- 연구 유형: embodied navigation and spatial planning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: Robot navigation in dynamic, human-centered environments requires socially-compliant decisions grounded in robust scene understanding, including spatiotemporal awareness and the ability to interpret human intentions.
+- In this paper, we introduce the Social Navigation Scene Understanding Benchmark (SocialNav-SUB), a Visual Question Answering (VQA) dataset and benchmark designed to evaluate VLMs for scene understanding in ...
+- Through experiments with state-of-the-art VLMs, we find that while the best-performing VLM achieves an encouraging probability of agreeing with human answers, it still underperforms simpler rule-based approach and ...
+- While some recent works have explored the use of VLMs in social robot navigation, no existing work systematically evaluates their ability to meet these necessary conditions.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `VLM, Navigation, Benchmark` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- Existing evaluations have offered only partial assessments , often focusing on controlled settings or lacking temporal components, leading to an incomplete picture of how effectively large VLMs can ...
+- By bridging the gap between VLM capabilities and the challenges of social robot navigation, our work provides a foundation for advancing the use of VLMs for social robot ...
+- In light of these limitations, it remains essential to systematically evaluate whether VLMs can robustly handle what we consider as three critical dimensions of social robot navigation: (1) ...

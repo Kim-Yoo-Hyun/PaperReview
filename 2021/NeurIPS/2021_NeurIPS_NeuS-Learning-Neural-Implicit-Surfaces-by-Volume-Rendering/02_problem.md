@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2021 / NeurIPS
+- Category: Foundations: 3D Scene Representations
+- Tags: 3D Vision, NeRF, surface reconstruction, geometry
+- Paper link: ./2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering/paper.pdf
+- Code/Project: https://lingjie0206.github.io/papers/NeuS/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Reconstructing surfaces from multi-view images is a fundamental problem in computer vision and computer graphics.
+- The cause of this limitation is that the surface rendering method used in IDR only considers a single surface intersection point for each ray.
+- 3D reconstruction with neural implicit representations has recently become a highly promising alternative to classical reconstruction approaches due to its high reconstruction quality and its potential to reconstruct ...
 
 ## 해결하려는 문제
-- 연구 유형: core 3D geometry and scene representation learning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Experiments on the DTU dataset and the BlendedMVS dataset show that NeuS outperforms the state-of-the-arts in high-quality surface reconstruction, especially for objects and scenes with complex structures and ...
+- In NeuS, we propose to represent a surface as the zero-level set of a signed distance function (SDF) and develop a new volume rendering method to train a ...
+- We present a novel neural surface reconstruction method, called NeuS, for reconstructing objects and scenes with high fidelity from 2D image inputs.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `3D Vision, NeRF, surface reconstruction, geometry` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- Reconstructing surfaces from multi-view images is a fundamental problem in computer vision and computer graphics.
+- The cause of this limitation is that the surface rendering method used in IDR only considers a single surface intersection point for each ray.
+- 3D reconstruction with neural implicit representations has recently become a highly promising alternative to classical reconstruction approaches due to its high reconstruction quality and its potential to reconstruct ...

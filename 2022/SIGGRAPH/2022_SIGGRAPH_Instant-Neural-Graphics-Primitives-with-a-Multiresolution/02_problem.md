@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2022 / SIGGRAPH
+- Category: Foundations: 3D Scene Representations
+- Tags: NeRF, 3D Vision, representation, efficiency
+- Paper link: ./2022/SIGGRAPH/2022_SIGGRAPH_Instant-Neural-Graphics-Primitives-with-a-Multiresolution/paper.pdf
+- Code/Project: https://nvlabs.github.io/instant-ngp/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Unlike prior work, no structural updates to the data structure are needed at any point during training. • Efficiency: our hash table lookups are O (1) and do ...
+- However, such data structures rely on heuristics and structural modifications (such as pruning, splitting, or merging) that may complicate the training process, limit the method to a specific ...
+- The hash tables thus automatically prioritize the sparse areas with the most important fine scale detail.
 
 ## 해결하려는 문제
-- 연구 유형: core 3D geometry and scene representation learning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `NeRF, 3D Vision, representation, efficiency` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- Unlike prior work, no structural updates to the data structure are needed at any point during training. • Efficiency: our hash table lookups are O (1) and do ...
+- However, such data structures rely on heuristics and structural modifications (such as pruning, splitting, or merging) that may complicate the training process, limit the method to a specific ...
+- The hash tables thus automatically prioritize the sparse areas with the most important fine scale detail.

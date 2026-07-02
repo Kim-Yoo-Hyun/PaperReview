@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Generative Modeling and Diffusion
+- Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
+- Paper link: ./2025/ICCV/2025_ICCV_A-Lesson-in-Splats-Teacher-Guided-Diffusion-for-3D-Gaussia/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We present a novel framework for training 3D imageconditioned diffusion models using only 2D supervision.
+- Our approach leverages suboptimal predictions from a deterministic imageto-3D model—acting as a "teacher"—to generate noisy 3D inputs, enabling effective 3D diffusion training without requiring full 3D ground truth.
+- To address this, we propose leveraging sparse-view supervision as a scalable alternative.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- First, it is an ill-posed problem because different 3D shapes can produce identical 2D projections.
+- A key challenge in training 3D diffusion models with 2D supervi- sion is that the standard training paradigm requires both the denoising process and supervision to be in ...
+- We present a novel framework for training 3D imageconditioned diffusion models using only 2D supervision.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: Gaussian Splatting, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 1-view Chairs PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ↓ SRN CodeNeRF FE-NVS ViewsetDiff w/o D ViewsetDiff w D 22.25 23.80 22.83 23.21 23.29 ...

@@ -1,26 +1,25 @@
 # Evaluation
 
-## Dataset
-Replica, OXE, KITTI
+- Year/Venue: 2025 / NeurIPS poster
+- Category: 3D Equivariance, Calibration, and Registration
+- Tags: geometry, sensor fusion, LiDAR, point cloud, 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_GeGS-PCR-Fast-and-Robust-Color-3D-Point-Cloud-Registration/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `3D reconstruction, calibration, and geometric consistency`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- KITTI
 
 ## Metrics
-PSNR, SSIM, LPIPS, ATE, RPE, Chamfer, F-score, pose AUC
+- accuracy
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- To validate the performance of the GeGS-PCR model, we evaluate it on the indoor benchmarks Color3DMatch (C3DM) and Color3DLoMatch (C3DLM), as well as our colorized outdoor ColorKitti (The ...
+- Our method achieves state-of-the-art performance with Registration Recall at 99.9%, Relative Rotation Error as low as 0.013, and Relative Translation Error as low as 0.024, improving precision by ...
+- Additionally, fast differentiable rendering is utilized to refine the registration process, leading to improved convergence.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: Additionally, fast differentiable rendering is utilized to refine the registration process, leading to improved convergence.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Reproducibility Notes
-- Code/Project: not identified
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

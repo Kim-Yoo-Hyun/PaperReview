@@ -1,20 +1,35 @@
 # Insights
 
-## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+## 이 논문에서 가져갈 핵심 개념
+- 핵심 방법 단서: To address these challenges, we present a unified framework for enhancing 3D spatial reasoning in pre-trained VLMs without modifying their architecture.
+- 출발 문제 단서: To address these challenges, we propose a dual approach for enhancing 3D spatial reasoning in pre-trained VLMs, without modifying their underlying architecture.
+- 주장된 효과 단서: Extensive experiments across multiple benchmarks demonstrate the individual and combined effectiveness of our prompting and fine-tuning strategies, and yield insights that may inspire future research on visual-spatial understanding.
 
-## Strength
-- `3D vision-language spatial reasoning` 문제를 3D geometry와 language/action prior를 함께 쓰는 방향으로 밀어붙인다.
-- 사용자의 연구 키워드 중 `Vision-Language Model, 3D Vision`와 직접적으로 연결된다.
+## 내 연구 방향에서 어떻게 활용할 수 있나
+- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
+- 3D observation을 language model이 다룰 수 있는 token/memory/query interface로 바꾸는 방식을 spatial reasoning과 embodied planning에 사용할 수 있다.
+- LLM/VLM의 commonsense를 쓰되, 3D geometry가 제공하는 metric constraint로 hallucination을 제어하는 방향이 중요하다.
 
-## Paper Claim
-- 논문의 중심 claim은 기존 2D-only, closed-set, 또는 task-specific 접근보다 더 일반화 가능한 3D-aware representation/policy/reasoning을 제공한다는 것이다.
-- Abstract result cue: Extensive experiments across multiple benchmarks demonstrate the individual and combined effectiveness of our prompting and fine-tuning strategies, and yield insights that may inspire future ...
+## 이 논문이 끝난 지점
+- 논문이 도달한 지점: Extensive experiments across multiple benchmarks demonstrate the individual and combined effectiveness of our prompting and fine-tuning strategies, and yield insights that may inspire future research on visual-spatial understanding.
+- 3D QA/reasoning 성능 이후에도 metric grounding, benchmark leakage, embodied action validation은 별도 검증이 필요하다.
 
-## Future Work
-- dynamic scene, partial observation, sensor noise, cross-embodiment transfer, real-time inference, safety-aware planning을 추가 검증하는 것이 중요하다.
-- 3D scene graph/semantic Gaussian/SLAM map을 VLA policy의 persistent memory로 연결하는 방향이 유망하다.
+## 다음 연구 질문
+- LLM이 답한 spatial reasoning이 실제 3D metric relation과 일치하는지 어떻게 자동 검증할 수 있는가?
+- 3D scene token과 language token 사이 alignment를 dense annotation 없이 학습할 수 있는가?
+- reasoning output을 robot planner/action policy로 넘길 때 필요한 intermediate representation은 무엇인가?
 
-## 내 관점
-- 이 논문은 `3D Large Multimodal Models` 축에서 읽어야 한다.
-- 후속 연구 아이디어: language-grounded 3D memory를 만들고, robot policy가 이를 action feasibility와 uncertainty까지 포함해 조회하도록 설계한다.
+## 실험으로 확인할 방향
+- 논문 내 evaluation 단서: ScanNet, 3RScan, Objaverse, HM3D, SQA3D / BLEU, accuracy, mAP
+- 내 연구 확장 benchmark 후보: ScanNet, SQA3D, EmbodiedScan, Matterport3D
+- 내 연구 확장 metric 후보: accuracy, mIoU, grounding accuracy, task success
+- 검증 초점: 3D spatial reasoning, answer grounding, embodied task transfer를 확인한다.
+
+## 주의할 점
+- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
+- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+
+## 근거가 되는 논문 단서
+- Problem cue: To address these challenges, we propose a dual approach for enhancing 3D spatial reasoning in pre-trained VLMs, without modifying their underlying architecture.
+- Method cue: To address these challenges, we present a unified framework for enhancing 3D spatial reasoning in pre-trained VLMs without modifying their architecture.
+- Result cue: Extensive experiments across multiple benchmarks demonstrate the individual and combined effectiveness of our prompting and fine-tuning strategies, and yield insights that may inspire future research on visual-spatial understanding.

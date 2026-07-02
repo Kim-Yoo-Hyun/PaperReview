@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, 3D-2D alignment, Robotics
+- Paper link: ./2026/CVPR/2026_CVPR_Localizing-Structuring-and-Rendering-Bridging-3D-and-2D-Vi/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We introduce DiffRender-VLA, a differentiable rendering–based framework that bridges 3D and 2D VisionLanguage-Action models through gradient-consistent visual mediation.
+- For gripper state, we use a binary classification head: Qgrip = hgrip (MaxPool(Zfused )), g = arg max Qgrip (7) The complete action is a = (p, r, ...
+- Architecture: Our spatial reasoning module augments the VLA backbone with a voxel-based encoder: (1) Multiview RGB-D observations are fused into point clouds and voxelized into a 503 grid; ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Introduction Robotic manipulation in complex 3D environments remains a central challenge in artificial intelligence and robotics.
+- The key difficulty lies in coupling geometric reasoning with semantic perception—robots must not only reason about 3D spatial structures but also interpret visual cues in an interpretable, image-centric ...
+- We introduce DiffRender-VLA, a differentiable rendering–based framework that bridges 3D and 2D VisionLanguage-Action models through gradient-consistent visual mediation.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA, 3D-2D alignment
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- For gripper state, we use a binary classification head: Qgrip = hgrip (MaxPool(Zfused )), g = arg max Qgrip (7) The complete action is a = (p, r, ...
+- Architecture: Our spatial reasoning module augments the VLA backbone with a voxel-based encoder: (1) Multiview RGB-D observations are fused into point clouds and voxelized into a 503 grid; ...
+- Clutter & Precision Tasks Put Cupboard Close Jar Open Drawer Put Safe Turn Tap RT-2 UniVLA OpenVLA-OFT VLA-adapter SmolVLA Pi0 TraceVLA 61.5 74.2 67.8 79.6 71.3 73.8 75.9 ...

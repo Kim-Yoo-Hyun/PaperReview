@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2026 / CVPR
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Gaussian Splatting, referring segmentation, language
+- Paper link: ./2026/CVPR/2026_CVPR_LangRef3DGS-Natural-Language-Guided-3D-Referential-Segment/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- Despite significant progress in 3D semantic segmentation, existing methods remain constrained by several inherent limitations.
+- These limitations originate from two intertwined factors.
+- Unsupervised or self-supervised approaches attempt to mitigate this issue by leveraging geometric consistency or contrastive learning, yet they often assume a fixed data distribution and fail to generalize ...
 
 ## 해결하려는 문제
-- 연구 유형: language-aware Gaussian/implicit 3D scene representation
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Extensive experiments on challenging benchmarks demonstrate that our method achieves strong performance, exhibiting superior accuracy, robustness to partial inputs, and a powerful capacity for novel class discovery.Our code ...
+- To overcome this, we present a real-time framework that leverages 3D Gaussian Splatting (3DGS) to build a semantically continuous and differentiable embedding field from partial observations.
+- Despite significant missing data (e.g., the stuffed bear, plate, and cookies are partially unobserved), our method accurately segments objects of varying scales—from the large tea glass to the ...
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Gaussian Splatting, referring segmentation, language` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

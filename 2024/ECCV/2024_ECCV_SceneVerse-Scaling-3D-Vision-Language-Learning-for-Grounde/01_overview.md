@@ -3,32 +3,34 @@
 - Year/Venue: 2024 / ECCV
 - Category: 3D Large Multimodal Models
 - Tags: Vision-Language Model, 3D Vision
-- Authors: Baoxiong Jia*, Yixin Chen, Huangyue Yu, Yan Wang, Xuesong Niu, Tengyu Liu, Qing Li, Siyuan Huang
-- Paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/1407_ECCV_2024_paper.php
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2024/ECCV/2024_ECCV_SceneVerse-Scaling-3D-Vision-Language-Learning-for-Grounde/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-VLM/LLM은 강한 semantic prior를 갖지만 3D 위치, 거리, 관점, affordance 같은 metric spatial reasoning에는 취약하다.
+- In this work, we aim to address these major challenges in 3D-VL by examining the potential of systematically upscaling 3D-VL learning in indoor scenes.
+- In comparison to recent advancements in the 2D domain, grounding language in 3D scenes faces two significant challenges: (i) the scarcity of paired 3D-VL data to support grounded ...
+- Through extensive experiments, we showcase the effectiveness of GPS by achieving state-of-the-art performance on existing 3D visual grounding and question-answering benchmarks.
 
 ## Core Idea
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- Results and Analyses We present the results of zero-shot transfer experiments in Tab.
+- We introduce the first million-scale 3D-VL dataset, SceneVerse, encompassing 68K indoor scenes and comprising 2.5M vision-language pairs collected from both human annotations and our scalable scene-graph-based generation approach.
 
 ## Input / Output
-Input: 2D/3D observations, point/scene tokens, and natural-language prompts. Output: spatial answer, grounding result, caption, plan, or embodied reasoning response.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D vision-language spatial reasoning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Through extensive experiments, we showcase the effectiveness of GPS by achieving state-of-the-art performance on existing 3D visual grounding and question-answering benchmarks.
+- In this section, we present experimental results addressing the following questions: 1.
+- Due to the page limit, we direct readers to the supplementary for implementation details, qualitative results, and more experimental analyses.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D vision-language spatial reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Vision-Language Model, 3D Vision.
+- Through extensive experiments, we showcase the effectiveness of GPS by achieving state-of-the-art performance on existing 3D visual grounding and question-answering benchmarks.
+- We demonstrate that this scaling allows for a unified pre-training framework, Grounded Pretraining for Scenes (GPS), for 3D-VL learning.
+- We introduce the first million-scale 3D-VL dataset, SceneVerse, encompassing 68K indoor scenes and comprising 2.5M vision-language pairs collected from both human annotations and our scalable scene-graph-based generation approach.
+
+## Abstract Cue
+- 3D vision-language (3D-VL) grounding, which aims to align language with 3D physical environments, stands as a cornerstone in developing embodied agents.

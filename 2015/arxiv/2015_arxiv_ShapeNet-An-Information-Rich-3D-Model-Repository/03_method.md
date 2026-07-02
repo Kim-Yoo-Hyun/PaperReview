@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2015 / arxiv
+- Category: Benchmarks and Datasets
+- Tags: 3D Vision, Dataset, shape, representation
+- Paper link: ./2015/arxiv/2015_arxiv_ShapeNet-An-Information-Rich-3D-Model-Repository/paper.pdf
+- Code/Project: https://shapenet.org/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Motivated by the far-reaching impact of dataset efforts such as the Penn Treebank , WordNet and ImageNet , which collectively have tens of thousands of citations, we propose ...
+- We present ShapeNet: a richly-annotated, large-scale repository of shapes represented by 3D CAD models of objects.
+- Source datasets from SHREC 2014: Princeton Shape Benchmark (PSB) , SHREC 2012 generic Shape Benchmark (SHREC12GTB) , Toyohashi Shape Benchmark (TSB) , Konstanz 3D Model Benchmark (CCCC) , ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- At the root of all these research problems lies the need for attaching semantics to representations of 3D shapes, and doing so at large scale.
+- Mirroring this pattern, recent work in computer graphics has also applied similar approaches to specific problems in the synthesis of new shape variations and new arrangements of shapes ...
+- Motivated by the far-reaching impact of dataset efforts such as the Penn Treebank , WordNet and ImageNet , which collectively have tens of thousands of citations, we propose ...
 
 ## 핵심 방법론
-- Task family: 3D vision and embodied AI
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Source datasets from SHREC 2014: Princeton Shape Benchmark (PSB) , SHREC 2012 generic Shape Benchmark (SHREC12GTB) , Toyohashi Shape Benchmark (TSB) , Konstanz 3D Model Benchmark (CCCC) , ...

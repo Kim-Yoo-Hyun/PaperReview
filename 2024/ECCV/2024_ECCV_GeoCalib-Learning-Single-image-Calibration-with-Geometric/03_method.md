@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: 3D Equivariance, Calibration, and Registration
+- Tags: geometry, 3D Vision
+- Paper link: ./2024/ECCV/2024_ECCV_GeoCalib-Learning-Single-image-Calibration-with-Geometric/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Datasets: We conduct this experiment on four popular datasets not seen during training. i) Stanford2D3D consists of images samples from 360° panoramas captured inside university buildings. ii) TartanAir ...
+- In this work, we introduce GeoCalib, a deep neural network that leverages universal rules of 3D geometry through an optimization process.
+- We use 2k images from the phone sequences.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- This problem has been extensively studied, and many tools based on 3D geometry are available .
+- Current approaches to this problem are based on either classical geometry with lines and vanishing points or on deep neural networks trained end-to-end.
+- Datasets: We conduct this experiment on four popular datasets not seen during training. i) Stanford2D3D consists of images samples from 360° panoramas captured inside university buildings. ii) TartanAir ...
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: geometry, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Datasets: We conduct this experiment on four popular datasets not seen during training. i) Stanford2D3D consists of images samples from 360° panoramas captured inside university buildings. ii) TartanAir ...
+- We use 2k images from the phone sequences.
+- For both datasets, we use the same test set as , with about 2k images each. iii) The MegaDepth dataset was built from crowd-sourced images covering popular phototourism ...

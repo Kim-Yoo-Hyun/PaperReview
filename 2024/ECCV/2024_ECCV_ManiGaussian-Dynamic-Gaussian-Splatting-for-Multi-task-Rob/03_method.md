@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Robotics, Gaussian Splatting
+- Paper link: ./2024/ECCV/2024_ECCV_ManiGaussian-Dynamic-Gaussian-Splatting-for-Multi-task-Rob/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In this paper, we propose a dynamic Gaussian Splatting method named ManiGaussian for multi-task robotic manipulation, which mines scene dynamics via future scene reconstruction.
+- On the contrary, we present a dynamic Gaussian Splatting framework to mine the scene dynamics for robotic manipulation.
+- Subsequently, we introduce a dynamic Gaussian Splatting framework (Section 3.3) that infers the propagation semantics of the manipulation scenarios in the Gaussian embedding space.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Designing autonomous agents for language-conditioned manipulation tasks has been highly desired in the pursuit of artificial intelligence for a long time.
+- In realistic deployment, intelligent robots are usually required to deal with unseen scenarios in novel tasks.
+- In this paper, we propose a dynamic Gaussian Splatting method named ManiGaussian for multi-task robotic manipulation, which mines scene dynamics via future scene reconstruction.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- On the contrary, we present a dynamic Gaussian Splatting framework to mine the scene dynamics for robotic manipulation.
+- Subsequently, we introduce a dynamic Gaussian Splatting framework (Section 3.3) that infers the propagation semantics of the manipulation scenarios in the Gaussian embedding space.
+- In this section, we first briefly introduce preliminaries on the problem formulation (Section 3.1), and then we present an overview of our pipeline (Section 3.2).
+- To enable our dynamic Gaussian Splatting framework to learn scene dynamics from the interactive environment, we build a Gaussian world model (Section 3.4) that reconstructs future scenes according ...

@@ -1,26 +1,32 @@
 # Evaluation
 
-## Dataset
-Habitat, RLBench, OXE, HSSD
+- Year/Venue: 2025 / ICLR Poster
+- Category: Benchmarks and Datasets
+- Tags: Robotics, Benchmark
+- Paper link: ./2025/ICLR/2025_ICLR_PARTNR-A-Benchmark-for-Planning-and-Reasoning-in-Embodied/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `robot manipulation and vision-language-action control`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- Habitat
+- RLBench
 
 ## Metrics
-success rate, task completion, language-conditioned generalization, real/sim transfer, IoU, AP, SR, SPL
+- accuracy
+- SR
+- success rate
+- collision
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- In contrast, human pairs outperform single humans, in our human-in-the-loop experiments, highlighting potential for improving LLM collaboration strategies.
+- As PARTNR consists of natural language tasks and LLMs have shown strong results in planning (Yao et al., 2023; Ahn et al., 2022; Huang et al., 2022), we ...
+- When comparing model sizes, we observe that a smaller fine-tuned Llama3.18B achieves a similar performance to a Llama3.1-70B without finetuning, while being 8.6X faster.
+- We analyze LLM-based planning agents and also provide a human-in-the-loop tool to evaluate how agents collaborate with real humans.
+- In contrast, human pairs outperform single humans, in our human-in-the-loop experiments, highlighting potential for improving LLM collaboration strategies.
+- As PARTNR consists of natural language tasks and LLMs have shown strong results in planning (Yao et al., 2023; Ahn et al., 2022; Huang et al., 2022), we ...
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: We analyze state-of-the-art LLMs on PARTNR tasks, across the axes of planning, perception and skill execution.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Reproducibility Notes
-- Code/Project: not identified from OpenReview
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

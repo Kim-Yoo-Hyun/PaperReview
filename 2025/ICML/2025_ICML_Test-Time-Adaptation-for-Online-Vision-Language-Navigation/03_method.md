@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
+- Year/Venue: 2025 / ICML Poster
+- Category: Navigation and Embodied AI
+- Tags: Vision-Language Model, Navigation, Reinforcement Learning
+- Paper link: ./2025/ICML/2025_ICML_Test-Time-Adaptation-for-Online-Vision-Language-Navigation/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address this, we introduce FeedTTA, a novel TTA framework for online VLN utilizing feedback-based reinforcement learning.
+## Brief Method
+- Additionally, we propose a gradient regularization technique that leverages the binary structure of F EED TTA to achieve a balance between plasticity and stability during adaptation.
+- Experiments In this section, we present experimental results of our study.
+- To address this, we introduce F EED TTA, a novel TTA framework for online VLN utilizing feedback-based reinforcement learning.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- One existing approach (Gao et al., 2024a) relies on the widely adopted TTA paradigm of entropy minimization (Wang et al., 2020a; Zhang et al., 2022), where we identify ...
+- Navigating in an unfamiliar environment during deployment poses a critical challenge for a vision-language navigation (VLN) agent.
+- Additionally, we propose a gradient regularization technique that leverages the binary structure of F EED TTA to achieve a balance between plasticity and stability during adaptation.
 
 ## 핵심 방법론
-- Task family: embodied navigation and spatial planning
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Experiments In this section, we present experimental results of our study.
+- For a comparable evaluation with our approach, Tent is applied on a per-episode basis. • RQ2: How sensitive is the performance to the quality and the quantity of ...
+- We use a batch size of 1 to properly simulate the online environment.
+- For R2R and R2R-CE, we use p = 0.05 and α = 0.1 for both splits.

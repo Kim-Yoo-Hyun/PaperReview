@@ -3,32 +3,34 @@
 - Year/Venue: 2023 / ICML
 - Category: Foundations: Vision-Language-Action and Robotics
 - Tags: LLM, Vision-Language, Robotics
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2303.03378
-- PDF status: downloaded
-- GitHub/Project: https://palm-e.github.io/
+- Paper link: ./2023/ICML/2023_ICML_PaLM-E-An-Embodied-Multimodal-Language-Model/paper.pdf
+- Code/Project: https://palm-e.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- However, a limitation of such models for inference in the real world is the issue of grounding: while training LLMs on massive textual data may lead to representations ...
+- However, enabling general inference in the real world, e.g. for robotics problems, raises the challenge of grounding.
+- Previous work (Ahn et al., 2022) interfaces the output of LLMs with learned robotic policies and affordance functions to make decisions, but is limited in that the LLM ...
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We propose embodied language models to directly incorporate real-world continuous sensor modalities into language models and thereby establish the link between words and percepts.
+- However, a limitation of such models for inference in the real world is the issue of grounding: while training LLMs on massive textual data may lead to representations ...
 
 ## Input / Output
-Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `vision or vision-language foundation model pretraining`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Further, in our experiments we show that current state-of-the-art visuallanguage models trained on typic
+- Our largest model, PaLM-E-562B with 562B parameters, in addition to being trained on robotics tasks, is a visual-language generalist with state-of-the-art performance on OK-VQA, and retains generalist language ...
+- Our evaluations show that PaLM-E, a single large embodied multimodal model, can address a variety of embodied reasoning tasks, from a variety of observation modalities, on multiple embodiments, ...
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- vision or vision-language foundation model pretraining 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: LLM, Vision-Language, Robotics.
+- Further, in our experiments we show that current state-of-the-art visuallanguage models trained on typic
+- However, a limitation of such models for inference in the real world is the issue of grounding: while training LLMs on massive textual data may lead to representations ...
+- Our evaluations show that PaLM-E, a single large embodied multimodal model, can address a variety of embodied reasoning tasks, from a variety of observation modalities, on multiple embodiments, ...
+
+## Abstract Cue
+- Large language models have been demonstrated to perform complex tasks.

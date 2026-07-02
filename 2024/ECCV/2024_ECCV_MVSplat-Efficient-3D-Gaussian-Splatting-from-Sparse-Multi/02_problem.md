@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2024 / ECCV
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, 3D Vision
+- Paper link: ./2024/ECCV/2024_ECCV_MVSplat-Efficient-3D-Gaussian-Splatting-from-Sparse-Multi/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- However, reconstructing a 3D scene from a single image is inherently ill-posed and ambiguous, posing a significant challenge when applied to a more general and larger scene, which ...
+- We consider the problem of 3D scene reconstruction and novel view synthesis from very sparse (i.e., as few as two) images in just one forward pass of a ...
+- With our cost volume representation, the task is formulated as learning to perform feature matching to identify the Gaussian centers, unlike the data-driven 3D regression from image features ...
 
 ## 해결하려는 문제
-- 연구 유형: language-aware Gaussian/implicit 3D scene representation
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- We introduce MVSplat, an efficient model that, given sparse multi-view images as input, predicts clean feed-forward 3D Gaussians.
+- On the large-scale RealEstate10K and ACID benchmarks, MVSplat achieves state-of-the-art performance with the fastest feed-forward inference speed (22 fps).
+- We demonstrate the importance of the cost volume representation in learning feed-forward Gaussians via extensive experimental evaluations.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Gaussian Splatting, 3D Vision` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- However, reconstructing a 3D scene from a single image is inherently ill-posed and ambiguous, posing a significant challenge when applied to a more general and larger scene, which ...
+- We consider the problem of 3D scene reconstruction and novel view synthesis from very sparse (i.e., as few as two) images in just one forward pass of a ...
+- With our cost volume representation, the task is formulated as learning to perform feature matching to identify the Gaussian centers, unlike the data-driven 3D regression from image features ...

@@ -1,18 +1,20 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ICRA
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model, Robotics
+- Paper link: ./2026/ICRA/2026_ICRA_MAP-VLA-Memory-Augmented-Prompting-for-Vision-Language-Act/paper.pdf
+- Code/Project: not identified from venue audit
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address this limitation, we propose Memory-Augmented Prompting for Vision-Language-Action model (MAP-VLA), a novel framework that empowers pre-trained VLA models with demonstration-derived memory prompts ...
+## Brief Method
+- To address this limitation, we propose Memory-Augmented Prompting for Vision-Language-Action model (MAP-VLA), a novel framework that empowers pre-trained VLA models with demonstration-derived memory prompts to augment action generation ...
+- VLA models acquire broad knowledge about the world from vision-language pre-training and learn to map raw visual observations and natural language instructions directly to robot actions through end-to-end ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To address this limitation, we propose Memory-Augmented Prompting for Vision-Language-Action model (MAP-VLA), a novel framework that empowers pre-trained VLA models with demonstration-derived memory prompts to augment action generation ...
+- INTRODUCTION Robotic manipulation remains a long-standing challenge in embodied artificial intelligence, requiring a robot to perceive complex scenes, understand task goals, and generate multistep control actions.
+- To address this limitation, we propose Memory-Augmented Prompting for Vision-Language-Action model (MAP-VLA), a novel framework that empowers pre-trained VLA models with demonstration-derived memory prompts to augment action generation ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Task1 Task2 Task3 Task4 Task5 Task6 Task7 Task8 Task9 Task10 Avg OpenVLA 75.3% ± 8.1% 30.7% ± 4.2% 64.0% ± 3.5% 62.0% ± 2.0% 68.0% ± 3.5% 41.3% ...

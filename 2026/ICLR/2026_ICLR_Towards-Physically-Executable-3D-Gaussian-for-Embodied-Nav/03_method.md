@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: Navigation and Embodied AI
+- Tags: 3D Vision, Navigation, Gaussian Splatting
+- Paper link: ./2026/ICLR/2026_ICLR_Towards-Physically-Executable-3D-Gaussian-for-Embodied-Nav/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address this, we propose **SAGE-3D** (**S**emantically and Physically **A**ligned **G**aussian **E**nvironments for **3D** Navigation), a new paradigm that upgrades 3DGS into an executable, ...
+## Brief Method
+- This indicates that although 3DGS scene data offers faster rendering, it presents greater training difficulty and is relatively harder to converge.
+- However, in training, to reach the same 40% SR, the 3DGSbased model required about 160 iterations and 6.2 hours, while the scanned mesh-based model needed only about 120 ...
+- 0.33 2.12 3.53 2.67 0.15 0.48 0.33 0.57 0.28 0.66 0.72 0.54 PS ↑ Visual Exploration Episode Time ↑ Explored Areas ↑ Table 3: Rendering speed and training ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- This indicates that although 3DGS scene data offers faster rendering, it presents greater training difficulty and is relatively harder to converge.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: 3D Vision, Gaussian Splatting
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- This indicates that although 3DGS scene data offers faster rendering, it presents greater training difficulty and is relatively harder to converge.
+- However, in training, to reach the same 40% SR, the 3DGSbased model required about 160 iterations and 6.2 hours, while the scanned mesh-based model needed only about 120 ...
+- 0.33 2.12 3.53 2.67 0.15 0.48 0.33 0.57 0.28 0.66 0.72 0.54 PS ↑ Visual Exploration Episode Time ↑ Explored Areas ↑ Table 3: Rendering speed and training ...

@@ -3,32 +3,32 @@
 - Year/Venue: 2025 / IROS
 - Category: Navigation and Embodied AI
 - Tags: Navigation, Graph Reasoning, semantic
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2409.18743
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/IROS/2025_IROS_OpenObject-NAV-Open-Vocabulary-Object-Oriented-Navigation/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-3D scene graph는 객체와 관계를 구조화하지만 closed vocabulary, annotation cost, geometric relation ambiguity 때문에 실제 로봇 질의에 확장하기 어렵다.
+- To tackle this challenge, the robot must capture and update scene changes and plans continuously.
+- However, current object navigation approaches primarily focus on semantic-level and lack the ability to dynamically update scene representation.
+- However, they are often limited to searching for semantic-level objects and lack the capability to update scenes.
 
 ## Core Idea
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We present the navigation results for each scene in Tab.
+- I NTRODUCTION With the advancement of visual language models (VLM) and large language models (LLM) , the realization of cognitive navigation has attracted increasing attention.
 
 ## Input / Output
-Input: language/navigation goal plus egocentric observations or 3D maps. Output: waypoint, action, route, or grounded target decision.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `structured 3D scene graph reasoning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- The results demonstrate that by updating the CRSG, the robot can efficiently navigate to moved targets.
 
 ## Limitation
-2D foundation model에서 온 semantic feature가 3D geometry와 완벽히 정렬되지 않으며, long-tail 관계/속성 평가는 여전히 어렵다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- structured 3D scene graph reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Navigation, Graph Reasoning, semantic.
+- The results demonstrate that by updating the CRSG, the robot can efficiently navigate to moved targets.
+- I NTRODUCTION With the advancement of visual language models (VLM) and large language models (LLM) , the realization of cognitive navigation has attracted increasing attention.
+- To tackle this challenge, the robot must capture and update scene changes and plans continuously.
+
+## Abstract Cue
+- — In everyday life, frequently used objects like cups often have unfixed positions and multiple instances within the same category, and their carriers frequently change as well.

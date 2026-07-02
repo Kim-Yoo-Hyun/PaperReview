@@ -1,18 +1,20 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2023 / CVPR
+- Category: 3D Representation Learning and Foundation Models
+- Tags: 3D Vision, Vision-Language Model, point cloud, alignment
+- Paper link: ./2023/CVPR/2023_CVPR_ULIP-Learning-a-Unified-Representation-of-Language-Images/paper.pdf
+- Code/Project: https://github.com/salesforce/ULIP
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Therefore, we introduce ULIP to learn a unified representation of images, texts, and 3D point clouds by pre-training with object triplets from the three modalities.
+- To reduce the demand of 3D data, ULIP leverages image and text encoders that are pre-trained with large-scale image-text pairs, and aligns 3D representation to the pre-aligned image-text ...
+- ULIP is agnostic to 3D backbone networks and can easily be integrated into any 3D architecture.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- In its 2D counterpart, recent advances have shown that similar problems can be significantly alleviated by employing knowledge from other modalities, such as language.
+- Therefore, we introduce ULIP to learn a unified representation of images, texts, and 3D point clouds by pre-training with object triplets from the three modalities.
 
 ## 핵심 방법론
-- Task family: vision-language alignment and multimodal reasoning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

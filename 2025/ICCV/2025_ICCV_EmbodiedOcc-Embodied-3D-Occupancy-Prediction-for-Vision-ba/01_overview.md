@@ -3,32 +3,34 @@
 - Year/Venue: 2025 / ICCV
 - Category: 3D Large Multimodal Models
 - Tags: 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/ICCV/2025_ICCV_EmbodiedOcc-Embodied-3D-Occupancy-Prediction-for-Vision-ba/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-VLM/LLM은 강한 semantic prior를 갖지만 3D 위치, 거리, 관점, affordance 같은 metric spatial reasoning에는 취약하다.
+- Most existing methods focus on offline perception from one or a few views and cannot be applied to embodied agents that demand to gradually perceive the scene through ...
+- Most existing methods still focus on local 3D occupancy prediction by integrati
+- Due to the low costs of camera sensors, vision-based 3D occupancy prediction is gaining increasing popularity and produces a comprehensive understanding of both semantics and structures of the ...
 
 ## Core Idea
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- Following existing works , we use a pre-trained EfficientNet-B7 to initialize the image encoder in our local module.
+- We use mIoU and IoU as the evaluation metrics.
 
 ## Input / Output
-Input: 2D/3D observations, point/scene tokens, and natural-language prompts. Output: spatial answer, grounding result, caption, plan, or embodied reasoning response.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D vision-language spatial reasoning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Our EmbodiedOcc outperforms existing methods by a large margin and accomplishes the embodied occupancy prediction with high accuracy and efficiency.
+- Intelligent agents first perceive their surrounding environments and then make decisions based on the perception results.
+- We reorganize an EmbodiedOccScanNet benchmark based on local annotations to facilitate the evaluation of the embodied 3D occupancy prediction task.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D vision-language spatial reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D Vision.
+- For each update, we extract semantic and structural features from the observed image and efficiently incorporate them via deformable crossattention to refine the regional Gaussians.
+- Our EmbodiedOcc outperforms existing methods by a large margin and accomplishes the embodied occupancy prediction with high accuracy and efficiency.
+- In this paper, we formulate an embodied 3D occupancy prediction task to target this practical scenario and propose a Gaussian-based EmbodiedOcc framework to accomplish it.
+
+## Abstract Cue
+- 3D occupancy prediction provides a comprehensive description of the surrounding scenes and has become an essential task for 3D perception.

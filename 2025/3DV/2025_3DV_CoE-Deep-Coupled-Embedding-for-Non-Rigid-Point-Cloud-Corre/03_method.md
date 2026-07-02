@@ -1,18 +1,19 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / 3DV
+- Category: 3D Representation Learning and Foundation Models
+- Tags: point cloud, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_CoE-Deep-Coupled-Embedding-for-Non-Rigid-Point-Cloud-Corre/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We propose to tackle these challenges by learning a new shape representation -- a per-point high dimensional embedding, in an embedding space where semantically ...
+## Brief Method
+- We propose to tackle these challenges by learning a new shape representation – a per-point high dimensional embedding, in an embedding space where semantically similar points share similar ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- We propose to tackle these challenges by learning a new shape representation – a per-point high dimensional embedding, in an embedding space where semantically similar points share similar ...
+- Yet, the task is challenging since point clouds are irregular and there is a lack of intrinsic shape information.
+- We propose to tackle these challenges by learning a new shape representation – a per-point high dimensional embedding, in an embedding space where semantically similar points share similar ...
 
 ## 핵심 방법론
-- Task family: 3D vision and embodied AI
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

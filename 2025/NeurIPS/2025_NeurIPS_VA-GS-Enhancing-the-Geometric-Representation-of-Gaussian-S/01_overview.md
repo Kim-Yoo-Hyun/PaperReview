@@ -3,33 +3,36 @@
 - Year/Venue: 2025 / NeurIPS poster
 - Category: 3D Semantic Understanding and Alignment
 - Tags: Gaussian Splatting, semantic, alignment, 3D Vision
-- Authors: Qing Li, Huifang Feng, Xun Gong, Yu-Shen Liu
-- Paper: https://openreview.net/forum?id=ZnsR3waLUo
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_VA-GS-Enhancing-the-Geometric-Representation-of-Gaussian-S/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- This limitation stems from the inherent discrete and unstructured nature of Gaussians, which makes it difficult to enforce global surface consistency or capture fine geometric details, particularly under ...
+- Accurate surface reconstruction from multi-view images is a long-standing problem in computer vision, fundamental to applications such as 3D modeling, AR/VR, and robotics.
+- We address the limitations of previous methods by incorporating multi-faceted geometric constraints and structural priors.
 
 ## Core Idea
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 3D Gaussian Splatting has recently emerged as an efficient solution for high-quality and real-time novel view synthesis.
-- Method cue: In this work, we propose a novel method that enhances the geometric representation of 3D Gaussians through view alignment (VA).
-- Result cue: Specifically, we incorporate edge-aware image cues into the rendering loss to improve surface boundary delineation.
+- In this work, we propose a novel method that enhances the geometric representation of 3D Gaussians through view alignment (VA).
+- To enforce geometric consistency across views, we introduce a visibility-aware photometric alignment loss that models occlusions and encourages accurate spatial relationships among Gaussians.
 
 ## Input / Output
-Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `language-aware Gaussian/implicit 3D scene representation`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive experiments on standard benchmarks demonstrate that our method achieves stateof-the-art performance in both surface reconstruction and novel view synthesis.
+- Specifically, we incorporate edge-aware image cues into the rendering loss to improve surface boundary delineation.
+- To further mitigate ambiguities caused by lighting variations, we incorporate normal-based constraints to refine the spatial orientation of Gaussians and improve local surface estimation.
 
 ## Limitation
-3DGS/NeRF 기반 방법은 scene reconstruction 품질, 카메라 포즈, memory/runtime, dynamic scene 처리에 민감하다.
+- In this paper, we address the limitations of existing 3D Gaussian Splatting approaches in recovering accurate and detailed surface geometry, especially under challenging conditions such as complex lighting ...
+- The main limitation of our approach is its relatively slower training speed compared to earlier 3DGS variants.
+- In future work, we aim to explore adaptive Gaussian pruning and learned covariance regularization to accelerate training and further improve robustness in large-scale and dynamic scenes.
 
 ## Contribution
-- language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Gaussian Splatting, semantic, alignment, 3D Vision.
-- 초록에서 확인되는 주요 cue: Gaussian, Splatting, However, Due, Gaussians, Specifically, Additionally, Extensive.
+- Extensive experiments on standard benchmarks demonstrate that our method achieves stateof-the-art performance in both surface reconstruction and novel view synthesis.
+- In this work, we propose a novel method that enhances the geometric representation of 3D Gaussians through view alignment (VA).
+- To enforce geometric consistency across views, we introduce a visibility-aware photometric alignment loss that models occlusions and encourages accurate spatial relationships among Gaussians.
+
+## Abstract Cue
+- 3D Gaussian Splatting has recently emerged as an efficient solution for highquality and real-time novel view synthesis.

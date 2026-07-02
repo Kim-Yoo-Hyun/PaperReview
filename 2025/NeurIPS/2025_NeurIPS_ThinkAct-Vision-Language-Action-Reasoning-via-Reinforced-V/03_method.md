@@ -1,18 +1,20 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2025 / NeurIPS Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_ThinkAct-Vision-Language-Action-Reasoning-via-Reinforced-V/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this paper, we propose ThinkAct, a dual-system framework that bridges high-level reasoning with low-level action execution via reinforced visual latent planning.
+## Brief Method
+- To tackle this problem, we propose ThinkAct, a unified framework that aims to leverage an MLLM Fθ to reason the high-level plans while connecting with an action model ...
+- In this paper, we propose ThinkAct, a dual-system framework that bridges high-level reasoning with low-level action execution via reinforced visual latent planning.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- While this manner enables long-form reasoning without step-level supervision, the reliance on QA-style reward signals limits their ability to support long-horizon planning and makes it difficult to connect ...
+- However, due to the high cost of producing high-quality reasoning traces, the resulting models are prone to overfitting to specific visual scenes or reasoning patterns.
+- To tackle this problem, we propose ThinkAct, a unified framework that aims to leverage an MLLM Fθ to reason the high-level plans while connecting with an action model ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- To tackle this problem, we propose ThinkAct, a unified framework that aims to leverage an MLLM Fθ to reason the high-level plans while connecting with an action model ...

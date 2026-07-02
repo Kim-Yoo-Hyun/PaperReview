@@ -3,33 +3,34 @@
 - Year/Venue: 2026 / ICML
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLA, Vision-Language Model, Robotics, 3D Vision
-- Authors: Pengteng Li, Weiyu Guo, He Zhang, Tiefu Cai, Xiao He, Yandong Guo, Hui Xiong
-- Paper: https://openreview.net/forum?id=5i888dLp8N
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2026/ICML/2026_ICML_Spatial-Memory-for-Out-of-Vision-Manipulation-in-Vision-La/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- Illustration of the Out-of-Vision (OOV) limitation in existing VLA models.
+- SOMA addresses this limitation by equipping VLAs with a persistent, spatial memory constructed from multi-view observations acquired via a movable head camera, enabling reasoning beyond the current visual ...
+- Most existing VLAs implicitly assume that task-relevant objects are always visible, leading to brittle and reactive behaviors when targets fall outside the camera’s field of view.
 
 ## Core Idea
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: We introduce SOMA, the Spatial Memory framework for Out-of-Vision Manipulation in Vision-Language-Action (VLA) models.
-- Method cue: We introduce SOMA, the Spatial Memory framework for Out-of-Vision Manipulation in Vision-Language-Action (VLA) models.
-- Result cue: Experimental results show that SOMA not only improves task success rates, but also induces qualitatively different manipulation behaviors, with faster target localization, reduced viewpoint ...
+- Head Camera We introduce SOMA, the Spatial memory framework for Out-of-Vision Manipulation in VisionLanguage-Action (VLA) models.
+- The framework consists of three components: Spatial Memory Construction for aggregating angular-wise observations into a unified spatial–semantic representation by scanning, Dynamic Memory Refinement for maintaining global consistency over ...
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `robot manipulation and vision-language-action control`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Experiment results show that SOMA not only improves task success rates, but also induces qualitatively different manipulation behaviors, with faster target localization, reduced viewpoint search, and near one-shot ...
+- Additional experiments on RoboCasa GR1 and SimplerEnv further validate the effectiveness of SOMA’s memory design under conventional fully observable settings.
+- We evaluate SOMA on five self-designed challenging real-world OOV manipulation tasks, including multi-step and dualarm scenarios, where target objects are initially invisible.
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: VLA, Vision-Language Model, Robotics, 3D Vision.
-- 초록에서 확인되는 주요 cue: SOMA, Spatial, Memory, Out-of-Vision, Manipulation, Vision-Language-Action, VLA, Most.
+- Experiment results show that SOMA not only improves task success rates, but also induces qualitatively different manipulation behaviors, with faster target localization, reduced viewpoint search, and near one-shot ...
+- Head Camera We introduce SOMA, the Spatial memory framework for Out-of-Vision Manipulation in VisionLanguage-Action (VLA) models.
+- The framework consists of three components: Spatial Memory Construction for aggregating angular-wise observations into a unified spatial–semantic representation by scanning, Dynamic Memory Refinement for maintaining global consistency over ...
+
+## Abstract Cue
+- Head Camera We introduce SOMA, the Spatial memory framework for Out-of-Vision Manipulation in VisionLanguage-Action (VLA) models.

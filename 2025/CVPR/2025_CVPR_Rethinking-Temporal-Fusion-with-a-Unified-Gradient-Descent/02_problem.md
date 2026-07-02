@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2025 / CVPR
+- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
+- Paper link: ./2025/CVPR/2025_CVPR_Rethinking-Temporal-Fusion-with-a-Unified-Gradient-Descent/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-3D semantic perception은 라벨 공간이 제한적이고 long-tail 객체/속성/affordance를 다루기 어려워 foundation model alignment가 필요하다.
+- We present GDFusion, a temporal fusion method for vision-based 3D semantic occupancy prediction (VisionOcc).
+- GDFusion opens up the underexplored aspects of temporal fusion within the VisionOcc framework, focusing on both temporal cues and fusion strategies.
+- It systematically examines the entire VisionOcc pipeline, identifying three fundamental yet previously overlooked temporal cues: scene-level consistency, motion calibration, and geometric complementation.
 
 ## 해결하려는 문제
-- 연구 유형: open-vocabulary 3D semantic understanding
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Extensive experiments on nuScenes demonstrate that GDFusion signiﬁcantly outperforms established baselines, achieving 2.2%–4.7% mIoU improvement and reducing memory consumption by 30%–72%.
+- To effectively fuse temporal signals across heterogeneous representations, we propose a novel fusion strategy by reinterpreting the formulation of vanilla RNNs.
+- We present GDFusion, a temporal fusion method for vision-based 3D semantic occupancy prediction (VisionOcc).
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `sensor fusion, LiDAR, semantic, alignment` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

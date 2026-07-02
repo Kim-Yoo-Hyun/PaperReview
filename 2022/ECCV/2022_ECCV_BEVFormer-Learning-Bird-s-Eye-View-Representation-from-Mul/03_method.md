@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2022 / ECCV
+- Category: Sensor Fusion, LiDAR, and Autonomous Driving
+- Tags: sensor fusion, 3D perception, Planning
+- Paper link: ./2022/ECCV/2022_ECCV_BEVFormer-Learning-Bird-s-Eye-View-Representation-from-Mul/paper.pdf
+- Code/Project: https://github.com/fundamentalvision/BEVFormer
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- For temporal information, we propose temporal selfattention to recurrently fuse the history BEV information.
+- Compared with training tasks individually, multi-task learning saves computational cost and reduces the inference time by sharing more modules,
+- To aggregate spatial information, we design spatial cross-attention that each BEV query extracts the spatial features from the regions of interest across camera views.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- The significant challenges are that autonomous driving is time-critical and objects in the scene change rapidly, and thus simply stacking BEV features of cross timestamps brings extra computational ...
+- Apart from the low cost for deployment, cameras own the desirable advantages to detect long-range distance objects and identify vision-based road elements (e.g., traffic lights, stoplines), compared to ...
+- For temporal information, we propose temporal selfattention to recurrently fuse the history BEV information.
 
 ## 핵심 방법론
-- Task family: 3D vision and embodied AI
-- Representation: 3D perception
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Compared with training tasks individually, multi-task learning saves computational cost and reduces the inference time by sharing more modules,
+- While comparing different BEV encoders under same settings, BEVFormer achieves higher performances of all tasks except for road segmentation results is comparable with BEVFormer-S.

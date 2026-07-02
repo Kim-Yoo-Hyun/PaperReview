@@ -3,32 +3,33 @@
 - Year/Venue: 2025 / ICCV
 - Category: Benchmarks and Datasets
 - Tags: VLA, Benchmark, long-horizon
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified from primary page
+- Paper link: ./2025/ICCV/2025_ICCV_VLABench-A-Large-Scale-Benchmark-for-Language-Conditioned/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- Introduction Language-conditioned manipulation represents a fundamental challenge in embodied AI and a stepping stone toward Artificial General Intelligence .
+- The experimental results indicate that both the current state-of-theart pretrained VLAs and the workflow based on VLMs face challenges in our tasks.
 
 ## Core Idea
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- To better define such general-purpose tasks in the context of LLMs and advance the research in VLAs, we present VLABench, an open-source benchmark for evaluating universal LCM task ...
+- To support the downstream finetuning, we provide high-quality training data collected via an automated framework incorporating heuristic skills and prior information.
 
 ## Input / Output
-Input: benchmark-specific observations/instructions. Output: standardized labels, tasks, or evaluation scores for comparing models.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `robot manipulation and vision-language-action control`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- We demonstrate the superiority of our data framework through comparative experiments.
+- Subsequently, the selected skills generate trajectories using RRT , with quaternion interpolation achieved through spherical linear interpolation.
+- The experimental results indicate that both the current state-of-theart pretrained VLAs and the workflow based on VLMs face challenges in our tasks.
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: VLA, Benchmark, long-horizon.
+- To better define such general-purpose tasks in the context of LLMs and advance the research in VLAs, we present VLABench, an open-source benchmark for evaluating universal LCM task ...
+- The experimental results indicate that both the current state-of-theart pretrained VLAs and the workflow based on VLMs face challenges in our tasks.
+- To support the downstream finetuning, we provide high-quality training data collected via an automated framework incorporating heuristic skills and prior information.
+
+## Abstract Cue
+- General-purposed embodied agents are designed to understand the users’ natural instructions or intentions and act precisely to complete universal tasks.

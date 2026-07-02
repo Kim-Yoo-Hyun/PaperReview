@@ -3,33 +3,34 @@
 - Year/Venue: 2025 / ICML Poster
 - Category: Navigation and Embodied AI
 - Tags: Vision-Language Model, Navigation, Reinforcement Learning
-- Authors: Sungjune Kim, Gyeongrok Oh, Heeju Ko, Daehyun Ji, Dongwook Lee, Byung-Jun Lee, Sujin Jang, Sangpil Kim
-- Paper: https://openreview.net/forum?id=K4GaB4fdIq
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2025/ICML/2025_ICML_Test-Time-Adaptation-for-Online-Vision-Language-Navigation/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-실내/실외 이동 에이전트는 언어 목표와 3D 공간 구조를 연결해야 하며, partial observation과 탐색-활용 균형 때문에 단순 2D 인식만으로는 안정적이지 않다.
+- One existing approach (Gao et al., 2024a) relies on the widely adopted TTA paradigm of entropy minimization (Wang et al., 2020a; Zhang et al., 2022), where we identify ...
+- Navigating in an unfamiliar environment during deployment poses a critical challenge for a vision-language navigation (VLN) agent.
+- Specifically, F EED TTA learns by maximizing binary episodic feedback, a practical setup in which the agent receives a binary scalar after each episode that indicates the success ...
 
 ## Core Idea
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Navigating in an unfamiliar environment during deployment poses a critical challenge for a vision-language navigation (VLN) agent.
-- Method cue: To address this, we introduce FeedTTA, a novel TTA framework for online VLN utilizing feedback-based reinforcement learning.
-- Result cue: Additionally, we propose a gradient regularization technique that leverages the binary structure of FeedTTA to achieve a balance between plasticity and stability during adaptation.
+- Additionally, we propose a gradient regularization technique that leverages the binary structure of F EED TTA to achieve a balance between plasticity and stability during adaptation.
+- Experiments In this section, we present experimental results of our study.
 
 ## Input / Output
-Input: language/navigation goal plus egocentric observations or 3D maps. Output: waypoint, action, route, or grounded target decision.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `embodied navigation and spatial planning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Our extensive experiments on challenging VLN benchmarks demonstrate the superior adaptability of F EED TTA, even outperforming the stateof-the-art offline training methods in REVERIE benchmark with a single ...
+- Additionally, we propose a gradient regularization technique that leverages the binary structure of F EED TTA to achieve a balance between plasticity and stability during adaptation.
+- The simplicity and efficacy of the FeedTTA framework demonstrate its potential for practical applications in real-world navigation scenarios. via imitation learning on a vast collection of annotated expert ...
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- embodied navigation and spatial planning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Vision-Language Model, Navigation, Reinforcement Learning.
-- 초록에서 확인되는 주요 cue: Navigating, VLN, Yet, TTA, FeedTTA, Specifically, Additionally, Our.
+- Our extensive experiments on challenging VLN benchmarks demonstrate the superior adaptability of F EED TTA, even outperforming the stateof-the-art offline training methods in REVERIE benchmark with a single ...
+- Additionally, we propose a gradient regularization technique that leverages the binary structure of F EED TTA to achieve a balance between plasticity and stability during adaptation.
+- To address this, we introduce F EED TTA, a novel TTA framework for online VLN utilizing feedback-based reinforcement learning.
+
+## Abstract Cue
+- Navigating in an unfamiliar environment during deployment poses a critical challenge for a vision-language navigation (VLN) agent.

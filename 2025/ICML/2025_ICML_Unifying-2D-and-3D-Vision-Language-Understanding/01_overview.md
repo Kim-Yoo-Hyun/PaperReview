@@ -3,33 +3,34 @@
 - Year/Venue: 2025 / ICML Poster
 - Category: 3D Vision-Language Grounding
 - Tags: Vision-Language Model, 3D Vision
-- Authors: Ayush Jain, Alexander Swerdlow, Yuzhou Wang, Sergio Arnaud, Ada Martin, Alexander Sax, Franziska Meier, Katerina Fragkiadaki
-- Paper: https://openreview.net/forum?id=FcTeo26AfZ
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2025/ICML/2025_ICML_Unifying-2D-and-3D-Vision-Language-Understanding/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- The key limitation, however, is dataset availability: while 2D datasets are vast and well-curated, 3D datasets remain scarce and expensive to annotate (Dai et al., 2017; Yeshwanth et ...
+- Given these challenges, is scaling 3D training data the only viable path to bridging this gap, or are there alternative strategies for making 3D models more effective?
+- We introduce UniVLG, a unified architecture for 2D and 3D vision-language understanding that bridges the gap between existing 2D-centric models and the rich 3D sensory data available in ...
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Progress in 3D vision-language learning has been hindered by the scarcity of large-scale 3D datasets.
-- Method cue: We introduce UniVLG, a unified architecture for 2D and 3D vision-language understanding that bridges the gap between existing 2D-centric models and the rich 3D ...
-- Result cue: We propose a novel language-conditioned mask decoder shared across 2D and 3D modalities to ground objects effectively in both RGB and RGB-D images, outperforming ...
+- We introduce UniVLG, a unified architecture for 2D and 3D vision-language understanding that bridges the gap between existing 2D-centric models and the rich 3D sensory data available in ...
+- We propose a novel language-conditioned mask decoder shared across 2D and 3D modalities to ground objects effectively in both RGB and RGBD images, outperforming box-based approaches.
 
 ## Input / Output
-Input: 3D scene representation plus free-form natural language. Output: target object, 3D box, mask, or referring expression result.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `vision-language alignment and multimodal reasoning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- With these innovations, our model achieves state-of-the-art performance across multiple 3D vision-language grounding tasks, demonstrating the potential of transferring advances from 2D vision-language learning to the dataconstrained 3D ...
+- At first glance, this reliance on 2D models appears counterintuitive, as prior research has consistently shown that 3D models outperform their 2D counterparts when trained on comparable amounts ...
+- We propose a novel language-conditioned mask decoder shared across 2D and 3D modalities to ground objects effectively in both RGB and RGBD images, outperforming box-based approaches.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- vision-language alignment and multimodal reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Vision-Language Model, 3D Vision.
-- 초록에서 확인되는 주요 cue: Progress, UniVLG, Our, RGB, RGB-D, With, Furthermore, Code.
+- We propose a novel language-conditioned mask decoder shared across 2D and 3D modalities to ground objects effectively in both RGB and RGBD images, outperforming box-based approaches.
+- We introduce UniVLG, a unified architecture for 2D and 3D vision-language understanding that bridges the gap between existing 2D-centric models and the rich 3D sensory data available in ...
+- With these innovations, our model achieves state-of-the-art performance across multiple 3D vision-language grounding tasks, demonstrating the potential of transferring advances from 2D vision-language learning to the dataconstrained 3D ...
+
+## Abstract Cue
+- rich 3D information, these systems predominantly use 2D vision-language models to interpret their sensory video input, rather than leveraging 3D models that incorporate depth and egomotion.

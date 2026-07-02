@@ -1,15 +1,22 @@
 # Problem
 
+- Year/Venue: 2025 / CoRL
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, open-world, Robotics
+- Paper link: ./2025/CoRL/2025_CoRL_pi0.5-a-Vision-Language-Action-Model-with-Open-World-Gener/paper.pdf
+- Code/Project: https://www.physicalintelligence.company/blog/pi05
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- Open-world generalization represents one of the biggest open problems in physical intelligence, and scalable learning systems offer a path to enable such generalization, as they have in domains ...
+- A person can draw on a lifetime of experience to synthesize appropriate solutions to each of these challenges.
 
 ## 해결하려는 문제
-- 연구 유형: robot manipulation and vision-language-action control
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: While vision-language-action (VLA) models have demonstrated impressive results for end-to-end robot control, it remains an open question how far such models can generalize in ...
+- Our experiments show that this kind of knowledge transfer is essential for effective generalization, and we demonstrate for the first time that an end-to-end learning-enabled robotic system can ...
+- While vision-language-action (VLA) models have demonstrated impressive results for end-to-end robot control, it remains an open question how far such models can generalize in the wild.
+- We describe π0.5 , a new model based on π0 that uses co-training on heterogeneous tasks to enable broad generalization. π0.5 uses data from multiple robots, highlevel semantic ...
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `VLA, open-world, Robotics` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- Open-world generalization represents one of the biggest open problems in physical intelligence, and scalable learning systems offer a path to enable such generalization, as they have in domains ...
+- A person can draw on a lifetime of experience to synthesize appropriate solutions to each of these challenges.
+- Our central contribution is a system for training a highly generalizable VLA, π0.5 , together with a proof of concept that generalization can emerge from this model when ...

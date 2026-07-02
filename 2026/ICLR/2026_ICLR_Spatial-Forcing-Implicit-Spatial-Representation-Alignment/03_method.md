@@ -1,18 +1,19 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model, 3D Vision
+- Paper link: ./2026/ICLR/2026_ICLR_Spatial-Forcing-Implicit-Spatial-Representation-Alignment/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We propose Spatial Forcing (SF), a simple yet effective alignment strategy that implicitly forces VLA models to develop spatial comprehension capabilities without relying on ...
+## Brief Method
+- The final training objective combines both the standard training loss for action generation and the 3D foundation model alignment loss with a weighting factor α: LSF = Laction ...
+- Object SR (%) Goal SR (%) Long SR (%) Average SR (%) 92.5 85.2 85.7 88.4 96.3 91.6 96.8 98.8 96.8 98.4 68.3 75.1 84.6 79.2 85.4 87.6 ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- The final training objective combines both the standard training loss for action generation and the 3D foundation model alignment loss with a weighting factor α: LSF = Laction ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- The final training objective combines both the standard training loss for action generation and the 3D foundation model alignment loss with a weighting factor α: LSF = Laction ...
+- Object SR (%) Goal SR (%) Long SR (%) Average SR (%) 92.5 85.2 85.7 88.4 96.3 91.6 96.8 98.8 96.8 98.4 68.3 75.1 84.6 79.2 85.4 87.6 ...

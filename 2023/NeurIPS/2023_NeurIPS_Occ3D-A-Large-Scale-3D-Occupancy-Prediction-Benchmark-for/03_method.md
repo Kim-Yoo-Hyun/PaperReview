@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2023 / NeurIPS
+- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Tags: 3D Vision, occupancy, sensor fusion, Benchmark
+- Paper link: ./2023/NeurIPS/2023_NeurIPS_Occ3D-A-Large-Scale-3D-Occupancy-Prediction-Benchmark-for/paper.pdf
+- Code/Project: https://tsinghua-mars-lab.github.io/Occ3D/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To optimize the occupancy prediction, we use the OHEM loss for model training P Locc = W L(gk , pk ), where Wk , gk , and pk ...
+- Lastly, we propose a new model, dubbed Coarse-to-Fine Occupancy (CTF-Occ) network, which demonstrates superior performance on the Occ3D benchmarks.
+- To support 3D occupancy prediction, we develop a label generation pipeline that produces dense, visibility-aware labels for any given scene.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- These limitations call for a general and coherent representation that can model the detailed geometry and semantics of objects both within and outside of the ontology tree.
+- 3D occupancy prediction, which estimates the detailed occupancy states and semantics of a scene, is an emerging task to overcome these limitations.
+- To optimize the occupancy prediction, we use the OHEM loss for model training P Locc = W L(gk , pk ), where Wk , gk , and pk ...
 
 ## 핵심 방법론
-- Task family: 3D vision and embodied AI
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- To optimize the occupancy prediction, we use the OHEM loss for model training P Locc = W L(gk , pk ), where Wk , gk , and pk ...
+- It can be observed that our method performs better in all classes than previous baseline methods under the IoU metric.
+- Especially for some objects such as traffic cone and vehicle, our method surpasses the baseline method by 2.88 and 10.23 IoU respectively.
+- BEVDet TPVFormer BEVFormer CTF-Occ (Ours) 0.13 13.06 2.17 10.15 7.80 5.85 4.62 0.94 1.49 0.0 7.27 10.06 2.35 48.15 34.12 9.88 3.89 17.86 12.03 5.67 13.64 8.49 8.90 ...
+- We replace their original detection decoders with the occupancy decoder adopted in our CTF-Occ network and remain their BEV feature encoders.

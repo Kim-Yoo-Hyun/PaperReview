@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: Foundations: Monocular Geometry
+- Tags: depth, 3D Vision
+- Paper link: ./2024/CVPR/2024_CVPR_UniDepth-Universal-Monocular-Metric-Depth-Estimation/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose a new model, UniDepth, capable of reconstructing metric 3D scenes from solely single images across domains.
+- In addition, we propose a geometric invariance loss that promotes the invariance of camera-prompted depth features.
+- We introduce UniDepth, a novel approach that directly predicts 3D points in a scene with only one image as input.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Departing from the existing MMDE methods, UniDepth directly predicts metric 3D points from the input image at inference time without any additional information, striving for a universal and ...
+- These methods fail to generalize to unseen domains even in the presence of moderate domain gaps, which hinders their practical applicability.
+- We propose a new model, UniDepth, capable of reconstructing metric 3D scenes from solely single images across domains.
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- The last four methods are tested in a zero-shot setting.
+- The required training time amounts to roughly

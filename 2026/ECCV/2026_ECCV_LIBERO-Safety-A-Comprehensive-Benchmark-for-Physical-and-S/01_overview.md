@@ -3,32 +3,36 @@
 - Year/Venue: 2026 / ECCV
 - Category: Benchmarks and Datasets
 - Tags: VLA, Vision-Language Model, Benchmark, semantic
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2606.23686
-- PDF status: downloaded
-- GitHub/Project: https://libero-safety.github.io/
+- Paper link: ./2026/ECCV/2026_ECCV_LIBERO-Safety-A-Comprehensive-Benchmark-for-Physical-and-S/paper.pdf
+- Code/Project: https://libero-safety.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- This infrastructure drives a fivedimensional curriculum that decouples safety into semantic reasoning and physical constraints. – Keypose-Driven Data Generation Pipeline: To overcome the inefficiency and scalability bottlenecks of ...
+- First, their exclusive reliance on human teleoperation is prohibitively time-consuming, severely bottlenecking the scalability required to train robust foundation models.
+- By coupling sparse human intent with an optimization-based motion planner , we ensure the rapid synthesis of large-scale, kinematically feasible, and collision-free expert demonstrations. – Large-Scale Safety Dataset: ...
 
 ## Core Idea
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- To address this, we introduce a parametric safety benchmark to procedurally generate safety-critical scenarios with comprehensive stochasticity.
+- To overcome the scalability bottlenecks of human teleoperation, we develop a novel keypose-driven data generation pipeline.
 
 ## Input / Output
-Input: benchmark-specific observations/instructions. Output: standardized labels, tasks, or evaluation scores for comparing models.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `robot manipulation and vision-language-action control`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- 4.1 Experimental Setup To systematically benchmark safety performance across both physical execution and cognitive reasoning, we evaluate a comprehensive suite of 10 representative architectures.
+- The selected models are initialized with their official configurations, and all experiments are conducted on 8 NVIDIA A800 GPUs to guarantee a fair and standardized comparison.
+- To address this, we introduce a parametric safety benchmark to procedurally generate safety-critical scenarios with comprehensive stochasticity.
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- We therefore view LIBERO-Safety as a structured evaluation and data-generation foundation for future work on real-world validation, dense unsafe-event annotation, and intrinsically safety-aligned VLA models.
+- Meanwhile, LIBEROSafety remains a simulation-based benchmark; it cannot fully capture realworld contact dynamics, hardware latency, or unpredictable human behavior.
+- Through a cross-paradigm evaluation of representative VLA and embodied foundation models, we identify a clear gap between task-level robustness and strict safety compliance: increasing data diversity improves safety-aware ...
 
 ## Contribution
-- robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: VLA, Vision-Language Model, Benchmark, semantic.
+- To address this, we introduce a parametric safety benchmark to procedurally generate safety-critical scenarios with comprehensive stochasticity.
+- To overcome the scalability bottlenecks of human teleoperation, we develop a novel keypose-driven data generation pipeline.
+- Our analysis reveals a critical generalization-safety tension: although high-diversity training fosters safer trajectories, task success remains fundamentally bottlenecked by sub-optimal trajectory synthesis and semantic misalignment.
+
+## Abstract Cue
+- Despite the impressive manipulation capabilities of VisionLanguage-Action (VLA) models, their operational safety under strict constraints remains largely unverified.

@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2025 / NeurIPS Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_4D-VLA-Spatiotemporal-Vision-Language-Action-Pretraining-w/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address this, we propose 4D-VLA, a novel approach that effectively integrates 4D information into the input to mitigate these sources of chaos.
+## Brief Method
+- Vision-language model backbone We leverage a pretrained large vision-language model (VLM) as the backbone, specifically InternVL-4B , which consists of a text tokenizer T , a vision encoder ...
+- To address this, we propose 4D-VLA, a novel approach that effectively integrates 4D information into the input to mitigate these sources of chaos.
+- This inconsistency significantly hampers pretraining efficiency.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, existing pretraining paradigms t often suffer from incomplete or under-informative input, lacking critical contextual cues required for reliable action reasoning.
+- However, efficiently extracting useful information from these datasets remains a challenge for improving generalization across diverse scenarios.
+- Vision-language model backbone We leverage a pretrained large vision-language model (VLM) as the backbone, specifically InternVL-4B , which consists of a text tokenizer T , a vision encoder ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Vision-language model backbone We leverage a pretrained large vision-language model (VLM) as the backbone, specifically InternVL-4B , which consists of a text tokenizer T , a vision encoder ...
+- These tokens, together with task-specific text tokens, serve as feature inputs for the subsequent Transformer.
+- After decoding through the VLM Transformer and action head, it ultimately generates the action output.
+- The vision encoder processes visual observations, which are subsequently compressed by an MLP projector P to generate vision embeddings, while text inputs are tokenized and embedded to form ...
+- These multimodal tokens are then fed into the decoder D for next-token prediction.

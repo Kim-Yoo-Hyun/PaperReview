@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: 3D Vision, Gaussian Splatting, semantic
+- Paper link: ./2024/ECCV/2024_ECCV_GaussianFormer-Scene-as-Gaussians-for-Vision-Based-3D-Sema/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To address this, we propose an object-centric representation to describe 3D scenes with sparse 3D semantic Gaussians where each Gaussian represents a flexible region of interest and its ...
+- We aggregate information from images through the attention mechanism and iteratively refine the properties of 3D Gaussians including position, covariance, and semantics.
+- Zheng et al. method to generate 3D occupancy predictions, which only aggregates the neighboring Gaussians for a certain position.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Despite the promising applications, the dense output space of 3D occupancy prediction poses a great challenge in how to efficiently and effectively represent the 3D scene.
+- It is also more difficult to capture scene dynamics with grid-based representations since it is objects instead of grids that move in the 3D space .
+- To address this, we propose an object-centric representation to describe 3D scenes with sparse 3D semantic Gaussians where each Gaussian represents a flexible region of interest and its ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: 3D Vision, Gaussian Splatting, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- This is due to 3D Gaussians can adaptively change their positions and covariance to match the boundaries of small objects in images in contrast to rigid grid projections ...
+- Notably, GaussianFormer surpasses all existing competitors with significantly reduced mem-
+- Furthermore, the flexibility of 3D Gaussians also benefits the predictions for general objects (i.e. categories with other- prefix) which often have distinct shapes and appearances with normal categories.

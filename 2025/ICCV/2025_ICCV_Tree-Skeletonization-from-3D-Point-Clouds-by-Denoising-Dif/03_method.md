@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Generative Modeling and Diffusion
+- Tags: Diffusion, Generation, point cloud, 3D Vision
+- Paper link: ./2025/ICCV/2025_ICCV_Tree-Skeletonization-from-3D-Point-Clouds-by-Denoising-Dif/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To this extent, we use uniform distance sampling on the predicted graphs to densely sample a set of points H from the predicted skeleton and a set of ...
+- To further measure the reconstructed skeleton’s quality, we use the F1-score, precision, and recall metrics proposed by Knapitsch et al. .
+- For the synthetic data, we used the TreeNet3D dataset , a multi-variety synthetic dataset that contains point clouds of 13,000 trees of 10 different species generated using the ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Traditionally, the task of tree skeletonization is approached as a regression problem , while more recent approaches tackle the problem also with gen- The natural world presents complex ...
+- Introduction The world around us is filled with natural structures, such as trees, that humans can interpret even when parts of them are occluded; however, this remains a ...
+- To this extent, we use uniform distance sampling on the predicted graphs to densely sample a set of points H from the predicted skeleton and a set of ...
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- To this extent, we use uniform distance sampling on the predicted graphs to densely sample a set of points H from the predicted skeleton and a set of ...
+- To further measure the reconstructed skeleton’s quality, we use the F1-score, precision, and recall metrics proposed by Knapitsch et al. .
+- For the synthetic data, we used the TreeNet3D dataset , a multi-variety synthetic dataset that contains point clouds of 13,000 trees of 10 different species generated using the ...

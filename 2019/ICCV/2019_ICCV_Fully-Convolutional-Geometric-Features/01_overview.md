@@ -3,32 +3,33 @@
 - Year/Venue: 2019 / ICCV
 - Category: 3D Equivariance, Calibration, and Registration
 - Tags: 3D Vision, registration, 3D geometry, representation
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content_ICCV_2019/html/Choy_Fully_Convolutional_Geometric_Features_ICCV_2019_paper.html
-- PDF status: downloaded
-- GitHub/Project: https://github.com/chrischoy/FCGF
+- Paper link: ./2019/ICCV/2019_ICCV_Fully-Convolutional-Geometric-Features/paper.pdf
+- Code/Project: https://github.com/chrischoy/FCGF
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- Existing learning-based features rely on low-level geometric characteristics as input: e.g., angular deviation , point distributions , or volumetric distance functions .
+- This process is computationally expensive and features are extracted only at downsampled interest points, thus lowering the spatial resolution for subsequent registration steps.
 
 ## Core Idea
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- In this work, we present fully-convolutional geometric features, computed in a single pass by a 3D fully-convolutional network.
+- We experimentally validate our approach on both indoor and outdoor datasets.
 
 ## Input / Output
-Input: one or more images/RGB-D/LiDAR observations. Output: depth, camera pose, point map, dense reconstruction, or consistent map.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D reconstruction, calibration, and geometric consistency`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Fullyconvolutional geometric features achieve state-of-the-art accuracy without requiring prepossessing, are compact (32 dimensions), and are 290 times faster than the most accurate prior method.
+- We also present new metric learning losses that dramatically improve performance.
+- State-of-the-art methods require computing low-level features as input or extracting patch-based features with limited receptive field.
 
 ## Limitation
-강한 benchmark 성능이 실제 로봇 센서 노이즈, rolling shutter, 동적 객체, 저조도 환경까지 보장하지는 않는다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D reconstruction, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D Vision, registration, 3D geometry, representation.
+- Fullyconvolutional geometric features achieve state-of-the-art accuracy without requiring prepossessing, are compact (32 dimensions), and are 290 times faster than the most accurate prior method.
+- In this work, we present fully-convolutional geometric features, computed in a single pass by a 3D fully-convolutional network.
+- We experimentally validate our approach on both indoor and outdoor datasets.
+
+## Abstract Cue
+- Extracting geometric features from 3D scans or point clouds is the first step in applications such as registration, reconstruction, and tracking.

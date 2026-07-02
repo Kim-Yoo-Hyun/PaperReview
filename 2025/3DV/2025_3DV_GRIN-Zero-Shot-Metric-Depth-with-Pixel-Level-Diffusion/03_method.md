@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / 3DV
+- Category: 3D Generative Modeling and Diffusion
+- Tags: Diffusion, Generation, depth, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_GRIN-Zero-Shot-Metric-Depth-with-Pixel-Level-Diffusion/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this paper we present GRIN, an efficient diffusion model designed to ingest sparse unstructured training data.
+## Brief Method
+- Conclusion We introduce GRIN (Geometric RIN), a diffusion-based framework for depth estimation designed to circumvent two of the main shortcomings shown by recent diffusion methods when applied to ...
+- In this paper we present GRIN, an efficient diffusion model designed to ingest sparse unstructured training data.
+- We argue that our approach of directly ingesting sparse data is more scalable, since it enables supervised pre-training on much more diverse real-world datasets without relying on inaccurate ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- 3D reconstruction from a single image is a long-standing problem in computer vision.
+- Introduction Depth estimation is a fundamental problem in computer vision and a core component of many practical applications, including augmented reality , medical imaging mobile robotics , and ...
+- Conclusion We introduce GRIN (Geometric RIN), a diffusion-based framework for depth estimation designed to circumvent two of the main shortcomings shown by recent diffusion methods when applied to ...
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Conclusion We introduce GRIN (Geometric RIN), a diffusion-based framework for depth estimation designed to circumvent two of the main shortcomings shown by recent diffusion methods when applied to ...
+- We argue that our approach of directly ingesting sparse data is more scalable, since it enables supervised pre-training on much more diverse real-world datasets without relying on inaccurate ...
+- We build upon the highly efficient and domain-agnostic RIN architecture, and modify it to include visual conditioning with 3D geometric embeddings, which enables the learning of priors anchored ...
+- To directly ingest unstructured groundtruth supervision, we operate at a pixel-level, and introduce global conditioning as a way to preserve dense scene-level information when training with sparse labels.
+- In total, training takes roughly 5 days with distributed data parallel (DDP) across 32 A100 GPUs, with mixed precision format.

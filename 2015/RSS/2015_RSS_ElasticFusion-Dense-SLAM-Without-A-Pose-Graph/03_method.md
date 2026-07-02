@@ -1,18 +1,20 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2015 / RSS
+- Category: Foundations: SLAM and Sensor Geometry
+- Tags: 3D Vision, SLAM, RGB-D, 3D reconstruction
+- Paper link: ./2015/RSS/2015_RSS_ElasticFusion-Dense-SLAM-Without-A-Pose-Graph/paper.pdf
+- Code/Project: https://github.com/mp3guy/ElasticFusion
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- —We present a novel approach to real-time dense visual SLAM.
+- Our approach applies local model-to-model surface loop closure optimisations as often as possible to stay close to the mode of the map distribution, while utilising global loop closure ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, existing dense SLAM methods suitable for incremental, real-time operation struggle when the sensor makes movements which are both of extended duration and often criss-cross loop back on ...
+- In sparse feature-based SLAM, it is well understood that loopy local motion can be dealt with either via joint probabilistic filtering , or in-the-loop joint optimisation of poses ...
+- —We present a novel approach to real-time dense visual SLAM.
 
 ## 핵심 방법론
-- Task family: SLAM, calibration, and geometric consistency
-- Representation: 3D Vision, SLAM, 3D reconstruction
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

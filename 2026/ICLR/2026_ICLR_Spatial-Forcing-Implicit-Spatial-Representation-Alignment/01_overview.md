@@ -3,33 +3,28 @@
 - Year/Venue: 2026 / ICLR Poster
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLA, Vision-Language Model, 3D Vision
-- Authors: Fuhao Li, Wenxuan Song, Han Zhao, Jingbo Wang, Pengxiang Ding, Donglin Wang, Long ZENG, Haoang Li
-- Paper: https://openreview.net/forum?id=euMVC1DO4k
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2026/ICLR/2026_ICLR_Spatial-Forcing-Implicit-Spatial-Representation-Alignment/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Core Idea
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Vision-language-action (VLA) models have recently shown strong potential in enabling robots to follow language instructions and execute precise actions.
-- Method cue: We propose Spatial Forcing (SF), a simple yet effective alignment strategy that implicitly forces VLA models to develop spatial comprehension capabilities without relying on ...
-- Result cue: Vision-language-action (VLA) models have recently shown strong potential in enabling robots to follow language instructions and execute precise actions.
+- The final training objective combines both the standard training loss for action generation and the 3D foundation model alignment loss with a weighting factor α: LSF = Laction ...
+- Object SR (%) Goal SR (%) Long SR (%) Average SR (%) 92.5 85.2 85.7 88.4 96.3 91.6 96.8 98.8 96.8 98.4 68.3 75.1 84.6 79.2 85.4 87.6 ...
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `robot manipulation and vision-language-action control`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: VLA, Vision-Language Model, 3D Vision.
-- 초록에서 확인되는 주요 cue: Vision-language-action, VLA, However, VLAs, Existing, Alternative, Spatial, Forcing.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+
+## Abstract Cue
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

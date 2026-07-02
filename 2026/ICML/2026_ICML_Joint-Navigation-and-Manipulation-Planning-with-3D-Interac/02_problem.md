@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2026 / ICML
+- Category: Navigation and Embodied AI
+- Tags: Vision-Language Model, Robotics, 3D Vision, Navigation
+- Paper link: ./2026/ICML/2026_ICML_Joint-Navigation-and-Manipulation-Planning-with-3D-Interac/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-실내/실외 이동 에이전트는 언어 목표와 3D 공간 구조를 연결해야 하며, partial observation과 탐색-활용 균형 때문에 단순 2D 인식만으로는 안정적이지 않다.
+- The code is available at https://github.com/kekeZ66/3D-IC Object grasping Navigating to the vicinity of the goal then switching to grasping/placing Object placing Step3 Receptacle navigation Step1 Object navigation (a) ...
+- Most existing methods treat navigation and manipulation as separate stages, which can yield navigation endpoints that are poor for manipulation or manipulation-friendly poses that are globally inefficient.
+- A hierarchical policy then scores these chains by jointly considering feasibility (via VLM reasoning over waypointcentric 3D features) and transition cost, selecting the best trade-off between success and ...
 
 ## 해결하려는 문제
-- 연구 유형: embodied navigation and spatial planning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: Open-vocabulary mobile manipulation (OVMM) requires long-horizon navigation in unseen environments and object-centric manipulation.
+- To address this, we propose 3D Interaction Chains (3D-IC), a unified framework that couples multi-stage navigation and manipulation planning.
+- Experiments in simulation and on a real Stretch 3 robot demonstrate consistent gains in both task success and trajectory efficiency.
+- The code is available at https://github.com/kekeZ66/3D-IC Object grasping Navigating to the vicinity of the goal then switching to grasping/placing Object placing Step3 Receptacle navigation Step1 Object navigation (a) ...
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Vision-Language Model, Robotics, 3D Vision, Navigation` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

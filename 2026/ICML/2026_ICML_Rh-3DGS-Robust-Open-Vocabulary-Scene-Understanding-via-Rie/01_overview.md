@@ -3,33 +3,33 @@
 - Year/Venue: 2026 / ICML
 - Category: 3D Semantic Understanding and Alignment
 - Tags: semantic, alignment, 3D Vision
-- Authors: Xinpeng Zhao, Jiang Jie, Fengyuan Zhang, Lixin Zhan, Dong Wang, Qinyuan Bu, Jiahang Tu, Guangzhen Yao
-- Paper: https://openreview.net/forum?id=bjtuHOb3vN
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2026/ICML/2026_ICML_Rh-3DGS-Robust-Open-Vocabulary-Scene-Understanding-via-Rie/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-3D semantic perception은 라벨 공간이 제한적이고 long-tail 객체/속성/affordance를 다루기 어려워 foundation model alignment가 필요하다.
+- Problem: Boundary ambiguity & view inconsistency Open-vocabulary 3D scene understanding answers free-form text queries over reconstructed scenes.
+- Existing 3DGS-based methods often average normalized embeddings in Euclidean space.
+- Visibility-Calibrated Distillation (VCD) computes per-pixel reliability weights from rasterization statistics and down-weights ambiguous pixels.
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Open-vocabulary 3D scene understanding answers free-form text queries over reconstructed scenes.
-- Method cue: We propose **Rh-3DGS**, a robust semantic 3DGS framework that uses reliability-aware distillation and manifold-consistent aggregation. **Visibility-Calibrated Distillation (VCD)** computes per-pixel reliability weights from rasterization ...
-- Result cue: We propose **Rh-3DGS**, a robust semantic 3DGS framework that uses reliability-aware distillation and manifold-consistent aggregation. **Visibility-Calibrated Distillation (VCD)** computes per-pixel reliability weights from rasterization ...
+- We propose Rh-3DGS, a robust semantic 3DGS framework that uses reliability-aware distillation and manifold-consistent aggregation.
+- Rh-3DGS applies VCD for pixel reliability, VFM for hyperspherical aggregation, and LIC for local 3D consistency, yielding sharper and view-stable masks (g–h). ple is 3D Gaussian Splatting (3DGS) ...
 
 ## Input / Output
-Input/Output follows the paper task formulation; see PDF for the exact interface.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `open-vocabulary 3D semantic understanding`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Experiments on three benchmarks show that Rh3DGS is best on open-vocabulary segmentation, boundary quality, and view-consistent rendering. (b) Baseline mask (View-1) (a) RGB(View-1) + zoom-in box (c) Baseline ...
+- Lightweight Consistency Contrast (LIC) regularizes the 3D semantic field with neighborhood-based multi-positive contrast to improve local consistency and sharper boundaries.
 
 ## Limitation
-2D foundation model에서 온 semantic feature가 3D geometry와 완벽히 정렬되지 않으며, long-tail 관계/속성 평가는 여전히 어렵다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- open-vocabulary 3D semantic understanding 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: semantic, alignment, 3D Vision.
-- 초록에서 확인되는 주요 cue: Open-vocabulary, However, Gaussian, Splatting, Existing, Euclidean, This, They.
+- Experiments on three benchmarks show that Rh3DGS is best on open-vocabulary segmentation, boundary quality, and view-consistent rendering. (b) Baseline mask (View-1) (a) RGB(View-1) + zoom-in box (c) Baseline ...
+- We propose Rh-3DGS, a robust semantic 3DGS framework that uses reliability-aware distillation and manifold-consistent aggregation.
+- However, lifting dense 2D foundationmodel embeddings into 3D Gaussian Splatting (3DGS) is still challenging.
+
+## Abstract Cue
+- Problem: Boundary ambiguity & view inconsistency Open-vocabulary 3D scene understanding answers free-form text queries over reconstructed scenes.

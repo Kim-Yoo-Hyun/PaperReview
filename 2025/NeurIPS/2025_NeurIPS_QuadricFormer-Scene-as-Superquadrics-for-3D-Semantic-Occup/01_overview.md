@@ -3,33 +3,34 @@
 - Year/Venue: 2025 / NeurIPS poster
 - Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
 - Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
-- Authors: Sicheng Zuo, Wenzhao Zheng, Xiaoyong Han, Longchao Yang, Yong Pan, Jiwen Lu
-- Paper: https://openreview.net/forum?id=eZNdkwJYbN
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_QuadricFormer-Scene-as-Superquadrics-for-3D-Semantic-Occup/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-3D semantic perception은 라벨 공간이 제한적이고 long-tail 객체/속성/affordance를 다루기 어려워 foundation model alignment가 필요하다.
+- Despite promising applications, 3D semantic occupancy prediction faces efficiency challenges due to its dense 3D predictions .
+- Vision-centric autonomous driving systems have gained much attention for their cost-effectiveness over LiDAR-based solutions .
+- While voxel-based methods use dense 3D grids to capture fine details, they ignore the sparsity of driving scenes and suffer from high computational costs.
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 3D occupancy prediction is crucial for robust autonomous driving systems as it enables comprehensive perception of environmental structures and semantics.
-- Method cue: To address this, we propose to use geometrically expressive superquadrics as scene primitives, enabling efficient representation of complex structures with fewer primitives through their ...
-- Result cue: Extensive experiments on the nuScenes and KITTI-360 datasets demonstrate that QuadricFormer achieves state-of-the-art performance while maintaining superior efficiency.
+- To address this, we propose to use geometrically expressive superquadrics as scene primitives, enabling efficient representation of complex structures with fewer primitives through their inherent shape diversity.
+- Building on this, we present QuadricFormer, a superquadric-based model for efficient 3D occupancy prediction, and introduce a pruning-and-splitting module to further enhance modeling efficiency by concentrating superquadrics in ...
 
 ## Input / Output
-Input/Output follows the paper task formulation; see PDF for the exact interface.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `open-vocabulary 3D semantic understanding`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive experiments on the nuScenes and KITTI-360 datasets demonstrate that QuadricFormer achieves state-of-the-art performance while maintaining superior efficiency.
+- Our method achieves state-of-the-art performance.
+- Our method achieves comparable performance to GaussianFormer-2 with much fewer primitives.
 
 ## Limitation
-2D foundation model에서 온 semantic feature가 3D geometry와 완벽히 정렬되지 않으며, long-tail 관계/속성 평가는 여전히 어렵다.
+- With random initialization, QuadricFormer cannot fully learn accurate superquadric positions, leaving some superquadrics in empty regions and reducing representation efficiency.
 
 ## Contribution
-- open-vocabulary 3D semantic understanding 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: sensor fusion, LiDAR, semantic, alignment, 3D Vision.
-- 초록에서 확인되는 주요 cue: Most, Recent, Gaussians, Building, QuadricFormer, Extensive, KITTI-360, Code.
+- Extensive experiments on the nuScenes and KITTI-360 datasets demonstrate that QuadricFormer achieves state-of-the-art performance while maintaining superior efficiency.
+- To address this, we propose to use geometrically expressive superquadrics as scene primitives, enabling efficient representation of complex structures with fewer primitives through their inherent shape diversity.
+- Building on this, we present QuadricFormer, a superquadric-based model for efficient 3D occupancy prediction, and introduce a pruning-and-splitting module to further enhance modeling efficiency by concentrating superquadrics in ...
+
+## Abstract Cue
+- 3D occupancy prediction is crucial for robust autonomous driving systems as it enables comprehensive perception of environmental structures and semantics.

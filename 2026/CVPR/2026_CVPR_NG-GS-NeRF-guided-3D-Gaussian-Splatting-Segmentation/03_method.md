@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: 3D Semantic Understanding and Alignment
+- Tags: Gaussian Splatting, NeRF, semantic, alignment, 3D Vision
+- Paper link: ./2026/CVPR/2026_CVPR_NG-GS-NeRF-guided-3D-Gaussian-Splatting-Segmentation/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Similar to COB-GS, we use a mask loss to supervise the mask label training process, but add NeRF density generation weights to optimize edge Gaussian continuity learning: mAcc ...
+- Our method leverages the continuous representation capacity of NeRF to refine boundary Gaussians, effectively mitigating discontinuities and achieving superior segmentation performance.
+- Our approach begins by automatically identifying ambiguous Gaussians at object boundaries using mask variance analysis.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Our approach begins by automatically identifying ambiguous Gaussians at object boundaries using mask variance analysis.
+- Similar to COB-GS, we use a mask loss to supervise the mask label training process, but add NeRF density generation weights to optimize edge Gaussian continuity learning: mAcc ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, NeRF, semantic, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Similar to COB-GS, we use a mask loss to supervise the mask label training process, but add NeRF density generation weights to optimize edge Gaussian continuity learning: mAcc ...
+- For evaluation, we use the Neural Volumetric Object Selection (NVOS) , LERF-OVS , and ScanNet .
+- NVOS consists of eight scenes picked from the LLFF dataset.
+- The overall loss function during the joint optimization period is as follows: Ltotal = Lalign + λm Lmask + λc Lcont + λs Lsmth , B-mIoU B-mIoU mAcc ...

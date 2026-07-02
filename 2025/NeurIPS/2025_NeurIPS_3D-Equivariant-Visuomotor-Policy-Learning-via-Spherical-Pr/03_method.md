@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / NeurIPS Spotlight
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Robotics, 3D Vision, equivariant
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_3D-Equivariant-Visuomotor-Policy-Learning-via-Spherical-Pr/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We perform extensive experiments in both simulation and the real world that demonstrate that our method consistently outperforms strong baselines in terms of both ...
+## Brief Method
+- The observation x ∈ X consists of two parts, an eye-in-hand RGB image I, that captures visual information, and proprioceptive data, P ∈ R7 , including the end-effector’s ...
+- In the following subsections, we first describe our observation encoder, which extracts SO(3)-equivariant features from 2D images, and then our equivariant diffusion module.
+- The observation encoder uses spherical projection to map image-extracted features onto a hemisphere and applies spherical convolutions to ensure SO(3)-equivariance, producing the conditioning vector for the diffusion process.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- When used with RGB data, current equivariant policies are unable to fully leverage the SO(3) structure present in the problem and underperform the point cloud version significantly .
+- This paper addresses this challenge by introducing a novel diffusion policy framework that incorporates SO(3)-equivariance into eye-in-hand visuomotor learning.
+- The observation x ∈ X consists of two parts, an eye-in-hand RGB image I, that captures visual information, and proprioceptive data, P ∈ R7 , including the end-effector’s ...
 
 ## 핵심 방법론
-- Task family: geometry-aware equivariant modeling
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- The observation x ∈ X consists of two parts, an eye-in-hand RGB image I, that captures visual information, and proprioceptive data, P ∈ R7 , including the end-effector’s ...
+- In the following subsections, we first describe our observation encoder, which extracts SO(3)-equivariant features from 2D images, and then our equivariant diffusion module.
+- The observation encoder uses spherical projection to map image-extracted features onto a hemisphere and applies spherical convolutions to ensure SO(3)-equivariance, producing the conditioning vector for the diffusion process.
+- The diffusion module is designed as an SO(3)equivariant function of the conditioning vectors and noisy inputs.
+- Image Encoder Our image encoder is detailed in Figure 2a.

@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: 3D Generative Modeling and Diffusion
+- Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
+- Paper link: ./2026/CVPR/2026_CVPR_HAD-Hallucination-Aware-Diffusion-Priors-for-3D-Reconstruc/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To address this challenge, we propose Hallucination-Aware Diffusion prior (HAD), which estimates pixel-wise hallucination score maps for augmented images by leveraging multi-view reasoning capabilities from a feedforward novel ...
+- For each scene, we first train a 3DGS model using 9 input training views, then generate 100 augmented novel views via diffusion priors at a resolution of 960×540.
+- For 3DGS training, we set the learning rates to 8e−5 for Gaussian means, 5e−2 for opacity, 1e−3 for rotation, 5e−4 for the 0-th order spherical harmonics (SH0 ), ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To address this challenge, we propose Hallucination-Aware Diffusion prior (HAD), which estimates pixel-wise hallucination score maps for augmented images by leveraging multi-view reasoning capabilities from a feedforward novel ...
+- This dependency severely limits performance in data-sparse scenarios, such as sparse-view settings and extreme novelview extrapolation tasks where the quality of rendered images degrades dramatically, as illustrated in ...
+- To address this challenge, we propose Hallucination-Aware Diffusion prior (HAD), which estimates pixel-wise hallucination score maps for augmented images by leveraging multi-view reasoning capabilities from a feedforward novel ...
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- For each scene, we first train a 3DGS model using 9 input training views, then generate 100 augmented novel views via diffusion priors at a resolution of 960×540.
+- For 3DGS training, we set the learning rates to 8e−5 for Gaussian means, 5e−2 for opacity, 1e−3 for rotation, 5e−4 for the 0-th order spherical harmonics (SH0 ), ...
+- The poses for these augmented views are sampled from views excluded from the 3DGS training set, providing ground-truth images that enable computation of the ground-truth hallucination score map ...
+- To construct the hallucination score network, we utilize the pretrained multiview encoder Quantitative results – Tab.

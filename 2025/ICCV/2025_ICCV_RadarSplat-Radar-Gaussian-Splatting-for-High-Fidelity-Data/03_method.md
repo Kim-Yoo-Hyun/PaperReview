@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Tags: Gaussian Splatting, 3D reconstruction, sensor fusion, LiDAR, 3D Vision
+- Paper link: ./2025/ICCV/2025_ICCV_RadarSplat-Radar-Gaussian-Splatting-for-High-Fidelity-Data/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- This allows simulating safety-critical scenarios and augmenting training datasets without incurring further data collection costs.
+- Introduction Data-driven, learning-based methods have significantly advanced autonomous driving; however, acquiring suitable training data remains a substantial challenge.
+- To address these limitations, this paper proposes RadarSplat, which integrates Gaussian Splatting with novel radar noise modeling to enable realistic radar data synthesis and enhanced 3D reconstruction.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Introduction Data-driven, learning-based methods have significantly advanced autonomous driving; however, acquiring suitable training data remains a substantial challenge.
+- To address these limitations, this paper proposes RadarSplat, which integrates Gaussian Splatting with novel radar noise modeling to enable realistic radar data synthesis and enhanced 3D reconstruction.
+- This allows simulating safety-critical scenarios and augmenting training datasets without incurring further data collection costs.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Image Synthesis Scene Reconstruction PSNR↑ SSIM↑ LPIPS↓ RMSE↓ R-CD.↓ Radar Fields 22.66 0.20 0.60 3.03 0.29 Acc.↑ 0.59 Ours 26.06 0.51 0.37 1.81 0.04 0.91 Table 1.
+- Image synthesis and geometry reconstruction evaluation on

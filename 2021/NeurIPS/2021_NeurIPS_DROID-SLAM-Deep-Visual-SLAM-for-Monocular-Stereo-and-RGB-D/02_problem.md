@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2021 / NeurIPS
+- Category: Foundations: SLAM and Sensor Geometry
+- Tags: SLAM, RGB-D, geometry
+- Paper link: ./2021/NeurIPS/2021_NeurIPS_DROID-SLAM-Deep-Visual-SLAM-for-Monocular-Stereo-and-RGB-D/paper.pdf
+- Code/Project: https://github.com/princeton-vl/DROID-SLAM
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- The SLAM problem has been approached from a number of different angles.
+- A key element for accuracy has been full Bundle Adjustment (BA), which jointly optimizes the camera poses and the 3D map in a single optimization problem.
+- Previous work has investigated replacing hand-crafted with learned features, using neural 3D representations, and combining learned energy terms with classical optimization backends.
 
 ## 해결하려는 문제
-- 연구 유형: SLAM, calibration, and geometric consistency
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Despite training on monocular video, it can leverage stereo or RGB-D video to achieve improved performance at test time.
+- We introduce DROID-SLAM, a new deep learning based SLAM system.
+- DROID-SLAM is accurate, achieving large improvements over prior work, and robust, suffering from substantially fewer catastrophic failures.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `SLAM, RGB-D, geometry` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- On TartanAir, EuRoC, and TUM-RGBD, we have zero failures. • Strong Generalization: Our system, trained only with monocular input, can directly use stereo or RGB-D input to get ...
+- The SLAM problem has been approached from a number of different angles.
+- A key element for accuracy has been full Bundle Adjustment (BA), which jointly optimizes the camera poses and the 3D map in a single optimization problem.

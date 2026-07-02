@@ -1,26 +1,28 @@
 # Evaluation
 
-## Dataset
-CALVIN, BridgeData, Open X-Embodiment, OXE
+- Year/Venue: 2025 / CoRL
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Planning, Robotics
+- Paper link: ./2025/CoRL/2025_CoRL_Long-VLA-Unleashing-Long-Horizon-Capability-of-Vision-Lang/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `robot manipulation and vision-language-action control`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- CALVIN
 
 ## Metrics
-success rate, task completion, language-conditioned generalization, real/sim transfer, IoU, AP, mAP, SR
+- success rate
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- RQ2: How does our Long-VLA compare with state-of-the-art (SOTA) methods?
+- 4.1 Experiments Setup Simulation & Real-world Experiment.
+- We select CALVIN as our sim① Lift the C cube ulation platform due to its focus on ②/④/⑥/⑧ Put in the bowl long-horizon tasks, and introduce L③ Lift ...
+- The first task emphasizes longer temporal dependencies, while the second evaluates complex action execution.
+- RQ2: How does our Long-VLA compare with state-of-the-art (SOTA) methods?
+- We further propose the L-CALVIN benchmark to systematically evaluate long-horizon manipulation.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: Extensive experiments on both simulated and real-world tasks demonstrate that Long-VLA significantly outperforms prior state-of-the-art methods, establishing a new baseline for long-horizon robotic control.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- RQ2: How does our Long-VLA compare with state-of-the-art (SOTA) methods?
 
 ## Reproducibility Notes
-- Code/Project: not identified
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

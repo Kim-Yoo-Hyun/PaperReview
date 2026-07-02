@@ -3,32 +3,33 @@
 - Year/Venue: 2019 / NAACL
 - Category: Foundations: Transformer and Language Models
 - Tags: LLM, Transformer, pretraining
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/1810.04805
-- PDF status: downloaded
-- GitHub/Project: https://github.com/google-research/bert
+- Paper link: ./2019/NAACL/2019_NAACL_BERT-Pre-training-of-Deep-Bidirectional-Transformers-for-L/paper.pdf
+- Code/Project: https://github.com/google-research/bert
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- The major limitation is that standard language models are unidirectional, and this limits the choice of architectures that can be used during pre-training.
+- There are two existing strategies for applying pre-trained language representations to downstream tasks: feature-based and fine-tuning.
 
 ## Core Idea
-핵심은 attention 기반 sequence modeling을 통해 장거리 의존성과 modality alignment를 scale-up 가능한 방식으로 학습하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers.
+- For example, in OpenAI GPT, the authors use a left-toright architecture, where every token can only attend to previous tokens in the self-attention layers of the Transformer (Vaswani ...
 
 ## Input / Output
-Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `sequence/representation learning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5% (7.7% point absolute improvement), MultiNLI accuracy to 86.7% (4.6% absolute ...
+- As a result, the pre-trained BERT model can be finetuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as ...
+- In this section, we present BERT fine-tuning results on 11 NLP tasks.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- sequence/representation learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: LLM, Transformer, pretraining.
+- We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers.
+- It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5% (7.7% point absolute improvement), MultiNLI accuracy to 86.7% (4.6% absolute ...
+- As a result, the pre-trained BERT model can be finetuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as ...
+
+## Abstract Cue
+- We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers.

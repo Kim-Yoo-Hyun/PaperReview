@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: 3D Equivariance, Calibration, and Registration
+- Tags: Gaussian Splatting, geometry, 3D Vision
+- Paper link: ./2024/ECCV/2024_ECCV_GaussReg-Fast-3D-Registration-with-Gaussian-Splatting/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Training Strategy and Loss Function Due to the scale uncertainty in monocular video reconstruction, we performed data augmentation not only on rotation and translation but also on scaling ...
+- In this section, we present our proposed GaussReg for 3D Registration with Gaussian Splatting (GS).
+- To this end, we propose GaussReg, a novel coarse-to-fine framework, both fast and accurate.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- But this method faces two issues: a) it is difficult to turn NeRF of unbounded scene to bounded voxel; b) the resolution limitation of the voxel grid makes ...
+- To overcome these problems, deep feature extractors are proposed to find more robust correspondences between two point clouds.
+- Training Strategy and Loss Function Due to the scale uncertainty in monocular video reconstruction, we performed data augmentation not only on rotation and translation but also on scaling ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, geometry, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Training Strategy and Loss Function Due to the scale uncertainty in monocular video reconstruction, we performed data augmentation not only on rotation and translation but also on scaling ...
+- In this section, we present our proposed GaussReg for 3D Registration with Gaussian Splatting (GS).
+- We apply two loss functions (overlap-aware circle loss and point matching loss) from the GeoTransformer to constrain our coarse registration network.
+- For every point in P ointsA or P ointsB , we use (x, y, z, α, r, g, b) as the input channel to feed into the coarse ...
+- We denote the camera poses of training images as B B B M {CiA = (RiA , TiA )}N i=0 and {Cj = (Rj , Tj )}j=0 for ...

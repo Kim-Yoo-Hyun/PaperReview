@@ -1,26 +1,30 @@
 # Insights
 
-## Limitation
-- 2D/video mask prediction에 집중하므로 metric geometry, 3D occupancy, physical interaction은 직접 해결하지 않는다.
-- memory가 강점이지만 wrong mask가 memory에 들어가면 error accumulation이 생길 수 있다.
-- object identity는 visual/mask memory에 의존하므로 severe viewpoint change, reflective/transparent objects, robot motion blur에서 추가 검증이 필요하다.
-- promptable segmentation은 open-world perception의 좋은 interface지만, semantic label, affordance, action feasibility는 별도 모델과 결합해야 한다.
+## 이 논문에서 가져갈 핵심 개념
+- 핵심 방법 단서: 1-click 3-click 5-click bounding box ground-truth mask‡ SAM+XMem++ SAM+Cutie SAM 2 56.9 56.7 64.7 68.4 70.1 75.3 70.6 72.2 77.6 67.6 69.4 74.4 72.7 74.1 79.3 Table 4: ...
 
-## Strength
-- image와 video segmentation을 하나의 foundation formulation으로 묶었다.
-- streaming memory 구조가 단순하면서도 real-time/interactive use case에 맞다.
-- SA-V dataset은 object/part/occlusion/reappearance coverage가 넓어 downstream video/robot perception 연구의 data foundation이 된다.
-- SAM 계열의 2D mask prior를 video-consistent prior로 확장했기 때문에 3D semantic mapping에 더 적합하다.
+## 내 연구 방향에서 어떻게 활용할 수 있나
+- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
+- Large-scale pretraining feature를 3D perception의 initialization, pseudo-label, open-vocabulary semantic prior로 사용할 수 있다.
+- 2D foundation model의 강한 recognition prior를 3D consistency, view aggregation, robot task relevance로 재해석해야 한다.
 
-## Paper Claim
-SAM 2는 promptable visual segmentation의 image-only 한계를 넘어 image/video를 통합하는 foundation model이며, 더 적은 user interaction으로 더 정확한 video masklet을 만들고 image segmentation에서도 SAM보다 빠르고 강하다.
+## 이 논문이 끝난 지점
+- 2D/vision-language representation 성능 이후에도 3D metric alignment, temporal consistency, robot interaction feedback은 별도 문제로 남는다.
 
-## Future Work
-- SAM 2 masklet + camera pose/depth를 결합한 temporally consistent 3D semantic map.
-- memory error accumulation을 3D geometry consistency로 검출하고 정정하는 방법.
-- Gaussian Splatting/NeRF feature field에 SAM2 masklet을 distill하여 open-vocabulary object field를 구축.
-- robot manipulation에서 object part masklet을 affordance/contact region으로 연결.
-- active perception policy가 uncertain masklet을 줄이기 위해 next best view나 clarification prompt를 선택하는 방식.
+## 다음 연구 질문
+- 2D foundation feature를 3D point/gaussian/map에 정렬할 때 어떤 consistency loss나 aggregation이 가장 안정적인가?
+- segmentation/recognition prior가 affordance나 manipulation success까지 설명하는가?
+- foundation model confidence를 3D map uncertainty로 변환해 active perception에 사용할 수 있는가?
 
-## 내 관점
-SAM 2는 3D CV 논문은 아니지만, 최신 3D semantic alignment 논문들이 의존하는 2D/video mask foundation이다. 3D Vision + Robotics 연구에서는 "좋은 2D mask를 얻는 모델"이 아니라, temporal object prior를 3D memory와 어떻게 결합할지의 출발점으로 읽어야 한다.
+## 실험으로 확인할 방향
+- 논문 내 evaluation 단서: KITTI / accuracy, mIoU, IoU
+- 내 연구 확장 benchmark 후보: ImageNet, COCO, ScanNet, S3DIS
+- 내 연구 확장 metric 후보: accuracy, mIoU, Recall@K, success rate
+- 검증 초점: 2D recognition transfer, 3D semantic consistency, downstream robotics utility를 확인한다.
+
+## 주의할 점
+- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
+- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+
+## 근거가 되는 논문 단서
+- Method cue: 1-click 3-click 5-click bounding box ground-truth mask‡ SAM+XMem++ SAM+Cutie SAM 2 56.9 56.7 64.7 68.4 70.1 75.3 70.6 72.2 77.6 67.6 69.4 74.4 72.7 74.1 79.3 Table 4: ...

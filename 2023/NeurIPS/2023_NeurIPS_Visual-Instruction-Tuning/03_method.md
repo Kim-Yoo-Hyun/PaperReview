@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2023 / NeurIPS
+- Category: Foundations: Vision-Language Models
+- Tags: Vision-Language Model, LLM, instruction tuning
+- Paper link: ./2023/NeurIPS/2023_NeurIPS_Visual-Instruction-Tuning/paper.pdf
+- Code/Project: https://github.com/haotian-liu/LLaVA
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- By instruction tuning on such generated data, we introduce LLaVA: Large Language and Vision Assistant, an end-to-end trained large multimodal model that connects a vision encoder and an ...
+- We present the instruction-following data.
+- Best variant 90.92 89.96 (-0.96) We tried using the last layer feature from CLIP 89.77 (-1.15) Predict answer first vision encoder, which yields 89.96% and is Training from ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- One key challenge is the lack of vision-language instruction-following data.
+- By instruction tuning on such generated data, we introduce LLaVA: Large Language and Vision Assistant, an end-to-end trained large multimodal model that connects a vision encoder and an ...
 
 ## 핵심 방법론
-- Task family: vision or vision-language foundation model pretraining
-- Representation: LLM
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Best variant 90.92 89.96 (-0.96) We tried using the last layer feature from CLIP 89.77 (-1.15) Predict answer first vision encoder, which yields 89.96% and is Training from ...
+- We skip pre-training and directly train on Science QA from scratch – performance drops to 85.81% accuracy.
+- The 5.11% absolute degradation indicates the importance of our pre-training stage, in aligning multimodal features while preserving the vast pre-trained knowledge. (iv) Model size.

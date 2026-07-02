@@ -1,20 +1,35 @@
 # Insights
 
-## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+## 이 논문에서 가져갈 핵심 개념
+- 핵심 방법 단서: To develop them, we address the following questions about image segmentation: We introduce the Segment Anything (SA) project: a new task, model, and dataset for image segmentation.
+- 출발 문제 단서: With this model, we aim to solve a range of downstream segmentation problems on new data distributions using prompt engineering.
+- 주장된 효과 단서: We evaluate its capabilities on numerous tasks and find that its zero-shot performance is impressive – often competitive with or even superior to prior fully supervised results.
 
-## Strength
-- `vision or vision-language foundation model pretraining` 문제를 3D geometry와 language/action prior를 함께 쓰는 방향으로 밀어붙인다.
-- 사용자의 연구 키워드 중 `segmentation, foundation model, prompting`와 직접적으로 연결된다.
+## 내 연구 방향에서 어떻게 활용할 수 있나
+- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
+- Large-scale pretraining feature를 3D perception의 initialization, pseudo-label, open-vocabulary semantic prior로 사용할 수 있다.
+- 2D foundation model의 강한 recognition prior를 3D consistency, view aggregation, robot task relevance로 재해석해야 한다.
 
-## Paper Claim
-- 논문의 중심 claim은 기존 2D-only, closed-set, 또는 task-specific 접근보다 더 일반화 가능한 3D-aware representation/policy/reasoning을 제공한다는 것이다.
-- Abstract result cue: 자동 추출 없음.
+## 이 논문이 끝난 지점
+- 논문이 도달한 지점: We evaluate its capabilities on numerous tasks and find that its zero-shot performance is impressive – often competitive with or even superior to prior fully supervised results.
+- 2D/vision-language representation 성능 이후에도 3D metric alignment, temporal consistency, robot interaction feedback은 별도 문제로 남는다.
 
-## Future Work
-- dynamic scene, partial observation, sensor noise, cross-embodiment transfer, real-time inference, safety-aware planning을 추가 검증하는 것이 중요하다.
-- 3D scene graph/semantic Gaussian/SLAM map을 VLA policy의 persistent memory로 연결하는 방향이 유망하다.
+## 다음 연구 질문
+- 2D foundation feature를 3D point/gaussian/map에 정렬할 때 어떤 consistency loss나 aggregation이 가장 안정적인가?
+- segmentation/recognition prior가 affordance나 manipulation success까지 설명하는가?
+- foundation model confidence를 3D map uncertainty로 변환해 active perception에 사용할 수 있는가?
 
-## 내 관점
-- 이 논문은 `Foundations: Vision Foundation Models` 축에서 읽어야 한다.
-- 후속 연구 아이디어: language-grounded 3D memory를 만들고, robot policy가 이를 action feasibility와 uncertainty까지 포함해 조회하도록 설계한다.
+## 실험으로 확인할 방향
+- 논문 내 evaluation 단서: COCO / mIoU, IoU, AP, mAP
+- 내 연구 확장 benchmark 후보: ImageNet, COCO, ScanNet, S3DIS
+- 내 연구 확장 metric 후보: accuracy, mIoU, Recall@K, success rate
+- 검증 초점: 2D recognition transfer, 3D semantic consistency, downstream robotics utility를 확인한다.
+
+## 주의할 점
+- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
+- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+
+## 근거가 되는 논문 단서
+- Problem cue: With this model, we aim to solve a range of downstream segmentation problems on new data distributions using prompt engineering.
+- Method cue: To develop them, we address the following questions about image segmentation: We introduce the Segment Anything (SA) project: a new task, model, and dataset for image segmentation.
+- Result cue: We evaluate its capabilities on numerous tasks and find that its zero-shot performance is impressive – often competitive with or even superior to prior fully supervised results.

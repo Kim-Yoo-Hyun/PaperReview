@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2025 / ICCV
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Vision-Language Model, 3D Vision, Gaussian Splatting
+- Paper link: ./2025/ICCV/2025_ICCV_CLIP-GS-Unifying-Vision-Language-Representation-with-3D-Ga/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- This limitation constrains the potential of point cloud-based 3D multimodal representation learning.
+- Existing works in 3D representation learning have made remarkable progress, particularly through the development of transformer-based approaches , as well as mamba-based approaches .
+- Compared to the emerging 3D representation technique, 3D Gaussian Splatting (3DGS), the spatially sparse point cloud cannot depict the texture information of 3D objects, resulting in inferior reconstruction ...
 
 ## 해결하려는 문제
-- 연구 유형: language-aware Gaussian/implicit 3D scene representation
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- We introduce the GS Tokenizer to generate serialized gaussian tokens, which are then processed through transformer layers pre-initialized with weights from point cloud models, resulting in the 3DGS ...
+- How- ever, the emphasis predominantly remains on point cloud, which, as a sparse spatial representation, offers limited 3D reconstruction capabilities compared to the emerging 3D modeling method 3D ...
+- Leveraging the well-aligned multimodal representations, CLIP-GS demonstrates versatility and outperforms point cloud-based models on various 3D tasks, including multimodal retrieval, zero-shot, and few-shot classification.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Vision-Language Model, 3D Vision, Gaussian Splatting` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

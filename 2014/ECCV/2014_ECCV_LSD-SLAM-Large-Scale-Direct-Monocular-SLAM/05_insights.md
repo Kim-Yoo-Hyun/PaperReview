@@ -1,20 +1,35 @@
 # Insights
 
-## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+## 이 논문에서 가져갈 핵심 개념
+- 핵심 방법 단서: We propose a direct (feature-less) monocular SLAM algorithm which, in contrast to current state-of-the-art regarding direct methods, allows to build large-scale, consistent maps of the environment.
+- 출발 문제 단서: The fundamental idea behind feature-based approaches (both filtering-based and keyframe-based ) is to split the overall problem – estimating geometric information from images – into two sequential steps: ...
+- 주장된 효과 단서: We propose a direct (feature-less) monocular SLAM algorithm which, in contrast to current state-of-the-art regarding direct methods, allows to build large-scale, consistent maps of the environment.
 
-## Strength
-- `SLAM, calibration, and geometric consistency` 문제를 3D geometry와 language/action prior를 함께 쓰는 방향으로 밀어붙인다.
-- 사용자의 연구 키워드 중 `3D Vision, SLAM, monocular geometry, 3D reconstruction`와 직접적으로 연결된다.
+## 내 연구 방향에서 어떻게 활용할 수 있나
+- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
+- Geometry reconstruction, pose estimation, map update 원리를 robot의 spatial memory와 3D scene understanding 기반으로 사용할 수 있다.
+- Classical geometry/SLAM의 metric constraint는 VLM/LLM 기반 semantic reasoning이 놓치는 scale, pose, visibility 문제를 보정한다.
 
-## Paper Claim
-- 논문의 중심 claim은 기존 2D-only, closed-set, 또는 task-specific 접근보다 더 일반화 가능한 3D-aware representation/policy/reasoning을 제공한다는 것이다.
-- Abstract result cue: 자동 추출 없음.
+## 이 논문이 끝난 지점
+- 논문이 도달한 지점: We propose a direct (feature-less) monocular SLAM algorithm which, in contrast to current state-of-the-art regarding direct methods, allows to build large-scale, consistent maps of the environment.
+- geometric accuracy 이후에도 open-vocabulary semantics, dynamic objects, learned priors, task-aware mapping은 후속 연구 지점으로 남는다.
 
-## Future Work
-- dynamic scene, partial observation, sensor noise, cross-embodiment transfer, real-time inference, safety-aware planning을 추가 검증하는 것이 중요하다.
-- 3D scene graph/semantic Gaussian/SLAM map을 VLA policy의 persistent memory로 연결하는 방향이 유망하다.
+## 다음 연구 질문
+- SLAM/reconstruction map에 language-aligned semantic feature를 붙여도 geometric consistency가 유지되는가?
+- learned depth/geometry prior와 online sensor measurement를 어떻게 결합해야 drift와 hallucination을 줄일 수 있는가?
+- robot task success에 필요한 map detail은 reconstruction metric과 어떻게 다른가?
 
-## 내 관점
-- 이 논문은 `Foundations: SLAM and Sensor Geometry` 축에서 읽어야 한다.
-- 후속 연구 아이디어: language-grounded 3D memory를 만들고, robot policy가 이를 action feasibility와 uncertainty까지 포함해 조회하도록 설계한다.
+## 실험으로 확인할 방향
+- 논문 내 evaluation 단서: TUM RGB-D / accuracy, mAP, RMSE, SR
+- 내 연구 확장 benchmark 후보: TUM RGB-D, EuRoC, KITTI, ScanNet
+- 내 연구 확장 metric 후보: ATE, RPE, AbsRel, RMSE
+- 검증 초점: pose/reconstruction accuracy, semantic map consistency, robot navigation/manipulation utility를 확인한다.
+
+## 주의할 점
+- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
+- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+
+## 근거가 되는 논문 단서
+- Problem cue: The fundamental idea behind feature-based approaches (both filtering-based and keyframe-based ) is to split the overall problem – estimating geometric information from images – into two sequential steps: ...
+- Method cue: We propose a direct (feature-less) monocular SLAM algorithm which, in contrast to current state-of-the-art regarding direct methods, allows to build large-scale, consistent maps of the environment.
+- Result cue: We propose a direct (feature-less) monocular SLAM algorithm which, in contrast to current state-of-the-art regarding direct methods, allows to build large-scale, consistent maps of the environment.

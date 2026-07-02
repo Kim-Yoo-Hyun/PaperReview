@@ -3,32 +3,34 @@
 - Year/Venue: 2024 / ECCV
 - Category: 3D Equivariance, Calibration, and Registration
 - Tags: geometry, 3D Vision
-- Authors: Alexander Veicht*, Paul-Edouard Sarlin*, Philipp Lindenberger, Marc Pollefeys
-- Paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5636_ECCV_2024_paper.php
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2024/ECCV/2024_ECCV_GeoCalib-Learning-Single-image-Calibration-with-Geometric/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- This problem has been extensively studied, and many tools based on 3D geometry are available .
+- Current approaches to this problem are based on either classical geometry with lines and vanishing points or on deep neural networks trained end-to-end.
+- Experiments on various benchmarks show that GeoCalib is more robust and more accurate than existing classical and learned approaches.
 
 ## Core Idea
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- Datasets: We conduct this experiment on four popular datasets not seen during training. i) Stanford2D3D consists of images samples from 360° panoramas captured inside university buildings. ii) TartanAir ...
+- In this work, we introduce GeoCalib, a deep neural network that leverages universal rules of 3D geometry through an optimization process.
 
 ## Input / Output
-Input: one or more images/RGB-D/LiDAR observations. Output: depth, camera pose, point map, dense reconstruction, or consistent map.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D reconstruction, calibration, and geometric consistency`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Experiments on various benchmarks show that GeoCalib is more robust and more accurate than existing classical and learned approaches.
+- Experiments are performed on a diverse range of real-world images (indoor, outdoor, and natural environments), and we analyze the impacts of our design decisions.
+- We show some qualitative examples in Fig.
 
 ## Limitation
-강한 benchmark 성능이 실제 로봇 센서 노이즈, rolling shutter, 동적 객체, 저조도 환경까지 보장하지는 않는다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D reconstruction, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: geometry, 3D Vision.
+- Experiments on various benchmarks show that GeoCalib is more robust and more accurate than existing classical and learned approaches.
+- In this work, we introduce GeoCalib, a deep neural network that leverages universal rules of 3D geometry through an optimization process.
+- Current approaches to this problem are based on either classical geometry with lines and vanishing points or on deep neural networks trained end-to-end.
+
+## Abstract Cue
+- From a single image, visual cues can help deduce intrinsic and extrinsic camera parameters like the focal length and the gravity direction.

@@ -1,18 +1,19 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ICRA
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model, Robotics
+- Paper link: ./2026/ICRA/2026_ICRA_Audio-VLA-Adding-Contact-Audio-Perception-to-Vision-Langua/paper.pdf
+- Code/Project: not identified from venue audit
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Audio-VLA employs pre-trained DINOv2 and SigLIP as visual encoders, AudioCLIP as the audio encoder, and Llama2 as the large language model backbone.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, vision-only VLA models create fundamental limitations, particularly in perceiving interactive and manipulation dynamic processes.
+- However, current VLA methods exhibit a fundamental limitation as they rely exclusively on visual perception – .
+- Audio-VLA employs pre-trained DINOv2 and SigLIP as visual encoders, AudioCLIP as the audio encoder, and Llama2 as the large language model backbone.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Spatial Object RLBench Goal Long Avg Task2 Task3 Task4 Task5 Avg 62.1 68.3 75.1 8.9 12.3 15.0 5.2 8.7 18.9 75.0 81.2 87.5 68.3 70.1 79.2 43.9 48.1 ...

@@ -3,33 +3,34 @@
 - Year/Venue: 2025 / NeurIPS poster
 - Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
 - Tags: geometry, sensor fusion, LiDAR, 3D Vision
-- Authors: Weiyi Xue, Fan Lu, Yunwei Zhu, Zehan Zheng, Sanqing Qu, Jiangtong Li, Ya Wu, Haiyun Wei
-- Paper: https://openreview.net/forum?id=GQHUET0V6f
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_Multimodal-LiDAR-Camera-Novel-View-Synthesis-with-Unified/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- Nevertheless, prior research has faced challenges due to the signiﬁcant domain gap and uncoordinated convergence problems between these modalities.
+- To alleviate modality conﬂicts and address the uncoordinated convergence problem, we introduce a multimodal-speciﬁc coarse-to-ﬁne training approach , facilitating the utilization of a singular hash grid for compact ...
+- Regarding the challenges encountered in the aforementioned single-modality approach, Continuous Neural LiDAR Fields can provide pixel-wise depth supervision for images and directly propagate gradients to pose estimation, providing ...
 
 ## Core Idea
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Pose-free Neural Radiance Field (NeRF) aims at novel view synthesis (NVS) without relying on accurate poses, exhibiting significant practical value.
-- Method cue: In light of this, we propose MUP, a pose-free framework for LiDAR-Camera joint NVS in large-scale scenes.
-- Result cue: Extensive experiments on KITTI-360 and NuScenes datasets demonstrate MUP's superiority in accomplishing geometry-aware, modality-consistent, and pose-free 3D reconstruction.
+- Besides, to alleviate the domain gap between modalities, we propose a multimodal-speciﬁc coarse-to-ﬁne training approach for uniﬁed, compact reconstruction.
+- Moreover, to further guide pose optimization of NeRF, we propose a multimodal geometric optimizer that leverages geometric relations from point clouds and photometric regularization from adjacent image frames.
 
 ## Input / Output
-Input: one or more images/RGB-D/LiDAR observations. Output: depth, camera pose, point map, dense reconstruction, or consistent map.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D reconstruction, calibration, and geometric consistency`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Thus, compared to single-modality methods and i-NGP that with and without point clouds for depth supervision, we achieve highquality NVS and the best results across both modalities.
+- The results indicate that relying solely on NeRF’s implicit pose optimization fails to achieve accurate pose estimates and leads to convergence at local optima.
+- Therefore, we exclude the MMG and conduct ablation experiments with GT pose to further demonstrate the advantages of our Uniﬁed NeRF with the multimodal-speciﬁc coarseto-ﬁne training strategy (MSC2F) ...
 
 ## Limitation
-강한 benchmark 성능이 실제 로봇 센서 노이즈, rolling shutter, 동적 객체, 저조도 환경까지 보장하지는 않는다.
+- We revisit the limitations of single-modality pose-free methods in large-scale scenes.
 
 ## Contribution
-- 3D reconstruction, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: geometry, sensor fusion, LiDAR, 3D Vision.
-- 초록에서 확인되는 주요 cue: Pose-free, Neural, Radiance, Field, NeRF, NVS, Image, LiDAR.
+- Besides, to alleviate the domain gap between modalities, we propose a multimodal-speciﬁc coarse-to-ﬁne training approach for uniﬁed, compact reconstruction.
+- In light of this, we propose MUP, a pose-free framework for LiDAR-Camera joint NVS in largescale scenes.
+- Moreover, to further guide pose optimization of NeRF, we propose a multimodal geometric optimizer that leverages geometric relations from point clouds and photometric regularization from adjacent image frames.
+
+## Abstract Cue
+- Pose-free Neural Radiance Field (NeRF) aims at novel view synthesis (NVS) without relying on accurate poses, exhibiting signiﬁcant practical value.

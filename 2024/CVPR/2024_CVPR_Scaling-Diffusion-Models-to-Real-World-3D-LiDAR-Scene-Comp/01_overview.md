@@ -3,32 +3,34 @@
 - Year/Venue: 2024 / CVPR
 - Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
 - Tags: sensor fusion, LiDAR, Diffusion, Generation, 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Nunes_Scaling_Diffusion_Models_to_Real-World_3D_LiDAR_Scene_Completion_CVPR_2024_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2024/CVPR/2024_CVPR_Scaling-Diffusion-Models-to-Real-World-3D-LiDAR-Scene-Comp/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-생성 모델 또는 policy 모델이 3D 구조와 물리 제약을 보존하지 못하면 로봇 실행이나 3D 장면 생성에서 일관성이 깨진다.
+- Previous works used diffusion models over range images extracted from LiDAR data, directly applying image-based diffusion methods.
+- Such systems rely on the data collected by the sensors installed on the vehicle to perceive the environment but fail to deduce areas only partially observable by the ...
+- 3D LiDAR sensors are commonly used to collect sparse 3D point clouds from the scene.
 
 ## Core Idea
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- Together with our approach, we propose a regularization loss to stabilize the noise predicted during the denoising process.
+- Given the promising results of recent diffusion models as generative models for images, we propose extending them to achieve scene completion from a single 3D LiDAR scan.
 
 ## Input / Output
-Input/Output follows the paper task formulation; see PDF for the exact interface.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `diffusion-based generation or policy learning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Given the promising results of recent diffusion models as generative models for images, we propose extending them to achieve scene completion from a single 3D LiDAR scan.
+- Our experimental evaluation shows that our method can complete the scene given a single LiDAR scan as input, producing a scene with more details compared to state-of-the-art scene ...
+- In this matter, the scene completion task aims at predicting the gaps in the LiDAR measurements to achieve a more complete scene representation.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- diffusion-based generation or policy learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: sensor fusion, LiDAR, Diffusion, Generation, 3D Vision.
+- Given the promising results of recent diffusion models as generative models for images, we propose extending them to achieve scene completion from a single 3D LiDAR scan.
+- Our experimental evaluation shows that our method can complete the scene given a single LiDAR scan as input, producing a scene with more details compared to state-of-the-art scene ...
+- Together with our approach, we propose a regularization loss to stabilize the noise predicted during the denoising process.
+
+## Abstract Cue
+- Computer vision techniques play a central role in the perception stack of autonomous vehicles.

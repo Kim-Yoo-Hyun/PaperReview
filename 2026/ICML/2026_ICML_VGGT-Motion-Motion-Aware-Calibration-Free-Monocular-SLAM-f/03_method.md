@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2026 / ICML spotlight
+- Category: 3D Equivariance, Calibration, and Registration
+- Tags: geometry, depth, 3D Vision
+- Paper link: ./2026/ICML/2026_ICML_VGGT-Motion-Motion-Aware-Calibration-Free-Monocular-SLAM-f/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address these issues, we propose VGGT-Motion, a calibration-free SLAM system for efficient and robust global consistency over kilometer-scale trajectories.
+## Brief Method
+- To address these issues, we propose VGGT-Motion, a calibration-free SLAM system for efficient and robust global consistency over kilometer-scale trajectories.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Motion-agnostic partitioning breaks contextual coherence and causes zero-motion drift, while conventional geometric alignment is computationally expensive.
+- By exploiting context-balanced anchors, it achieves search-free, pixel-wise dense alignment and efficient loop closure without costly feature matching.
+- To address these issues, we propose VGGT-Motion, a calibration-free SLAM system for efficient and robust global consistency over kilometer-scale trajectories.
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: geometry, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- LC 00 01 02 03 04 05 06 07 08 09 10 Avg.
+- Avg.* Detail seq. frames 4541 1101 4661 801 271 2761 1101 1101 4071 1591 1201 2109 2210 seq. length (m) - 2453.20 5067.23 3724.19 560.89 393.65 2205.58 1232.88 ...
+- ORB-SLAM2 × 40.65 502.20 47.82 0.94 1.30 29.95 40.82 16.04 43.09 38.77 5.42 69.73 26.48 ORB-SLAM2 ✓ 6.03 508.34 14.76 1.02 1.57 4.04 11.16 2.19 38.85 8.39 6.63 ...
+- MASt3R-SLAM ✓ TL TL TL TL TL TL TL TL TL TL TL CUT3R × OOM OOM OOM 148.1 22.31 OOM OOM OOM OOM OOM OOM Fast3R × ...
+- Absolute Trajectory Error (ATE ↓) RMSE (m) comparison on Waymo Open dataset.

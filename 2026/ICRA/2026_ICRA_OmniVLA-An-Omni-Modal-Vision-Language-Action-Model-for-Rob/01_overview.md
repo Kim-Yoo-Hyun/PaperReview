@@ -3,32 +3,33 @@
 - Year/Venue: 2026 / ICRA
 - Category: Navigation and Embodied AI
 - Tags: VLA, Vision-Language Model, Robotics, Navigation
-- Authors: 
-- Paper: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html
-- PDF status: downloaded
-- GitHub/Project: not identified from venue audit
+- Paper link: ./2026/ICRA/2026_ICRA_OmniVLA-An-Omni-Modal-Vision-Language-Action-Model-for-Rob/paper.pdf
+- Code/Project: not identified from venue audit
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-실내/실외 이동 에이전트는 언어 목표와 3D 공간 구조를 연결해야 하며, partial observation과 탐색-활용 균형 때문에 단순 2D 인식만으로는 안정적이지 않다.
+- In contrast, most existing robotic navigation policies are trained on a single modality, limiting their adaptability to real-world scenarios where different forms of goal specification are natural and ...
+- However, prior work in robot navigation typically trains policies with single modalities based on narrow applications.
 
 ## Core Idea
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We present videos showcasing OmniVLA’s performance and will release its checkpoints and training code on our project page1 .
+- In this work, we present a training framework for robotic foundation models that enables omni-modal goal conditioning for vision-based navigation.
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `embodied navigation and spatial planning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- We demonstrate that OmniVLA outperforms specialist baselines across modalities and offers a flexible foundation for fine-tuning to new modalities and tasks.
+- The resulting model, OmniVLA, achieves strong generalization to unseen environments, robustness to scarce modalities, and the ability to follow novel natural language instructions.
+- We present videos showcasing OmniVLA’s performance and will release its checkpoints and training code on our project page1 .
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- embodied navigation and spatial planning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: VLA, Vision-Language Model, Robotics, Navigation.
+- We present videos showcasing OmniVLA’s performance and will release its checkpoints and training code on our project page1 .
+- In this work, we present a training framework for robotic foundation models that enables omni-modal goal conditioning for vision-based navigation.
+- We demonstrate that OmniVLA outperforms specialist baselines across modalities and offers a flexible foundation for fine-tuning to new modalities and tasks.
+
+## Abstract Cue
+- — Humans can flexibly interpret and compose different goal specifications, such as language instructions, spatial coordinates, or visual references, when navigating to a destination.

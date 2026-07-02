@@ -1,26 +1,28 @@
 # Evaluation
 
-## Dataset
-OXE, nuScenes, Waymo, KITTI, SemanticKITTI
+- Year/Venue: 2023 / ICCV
+- Category: Foundations: 3D Semantic Occupancy
+- Tags: 3D Vision, semantic, occupancy, Transformer
+- Paper link: ./2023/ICCV/2023_ICCV_OccFormer-Dual-path-Transformer-for-Vision-based-3D-Semant/paper.pdf
+- Code/Project: https://github.com/zhangyp15/OccFormer
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `core 3D geometry and scene representation learning`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- KITTI
+- SemanticKITTI
+- nuScenes
 
 ## Metrics
-mIoU, AP, mAP, open-vocabulary accuracy, long-tail performance, IoU, SR, SPL
+- mIoU
+- IoU
+- mAP
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Experimental results demonstrate that OccFormer significantly outperforms existing methods for semantic scene completion on SemanticKITTI dataset and for LiDAR semantic segmentation on nuScenes dataset.
+- OccFormer achieves a long-range, dynamic, and efficient encoding of the camera-generated 3D voxel features.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Reproducibility Notes
-- Code/Project: https://github.com/zhangyp15/OccFormer
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2025 / NeurIPS poster
+- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Tags: geometry, sensor fusion, LiDAR, 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_Multimodal-LiDAR-Camera-Novel-View-Synthesis-with-Unified/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- Nevertheless, prior research has faced challenges due to the signiﬁcant domain gap and uncoordinated convergence problems between these modalities.
+- To alleviate modality conﬂicts and address the uncoordinated convergence problem, we introduce a multimodal-speciﬁc coarse-to-ﬁne training approach , facilitating the utilization of a singular hash grid for compact ...
+- Regarding the challenges encountered in the aforementioned single-modality approach, Continuous Neural LiDAR Fields can provide pixel-wise depth supervision for images and directly propagate gradients to pose estimation, providing ...
 
 ## 해결하려는 문제
-- 연구 유형: 3D reconstruction, calibration, and geometric consistency
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: While demonstrating impressive performance, single-modality pose-free NeRFs often suffer from local optima due to the limited geometric information provided by dense image textures or ...
+- Besides, to alleviate the domain gap between modalities, we propose a multimodal-speciﬁc coarse-to-ﬁne training approach for uniﬁed, compact reconstruction.
+- In light of this, we propose MUP, a pose-free framework for LiDAR-Camera joint NVS in largescale scenes.
+- Moreover, to further guide pose optimization of NeRF, we propose a multimodal geometric optimizer that leverages geometric relations from point clouds and photometric regularization from adjacent image frames.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `geometry, sensor fusion, LiDAR, 3D Vision` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- Nevertheless, prior research has faced challenges due to the signiﬁcant domain gap and uncoordinated convergence problems between these modalities.
+- To alleviate modality conﬂicts and address the uncoordinated convergence problem, we introduce a multimodal-speciﬁc coarse-to-ﬁne training approach , facilitating the utilization of a singular hash grid for compact ...
+- In summary, our primary contributions can be delineated as follows: (1) We propose MUP, a uniﬁed pose-free framework that combines the advantages of two modalities for pose estimation ...

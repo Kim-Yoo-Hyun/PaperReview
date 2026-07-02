@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2025 / 3DV
+- Category: 3D Reconstruction, Geometry, and SLAM
+- Tags: geometry, depth, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_FlowMap-High-Quality-Camera-Poses-Intrinsics-and-Depth-via/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-Our method performs per-video gradient-descent minimization of a simple least-squares objective that compares the optical flow induced by depth, intrinsics, and poses against correspondences ...
+## Brief Method
+- We use 90% of the available views for training and 10% for testing.
+- Alongside the use of point tracks to encourage long-term geometric consistency, we introduce differentiable re-parameterizations of depth, intrinsics, and pose that are amenable to first-order optimization.
+- We use the 3D points provided by COLMAP, DROID-SLAM, and FlowMap as input to 3D Gaussian Splatting.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Introduction Reconstructing a 3D scene from video is one of the most fundamental problems in vision and has been studied for over five decades.
+- These approaches extract sparse correspondences across frames, match them, discard outliers, and then optimize the correspondences’ 3D positions alongside the camera parameters by minimizing reprojection error .
+- We use 90% of the available views for training and 10% for testing.
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: geometry, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We use 90% of the available views for training and 10% for testing.
+- We use the 3D points provided by COLMAP, DROID-SLAM, and FlowMap as input to 3D Gaussian Splatting.
+- For each candidate, we use our pose solver Eq.
+- We further highlight that FlowMap’s reparameterizations are necessary to estimate poses and intrinsics in a single forward pass, which is crucial for the generalizable (pretraining) setting explored in ...
+- During pre-training, in order to minimize the time spent computing correspondences, we do not use point tracks and use GMFlow to compute optical flow instead of RAFT.

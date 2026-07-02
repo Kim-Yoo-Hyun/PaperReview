@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
+- Year/Venue: 2026 / ICML
+- Category: Navigation and Embodied AI
+- Tags: Vision-Language Model, Navigation
+- Paper link: ./2026/ICML/2026_ICML_MapDream-Task-Driven-Map-Learning-for-Vision-Language-Navi/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-Based on this insight, we propose MapDream, a map-in-the-loop framework that formulates map construction as autoregressive bird’s-eye-view (BEV) image synthesis.
+## Brief Method
+- Based on this insight, we propose MapDream, a map-in-the-loop framework that formulates map construction as autoregressive bird’seye-view (BEV) image synthesis.
+- Supervised pretraining bootstraps a reliable mapping-to-control interface, while the autoregressive design enables end-to-end joint optimization through reinforcement fine-tuning.
+- RxR Val-Unseen SR ↑ SR ↑ Table 2 further reports zero-shot generalization to RxR-CE when training only on R2R-CE.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, most existing approaches rely on hand-crafted maps constructed independently of the navigation policy.
+- A central difficulty of VLN is partial observability.
+- Based on this insight, we propose MapDream, a map-in-the-loop framework that formulates map construction as autoregressive bird’seye-view (BEV) image synthesis.
 
 ## 핵심 방법론
-- Task family: embodied navigation and spatial planning
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- RxR Val-Unseen SR ↑ SR ↑ Table 2 further reports zero-shot generalization to RxR-CE when training only on R2R-CE.

@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Scene Graphs and Graph Reasoning
+- Tags: Vision-Language Model, Graph Reasoning, semantic
+- Paper link: ./2025/ICCV/2025_ICCV_Vision-Language-Interactive-Relation-Mining-for-Open-Vocab/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To this end, we propose a novel Vision-Language Interactive Relation Mining model (VL-IRM) for OV-SGG, which explores learning generalized relation-aware knowledge through multimodal interaction.
+- Since the task evaluation of OV-SGG requires the score of relation triplets based on the relation logits for ranking , to assess the effectiveness of the open-end generative ...
+- Specifically, first, to enhance the generalization of the relation text to visual content, we present a generative relation model to make the text modality explore possible open-ended relations ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Though existing methods have been verified to be effective, they usually follow a closed-set assumption, i.e., the training and testing data share the same predicate categories.
+- Illustration of the interactive visual-language model for OV-SGG. (a) Previous methods directly use category-level correspondence to adapt the vision-language models to openvocabulary relations. (b) In this work, we ...
+- To this end, we propose a novel Vision-Language Interactive Relation Mining model (VL-IRM) for OV-SGG, which explores learning generalized relation-aware knowledge through multimodal interaction.
 
 ## 핵심 방법론
-- Task family: structured 3D scene graph reasoning
-- Representation: Graph Reasoning, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Since the task evaluation of OV-SGG requires the score of relation triplets based on the relation logits for ranking , to assess the effectiveness of the open-end generative ...
+- We use pre-trained GLIP models to initialize our model and keep the visual backbone and text encoder frozen.
+- Method Backbone Training Dataset SVRP CaCao PGSG Ours Faster-RCNN CLIP BLIP GLIP VG VG,CC3M,COCO caption VG VG Novel+base R@50/100 mR@50/100 33.5 / 35.9 8.3 / 10.8 -/10.3 / ...
+- Following previous works , the Open-Vocabulary SGG (OV-SGG) setting requires the model not to see novel relation categories during training.
+- During training, only base relation annotation is available.

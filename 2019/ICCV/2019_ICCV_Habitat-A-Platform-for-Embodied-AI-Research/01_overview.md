@@ -3,32 +3,34 @@
 - Year/Venue: 2019 / ICCV
 - Category: Benchmarks and Datasets
 - Tags: Robotics, Navigation, Embodied AI, Benchmark
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/1904.01201
-- PDF status: downloaded
-- GitHub/Project: https://aihabitat.org/
+- Paper link: ./2019/ICCV/2019_ICCV_Habitat-A-Platform-for-Embodied-AI-Research/paper.pdf
+- Code/Project: https://aihabitat.org/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-실내/실외 이동 에이전트는 언어 목표와 3D 공간 구조를 연결해야 하며, partial observation과 탐색-활용 균형 때문에 단순 2D 인식만으로는 안정적이지 않다.
+- We present Habitat, a platform for research in embodied artificial intelligence (AI).
+- Habitat enables training embodied agents (virtual robots) in highly efficient photorealistic 3D simulation.
+- Specifically, Habitat consists of: (i) Habitat-Sim: a flexible, high-performance 3D simulator with configurable agents, sensors, and generic 3D dataset handling.
 
 ## Core Idea
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We present Habitat, a platform for research in embodied artificial intelligence (AI).
+- Specifically, Habitat consists of: (i) Habitat-Sim: a flexible, high-performance 3D simulator with configurable agents, sensors, and generic 3D dataset handling.
 
 ## Input / Output
-Input: benchmark-specific observations/instructions. Output: standardized labels, tasks, or evaluation scores for comparing models.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `embodied navigation and spatial planning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Specifically, in the context of point-goal navigation: (1) we revisit the comparison between learning and SLAM approaches from two recent works and find evidence for the opposite conclusion ...
+- Habitat-Sim is fast – when rendering a scene from Matterport3D, it achieves several thousand frames per second (fps) running single-threaded, and can reach over 10,000 fps multi-process on ...
+- These large-scale engineering contributions enable us to answer scientific questions requiring experiments that were till now impracticable or ‘merely’ impractical.
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- embodied navigation and spatial planning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Robotics, Navigation, Embodied AI, Benchmark.
+- Habitat-Sim is fast – when rendering a scene from Matterport3D, it achieves several thousand frames per second (fps) running single-threaded, and can reach over 10,000 fps multi-process on ...
+- Specifically, in the context of point-goal navigation: (1) we revisit the comparison between learning and SLAM approaches from two recent works and find evidence for the opposite conclusion ...
+- We present Habitat, a platform for research in embodied artificial intelligence (AI).
+
+## Abstract Cue
+- We present Habitat, a platform for research in embodied artificial intelligence (AI).

@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLM, Planning, simulation
+- Paper link: ./2026/CVPR/2026_CVPR_SIMPACT-Simulation-Enabled-Action-Planning-using-Vision-La/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To overcome this, we present SIMPACT, a test-time, SIMulation-enabled ACTion Planning framework that equips VLMs with physical reasoning through simulation-in-the-loop world modeling, without requiring any additional training.
+- Success rates (%) over 10 trials for each task after removing each component of our method.
+- In contrast, our method integrates simulation-enabled reasoning with VLM, enabling the robot to iteratively refine its 4.3.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- This limitation arises from training VLMs on static internet-scale visual-language data that contain no causal interactions or action-conditioned changes.
+- However, they lack a grounded understanding of physical dynamics.
+- To overcome this, we present SIMPACT, a test-time, SIMulation-enabled ACTion Planning framework that equips VLMs with physical reasoning through simulation-in-the-loop world modeling, without requiring any additional training.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLM
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Success rates (%) over 10 trials for each task after removing each component of our method.
+- In contrast, our method integrates simulation-enabled reasoning with VLM, enabling the robot to iteratively refine its 4.3.
+- We compare our approach against the following baselines: (1) VLA models that are trained on largescale robot action datasets to directly predict joint velocities from visual observations and ...
+- We use ⇡0.5 , a recent open-source VLA model pretrained on a large robot manipulation dataset, as a representative base- 20795 line. (2) VLM-based methods that leverage geometric ...
+- We use Google Gemini 2.5 Pro as the default VLM and generate K = 10 initial action proposals, setting Kmax = 13, corresponding to a maximum of 3 ...

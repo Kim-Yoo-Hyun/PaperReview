@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2025 / ICML Poster
+- Category: 3D Large Multimodal Models
+- Tags: 3D Vision
+- Paper link: ./2025/ICML/2025_ICML_How-Do-Images-Align-and-Complement-LiDAR-Towards-a-Harmoni/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address these issues, we propose **I**mage-**A**ssists-**L**iDAR (**IAL**), a novel multi-modal 3D panoptic segmentation framework.
+## Brief Method
+- To address these issues, we propose Image-Assists-LiDAR (IAL), a novel multimodal 3D panoptic segmentation framework.
+- We present comprehensive comparison results for LiDAR panoptic segmentation performance on the nuScenes validation and test sets, as shown in Table 2 and Table 3.
+- We use AdamW (Kingma & Ba, 2014) as the optimizer, with a default weight decay of 0.01.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Recently, a few studies have sought to overcome this challenge by integrating LiDAR inputs with camera images, leveraging the rich and dense texture information provided by the latter.
+- However, LiDAR inherently faces limitations in detecting small or distant objects due to its radial emission pattern, which results in sparse returns along each laser ray (Li et ...
+- To address these issues, we propose Image-Assists-LiDAR (IAL), a novel multimodal 3D panoptic segmentation framework.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We present comprehensive comparison results for LiDAR panoptic segmentation performance on the nuScenes validation and test sets, as shown in Table 2 and Table 3.
+- We use AdamW (Kingma & Ba, 2014) as the optimizer, with a default weight decay of 0.01.
+- The LiDAR branch is built upon the architecture of P3former.
+- The training spans 80 epochs for nuScenes and 36 epochs for SemanticKITTI.

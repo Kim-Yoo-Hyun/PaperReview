@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2025 / 3DV
+- Category: 3D Reconstruction, Geometry, and SLAM
+- Tags: 3D reconstruction, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_Flash3D-Feed-Forward-Generalisable-3D-Scene-Reconstruction/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this paper, we propose Flash3D, a method for scene reconstruction and novel view synthesis from a single image which is both very generalisable ...
+## Brief Method
+- We propose Flash3D, a method for scene reconstruction and novel view synthesis from a single image which is both very generalisable and efficient.
+- This suggests that prior works do not generalise as well as our method.
+- Second, we compare our method on KITTI in Tab.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Introduction We consider the problem of reconstructing photorealistic 3D scenes from a single image in just one forward pass of a network.
+- This problem is closely related to monocular depth estimation , which is a mature area.
+- We propose Flash3D, a method for scene reconstruction and novel view synthesis from a single image which is both very generalisable and efficient.
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- This suggests that prior works do not generalise as well as our method.
+- Second, we compare our method on KITTI in Tab.
+- 1, we observe that our method performs significantly better on this transfer experiment, despite the domain gap being relatively small.
+- Given that UniDepth remains frozen during training, we can expedite the training by pre-extracting depth maps for the entire dataset.
+- The training is remarkably efficient, completed in one day on a single A6000 GPU.

@@ -1,26 +1,33 @@
 # Evaluation
 
-## Dataset
-OXE, TartanAir
+- Year/Venue: 2025 / NeurIPS spotlight
+- Category: 3D Representation Learning and Foundation Models
+- Tags: 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_EAG3R-Event-Augmented-3D-Geometry-Estimation-for-Dynamic-a/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `3D reconstruction, calibration, and geometric consistency`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Metrics
-PSNR, SSIM, LPIPS, ATE, RPE, Chamfer, F-score, pose AUC
+- accuracy
+- mAP
+- ATE
+- RPE
+- RMSE
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- We compare EAG3R with state-of-the-art pose free learning-based reconstruction method, including DUSt3R , MonST3R , and Easi3R .
+- We report results using standard metrics: Absolute Relative Error (Abs Rel ↓), Scale-invariant RMSE log (RMSE log ↓), and the threshold accuracy δ < 1.25 (↑), where lower ...
+- However, applying RetinexFormer, a widely used image enhancement network, as a preprocessing light-up step (denoted as (LightUp)) does not yield significant improvements and, in some cases, degrades performance, ...
+- Fine-tuning MonST3R improves its performance across
+- Extensive experiments demonstrate that EAG3R significantly outperforms state-of-the-art RGB-only baselines across monocular depth estimation, camera pose tracking, and dynamic reconstruction tasks.
+- We compare EAG3R with state-of-the-art pose free learning-based reconstruction method, including DUSt3R , MonST3R , and Easi3R .
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: Recent methods like DUSt3R demonstrate that regressing dense pointmaps from image pairs enables accurate and efficient pose-free reconstruction.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- We compare EAG3R with state-of-the-art pose free learning-based reconstruction method, including DUSt3R , MonST3R , and Easi3R .
+- 4.1 Experiment Details For training, we fine-tune the MonST3R baseline by training its ViT-Base decoder, DPT heads, Enhancement Net, and the Event Adapter.
 
 ## Reproducibility Notes
-- Code/Project: not identified
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

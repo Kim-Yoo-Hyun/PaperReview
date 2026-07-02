@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Diffusion, Transformer
+- Paper link: ./2025/ICCV/2025_ICCV_Dita-Scaling-Diffusion-Transformer-for-Generalist-Vision-L/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We present Dita, a scalable framework that leverages Transformer architectures to directly denoise continuous action sequences through a unified multimodal diffusion process.
+- While recent vision-language-action models trained on diverse robot datasets exhibit promising generalization capabilities with limited in-domain data, their reliance on compact action heads to predict discretized or continuous ...
+- Octo & OpenVLA We also reproduce these two opensource VLA models using their released checkpoints, as they employ the same multimodal inputs (language instruction and third-person camera image) ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Departing from prior methods that condition denoising on fused embeddings via shallow networks, Dita employs in-context conditioning—enabling fine-grained alignment between denoised actions and raw visual tokens from historical ...
+- We present Dita, a scalable framework that leverages Transformer architectures to directly denoise continuous action sequences through a unified multimodal diffusion process.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Octo & OpenVLA We also reproduce these two opensource VLA models using their released checkpoints, as they employ the same multimodal inputs (language instruction and third-person camera image) ...
+- Method SPATIAL OBJECT GOAL LONG Averge DP* 78.3% 92.5% 68.3% 50.5% 72.4% Octo 78.9% 85.7% 84.6% 51.1% 75.1% OpenVLA 84.9% 88.4% 79.2% 53.7% 76.5% Dita (Ours) 84.2% 96.3% ...
+- In this section, we compare our approach with leading generalist policies, including RT-1-X , Octo , and OpenVLA , under both match and variant scenarios.
+- It consists of four sub-datasets: LIBERO-SPATIAL, LIBEROOBJECT, LIBERO-GOAL, and LIBERO-100.
+- It consists of four distinct scenes (A, B, C, and D) and introduces the ABC↔D evaluation protocol, where models are trained on environments A, B, and C and ...

@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2022 / ECCV
+- Category: Open-Vocabulary 3D Mapping
+- Tags: Vision-Language Model, semantic, open-vocabulary, segmentation
+- Paper link: ./2022/ECCV/2022_ECCV_OpenSeg-Scaling-Open-Vocabulary-Image-Segmentation-with-Im/paper.pdf
+- Code/Project: https://github.com/tensorflow/tpu/tree/master/models/official/detection/projects/openseg
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- 3.1 Learning Segmentation Masks We design a model architecture which consists of a feature pyramid network (FPN) for multi-scale feature extraction and a cross-attention module for segmentation region ...
+- We use a cross-attention module taking inputs as FsP E and a randomly initialized queries q0 ∈ RN ×D to generate mask queries q ∈ RN ×D .
+- We propose a model, called OpenSeg, that can organize pixels into meaningful regions indicated by texts.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Image segmentation is an important step to organize an image into a small number of regions in order to understand “what” and “where” are in an image.
+- Each region represents a semantically meaningful entity, which can be a thing (e.g., a chair) or stuff (e.g., floor).
+- 3.1 Learning Segmentation Masks We design a model architecture which consists of a feature pyramid network (FPN) for multi-scale feature extraction and a cross-attention module for segmentation region ...
 
 ## 핵심 방법론
-- Task family: open-vocabulary 3D semantic understanding
-- Representation: semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 3.1 Learning Segmentation Masks We design a model architecture which consists of a feature pyramid network (FPN) for multi-scale feature extraction and a cross-attention module for segmentation region ...
+- We use a cross-attention module taking inputs as FsP E and a randomly initialized queries q0 ∈ RN ×D to generate mask queries q ∈ RN ×D .
+- In the following sections, We use a bold symbol to indicate an array of elements x = {x1 , x2 , ..., xn }, where the first dimension ...
+- 3.2 Visual-Semantic Alignment with Masks We use a pair of image Ib and caption Cb to learn visual-semantic alignments.
+- This architecture is conceptually similar to Max-deeplab and MaskFormer .

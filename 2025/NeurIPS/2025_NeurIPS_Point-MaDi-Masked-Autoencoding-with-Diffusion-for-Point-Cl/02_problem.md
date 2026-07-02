@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2025 / NeurIPS poster
+- Category: 3D Generative Modeling and Diffusion
+- Tags: Diffusion, Generation, point cloud, 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_Point-MaDi-Masked-Autoencoding-with-Diffusion-for-Point-Cl/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-생성 모델 또는 policy 모델이 3D 구조와 물리 제약을 보존하지 못하면 로봇 실행이나 3D 장면 생성에서 일관성이 깨진다.
+- Recent studies have begun to address these challenges by integrating diffusion frameworks into MAEs; this structure naturally complements diffusion models: the encoder can operate on partially observed data, ...
+- Despite their strengths, existing diffusion-based methods mainly rely on global context aggregation or predefined conditioning mechanisms, such as class labels or auxiliary features, to guide the denoising process.
+- 1 illustrates how Point-MaDi contrasts with existing pretext tasks: while MAEs reconstruct masked patches using provided positional embeddings, PointDif advances this paradigm by formulating pre-training as a conditional ...
 
 ## 해결하려는 문제
-- 연구 유형: diffusion-based generation or policy learning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task into an MAE architecture to address ...
+- Specifically, we introduce a center diffusion mechanism in the encoder, noising and predicting the coordinates of both visible and masked patch centers without ground-truth positional embeddings.
+- In the decoder, we design a conditional patch diffusion process, guided by the encoder’s latent features and predicted centers to reconstruct masked patches directly from noise.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Diffusion, Generation, point cloud, 3D Vision` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- However, unlike 2D images arranged in regular grids, point clouds lack a consistent topology, making the annotation process both expensive and labor-intensive.
+- Recent studies have begun to address these challenges by integrating diffusion frameworks into MAEs; this structure naturally complements diffusion models: the encoder can operate on partially observed data, ...
+- 1 illustrates how Point-MaDi contrasts with existing pretext tasks: while MAEs reconstruct masked patches using provided positional embeddings, PointDif advances this paradigm by formulating pre-training as a conditional ...

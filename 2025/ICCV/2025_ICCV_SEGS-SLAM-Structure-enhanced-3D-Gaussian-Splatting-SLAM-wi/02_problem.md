@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2025 / ICCV
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, geometry, 3D Vision
+- Paper link: ./2025/ICCV/2025_ICCV_SEGS-SLAM-Structure-enhanced-3D-Gaussian-Splatting-SLAM-wi/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- However, most existing algorithms fail to fully capture the underlying structure, resulting in structural inconsistency.
+- 3D Gaussian splatting (3D-GS) has recently revolutionized novel view synthesis in the simultaneous localization and mapping (SLAM) problem.
+- Introduction Visual simultaneous localization and mapping (SLAM) is a fundamental problem in 3D computer vision, with wide applications in autonomous driving, robotics, virtual reality, and augmented reality.
 
 ## 해결하려는 문제
-- 연구 유형: language-aware Gaussian/implicit 3D scene representation
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- To address these problems, we propose SEGS-SLAM, a structure-enhanced 3D Gaussian Splatting SLAM, which achieves high-quality photorealistic mapping.
+- The latest advancement in radiance ﬁeld rendering is 3D Gaussian splatting (3D-GS) , an explicit scene representation that achieves revolutionary improvements in rendering and training speed.
+- First, we propose a structure-enhanced photorealistic mapping (SEPM) framework that, for the ﬁrst time, leverages highly structured point cloud to initialize structured 3D Gaussians, leading to signiﬁcant improvements ...
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Gaussian Splatting, geometry, 3D Vision` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

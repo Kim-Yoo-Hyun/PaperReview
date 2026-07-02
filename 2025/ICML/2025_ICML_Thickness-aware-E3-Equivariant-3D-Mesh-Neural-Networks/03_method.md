@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / ICML poster
+- Category: 3D Equivariance, Calibration, and Registration
+- Tags: 3D reconstruction, equivariant, 3D Vision
+- Paper link: ./2025/ICML/2025_ICML_Thickness-aware-E3-Equivariant-3D-Mesh-Neural-Networks/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this work, we propose a novel framework, the Thickness-aware E(3)-Equivariant 3D Mesh Neural Network (T-EMNN), that effectively integrates the thickness of 3D objects ...
+## Brief Method
+- In this work, we propose a novel framework, the Thickness-aware E(3)-Equivariant 3D Mesh Neural Network (T-EMNN), that effectively integrates the thickness of 3D objects while maintaining the computational ...
+- Additionally, we introduce data-driven coordinates that encode spatial information while preserving E(3)-equivariance or invariance properties, ensuring consistent and robust analysis.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- This limitation arises from the disconnected nature of these surfaces and the absence of internal edge connections within the mesh.
+- However, existing mesh-based methods focus solely on modeling the surfaces of 3D objects, overlooking their thickness.
+- In this work, we propose a novel framework, the Thickness-aware E(3)-Equivariant 3D Mesh Neural Network (T-EMNN), that effectively integrates the thickness of 3D objects while maintaining the computational ...
 
 ## 핵심 방법론
-- Task family: geometry-aware equivariant modeling
-- Representation: 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- w/o thickness w/o dot product T-EMNN 0.92 0.90 0.88 0.085 0.18 Table 2.
+- Ablation study on the thickness edge feature, fi,thick . w/o thick w thick 0.94 0.090 0.20 R2 ( ) 0.96 0.095 0.22 0.16 MAE ( ) 0.100 0.24 ...
+- Comparison of baselines with x with our thickness edges.
+- MGN inv EGNN EMNN RMSE 0.2156 (0.0064) 0.2191 (0.0143) 0.2132 (0.0046) MAE 0.0908 (0.0027) 0.0912 (0.0067) 0.0892 (0.0025) R2 0.9148 (0.0089) 0.9134 (0.0163) 0.9228 (0.0063) and their extension ...
+- This capability transforms previously limited models into robust systems capable of handling transformations effectively, thereby greatly enhancing their ability to capture and represent spatial relationships. (a) Below the ...

@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ICML
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model, 3D Vision
+- Paper link: ./2026/ICML/2026_ICML_Any3D-VLA-Enhancing-VLA-Robustness-via-Diverse-Point-Cloud/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address the challenges of (1) scarce 3D data and (2) the domain gap induced by cross-environment differences and depth-scale biases, we propose Any3D-VLA.
+## Brief Method
+- A NY 3D-VLA We propose A NY 3D-VLA, which adopts a point cloud–2D patch fusion approach (inspired by §4) along with a hybrid point cloud training strategy.
+- depth-scale biases, we propose A NY 3D-VLA.
+- We use a conditional flow-matching action expert (Lipman et al., 2023) to generate fine-grained end-effector actions.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To address the challenges of (1) scarce 3D data and (2) the domain gap induced by cross-environment differences and 1.
+- Existing Vision-Language-Action (VLA) models typically take 2D images as visual input, which limits their spatial understanding in complex scenes.
+- A NY 3D-VLA We propose A NY 3D-VLA, which adopts a point cloud–2D patch fusion approach (inspired by §4) along with a hybrid point cloud training strategy.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- A NY 3D-VLA We propose A NY 3D-VLA, which adopts a point cloud–2D patch fusion approach (inspired by §4) along with a hybrid point cloud training strategy.
+- We use a conditional flow-matching action expert (Lipman et al., 2023) to generate fine-grained end-effector actions.
+- Overall Architecture A NY 3D-VLA integrates a Vision-Language Model (VLM) with an action expert (Black et al., 2025b), and connects them via a Progressive Action Generation (PAG) mechanism ...
+- To avoid the computational cost of feeding all points directly into the encoder, we perform in (x, y, z) space the same grid sampling as Sonata (Wu et ...
+- The potential reason for this is that implicit methods (such as VGGT or depth-pretrained encoders) rely on reconstruction objectives to learn spatial features; consequently, they often lack precise ...

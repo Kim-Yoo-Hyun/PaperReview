@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2021 / ICCV
+- Category: Foundations: 3D Representation Learning
+- Tags: point cloud, 3D Vision
+- Paper link: ./2021/ICCV/2021_ICCV_Point-Transformer/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- It consists of 16,880 models from 16 shape categories, with 14,006 3D models for training and 2,874 for testing.
+- We use the sampled point sets produced by Qi et al. for a fair comparison with prior work.
+- For evaluation metrics, we use the mean accuracy within each category (mAcc) and the overall accuracy (OA) over all classes.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- part segmentation tic ion an ntat semgme se arXiv:2012.09164v2 [cs.CV] 26 Sep 2021 Hengshuang Zhao1,2 Li Jiang3 Jiaya Jia3 Philip Torr1 Vladlen Koltun4 University of Oxford 2 The ...
+- The Point Transformer can serve as the backbone for various 3D point cloud understanding tasks such as object classification, object part segmentation, and semantic scene segmentation. analysis .
+- It consists of 16,880 models from 16 shape categories, with 14,006 3D models for training and 2,874 for testing.
 
 ## 핵심 방법론
-- Task family: core 3D geometry and scene representation learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- It consists of 16,880 models from 16 shape categories, with 14,006 3D models for training and 2,874 for testing.
+- We use the sampled point sets produced by Qi et al. for a fair comparison with prior work.
+- For evaluation metrics, we use the mean accuracy within each category (mAcc) and the overall accuracy (OA) over all classes.
+- They are split into 9,843 models for training and 2,468 for testing.
+- To probe the representation learned by the Point Transformer, we conduct shape retrieval by retrieving nearest neighbors in the space of the output features produced by the Point ...

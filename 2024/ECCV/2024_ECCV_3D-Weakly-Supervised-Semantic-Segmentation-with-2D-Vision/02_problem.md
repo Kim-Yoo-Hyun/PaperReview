@@ -1,15 +1,19 @@
 # Problem
 
+- Year/Venue: 2024 / ECCV
+- Category: 3D Large Multimodal Models
+- Tags: Vision-Language Model, 3D Vision, semantic
+- Paper link: ./2024/ECCV/2024_ECCV_3D-Weakly-Supervised-Semantic-Segmentation-with-2D-Vision/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-VLM/LLM은 강한 semantic prior를 갖지만 3D 위치, 거리, 관점, affordance 같은 metric spatial reasoning에는 취약하다.
+- 3D point cloud semantic segmentation [13, 16, 27–29, 43] can provide valuable geometric and semantic data about the 3D environment and has gained considerable attention over the past ...
 
 ## 해결하려는 문제
-- 연구 유형: 3D vision-language spatial reasoning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Moreover, with extensive quantitative and qualitative experiments, we present that our 3DSS-VLG is able not only to achieve the state-ofthe-art performance on both S3DIS and ScanNet datasets, but ...
+- In this paper, we propose 3DSS-VLG, a weakly supervised approach for 3D Semantic Segmentation with 2D Vision-Language Guidance, an alternative approach that a 3D model predicts denseembedding for ...
+- Moreover, we introduce the Embeddings Specialization Stage to purify the feature representation with the help of a given scene-level label, specifying a better feature supervised by the corresponding ...
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Vision-Language Model, 3D Vision, semantic` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 3D point cloud semantic segmentation [13, 16, 27–29, 43] can provide valuable geometric and semantic data about the 3D environment and has gained considerable attention over the past ...

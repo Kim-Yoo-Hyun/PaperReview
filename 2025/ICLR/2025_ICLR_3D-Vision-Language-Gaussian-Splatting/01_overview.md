@@ -3,33 +3,27 @@
 - Year/Venue: 2025 / ICLR Poster
 - Category: Language-Embedded NeRF and Gaussian Fields
 - Tags: Vision-Language Model, 3D Vision, Gaussian Splatting, semantic
-- Authors: Qucheng Peng, Benjamin Planche, Zhongpai Gao, Meng Zheng, Anwesa Choudhuri, Terrence Chen, Chen Chen, Ziyan Wu
-- Paper: https://openreview.net/forum?id=SSE9myD9SG
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2025/ICLR/2025_ICLR_3D-Vision-Language-Gaussian-Splatting/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Core Idea
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Recent advancements in 3D reconstruction methods and vision-language models have propelled the development of multi-modal 3D scene understanding, which has vital applications in robotics, ...
-- Method cue: To alleviate these limitations, we propose a solution that adequately handles the distinct visual and semantic modalities, i.e., a 3D vision-language Gaussian splatting model ...
-- Result cue: We also employ a camera-view blending technique to improve semantic consistency between existing and synthesized views, thereby effectively mitigating over-fitting.
+- Feature-3DGS CVPR’24 43.7 58.8 40.5 39.6 45.7 LEGaussians CVPR’24 46.0 60.3 40.8 39.4 46.9 LangSplat CVPR’24 51.2 65.1 44.7 44.5 51.4 GS-Grouping ECCV’24 45.5 60.9 40.0 38.7 46.3 ...
 
 ## Input / Output
-Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `language-aware Gaussian/implicit 3D scene representation`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Limitation
-3DGS/NeRF 기반 방법은 scene reconstruction 품질, 카메라 포즈, memory/runtime, dynamic scene 처리에 민감하다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Vision-Language Model, 3D Vision, Gaussian Splatting, semantic.
-- 초록에서 확인되는 주요 cue: Recent, However, Gaussian, Extensive.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+
+## Abstract Cue
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

@@ -3,33 +3,33 @@
 - Year/Venue: 2025 / NeurIPS Poster
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLA, Vision-Language Model, Reinforcement Learning
-- Authors: Zhongyi Zhou, Yichen Zhu, Xiaoyu Liu, Zhibin Tang, Junjie Wen, Yaxin Peng, Chaomin Shen, Yi Xu
-- Paper: https://openreview.net/forum?id=1lyKflUOhp
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_ChatVLA-2-Vision-Language-Action-Model-with-Open-World-Rea/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- Intuitively, pre-training a VLA model consists of a powerful, pre-trained VLMs, such as PaliGemma or Qwen-VL , should equip the robot with not only stronger vision-language feature embeddings ...
+- As a result, the VLA model may fail to accomplish tasks that seem trivial to humans, simply because these tasks were absent from the training dataset.
+- We argue that a generalizable VLA model should retain and expand upon the VLM’s core competencies: 1) Open-world embodied reasoning - the VLA should inherit the knowledge from ...
 
 ## Core Idea
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Vision-language-action (VLA) models have emerged as the next generation of models in robotics.
-- Method cue: In this work, we introduce **ChatVLA-2**, a novel mixture-of-expert VLA model coupled with a specialized three-stage training pipeline designed to preserve the VLM’s original ...
-- Result cue: Furthermore, we demonstrate that the VLA possesses strong spatial reasoning skills, enabling it to interpret novel directional instructions involving previously unseen objects.
+- In contrast, our approach deals with diverse, novel reasoning types not encountered in the training data.
+- We introduce an enhanced reasoning-following module designed to improve reasoning capabilities in action models.
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `robot manipulation and vision-language-action control`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- We argue that a generalizable VLA model should retain and expand upon the VLM’s core competencies: 1) Open-world embodied reasoning - the VLA should inherit the knowledge from ...
+- We do not evaluate using simulation benchmarks, as the VLA capabilities demonstrated by our approach exceed what current simulation benchmarks can assess.
+- These experiments examine the model’s proficiency in mathematical reasoning, spatial reasoning, optical character recognition (OCR), and object recognition and localization, most within an open-world context involving scenarios that ...
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- Developing models capable of reasoning and general understanding within open-world scenarios remains a frontier research topic that has yet to be thoroughly explored.
 
 ## Contribution
-- robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: VLA, Vision-Language Model, Reinforcement Learning.
-- 초록에서 확인되는 주요 cue: Vision-language-action, VLA, However, Vision-Language, Models, VLMs, VLM, Open-world.
+- We argue that a generalizable VLA model should retain and expand upon the VLM’s core competencies: 1) Open-world embodied reasoning - the VLA should inherit the knowledge from ...
+- However, despite leveraging powerful pre-trained Vision-Language Models (VLMs), existing end-to-end VLA systems often lose key capabilities during fine-tuning as the model adapts to specific robotic tasks.
+
+## Abstract Cue
+- Vision-language-action (VLA) models have emerged as the next generation of models in robotics.

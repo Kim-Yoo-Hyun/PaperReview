@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Large Multimodal Models
+- Tags: 3D Vision, semantic
+- Paper link: ./2025/ICCV/2025_ICCV_OV-SCAN-Semantically-Consistent-Alignment-for-Novel-Object/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- 2, we present our results on KITTI, demonstrating the applicability of our method across multiple datasets.
+- To overcome this challenge, we present OV-SCAN, an Open-Vocabulary 3D framework that enforces Semantically Consistent Alignment for Novel object discovery.
+- To assess the impact of the H2SA head, we introduce a one-step baseline in Tab.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To overcome this challenge, we present OV-SCAN, an Open-Vocabulary 3D framework that enforces Semantically Consistent Alignment for Novel object discovery.
+- However, achieving robust cross-modal alignment remains a challenge due to semantic inconsistencies when generating corresponding 3D and 2D feature pairs.
+- 2, we present our results on KITTI, demonstrating the applicability of our method across multiple datasets.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: 3D Vision, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 2, we present our results on KITTI, demonstrating the applicability of our method across multiple datasets.
+- To assess the impact of the H2SA head, we introduce a one-step baseline in Tab.
+- Conclusion We introduce OV-SCAN, an OV-3D detector that achieve detection through enhanced cross-modal alignment.
+- Finally, as an upper bound, we report the performance of our method using ground truth boxes.
+- SC-NOD generates 319,028 3D annotations for training, a fraction of the 797,179 available in the nuScenes dataset.

@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / 3DV
+- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_SSRFlow-Semantic-aware-Fusion-with-Spatial-Temporal-Re-emb/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address this issue, we propose a novel approach called Dual Cross Attentive (DCA) for the latent fusion and alignment between two frames based ...
+## Brief Method
+- To address this issue, we propose a novel approach called Dual Cross Attentive (DCA) for the latent fusion and alignment between two frames based on semantic contexts.
+- Conclusion 0.0171 0.0169 0.0136 0.0122 0.0109 0.0101 0.0082 0.0059 We propose the SSRFlow network to accurately and robustly estimate scene flow.
+- Secondly, we test the internal and external position encoder of cross-attention in DCA Fusion.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, contemporary scene flow methods face three major challenges.
+- To address this issue, we propose a novel approach called Dual Cross Attentive (DCA) for the latent fusion and alignment between two frames based on semantic contexts.
 
 ## 핵심 방법론
-- Task family: open-vocabulary 3D semantic understanding
-- Representation: semantic, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Conclusion 0.0171 0.0169 0.0136 0.0122 0.0109 0.0101 0.0082 0.0059 We propose the SSRFlow network to accurately and robustly estimate scene flow.
+- Secondly, we test the internal and external position encoder of cross-attention in DCA Fusion.
+- More visualization results are exhibited in Supplementary Material, Sec 11 GF In (a) of Table 7, we provide a detailed list of the importance of the DCA Fusion, ...
+- Additionally, we replace the Method Runtime Method Runtime Method EPE3D↓ FlowStep3D PT-Flow DifFlow 292.1ms 376.2ms 231.7ms PV-RAFT MSBRN SSRFlow (Ours) 780.2ms 225.9ms 101.1ms Ours (full equip) 0.0122 (a) ...
+- Moreover, the position encoder outside the DCA Fusion provides additional spatial features that are superior to internal equipment.

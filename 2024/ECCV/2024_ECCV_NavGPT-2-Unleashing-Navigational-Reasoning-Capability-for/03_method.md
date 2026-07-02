@@ -1,18 +1,19 @@
 # Method
 
-## Brief Method
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: Navigation and Embodied AI
+- Tags: Vision-Language Model, Navigation
+- Paper link: ./2024/ECCV/2024_ECCV_NavGPT-2-Unleashing-Navigational-Reasoning-Capability-for/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- The architecture of NavGPT-2, as depicted in Figure 2, comprises two primary components: a Large Vision-Language Model (VLM) and a navigation policy network.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Motivating by the considerable advances in Large Language Models (LLMs), there is an emerging effort to utilize these models for instructional tasks within robotic navigation .
+- This development highlights two core capacities of LLMs: Firstly, the ability to generalize commonsense knowledge reasoning and efficiently process free-form linguistic inputs, thanks to learning enormous amounts of ...
+- The architecture of NavGPT-2, as depicted in Figure 2, comprises two primary components: a Large Vision-Language Model (VLM) and a navigation policy network.
 
 ## 핵심 방법론
-- Task family: embodied navigation and spatial planning
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- The architecture of NavGPT-2, as depicted in Figure 2, comprises two primary components: a Large Vision-Language Model (VLM) and a navigation policy network.

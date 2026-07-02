@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, geometry, 3D Vision
+- Paper link: ./2024/ECCV/2024_ECCV_CG-SLAM-Efficient-Dense-RGB-D-SLAM-in-a-Consistent-Uncerta/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Through an in-depth analysis of Gaussian Splatting, we propose several techniques to construct a consistent and stable 3D Gaussian field suitable for tracking and mapping.
+- We incorporated an uncertainty model that utilizes the geometry prior to attach the uncertainty property on rendered images and Gaussian primitives.
+- We can obtain the corresponding 2D Gaussian distribution N (µ̂, Σ̂) as: \label {eq-2} \mathbf {\hat {\Sigma }} = \mathbf {J}\mathbf {W}\mathbf {\Sigma }\mathbf {W}^T\mathbf {J}^T~, (2) and ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Dense visual Localization and Mapping (Visual SLAM) is a long-standing problem in 3D computer vision over recent decades, which targets performing pose tracking and scene mapping simultaneously with ...
+- Despite their notable successes in surface modeling and novel view synthesis, existing NeRF-based methods are hindered by their computationally intensive and time-consuming volume rendering pipeline.
+- Through an in-depth analysis of Gaussian Splatting, we propose several techniques to construct a consistent and stable 3D Gaussian field suitable for tracking and mapping.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, geometry, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We incorporated an uncertainty model that utilizes the geometry prior to attach the uncertainty property on rendered images and Gaussian primitives.
+- We can obtain the corresponding 2D Gaussian distribution N (µ̂, Σ̂) as: \label {eq-2} \mathbf {\hat {\Sigma }} = \mathbf {J}\mathbf {W}\mathbf {\Sigma }\mathbf {W}^T\mathbf {J}^T~, (2) and ...
+- Given a set of RGB-D sequences, our system incrementally generates a stable, consistent, and uncertainty-aware Gaussian field, serving camera pose optimization and geometry reconstruction.
+- 3.3, we detail the Gaussian primitive management strategy and some innovative loss terms that ensure geometry stability and accuracy.
+- 3.1, we briefly introduce the 3D Gaussian splatting model and rasterization principles.

@@ -3,32 +3,31 @@
 - Year/Venue: 2025 / ICCV
 - Category: 3D Scene Graphs and Graph Reasoning
 - Tags: 3D Scene Graph, LLM, Graph Reasoning
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Zemskova_3DGraphLLM_Combining_Semantic_Graphs_and_Large_Language_Models_for_3D_ICCV_2025_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified from primary page
+- Paper link: ./2025/ICCV/2025_ICCV_3DGraphLLM-Combining-Semantic-Graphs-and-Large-Language-Mo/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-3D scene graph는 객체와 관계를 구조화하지만 closed vocabulary, annotation cost, geometric relation ambiguity 때문에 실제 로봇 질의에 확장하기 어렵다.
+- However, existing methods typically rely only on geometric information, such as object coordinates, and overlook the rich semantic relationships between objects.
 
 ## Core Idea
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- In this work, we propose 3DGraphLLM, a method for constructing a learnable representation of a 3D scene graph that explicitly incorporates semantic relationships.
+- For the visual grounding task on the ScanRefer dataset, we use the standard metrics Acc@0.25 and Acc@0.5.
 
 ## Input / Output
-Input: image/3D observations and natural language. Output: aligned representation, answer, reasoning trace, caption, or grounded decision.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `structured 3D scene graph reasoning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- In our experiments on popular ScanRefer, Multi3DRefer, ScanQA, Sqa3D, and Scan2cap datasets, we demonstrate that our approach outperforms baselines that do not leverage semantic relationships between objects.
+- Recent methods for learning scene representations have shown that adapting these representations to the 3D world can significantly improve the quality of LLM responses.
 
 ## Limitation
-2D foundation model에서 온 semantic feature가 3D geometry와 완벽히 정렬되지 않으며, long-tail 관계/속성 평가는 여전히 어렵다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- structured 3D scene graph reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D Scene Graph, LLM, Graph Reasoning.
+- In our experiments on popular ScanRefer, Multi3DRefer, ScanQA, Sqa3D, and Scan2cap datasets, we demonstrate that our approach outperforms baselines that do not leverage semantic relationships between objects.
+- In this work, we propose 3DGraphLLM, a method for constructing a learnable representation of a 3D scene graph that explicitly incorporates semantic relationships.
+- Recent methods for learning scene representations have shown that adapting these representations to the 3D world can significantly improve the quality of LLM responses.
+
+## Abstract Cue
+- OBJ1 lef t OBJ1 t ht OBJ4 d behin rig A 3D scene graph represents a compact scene model by capturing both the objects present and the semantic relationships between them, making it a promising structure for robotic applications.

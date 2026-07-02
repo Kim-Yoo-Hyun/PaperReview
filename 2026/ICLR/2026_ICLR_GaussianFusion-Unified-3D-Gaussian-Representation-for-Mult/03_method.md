@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Tags: Gaussian Splatting, sensor fusion, LiDAR, 3D Vision
+- Paper link: ./2026/ICLR/2026_ICLR_GaussianFusion-Unified-3D-Gaussian-Representation-for-Mult/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To achieve this, we design a novel forward-projection-based multi-modal Gaussian initialization module and a shared cross-modal Gaussian encoder that iteratively updates Gaussian properties based ...
+## Brief Method
+- Main contributions are as follows: • We propose the first unified 3D Gaussian representation multi-modal fusion framework, where cross-view and cross-modal Gaussian representations are naturally aggregated through the ...
+- Specifically, inspired by (Philion & Fidler, 2020), we propose a forward projection Gaussian initialization strategy to better initialize camera Gaussian representations in 3D space rather than using random ...
+- Gaussian Encoder BEV Encoder "# B# B# To address these challenges, we introduce a fu(b) Gaussian-based Fusion (a) BEV-based Fusion sion approach based on 3D Gaussian Splatting (3DGS) ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Main contributions are as follows: • We propose the first unified 3D Gaussian representation multi-modal fusion framework, where cross-view and cross-modal Gaussian representations are naturally aggregated through the ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Main contributions are as follows: • We propose the first unified 3D Gaussian representation multi-modal fusion framework, where cross-view and cross-modal Gaussian representations are naturally aggregated through the ...
+- Specifically, inspired by (Philion & Fidler, 2020), we propose a forward projection Gaussian initialization strategy to better initialize camera Gaussian representations in 3D space rather than using random ...
+- Gaussian Encoder BEV Encoder "# B# B# To address these challenges, we introduce a fu(b) Gaussian-based Fusion (a) BEV-based Fusion sion approach based on 3D Gaussian Splatting (3DGS) ...
+- In contrast, we propose a forward-projection-based 3DGS parameter initialization and a shared optimization model, leveraging GMM to fuse multi-view camera and LiDAR features within a shared space, ultimately ...
+- To further achieve continuous alignment and cross-modal feature enhancement, we construct a shared Gaussian encoder.

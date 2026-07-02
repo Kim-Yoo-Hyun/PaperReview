@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / NeurIPS poster
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_MS-GS-Multi-Appearance-Sparse-View-3D-Gaussian-Splatting-i/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this paper, we present MS-GS, a novel framework designed with \textbf{M}ulti-appearance capabilities in \textbf{S}parse-view scenarios using 3D\textbf{GS}.
+## Brief Method
+- To eliminate unreliable depth estimation in the alignment process, we propose an SfM-prompted Semantic Alignment scheme.
+- Then, to introduce multi-view constraints, we propose a series of geometry-guided supervision steps at virtual views in pixel and feature levels to encourage 3D consistency and reduce overfitting.
+- SfM-prompted semantic alignment We propose finding semantic regions enclosed by depth discontinuity using projected SfM points and performing individual alignment.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To overcome the limitation of the sparse SfM point cloud with limited views, we draw knowledge from the monocular depth estimators that have rapidly progressed.
+- High-quality scene reconstruction and novel view synthesis from images is a long-standing research problem with wide-ranging applications in AR/VR, 3D site modeling, autonomous driving, robotics, etc.
+- To eliminate unreliable depth estimation in the alignment process, we propose an SfM-prompted Semantic Alignment scheme.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- To eliminate unreliable depth estimation in the alignment process, we propose an SfM-prompted Semantic Alignment scheme.
+- SfM-prompted semantic alignment We propose finding semantic regions enclosed by depth discontinuity using projected SfM points and performing individual alignment.
+- To encourage 3D consistency and appearance regularization, our method, illustrated in Fig.
+- To improve its robustness in sparse-view synthesis and multi-appearance modeling, MS-GS consists of two parts: Semantic Depth Alignment first constructs a dense point cloud by expanding SfM points ...
+- Consequently, overfitting, where the model memorizes the sparse training images instead of learning view-invariant geometry, becomes more severe than in the single appearance setting, as the SoTA methods ...

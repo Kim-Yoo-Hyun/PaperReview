@@ -3,32 +3,31 @@
 - Year/Venue: 2024 / CVPR
 - Category: 3D Generative Modeling and Diffusion
 - Tags: Diffusion, Generation, point cloud, 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Ren_TIGER_Time-Varying_Denoising_Model_for_3D_Point_Cloud_Generation_with_CVPR_2024_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2024/CVPR/2024_CVPR_TIGER-Time-Varying-Denoising-Model-for-3D-Point-Cloud-Gene/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-생성 모델 또는 policy 모델이 3D 구조와 물리 제약을 보존하지 못하면 로봇 실행이나 3D 장면 생성에서 일관성이 깨진다.
+- Existing point cloud generative models are built on a range of frameworks, including generative adversarial networks (GANs) , variational autoenco
+- However, compared to 2D images, the cost and complexity of acquiring 3D point clouds make it crucial to ex- Figure 1.
 
 ## Core Idea
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We propose to merge these two properties across different timesteps in the diffusion process. plore and develop efficient and effective model architectures for 3D point cloud generation.
+- In light of this observation, we propose a time-varying twostream denoising model combined with convolution layers and transformer blocks.
 
 ## Input / Output
-Input/Output follows the paper task formulation; see PDF for the exact interface.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `diffusion-based generation or policy learning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Experimentally, we demonstrate that our proposed method quantitatively outperforms other state-of-the-art methods regarding visual quality and diversity.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- diffusion-based generation or policy learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Diffusion, Generation, point cloud, 3D Vision.
+- We propose to merge these two properties across different timesteps in the diffusion process. plore and develop efficient and effective model architectures for 3D point cloud generation.
+- In light of this observation, we propose a time-varying twostream denoising model combined with convolution layers and transformer blocks.
+- Experimentally, we demonstrate that our proposed method quantitatively outperforms other state-of-the-art methods regarding visual quality and diversity.
+
+## Abstract Cue
+- Recently, diffusion models have emerged as a new powerful generative method for 3D point cloud generation tasks.

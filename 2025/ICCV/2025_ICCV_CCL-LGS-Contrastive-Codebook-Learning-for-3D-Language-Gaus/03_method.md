@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: 3D Vision, Gaussian Splatting
+- Paper link: ./2025/ICCV/2025_ICCV_CCL-LGS-Contrastive-Codebook-Learning-for-3D-Language-Gaus/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To mitigate this limitation, we propose CCL-LGS, a novel framework that enforces view-consistent semantic supervision by integrating multi-view semantic cues.
+- We first compare our method with existing SOTA methods on LERF dataset.
+- Specifically, our approach first employs a zero-shot tracker to 1.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To mitigate this limitation, we propose CCL-LGS, a novel framework that enforces view-consistent semantic supervision by integrating multi-view semantic cues.
+- However, methods that rely on 2D priors are prone to a critical challenge: cross-view semantic inconsistencies induced by occlusion, image blur, and view-dependent variations.
+- To mitigate this limitation, we propose CCL-LGS, a novel framework that enforces view-consistent semantic supervision by integrating multi-view semantic cues.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: 3D Vision, Gaussian Splatting
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We first compare our method with existing SOTA methods on LERF dataset.
+- The second dataset, 3D-OVS , consists of long-tail objects set against diverse backgrounds.
+- The training is performed over 30,000 iterations using the Adam optimizer , with a learning rate of 0.001 and beta parameters set to (0.9, 0.999). “tea in glass” ...
+- For each scene, we jointly train the 3D Gaussians for both color and semantic features by setting dc = 3 and df = 8.
+- For a fair comparison, we select the latest works on open-vocabulary 3D scene understanding: Feature-3DGS, LEGaussians, LangSplat, GSGrouping, GOI, and 3D VL-GS.

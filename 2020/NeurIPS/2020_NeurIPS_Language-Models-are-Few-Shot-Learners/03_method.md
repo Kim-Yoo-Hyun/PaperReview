@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 attention 기반 sequence modeling을 통해 장거리 의존성과 modality alignment를 scale-up 가능한 방식으로 학습하는 것이다.
+- Year/Venue: 2020 / NeurIPS
+- Category: Foundations: Transformer and Language Models
+- Tags: LLM, in-context learning
+- Paper link: ./2020/NeurIPS/2020_NeurIPS_Language-Models-are-Few-Shot-Learners/paper.pdf
+- Code/Project: not released
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- At the same time, we also identify some datasets where GPT-3’s few-shot learning still struggles, as well as some datasets where GPT-3 faces methodological issues related to training ...
+- While typically task-agnostic in architecture, this method still requires task-specific fine-tuning datasets of thousands or tens of thousands of examples.
+- 2.1 Model and Architectures . . . . . . . . . . . . . . . . . . . . . . . . ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Finally, we find that GPT-3 can generate samples of news articles which human evaluators have difficulty distinguishing from articles written by humans.
+- Specifically, we train GPT-3, an autoregressive language model with 175 billion parameters, 10x more than any previous non-sparse language model, and test its performance in the few-shot setting.
+- At the same time, we also identify some datasets where GPT-3’s few-shot learning still struggles, as well as some datasets where GPT-3 faces methodological issues related to training ...
 
 ## 핵심 방법론
-- Task family: sequence/representation learning
-- Representation: LLM
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 2.1 Model and Architectures . . . . . . . . . . . . . . . . . . . . . . . . ...
+- 2.3 Training Process . . . . . . . . . . . . . . . . . . . . . . . . . ...
+- 2.2 Training Dataset . . . . . . . . . . . . . . . . . . . . . . . . . ...

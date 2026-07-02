@@ -3,32 +3,32 @@
 - Year/Venue: 2019 / TOG
 - Category: Foundations: 3D Representation Learning
 - Tags: point cloud, 3D Vision
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/1801.07829
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2019/TOG/2019_TOG_Dynamic-Graph-CNN-for-Learning-on-Point-Clouds/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Traditional methods for solving these problems employ handcrafted features to capture geometric properties of point clouds [Lu et al.
+- This independence, however, neglects the geometric relationships among points, presenting a fundamental limitation that cannot capture local features.
+- This approach, however, usually introduces quantization artifacts and excessive memory usage, making it difficult to go to capture high-resolution or fine-grained features.
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- To address these drawbacks, we propose a novel simple operation, called EdgeConv, which captures local geometric structure while maintaining permutation invariance.
+- We summarize the key contributions of our work as follows: • We present a novel operation for learning from point clouds, EdgeConv, to better capture local geometric features ...
 
 ## Input / Output
-Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `core 3D geometry and scene representation learning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Our baseline model using the fixed k-NN graph outperforms the previous state-of-the-art PointNet++ by 1.0% accuracy, at the same time being 7 times faster.
+- Our model achieves the best results on this dataset.
+- An advanced version including dynamical graph recomputation achieves the best results on this dataset.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- core 3D geometry and scene representation learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: point cloud, 3D Vision.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+
+## Abstract Cue
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

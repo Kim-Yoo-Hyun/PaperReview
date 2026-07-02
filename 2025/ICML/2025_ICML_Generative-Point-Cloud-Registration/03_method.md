@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / ICML poster
+- Category: 3D Equivariance, Calibration, and Registration
+- Tags: geometry, Diffusion, Generation, point cloud, 3D Vision
+- Paper link: ./2025/ICML/2025_ICML_Generative-Point-Cloud-Registration/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this paper, we propose a novel 3D registration paradigm, Generative Point Cloud Registration, which bridges advanced 2D generative models with 3D matching tasks ...
+## Brief Method
+- We compare our method against with one representative traditional descriptor: FPFH (Rusu et al., 2009), one scene-level end-to-end registration network: RegTR (Yew & Lee, 2022), and five deep ...
+- Unlike geometry-only matching in previous methods, our approach introduces MatchControlNet, a matching-specific 2D generative model that generates cross-view images pairs from point cloud data, providing rich color cues ...
+- Compared to the 20-frame separation used in (El Banani et al., 2021; Yuan et al., 2023), our approach with a 50-frame separation further reduces the overlap ratio (i.e., ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Unlike geometry-only matching in previous methods, our approach introduces MatchControlNet, a matching-specific 2D generative model that generates cross-view images pairs from point cloud data, providing rich color cues ...
+- Introduction Point cloud registration is a problem of finding the optimal rigid transformation, comprising a 3D rotation and a 3D translation, which aligns the source and target point ...
+- We compare our method against with one representative traditional descriptor: FPFH (Rusu et al., 2009), one scene-level end-to-end registration network: RegTR (Yew & Lee, 2022), and five deep ...
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: geometry, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We compare our method against with one representative traditional descriptor: FPFH (Rusu et al., 2009), one scene-level end-to-end registration network: RegTR (Yew & Lee, 2022), and five deep ...
+- Compared to the 20-frame separation used in (El Banani et al., 2021; Yuan et al., 2023), our approach with a 50-frame separation further reduces the overlap ratio (i.e., ...
+- Following (El Banani et al., 2021; Yuan et al., 2023), we use rotation error, translation error, and 6 Generative Point Cloud Registration Table 2.
+- We follow the official data split to divide this dataset into the training, validation, and testing subsets, and construct view pairs by sampling image pairs that are 50 ...
+- Following the default fine-tuning configuration of ControlNet (Zhang et al., 2023), we adopt the AdamW optimizer (Loshchilov, 2017) with a learning rate of 1e-5 and set the training ...

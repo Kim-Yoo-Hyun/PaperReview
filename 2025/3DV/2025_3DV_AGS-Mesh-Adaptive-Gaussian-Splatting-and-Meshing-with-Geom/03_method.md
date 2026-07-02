@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / 3DV
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_AGS-Mesh-Adaptive-Gaussian-Splatting-and-Meshing-with-Geom/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this work, we propose an approach for joint surface depth and normal refinement of Gaussian Splatting methods for accurate 3D reconstruction of indoor ...
+## Brief Method
+- In this work, we propose an approach for joint surface depth and normal refinement of Gaussian Splatting methods for accurate 3D reconstruction of indoor scenes.
+- Moreover, we present a promising alternative to traditional meshing techniques using a depth adaptive TSDF and IsoOctree meshing method that can extract finer details from a Gaussian scene.
+- Conclusion In this work, we presented two regularization strategies to adaptively integrate unreliable geometric priors into Gaussian Splatting based frameworks allowing for better mesh extraction and novel-view synthesis ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Traditional approaches have addressed the problem by creating textured meshes that can be rendered using conventional graphics pipelines.
+- Depth sensors, such as high-precision 3D LiDAR scanners or Kinect sensors, are often used to aid geometric reconstruction; however, these devices are generally expensive for consumer users and ...
+- In this work, we propose an approach for joint surface depth and normal refinement of Gaussian Splatting methods for accurate 3D reconstruction of indoor scenes.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Moreover, we present a promising alternative to traditional meshing techniques using a depth adaptive TSDF and IsoOctree meshing method that can extract finer details from a Gaussian scene.
+- Conclusion In this work, we presented two regularization strategies to adaptively integrate unreliable geometric priors into Gaussian Splatting based frameworks allowing for better mesh extraction and novel-view synthesis ...
+- We compare our approach with the ZoeDepth monocular network estimates, utilizing the recently proposed Patch-based Depth Correlation Loss for monocular depth supervision.
+- Geometric priors significantly aid in surface optimization for the Gaussian models.

@@ -3,32 +3,32 @@
 - Year/Venue: 2025 / ICCV
 - Category: Navigation and Embodied AI
 - Tags: 3D Vision, Navigation, Gaussian Splatting
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/ICCV/2025_ICCV_IGL-Nav-Incremental-3D-Gaussian-Localization-for-Image-goa/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- Horizontal View 0.88 m 3DGS Rendering Robotic Setup Visual navigation with an image as goal is a fundamental and challenging problem.
+- The proposed IGL-Nav outperforms existing state-of-the-art methods by a large margin across diverse experimental configurations.
 
 ## Core Idea
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework for efficient and 3D-aware image-goal navigation.
+- We use the rendering-based stopper to determine if the target appears in agent’s field of view.
 
 ## Input / Output
-Input: language/navigation goal plus egocentric observations or 3D maps. Output: waypoint, action, route, or grounded target decision.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `language-aware Gaussian/implicit 3D scene representation`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- The proposed IGL-Nav outperforms existing state-of-the-art methods by a large margin across diverse experimental configurations.
+- While these approaches demonstrate enhanced capabilities for longhorizon reasoning and temporal dependency modeling in object-goal navigation tasks, their extension to image-goal navigation remai
 
 ## Limitation
-3DGS/NeRF 기반 방법은 scene reconstruction 품질, 카메라 포즈, memory/runtime, dynamic scene 처리에 민감하다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D Vision, Navigation, Gaussian Splatting.
+- To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework for efficient and 3D-aware image-goal navigation.
+- The proposed IGL-Nav outperforms existing state-of-the-art methods by a large margin across diverse experimental configurations.
+- In order to efficiently and accurately localize the goal image in 3D space, we build our navigation system upon the renderable 3D gaussian (3DGS) representation.
+
+## Abstract Cue
+- Horizontal View 0.88 m 3DGS Rendering Robotic Setup Visual navigation with an image as goal is a fundamental and challenging problem.

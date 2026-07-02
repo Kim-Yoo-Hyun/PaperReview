@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: 3D Large Multimodal Models
+- Tags: Vision-Language Model, 3D Vision, semantic
+- Paper link: ./2024/ECCV/2024_ECCV_3D-Open-Vocabulary-Panoptic-Segmentation-with-2D-3D-Vision/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To further improve the classification performance on novel classes and leverage the CLIP model, we propose two novel loss functions: objectlevel distillation loss and voxel-level distillation loss.
+- Then we provide detailed descriptions of the model architecture as well as the proposed loss functions.
+- In this paper, we propose the first method to tackle 3D open-vocabulary panoptic segmentation.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Although prior 3D panoptic segmentation approaches have achieved great performance on closedset benchmarks, generalizing these approaches to unseen things and unseen stuff categories remains an open problem.
+- To further improve the classification performance on novel classes and leverage the CLIP model, we propose two novel loss functions: objectlevel distillation loss and voxel-level distillation loss.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: 3D Vision, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Then we provide detailed descriptions of the model architecture as well as the proposed loss functions.
+- The overview of our method is presented in Fig.
+- Following the settings of prior work , we assume the availability of the name of the novel categories during inference, but the novel categories are not present in ...
+- 1, and the two proposed loss functions are illustrated in Fig.

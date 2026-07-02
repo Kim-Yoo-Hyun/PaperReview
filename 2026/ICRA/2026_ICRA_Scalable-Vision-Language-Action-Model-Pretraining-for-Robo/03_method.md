@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ICRA
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model, Robotics
+- Paper link: ./2026/ICRA/2026_ICRA_Scalable-Vision-Language-Action-Model-Pretraining-for-Robo/paper.pdf
+- Code/Project: not identified from venue audit
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Our model consists of a VLM backbone and a diffusion action expert.
+- We use PaliGemma-2 as the VLM, which combines a SigLIP vision encoder with linear projection for alignment and a Gemma-2 language model for multi-modal token processing.
+- We use the 3B-parameter model with an input image resolution of 2242 as the default setting.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Existing Vision-Language-Action data for robotic manipulation are typically collected in laboratory settings through human teleoperations .
+- Although such robot action data is invaluable, its high acquisition cost significantly limits both the scale of the collected data and its diversity in skills, object categories, and ...
+- Our model consists of a VLM backbone and a diffusion action expert.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Our model consists of a VLM backbone and a diffusion action expert.
+- We use PaliGemma-2 as the VLM, which combines a SigLIP vision encoder with linear projection for alignment and a Gemma-2 language model for multi-modal token processing.
+- We use the 3B-parameter model with an input image resolution of 2242 as the default setting.
+- An overview of our model architecture is presented in Fig.
+- For the action expert, we apply a Diffusion Transformer (DiT) and the DiT-Base model is used by default.

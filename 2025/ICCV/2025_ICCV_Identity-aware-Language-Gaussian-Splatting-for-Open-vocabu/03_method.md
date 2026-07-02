@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: 3D Vision, Gaussian Splatting, semantic
+- Paper link: ./2025/ICCV/2025_ICCV_Identity-aware-Language-Gaussian-Splatting-for-Open-vocabu/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To address this issue, we propose a simple yet powerful method that aligns language embeddings via the identity information.
+- Furthermore, we propose a progressive mask expanding scheme that enables more accurate extraction of semantic mask boundaries.
+- Open-vocabulary 3D semantic segmentation has begun to attract considerable attentions due to recent advances in 3D scene representations and vision-language models.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- This limitation still makes the practical use of open-vocabulary 3D semantic segmentation challenging.
+- To do this, most previous methods have utilized high-quality 3D point clouds , however, it is quite difficult to acquire data, which reflects various realworld environments, with language ...
+- To address this issue, we propose a simple yet powerful method that aligns language embeddings via the identity information.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: 3D Vision, Gaussian Splatting, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- LangSplat Feature-3DGS Gaussian Grouping GOI Ours figurines mIoU mBIoU teatime mIoU mBIoU ramen mIoU mBIoU Avg. mIoU mBIoU 52.8 58.8 69.7 63.7 75.9 69.5 40.5 71.7 44.5 81.2 ...
+- Furthermore, the qualitative comparison with LangSplat , Feature-3DGS , GSGrouping , GOI , and LEGaussian is presented on LERF and 3D-OVS datasets in Figs.

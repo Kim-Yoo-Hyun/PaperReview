@@ -3,32 +3,35 @@
 - Year/Venue: 2024 / ECCV
 - Category: 3D Equivariance, Calibration, and Registration
 - Tags: Gaussian Splatting, geometry, 3D Vision
-- Authors: Jiahao Chang*, Yinglin Xu, Yihao Li, Yuantao Chen, Wensen Feng, Xiaoguang Han
-- Paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2380_ECCV_2024_paper.php
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2024/ECCV/2024_ECCV_GaussReg-Fast-3D-Registration-with-Gaussian-Splatting/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- But this method faces two issues: a) it is difficult to turn NeRF of unbounded scene to bounded voxel; b) the resolution limitation of the voxel grid makes ...
+- To overcome these problems, deep feature extractors are proposed to find more robust correspondences between two point clouds.
+- When considering large-scale scene reconstruction based on NeRF, there are two main challenges: 1) Due to the complex occlusions present in real-world scenes, lots of images or videos ...
 
 ## Core Idea
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- Training Strategy and Loss Function Due to the scale uncertainty in monocular video reconstruction, we performed data augmentation not only on rotation and translation but also on scaling ...
+- In this section, we present our proposed GaussReg for 3D Registration with Gaussian Splatting (GS).
 
 ## Input / Output
-Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `language-aware Gaussian/implicit 3D scene representation`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Experimental results demonstrate our method achieves state-ofthe-art performance on multiple datasets.
+- 4.1 Experiment Setup Dataset As there is currently no scene-level dataset available for our task, it is necessary for us to create a dataset in order to evaluate ...
 
 ## Limitation
-3DGS/NeRF 기반 방법은 scene reconstruction 품질, 카메라 포즈, memory/runtime, dynamic scene 처리에 민감하다.
+- Limitations and Future Work We only adopt a simple strategy to fuse and filter two GS models.
+- Future work can further explore to address this issue.
+- However, the registration of NeRF representations for large-scale scenes remains underexplored due to the inherent complexities of implicitly modeled geometric relationships.
 
 ## Contribution
-- language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Gaussian Splatting, geometry, 3D Vision.
+- Experimental results demonstrate our method achieves state-ofthe-art performance on multiple datasets.
+- To this end, we propose GaussReg, a novel coarse-to-fine framework, both fast and accurate.
+- Most recently, Gaussian Splatting (GS) is introduced, employing explicit 3D Gaussian.
+
+## Abstract Cue
+- Point cloud registration is a fundamental problem for largescale 3D scene scanning and reconstruction.

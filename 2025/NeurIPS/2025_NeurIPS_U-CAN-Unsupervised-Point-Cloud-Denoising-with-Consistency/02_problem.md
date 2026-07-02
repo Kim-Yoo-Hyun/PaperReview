@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2025 / NeurIPS poster
+- Category: 3D Representation Learning and Foundation Models
+- Tags: point cloud, 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_U-CAN-Unsupervised-Point-Cloud-Denoising-with-Consistency/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- In response to this challenge, we introduce a novel consistency-aware constraint that specifically targets the denoising geometric consistency.
+- Another challenge in predicting robust denoising arises from the unknown location of true surfaces when only noisy observations are available.
+- However, the current unsupervised approaches still struggle to predict precise clean point cloud while keeping high-fidelity local geometries due to the lack of sufficient constraints at local-level.
 
 ## 해결하려는 문제
-- 연구 유형: 3D vision and embodied AI
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: Previous works mostly focus on training neural networks with noisy-clean point cloud pairs for learning denoising priors, which requires extensively manual efforts.
+- Our evaluations denoising show significant improvement over the state-of-the-art unsupervised methods, where U-CAN also produces comparable results with the supervised methods.
+- Previous works mostly focus on training neural networks with noisy-clean point cloud pairs for learning denoising priors, which requires extensively manual efforts.
+- In this work, we introduce U-CAN, an Unsupervised framework for point cloud denoising with Consistency-Aware Noise2Noise matching.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `point cloud, 3D Vision` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- In response to this challenge, we introduce a novel consistency-aware constraint that specifically targets the denoising geometric consistency.
+- Our main contributions can be summarized as follows. • We introduce U-CAN, a novel framework for unsupervised point cloud denoising by designing a neural network to infer a ...
+- Another challenge in predicting robust denoising arises from the unknown location of true surfaces when only noisy observations are available.

@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2020 / CVPR
+- Category: Foundations: 3D Detection and BEV Perception
+- Tags: point cloud, 3D Vision
+- Paper link: ./2020/CVPR/2020_CVPR_PV-RCNN-Point-Voxel-Feature-Set-Abstraction-for-3D-Object/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Grid Point Keypoint z y We present a novel and high-performance 3D object detection framework, named PointVoxel-RCNN (PV-RCNN), for accurate 3D object detection from point clouds.
+- We adopt the official released evaluation tools for evaluating our method, where the mean average precision (mAP) and the mean average precision weighted by heading (mAPH) are used ...
+- 15th, 2019, our method currently ranks 1st on the car 3D detection leaderboard among all methods including both the RGB+LiDAR methods and LiDAR-only methods, and ranks 1st on ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Most existing 3D detection methods could be classified into two categories in terms of point cloud representations, i.e., the grid-based methods and the point-based methods.
+- Grid Point Keypoint z y We present a novel and high-performance 3D object detection framework, named PointVoxel-RCNN (PV-RCNN), for accurate 3D object detection from point clouds.
 
 ## 핵심 방법론
-- Task family: core 3D geometry and scene representation learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We adopt the official released evaluation tools for evaluating our method, where the mean average precision (mAP) and the mean average precision weighted by heading (mAPH) are used ...
+- 15th, 2019, our method currently ranks 1st on the car 3D detection leaderboard among all methods including both the RGB+LiDAR methods and LiDAR-only methods, and ranks 1st on ...
+- Recall of different proposal generation networks on the car class at moderate difficulty level of the KITTI val split set. mentation to randomly “paste” some new ground-truth objects ...
+- 3D Detection on the Waymo Open Dataset RPN with 3D Keypoints RoI-grid Voxel CNN Encoding Pooling RPN Baseline X Pool from Encoder X X PV-RCNN X X X ...

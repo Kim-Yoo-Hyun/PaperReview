@@ -1,26 +1,37 @@
 # Evaluation
 
-## Dataset
-ScanNet, Replica, Matterport3D, HM3D, Habitat, R2R, OXE
+- Year/Venue: 2025 / NeurIPS Oral
+- Category: Navigation and Embodied AI
+- Tags: Vision-Language Model, 3D Vision, Navigation
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_Dynam3D-Dynamic-Layered-3D-Tokens-Empower-VLM-for-Vision-a/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `embodied navigation and spatial planning`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- ScanNet
+- Matterport3D
+- 3RScan
+- HM3D
+- R2R
 
 ## Metrics
-SR, SPL, nDTW, goal distance, collision rate, IoU, AP, mAP
+- accuracy
+- mAP
+- SPL
+- SR
+- success rate
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Compared to prior state-of-the-art methods, e.g., g3D-LF and Uni-NaVid, our Dynam3D achieves an improvement of nearly 5% in navigation success rate (SR).
+- Our Dynam3D still demonstrates substantial improvements, outperforming NaVid by over 13% in Success Rate (SR) on REVERIE-CE and by over 5% on NavRAG-CE.
+- Methods LLM CM2 WS-MGMap InstructNav∗ AO-Planner∗ NaVid VLN-3DFF g3D-LF Uni-NaVid Dynam3D (Ours) × × ✓ ✓ ✓ × × ✓ ✓ 4.2 R2R-CE Val R2R-CE Test NE↓ OSR↑ ...
+- 4.1 Comparison with SOTA Methods As shown in Tables 1 and 2, we evaluate the navigation performance of our Dynam3D across three distinct continuous-environment VLN benchmarks.
+- Compared to prior state-of-the-art methods, e.g., g3D-LF and Uni-NaVid, our Dynam3D achieves an improvement of nearly 5% in navigation success rate (SR).
+- Our Dynam3D still demonstrates substantial improvements, outperforming NaVid by over 13% in Success Rate (SR) on REVERIE-CE and by over 5% on NavRAG-CE.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: Recently, video-language large models (Video-VLMs) with strong generalization capabilities and rich commonsense knowledge have shown remarkable performance when applied to VLN tasks.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- Compared to prior state-of-the-art methods, e.g., g3D-LF and Uni-NaVid, our Dynam3D achieves an improvement of nearly 5% in navigation success rate (SR).
+- 4.1 Comparison with SOTA Methods As shown in Tables 1 and 2, we evaluate the navigation performance of our Dynam3D across three distinct continuous-environment VLN benchmarks.
 
 ## Reproducibility Notes
-- Code/Project: not identified from OpenReview
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

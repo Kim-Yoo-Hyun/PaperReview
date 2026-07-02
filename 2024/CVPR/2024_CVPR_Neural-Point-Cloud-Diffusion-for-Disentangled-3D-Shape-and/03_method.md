@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: 3D Generative Modeling and Diffusion
+- Tags: Diffusion, Generation, point cloud, 3D Vision
+- Paper link: ./2024/CVPR/2024_CVPR_Neural-Point-Cloud-Diffusion-for-Disentangled-3D-Shape-and/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- For the first time, we present a suitable representation for 3D diffusion models to enable such disentanglement by introducing a hybrid point cloud and neural radiance field approach.
+- Our approach sets a new state of the art in generation compared to previous disentanglement-capable methods by reduced FID scores of 30-90% and is on-par with other nondisentanglement-capable ...
+- We model a diffusion process over point positions jointly with a high-dimensional feature space for a local density and radiance decoder.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- The general challenge for 3D diffusion models lies in selecting the right 3D representation.
+- However, none of the existing models enable disentangled generation to control the shape and appearance separately.
+- For the first time, we present a suitable representation for 3D diffusion models to enable such disentanglement by introducing a hybrid point cloud and neural radiance field approach.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

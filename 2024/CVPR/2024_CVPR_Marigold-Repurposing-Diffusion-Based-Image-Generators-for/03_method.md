@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: Foundations: Monocular Geometry
+- Tags: Diffusion, Generation, depth, 3D Vision
+- Paper link: ./2024/CVPR/2024_CVPR_Marigold-Repurposing-Diffusion-Based-Image-Generators-for/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We introduce Marigold, a method for affine-invariant 1.
+- The impressive progress of monocular depth estimators has mirrored the growth in model capacity, from relatively modest CNNs to large Transformer architectures.
+- The estimator can be fine-tuned in a couple of days on a single GPU using only synthetic training data.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Clearly, undoing the projection from the 3D world to a 2D image is a geometrically ill-posed problem and can only be solved with the help of prior knowledge, ...
+- Still, monocular depth estimators tend to struggle when presented with images with unfamiliar content and layout, since their knowledge of the visual world is restricted by the data ...
+- We introduce Marigold, a method for affine-invariant 1.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- # Training samples Real Synthetic DiverseDepth MiDaS LeReS Omnidata HDN DPT 320K 2M 300K 11.9M 300K 1.2M Ours (w/o ensemble) Ours (w/ ensemble) — † ∗ ∗ NYUv2 ...

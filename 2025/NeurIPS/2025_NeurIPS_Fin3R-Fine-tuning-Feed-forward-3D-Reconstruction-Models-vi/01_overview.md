@@ -3,33 +3,33 @@
 - Year/Venue: 2025 / NeurIPS poster
 - Category: 3D Reconstruction, Geometry, and SLAM
 - Tags: 3D reconstruction, depth, 3D Vision
-- Authors: Weining Ren, Hongjun Wang, Xiao Tan, Kai Han
-- Paper: https://openreview.net/forum?id=pZIeK0Xvph
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_Fin3R-Fine-tuning-Feed-forward-3D-Reconstruction-Models-vi/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- Existing non-synthetic depth labels are noisy and predominantly biased toward indoor environments. (2) Long-sequence pointmap degradation: Inherent ambiguities in multi-view pointmap regression impede the network’s ability to capture ...
+- Fine structures are frequently over-smoothed, object boundaries become blurred, and transparent or glossy surfaces are reconstructed with significant inaccuracies, yielding point clouds that lack crisp geometry.
 
 ## Core Idea
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: We present Fin3R, a simple, effective, and general fine-tuning method for feed-forward 3D reconstruction models.
-- Method cue: We present Fin3R, a simple, effective, and general fine-tuning method for feed-forward 3D reconstruction models.
-- Result cue: The fine-tuned models consistently deliver sharper boundaries, recover complex structures, and achieve higher geometric accuracy in both single- and multi-view settings, while adding only ...
+- To directly address this challenge, we propose a refined integration of LoRA with a re-normalization strategy specifically designed to constrain feature norm drift.
+- We present Fin3R, a simple, effective, and general fine-tuning method for feedforward 3D reconstruction models.
 
 ## Input / Output
-Input: one or more images/RGB-D/LiDAR observations. Output: depth, camera pose, point map, dense reconstruction, or consistent map.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D reconstruction, calibration, and geometric consistency`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- The table shows that our integrated models consistently achieve lower relative depth error and higher δ1 scores.
+- The fine-tuned models consistently deliver sharper boundaries, recover complex structures, and achieve higher geometric accuracy in both single- and multi-view settings, while adding only the tiny LoRA weights, ...
+- After fine-tuning, our method improves the model’s ability to capture fine details and complex surfaces such as transparent ones.
 
 ## Limitation
-강한 benchmark 성능이 실제 로봇 센서 노이즈, rolling shutter, 동적 객체, 저조도 환경까지 보장하지는 않는다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D reconstruction, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D reconstruction, depth, 3D Vision.
-- 초록에서 확인되는 주요 cue: Fin3R, The, However, LoRA, DUSt3R, MASt3R, CUT3R, VGGT.
+- We freeze the decoder, which handles view matching, and fine-tune only the image encoder—the component dedicated to feature extraction.
+- We present Fin3R, a simple, effective, and general fine-tuning method for feedforward 3D reconstruction models.
+- We validate our method on a wide range of models, including DUSt3R, MASt3R, CUT3R, and VGGT.
+
+## Abstract Cue
+- We present Fin3R, a simple, effective, and general fine-tuning method for feedforward 3D reconstruction models.

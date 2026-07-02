@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: 3D Semantic Understanding and Alignment
+- Tags: semantic, alignment, 3D Vision
+- Paper link: ./2026/ICLR/2026_ICLR_GeoPurify-A-Data-Efficient-Geometric-Distillation-Framewor/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To exploit this property, we propose \textbf{GeoPurify} that applies a small Student Affinity Network to purify 2D VLM-generated 3D point features using geometric priors ...
+## Brief Method
+- This result provides compelling evidence that our method learns a more fundamental and truly domain-agnostic understanding of 3D geometry.
+- We analyze the impact of our core geometric purification module, the choice of 2D backbone, the contrastive sampling strategy, the number of pooling iterations (T ), and the ...
+- Component Setting mIoU mAcc Geometric Purification w/o Purification (Aggregated 2D features) + GeoPurify (Ours) 50.2 55.1 68.1 72.5 2D Semantic Backbone LSeg LSeg + GeoPurify 48.6 51.2 61.6 ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To move beyond these limitations, the field is shifting toward open-vocabulary 3D understanding, which enables models to identify objects using arbitrary descriptions rather than predefined labels.
+- Existing approaches can be grouped into two categories: training-free and training-based.
+- This result provides compelling evidence that our method learns a more fundamental and truly domain-agnostic understanding of 3D geometry.
 
 ## 핵심 방법론
-- Task family: open-vocabulary 3D semantic understanding
-- Representation: semantic, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- ScanNetV2 Matterport3D mIoU mAcc mIoU mAcc TextureNet Huang et al. (2019) ScanComplete (Dai et al., 2018) DCM-Net (Schult et al., 2020) SupCon (Zheng et al., 2021) MinkowskiNet (Choy ...
+- Generalizability on Long-Tail Datasets.
+- As shown in Table 2, GeoPurify establishes a new stateof-the-art on long-tail benchmarks like ScanNet200 and the challenging M160 split.
+- This robust generalization arises from the synergy between our semantic and geometric modules.

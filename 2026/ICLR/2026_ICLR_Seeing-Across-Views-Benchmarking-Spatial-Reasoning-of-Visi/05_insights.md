@@ -1,20 +1,35 @@
 # Insights
 
-## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+## 이 논문에서 가져갈 핵심 개념
+- 핵심 방법 단서: reasoning, or non-embodied multi-view perception.
+- 출발 문제 단서: Singleview inputs are inherently limited by challenges like occlusion, depth ambiguity, and restricted fields of view.
+- 주장된 효과 단서: Our key contributions are as follows: • We establish the first benchmark that integrates spatial and robotic reasoning with synchronized multi-view inputs in robotic manipulation scenarios, enabling a ...
 
-## Strength
-- `robot manipulation and vision-language-action control` 문제를 3D geometry와 language/action prior를 함께 쓰는 방향으로 밀어붙인다.
-- 사용자의 연구 키워드 중 `Vision-Language Model, Robotics, 3D Vision, Benchmark`와 직접적으로 연결된다.
+## 내 연구 방향에서 어떻게 활용할 수 있나
+- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
+- Attention 기반 token interaction을 3D object, scene, map, trajectory token 사이의 long-range relation modeling에 사용할 수 있다.
+- Sequence modeling의 병렬화/장거리 의존성 처리를 embodied memory, planning history, multi-view observation aggregation으로 확장할 수 있다.
 
-## Paper Claim
-- 논문의 중심 claim은 기존 2D-only, closed-set, 또는 task-specific 접근보다 더 일반화 가능한 3D-aware representation/policy/reasoning을 제공한다는 것이다.
-- Abstract result cue: The results show that state-of-the-art models remain far below human performance, underscoring the substantial challenges VLMs face in multi-view robotic perception.
+## 이 논문이 끝난 지점
+- 논문이 도달한 지점: Our key contributions are as follows: • We establish the first benchmark that integrates spatial and robotic reasoning with synchronized multi-view inputs in robotic manipulation scenarios, enabling a ...
+- 원 논문이 sequence/language task에서 보인 구조는 metric 3D geometry, SE(3) consistency, sensor noise, robot execution constraint를 직접 다루지 않는다.
 
-## Future Work
-- dynamic scene, partial observation, sensor noise, cross-embodiment transfer, real-time inference, safety-aware planning을 추가 검증하는 것이 중요하다.
-- 3D scene graph/semantic Gaussian/SLAM map을 VLA policy의 persistent memory로 연결하는 방향이 유망하다.
+## 다음 연구 질문
+- 3D point/object/map/action token에 attention을 적용할 때 어떤 positional encoding이 metric geometry를 보존하는가?
+- long-horizon embodied task에서 full attention, sparse attention, graph attention 중 무엇이 memory와 planning에 유리한가?
+- language reasoning token과 3D geometry token을 어떤 intermediate representation으로 정렬해야 hallucination을 줄일 수 있는가?
 
-## 내 관점
-- 이 논문은 `Benchmarks and Datasets` 축에서 읽어야 한다.
-- 후속 연구 아이디어: language-grounded 3D memory를 만들고, robot policy가 이를 action feasibility와 uncertainty까지 포함해 조회하도록 설계한다.
+## 실험으로 확인할 방향
+- 논문 내 evaluation 단서: ScanNet, BridgeData, Open X-Embodiment / accuracy, mAP, collision
+- 내 연구 확장 benchmark 후보: ScanNet, Matterport3D, R2R, CALVIN
+- 내 연구 확장 metric 후보: accuracy, mIoU, SR, success rate
+- 검증 초점: 3D relation reasoning, spatial memory, language-conditioned planning 성능을 확인한다.
+
+## 주의할 점
+- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
+- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+
+## 근거가 되는 논문 단서
+- Problem cue: Singleview inputs are inherently limited by challenges like occlusion, depth ambiguity, and restricted fields of view.
+- Method cue: reasoning, or non-embodied multi-view perception.
+- Result cue: Our key contributions are as follows: • We establish the first benchmark that integrates spatial and robotic reasoning with synchronized multi-view inputs in robotic manipulation scenarios, enabling a ...

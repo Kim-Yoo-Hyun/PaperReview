@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2020 / ECCV
+- Category: 3D Vision-Language Grounding
+- Tags: 3D visual grounding, language, scene
+- Paper link: ./2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/paper.pdf
+- Code/Project: https://github.com/referit3d/referit3d
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- By tapping on this data, we develop novel neural listeners that can comprehend object-centric natural language and identify the referred object directly in a 3D scene.
+- We also show that architectures which promote object-to-object communication via graph neural networks outperform less context-aware alternatives, and that fine-grained object classification is a bottleneck for language-assisted 3D ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- In this work we study the problem of using referential language to identify common objects in real-world 3D scenes.
+- We also show that architectures which promote object-to-object communication via graph neural networks outperform less context-aware alternatives, and that fine-grained object classification is a bottleneck for language-assisted 3D ...
+- By tapping on this data, we develop novel neural listeners that can comprehend object-centric natural language and identify the referred object directly in a 3D scene.
 
 ## 핵심 방법론
-- Task family: vision-language alignment and multimodal reasoning
-- Representation: 3D visual grounding
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- The progress on connecting language and vision in the past decade has rekindled interest in tasks like visual question answering (e.g., ), image captioning (e.g., ), and sentence-to-image ...
+- Recent works have enhanced the accessibility of visual content through language via grounding (e.g., ), showing strong results in locating linguistically described visual elements in images.
+- However, most of these works focus on developing better models that connect vision to language in images, which express after all only a 2D view of our 3D ...
+- Even in embodied AI most works (e.g., embodied QA , or embodied visual recognition ), fine-grained 3D object identification is not explicitly modeled.
+- Fine-grained 3D understanding however

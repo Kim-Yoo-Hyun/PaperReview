@@ -1,26 +1,31 @@
 # Evaluation
 
-## Dataset
-Replica, LIBERO, Open X-Embodiment, Google Robot
+- Year/Venue: 2025 / NeurIPS Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model, Robotics
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_VLA-Cache-Efficient-Vision-Language-Action-Manipulation-vi/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `robot manipulation and vision-language-action control`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- LIBERO
 
 ## Metrics
-success rate, task completion, language-conditioned generalization, real/sim transfer, IoU, AP, SR, SPL
+- accuracy
+- SR
+- success rate
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Specifically, we adopt two state-of-the-art token-level acceleration techniques SparseVLM and FastV on OpenVLA as compared methods in the LIBERO benchmark.
+- In simulation, we evaluate VLA-Cache on three open-source VLA models: OpenVLA , OpenVLA-OFT and CogAct , using the LIBERO benchmark and SIMPLER environment , respectively.
+- All experiments are conducted on an NVIDIA RTX 4090 GPU.
+- To validate the effectiveness of VLA-Cache, we evaluate our method in both simulation and real-world settings.
+- Extensive experiments on two simulation platforms (LIBERO and SIMPLER) and a real-world robotic system demonstrate that VLA-Cache achieves up to 1.7× speedup in CUDA latency and a 15% ...
+- Specifically, we adopt two state-of-the-art token-level acceleration techniques SparseVLM and FastV on OpenVLA as compared methods in the LIBERO benchmark.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: Vision-Language-Action (VLA) models have demonstrated strong multi-modal reasoning capabilities, enabling direct action generation from visual perception and language instructions in an end-to-end manner.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- Specifically, we adopt two state-of-the-art token-level acceleration techniques SparseVLM and FastV on OpenVLA as compared methods in the LIBERO benchmark.
+- CogAct, which integrates a Diffusion Policy for continuous control, serves as our baseline.
 
 ## Reproducibility Notes
-- Code/Project: not identified from OpenReview
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

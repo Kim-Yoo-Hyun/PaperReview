@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / CVPR
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, 3D reconstruction, point cloud, 3D Vision
+- Paper link: ./2025/CVPR/2025_CVPR_EAP-GS-Efficient-Augmentation-of-Pointcloud-for-3D-Gaussia/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Specifically, we introduce an Attentional Pointcloud Augmentation (APA) technique, which retains two-view tracks as an option for pointcloud generation.
+- To address this, we propose EAP-GS, a method to enhance initialization for fast, accurate, and stable few-shot scene reconstruction.
+- The training strategy of original 3DGS is not suitable for few-shot reconstruction, leading to severe overfitting.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- In practice, a sufficient number of images are often difficult to obtain due to various limitations.
+- Furthermore, our APA can be framed as a modular augmentation to existing methods with minimal overhead.
+- Specifically, we introduce an Attentional Pointcloud Augmentation (APA) technique, which retains two-view tracks as an option for pointcloud generation.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- The training strategy of original 3DGS is not suitable for few-shot reconstruction, leading to severe overfitting.
+- In contrast, DRGS mitigates training time through an early-stop strategy, but this may lead to insufficient training.
+- In comparison, our augmented pointcloud inherently encodes depth information, providing a good guidance for Gaussian generation.

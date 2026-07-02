@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: 3D Scene Graphs and Graph Reasoning
+- Tags: 3D Scene Graph, open-vocabulary, Graph Reasoning
+- Paper link: ./2024/CVPR/2024_CVPR_Open3DSG-Open-Vocabulary-3D-Scene-Graphs-from-Point-Clouds/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We present Open3DSG, an alternative approach to learn 3D scene graph prediction in an open world without requiring labeled scene graph data.
+- We present Open3DSG the first approach for learning to predict open-vocabulary 3D scene graphs from 3D point clouds.
+- We compare our method with both zero-shot and fully-supervised baselines for 3D scene graph prediction.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- 3D scene graphs are an emergent graph-based representation facilitating various 3D scene understanding tasks.
+- In contrast to other more object-centric 3D scene representations, the key advantage of 3D scene graphs is the ability to also represent relationships between scene entities, such as ...
+- We present Open3DSG, an alternative approach to learn 3D scene graph prediction in an open world without requiring labeled scene graph data.
 
 ## 핵심 방법론
-- Task family: structured 3D scene graph reasoning
-- Representation: 3D Scene Graph, Graph Reasoning
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We compare our method with both zero-shot and fully-supervised baselines for 3D scene graph prediction.
+- As a zero-shot approach, our method is less susceptible to class imbalance.
+- Here we compare the prediction performances for objects and predicates based on their frequency in the training set.
+- Training samples of classes that are observed in a higher frequency are generally learned more effectively than rarer classes.
+- Most scene graph methods for instance, uses a focal loss to solve the problem of class imbalance in the training set.

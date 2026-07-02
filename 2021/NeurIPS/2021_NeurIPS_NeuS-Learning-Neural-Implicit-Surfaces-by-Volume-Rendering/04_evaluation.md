@@ -1,26 +1,31 @@
 # Evaluation
 
-## Dataset
-OXE, DTU
+- Year/Venue: 2021 / NeurIPS
+- Category: Foundations: 3D Scene Representations
+- Tags: 3D Vision, NeRF, surface reconstruction, geometry
+- Paper link: ./2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering/paper.pdf
+- Code/Project: https://lingjie0206.github.io/papers/NeuS/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `core 3D geometry and scene representation learning`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- DTU
 
 ## Metrics
-PSNR, SSIM, LPIPS, ATE, RPE, Chamfer, F-score, pose AUC
+- accuracy
+- mAP
+- Chamfer
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- The results show that our approach outperforms the baseline methods on the DTU dataset in both settings – w/ and w/o mask in terms of the Chamfer distance.
+- COLMAP results are achieved by trim=0.
+- Baselines. (1) The state-of-the-art surface rendering approach – IDR : IDR can reconstruct surface with high quality but requires foreground masks as supervision; Since IDR has demonstrated superior ...
+- Regarding the w/o mask setting, we visually compare our method with NeRF and COLMAP in the setting of w/o mask in Figure 5, which shows our reconstructed surfaces ...
+- Experiments on the DTU dataset and the BlendedMVS dataset show that NeuS outperforms the state-of-the-arts in high-quality surface reconstruction, especially for objects and scenes with complex structures and ...
+- The results show that our approach outperforms the baseline methods on the DTU dataset in both settings – w/ and w/o mask in terms of the Chamfer distance.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- Baselines. (1) The state-of-the-art surface rendering approach – IDR : IDR can reconstruct surface with high quality but requires foreground masks as supervision; Since IDR has demonstrated superior ...
+- Regarding the w/o mask setting, we visually compare our method with NeRF and COLMAP in the setting of w/o mask in Figure 5, which shows our reconstructed surfaces ...
 
 ## Reproducibility Notes
-- Code/Project: https://lingjie0206.github.io/papers/NeuS/
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

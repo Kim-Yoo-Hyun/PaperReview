@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2019 / ICCV
+- Category: Foundations: Monocular Geometry
+- Tags: 3D Vision, monocular depth, self-supervised, geometry
+- Paper link: ./2019/ICCV/2019_ICCV_Digging-Into-Self-Supervised-Monocular-Depth-Estimation/paper.pdf
+- Code/Project: https://github.com/nianticlabs/monodepth2
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In particular, we propose (i) a minimum reprojection loss, designed to robustly handle occlusions, (ii) a full-resolution multi-scale sampling method that reduces visual artifacts, and (iii) an auto-masking ...
+- Research on self-supervised monocular training usually explores increasingly complex architectures, loss functions, and image formation models, all of which have recently helped to close the gap with fully-supervised ...
+- In this paper, we propose a set of improvements, which together result in both quantitatively and qualitatively improved depth maps compared to competing self-supervised methods.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, collecting large and varied training datasets with accurate ground truth depth for supervised learning is itself a formidable challenge.
+- To overcome this limitation, self-supervised learning has emerged as a promising alternative for training models to perform monocular depth estimation.
+- In particular, we propose (i) a minimum reprojection loss, designed to robustly handle occlusions, (ii) a full-resolution multi-scale sampling method that reduces visual artifacts, and (iii) an auto-masking ...
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: 3D Vision, geometry
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We introduced three contributions: (i) a minimum reprojection loss, computed for each pixel, to deal Input Zhou et al.
+- Comparison of our method to existing methods on KITTI 2015 using the Eigen split.
+- Effect of ImageNet pretraining We follow previous work in initializing our encoders with weights pretrained on ImageNet .
+- While our contributions are designed for monocular training, we still gain high accuracy in the stereo-only category.
+- We train these ‘w/o pretraining’ models for 30 epochs to ensure convergence.

@@ -1,18 +1,20 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / 3DV
+- Category: 3D Equivariance, Calibration, and Registration
+- Tags: equivariant, point cloud, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_Efficient-Continuous-Group-Convolutions-for-Local-SE3-Equi/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-Our experiments show that our approach achieves competitive or superior performance across a range of datasets and tasks, including object classification and semantic segmentation, ...
+## Brief Method
+- Compared to other state-ofthe-art local rotation equivariant methods, E2PN and EPN , the computational resources needed for our approach are significantly lower even when using 4 samples.
+- In the past years, several neural network architectures have been proposed to process such data .
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Approaches learning directly from 3D data often take inspiration from the success in 2D vision and address two of the main challenges in such data representation, order invariance ...
+- While efforts have been made to develop efficient SE(3) equivariant networks, existing approaches rely on discretization or only introduce global rotation equivariance.
+- Compared to other state-ofthe-art local rotation equivariant methods, E2PN and EPN , the computational resources needed for our approach are significantly lower even when using 4 samples.
 
 ## 핵심 방법론
-- Task family: geometry-aware equivariant modeling
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Compared to other state-ofthe-art local rotation equivariant methods, E2PN and EPN , the computational resources needed for our approach are significantly lower even when using 4 samples.

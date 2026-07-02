@@ -3,33 +3,32 @@
 - Year/Venue: 2025 / 3DV
 - Category: 3D Equivariance, Calibration, and Registration
 - Tags: geometry, 3D Vision
-- Authors: Bardienus Pieter Duisterhof, Lojze Zust, Philippe Weinzaepfel, Vincent Leroy, Yohann Cabon, Jerome Revaud
-- Paper: https://3dvconf.github.io/2025/accepted-papers/
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/3DV/2025_3DV_MASt3R-SfM-a-Fully-Integrated-Solution-for-Unconstrained-S/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- The presence of outliers, e.g. wrong pixel matches, poses additional challenges and compels existing methods to resort to hypothesis formulation and verification at multiple occasions in the pipeline, ...
+- Since finding the global minimum in such a landscape is too challenging to be done directly, traditional SfM approaches such as COLMAP decomposes the problem as a series ...
+- These changes must, however, be put into perspective, as they do not fundamentally challenge the overall structure of the traditional pipeline.
 
 ## Core Idea
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Structure-from-Motion (SfM), a task aiming at jointly recovering camera poses and 3D geometry of a scene given a set of images, remains a hard ...
-- Method cue: In this paper, we propose instead to build upon a recently released foundation model for 3D vision that can robustly produce local 3D reconstructions ...
-- Result cue: Recent methods have attempted to revisit this paradigm, but we empirically show that they fall short of fixing these core issues.
+- We note that 14 scenes of T&T are part of MegaDepth , which is used for training the MASt3R checkpoint we used.
+- Our approach compares favorably to existing methods, particularly when the number of input images is low.
 
 ## Input / Output
-Input: one or more images/RGB-D/LiDAR observations. Output: depth, camera pose, point map, dense reconstruction, or consistent map.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D reconstruction, calibration, and geometric consistency`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- We show here a reconstruction from 6 views sharing the same optical center. tive function with many local minima .
 
 ## Limitation
-강한 benchmark 성능이 실제 로봇 센서 노이즈, rolling shutter, 동적 객체, 저조도 환경까지 보장하지는 않는다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D reconstruction, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: geometry, 3D Vision.
-- 초록에서 확인되는 주요 cue: Structure-from-Motion, SfM, The, Recent, Overall, Extensive.
+- In comparison, FlowMap and Ace-Zero independently propose a radically novel type of approach to solve SfM, which is based on simple first-order gradient descent of a global loss ...
+- The presence of outliers, e.g. wrong pixel matches, poses additional challenges and compels existing methods to resort to hypothesis formulation and verification at multiple occasions in the pipeline, ...
+- We show here a reconstruction from 6 views sharing the same optical center. tive function with many local minima .
+
+## Abstract Cue
+- Philippe Weinzaepfel3 Jerome Revaud3 Figure 1.

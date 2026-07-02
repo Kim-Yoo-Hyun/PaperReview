@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, 3D Vision
+- Paper link: ./2024/ECCV/2024_ECCV_MVSplat-Efficient-3D-Gaussian-Splatting-from-Sparse-Multi/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- For better efficiency, we use Swin Transformer’s local window attention in our Transformer architecture.
+- Then, we use a multi-view Transformer with selfand cross-attention layers to exchange information between different views.
+- In this paper, we present MVSplat, a Gaussian-based feed-forward model for novel view synthesis.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, reconstructing a 3D scene from a single image is inherently ill-posed and ambiguous, posing a significant challenge when applied to a more general and larger scene, which ...
+- We consider the problem of 3D scene reconstruction and novel view synthesis from very sparse (i.e., as few as two) images in just one forward pass of a ...
+- For better efficiency, we use Swin Transformer’s local window attention in our Transformer architecture.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- For better efficiency, we use Swin Transformer’s local window attention in our Transformer architecture.
+- Then, we use a multi-view Transformer with selfand cross-attention layers to exchange information between different views.
+- In this paper, we present MVSplat, a Gaussian-based feed-forward model for novel view synthesis.
+- Unlike pixelSplat that predicts probabilistic depth, we develop an efficient and high-performance multi-view depth estimation model that enables unprojecting predicted depth maps as the Gaussian centers, in parallel ...
+- To construct the cost volumes, we first extract multi-view image features with a CNN and Transformer architecture .

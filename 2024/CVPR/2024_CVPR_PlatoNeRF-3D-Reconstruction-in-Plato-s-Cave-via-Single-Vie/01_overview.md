@@ -3,32 +3,33 @@
 - Year/Venue: 2024 / CVPR
 - Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
 - Tags: NeRF, 3D reconstruction, sensor fusion, LiDAR, 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Klinghoffer_PlatoNeRF_3D_Reconstruction_in_Platos_Cave_via_Single-View_Two-Bounce_Lidar_CVPR_2024_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2024/CVPR/2024_CVPR_PlatoNeRF-3D-Reconstruction-in-Plato-s-Cave-via-Single-Vie/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- Existing methods for single-view 3D reconstruction with NeRF rely on either data priors to hallucinate views of occluded regions, which may not be physically accurate, or shadows observed ...
+- We propose using time-offlight data captured by a single-photon avalanche diode to overcome these limitations.
+- 3D reconstruction from a single-view is challenging because of the ambiguity from monocular cues and lack of information about occluded regions.
 
 ## Core Idea
-핵심은 radiance field의 공간 좌표/뷰 의존 표현에 CLIP/VLM feature를 결합해 3D 위치에서 언어적 의미를 조회할 수 있게 하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We use a dataset of single-photon lidar data captured by Henley et al. to validate our method outside of simulation.
+- We propose using time-offlight data captured by a single-photon avalanche diode to overcome these limitations.
 
 ## Input / Output
-Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `language-aware neural radiance field representation`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- In addition, we demonstrate improved generalization under practical constraints on sensor spatialand temporal-resolution.
+- By leveraging the advantages of both NeRF and two-bounce light measured by lidar, we demonstrate that we can reconstruct visible and occluded geometry without data priors or reliance ...
 
 ## Limitation
-3DGS/NeRF 기반 방법은 scene reconstruction 품질, 카메라 포즈, memory/runtime, dynamic scene 처리에 민감하다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- language-aware neural radiance field representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: NeRF, 3D reconstruction, sensor fusion, LiDAR, 3D Vision.
+- We propose using time-offlight data captured by a single-photon avalanche diode to overcome these limitations.
+- In addition, we demonstrate improved generalization under practical constraints on sensor spatialand temporal-resolution.
+- Our method models two-bounce optical paths with NeRF, using lidar transient data for supervision.
+
+## Abstract Cue
+- 3D reconstruction from a single-view is challenging because of the ambiguity from monocular cues and lack of information about occluded regions.

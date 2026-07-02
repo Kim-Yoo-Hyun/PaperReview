@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2022 / CVPR
+- Category: Foundations: 3D Representation Learning
+- Tags: point cloud, 3D Vision
+- Paper link: ./2022/CVPR/2022_CVPR_Point-BERT-Pre-training-3D-Point-Cloud-Transformers-with-M/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Tokenizer We present Point-BERT, a new paradigm for learning Transformers to generalize the concept of BERT to 3D point cloud.
+- Inspired by BERT, we devise a Masked Point Modeling (MPM) task to pre-train point cloud Transformers.
+- Specifically, we first divide a point cloud into several local point patches, and a point cloud Tokenizer with a discrete Variational AutoEncoder (dVAE) is designed to generate discrete ...
 
 ## 해결하려는 문제
-- 연구 유형: core 3D geometry and scene representation learning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Extensive experiments demonstrate that the proposed BERT-style pretraining strategy significantly improves the performance of standard point cloud Transformers.
+- Equipped with our pretraining strategy, we show that a pure Transformer architecture attains 93.8% accuracy on ModelNet40 and 83.1% accuracy on the hardest setting of ScanObjectNN, surpassing carefully ...
+- Tokenizer We present Point-BERT, a new paradigm for learning Transformers to generalize the concept of BERT to 3D point cloud.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `point cloud, 3D Vision` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

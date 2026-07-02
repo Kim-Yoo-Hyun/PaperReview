@@ -1,26 +1,31 @@
 # Evaluation
 
-## Dataset
-LIBERO, BridgeData, Open X-Embodiment, Google Robot, WidowX
+- Year/Venue: 2024 / CoRL
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Robotics, Imitation Learning
+- Paper link: ./2024/CoRL/2024_CoRL_OpenVLA-An-Open-Source-Vision-Language-Action-Model/paper.pdf
+- Code/Project: https://github.com/openvla/openvla
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `robot manipulation and vision-language-action control`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- BridgeData
+- Open X-Embodiment
 
 ## Metrics
-success rate, task completion, language-conditioned generalization, real/sim transfer, IoU, AP, mAP, SR
+- accuracy
+- success rate
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- OpenVLA achieves highest overall performance and even outperforms closed-source model RT-2-X in all categories except for semantic generalization.
+- Concretely, we aim to answer the following questions: (1) How does OpenVLA compare to prior generalist robot policies, when evaluating on multiple robots and various types of generalization? ...
+- We find that OpenVLA and RT-2-X attain comparable performance and significantly outperform RT-1-X and Octo overall.
+- RT-2-X clearly outperforms both RT-1-X and Octo, demonstrating the benefits of large, pretrained VLMs for robotics.
+- As a product of the added data diversity and new model components, OpenVLA demonstrates strong results for generalist manipulation, outperforming closed models such as RT-2-X (55B) by 16.5% ...
+- OpenVLA achieves highest overall performance and even outperforms closed-source model RT-2-X in all categories except for semantic generalization.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: As a product of the added data diversity and new model components, OpenVLA demonstrates strong results for generalist manipulation, outperforming closed models such as ...
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- Concretely, we aim to answer the following questions: (1) How does OpenVLA compare to prior generalist robot policies, when evaluating on multiple robots and various types of generalization? ...
+- We compare OpenVLA’s performance to three prior generalist manipulation policies: RT-1-X , RT-2-X , and Octo .
 
 ## Reproducibility Notes
-- Code/Project: https://github.com/openvla/openvla
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

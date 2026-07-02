@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Vision-Language Model, Robotics, Reinforcement Learning
+- Paper link: ./2026/ICLR/2026_ICLR_Embodied-R1-Reinforced-Embodied-Reasoning-for-General-Robo/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We introduce Embodied-R1, a 3B Vision-Language Model (VLM) specifically designed for embodied reasoning and pointing.
+## Brief Method
+- C ONCLUSION We introduce Embodied-R1, an embodied reasoning VLM that bridges the critical “seeing-to-doing” gap in robotic manipulation.
+- To dissect our training paradigm, we compared RL against SFT and analyzed the impact of an explicit reasoning process.
+- By training Embodied-R1 with a two-stage RFT paradigm on our large-scale curated dataset, we significantly enhance its spatial reasoning and embodied pointing abilities.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- In blackboard wiping, Embodied-R1’s visual traces were executed via an impedance controller to maintain consistent contact force.
+- C ONCLUSION We introduce Embodied-R1, an embodied reasoning VLM that bridges the critical “seeing-to-doing” gap in robotic manipulation.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- MOKA (Liu et al., 2024a) Sofar (Qi et al., 2025) RoboPoint (Yuan et al., 2024b) Affordance FSD (Yuan et al., 2025) Methods Embodied-R1 4.3 Put Spoon Put Carrot ...
+- To rigorously assess the zero-shot generalization capability of EmbodiedR1, we conducted experiments on the WidowX arm using SimplerEnv (Li et al., 2024b), employing a CuRobo (Sundaralingam et al., ...
+- We compared performance against a comprehensive suite of baselines across three categories: (1) End-to-end VLAs, including standard models (Octo, OpenVLA, π0 ) and stronger variants (π0 -fast, OpenVLA-OFT, ...

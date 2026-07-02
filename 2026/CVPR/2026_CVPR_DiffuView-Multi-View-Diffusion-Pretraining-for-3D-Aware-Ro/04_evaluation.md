@@ -1,26 +1,32 @@
 # Evaluation
 
-## Dataset
-ScanNet, LIBERO, Open X-Embodiment, OXE, Meta-World, Objaverse
+- Year/Venue: 2026 / CVPR
+- Category: Equivariance, Diffusion, and 3D Action
+- Tags: Diffusion, 3D manipulation, Robotics
+- Paper link: ./2026/CVPR/2026_CVPR_DiffuView-Multi-View-Diffusion-Pretraining-for-3D-Aware-Ro/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `diffusion-based generation or policy learning`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- ScanNet
+- Objaverse
+- LIBERO
+- Open X-Embodiment
 
 ## Metrics
-task-specific accuracy, generalization gap, ablation metrics, IoU, AP, mAP, success rate, SR
+- success rate
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Quantitative results on MetaWorld Benchmark.
+- Mv-bench results. provides a comprehensive suite of simulated manipulation tasks designed to assess spatial reasoning and generalization capabilities in visuomotor learning.
+- In addition, we evaluate DiffuView on the MetaWorld benchmark, which is based on the MuJoCo Simulator.
+- All experiments are conducted on 8 NVIDIA A100 GPUs.
+- Extensive experiments in both simulation and realworld scenarios demonstrate that DiffuView achieves superior generalization, improving success rates under viewpoint shifts by nearly 20% compared with existing methods.
+- Quantitative results on MetaWorld Benchmark.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- Additionally, we compare against OpenVLA , VQVLA , and π0.5 -ki , which constitute representative VLA models.
+- To rigorously evaluate the effectiveness of our proposed method, we conduct quantitative comparisons against several state-of-the-ar methods featuring distinct model structures.
 
 ## Reproducibility Notes
-- Code/Project: not identified from primary page
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

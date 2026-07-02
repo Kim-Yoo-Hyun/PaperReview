@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2019 / CVPR
+- Category: Foundations: 3D Representation Learning
+- Tags: 3D Vision
+- Paper link: ./2019/CVPR/2019_CVPR_4D-Spatio-Temporal-ConvNets-Minkowski-Convolutional-Neural/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To overcome challenges in the high-dimensional 4D space, we propose the hybrid kernel, a special case of the generalized sparse convolution, and the trilateral-stationary conditional random field that ...
+- In this work, we propose 4-dimensional convolutional neural networks for spatio-temporal perception that can directly process such 3D-videos using high-dimensional convolutions.
+- Conclusion In this paper, we propose a generalized sparse convolution and an auto-differentiation library for sparse tensors and the generalized sparse convolution.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To overcome challenges in the high-dimensional 4D space, we propose the hybrid kernel, a special case of the generalized sparse convolution, and the trilateral-stationary conditional random field that ...
+- However, there are many technical challenges in using 3Dvideos for high-level perception tasks.
+- To overcome challenges in the high-dimensional 4D space, we propose the hybrid kernel, a special case of the generalized sparse convolution, and the trilateral-stationary conditional random field that ...
 
 ## 핵심 방법론
-- Task family: core 3D geometry and scene representation learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Conclusion In this paper, we propose a generalized sparse convolution and an auto-differentiation library for sparse tensors and the generalized sparse convolution.
+- We use various 3D and 4D networks with and without TS-CRF.
+- RF+3D CRF OctNet (2563 ) SPLATNet (3D) 42.3 54.4 56.4 59.2 65.4 3D MinkNet20 66.46 4D MinkNet20 66.56 4D MinkNet20 + TS-CRF 66.59 The performance saturates quickly due ...

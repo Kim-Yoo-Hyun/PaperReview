@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2025 / ICLR Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Robotics, 3D Vision
+- Paper link: ./2025/ICLR/2025_ICLR_TraceVLA-Visual-Trace-Prompting-Enhances-Spatial-Temporal/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this work, we introduce visual trace prompting, a simple yet effective approach to facilitate VLA models’ spatial-temporal awareness for action prediction by encoding ...
+## Brief Method
+- TraceVLA finetuned OpenVLA finetuned LIBERO-Spatial 84.6% ± 0.2% 82.6% ± 0.4% LIBERO-Object 85.2% ± 0.4% 83.8% ± 0.6% LIBERO-Goal 75.1% ± 0.3% 70.4% ± 0.5% LIBERO-Long 54.1% ± ...
+- In addition to SimplerEnv and WIDOWX-250 real robot experiments, in this section, we conduct an additional experiment on LIBERO simulation benchmarks.
+- In particular, we take the four suites from LIBERO: LIBERO-long, LIBERO-Spatial, LIBERO-Object, LIBERO-Goal in LIBERO, each with 10 tasks and 50 human teleoperated demonstrations per task.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- TraceVLA finetuned OpenVLA finetuned LIBERO-Spatial 84.6% ± 0.2% 82.6% ± 0.4% LIBERO-Object 85.2% ± 0.4% 83.8% ± 0.6% LIBERO-Goal 75.1% ± 0.3% 70.4% ± 0.5% LIBERO-Long 54.1% ± ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- TraceVLA finetuned OpenVLA finetuned LIBERO-Spatial 84.6% ± 0.2% 82.6% ± 0.4% LIBERO-Object 85.2% ± 0.4% 83.8% ± 0.6% LIBERO-Goal 75.1% ± 0.3% 70.4% ± 0.5% LIBERO-Long 54.1% ± ...
+- In addition to SimplerEnv and WIDOWX-250 real robot experiments, in this section, we conduct an additional experiment on LIBERO simulation benchmarks.
+- In particular, we take the four suites from LIBERO: LIBERO-long, LIBERO-Spatial, LIBERO-Object, LIBERO-Goal in LIBERO, each with 10 tasks and 50 human teleoperated demonstrations per task.
+- We evaluate the multitask performance of the pretrained VLA policy on these four suites.
+- Specifically: • LIBERO-Spatial: Contains the same set of objects but in varying layouts, testing the model’s ability to understand spatial relationships.

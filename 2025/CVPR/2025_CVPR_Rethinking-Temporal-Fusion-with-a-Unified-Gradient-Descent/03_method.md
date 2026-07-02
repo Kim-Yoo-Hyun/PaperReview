@@ -1,18 +1,20 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / CVPR
+- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
+- Paper link: ./2025/CVPR/2025_CVPR_Rethinking-Temporal-Fusion-with-a-Unified-Gradient-Descent/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To effectively fuse temporal signals across heterogeneous representations, we propose a novel fusion strategy by reinterpreting the formulation of vanilla RNNs.
+- We present GDFusion, a temporal fusion method for vision-based 3D semantic occupancy prediction (VisionOcc).
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- We present GDFusion, a temporal fusion method for vision-based 3D semantic occupancy prediction (VisionOcc).
+- GDFusion opens up the underexplored aspects of temporal fusion within the VisionOcc framework, focusing on both temporal cues and fusion strategies.
+- To effectively fuse temporal signals across heterogeneous representations, we propose a novel fusion strategy by reinterpreting the formulation of vanilla RNNs.
 
 ## 핵심 방법론
-- Task family: open-vocabulary 3D semantic understanding
-- Representation: semantic, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Backbone Input Size mIoU mIoUD IoU Memory UniOCC SurroundSDF FlashOCC COTR ViewFormer OPUS ResNet-50 ResNet-50 ResNet-50 ResNet-50 ResNet-50 ResNet-50 256 × 704 256 × 704 256 × 704 ...

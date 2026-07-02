@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2021 / CoRL
+- Category: Foundations: Vision-Language-Action and Robotics
+- Tags: Robotics, Vision-Language Action, CLIP, manipulation
+- Paper link: ./2021/CoRL/2021_CoRL_CLIPort-What-and-Where-Pathways-for-Robotic-Manipulation/paper.pdf
+- Code/Project: https://cliport.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- To address this problem, we bake in a strong semantic prior while learning policies.
+- A natural solution to both these problems is to condition policies with natural language.
+- This allows us to formulate tabletop rearrangement as a series of language-conditioned affordance predictions, a predominantly vision-based inference problem, and thus benefit from the strengths of data-driven paradigms ...
 
 ## 해결하려는 문제
-- 연구 유형: vision or vision-language foundation model pretraining
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Experiments in simulated and real-world settings show that our approach is data efficient in few-shot settings and generalizes effectively to seen and unseen semantic concepts.
+- To this end, we propose a framework that combines the best of both worlds: a two-stream architecture with semantic and spatial pathways for vision-based manipulation.
+- Specifically, we present CLIP ORT, a language-conditioned imitationlearning agent that combines the broad semantic understanding (what) of CLIP with the spatial precision (where) of Transporter .
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Robotics, Vision-Language Action, CLIP, manipulation` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- To address this problem, we bake in a strong semantic prior while learning policies.
+- A natural solution to both these problems is to condition policies with natural language.
+- This allows us to formulate tabletop rearrangement as a series of language-conditioned affordance predictions, a predominantly vision-based inference problem, and thus benefit from the strengths of data-driven paradigms ...

@@ -3,32 +3,33 @@
 - Year/Venue: 2025 / CVPR
 - Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
 - Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/CVPR/2025_CVPR_Rethinking-Temporal-Fusion-with-a-Unified-Gradient-Descent/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-3D semantic perception은 라벨 공간이 제한적이고 long-tail 객체/속성/affordance를 다루기 어려워 foundation model alignment가 필요하다.
+- We present GDFusion, a temporal fusion method for vision-based 3D semantic occupancy prediction (VisionOcc).
+- GDFusion opens up the underexplored aspects of temporal fusion within the VisionOcc framework, focusing on both temporal cues and fusion strategies.
+- It systematically examines the entire VisionOcc pipeline, identifying three fundamental yet previously overlooked temporal cues: scene-level consistency, motion calibration, and geometric complementation.
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- To effectively fuse temporal signals across heterogeneous representations, we propose a novel fusion strategy by reinterpreting the formulation of vanilla RNNs.
+- We present GDFusion, a temporal fusion method for vision-based 3D semantic occupancy prediction (VisionOcc).
 
 ## Input / Output
-Input/Output follows the paper task formulation; see PDF for the exact interface.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `open-vocabulary 3D semantic understanding`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive experiments on nuScenes demonstrate that GDFusion signiﬁcantly outperforms established baselines, achieving 2.2%–4.7% mIoU improvement and reducing memory consumption by 30%–72%.
+- By exploiting multi-frame data, these systems attain improved consistency and robustness in predictions.
 
 ## Limitation
-2D foundation model에서 온 semantic feature가 3D geometry와 완벽히 정렬되지 않으며, long-tail 관계/속성 평가는 여전히 어렵다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- open-vocabulary 3D semantic understanding 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: sensor fusion, LiDAR, semantic, alignment, 3D Vision.
+- Extensive experiments on nuScenes demonstrate that GDFusion signiﬁcantly outperforms established baselines, achieving 2.2%–4.7% mIoU improvement and reducing memory consumption by 30%–72%.
+- To effectively fuse temporal signals across heterogeneous representations, we propose a novel fusion strategy by reinterpreting the formulation of vanilla RNNs.
+- We present GDFusion, a temporal fusion method for vision-based 3D semantic occupancy prediction (VisionOcc).
+
+## Abstract Cue
+- We present GDFusion, a temporal fusion method for vision-based 3D semantic occupancy prediction (VisionOcc).

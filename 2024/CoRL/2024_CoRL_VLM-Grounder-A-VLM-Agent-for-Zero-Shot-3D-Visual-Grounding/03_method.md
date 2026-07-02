@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2024 / CoRL
+- Category: 3D Vision-Language Grounding
+- Tags: 3D visual grounding, VLM, zero-shot
+- Paper link: ./2024/CoRL/2024_CoRL_VLM-Grounder-A-VLM-Agent-for-Zero-Shot-3D-Visual-Grounding/paper.pdf
+- Code/Project: https://github.com/InternRobotics/VLM-Grounder
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this work, we present VLM-Grounder, a novel framework using vision-language models (VLMs) for zero-shot 3D visual grounding based solely on 2D images.
+## Brief Method
+- To explore this, we propose a Visual-Retrieval Benchmark.
+- PC Acc@0.25 Acc@0.5 Acc@0.25 Acc@0.5 Acc@0.25 Acc@0.5 ScanRefer TGNN InstanceRefer 3DVG-Transformer BUTD-DETR é é é é é é é é é é 37.3 34.3 40.2 47.6 52.2 24.3 ...
+- In this work, we present VLM-Grounder, a novel framework using vision-language models (VLMs) for zero-shot 3D visual grounding based solely on 2D images.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, estimating a 3D bounding box from a single image can be problematic due to limited field-of-view and inaccurate depth information.
+- However, existing visual grounding datasets are scarce and limited to a pre-defined vocabulary, challenging the development of general models for open-world applications.
+- To explore this, we propose a Visual-Retrieval Benchmark.
 
 ## 핵심 방법론
-- Task family: vision-language alignment and multimodal reasoning
-- Representation: 3D visual grounding, VLM
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- To explore this, we propose a Visual-Retrieval Benchmark.
+- PC Acc@0.25 Acc@0.5 Acc@0.25 Acc@0.5 Acc@0.25 Acc@0.5 ScanRefer TGNN InstanceRefer 3DVG-Transformer BUTD-DETR é é é é é é é é é é 37.3 34.3 40.2 47.6 52.2 24.3 ...
+- Without model training, VLM-Grounder’s overall performance also competes with supervised learning methods like InstanceRefer (38.8%) and 3DVG-Transformer (40.8%).
+- We use the top five layouts and observe how accuracy varies with the number of images sent to GPT-4V in one request.

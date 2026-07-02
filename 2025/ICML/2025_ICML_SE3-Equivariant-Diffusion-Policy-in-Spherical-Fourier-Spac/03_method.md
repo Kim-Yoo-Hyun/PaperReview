@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / ICML Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Robotics, Diffusion, Imitation Learning, equivariant
+- Paper link: ./2025/ICML/2025_ICML_SE3-Equivariant-Diffusion-Policy-in-Spherical-Fourier-Spac/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address this issue, we propose Spherical Diffusion Policy (SDP), an SE(3) equivariant diffusion policy that adapts trajectories according to 3D transformations of the ...
+## Brief Method
+- We propose Spherical Diffusion Policy (SDP), a Fourier space SE(3) equivariant method that automatically adapts to changes in the scene.
+- To address this issue, we propose Spherical Diffusion Policy (SDP), an SE(3) equivariant diffusion policy that adapts trajectories according to 3D transformations of the scene.
+- Lastly, we propose a spherical denoising temporal U-net that achieves spatiotemporal equivariance with computational efficiency.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Diffusion Policy may struggle to attain robust 3D generalization without training on a large amount of costly human demonstrations to exhaust the possible 3D arrangements of the scene.
+- We propose Spherical Diffusion Policy (SDP), a Fourier space SE(3) equivariant method that automatically adapts to changes in the scene.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Evaluation success rate on 12 MimicGen tasks with SE(2) initialization.
+- We train all the baselines with 100 demonstrations.
+- SDP demonstrates the best performance on 10 tasks.
+- Stack Three D1 Threading D2 Coffee D2 Hammer Cleanup D1 Mug Cleanup D1 Pick Place D0 Coffee Preparation D1 Average Success Rate Method Ctrl Obs Rel PCD 100 ...

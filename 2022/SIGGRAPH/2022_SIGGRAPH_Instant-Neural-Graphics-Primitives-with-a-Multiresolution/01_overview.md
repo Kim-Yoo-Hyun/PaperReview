@@ -3,32 +3,32 @@
 - Year/Venue: 2022 / SIGGRAPH
 - Category: Foundations: 3D Scene Representations
 - Tags: NeRF, 3D Vision, representation, efficiency
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2201.05989
-- PDF status: downloaded
-- GitHub/Project: https://nvlabs.github.io/instant-ngp/
+- Paper link: ./2022/SIGGRAPH/2022_SIGGRAPH_Instant-Neural-Graphics-Primitives-with-a-Multiresolution/paper.pdf
+- Code/Project: https://nvlabs.github.io/instant-ngp/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Unlike prior work, no structural updates to the data structure are needed at any point during training. • Efficiency: our hash table lookups are O (1) and do ...
+- However, such data structures rely on heuristics and structural modifications (such as pruning, splitting, or merging) that may complicate the training process, limit the method to a specific ...
+- The hash tables thus automatically prioritize the sparse areas with the most important fine scale detail.
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- Such hash collisions cause the colliding training gradients to average, meaning that the largest gradients—those most relevant to the loss function—will dominate.
+- Unlike prior work, no structural updates to the data structure are needed at any point during training. • Efficiency: our hash table lookups are O (1) and do ...
 
 ## Input / Output
-Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `core 3D geometry and scene representation learning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- 2021], which achieves state-of-the-art results in both quality and speed by prefixing its small MLP with a lookup from an octree of trainable feature vectors.
+- With a similar number of parameters (𝑇 = 224 ), our method achieves the same PSNR after 2.5 minutes of training, peaking at 41.9 dB after 4 min.
+- 2021] have shown impressive results when fitting very large images—up to a billion pixels—with high fidelity at even the smallest scales.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- core 3D geometry and scene representation learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: NeRF, 3D Vision, representation, efficiency.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+
+## Abstract Cue
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

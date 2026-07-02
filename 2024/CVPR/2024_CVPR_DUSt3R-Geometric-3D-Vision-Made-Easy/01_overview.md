@@ -3,32 +3,32 @@
 - Year/Venue: 2024 / CVPR
 - Category: 3D Reconstruction, Geometry, and SLAM
 - Tags: 3D reconstruction, calibration, geometry
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2312.14132
-- PDF status: downloaded
-- GitHub/Project: https://github.com/naver/dust3r
+- Paper link: ./2024/CVPR/2024_CVPR_DUSt3R-Geometric-3D-Vision-Made-Easy/paper.pdf
+- Code/Project: https://github.com/naver/dust3r
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- We cast the pairwise reconstruction problem as a regression of pointmaps, relaxing the hard constraints of usual projective camera models.
+- This is possible because our network jointly processes the input images and the resulting 3D pointmaps, thus learning to associate 2D structures with 3D shapes, and having the ...
 
 ## Core Idea
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We base our network architecture on standard Transformer encoders and decoders, allowing us to leverage powerful pretrained models.
+- Conclusion We presented a novel paradigm to solve not only 3D reconstruction in-the-wild without prior information about scene nor cameras, but a whole variety of 3D vision tasks ...
 
 ## Input / Output
-Input: one or more images/RGB-D/LiDAR observations. Output: depth, camera pose, point map, dense reconstruction, or consistent map.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D reconstruction, calibration, and geometric consistency`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Exhaustive experiments on all these tasks showcase that the proposed DUSt3R can unify various 3D vision tasks and set new SoTAs on monocular/multi-view depth estimation as well as ...
+- We show 1 https://dust3r.europe.naverlabs.com 1.
 
 ## Limitation
-강한 benchmark 성능이 실제 로봇 센서 노이즈, rolling shutter, 동적 객체, 저조도 환경까지 보장하지는 않는다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D reconstruction, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D reconstruction, calibration, geometry.
+- We base our network architecture on standard Transformer encoders and decoders, allowing us to leverage powerful pretrained models.
+- Exhaustive experiments on all these tasks showcase that the proposed DUSt3R can unify various 3D vision tasks and set new SoTAs on monocular/multi-view depth estimation as well as ...
+- We drift away from the trend of integrating task-specific modules , and instead adopt a fully data-driven strategy based on a generic transformer a
+
+## Abstract Cue
+- that this formulation smoothly unifies the monocular and binocular reconstruction cases.

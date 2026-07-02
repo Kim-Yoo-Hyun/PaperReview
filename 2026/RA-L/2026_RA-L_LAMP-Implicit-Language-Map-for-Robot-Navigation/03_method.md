@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
+- Year/Venue: 2026 / RA-L
+- Category: Navigation and Embodied AI
+- Tags: Robotics, Navigation
+- Paper link: ./2026/RA-L/2026_RA-L_LAMP-Implicit-Language-Map-for-Robot-Navigation/paper.pdf
+- Code/Project: https://lab-of-ai-and-robotics.github.io/LAMP/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We introduce LAMP (Language Map), a novel neural language field-based navigation framework that learns a continuous, language-driven map and directly leverages it for fine-grained path generation.
+- Unlike prior approaches, our method encodes language features as an implicit neural field rather than storing them explicitly at every location.
+- Our method addresses these issues, accurately detecting the objects and enabling fine-grained goal reaching through optimization.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, existing methods that explicitly store language vectors in grid or node-based maps struggle to scale to large environments due to excessive memory requirements and limited resolution for ...
+- By combining this implicit representation with a sparse graph, LAMP supports efficient coarse path planning and then performs gradient-based optimization in the learned field to refine poses near ...
+- We introduce LAMP (Language Map), a novel neural language field-based navigation framework that learns a continuous, language-driven map and directly leverages it for fine-grained path generation.
 
 ## 핵심 방법론
-- Task family: embodied navigation and spatial planning
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Our method addresses these issues, accurately detecting the objects and enabling fine-grained goal reaching through optimization.
+- In the Extinguisher scene, the node-based method fails because it does not directly observe the goal, whereas our method correctly identifies the target by leveraging the implicit network ...
+- In Table III, we compare our method against traditional sampling strategies: Random Node (RN) and Random Degree Node (RDN) , which select nodes uniformly at random and based ...
+- Unlike conventional methods that rely solely on edge information, our approach leverages implicit information from each node in large graphs, specifically using a neural network to derive an ...

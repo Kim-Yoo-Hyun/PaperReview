@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2025 / ICLR Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Vision-Language Model, Robotics
+- Paper link: ./2025/ICLR/2025_ICLR_LLaRA-Supercharging-Robot-Learning-Data-for-Vision-Languag/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this work, we introduce LLaRA: Large Language and Robotics Assistant, a framework that formulates robot action policy as visuo-textual conversations and enables an ...
+## Brief Method
+- Config Data L1 (%) L2 (%) L3 (%) VIMA VIMA-200M + Oracle 100% 80.7 81.9 77.9 capable model released by VIMA, LLaRA (Ours) D-inBC + Aux (B) + ...
+- Compared to VIMA, our best model not only achieves better performance but also requires less input and is trained on only 12% of the expert trajectories used in ...
+- Effectiveness of auxiliary datasets.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Config Data L1 (%) L2 (%) L3 (%) VIMA VIMA-200M + Oracle 100% 80.7 81.9 77.9 capable model released by VIMA, LLaRA (Ours) D-inBC + Aux (B) + ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Config Data L1 (%) L2 (%) L3 (%) VIMA VIMA-200M + Oracle 100% 80.7 81.9 77.9 capable model released by VIMA, LLaRA (Ours) D-inBC + Aux (B) + ...
+- Compared to VIMA, our best model not only achieves better performance but also requires less input and is trained on only 12% of the expert trajectories used in ...
+- Effectiveness of auxiliary datasets.
+- 2 shows the different combinations of the auxiliary datasets we studied.
+- For each setting, we randomly sample the same amount of examples from each auxiliary dataset and combine them with the converted behavior cloning dataset.

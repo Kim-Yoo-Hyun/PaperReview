@@ -3,33 +3,34 @@
 - Year/Venue: 2025 / 3DV
 - Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
 - Tags: sensor fusion, LiDAR, 3D Vision
-- Authors: Simon Boeder, Fabian Gigengack, Benjamin Risse
-- Paper: https://3dvconf.github.io/2025/accepted-papers/
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/3DV/2025_3DV_LangOcc-Open-Vocabulary-Occupancy-Estimation-via-Volume-Re/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- However, most existing camera-based methods rely on costly 3D voxel labels or LiDAR scans for training, limiting their practicality and scalability.
+- However, most existing 3D occupancy estimation methods rely on expensive 3D ground-truth labels .
+- The 3D occupancy estimation task has become an important challenge in the area of vision-based autonomous driving recently.
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: The 3D occupancy estimation task has become an important challenge in the area of vision-based autonomous driving recently.However, most existing camera-based methods rely on ...
-- Method cue: The 3D occupancy estimation task has become an important challenge in the area of vision-based autonomous driving recently.However, most existing camera-based methods rely on ...
-- Result cue: Our model estimates vision-language aligned features in a 3D voxel grid using only images.It is trained in a weakly-supervised manner by rendering our estimations ...
+- In this work we present a novel approach for open vocabulary occupancy estimation called LangOcc, that is trained only via camera images, and can detect arbitrary semantics via ...
+- Method OccFlowNet CTF-Occ LangOcc (Full) LangOcc (Reduced) Mode L 3D C C mIoU 26.14 28.53 10.71 11.84 pensive manual labelling and additional sensor data, while our method is ...
 
 ## Input / Output
-Input/Output follows the paper task formulation; see PDF for the exact interface.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D vision and embodied AI`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- We also achieve a mIoU score of 11.84 on the Occ3D-nuScenes dataset, surpassing previous vision-only semantic occupancy estimation methods (+1.71%), despite not being limited to a specific set ...
+- LangOcc outperforms LiDAR-supervised competitors in open vocabulary occupancy with a mAP of 22.7 by a large margin (+4.3%), solely relying on vision-based training.
+- Moreover, existing benchmarks usually only reflect a limited predefined set of classes.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D vision and embodied AI 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: sensor fusion, LiDAR, 3D Vision.
-- 초록에서 확인되는 주요 cue: The, However, LiDAR, Moreover, LangOcc, CLIP, Our, CLIP.This.
+- LangOcc outperforms LiDAR-supervised competitors in open vocabulary occupancy with a mAP of 22.7 by a large margin (+4.3%), solely relying on vision-based training.
+- However, most existing camera-based methods rely on costly 3D voxel labels or LiDAR scans for training, limiting their practicality and scalability.
+- In this work we present a novel approach for open vocabulary occupancy estimation called LangOcc, that is trained only via camera images, and can detect arbitrary semantics via ...
+
+## Abstract Cue
+- The 3D occupancy estimation task has become an important challenge in the area of vision-based autonomous driving recently.

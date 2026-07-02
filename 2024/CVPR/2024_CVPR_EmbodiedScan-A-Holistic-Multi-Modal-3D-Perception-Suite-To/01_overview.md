@@ -3,32 +3,33 @@
 - Year/Venue: 2024 / CVPR
 - Category: Benchmarks and Datasets
 - Tags: 3D Vision, Embodied AI, dataset
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Wang_EmbodiedScan_A_Holistic_Multi-Modal_3D_Perception_Suite_Towards_Embodied_AI_CVPR_2024_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified from primary page
+- Paper link: ./2024/CVPR/2024_CVPR_EmbodiedScan-A-Holistic-Multi-Modal-3D-Perception-Suite-To/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Nonetheless, subtle but significant discrepancies exist between this expectation and research problems examined within the computer vision community.
+- Most previous studies have primarily revolved around scene-level input and output problems from a global view , i.e., taking reconstructed 3D point clouds or meshes as inputs and ...
+- Regarding data, earlier datasets targeting egocentric RGB-D inputs are either too small or lack comprehensive annotations to support the aforemen- Dataset #Scans #Imgs #Objs #Cats #Prompts Ego Capture ...
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We use cross-entropy loss and sceneclass affinity loss for training.
+- Given the multi-level sparse visual features FkS and text features from the text encoder, we use a multi-modal fusion transformer model for vision-language information interactions.
 
 ## Input / Output
-Input: benchmark-specific observations/instructions. Output: standardized labels, tasks, or evaluation scores for comparing models.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D vision and embodied AI`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- It is capable of processing an arbitrary number of multi-modal inputs and demonstrates remarkable 3D perception capabilities, both within the two series of benchmarks we set up, i.e., ...
+- To address the gap, we introduce EmbodiedScan, a multi-modal, ego-centric 3D perception dataset and benchmark for holistic 3D scene understanding.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D vision and embodied AI 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D Vision, Embodied AI, dataset.
+- To address the gap, we introduce EmbodiedScan, a multi-modal, ego-centric 3D perception dataset and benchmark for holistic 3D scene understanding.
+- Building upon this database, we introduce a baseline framework named Embodied Perceptron.
+- It is capable of processing an arbitrary number of multi-modal inputs and demonstrates remarkable 3D perception capabilities, both within the two series of benchmarks we set up, i.e., ...
+
+## Abstract Cue
+- In the realm of computer vision and robotics, embodied agents are expected to explore their environment and carry out human instructions.

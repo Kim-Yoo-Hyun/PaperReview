@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2025 / NeurIPS spotlight
+- Category: 3D Representation Learning and Foundation Models
+- Tags: 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_EAG3R-Event-Augmented-3D-Geometry-Estimation-for-Dynamic-a/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- Estimating geometry from videos or images is a fundamental problem in 3D vision, with broad applications in camera pose estimation, novel view synthesis, geometry reconstruction, and 3D perception.
+- However, in real-world applications such as autonomous driving in the wild, which often involve fast motion and rapidly changing illumination, RGB cameras—dependent on long exposure times for imaging—face ...
+- Prior work has leveraged event streams in 3D tasks such as depth estimation , surface reconstruction , 39th Conference on Neural Information Processing Systems (NeurIPS 2025).
 
 ## 해결하려는 문제
-- 연구 유형: 3D reconstruction, calibration, and geometric consistency
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: However, existing RGB-only approaches struggle under real-world conditions involving dynamic objects and extreme illumination, due to the inherent limitations of conventional cameras.
+- Extensive experiments demonstrate that EAG3R significantly outperforms state-of-the-art RGB-only baselines across monocular depth estimation, camera pose tracking, and dynamic reconstruction tasks.
+- Our method enables robust geometry estimation in challenging dynamic low-light scenes without requiring retraining on night-time data.
+- In this paper, we propose EAG3R, a novel geometry estimation framework that augments pointmap-based reconstruction with asynchronous event streams.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `3D Vision` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- Our main contributions are as follows: • We propose EAG3R, the first event-augmented pointmap-based geometry estimation framework, which integrates asynchronous event streams with RGB-based reconstruction to handle dynamic ...
+- Estimating geometry from videos or images is a fundamental problem in 3D vision, with broad applications in camera pose estimation, novel view synthesis, geometry reconstruction, and 3D perception.
+- However, in real-world applications such as autonomous driving in the wild, which often involve fast motion and rapidly changing illumination, RGB cameras—dependent on long exposure times for imaging—face ...

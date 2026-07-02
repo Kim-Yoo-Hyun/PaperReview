@@ -1,26 +1,24 @@
 # Evaluation
 
-## Dataset
-OXE
+- Year/Venue: 2021 / ICML
+- Category: Foundations: Equivariance and Geometry
+- Tags: equivariant, graph reasoning, 3D geometry
+- Paper link: ./2021/ICML/2021_ICML_En-Equivariant-Graph-Neural-Networks/paper.pdf
+- Code/Project: https://github.com/vgsatorras/egnn
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `geometry-aware equivariant modeling`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Metrics
-PSNR, SSIM, LPIPS, ATE, RPE, Chamfer, F-score, pose AUC
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- In contrast with existing methods, our work does not require computationally expensive higher-order representations in intermediate layers while it still achieves competitive or better performance.
+- Example of rotation equivariance on a graph with a graph neural network φ Recently, various forms and methods to achieve E(3) or SE(3) equivariance have been proposed (Thomas ...
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Reproducibility Notes
-- Code/Project: https://github.com/vgsatorras/egnn
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

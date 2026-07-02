@@ -3,32 +3,34 @@
 - Year/Venue: 2015 / RSS
 - Category: Foundations: SLAM and Sensor Geometry
 - Tags: 3D Vision, SLAM, RGB-D, 3D reconstruction
-- Authors: not extracted
-- Paper: https://www.roboticsproceedings.org/rss11/p01.html
-- PDF status: downloaded
-- GitHub/Project: https://github.com/mp3guy/ElasticFusion
+- Paper link: ./2015/RSS/2015_RSS_ElasticFusion-Dense-SLAM-Without-A-Pose-Graph/paper.pdf
+- Code/Project: https://github.com/mp3guy/ElasticFusion
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- However, existing dense SLAM methods suitable for incremental, real-time operation struggle when the sensor makes movements which are both of extended duration and often criss-cross loop back on ...
+- In sparse feature-based SLAM, it is well understood that loopy local motion can be dealt with either via joint probabilistic filtering , or in-the-loop joint optimisation of poses ...
+- In fact, even in sparse feature-based SLAM there have been relatively few attempts to deal with motion which is both extended and extremely loopy, such as Strasdat et ...
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- —We present a novel approach to real-time dense visual SLAM.
+- Our approach applies local model-to-model surface loop closure optimisations as often as possible to stay close to the mode of the map distribution, while utilising global loop closure ...
 
 ## Input / Output
-Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `SLAM, calibration, and geometric consistency`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- —We present a novel approach to real-time dense visual SLAM.
+- Our system is capable of capturing comprehensive dense globally consistent surfel-based maps of room scale environments explored using an RGB-D camera in an incremental online fashion, without pose ...
+- This is accomplished by using dense frame-tomodel camera tracking and windowed surfel-based fusion coupled with frequent model refinement through non-rigid surface deformations.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- SLAM, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D Vision, SLAM, RGB-D, 3D reconstruction.
+- —We present a novel approach to real-time dense visual SLAM.
+- Our approach applies local model-to-model surface loop closure optimisations as often as possible to stay close to the mode of the map distribution, while utilising global loop closure ...
+- However, existing dense SLAM methods suitable for incremental, real-time operation struggle when the sensor makes movements which are both of extended duration and often criss-cross loop back on ...
+
+## Abstract Cue
+- —We present a novel approach to real-time dense visual SLAM.

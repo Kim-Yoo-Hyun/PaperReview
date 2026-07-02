@@ -1,26 +1,33 @@
 # Evaluation
 
-## Dataset
-RLBench, OXE, Map-free
+- Year/Venue: 2024 / ECCV
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Robotics, Gaussian Splatting
+- Paper link: ./2024/ECCV/2024_ECCV_ManiGaussian-Dynamic-Gaussian-Splatting-for-Multi-task-Rob/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `language-aware Gaussian/implicit 3D scene representation`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- RLBench
 
 ## Metrics
-task-specific accuracy, generalization gap, ablation metrics, IoU, AP, mAP, success rate, SR
+- AP
+- mAP
+- PSNR
+- success rate
+- collision
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Then we compare our method with the state-of-the-art approaches to show the superiority in success rate (Section 4.2), and conduct an ablation study to verify the effectiveness of ...
+- The diversity of these tasks requires the agent to acquire generalizable knowledge about the intrinsical scene-level spatial-temporal dynamics for manipulation, rather than solely relying on mimicking the provided ...
+- Finally, we also illustrate the visualization results to depict our intuition (Section 4.4).
+- Our experiments are conducted in the popular RLBench simulated tasks.
+- We evaluate our ManiGaussian on 10 RLBench tasks with 166 variations, and the results demonstrate our framework can outperform the state-of-the-art methods by 13.1% in average success rate1 ...
+- Then we compare our method with the state-of-the-art approaches to show the superiority in success rate (Section 4.2), and conduct an ablation study to verify the effectiveness of ...
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- Baselines: We compare our ManiGaussian with the previous state of the arts including the perceptive method PerAct and its modified version using 4 camera inputs to cover the ...
+- In this section, we first introduce the experiment setup including datasets, baseline methods, and implementation details (Section 4.1).
 
 ## Reproducibility Notes
-- Code/Project: not identified
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

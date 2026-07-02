@@ -3,32 +3,34 @@
 - Year/Venue: 2020 / NeurIPS
 - Category: Foundations: Equivariance and Geometry
 - Tags: equivariant, 3D geometry, Transformer
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2006.10503
-- PDF status: downloaded
-- GitHub/Project: https://github.com/FabianFuchsML/se3-transformer-public
+- Paper link: ./2020/NeurIPS/2020_NeurIPS_SE3-Transformers-3D-Roto-Translation-Equivariant-Attention/paper.pdf
+- Code/Project: https://github.com/FabianFuchsML/se3-transformer-public
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- In this paper, we find that the explicit imposition of equivariance constraints on the self-attention mechanism addresses these challenges.
+- Their relative implementational simplicity coupled with high efficacy on a wide range of tasks such as language modeling , image recognition , or graph-based problems , make them ...
+- However, their generality of application means that for specific tasks, knowledge of existing underlying structure is unused.
 
 ## Core Idea
-핵심은 attention 기반 sequence modeling을 통해 장거리 의존성과 modality alignment를 scale-up 가능한 방식으로 학습하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We introduce the SE(3)-Transformer, a variant of the self-attention module for 3D point clouds and graphs, which is equivariant under continuous 3D rototranslations.
+- Here, we present the SE(3)-Transformer.
 
 ## Input / Output
-Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `sequence/representation learning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- We compare to publicly available, state-of-the-art results as well as a set of our own baselines.
+- We further achieve competitive performance on two real-world datasets, ScanObjectNN and QM9.
+- In all cases, our model outperforms a strong, non-equivariant attention baseline and an equivariant model without attention.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- sequence/representation learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: equivariant, 3D geometry, Transformer.
+- We introduce the SE(3)-Transformer, a variant of the self-attention module for 3D point clouds and graphs, which is equivariant under continuous 3D rototranslations.
+- The SE(3)Transformer leverages the benefits of self-attention to operate on large point clouds and graphs with varying number of points, while guaranteeing SE(3)-equivariance for robustness.
+- In all cases, our model outperforms a strong, non-equivariant attention baseline and an equivariant model without attention.
+
+## Abstract Cue
+- We introduce the SE(3)-Transformer, a variant of the self-attention module for 3D point clouds and graphs, which is equivariant under continuous 3D rototranslations.

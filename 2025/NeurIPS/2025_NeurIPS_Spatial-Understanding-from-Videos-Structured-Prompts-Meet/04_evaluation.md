@@ -1,26 +1,34 @@
 # Evaluation
 
-## Dataset
-ScanNet, ScanQA, Replica, Matterport3D, HM3D, Habitat, Objaverse
+- Year/Venue: 2025 / NeurIPS Spotlight
+- Category: 3D Large Multimodal Models
+- Tags: Vision-Language Model, 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_Spatial-Understanding-from-Videos-Structured-Prompts-Meet/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `3D vision-language spatial reasoning`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- ScanNet
+- 3RScan
+- Objaverse
+- HM3D
+- SQA3D
+- ScanQA
 
 ## Metrics
-task-specific accuracy, generalization gap, ablation metrics, IoU, AP, mAP, SR, SPL
+- BLEU
+- accuracy
+- mAP
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Across all models, a consistent trend emerges: the +Des variant outperforms others, followed by 7
+- The experimental settings (including benchmarks, baselines, etc.) and more experimental results can be found in the Appendix A and B.
+- Extensive experiments across multiple benchmarks demonstrate the individual and combined effectiveness of our prompting and fine-tuning strategies, and yield insights that may inspire future research on visual-spatial understanding.
+- Across all models, a consistent trend emerges: the +Des variant outperforms others, followed by 7
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: Extensive experiments across multiple benchmarks demonstrate the individual and combined effectiveness of our prompting and fine-tuning strategies, and yield insights that may inspire future ...
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- The experimental settings (including benchmarks, baselines, etc.) and more experimental results can be found in the Appendix A and B.
+- 5.1 Performace Comparison We investigated the following five key questions to assess our approach: Q1: Which scene representation format is most interpretable by VLMs?
 
 ## Reproducibility Notes
-- Code/Project: not identified from OpenReview
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

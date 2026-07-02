@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / 3DV
+- Category: 3D Generative Modeling and Diffusion
+- Tags: 3D reconstruction, geometry, Diffusion, Generation, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_iFusion-Inverting-Diffusion-for-Pose-Free-Reconstruction-f/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We present iFusion, a novel 3D object reconstruction framework that requires only two views with unknown camera poses.While single-view reconstruction yields visually appealing results, ...
+## Brief Method
+- We present iFusion, a novel 3D object reconstruction framework that requires only two views with unknown camera poses.
+- To address this, we harness a pre-trained novel view synthesis diffusion model, which embeds implicit knowledge about the geometry and appearance of diverse objects.
+- Our strategy unfolds in three steps: (1) We invert the diffusion model for camera pose estimation instead of synthesizing novel views. (2) The diffusion model is finetuned using ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, assuming the availability of pose may be unrealistic, and existing pose estimators fail in sparseview scenarios.
+- Introduction Reconstructing objects from sparse views poses a significant challenge yet holds paramount importance for various ∗ Part of this work was done as a research intern at ...
+- We present iFusion, a novel 3D object reconstruction framework that requires only two views with unknown camera poses.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: 3D reconstruction, geometry, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Specifically, One2-3-45 represents image-based methods, which directly regresses SDFs from the generated multi-view images; on the other hand, Zero123-SDS , Magic123 , and DreamGaussian are SDS-based approahces.

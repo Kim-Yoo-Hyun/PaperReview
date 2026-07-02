@@ -3,33 +3,30 @@
 - Year/Venue: 2026 / ICLR Poster
 - Category: 3D Large Multimodal Models
 - Tags: Vision-Language Model, 3D Vision
-- Authors: Zhangyang Qi, Zhixiong Zhang, Ye Fang, Jiaqi Wang, Hengshuang Zhao
-- Paper: https://openreview.net/forum?id=0fib2BYc0L
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2026/ICLR/2026_ICLR_GPT4Scene-Understand-3D-Scenes-from-Videos-with-Vision-Lan/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-VLM/LLM은 강한 semantic prior를 갖지만 3D 위치, 거리, 관점, affordance 같은 metric spatial reasoning에는 취약하다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Core Idea
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: In recent years, 2D Vision-Language Models (VLMs) have made significant strides in image-text understanding tasks.
-- Method cue: However, we propose exploring a purely vision-based solution inspired by human perception, which merely relies on visual cues for 3D spatial understanding.
-- Result cue: In zero-shot evaluations, GPT4Scene improves performance over closed-source VLMs like GPT-4o.
+- We propose a novel GPT Score for 3D QA assessment, using the state-of-the-art 3D LLM Chat-scene Huang et al. (2024a) as the baseline.
+- While training is fundamental, the inference components provide a further enhancement, pushing the model to its peak performance when combined.
 
 ## Input / Output
-Input: 2D/3D observations, point/scene tokens, and natural-language prompts. Output: spatial answer, grounding result, caption, plan, or embodied reasoning response.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D vision-language spatial reasoning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Here we emphasize that post-training with the GPT4Scene framework, the model achieves accurate QA performance using only pure video input, thereby demonstrating GPT4Scene’s effectiveness in enhancing visual comprehension ...
+- E F ULL Q UANTITIVE R ESULTS Here, we present the complete metrics for all five benchmarks.
+- Qwen2-VL Ours MMBench-ENval Liu et al. (2024c) MMBench-CNval Liu et al. (2024c) MMStar Chen et al. (2024a) RealWorldQA xAI (2024) 82.4 81.7 60.7 70.1 81.2 79.9 57.6 68.5 ...
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D vision-language spatial reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Vision-Language Model, 3D Vision.
-- 초록에서 확인되는 주요 cue: Vision-Language, Models, VLMs, However, Recent, This, GPT4Scene, VLM.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+
+## Abstract Cue
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

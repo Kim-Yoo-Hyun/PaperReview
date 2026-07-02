@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: 3D Large Multimodal Models
+- Tags: Vision-Language Model, 3D Vision
+- Paper link: ./2024/ECCV/2024_ECCV_Uni3DL-A-Unified-Model-for-3D-Vision-Language-Understandin/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We present Uni3DL, a unified model for 3D Vision-Language understanding.
+- On the BLEU-1 and ROUGE-L scores, our method beats precious STOA methods by a large margin (more than 20%).
+- With a unified architecture, our Uni3DL model enjoys seamless task decomposition and substantial parameter sharing across tasks.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Extending these successes of unified vision-language modeling in the 2D domain to 3D perception tasks remains a formidable challenge.
+- This difficulty primarily stems from the substantial architectural differences between 2D and 3D models, along with the limited availability of extensive 3D datasets for pre-training purposes.
+- We present Uni3DL, a unified model for 3D Vision-Language understanding.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- On the BLEU-1 and ROUGE-L scores, our method beats precious STOA methods by a large margin (more than 20%).
+- Note that Swin3D† uses extra training data (Structure3D ). localization because minor boundary inaccuracies in segmentation masks minimally impact segmentation IOU, but can significantly alter bounding box locations.

@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / ICRA
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: semantic
+- Paper link: ./2025/ICRA/2025_ICRA_LE-Object-Language-Embedded-Object-Level-Neural-Radiance-F/paper.pdf
+- Code/Project: not identified from venue audit
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address these challenges, we introduce OpenObj, an innovative approach to build open-vocabulary object-level Neural Radiance Fields (NeRF) with fine-grained understanding.
+## Brief Method
+- In summary, Our contributions are summarized as follows: • We present OpenObj, the open-vocabulary object-level neural radiance fields with fine-grained understanding, supporting downstream tasks at multiple scales. • ...
+- To address this problem, we propose considering all frames together and devising a two-stage approach as shown in Fig.
+- Following this inspiration, we proposed OpenObj, an innovative approach to build open-vocabulary objectlevel neural radiance fields with fine-grained understanding.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, existing methods face some limitations: they either focus on learning point-wise features, resulting in blurry semantic understanding, or solely tackle object-level reconstruction, thereby overlooking the intricate details ...
+- However, the inherent explicit structure of 3D Gaussian lacks storage efficiency, posing a challenge for achieving finegrained point-wise understanding.
+- In summary, Our contributions are summarized as follows: • We present OpenObj, the open-vocabulary object-level neural radiance fields with fine-grained understanding, supporting downstream tasks at multiple scales. • ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- R@1 R@2 R@3 #Retrieval Ontology Con.G.
+- OpenObj 0.65 0.90 0.70 0.95 0.70 1.00 20 Relevance Con.G.
+- OpenObj 0.50 0.75 0.70 0.90 0.80 1.00 20 Functionality Con.G.
+- OpenObj 0.50 0.90 0.80 0.95 0.85 0.95 20 Part Con.G.

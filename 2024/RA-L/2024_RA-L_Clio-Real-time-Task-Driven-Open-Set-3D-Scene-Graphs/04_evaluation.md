@@ -1,26 +1,29 @@
 # Evaluation
 
-## Dataset
-Replica, OXE
+- Year/Venue: 2024 / RA-L
+- Category: 3D Scene Graphs and Graph Reasoning
+- Tags: 3D Vision, Graph Reasoning
+- Paper link: ./2024/RA-L/2024_RA-L_Clio-Real-time-Task-Driven-Open-Set-3D-Scene-Graphs/paper.pdf
+- Code/Project: https://github.com/MIT-SPARK/Clio
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `structured 3D scene graph reasoning`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- Replica
+- LERF
 
 ## Metrics
-Recall@K, mean Recall@K, relationship accuracy, zero-shot relation accuracy, mIoU, IoU, AP, mAP
+- accuracy
+- mIoU
+- IoU
+- mAP
+- success rate
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Our final contribution is an extensive experimental campaign showing that Clio not only allows real-time construction of compact open-set 3D scene graphs, but also improves the accuracy of ...
+- We show that this problem can be naturally formulated using the Information Bottleneck (IB), an established information-theoretic framework to discuss task-relevance.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Reproducibility Notes
-- Code/Project: https://github.com/MIT-SPARK/Clio
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

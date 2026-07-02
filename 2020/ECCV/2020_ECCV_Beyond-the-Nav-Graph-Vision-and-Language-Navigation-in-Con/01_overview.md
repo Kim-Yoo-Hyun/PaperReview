@@ -3,32 +3,32 @@
 - Year/Venue: 2020 / ECCV
 - Category: Navigation and Embodied AI
 - Tags: Vision-Language Navigation, Robotics, Navigation, Benchmark
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2004.02857
-- PDF status: downloaded
-- GitHub/Project: https://jacobkrantz.github.io/vlnce/
+- Paper link: ./2020/ECCV/2020_ECCV_Beyond-the-Nav-Graph-Vision-and-Language-Navigation-in-Con/paper.pdf
+- Code/Project: https://jacobkrantz.github.io/vlnce/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-3D scene graph는 객체와 관계를 구조화하지만 closed vocabulary, annotation cost, geometric relation ambiguity 때문에 실제 로봇 질의에 확장하기 어렵다.
+- This paradigm enables efficient data collection and high visual fidelity compared to 3D scanning or creating synthetic environments; however, scenes are only observed from a sparse set of ...
+- By being situated in continuous environments, this setting lifts a number of assumptions implicit in prior work that represents environments as a sparse graph of panoramas with edges ...
 
 ## Core Idea
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We develop a language-guided navigation task set in a continuous 3D environment where agents must execute low-level actions to follow natural language navigation directions.
+- To contextualize this new task, we develop models that mirror many of the advances made in prior settings as well as single-modality baselines.
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `structured 3D scene graph reasoning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- To establish context for our results, we consider random and hand-crafted agents shown in Tab.
+- We train and evaluate our models in VLN-CE.
 
 ## Limitation
-2D foundation model에서 온 semantic feature가 3D geometry와 완벽히 정렬되지 않으며, long-tail 관계/속성 평가는 여전히 어렵다.
+- In models presented here, we took an approach where observations were mapped directly to low-level control in an end-to-end manner; however, exploring modular approaches is exciting future work.
 
 ## Contribution
-- structured 3D scene graph reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Vision-Language Navigation, Robotics, Navigation, Benchmark.
+- We develop a language-guided navigation task set in a continuous 3D environment where agents must execute low-level actions to follow natural language navigation directions.
+- To contextualize this new task, we develop models that mirror many of the advances made in prior settings as well as single-modality baselines.
+- By being situated in continuous environments, this setting lifts a number of assumptions implicit in prior work that represents environments as a sparse graph of panoramas with edges ...
+
+## Abstract Cue
+- We develop a language-guided navigation task set in a continuous 3D environment where agents must execute low-level actions to follow natural language navigation directions.

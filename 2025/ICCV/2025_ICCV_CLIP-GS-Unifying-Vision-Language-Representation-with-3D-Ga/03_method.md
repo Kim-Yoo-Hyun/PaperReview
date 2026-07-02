@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Vision-Language Model, 3D Vision, Gaussian Splatting
+- Paper link: ./2025/ICCV/2025_ICCV_CLIP-GS-Unifying-Vision-Language-Representation-with-3D-Ga/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We introduce the GS Tokenizer to generate serialized gaussian tokens, which are then processed through transformer layers pre-initialized with weights from point cloud models, resulting in the 3DGS ...
+- In this paper, we present CLIPGS, a novel multimodal representation learning framework grounded in 3DGS.
+- CLIP-GS leverages contrastive loss between 3DGS and the visual-text embeddings of CLIP, and we introduce an image voting loss to guide the directionality and convergence of gradient optimization.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- This limitation constrains the potential of point cloud-based 3D multimodal representation learning.
+- Existing works in 3D representation learning have made remarkable progress, particularly through the development of transformer-based approaches , as well as mamba-based approaches .
+- We introduce the GS Tokenizer to generate serialized gaussian tokens, which are then processed through transformer layers pre-initialized with weights from point cloud models, resulting in the 3DGS ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: 3D Vision, Gaussian Splatting
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We use the Objaverse-GS for analysis.
+- For the xyz-order, we used the x-axis order for visualization.
+- 7, exploring the effectiveness of initializing transformer layers in CLIP-GS with either 2D pretraining models or point cloud pretraining models.
+- We report the performance of training CLIPGS from the 2D pretraining model EVA-CLIP and the point cloud pretraining model Uni3D .
+- We report the average accuracy (%) for 5-shot classification across 5, 10, 20, and 50 ways. * denotes Objacerse-LVIS shapes are used during training.

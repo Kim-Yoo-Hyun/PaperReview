@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2018 / NeurIPS
+- Category: Foundations: 3D Geometry and Point Clouds
+- Tags: 3D Vision, point cloud, geometry, representation
+- Paper link: ./2018/NeurIPS/2018_NeurIPS_PointCNN-Convolution-On-X-Transformed-Points/paper.pdf
+- Code/Project: https://github.com/yangyanli/PointCNN
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To verify the effectiveness of the X -transformation, we propose PointCNN without it as a baseline, where lines 4-6 of Algorithm 1 are replaced by Fp ← Conv(K, ...
+- To address these problems, we propose to learn an X -transformation from the input points to simultaneously promote two causes: the first is the weighting of the input ...
+- We present a simple and general framework for feature learning from point clouds.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- We illustrate the problems and challenges of applying convolutions on point clouds in Figure 1.
+- To address these problems, we propose to learn an X -transformation from the input points to simultaneously promote two causes: the first is the weighting of the input ...
+- To verify the effectiveness of the X -transformation, we propose PointCNN without it as a baseline, where lines 4-6 of Algorithm 1 are replaced by Fp ← Conv(K, ...
 
 ## 핵심 방법론
-- Task family: core 3D geometry and scene representation learning
-- Representation: 3D Vision, geometry
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- To verify the effectiveness of the X -transformation, we propose PointCNN without it as a baseline, where lines 4-6 of Algorithm 1 are replaced by Fp ← Conv(K, ...

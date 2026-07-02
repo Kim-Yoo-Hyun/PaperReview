@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / ICLR Poster
+- Category: 3D Vision-Language Grounding
+- Tags: 3D Vision, semantic
+- Paper link: ./2025/ICLR/2025_ICLR_DenseGrounding-Improving-Dense-Language-Vision-Semantics-f/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We propose DenseGrounding, a novel approach designed to address these issues by enhancing both visual and textual semantics.
+## Brief Method
+- When trained on the more manageable mini-training set, we introduce an enhanced baseline, denoted as EmbodiedScan† , which achieves a 1.99% performance gain over the original EmbodiedScan.
+- This substantial gain highlights the effectiveness of our approach in leveraging extensive training data to capture complex visual-linguistic correlations in 3D environments.
+- Additionally, we present results for ”Easy” and ”Hard” scenes, classifying a scene as ”Hard” if it contains 3 or more objects of the same class.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- When trained on the more manageable mini-training set, we introduce an enhanced baseline, denoted as EmbodiedScan† , which achieves a 1.99% performance gain over the original EmbodiedScan.
 
 ## 핵심 방법론
-- Task family: open-vocabulary 3D semantic understanding
-- Representation: 3D Vision, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- When trained on the more manageable mini-training set, we introduce an enhanced baseline, denoted as EmbodiedScan† , which achieves a 1.99% performance gain over the original EmbodiedScan.
+- This substantial gain highlights the effectiveness of our approach in leveraging extensive training data to capture complex visual-linguistic correlations in 3D environments.
+- Additionally, we present results for ”Easy” and ”Hard” scenes, classifying a scene as ”Hard” if it contains 3 or more objects of the same class.
+- This stronger baseline ensures a more rigorous and fair comparison with our method.
+- Specifically, we use ResNet50 (He et al., 2016) and MinkNet34 (Choy et al., 2019) as the 2D and 3D vision encoders, respectively.

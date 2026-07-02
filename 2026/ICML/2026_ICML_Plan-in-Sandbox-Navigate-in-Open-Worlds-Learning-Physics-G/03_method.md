@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
+- Year/Venue: 2026 / ICML
+- Category: Navigation and Embodied AI
+- Tags: Navigation, Reinforcement Learning
+- Paper link: ./2026/ICML/2026_ICML_Plan-in-Sandbox-Navigate-in-Open-Worlds-Learning-Physics-G/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To this end, we propose ***S**andbox-**A**bstracted **G**rounded **E**xperience* (***SAGE***), a framework that enables agents to learn within a physics-grounded semantic abstraction rather than a ...
+## Brief Method
+- These sub-goals are subsequently executed by • We introduce a novel Generative Experience-Driven Learning paradigm to address the severe data scarcity and real-world transfer challenges in embodied navigation. ...
+- To this end, we propose Sandbox-Abstracted Grounded Experience (SAGE), a framework that enables agents to learn within a physics-grounded semantic abstraction rather than a photorealistic simulation, mimicking the ...
+- To mitigate this issue, we propose an Asymmetric Adaptive Clipping (AAC) strategy.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Although the research community has turned to Reinforcement Learning (RL) to facilitate policy adaptation (Zeng et al., 2024; Choi et al., 2024; Wang & Huang, 2025) from highlevel ...
+- Problem Formulation We formulate the learning problem via three core components: (1) a physics-grounded semantic sandbox S, which provides an environment ES ; (2) an unknown target task ...
+- These sub-goals are subsequently executed by • We introduce a novel Generative Experience-Driven Learning paradigm to address the severe data scarcity and real-world transfer challenges in embodied navigation. ...
 
 ## 핵심 방법론
-- Task family: embodied navigation and spatial planning
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- This confirms that our approach effectively mitigates the dependency on massive datasets, paving a scalable avenue for enhancing navigation policies by integrating abundant, low-cost sandbox tasks.
+- Training via Genesis and Evolution (+G.&E.) boosts A-EQA SR† by 6.29% over the zero-shot baseline, Sparse Observation vs.
+- An optimally relaxed bound (ϵexp = 1.0) balances this, enabling rapid experience absorption without policy collapse, achieving a peak SR† of 53.21% and SPL† of 37.07% at 150 ...

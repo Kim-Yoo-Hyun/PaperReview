@@ -1,18 +1,20 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2025 / IROS
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Vision-Language Model, Robotics
+- Paper link: ./2025/IROS/2025_IROS_VLM-See-Robot-Do-Human-Demo-Video-to-Robot-Action-Plan-via/paper.pdf
+- Code/Project: https://ai4ce.github.io/SeeDo/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Our method integrates keyframe selection, visual perception, and VLM reasoning into a pipeline.
+- Existing work has applied VLMs to generate task and motion planning from natural language instructions and simulate training data for robot learning.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, significant challenges remain in teaching robots to learn from human videos due to the substantial domain gap between robots and humans.
+- Existing work has applied VLMs to generate task and motion planning from natural language instructions and simulate training data for robot learning.
+- Our method integrates keyframe selection, visual perception, and VLM reasoning into a pipeline.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

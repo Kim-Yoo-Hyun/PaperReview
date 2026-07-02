@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2017 / CVPR
+- Category: Foundations: 3D Geometry and Point Clouds
+- Tags: 3D geometry, point cloud, representation
+- Paper link: ./2017/CVPR/2017_CVPR_PointNet-Deep-Learning-on-Point-Sets-for-3D-Classification/paper.pdf
+- Code/Project: https://github.com/charlesq34/pointnet
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose a novel deep net architecture that consumes raw point cloud (set of points) without voxelization or rendering.
+- Key to our approach is the use of a single symmetric function, max pooling.
+- The basic architecture of our network is surprisingly simple as in the initial stages each point is processed identically and independently.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Guibas PointNet Point cloud is an important type of geometric data structure.
+- Due to its irregular format, most researchers transform such data to regular 3D voxel grids or collections of images.
+- We propose a novel deep net architecture that consumes raw point cloud (set of points) without voxelization or rendering.
 
 ## 핵심 방법론
-- Task family: core 3D geometry and scene representation learning
-- Representation: 3D geometry
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

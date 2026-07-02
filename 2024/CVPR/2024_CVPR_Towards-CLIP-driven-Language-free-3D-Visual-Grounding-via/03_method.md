@@ -1,18 +1,20 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: 3D Vision-Language Grounding
+- Tags: 3D visual grounding, CLIP, consistency
+- Paper link: ./2024/CVPR/2024_CVPR_Towards-CLIP-driven-Language-free-3D-Visual-Grounding-via/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To tackle the above issues, in this paper, we introduce a language-free training framework for 3D visual grounding.
+- To mitigate reliance on text annotations during training, researchers have explored language-free training paradigms in the 2D field via explicit text generation or implicit feature substitution.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Despite the significant progress made in recent methods, the requirement of dense textual descriptions for each individual object, which is time-consuming and costly, hinders their scalability.
+- To tackle the above issues, in this paper, we introduce a language-free training framework for 3D visual grounding.
 
 ## 핵심 방법론
-- Task family: vision-language alignment and multimodal reasoning
-- Representation: 3D visual grounding
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Easy m=0.25 m=0.5 Random Pseudo-Q† Zero-shot-RIS† Ours (3DLFVG) 6.70 16.70 23.56 22.35 2.40 8.83 16.52 16.53 Random Pseudo-Q† Zero-shot-RIS† Ours (3DLFVG) 8.81 12.45 20.13 21.00 5.66 7.31 15.62 ...
+- The input point number N , the proposal number Np , and the neighboring objects number k are set to 40000,

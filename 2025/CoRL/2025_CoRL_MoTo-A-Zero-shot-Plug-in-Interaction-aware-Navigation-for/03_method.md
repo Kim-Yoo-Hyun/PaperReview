@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
+- Year/Venue: 2025 / CoRL
+- Category: Navigation and Embodied AI
+- Tags: Navigation, mobile manipulation, VLM
+- Paper link: ./2025/CoRL/2025_CoRL_MoTo-A-Zero-shot-Plug-in-Interaction-aware-Navigation-for/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-Specifically, we propose an interaction-aware navigation policy to generate agent docking points for generalized mobile manipulation.
+## Brief Method
+- To enable zero-shot ability, we propose an interaction keypoints framework via vision-language models (VLM) under multi-view consistency for both target object and robotic arm following instructions, where fixed-base ...
+- Specifically, we propose an interactionaware navigation policy to generate robot docking points for generalized mobile manipulation.
+- Conventional mobile manipulation approaches often struggle to generalize across different tasks and environments due to the lack of large-scale training.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- In this paper, we propose to solve the problem of mobile manipulation with an interaction-aware navigation policy, namely Move and Touch (MoTo).
+- We can control the robot by solving an optimization problem that minimizes the distance between the two keypoints and considers several additional constraints, including collision avoidance, smoothness, and ...
+- To enable zero-shot ability, we propose an interaction keypoints framework via vision-language models (VLM) under multi-view consistency for both target object and robotic arm following instructions, where fixed-base ...
 
 ## 핵심 방법론
-- Task family: embodied navigation and spatial planning
-- Representation: VLM
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Overall SR Average SR Step FindObj (↑) Pick (↑) FindRec (↑) Home-Robot (RL) Home-Robot (Heuristic) UniTeam 66.60% 65.40% 66.13% 61.10% 54.80% 62.65% 50.90% 43.70% 54.69% 14.80% 7.30% 17.96% ...
+- Partial Success Rates Method FindObj (↑) Pick (↑) FindRec (↑) Overall SR Average SR Cost w/o Collision w/o Smoothness w/o Margin 66.93% 66.76% 65.95% 60.95% 61.48% 60.77% 49.24% ...
+- When AK and TK make contact, a large margin is required for the robotic arm to enable subsequent fixed-base manipulation.
+- We define the horizontal distance between the endeffector and the robot base center as the arm radius r, bounded by constants rmin and rmax .
+- Given the robot’s design, r is a function of the arm pose r = g(θtarm ).

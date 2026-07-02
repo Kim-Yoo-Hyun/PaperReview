@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / ICLR Poster
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Paper link: ./2025/ICLR/2025_ICLR_CityGaussianV2-Efficient-and-Geometrically-Accurate-Recons/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this paper, we present CityGaussianV2, a novel approach for large-scale scene reconstruction that addresses critical challenges related to geometric accuracy and efficiency.
+## Brief Method
+- These advantages make our method particularly suitable for scenarios with varying quality and immediacy requirements.
+- In the street view, CityGS and geometry-specialized methods like 2DGS significantly underperform our method in geometry.
+- 9 in the Appendix, our method provides qualitatively better reconstructions of road and building surfaces, with rendering quality comparable to CityGS.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- These advantages make our method particularly suitable for scenarios with varying quality and immediacy requirements.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- These advantages make our method particularly suitable for scenarios with varying quality and immediacy requirements.
+- In the street view, CityGS and geometry-specialized methods like 2DGS significantly underperform our method in geometry.
+- 9 in the Appendix, our method provides qualitatively better reconstructions of road and building surfaces, with rendering quality comparable to CityGS.
+- 2, the small version of CityGaussianV2 (ours-s) reduces training time by 25% and memory usage by over 50%, while delivering superior geometric performance and on-par rendering quality with ...
+- The tiny version (ours-t) can even halve the training time.

@@ -1,18 +1,19 @@
 # Method
 
-## Brief Method
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
+- Year/Venue: 2025 / ICRA
+- Category: Navigation and Embodied AI
+- Tags: Robotics, 3D Vision, Navigation, Graph Reasoning
+- Paper link: ./2025/ICRA/2025_ICRA_Graph2Nav-3D-Object-Relation-Graph-Generation-to-Robot-Nav/paper.pdf
+- Code/Project: not identified from venue audit
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We propose Graph2Nav, a real-time 3D object-relation graph generation framework, for autonomous navigation in the real world.
+## Brief Method
+- — We propose Graph2Nav, a real-time 3D objectrelation graph generation framework, for autonomous navigation in the real world.
+- This approach avoids previous training data constraints in learning 3D scene graphs directly from 3D data.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, there are two major limitations in current 3D scene graph generation methods which hinder the growth of this field.
+- — We propose Graph2Nav, a real-time 3D objectrelation graph generation framework, for autonomous navigation in the real world.
 
 ## 핵심 방법론
-- Task family: structured 3D scene graph reasoning
-- Representation: 3D Vision, Graph Reasoning
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Tags: Gaussian Splatting, sensor fusion, LiDAR, 3D Vision
+- Paper link: ./2026/CVPR/2026_CVPR_Gau-Occ-Geometry-Completed-Gaussians-for-Multi-Modal-3D-Oc/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To ensure geometric completeness, we propose a LiDAR Completion Diffuser (LCD) that recovers missing structures from sparse LiDAR to initialize robust Gaussian anchors.
+- We present Gau-Occ, a multi-modal framework that bypasses dense volumetric processing by modeling the scene as a compact collection of semantic 3D Gaussians.
+- Furthermore, we introduce Gaussian Anchor Fusion (GAF), which efficiently integrates multi-view image semantics via geometry-aligned 2D sampling and cross-modal alignment.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Despite notable progress, two main challenges remain: (i) raw point clouds are sparse and occlusion-biased, capturing mostly visible surfaces while missing many occupied but unobserved regions, limiting the ...
+- While promising, existing Gaussian-based approaches are predominantly vision-only, and their application to multimodal occupancy prediction remains underexplored, particularly under real-world constraints such as sparse LiDAR sampling and limited ...
+- To ensure geometric completeness, we propose a LiDAR Completion Diffuser (LCD) that recovers missing structures from sparse LiDAR to initialize robust Gaussian anchors.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Removing GVR (Row 3) and directly feeding the original, unaggregated tokens Xi to cross-attention leads to markedly higher latency and memory usage, as the attention map must be ...
+- Compared to diffusionbased alternatives such as LiDPM (omitted for brevity), our lightweight pre-trained module provides superior geometric priors.
+- Qualitative comparison between Gaussianformer-2 , DAOcc and Gau-Occ on the SurroundOcc-nuScenes validation set.
+- On Point Cloud Completion and Gaussian Initialization.
+- Modality IoU↑ mIoU↑ MonoScene C-CONet GaussianFormer BEVFormer TPVFormer OccFormer SurroundOcc FB-Occ GaussianFormer-2 C C C C C C C C C 24.0 26.1 29.8 30.5 30.9 31.4 31.5 ...

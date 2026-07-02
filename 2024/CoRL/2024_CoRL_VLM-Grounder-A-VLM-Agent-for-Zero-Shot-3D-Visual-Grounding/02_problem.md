@@ -1,15 +1,22 @@
 # Problem
 
+- Year/Venue: 2024 / CoRL
+- Category: 3D Vision-Language Grounding
+- Tags: 3D visual grounding, VLM, zero-shot
+- Paper link: ./2024/CoRL/2024_CoRL_VLM-Grounder-A-VLM-Agent-for-Zero-Shot-3D-Visual-Grounding/paper.pdf
+- Code/Project: https://github.com/InternRobotics/VLM-Grounder
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- However, estimating a 3D bounding box from a single image can be problematic due to limited field-of-view and inaccurate depth information.
+- However, existing visual grounding datasets are scarce and limited to a pre-defined vocabulary, challenging the development of general models for open-world applications.
+- VLM-Grounder (ours) Projection 3D Localization Object 1 is a black cabinet at (x1, y1, z1).
 
 ## 해결하려는 문제
-- 연구 유형: vision-language alignment and multimodal reasoning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: Traditional methods depend on supervised learning with 3D point clouds are limited by scarce datasets.
+- Experiments on ScanRefer and Nr3D datasets show VLM-Grounder outperforms previous zero-shot methods, achieving 51.6% Acc@0.25 on ScanRefer and 48.0% Acc on Nr3D, without relying on 3D geometry or ...
+- In this work, we present VLM-Grounder, a novel framework using vision-language models (VLMs) for zero-shot 3D visual grounding based solely on 2D images.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `3D visual grounding, VLM, zero-shot` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- However, estimating a 3D bounding box from a single image can be problematic due to limited field-of-view and inaccurate depth information.
+- However, existing visual grounding datasets are scarce and limited to a pre-defined vocabulary, challenging the development of general models for open-world applications.
+- VLM-Grounder (ours) Projection 3D Localization Object 1 is a black cabinet at (x1, y1, z1).

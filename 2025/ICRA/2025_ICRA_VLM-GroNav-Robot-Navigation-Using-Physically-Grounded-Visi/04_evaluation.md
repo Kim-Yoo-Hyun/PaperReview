@@ -1,26 +1,26 @@
 # Evaluation
 
-## Dataset
-PDF/abstract 자동 추출에서 명확한 dataset 명칭을 찾지 못함. 본문의 experiment section 확인 필요.
+- Year/Venue: 2025 / ICRA
+- Category: Navigation and Embodied AI
+- Tags: Vision-Language Model, Robotics, Navigation
+- Paper link: ./2025/ICRA/2025_ICRA_VLM-GroNav-Robot-Navigation-Using-Physically-Grounded-Visi/paper.pdf
+- Code/Project: not identified from venue audit
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `embodied navigation and spatial planning`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Metrics
-SR, SPL, nDTW, goal distance, collision rate, IoU, AP, mAP
+- mAP
+- success rate
+- collision
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- In practice, we observe significant improvements over state-of-the-art methods by up to 50% increase in navigation success rate.
+- Similarly, in robotic navigation, recent approaches have incorporated proprioceptive sensing information derived from the robot’s internal sensors, such as joint encoders and force sensors, to design improved navigation ...
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: In practice, we observe significant improvements over state-of-the-art methods by up to 50% increase in navigation success rate.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Reproducibility Notes
-- Code/Project: not identified from venue audit
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

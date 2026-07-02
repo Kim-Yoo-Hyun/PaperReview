@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
+- Year/Venue: 2025 / ICLR Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Robotics, Graph Reasoning
+- Paper link: ./2025/ICLR/2025_ICLR_Learning-Geometric-Reasoning-Networks-For-Robot-Task-And-M/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address this issue, we propose Geometric Reasoning Networks (GRN), a graph neural network (GNN)-based model for action and grasp feasibility prediction, designed to ...
+## Brief Method
+- Bouhsain et al. (2024) GRN planner Bouhsain et al. (2024) GRN planner Success Rate (%) 100% 90% 100% 100% Planning time (s) 26.5 3.17 558.9 14.8 Nb Geometric ...
+- The first is the Access problem, where a single Panda robot has to move a small bottle, to which a number of fixed and movable objects block access.
+- The second is a multi-robot Clutter problem, in which both arms of the PR2 robot can collaborate to pick an object surrounded by grasp-obstructing objects.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Bouhsain et al. (2024) GRN planner Bouhsain et al. (2024) GRN planner Success Rate (%) 100% 90% 100% 100% Planning time (s) 26.5 3.17 558.9 14.8 Nb Geometric ...
 
 ## 핵심 방법론
-- Task family: structured 3D scene graph reasoning
-- Representation: Graph Reasoning
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Bouhsain et al. (2024) GRN planner Bouhsain et al. (2024) GRN planner Success Rate (%) 100% 90% 100% 100% Planning time (s) 26.5 3.17 558.9 14.8 Nb Geometric ...
+- The first is the Access problem, where a single Panda robot has to move a small bottle, to which a number of fixed and movable objects block access.
+- The second is a multi-robot Clutter problem, in which both arms of the PR2 robot can collaborate to pick an object surrounded by grasp-obstructing objects.
+- Objects used in these problems are a mix of box-shaped and mesh objects.
+- This is possible thanks to the two interpretation mechanisms, which allow the planner to reason over why an action or a grasp type is infeasible, and recursively decide ...

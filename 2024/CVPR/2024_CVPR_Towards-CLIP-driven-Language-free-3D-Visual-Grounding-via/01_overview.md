@@ -3,32 +3,30 @@
 - Year/Venue: 2024 / CVPR
 - Category: 3D Vision-Language Grounding
 - Tags: 3D visual grounding, CLIP, consistency
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Zhang_Towards_CLIP-driven_Language-free_3D_Visual_Grounding_via_2D-3D_Relational_Enhancement_CVPR_2024_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified from primary page
+- Paper link: ./2024/CVPR/2024_CVPR_Towards-CLIP-driven-Language-free-3D-Visual-Grounding-via/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Despite the significant progress made in recent methods, the requirement of dense textual descriptions for each individual object, which is time-consuming and costly, hinders their scalability.
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- To tackle the above issues, in this paper, we introduce a language-free training framework for 3D visual grounding.
+- To mitigate reliance on text annotations during training, researchers have explored language-free training paradigms in the 2D field via explicit text generation or implicit feature substitution.
 
 ## Input / Output
-Input: 3D scene representation plus free-form natural language. Output: target object, 3D box, mask, or referring expression result.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `vision-language alignment and multimodal reasoning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive experiments demonstrate that our proposed language-free 3D visual grounding approach can obtain promising performance across three widely used datasets – ScanRefer, Nr3D and Sr3D.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- vision-language alignment and multimodal reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D visual grounding, CLIP, consistency.
+- To tackle the above issues, in this paper, we introduce a language-free training framework for 3D visual grounding.
+- Extensive experiments demonstrate that our proposed language-free 3D visual grounding approach can obtain promising performance across three widely used datasets – ScanRefer, Nr3D and Sr3D.
+- To mitigate reliance on text annotations during training, researchers have explored language-free training paradigms in the 2D field via explicit text generation or implicit feature substitution.
+
+## Abstract Cue
+- 3D visual grounding plays a crucial role in scene understanding, with extensive applications in AR/VR.

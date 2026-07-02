@@ -3,32 +3,34 @@
 - Year/Venue: 2016 / NeurIPS
 - Category: Foundations: RL and Imitation Learning
 - Tags: Robotics, Imitation Learning, Reinforcement Learning
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/1606.03476
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- There are two main approaches suitable for this setting: behavioral cloning , which learns a policy as a supervised learning problem over state-action pairs from expert trajectories; and ...
+- Inverse reinforcement learning (IRL), on the other hand, learns a cost function that prioritizes entire trajectories over others, so compounding error, a problem for methods that fit single-timestep ...
+- We are interested in a specific setting of imitation learning—the problem of learning to perform a task from expert demonstrations—in which the learner is given only samples of ...
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We propose a new general framework for directly extracting a policy from data, as if it were obtained by reinforcement learning following inverse reinforcement learning.
+- We are interested in a specific setting of imitation learning—the problem of learning to perform a task from expert demonstrations—in which the learner is given only samples of ...
 
 ## Input / Output
-Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `RL and imitation learning for policies`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Our algorithm almost always achieved at least 70% of expert performance for all dataset
+- We were able to slightly improve our algorithm’s performance on Reacher using causal entropy regularization—in the 4-trajectory setting, the improvement from λ = 0 to λ = 10−3 ...
+- We show that a certain instantiation of our framework draws an analogy between imitation learning and generative adversarial networks, from which we derive a model-free imitation learning algorithm ...
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- RL and imitation learning for policies 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Robotics, Imitation Learning, Reinforcement Learning.
+- We propose a new general framework for directly extracting a policy from data, as if it were obtained by reinforcement learning following inverse reinforcement learning.
+- We show that a certain instantiation of our framework draws an analogy between imitation learning and generative adversarial networks, from which we derive a model-free imitation learning algorithm ...
+- One approach is to recover the expert’s cost function with inverse reinforcement learning, then extract a policy from that cost function with reinforcement learning.
+
+## Abstract Cue
+- Consider learning a policy from example expert behavior, without interaction with the expert or access to reinforcement signal.

@@ -3,32 +3,34 @@
 - Year/Venue: 2025 / ICCV
 - Category: 3D Vision-Language Grounding
 - Tags: 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Lin_GroundFlow_A_Plug-in_Module_for_Temporal_Reasoning_on_3D_Point_ICCV_2025_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/ICCV/2025_ICCV_GroundFlow-A-Plug-in-Module-for-Temporal-Reasoning-on-3D-P/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Effectively retrieving relevant previous information is essential for solving this problem, yet current visual grounding methods lack a design for temporal fusion.
+- Due to the lack of an effective module for collecting related historical information, state-of-theart 3DVG methods face significant challenges in adapting to the SG3D task.
+- However, these methods are primarily designed for object-centric 3DVG tasks and face significant challenges when applied to sequential grounding tasks.
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- To fill this gap, we propose GroundFlow — a plug-in module for temporal reasoning on 3D point cloud sequential grounding.
+- In summary, we make the following contributions: • We propose the GroundFlow module with a recurrent framework, which can be integrated into previous 3DVG baselines and introduce important ...
 
 ## Input / Output
-Input: 3D scene representation plus free-form natural language. Output: target object, 3D box, mask, or referring expression result.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `vision-language alignment and multimodal reasoning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- This allows GroundFlow to improve the 3DVG baseline methods consistently as task steps increases. • We achieve state-of-the-art performance on SG3D benchmark across five datasets without using large ...
+- Firstly, we demonstrate that integrating GroundFlow improves the task accuracy of 3DVG baseline methods by a large margin (+7.5% and +10.2%) in the SG3D benchmark, even outperforming a ...
+- While 3D LLMs achieve state-of-the-art results in various 3D tasks, they still face significant difficulty adapting to the complex SG3D problem .
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- vision-language alignment and multimodal reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D Vision.
+- Training Objective Following the SG3D benchmark , we use the same cross-entropy loss to optimize the dual-stream model and the query-based model.
+- This allows GroundFlow to improve the 3DVG baseline methods consistently as task steps increases. • We achieve state-of-the-art performance on SG3D benchmark across five datasets without using large ...
+- While 3D LLMs achieve state-of-the-art results in various 3D tasks, they still face significant difficulty adapting to the complex SG3D problem .
+
+## Abstract Cue
+- T : Refresh yourself with a beverage T : Task Description P : 3D Point Cloud St : Step t’s Instruction Ot : Step t’s Target Object Grounding Sequences Sequential grounding in 3D point clouds (SG3D) refers to locating sequences of objects by following text ...

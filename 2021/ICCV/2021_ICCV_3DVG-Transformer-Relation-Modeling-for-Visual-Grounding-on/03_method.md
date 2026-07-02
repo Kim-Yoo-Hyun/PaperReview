@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
+- Year/Venue: 2021 / ICCV
+- Category: 3D Vision-Language Grounding
+- Tags: 3D visual grounding, graph reasoning, Transformer
+- Paper link: ./2021/ICCV/2021_ICCV_3DVG-Transformer-Relation-Modeling-for-Visual-Grounding-on/paper.pdf
+- Code/Project: https://github.com/zlccccc/3DVG-Transformer
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Inspired by the well-known transformer architecture, we propose a relation-aware visual grounding method on 3D point clouds, named as 3DVGTransformer, to fully utilize the contextual clues for relationenhanced ...
+- Our framework consists of two newly designed transformer-like modules (i.e. the coordinate-guided contextual aggregation module and multiplex attention module) to exploit rich relations within point clouds.
+- Visualization of the attention maps by using our method based on the ground-truth bounding boxes (bboxes) from Sr3D , in comparison with a variant of our method that ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- By formulating this task as a grounding-by-detection problem, lots of recent works focus on how to exploit more powerful detectors and comprehensive language features, but (1) how to ...
+- Recently, Chen et al. and Achlioptas et al. proposed to tackle visual grounding on 3D point clouds by formulating it as a grounding-by-detection problem, together with two newly ...
+- Inspired by the well-known transformer architecture, we propose a relation-aware visual grounding method on 3D point clouds, named as 3DVGTransformer, to fully utilize the contextual clues for relationenhanced ...
 
 ## 핵심 방법론
-- Task family: structured 3D scene graph reasoning
-- Representation: 3D visual grounding, graph reasoning
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Our framework consists of two newly designed transformer-like modules (i.e. the coordinate-guided contextual aggregation module and multiplex attention module) to exploit rich relations within point clouds.
+- Visualization of the attention maps by using our method based on the ground-truth bounding boxes (bboxes) from Sr3D , in comparison with a variant of our method that ...
+- 4, we show that our relation modeling scheme can better ground the “dresser” next to the “trash can” according to the relation indicated by the sentence when compared ...
+- This attention map comes from the second self-attention block in our MA module, thus has captured the relations between objects in the point cloud, and also across two ...
+- Namely, we just use one row of the fused attention matrix (after the softmax operation) corresponding to the query object “trash can” to generate the attention map.

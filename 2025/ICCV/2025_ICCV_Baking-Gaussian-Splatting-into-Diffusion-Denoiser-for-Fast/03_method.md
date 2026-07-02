@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: 3D Vision, Gaussian Splatting, Diffusion
+- Paper link: ./2025/ICCV/2025_ICCV_Baking-Gaussian-Splatting-into-Diffusion-Denoiser-for-Fast/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In addition, we develop a scene-object mixed training strategy with a new camera conditioning method RPPC to learn a general prior capturing better 3D geometry and texture representations.
+- In this paper, we propose a novel single-stage 3D diffusion model, DiffusionGS, for object generation and scene reconstruction from a single view.
+- Ablation Study In this paper, we propose a novel framework, DiffusionGS, for 3D object generation and scene reconstruction from a single view.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Existing feedforward image-to-3D methods mainly rely on 2D multi-view diffusion models that cannot guarantee 3D consistency.
+- Existing feedforward image-to-3D methods are mainly two-stage .
+- In addition, we develop a scene-object mixed training strategy with a new camera conditioning method RPPC to learn a general prior capturing better 3D geometry and texture representations.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: 3D Vision, Gaussian Splatting
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- In addition, we develop a scene-object mixed training strategy with a new camera conditioning method RPPC to learn a general prior capturing better 3D geometry and texture representations.
+- Ablation Study In this paper, we propose a novel framework, DiffusionGS, for 3D object generation and scene reconstruction from a single view.
+- We also compare our method and the SOTA 2D view synthesis method PhotoNVS with post-hoc Gaussian fitting and the SOTA scene mesh reconstruction method MIDI .
+- We compare our method with three feedforwad methods (Flash3D , Splatter-Image , and pixelNeRF ) and one SDSbased method VistaDream .
+- We chain Sora with our method to perform text-toscene in Fig.

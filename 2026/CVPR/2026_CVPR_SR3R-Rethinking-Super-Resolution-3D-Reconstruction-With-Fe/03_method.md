@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Paper link: ./2026/CVPR/2026_CVPR_SR3R-Rethinking-Super-Resolution-3D-Reconstruction-With-Fe/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose to reformulate 3DSR as a direct feedforward mapping from sparse LR views to HR 3DGS representations, enabling the model to autonomously learn 3D-specific high-frequency geometry and ...
+- Training Objective The predicted HR 3DGS G HR is rendered into novel-view images and supervised using the corresponding ground-
+- Input images are preprocessed by rescaling and center cropping, where the LR inputs are downsampled to 64 × 64 and the ground-truth (GT) targets to where ΦPTv3 denotes ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Existing methods rely on dense LR inputs and per-scene optimization, which restricts the highfrequency priors for constructing HR 3D Gaussian Splatting (3DGS) to those inherited from pretrained 2D ...
+- We propose to reformulate 3DSR as a direct feedforward mapping from sparse LR views to HR 3DGS representations, enabling the model to autonomously learn 3D-specific high-frequency geometry and ...
+- We propose to reformulate 3DSR as a direct feedforward mapping from sparse LR views to HR 3DGS representations, enabling the model to autonomously learn 3D-specific high-frequency geometry and ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Training Objective The predicted HR 3DGS G HR is rendered into novel-view images and supervised using the corresponding ground-
+- Input images are preprocessed by rescaling and center cropping, where the LR inputs are downsampled to 64 × 64 and the ground-truth (GT) targets to where ΦPTv3 denotes ...
+- These queried features are aggregated together with the Gaussian center and camera intrinsics K, and passed into a PointTransformerV3 network for spatial reasoning and multi-scale feature encoding: \boldsymbol ...
+- Specifically, for each Gaussian primitive GDense = i (µi , αi , r i , si , ci ) in G Dense , we project its 3D center ...
+- The entire SR3R is trained end-toend through differentiable Gaussian rasterization.

@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ICML
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model, Robotics, 3D Vision, Reinforcement Learning
+- Paper link: ./2026/ICML/2026_ICML_Reasoning-VLA-An-Efficient-and-Spatial-Guided-General-Visi/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this paper, we propose Reasoning-VLA, a general and efficient action-generation VLA framework.
+## Brief Method
+- These results indicate that our approach provides significant improvements in open-loop evaluation, highlighting the strong generalization capability of the Reasoning-VLA architecture.
+- In this paper, we propose Reasoning-VLA, a general and efficient action-generation VLA framework.
+- For open-loop evaluation, we use the same testing and validation clips as employed by prior methods.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- These limitations hinder their generalization ability to new driving scenarios.
+- However, existing VLAs often struggle with achieving efficient inference and generalizing to novel autonomous vehicle configurations and driving scenarios.
+- These results indicate that our approach provides significant improvements in open-loop evaluation, highlighting the strong generalization capability of the Reasoning-VLA architecture.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- These results indicate that our approach provides significant improvements in open-loop evaluation, highlighting the strong generalization capability of the Reasoning-VLA architecture.
+- For open-loop evaluation, we use the same testing and validation clips as employed by prior methods.
+- C LOSED - LOOP E VALUATION We use NeuroNCAP (Ljungbergh et al., 2024) as the closedloop real-world simulator because it provides renderings of novel, unseen scenarios.
+- To fairly compare with existing methods, we retain the original training and testing splits of each dataset.
+- During training, we shuffle the unified datasets and fine-tune Reasoning-VLA sequentially using SFT followed by RL.

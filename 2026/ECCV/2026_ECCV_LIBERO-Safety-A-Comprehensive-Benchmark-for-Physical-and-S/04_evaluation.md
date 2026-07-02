@@ -1,26 +1,32 @@
 # Evaluation
 
-## Dataset
-Replica, Habitat, RLBench, CALVIN, LIBERO
+- Year/Venue: 2026 / ECCV
+- Category: Benchmarks and Datasets
+- Tags: VLA, Vision-Language Model, Benchmark, semantic
+- Paper link: ./2026/ECCV/2026_ECCV_LIBERO-Safety-A-Comprehensive-Benchmark-for-Physical-and-S/paper.pdf
+- Code/Project: https://libero-safety.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `robot manipulation and vision-language-action control`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- RLBench
+- CALVIN
+- LIBERO
+- RoboTwin
 
 ## Metrics
-success rate, task completion, language-conditioned generalization, real/sim transfer, IoU, AP, SR, EM
+- SR
+- success rate
+- collision
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- 4.1 Experimental Setup To systematically benchmark safety performance across both physical execution and cognitive reasoning, we evaluate a comprehensive suite of 10 representative architectures.
+- The selected models are initialized with their official configurations, and all experiments are conducted on 8 NVIDIA A800 GPUs to guarantee a fair and standardized comparison.
+- 4.1 Experimental Setup To systematically benchmark safety performance across both physical execution and cognitive reasoning, we evaluate a comprehensive suite of 10 representative architectures.
+- The selected models are initialized with their official configurations, and all experiments are conducted on 8 NVIDIA A800 GPUs to guarantee a fair and standardized comparison.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- These baselines are systematically categorized into 4 dominant paradigms to ensure a holistic assessment: (1) Standard VLA models (OpenVLA , OpenVLA-OFT , π0 , and π0.5 ); (2) ...
+- The selected models are initialized with their official configurations, and all experiments are conducted on 8 NVIDIA A800 GPUs to guarantee a fair and standardized comparison.
 
 ## Reproducibility Notes
-- Code/Project: https://libero-safety.github.io/
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

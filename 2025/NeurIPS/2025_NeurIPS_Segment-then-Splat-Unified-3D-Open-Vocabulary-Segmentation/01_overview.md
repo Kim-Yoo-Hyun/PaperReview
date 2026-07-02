@@ -3,33 +3,34 @@
 - Year/Venue: 2025 / NeurIPS Poster
 - Category: Language-Embedded NeRF and Gaussian Fields
 - Tags: 3D Vision, Gaussian Splatting, semantic
-- Authors: Yiren Lu, Yunlai Zhou, Yiran Qiao, Chaoda Song, Tuo Liang, Jing Ma, Huan Wang, Yu Yin
-- Paper: https://openreview.net/forum?id=ycPVp0577R
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_Segment-then-Splat-Unified-3D-Open-Vocabulary-Segmentation/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- To solve this issue, most existing works [9–12] incorporate a separate language field alongside Gaussian Splatting reconstruction.
+- Despite the differences in segmentation strategies, whether pixel-based or 3D-based, all existing approaches follow a “reconstruction then segmentation” (i.e., splat then segment) paradigm.
+- 2) Failure to capture true 3D object information, complicating 3D object extraction and limiting downstream tasks like robot navigation and 3D manipulation.
 
 ## Core Idea
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Open-vocabulary querying in 3D space is crucial for enabling more intelligent perception in applications such as robotics, autonomous systems, and augmented reality.
-- Method cue: In this paper, we propose Segment then Splat, a 3D-aware open vocabulary segmentation approach for both static and dynamic scenes based on Gaussian Splatting.
-- Result cue: Extensive experiments on various datasets demonstrate the effectiveness of our proposed method in both static and dynamic scenarios.
+- In this paper, we propose Segment then Splat, a 3D-aware open vocabulary segmentation approach for both static and dynamic scenes based on Gaussian Splatting.
+- We introduce Segment then Splat, a unified approach for 3D open-vocabulary segmentation based on Gaussian Splatting, as illustrated in Fig.
 
 ## Input / Output
-Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `language-aware Gaussian/implicit 3D scene representation`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive experiments on various datasets demonstrate the effectiveness of our proposed method in both static and dynamic scenarios.
+- Notably, 2D pixel-based methods LERF_OVS 3DOVS tend to produce relatively ambiguous boundMethod mIoU↑ Time↓ mIoU↑ Time↓ aries, whereas our approach, leveraging the SegLangSplat 46.37 62.00 82.49 68.90 ment ...
+- Our method outperforms all baseline ap- static (a) and dynamic (b) scenes. proaches.
 
 ## Limitation
-3DGS/NeRF 기반 방법은 scene reconstruction 품질, 카메라 포즈, memory/runtime, dynamic scene 처리에 민감하다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D Vision, Gaussian Splatting, semantic.
-- 초록에서 확인되는 주요 cue: Open-vocabulary, However, Moreover, Segment, Splat, Gaussian, Splatting, Gaussians.
+- In this paper, we propose Segment then Splat, a 3D-aware open vocabulary segmentation approach for both static and dynamic scenes based on Gaussian Splatting.
+- Extensive experiments on various datasets demonstrate the effectiveness of our proposed method in both static and dynamic scenarios.
+- Segment then Splat reverses the long-established approach of “segmentation after reconstruction” by dividing Gaussians into distinct object sets before reconstruction.
+
+## Abstract Cue
+- Open-vocabulary querying in 3D space is crucial for enabling more intelligent perception in applications such as robotics, autonomous systems, and augmented reality.

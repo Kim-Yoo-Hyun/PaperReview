@@ -3,32 +3,30 @@
 - Year/Venue: 2017 / TOG
 - Category: 3D Reconstruction, Geometry, and SLAM
 - Tags: 3D Vision, SLAM, RGB-D, 3D reconstruction
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/1604.01093
-- PDF status: downloaded
-- GitHub/Project: https://graphics.stanford.edu/projects/bundlefusion/
+- Paper link: ./2017/TOG/2017_TOG_BundleFusion-Real-time-Globally-Consistent-3D-Reconstructi/paper.pdf
+- Code/Project: https://graphics.stanford.edu/projects/bundlefusion/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- We are seeing a renaissance in 3D scanning, fueled both by applications such as fabrication, augmented and virtual reality, gaming and robotics, and by the ubiquity of RGB-D ...
+- This has opened up the need for real-time scanning at scale.
+- Here, the user or robot must scan an entire room (or several spaces) in real-time, with instantaneous and continual integration of the accumulated 3D model into the desired ...
 
 ## Core Idea
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We are seeing a renaissance in 3D scanning, fueled both by applications such as fabrication, augmented and virtual reality, gaming and robotics, and by the ubiquity of RGB-D ...
+- This has opened up the need for real-time scanning at scale.
 
 ## Input / Output
-Input: one or more images/RGB-D/LiDAR observations. Output: depth, camera pose, point map, dense reconstruction, or consistent map.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D reconstruction, calibration, and geometric consistency`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Reconstruction results of scenes captured using our live system are shown in Fig.
 
 ## Limitation
-강한 benchmark 성능이 실제 로봇 센서 노이즈, rolling shutter, 동적 객체, 저조도 환경까지 보장하지는 않는다.
+- Note that unlike the other methods listed, Redwood does not use color information and runs offline.
 
 ## Contribution
-- 3D reconstruction, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D Vision, SLAM, RGB-D, 3D reconstruction.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+
+## Abstract Cue
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

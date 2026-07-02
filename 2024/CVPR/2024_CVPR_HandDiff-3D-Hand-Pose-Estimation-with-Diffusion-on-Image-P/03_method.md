@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: 3D Generative Modeling and Diffusion
+- Tags: geometry, Diffusion, Generation, point cloud, 3D Vision
+- Paper link: ./2024/CVPR/2024_CVPR_HandDiff-3D-Hand-Pose-Estimation-with-Diffusion-on-Image-P/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To verify the effectiveness and necessity of the components proposed in this work, we incrementally introduce these components on the existing 3D diffusion probabilistic model (3DDPM) , which ...
+- As the quality of conditions determines the quality of pose denoising, we feed the diffusion model with different models of input.
+- Thanks to the recent significant progress on diffusion-based generative models, hand pose estimation can also benefit from the diffusion model to estimate keypoint locations with high quality.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Essentially, the 3D hand pose estimation can be regarded as a 3D point subset generative problem conditioned on input frames.
+- In recent years, significant progress has been made in the field of 3D hand pose estimation by applying deep learning techniques and using low-cost depth cameras.
+- To verify the effectiveness and necessity of the components proposed in this work, we incrementally introduce these components on the existing 3D diffusion probabilistic model (3DDPM) , which ...
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: geometry, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- To verify the effectiveness and necessity of the components proposed in this work, we incrementally introduce these components on the existing 3D diffusion probabilistic model (3DDPM) , which ...
+- As the quality of conditions determines the quality of pose denoising, we feed the diffusion model with different models of input.

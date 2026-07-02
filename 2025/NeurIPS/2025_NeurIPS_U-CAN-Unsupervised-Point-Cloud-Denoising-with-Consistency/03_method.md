@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / NeurIPS poster
+- Category: 3D Representation Learning and Foundation Models
+- Tags: point cloud, 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_U-CAN-Unsupervised-Point-Cloud-Denoising-with-Consistency/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this work, we introduce U-CAN, an Unsupervised framework for point cloud denoising with Consistency-Aware Noise2Noise matching.
+## Brief Method
+- In this work, we introduce U-CAN, an Unsupervised framework for point cloud denoising with Consistency-Aware Noise2Noise matching.
+- This is particularly clear in areas of high-frequency information, such as edges, textures, and intricate patterns, where our method maintains the integrity of these details while effectively reducing ...
+- Previous works mostly focus on training neural networks with noisy-clean point cloud pairs for learning denoising priors, which requires extensively manual efforts.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- In response to this challenge, we introduce a novel consistency-aware constraint that specifically targets the denoising geometric consistency.
+- Another challenge in predicting robust denoising arises from the unknown location of true surfaces when only noisy observations are available.
+- In this work, we introduce U-CAN, an Unsupervised framework for point cloud denoising with Consistency-Aware Noise2Noise matching.
 
 ## 핵심 방법론
-- Task family: 3D vision and embodied AI
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- This is particularly clear in areas of high-frequency information, such as edges, textures, and intricate patterns, where our method maintains the integrity of these details while effectively reducing ...
+- Specifically, given a sparse point cloud with M points as the input, we add Gaussian noise to it for r times independently, resulting in a noisy dense point ...

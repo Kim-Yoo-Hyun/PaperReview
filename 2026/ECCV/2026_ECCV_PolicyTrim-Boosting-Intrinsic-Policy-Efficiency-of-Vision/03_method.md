@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ECCV
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model
+- Paper link: ./2026/ECCV/2026_ECCV_PolicyTrim-Boosting-Intrinsic-Policy-Efficiency-of-Vision/paper.pdf
+- Code/Project: https://inceptionwang.github.io/PolicyTrim/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose a two-stage posttraining framework that extends the executable action horizon per inference and reduces the number of steps required to complete a task for VLA models.
+- To address this, we propose PolicyTrim, a reinforcement learning-based post-training framework that extends the reliable action chunk length and reduces redundant physical steps.
+- This paper introduces PolicyTrim, an RL-based post-training framework designed to enhance policy efficiency.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Task ID Task ID (a) Step Count Across Tasks (Left: Baseline, Right: Ours) Misalignment Start Grasp Failure Step Success Rate X.
+- While existing efforts predominantly focus on compute-centric efficiency to reduce per-step inference latency, the intrinsic policy efficiency of these models remains largely unexplored.
+- We propose a two-stage posttraining framework that extends the executable action horizon per inference and reduces the number of steps required to complete a task for VLA models.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We propose a two-stage posttraining framework that extends the executable action horizon per inference and reduces the number of steps required to complete a task for VLA models.
+- This paper introduces PolicyTrim, an RL-based post-training framework designed to enhance policy efficiency.

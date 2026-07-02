@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2026 / ICML
+- Category: 3D Semantic Understanding and Alignment
+- Tags: semantic, alignment, 3D Vision
+- Paper link: ./2026/ICML/2026_ICML_Rh-3DGS-Robust-Open-Vocabulary-Scene-Understanding-via-Rie/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We propose **Rh-3DGS**, a robust semantic 3DGS framework that uses reliability-aware distillation and manifold-consistent aggregation. **Visibility-Calibrated Distillation (VCD)** computes per-pixel reliability weights from rasterization ...
+## Brief Method
+- We propose Rh-3DGS, a robust semantic 3DGS framework that uses reliability-aware distillation and manifold-consistent aggregation.
+- Rh-3DGS applies VCD for pixel reliability, VFM for hyperspherical aggregation, and LIC for local 3D consistency, yielding sharper and view-stable masks (g–h). ple is 3D Gaussian Splatting (3DGS) ...
+- Method mIoU(%) ↑ Method Classes 19 Classes 15 Classes 10 mIoU / mAcc mIoU / mAcc mIoU / mAcc Feature3DGS 10.7 / 20.8 LangSplat 3.9 / 10.2 OpenGaussian ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Problem: Boundary ambiguity & view inconsistency Open-vocabulary 3D scene understanding answers free-form text queries over reconstructed scenes.
+- Existing 3DGS-based methods often average normalized embeddings in Euclidean space.
+- We propose Rh-3DGS, a robust semantic 3DGS framework that uses reliability-aware distillation and manifold-consistent aggregation.
 
 ## 핵심 방법론
-- Task family: open-vocabulary 3D semantic understanding
-- Representation: semantic, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Method mIoU(%) ↑ Method Classes 19 Classes 15 Classes 10 mIoU / mAcc mIoU / mAcc mIoU / mAcc Feature3DGS 10.7 / 20.8 LangSplat 3.9 / 10.2 OpenGaussian ...

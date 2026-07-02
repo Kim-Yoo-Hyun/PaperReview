@@ -3,33 +3,34 @@
 - Year/Venue: 2025 / NeurIPS poster
 - Category: 3D Equivariance, Calibration, and Registration
 - Tags: geometry, sensor fusion, LiDAR, point cloud, 3D Vision
-- Authors: Jiayi Tian, Haiduo Huang, Tian Xia, Wenzhe zhao, Pengju Ren
-- Paper: https://openreview.net/forum?id=UkBwyp3aXG
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_GeGS-PCR-Fast-and-Robust-Color-3D-Point-Cloud-Registration/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- To address the challenges of point cloud registration in low-overlap real-world scenarios, we propose GeGS-PCR, a two-stage method that integrates Geometric-3DGS for colored point cloud registration.
+- Previous works have focused on keypoints and correspondences, leveraging specialized neural networks to extract features from point clouds, and subsequently determining the rigid transformation using robust estimators like ...
+- Despite rapid progress, point cloud registration remains challenging in real-world scenarios with low overlap between point clouds , where registration often fails.
 
 ## Core Idea
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: We address the challenge of point cloud registration using color information, where traditional methods relying solely on geometric features often struggle in low-overlap and ...
-- Method cue: To overcome these limitations, we propose GeGS-PCR, a novel two-stage method that combines geometric, color, and Gaussian information for robust registration.
-- Result cue: Additionally, fast differentiable rendering is utilized to refine the registration process, leading to improved convergence.
+- Finally, based on the GeoTransformer, we use self-attention and cross-attention to focus on the color information in the point cloud structure and guide superpoint registration.
+- To overcome these limitations, we propose GeGS-PCR, a novel two-stage method that combines geometric, color, and Gaussian information for robust registration.
 
 ## Input / Output
-Input: one or more images/RGB-D/LiDAR observations. Output: depth, camera pose, point map, dense reconstruction, or consistent map.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D reconstruction, calibration, and geometric consistency`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Our method achieves state-of-the-art performance with Registration Recall at 99.9%, Relative Rotation Error as low as 0.013, and Relative Translation Error as low as 0.024, improving precision by ...
+- Additionally, fast differentiable rendering is utilized to refine the registration process, leading to improved convergence.
+- To validate the performance of the GeGS-PCR model, we evaluate it on the indoor benchmarks Color3DMatch (C3DM) and Color3DLoMatch (C3DLM), as well as our colorized outdoor ColorKitti (The ...
 
 ## Limitation
-강한 benchmark 성능이 실제 로봇 센서 노이즈, rolling shutter, 동적 객체, 저조도 환경까지 보장하지는 않는다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D reconstruction, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: geometry, sensor fusion, LiDAR, point cloud, 3D Vision.
-- 초록에서 확인되는 주요 cue: GeGS-PCR, Gaussian, Our, Geometric-3DGS, Leveraging, LORA, Additionally, This.
+- Our method achieves state-of-the-art performance with Registration Recall at 99.9%, Relative Rotation Error as low as 0.013, and Relative Translation Error as low as 0.024, improving precision by ...
+- To overcome these limitations, we propose GeGS-PCR, a novel two-stage method that combines geometric, color, and Gaussian information for robust registration.
+- Our approach incorporates a dedicated color encoder that enhances color features by extracting multi-level geometric and color data from the original point cloud.
+
+## Abstract Cue
+- We address the challenge of point cloud registration using color information, where traditional methods relying solely on geometric features often struggle in lowoverlap and incomplete scenarios.

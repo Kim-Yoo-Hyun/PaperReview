@@ -1,26 +1,35 @@
 # Evaluation
 
-## Dataset
-S3DIS, OXE, ShapeNet, ImageNet
+- Year/Venue: 2019 / TOG
+- Category: Foundations: 3D Representation Learning
+- Tags: point cloud, 3D Vision
+- Paper link: ./2019/TOG/2019_TOG_Dynamic-Graph-CNN-for-Learning-on-Point-Clouds/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `core 3D geometry and scene representation learning`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- S3DIS
+- ModelNet40
+- ShapeNet
+- ShapeNetPart
 
 ## Metrics
-PSNR, SSIM, LPIPS, ATE, RPE, Chamfer, F-score, pose AUC
+- accuracy
+- mIoU
+- IoU
+- mAP
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Our baseline model using the fixed k-NN graph outperforms the previous state-of-the-art PointNet++ by 1.0% accuracy, at the same time being 7 times faster.
+- Our model achieves the best results on this dataset.
+- An advanced version including dynamical graph recomputation achieves the best results on this dataset.
+- A more advanced version of our model including a dynamically-updated graph computation outperforms PointNet++, PCNN by 2.2% and 0.6% respectively, while being much ACM Trans.
+- Our baseline model using the fixed k-NN graph outperforms the previous state-of-the-art PointNet++ by 1.0% accuracy, at the same time being 7 times faster.
+- Our model achieves the best results on this dataset.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- Our baseline model using the fixed k-NN graph outperforms the previous state-of-the-art PointNet++ by 1.0% accuracy, at the same time being 7 times faster.
+- 2015] classification experiment to compare the complexity of our model to previous state-of-the-art.
 
 ## Reproducibility Notes
-- Code/Project: not identified
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

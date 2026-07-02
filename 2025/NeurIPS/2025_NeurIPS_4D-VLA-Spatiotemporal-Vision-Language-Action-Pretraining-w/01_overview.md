@@ -3,33 +3,35 @@
 - Year/Venue: 2025 / NeurIPS Poster
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLA, Vision-Language Model
-- Authors: Jiahui Zhang, Yurui Chen, Yueming Xu, Ze Huang, Yanpeng Zhou, Yu-Jie Yuan, Xinyue Cai, Guowei Huang
-- Paper: https://openreview.net/forum?id=yFjgV3cJje
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_4D-VLA-Spatiotemporal-Vision-Language-Action-Pretraining-w/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- However, existing pretraining paradigms t often suffer from incomplete or under-informative input, lacking critical contextual cues required for reliable action reasoning.
+- However, efficiently extracting useful information from these datasets remains a challenge for improving generalization across diverse scenarios.
+- This includes symmetric trajectories—where it is difficult to infer the direction of motion—as well as cases where visually similar observations correspond to entirely different actions.
 
 ## Core Idea
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Leveraging diverse robotic data for pretraining remains a critical challenge.
-- Method cue: To address this, we propose 4D-VLA, a novel approach that effectively integrates 4D information into the input to mitigate these sources of chaos.
-- Result cue: Experimental results demonstrate that our pretraining method and architectural components substantially enhance model performance.
+- Vision-language model backbone We leverage a pretrained large vision-language model (VLM) as the backbone, specifically InternVL-4B , which consists of a text tokenizer T , a vision encoder ...
+- To address this, we propose 4D-VLA, a novel approach that effectively integrates 4D information into the input to mitigate these sources of chaos.
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `robot manipulation and vision-language-action control`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Our model significantly outperforms other competitors, with an average success rate 12.1 higher than OpenVLA. † Denotes no available standard deviation data.
+- Note that ARM4R pretrains with 3D inputs, while our approach differs in supervision and architecture; results and a detailed discussion are provided in Appx.
+- In addition, we evaluate on the ARM4R benchmark for a direct comparison with ARM4R.
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- A limitation of our approach is its reliance on RGB-D input, which introduces hardware restriction.
+- In this paper, we present 4D-VLA, which incorporates 4D information to address challenges in leveraging diverse robotic datasets for pretraining, such as coordinate system chaos and state chaos.
 
 ## Contribution
-- robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: VLA, Vision-Language Model.
-- 초록에서 확인되는 주요 cue: Leveraging, Existing, However, This, VLA, Our, RGB-D, Additionally.
+- Leveraging diverse robotic data for pretraining remains a critical challenge.
+- To address this, we propose 4D-VLA, a novel approach that effectively integrates 4D information into the input to mitigate these sources of chaos.
+- This inconsistency significantly hampers pretraining efficiency.
+
+## Abstract Cue
+- Leveraging diverse robotic data for pretraining remains a critical challenge.

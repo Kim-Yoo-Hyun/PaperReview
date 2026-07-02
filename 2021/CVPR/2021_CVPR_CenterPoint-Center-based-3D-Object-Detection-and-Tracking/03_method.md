@@ -1,18 +1,19 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2021 / CVPR
+- Category: Foundations: 3D Detection and BEV Perception
+- Tags: point cloud, 3D Vision
+- Paper link: ./2021/CVPR/2021_CVPR_CenterPoint-Center-based-3D-Object-Detection-and-Tracking/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Introduction Figure 1: We present a center-based framework to represent, detect and track objects.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Compared to the wellstudied 2D detection problem, 3D detection on point-clouds offers a series of interesting challenges: First, point-clouds are sparse, and most regions of 3D space are ...
+- This representation mimics the well-studied image-based 2D bounding-box detection but comes with additional challenges.
+- Introduction Figure 1: We present a center-based framework to represent, detect and track objects.
 
 ## 핵심 방법론
-- Task family: core 3D geometry and scene representation learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- mAP↑ NDS↑ PKL↓ WYSIWYG PointPillars CVCNet PointPainting PMPNet SSN CBGS 35.0 40.1 55.3 46.4 45.4 46.3 52.8 41.9 55.0 64.4 58.1 53.1 56.9 63.3 1.14 1.00 0.92 0.89 ...

@@ -3,32 +3,32 @@
 - Year/Venue: 2021 / ICCV
 - Category: Foundations: Monocular Geometry
 - Tags: 3D Vision, monocular depth, Vision Transformer, geometry
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2103.13413
-- PDF status: downloaded
-- GitHub/Project: https://github.com/isl-org/DPT
+- Paper link: ./2021/ICCV/2021_ICCV_Vision-Transformers-for-Dense-Prediction/paper.pdf
+- Code/Project: https://github.com/isl-org/DPT
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Introduction Virtually all existing architectures for dense prediction are based on convolutional networks .
 
 ## Core Idea
-핵심은 attention 기반 sequence modeling을 통해 장거리 의존성과 modality alignment를 scale-up 가능한 방식으로 학습하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We introduce dense vision transformers, an architecture that leverages vision transformers in place of convolutional networks as a backbone for dense prediction tasks.
+- Our experiments show that this architecture yields substantial improvements on dense prediction tasks, especially when a large amount of training data is available.
 
 ## Input / Output
-Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `sequence/representation learning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Our experiments show that this architecture yields substantial improvements on dense prediction tasks, especially when a large amount of training data is available.
+- For monocular depth estimation, we observe an improvement of up to 28% in relative performance when compared to a state-of-theart fully-convolutional network.
+- We further show that the architecture can be fine-tuned on smaller datasets such as NYUv2, KITTI, and Pascal Context where it also sets the new state of the ...
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- sequence/representation learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D Vision, monocular depth, Vision Transformer, geometry.
+- Our experiments show that this architecture yields substantial improvements on dense prediction tasks, especially when a large amount of training data is available.
+- We introduce dense vision transformers, an architecture that leverages vision transformers in place of convolutional networks as a backbone for dense prediction tasks.
+- The design of dense prediction architectures commonly follows a pattern that logically separates the network into an encoder and a decoder.
+
+## Abstract Cue
+- We introduce dense vision transformers, an architecture that leverages vision transformers in place of convolutional networks as a backbone for dense prediction tasks.

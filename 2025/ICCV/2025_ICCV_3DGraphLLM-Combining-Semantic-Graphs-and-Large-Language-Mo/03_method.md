@@ -1,18 +1,20 @@
 # Method
 
-## Brief Method
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Scene Graphs and Graph Reasoning
+- Tags: 3D Scene Graph, LLM, Graph Reasoning
+- Paper link: ./2025/ICCV/2025_ICCV_3DGraphLLM-Combining-Semantic-Graphs-and-Large-Language-Mo/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In this work, we propose 3DGraphLLM, a method for constructing a learnable representation of a 3D scene graph that explicitly incorporates semantic relationships.
+- For the visual grounding task on the ScanRefer dataset, we use the standard metrics Acc@0.25 and Acc@0.5.
+- OBJ4 OBJ2 front t lef Scene Graph OBJ3 Generation h rig OBJ2 OBJ3 close close User query Select the chair on the left side of the desk and ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, existing methods typically rely only on geometric information, such as object coordinates, and overlook the rich semantic relationships between objects.
+- In this work, we propose 3DGraphLLM, a method for constructing a learnable representation of a 3D scene graph that explicitly incorporates semantic relationships.
 
 ## 핵심 방법론
-- Task family: structured 3D scene graph reasoning
-- Representation: 3D Scene Graph, LLM, Graph Reasoning
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- For the visual grounding task on the ScanRefer dataset, we use the standard metrics Acc@0.25 and Acc@0.5.

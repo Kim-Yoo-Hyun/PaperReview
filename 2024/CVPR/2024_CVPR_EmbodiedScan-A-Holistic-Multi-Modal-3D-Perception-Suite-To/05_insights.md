@@ -1,20 +1,35 @@
 # Insights
 
-## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+## 이 논문에서 가져갈 핵심 개념
+- 핵심 방법 단서: We use cross-entropy loss and sceneclass affinity loss for training.
+- 출발 문제 단서: Nonetheless, subtle but significant discrepancies exist between this expectation and research problems examined within the computer vision community.
+- 주장된 효과 단서: It is capable of processing an arbitrary number of multi-modal inputs and demonstrates remarkable 3D perception capabilities, both within the two series of benchmarks we set up, i.e., ...
 
-## Strength
-- `3D vision and embodied AI` 문제를 3D geometry와 language/action prior를 함께 쓰는 방향으로 밀어붙인다.
-- 사용자의 연구 키워드 중 `3D Vision, Embodied AI, dataset`와 직접적으로 연결된다.
+## 내 연구 방향에서 어떻게 활용할 수 있나
+- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
+- Language/semantic goal을 metric 3D map, BEV, scene graph, frontier/map memory와 연결해 navigation state representation으로 사용할 수 있다.
+- Navigation의 핵심 병목을 visual-language matching만이 아니라 spatial memory, localization, graph planning 문제로 재정의할 수 있다.
 
-## Paper Claim
-- 논문의 중심 claim은 기존 2D-only, closed-set, 또는 task-specific 접근보다 더 일반화 가능한 3D-aware representation/policy/reasoning을 제공한다는 것이다.
-- Abstract result cue: 자동 추출 없음.
+## 이 논문이 끝난 지점
+- 논문이 도달한 지점: It is capable of processing an arbitrary number of multi-modal inputs and demonstrates remarkable 3D perception capabilities, both within the two series of benchmarks we set up, i.e., ...
+- navigation 성능을 보인 뒤에도 geometry-aware memory의 누적 오류, unseen scene transfer, semantic grounding failure는 후속 연구 지점으로 남는다.
 
-## Future Work
-- dynamic scene, partial observation, sensor noise, cross-embodiment transfer, real-time inference, safety-aware planning을 추가 검증하는 것이 중요하다.
-- 3D scene graph/semantic Gaussian/SLAM map을 VLA policy의 persistent memory로 연결하는 방향이 유망하다.
+## 다음 연구 질문
+- 3D map/scene graph/gaussian map 중 어떤 representation이 language/semantic goal following에 가장 안정적인가?
+- semantic goal grounding과 metric path planning을 분리해야 하는가, 아니면 end-to-end로 결합해야 하는가?
+- online exploration 중 잘못된 language grounding을 어떻게 감지하고 수정할 수 있는가?
 
-## 내 관점
-- 이 논문은 `Benchmarks and Datasets` 축에서 읽어야 한다.
-- 후속 연구 아이디어: language-grounded 3D memory를 만들고, robot policy가 이를 action feasibility와 uncertainty까지 포함해 조회하도록 설계한다.
+## 실험으로 확인할 방향
+- 논문 내 evaluation 단서: COCO, ScanNet, Matterport3D, Replica, 3RScan / accuracy, mIoU, IoU, AP, mAP
+- 내 연구 확장 benchmark 후보: R2R, RxR, VLN-CE, Habitat
+- 내 연구 확장 metric 후보: SR, SPL, nDTW, collision
+- 검증 초점: instruction/semantic goal following, path efficiency, unseen environment generalization, online correction을 확인한다.
+
+## 주의할 점
+- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
+- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+
+## 근거가 되는 논문 단서
+- Problem cue: Nonetheless, subtle but significant discrepancies exist between this expectation and research problems examined within the computer vision community.
+- Method cue: We use cross-entropy loss and sceneclass affinity loss for training.
+- Result cue: It is capable of processing an arbitrary number of multi-modal inputs and demonstrates remarkable 3D perception capabilities, both within the two series of benchmarks we set up, i.e., ...

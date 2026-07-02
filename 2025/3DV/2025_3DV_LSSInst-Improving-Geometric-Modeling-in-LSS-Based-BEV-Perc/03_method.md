@@ -1,18 +1,20 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / 3DV
+- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Tags: sensor fusion, LiDAR, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_LSSInst-Improving-Geometric-Modeling-in-LSS-Based-BEV-Perc/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-With this in mind, to compensate for the missing details and utilize multi-view geometry constraints, we propose LSSInst, a two-stage object detector incorporating BEV ...
+## Brief Method
+- With this in mind, to compensate for the missing details and utilize multi-view geometry constraints, we propose LSSInst, a two-stage object detector incorporating BEV and instance representations in ...
+- Param (M) Training Cost (min/epoch) Inference Cost (sec/frame) 0.758 0.658 55.7 64.0 14 18 0.04 0.05 0.281 0.275 0.610 0.492 83.5 91.8 11 13 0.10 0.11 0.675 0.658 ...
+- With the attention gained by camera-only 3D object detection in autonomous driving, methods based on Bird-EyeView (BEV) representation especially derived from the forward view transformation paradigm, i.e., lift-splat-shoot ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- The proposed detector exploits fine-grained pixel-level features that can be flexibly integrated into existing LSS-based BEV networks.
+- With this in mind, to compensate for the missing details and utilize multi-view geometry constraints, we propose LSSInst, a two-stage object detector incorporating BEV and instance representations in ...
 
 ## 핵심 방법론
-- Task family: 3D vision and embodied AI
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Param (M) Training Cost (min/epoch) Inference Cost (sec/frame) 0.758 0.658 55.7 64.0 14 18 0.04 0.05 0.281 0.275 0.610 0.492 83.5 91.8 11 13 0.10 0.11 0.675 0.658 ...

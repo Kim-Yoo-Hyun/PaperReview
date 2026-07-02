@@ -1,26 +1,25 @@
 # Evaluation
 
-## Dataset
-Replica, RLBench, CALVIN, Open X-Embodiment, OXE, Google Robot, COCO
+- Year/Venue: 2026 / ICML
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Vision-Language Model, Robotics
+- Paper link: ./2026/ICML/2026_ICML_RoboOmni-Actions-Are-Just-Another-Modality-for-Vision-Lang/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `robot manipulation and vision-language-action control`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- CALVIN
 
 ## Metrics
-success rate, task completion, language-conditioned generalization, real/sim transfer, IoU, AP, mAP, SR
+- accuracy
+- success rate
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Extensive evaluations on the CALVIN, SimplerEnv, and realworld platforms confirm that RoboOmni establishes new state-of-the-art performance, significantly outperforming diffusion-based baselines such as π0 .
+- Notably, combining our proposed MTAP with the FAST tokenizer achieves a 94.4% average success rate on CALVIN, while the Bin tokenizer implementation attains a 27× inference speedup compared ...
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: Challenging the assumption that continuous modeling is essential for high-performance manipulation, **RoboOmni** demonstrates that *actions are just another modality* capable of being effectively modeled ...
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Reproducibility Notes
-- Code/Project: not identified from OpenReview
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

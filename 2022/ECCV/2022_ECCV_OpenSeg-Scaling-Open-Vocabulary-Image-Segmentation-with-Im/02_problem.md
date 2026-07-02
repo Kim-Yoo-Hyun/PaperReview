@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2022 / ECCV
+- Category: Open-Vocabulary 3D Mapping
+- Tags: Vision-Language Model, semantic, open-vocabulary, segmentation
+- Paper link: ./2022/ECCV/2022_ECCV_OpenSeg-Scaling-Open-Vocabulary-Image-Segmentation-with-Im/paper.pdf
+- Code/Project: https://github.com/tensorflow/tpu/tree/master/models/official/detection/projects/openseg
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-3D semantic perception은 라벨 공간이 제한적이고 long-tail 객체/속성/affordance를 다루기 어려워 foundation model alignment가 필요하다.
+- Image segmentation is an important step to organize an image into a small number of regions in order to understand “what” and “where” are in an image.
+- Each region represents a semantically meaningful entity, which can be a thing (e.g., a chair) or stuff (e.g., floor).
+- Language is a natural interface to describe what is in an image.
 
 ## 해결하려는 문제
-- 연구 유형: open-vocabulary 3D semantic understanding
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- We propose OpenSeg to address the above issue while still making use of scalable image-level supervision of captions.
+- We propose a model, called OpenSeg, that can organize pixels into meaningful regions indicated by texts.
+- OpenSeg significantly outperforms the recent openvocabulary method of LSeg by +19.9 mIoU on PASCAL dataset, thanks to its scalability. bride groom hills field sky cow calf grass trees ...
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Vision-Language Model, semantic, open-vocabulary, segmentation` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- Recently, CLIP and ALIGN learn with billion-scale image-text training examples to understand “what” are in an image with arbitrary text queries.
+- Recently, Li et al. introduce an open-vocabulary segmentation method using pre-trained CLIP text-encoders.
+- It trains an image encoder to predict pixel embedding aligned with the text embedding of its pixel label.

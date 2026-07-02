@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 attention 기반 sequence modeling을 통해 장거리 의존성과 modality alignment를 scale-up 가능한 방식으로 학습하는 것이다.
+- Year/Venue: 2019 / NAACL
+- Category: Foundations: Transformer and Language Models
+- Tags: LLM, Transformer, pretraining
+- Paper link: ./2019/NAACL/2019_NAACL_BERT-Pre-training-of-Deep-Bidirectional-Transformers-for-L/paper.pdf
+- Code/Project: https://github.com/google-research/bert
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers.
+- For example, in OpenAI GPT, the authors use a left-toright architecture, where every token can only attend to previous tokens in the self-attention layers of the Transformer (Vaswani ...
+- The major limitation is that standard language models are unidirectional, and this limits the choice of architectures that can be used during pre-training.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- The major limitation is that standard language models are unidirectional, and this limits the choice of architectures that can be used during pre-training.
+- There are two existing strategies for applying pre-trained language representations to downstream tasks: feature-based and fine-tuning.
+- We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers.
 
 ## 핵심 방법론
-- Task family: sequence/representation learning
-- Representation: LLM
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- For example, in OpenAI GPT, the authors use a left-toright architecture, where every token can only attend to previous tokens in the self-attention layers of the Transformer (Vaswani ...
+- The major limitation is that standard language models are unidirectional, and this limits the choice of architectures that can be used during pre-training.
+- BERT alleviates the previously mentioned unidirectionality constraint by using a “masked language model” (MLM) pre-training objective, inspired by the Cloze task (Taylor, 1953).
+- Unlike left-toright language model pre-training, the MLM objective enables the representation to fuse the left and the right context, which allows us to pretrain a deep bidirectional Transformer.
+- This is also in contrast to Peters et al. (2018a), which uses a shallow concatenation of independently trained left-to-right and right-to-left LMs. • We show that pre-trained representations ...

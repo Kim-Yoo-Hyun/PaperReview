@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / CVPR
+- Category: 3D Generative Modeling and Diffusion
+- Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
+- Paper link: ./2025/CVPR/2025_CVPR_DiET-GS-Diffusion-Prior-and-Event-Stream-Assisted-Motion-D/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Given a set of blurry images and corresponding event streams, we propose a novel framework to construct deblurring 3DGS by jointly leveraging the EDI formulation and a pretrained ...
+- Additionally, we propose a simple technique to leverage diffusion prior to further enhance the edge details.
+- In this paper, we present DiET-GS, a diffusion prior and event streamassisted motion deblurring 3DGS.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Reconstructing sharp 3D representations from blurry multi-view images is a long-standing problem in computer vision.
+- Qualitative and quantitative results on both synthetic and real-world data demonstrate that our DiET-GS is capable of producing better quality of novel views compared to the existing baselines.
+- Given a set of blurry images and corresponding event streams, we propose a novel framework to construct deblurring 3DGS by jointly leveraging the EDI formulation and a pretrained ...
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: Gaussian Splatting, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

@@ -1,26 +1,35 @@
 # Evaluation
 
-## Dataset
-ScanNet, Replica, Habitat, KITTI, Objaverse, ImageNet, ETH3D, MegaDepth, RealEstate10K, DTU
+- Year/Venue: 2025 / CVPR
+- Category: 3D Reconstruction, Geometry, and SLAM
+- Tags: 3D reconstruction, geometry, Transformer
+- Paper link: ./2025/CVPR/2025_CVPR_VGGT-Visual-Geometry-Grounded-Transformer/paper.pdf
+- Code/Project: https://github.com/facebookresearch/vggt
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `3D reconstruction, calibration, and geometric consistency`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- ScanNet
+- Replica
+- KITTI
+- Objaverse
+- DTU
+- ETH3D
+- Habitat
 
 ## Metrics
-PSNR, SSIM, LPIPS, ATE, RPE, Chamfer, F-score, pose AUC
+- accuracy
+- mAP
+- Chamfer
+- PSNR
+- SSIM
+- LPIPS
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- The network achieves state-of-the-art results in multiple 3D tasks, including camera parameter estimation, multi-view depth estimation, dense point cloud reconstruction, and 3D point tracking.
+- MASt3R have shown promising results in this direction, but these networks can only process two images at once and rely on post-processing to reconstruct more images, fusing pairwise ...
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Reproducibility Notes
-- Code/Project: https://github.com/facebookresearch/vggt
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

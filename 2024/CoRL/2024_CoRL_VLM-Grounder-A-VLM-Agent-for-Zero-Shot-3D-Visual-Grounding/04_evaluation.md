@@ -1,26 +1,34 @@
 # Evaluation
 
-## Dataset
-ScanNet, ScanRefer, Nr3D, ReferIt3D, OXE
+- Year/Venue: 2024 / CoRL
+- Category: 3D Vision-Language Grounding
+- Tags: 3D visual grounding, VLM, zero-shot
+- Paper link: ./2024/CoRL/2024_CoRL_VLM-Grounder-A-VLM-Agent-for-Zero-Shot-3D-Visual-Grounding/paper.pdf
+- Code/Project: https://github.com/InternRobotics/VLM-Grounder
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `vision-language alignment and multimodal reasoning`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- ScanNet
+- ScanRefer
+- ReferIt3D
+- Nr3D
 
 ## Metrics
-Acc@0.25, Acc@0.5, IoU, mIoU, Top-k accuracy, AP, mAP, success rate
+- accuracy
+- IoU
+- mAP
+- Chamfer
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- We report the performance of the baselines from their original papers, and the results on the same 250 validation samples are provided in the supplementary material.
+- For our experiments, we sample one frame from every 20 frames of the original ScanNet image sequences.
+- The ScanRefer benchmark requires predicting the 3D bounding box of the target object from scene point clouds and queries.
+- In contrast, the Nr3D benchmark provides ground truth bounding boxes (without class labels) for all objects, focusing on top-1 accuracy in selection.
+- Experiments on ScanRefer and Nr3D datasets show VLM-Grounder outperforms previous zero-shot methods, achieving 51.6% Acc@0.25 on ScanRefer and 48.0% Acc on Nr3D, without relying on 3D geometry or ...
+- We report the performance of the baselines from their original papers, and the results on the same 250 validation samples are provided in the supplementary material.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: Experiments on ScanRefer and Nr3D datasets show VLM-Grounder outperforms previous zero-shot methods, achieving 51.6% Acc@0.25 on ScanRefer and 48.0% Acc on Nr3D, without relying ...
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- We report the performance of the baselines from their original papers, and the results on the same 250 validation samples are provided in the supplementary material.
 
 ## Reproducibility Notes
-- Code/Project: https://github.com/InternRobotics/VLM-Grounder
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

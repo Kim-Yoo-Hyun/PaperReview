@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2025 / CoRL
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, open-world, Robotics
+- Paper link: ./2025/CoRL/2025_CoRL_pi0.5-a-Vision-Language-Action-Model-with-Open-World-Gener/paper.pdf
+- Code/Project: https://www.physicalintelligence.company/blog/pi05
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Our central contribution is a system for training a highly generalizable VLA, π0.5 , together with a proof of concept that generalization can emerge from this model when ...
+- We provide a detailed empirical evaluation of both π0.5 ’s generalization capabilities and the relevance of different co-training ingredients.
+- We leverage this observation to design a co-training framework for VLAs that can utilize heterogeneous and diverse knowledge sources to enable broad generalization, creating the π0.5 model (“pi ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Open-world generalization represents one of the biggest open problems in physical intelligence, and scalable learning systems offer a path to enable such generalization, as they have in domains ...
+- A person can draw on a lifetime of experience to synthesize appropriate solutions to each of these challenges.
+- Our central contribution is a system for training a highly generalizable VLA, π0.5 , together with a proof of concept that generalization can emerge from this model when ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Our central contribution is a system for training a highly generalizable VLA, π0.5 , together with a proof of concept that generalization can emerge from this model when ...
+- We provide a detailed empirical evaluation of both π0.5 ’s generalization capabilities and the relevance of different co-training ingredients.
+- We leverage this observation to design a co-training framework for VLAs that can utilize heterogeneous and diverse knowledge sources to enable broad generalization, creating the π0.5 model (“pi ...
+- How can we structure a training recipe for a robotic learning system that can enable this kind of flexible generalization?
+- The robot is tasked with cleaning a kitchen in a home that was not in the training data.

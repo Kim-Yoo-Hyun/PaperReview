@@ -3,32 +3,32 @@
 - Year/Venue: 2021 / NeurIPS
 - Category: Foundations: RL and Imitation Learning
 - Tags: Reinforcement Learning, Transformer, policy
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2106.01345
-- PDF status: downloaded
-- GitHub/Project: https://github.com/kzl/decision-transformer
+- Paper link: ./2021/NeurIPS/2021_NeurIPS_Decision-Transformer-Reinforcement-Learning-via-Sequence-M/paper.pdf
+- Code/Project: https://github.com/kzl/decision-transformer
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- We introduce a framework that abstracts Reinforcement Learning (RL) as a sequence modeling problem.
+- In particular, we present Decision Transformer, an architecture that casts the problem of RL as conditional sequence modeling.
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- 3 Motivated by this observation, we propose Decision Transformer, where we use the GPT architecture to autoregressively model trajectories (shown in Figure 1).
+- In this work, we use the GPT architecture , which modifies the transformer architecture with a causal selfattention mask to enable autoregressive generation, replacing the summation/softmax over the ...
 
 ## Input / Output
-Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `RL and imitation learning for policies`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- By conditioning an autoregressive model on the desired return (reward), past states, and actions, our Decision Transformer model can generate future actions that achieve the desired return.
+- Despite its simplicity, Decision Transformer matches or exceeds the performance of state-of-the-art model-free offline RL baselines on Atari, OpenAI Gym, and Key-to-Door tasks. a a linear decoder ... ...
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- RL and imitation learning for policies 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Reinforcement Learning, Transformer, policy.
+- In particular, we present Decision Transformer, an architecture that casts the problem of RL as conditional sequence modeling.
+- Despite its simplicity, Decision Transformer matches or exceeds the performance of state-of-the-art model-free offline RL baselines on Atari, OpenAI Gym, and Key-to-Door tasks. a a linear decoder ... ...
+- Tokens are fed into a GPT architecture which predicts actions autoregressively using a causal self-attention mask.
+
+## Abstract Cue
+- We introduce a framework that abstracts Reinforcement Learning (RL) as a sequence modeling problem.

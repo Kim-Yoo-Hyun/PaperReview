@@ -3,32 +3,33 @@
 - Year/Venue: 2025 / CVPR
 - Category: 3D Vision-Language Grounding
 - Tags: 3D visual grounding, zero-shot, open-vocabulary
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2025/html/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified from primary page
+- Paper link: ./2025/CVPR/2025_CVPR_SeeGround-See-and-Ground-for-Zero-Shot-Open-Vocabulary-3D/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-3D semantic perception은 라벨 공간이 제한적이고 long-tail 객체/속성/affordance를 다루기 어려워 foundation model alignment가 필요하다.
+- To overcome these limitations, we introduce SeeGround, a zero-shot 3DVG framework leveraging 2D Vision-Language Models (VLMs) trained on largescale 2D data.
+- To address these limitations, we propose SeeGround, leveraging 2D Vision-Language Models (VLMs) for flexible 3DVG.
+- However, gathering large-scale 3D datasets is costly .
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We propose two modules: the Perspective Adaptation Module, which dynamically selects viewpoints for query-relevant image rendering, and the Fusion Alignment Module, which integrates 2D images with 3D spatial ...
+- To address these limitations, we propose SeeGround, leveraging 2D Vision-Language Models (VLMs) for flexible 3DVG.
 
 ## Input / Output
-Input: 3D scene representation plus free-form natural language. Output: target object, 3D box, mask, or referring expression result.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `open-vocabulary 3D semantic understanding`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive experiments on ScanRefer and Nr3D demonstrate that our approach outperforms existing 1.
+- Notably, we exceed weakly supervised methods and rival some fully supervised ones, outperforming previous SOTA by 7.7% on ScanRefer and 7.1% on Nr3D, showcasing its effectiveness in complex ...
 
 ## Limitation
-2D foundation model에서 온 semantic feature가 3D geometry와 완벽히 정렬되지 않으며, long-tail 관계/속성 평가는 여전히 어렵다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- open-vocabulary 3D semantic understanding 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D visual grounding, zero-shot, open-vocabulary.
+- Extensive experiments on ScanRefer and Nr3D demonstrate that our approach outperforms existing 1.
+- To address these limitations, we propose SeeGround, leveraging 2D Vision-Language Models (VLMs) for flexible 3DVG.
+- To overcome these limitations, we introduce SeeGround, a zero-shot 3DVG framework leveraging 2D Vision-Language Models (VLMs) trained on largescale 2D data.
+
+## Abstract Cue
+- zero-shot methods by large margins.

@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: 3D Scene Graphs and Graph Reasoning
+- Tags: 3D Vision, Graph Reasoning
+- Paper link: ./2024/ECCV/2024_ECCV_Heterogeneous-Graph-Learning-for-Scene-Graph-Prediction-in/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Specifically, our method consists of two stages: a heterogeneous graph structure learning (HGSL) stage and a heterogeneous graph reasoning (HGR) stage.
+- We propose a novel framework named 3D Heterogeneous Scene Graph Prediction (3D-HetSGP).
+- In this paper, we propose a 3D Heterogeneous Scene Graph Prediction (3D-HetSGP) framework, which performs graph reasoning on the 3D scene graph in a heterogeneous fashion.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Although remarkable progress has been made in recent years, 3D SGP remains highly challenging as 1) 3D point cloud data is typically sparse and irregular in spatial dimension.
+- Extensive experiments show that our method achieves comparable or superior performance to existing methods on 3DSSG dataset.
+- Specifically, our method consists of two stages: a heterogeneous graph structure learning (HGSL) stage and a heterogeneous graph reasoning (HGR) stage.
 
 ## 핵심 방법론
-- Task family: structured 3D scene graph reasoning
-- Representation: 3D Vision, Graph Reasoning
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We propose a novel framework named 3D Heterogeneous Scene Graph Prediction (3D-HetSGP).
+- The training objective for mapping a 3D scene from point clouds to a scene graph is to maximize the joint probability: \label {joint_P} P(\mathcal {G}, \mathcal {T}|D)= P(\mathcal ...
+- We use a directed heterogeneous graph G = (V, E, TE ) to represent our 3D scene graph, where the nodes V consist of the objects O, the ...
+- Our framework consists of two stages.

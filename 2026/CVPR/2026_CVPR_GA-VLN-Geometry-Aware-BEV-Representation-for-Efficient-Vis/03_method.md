@@ -1,18 +1,19 @@
 # Method
 
-## Brief Method
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: Navigation and Embodied AI
+- Tags: Vision-Language Navigation, geometry, BEV
+- Paper link: ./2026/CVPR/2026_CVPR_GA-VLN-Geometry-Aware-BEV-Representation-for-Efficient-Vis/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To address these issues, we introduce the Geometry-Aware BEV (GABEV) – a compact, 3D-grounded feature representation that integrates both explicit and implicit geometric cues into multimodal large language ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Despite significant progress in Vision-Language Navigation (VLN), existing approaches still rely on dense RGB videos that produce excessive patch tokens and lack explicit spatial structure, resulting in substantial ...
+- To address these issues, we introduce the Geometry-Aware BEV (GABEV) – a compact, 3D-grounded feature representation that integrates both explicit and implicit geometric cues into multimodal large language ...
 
 ## 핵심 방법론
-- Task family: embodied navigation and spatial planning
-- Representation: geometry
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- This setup directly mirrors the ablation study in Table 2, allowing for a fair comparison of our method across different data scales.
+- Crucially, the consistent relative improvements observed both with the SRDF dataset (Table 2) and without it (Table 3) confirm that GA-VLN provides a robust spatial inductive bias that ...

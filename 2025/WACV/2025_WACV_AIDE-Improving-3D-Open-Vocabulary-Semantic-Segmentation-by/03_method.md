@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / WACV
+- Category: Open-Vocabulary 3D Mapping
+- Tags: open-vocabulary, semantic, alignment
+- Paper link: ./2025/WACV/2025_WACV_AIDE-Improving-3D-Open-Vocabulary-Semantic-Segmentation-by/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In this paper, to address these issues and improve generalization performance, we propose an AlIgned 3D Open-Vocabulary S Emantic Segmentation framework, called A I D E, with two ...
+- Quantative Results In this part, we present the results on ScanNet, S3DIS, and nuScenes in Tabs.
+- Ablation Studies In this part, we present the ablation studies on the effects of two proposed modules (Tab.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Due to the lack of large-scale 3D-vision-language segmentation data, instead of training models from scratch, the current solutions distill knowledge from pre-trained 2D vision-language models (VLMs) into 3D ...
+- Moreover, as 2D VLMs are trained on 2D datasets, text encoders of VLMs, which serve as the bridge between 3D models and an unbounded set of categories, lack ...
+- In this paper, to address these issues and improve generalization performance, we propose an AlIgned 3D Open-Vocabulary S Emantic Segmentation framework, called A I D E, with two ...
 
 ## 핵심 방법론
-- Task family: open-vocabulary 3D semantic understanding
-- Representation: semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Quantative Results In this part, we present the results on ScanNet, S3DIS, and nuScenes in Tabs.
+- Ablation Studies In this part, we present the ablation studies on the effects of two proposed modules (Tab.
+- For a fair comparison, we use ViT-GPT2 as the image captioner fcap .
+- Notably, A I D E also narrows the gap with the fully supervised model, which represents the upper bound based on the backbone and training strategies.
+- Four trainable tokens are used in adapting text encoders.

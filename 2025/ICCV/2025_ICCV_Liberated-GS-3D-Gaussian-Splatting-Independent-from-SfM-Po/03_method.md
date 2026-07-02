@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Equivariance, Calibration, and Registration
+- Tags: Gaussian Splatting, geometry, point cloud, 3D Vision
+- Paper link: ./2025/ICCV/2025_ICCV_Liberated-GS-3D-Gaussian-Splatting-Independent-from-SfM-Po/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Then, we introduce a progressive segmented initialization process that leverages both local and global Gaussians to construct a coarse solution.
+- To address this limitation, we propose a novel initialization pipeline, achieving highfidelity reconstruction from dense image sequences without relying on SfM-derived point clouds.
+- Conclusion In this work, we propose Librated-GS, a novel approach that removes the dependence on accurate initial point clouds in 3DGS for novel view synthesis from a sequence ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To address this limitation, we propose a novel initialization pipeline, achieving highfidelity reconstruction from dense image sequences without relying on SfM-derived point clouds.
+- While 3DGS effectively addresses the slow rendering problem caused by radiance fields, it introduces additional input requirements.
+- Then, we introduce a progressive segmented initialization process that leverages both local and global Gaussians to construct a coarse solution.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, geometry, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Then, we introduce a progressive segmented initialization process that leverages both local and global Gaussians to construct a coarse solution.
+- Conclusion In this work, we propose Librated-GS, a novel approach that removes the dependence on accurate initial point clouds in 3DGS for novel view synthesis from a sequence ...
+- Note that our method surpasses the original 3DGS not only in areas with insufficient SfM points but also in regions with abundant points.
+- As our method does not modify the refinement stage, its runtime remains comparable to the original pipeline.
+- 6, our method recovers more details in scenes where depth estimation confidence is high (e.g., indoor scenes) and effectively mitigates artifacts and reconstruction errors caused by depth inaccuracies ...

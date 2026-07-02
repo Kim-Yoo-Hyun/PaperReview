@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / IROS
+- Category: 3D Vision-Language Grounding
+- Tags: 3D Vision
+- Paper link: ./2025/IROS/2025_IROS_SORT3D-Spatial-Object-centric-Reasoning-Toolbox-for-Zero-S/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Importantly, our method does not require text-to-3D data for training and can be applied zero-shot to unseen environments.
+- To address these challenges, we propose SORT3D, an approach that utilizes rich object attributes from 2D data and merges a heuristics-based spatial reasoning toolbox with the ability of ...
+- We introduce SORT3D, a robust, data-efficient, and deployable method for 3D referential grounding with complex view-dependent reasoning.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To address these challenges, we propose SORT3D, an approach that utilizes rich object attributes from 2D data and merges a heuristics-based spatial reasoning toolbox with the ability of ...
+- Furthermore, in the 3D domain, obtaining large amounts of natural language training data is difficult.
+- Importantly, our method does not require text-to-3D data for training and can be applied zero-shot to unseen environments.
 
 ## 핵심 방법론
-- Task family: vision-language alignment and multimodal reasoning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We introduce SORT3D, a robust, data-efficient, and deployable method for 3D referential grounding with complex view-dependent reasoning.
+- Evaluating our method in a simulated environment with real-time interactions would provide deeper insights into its effectiveness and adaptability as a system.
+- We acknowledge that limitations exist within our approach.
+- This constraint makes it challenging to fully assess the generalizability of our approach across different environments or while deployed on a system.
+- In each statement we test, SORT3D successfully grounds one or more referenced objects, demonstrating the versatility of our approach for grounding complex expressions involving spatial references and semantic ...

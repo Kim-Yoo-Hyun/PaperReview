@@ -1,15 +1,22 @@
 # Problem
 
+- Year/Venue: 2022 / ECCV
+- Category: Sensor Fusion, LiDAR, and Autonomous Driving
+- Tags: sensor fusion, 3D perception, Planning
+- Paper link: ./2022/ECCV/2022_ECCV_BEVFormer-Learning-Bird-s-Eye-View-Representation-from-Mul/paper.pdf
+- Code/Project: https://github.com/fundamentalvision/BEVFormer
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- The significant challenges are that autonomous driving is time-critical and objects in the scene change rapidly, and thus simply stacking BEV features of cross timestamps brings extra computational ...
+- Apart from the low cost for deployment, cameras own the desirable advantages to detect long-range distance objects and identify vision-based road elements (e.g., traffic lights, stoplines), compared to ...
 
 ## 해결하려는 문제
-- 연구 유형: 3D vision and embodied AI
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Our approach achieves the new state-of-the-art 56.9% in terms of NDS metric on the nuScenes test set, which is 9.0 points higher than previous best arts and on ...
+- For temporal information, we propose temporal selfattention to recurrently fuse the history BEV information.
+- We further show that BEVFormer remarkably improves the accuracy of velocity estimation and recall of objects under low visibility conditions.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `sensor fusion, 3D perception, Planning` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- The significant challenges are that autonomous driving is time-critical and objects in the scene change rapidly, and thus simply stacking BEV features of cross timestamps brings extra computational ...
+- However, the existing state-of-the-art multi-camera 3D detection methods rarely exploit temporal information.
+- Our main contributions are as follows: • We propose BEVFormer, a spatiotemporal transformer encoder that projects multi-camera and/or timestamp input to BEV representations.

@@ -3,32 +3,34 @@
 - Year/Venue: 2024 / CVPR
 - Category: 3D Generative Modeling and Diffusion
 - Tags: Diffusion, Generation, 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2024/CVPR/2024_CVPR_3DiffTection-3D-Object-Detection-with-Geometry-Aware-Diffu/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-생성 모델 또는 policy 모델이 3D 구조와 물리 제약을 보존하지 못하면 로봇 실행이나 3D 장면 생성에서 일관성이 깨진다.
+- Introduction Detecting objects in 3D from a single image presents a significant challenge in computer vision, involving not only object recognition and localization but also depth and orientation ...
+- However, these models often lack 3D awareness and exhibit a domain gap in 3D applications.
+- Training a 3D detector from scratch is resource-intensive due to the high labeling costs .
 
 ## Core Idea
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We further compare our approach to NeRF-Det-R50 and ImVoxelNet , both of which utilize multi-view images during training (indicated in Tab.
+- While these methods typically require more images during training, we use them for single-image 3D object detection during testing.
 
 ## Input / Output
-Input: one or more images/RGB-D/LiDAR observations. Output: depth, camera pose, point map, dense reconstruction, or consistent map.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `diffusion-based generation or policy learning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Furthermore, 3DiffTection demonstrates robust label efficiency and generalizes well to cross-domain data, nearly matching fully-supervised models in zero-shot scenarios.
+- Efforts in novel view synthesis using diffusion models have shown promise .
+- In 3D detection, 3DiffTection substantially surpasses previous benchmarks, e.g., Cube-RCNN, by 9.43% in AP3D on the Omni3D-ARkitscene dataset.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- diffusion-based generation or policy learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Diffusion, Generation, 3D Vision.
+- Addressing the resourceintensive nature of annotating large-scale 3D image data, our approach leverages pretrained diffusion models, traditionally used for 2D tasks, and adapts them for 3D detection through ...
+- Through our methodology, we obtain 3Daware features that excel in identifying cross-view point correspondences.
+- Training a 3D detector from scratch is resource-intensive due to the high labeling costs .
+
+## Abstract Cue
+- 3DiffTection introduces a novel method for 3D object detection from single images, utilizing a 3D-aware diffusion model for feature extraction.

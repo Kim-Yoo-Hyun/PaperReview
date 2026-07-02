@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2025 / NeurIPS Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Robotics, 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_DynaRend-Learning-3D-Dynamics-via-Masked-Future-Rendering/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this paper, we present DynaRend, a representation learning framework that learns 3D-aware and dynamics-informed triplane features via masked reconstruction and future prediction using ...
+## Brief Method
+- In this section, we present the proposed DynaRend in detail.
+- In this paper, we present DynaRend, a representation learning framework that learns 3D-aware and dynamics-informed triplane features via masked reconstruction and future prediction using differentiable volumetric rendering.
+- Given feature volumes, we leverage differentiable volumetric rendering to learn a reconstructive model and a predictive model for pretraining, detailed in Sec.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Despite the promise of end-to-end approaches for generalizable robotic control, the lack of abundant, diverse and high-quality robot data remains a key bottleneck.
+- To address this, we leverage pretrained visual-conditioned generative models to augment target views by synthesizing novel views from existing views, reducing reliance on dense camera setups and enhancing ...
+- In this section, we present the proposed DynaRend in detail.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- In this section, we present the proposed DynaRend in detail.
+- Given feature volumes, we leverage differentiable volumetric rendering to learn a reconstructive model and a predictive model for pretraining, detailed in Sec.

@@ -1,18 +1,20 @@
 # Method
 
-## Brief Method
-핵심은 radiance field의 공간 좌표/뷰 의존 표현에 CLIP/VLM feature를 결합해 3D 위치에서 언어적 의미를 조회할 수 있게 하는 것이다.
+- Year/Venue: 2023 / RSS
+- Category: Open-Vocabulary 3D Mapping
+- Tags: CLIP, Robotics, semantic, NeRF
+- Paper link: ./2023/RSS/2023_RSS_CLIP-Fields-Weakly-Supervised-Semantic-Fields-for-Robotic/paper.pdf
+- Code/Project: https://mahis.life/clip-fields/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- —We propose CLIP-Fields, an implicit scene model that can be used for a variety of tasks, such as segmentation, instance identification, semantic search over space, and view localization.
+- As a solution, we propose CLIP-Fields, which builds an implicit spatial semantic memory using webscale pretrained models as weak supervision.
+- In this work, we introduce a method for building weakly supervised semantic neura
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, existing representations are coarse, often relying on a preset list of classes and capturing minimal semantics .
+- —We propose CLIP-Fields, an implicit scene model that can be used for a variety of tasks, such as segmentation, instance identification, semantic search over space, and view localization.
 
 ## 핵심 방법론
-- Task family: language-aware neural radiance field representation
-- Representation: semantic, NeRF
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

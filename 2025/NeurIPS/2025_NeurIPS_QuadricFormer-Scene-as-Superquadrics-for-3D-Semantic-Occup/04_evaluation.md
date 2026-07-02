@@ -1,26 +1,32 @@
 # Evaluation
 
-## Dataset
-Replica, OXE, nuScenes, KITTI, ImageNet
+- Year/Venue: 2025 / NeurIPS poster
+- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_QuadricFormer-Scene-as-Superquadrics-for-3D-Semantic-Occup/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `open-vocabulary 3D semantic understanding`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- ImageNet
+- KITTI
+- nuScenes
 
 ## Metrics
-mIoU, AP, mAP, open-vocabulary accuracy, long-tail performance, IoU, SR, SPL
+- accuracy
+- mIoU
+- IoU
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Our method achieves state-of-the-art performance.
+- Our method achieves comparable performance to GaussianFormer-2 with much fewer primitives.
+- In our experiments, we use the RGB images from the left perspective camera of the ego vehicle as model input.
+- The annotated voxel grid extends from 6 ■ vegetation ■ manmade ■ terrain ■ sidewalk ■ other flat ■ drive. suf. ■ truck ■ trailer ■ traffic cone ...
+- Extensive experiments on the nuScenes and KITTI-360 datasets demonstrate that QuadricFormer achieves state-of-the-art performance while maintaining superior efficiency.
+- Our method achieves state-of-the-art performance.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: Extensive experiments on the nuScenes and KITTI-360 datasets demonstrate that QuadricFormer achieves state-of-the-art performance while maintaining superior efficiency.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- Our method achieves state-of-the-art performance.
 
 ## Reproducibility Notes
-- Code/Project: not identified
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

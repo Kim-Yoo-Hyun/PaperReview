@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2026 / ICML
+- Category: 3D Generative Modeling and Diffusion
+- Tags: Diffusion, Generation, depth, point cloud, 3D Vision
+- Paper link: ./2026/ICML/2026_ICML_PointDiT-Pixel-Space-Diffusion-for-Monocular-Geometry-Esti/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We introduce a minimalist pixel-space Diffusion Transformer built on a plain ViT, which operates directly on raw 3D point map patches and is conditioned ...
+## Brief Method
+- We introduce a minimalist pixel-space Diffusion Transformer built on a plain ViT, which operates directly on raw 3D point map patches and is conditioned on image tokens from ...
+- State-of-the-art single-image 3D reconstruction methods often rely on complex hybrid architectures and loss functions (e.g., MoGe), or necessitate compressing geometry into latent spaces (e.g., GeometryCrafter) to leverage pre-trained ...
+- These methods often rely on complex hybrid architectures (Wang et al., Relp ↓ δ1p ↑ Reld ↓ δ1d ↑ BF1 ↑ Param Time (M) (ms) GeometryCrafter Depth Pro ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Existing approaches to this challenge can be broadly categorized into two distinct groups.
+- However, remains an ill-posed problem due to the fundamental scale and depth ambiguities of perspective projection.
+- We introduce a minimalist pixel-space Diffusion Transformer built on a plain ViT, which operates directly on raw 3D point map patches and is conditioned on image tokens from ...
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Relp ↓ δ1p ↑ Reld ↓ δ1d ↑ BF1 ↑ Param Time (M) (ms) GeometryCrafter Depth Pro UniDepthV2 MoGe MoGe-2 5.45 5.71 4.45 4.21 4.53 96.75 96.71 97.35 ...

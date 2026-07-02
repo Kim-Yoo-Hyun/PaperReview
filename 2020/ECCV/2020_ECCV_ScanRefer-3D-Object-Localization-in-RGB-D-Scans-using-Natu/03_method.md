@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2020 / ECCV
+- Category: 3D Vision-Language Grounding
+- Tags: 3D visual grounding, RGB-D, semantic
+- Paper link: ./2020/ECCV/2020_ECCV_ScanRefer-3D-Object-Localization-in-RGB-D-Scans-using-Natu/paper.pdf
+- Code/Project: https://daveredrum.github.io/ScanRefer/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Our architecture consists of two main modules: 1) detection & encoding; 2) fusion & localization (Fig.
+- To address this task, we propose ScanRefer, learning a fused descriptor from 3D object proposals and encoded sentence embeddings.
+- We introduce the task of 3D object localization in RGB-D scans using natural language descriptions.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- In recent years, there has been tremendous progress in both semantic understanding and localization of objects in 2D images from natural language (also known as visual grounding).
+- Datasets such as ReferIt , RefCOCO , and
+- Our architecture consists of two main modules: 1) detection & encoding; 2) fusion & localization (Fig.
 
 ## 핵심 방법론
-- Task family: open-vocabulary 3D semantic understanding
-- Representation: 3D visual grounding, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Our architecture consists of two main modules: 1) detection & encoding; 2) fusion & localization (Fig.

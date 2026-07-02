@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Gaussian Splatting, open-vocabulary, efficiency
+- Paper link: ./2026/CVPR/2026_CVPR_LightSplat-Fast-and-Memory-Efficient-Open-Vocabulary-3D-Sc/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To address this, we propose LightSplat, a fast and memory-efficient training-free framework that injects compact 2-byte semantic indices into 3D representations from multi-view images.
+- To enable efficient language-to-3D alignment, 3D Gaussian Splatting (3DGS) provides an explicit representation with real-time rendering.
+- OpenGaussian Dr.Splat mIoU LightSplat (Ours) LUDVIG LEGaussians LangSplat Time (s) Figure 1.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, existing approaches remain slow, memory-intensive, and overly complex due to iterative optimization and dense per-Gaussian feature assignments.
+- Despite recent advances, existing methods still suffer from three major
+- To address this, we propose LightSplat, a fast and memory-efficient training-free framework that injects compact 2-byte semantic indices into 3D representations from multi-view images.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- LangSplat LEGaussians OpenGaussian LUDVIG Dr.Splat Ours Waldo Ramen mIoU Figurines Teatime Mean Waldo Ramen 9.61 17.21 30.96 28.08 39.07 34.95 3.49 14.15 24.02 29.33 24.70 45.07 9.64 16.40 ...

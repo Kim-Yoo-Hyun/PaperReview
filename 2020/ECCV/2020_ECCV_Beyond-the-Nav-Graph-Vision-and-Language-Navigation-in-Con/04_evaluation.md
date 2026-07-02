@@ -1,26 +1,35 @@
 # Evaluation
 
-## Dataset
-Matterport3D, Habitat, R2R, VLN-CE, ImageNet
+- Year/Venue: 2020 / ECCV
+- Category: Navigation and Embodied AI
+- Tags: Vision-Language Navigation, Robotics, Navigation, Benchmark
+- Paper link: ./2020/ECCV/2020_ECCV_Beyond-the-Nav-Graph-Vision-and-Language-Navigation-in-Con/paper.pdf
+- Code/Project: https://jacobkrantz.github.io/vlnce/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `structured 3D scene graph reasoning`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- ImageNet
+- Matterport3D
+- Habitat
+- R2R
+- VLN-CE
 
 ## Metrics
-Recall@K, mean Recall@K, relationship accuracy, zero-shot relation accuracy, IoU, AP, mAP, success rate
+- mAP
+- SPL
+- SR
+- nDTW
+- success rate
+- collision
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- To establish context for our results, we consider random and hand-crafted agents shown in Tab.
+- We train and evaluate our models in VLN-CE.
+- To establish context for our results, we consider random and hand-crafted agents shown in Tab.
+- We train and evaluate our models in VLN-CE.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- 5.1 Establishing Baseline Performance for VLN-CE No-Learning Baselines.
 
 ## Reproducibility Notes
-- Code/Project: https://jacobkrantz.github.io/vlnce/
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

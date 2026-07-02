@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Large Multimodal Models
+- Tags: Vision-Language Model
+- Paper link: ./2025/ICCV/2025_ICCV_Egocentric-Action-aware-Inertial-Localization-in-Point-Clo/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- The learned encoders are then used in reasoning the IMU data and the point cloud over time and space to perform inertial localization.
+- Interestingly, these encoders can further be utilized to recognize the corresponding sequence of actions as a by-product.
+- By assuming that the 3D point cloud of the environment is available, it contrastively learns modality encoders that align short-term egocentric action cues in IMU signals with local ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Localization: Acceleration This paper presents a novel inertial localization framework named Egocentric Action-aware Inertial Localization (EAIL), which leverages egocentric action cues from headmounted IMU signals to localize the ...
+- Human inertial localization is challenging due to IMU sensor noise that causes trajectory drift over time.
+- The learned encoders are then used in reasoning the IMU data and the point cloud over time and space to perform inertial localization.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 0.4m 0.6m RS 0.2m 0.4m 0.6m RS MnasNet 2.95 7.57 12.75 / 2.16 5.45 9.86 / EfficientNet 3.10 7.77 12.71 / 2.54 6.68 10.84 / IMUNet 3.74 10.15 ...
+- Inertial Action Recognition Results.
+- We evaluate performance using top1 and top5 accuracy metrics.
+- Higher values indicate better performance.
+- EfficientNet IMUNet MnasNet RoNIN NiLoc+ Ours 2.5 2.0 1.5 Method 0.0 0 2 4

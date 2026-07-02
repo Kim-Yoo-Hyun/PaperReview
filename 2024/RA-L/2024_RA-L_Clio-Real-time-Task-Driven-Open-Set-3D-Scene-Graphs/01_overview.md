@@ -3,32 +3,32 @@
 - Year/Venue: 2024 / RA-L
 - Category: 3D Scene Graphs and Graph Reasoning
 - Tags: 3D Vision, Graph Reasoning
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2404.13696
-- PDF status: downloaded
-- GitHub/Project: https://github.com/MIT-SPARK/Clio
+- Paper link: ./2024/RA-L/2024_RA-L_Clio-Real-time-Task-Driven-Open-Set-3D-Scene-Graphs/paper.pdf
+- Code/Project: https://github.com/MIT-SPARK/Clio
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-3D scene graph는 객체와 관계를 구조화하지만 closed vocabulary, annotation cost, geometric relation ambiguity 때문에 실제 로봇 질의에 확장하기 어렵다.
+- The first contribution of this paper is to propose a task-driven 3D scene understanding problem, where the robot is given a list of tasks in natural language, and ...
+- We show that this problem can be naturally formulated using the Information Bottleneck (IB), an established information-theoretic framework to discuss task-relevance.
 
 ## Core Idea
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We use the precision and recall metrics presented in to assess the geometric accuracy of the predicted rooms of our proposed CLIP embedding vector association strategy, Clio (average).
+- We do not analyze the Cubicle or Replica as they only consists of a single room.
 
 ## Input / Output
-Input/Output follows the paper task formulation; see PDF for the exact interface.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `structured 3D scene graph reasoning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Our final contribution is an extensive experimental campaign showing that Clio not only allows real-time construction of compact open-set 3D scene graphs, but also improves the accuracy of ...
+- We show that this problem can be naturally formulated using the Information Bottleneck (IB), an established information-theoretic framework to discuss task-relevance.
 
 ## Limitation
-2D foundation model에서 온 semantic feature가 3D geometry와 완벽히 정렬되지 않으며, long-tail 관계/속성 평가는 여전히 어렵다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- structured 3D scene graph reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D Vision, Graph Reasoning.
+- We show that this problem can be naturally formulated using the Information Bottleneck (IB), an established information-theoretic framework to discuss task-relevance.
+- Our final contribution is an extensive experimental campaign showing that Clio not only allows real-time construction of compact open-set 3D scene graphs, but also improves the accuracy of ...
+- The first contribution of this paper is to propose a task-driven 3D scene understanding problem, where the robot is given a list of tasks in natural language, and ...
+
+## Abstract Cue
+- —Modern tools for class-agnostic image segmentation (e.g., SegmentAnything) and open-set semantic understanding (e.g., CLIP) provide unprecedented opportunities for robot perception and mapping.

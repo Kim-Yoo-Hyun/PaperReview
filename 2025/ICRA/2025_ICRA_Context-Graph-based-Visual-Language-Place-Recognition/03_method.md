@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2025 / ICRA
+- Category: 3D Large Multimodal Models
+- Tags: Graph Reasoning
+- Paper link: ./2025/ICRA/2025_ICRA_Context-Graph-based-Visual-Language-Place-Recognition/paper.pdf
+- Code/Project: not identified from venue audit
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this paper, we introduce a novel VPR approach that remains robust to scene changes and does not require additional training.
+## Brief Method
+- In this paper, we introduce a novel VPR approach that remains robust to scene changes and does not require additional training.
+- Additionally, our approach does not require additional training by utilizing pre-trained weights and enables an understanding of image context by considering the relationship between segmentation regions.
+- This vocabulary is then used to recognize the revisited locations. • Context graph: We propose the Context Graph concept, which helps understand the context within an image and ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, these approaches still fail under drastic changes and require large amounts of labeled data to train models, presenting a significant limitation.
+- This paper addresses the problem of VPR, which involves accurately recognizing the location corresponding to a given query image.
+- In this paper, we introduce a novel VPR approach that remains robust to scene changes and does not require additional training.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: Graph Reasoning
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Additionally, our approach does not require additional training by utilizing pre-trained weights and enables an understanding of image context by considering the relationship between segmentation regions.
+- This vocabulary is then used to recognize the revisited locations. • Context graph: We propose the Context Graph concept, which helps understand the context within an image and ...
+- In this paper, we propose a novel VPR methodology that leverages high-level semantic information to achieve robustness against environmental changes.
+- The main contributions of this paper are as follows: • Visual-language vocabulary-based place recognition system: We introduce the concept of Visual-Language Vocabulary to generate a vocabulary using pixel-level ...
+- The de facto standard architecture for end-to-end CNN models for place recognition is NetVLAD .

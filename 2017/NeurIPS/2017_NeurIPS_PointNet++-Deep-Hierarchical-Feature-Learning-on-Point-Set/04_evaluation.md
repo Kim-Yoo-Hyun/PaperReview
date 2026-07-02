@@ -1,26 +1,29 @@
 # Evaluation
 
-## Dataset
-ScanNet, OXE, ShapeNet, ImageNet
+- Year/Venue: 2017 / NeurIPS
+- Category: Foundations: 3D Geometry and Point Clouds
+- Tags: 3D geometry, point cloud, representation
+- Paper link: ./2017/NeurIPS/2017_NeurIPS_PointNet++-Deep-Hierarchical-Feature-Learning-on-Point-Set/paper.pdf
+- Code/Project: https://github.com/charlesq34/pointnet2
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `core 3D geometry and scene representation learning`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- ScanNet
+- ModelNet40
 
 ## Metrics
-PSNR, SSIM, LPIPS, ATE, RPE, Chamfer, F-score, pose AUC
+- accuracy
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Firstly, our hierarchical learning architecture achieves significantly better performance than the non-hierarchical PointNet .
+- We use a three-level hierarchical network with three fully connected layers 1 Results.
+- Datasets We evaluate on four datasets ranging from 2D objects (MNIST ), 3D objects (ModelNet40 rigid object, SHREC15 non-rigid object) to real 3D scenes (ScanNet ).
+- 4.1 Point Set Classification in Euclidean Metric Space We evaluate our network on classifying point clouds sampled from both 2D (MNIST) and 3D (ModleNet40) Euclidean spaces.
+- In particular, results significantly better than state-of-the-art have been obtained on challenging benchmarks of 3D point clouds.
+- Firstly, our hierarchical learning architecture achieves significantly better performance than the non-hierarchical PointNet .
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- In Table 1 and Table 2, we compare our method with a representative set of previous state of the arts.
 
 ## Reproducibility Notes
-- Code/Project: https://github.com/charlesq34/pointnet2
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

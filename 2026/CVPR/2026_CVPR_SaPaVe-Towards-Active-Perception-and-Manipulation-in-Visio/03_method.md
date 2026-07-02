@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, active perception, Robotics
+- Paper link: ./2026/CVPR/2026_CVPR_SaPaVe-Towards-Active-Perception-and-Manipulation-in-Visio/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We compare our method against several strong baselines: (1) In the first experiment, we compare our model with current powerful VLM, including the general models (e.g., Qwen2.5-VL-72B , ...
+- To this end, we propose SaPaVe, an end-to-end framework that jointly learns these capabilities in a data-efficient manner.
+- To support this, we introduce ActiveViewPose-200K, comprising 200k image-language-camera movement pairs for semantic camera movement learning, and a 3D geometry-aware module that improves execution robustness under dynamic viewpoints.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Existing methods struggle to unify semantic-driven perception actively with robust, viewpoint-invariant execution accordingly.
+- We compare our method against several strong baselines: (1) In the first experiment, we compare our model with current powerful VLM, including the general models (e.g., Qwen2.5-VL-72B , ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We compare our method against several strong baselines: (1) In the first experiment, we compare our model with current powerful VLM, including the general models (e.g., Qwen2.5-VL-72B , ...
+- We use our model but keep the head camera fixed. (b) Fixed Camera + Wrist Camera: We again use our model with a fixed head camera and introduce ...
+- We report the success rate (%) compare to different camera configurations with the same architecture.
+- 4.3)? (3) Compared to existing VLA models, how does our model architecture enhance active manipulation capabilities (Sec.
+- This is because the generalist VLMs struggle to translate abstract instructions into precise camera poses, whereas our specialized training yields a much more accurate and robust perception policy.

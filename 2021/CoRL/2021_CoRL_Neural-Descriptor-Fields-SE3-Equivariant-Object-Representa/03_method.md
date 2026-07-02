@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2021 / CoRL
+- Category: Equivariance, Diffusion, and 3D Action
+- Tags: Robotics, equivariant, 3D geometry, manipulation
+- Paper link: ./2021/CoRL/2021_CoRL_Neural-Descriptor-Fields-SE3-Equivariant-Object-Representa/paper.pdf
+- Code/Project: https://github.com/anthonysimeonov/ndf_robot
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose to achieve this objective by searching (via optimization) for the pose whose descriptor matches that observed in the demonstration.
+- — We present Neural Descriptor Fields (NDFs), an object representation that encodes both points and relative poses between an object and a target (such as a robot gripper ...
+- In particular, we desire to construct a system which can manipulate objects from the same category into target configurations, irrespective of the object’s 3D location and orientation (see ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- — We present Neural Descriptor Fields (NDFs), an object representation that encodes both points and relative poses between an object and a target (such as a robot gripper ...
+- We employ this representation for object manipulation, where given a task demonstration, we want to repeat the same task on a new object instance from the same category.
+- We propose to achieve this objective by searching (via optimization) for the pose whose descriptor matches that observed in the demonstration.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: 3D geometry
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

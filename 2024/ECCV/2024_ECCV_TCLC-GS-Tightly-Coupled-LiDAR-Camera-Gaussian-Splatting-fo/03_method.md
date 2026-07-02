@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Gaussian Splatting
+- Paper link: ./2024/ECCV/2024_ECCV_TCLC-GS-Tightly-Coupled-LiDAR-Camera-Gaussian-Splatting-fo/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Comprehensive evaluations conducted on the Waymo Open Dataset and nuScenes Dataset validate our method’s stateof-the-art (SOTA) performance.
+- During the information as supervision, which enhances the training process by learning of a robust geometry.
+- In this paper, we design a novel tightly coupled LiDAR-Camera Gaussian Splatting (TCLC-GS) to fully leverage the combined strengths of both LiDAR and camera sensors, enabling rapid, high-quality ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Urban-level reconstruction and rendering present significant challenges due to the vast scale of the unbounded environments and the sparse nature of the captured data.
+- Comprehensive evaluations conducted on the Waymo Open Dataset and nuScenes Dataset validate our method’s stateof-the-art (SOTA) performance.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- NeRF NeRF-W Instant-NGP Point-NeRF NPLF Mip-NeRF Mip-NeRF 360 DNMP 3D-GS TCLC-GS PSNR↑ SSIM↑ LPIPS↓ 26.24 0.87 0.47 26.92 0.89 0.42 26.77 0.88 0.40 26.26 0.87 0.45 25.62 0.88 ...
+- Method TCLC-GS w/o 3D mesh TCLC-GS w/o colorized 3D mesh TCLC-GS w/o octree implicit feature TCLC-GS w/o dense depth supervision TCLC-GS full PSNR↑ 26.36 27.61 27.81 27.96 28.11 ...

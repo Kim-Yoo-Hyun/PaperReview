@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: Navigation and Embodied AI
+- Tags: 3D Vision, Navigation, Gaussian Splatting
+- Paper link: ./2025/ICCV/2025_ICCV_IGL-Nav-Incremental-3D-Gaussian-Localization-for-Image-goa/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework for efficient and 3D-aware image-goal navigation.
+- We use the rendering-based stopper to determine if the target appears in agent’s field of view.
+- Since some methods only release test code, we perform zeroshot transfer to apply them to the new setting without retraining.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Horizontal View 0.88 m 3DGS Rendering Robotic Setup Visual navigation with an image as goal is a fundamental and challenging problem.
+- The proposed IGL-Nav outperforms existing state-of-the-art methods by a large margin across diverse experimental configurations.
+- To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework for efficient and 3D-aware image-goal navigation.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: 3D Vision, Gaussian Splatting
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We use the rendering-based stopper to determine if the target appears in agent’s field of view.
+- Since some methods only release test code, we perform zeroshot transfer to apply them to the new setting without retraining.
+- For methods that provide training scripts, we train them on the free-view image-goal navigation data for comparison. the scene and discover potential targets.

@@ -1,20 +1,36 @@
 # Insights
 
-## Limitation
-2D foundation model에서 온 semantic feature가 3D geometry와 완벽히 정렬되지 않으며, long-tail 관계/속성 평가는 여전히 어렵다.
+## 이 논문에서 가져갈 핵심 개념
+- 핵심 방법 단서: We develop a language-guided navigation task set in a continuous 3D environment where agents must execute low-level actions to follow natural language navigation directions.
+- 출발 문제 단서: This paradigm enables efficient data collection and high visual fidelity compared to 3D scanning or creating synthetic environments; however, scenes are only observed from a sparse set of ...
+- 주장된 효과 단서: To establish context for our results, we consider random and hand-crafted agents shown in Tab.
 
-## Strength
-- `structured 3D scene graph reasoning` 문제를 3D geometry와 language/action prior를 함께 쓰는 방향으로 밀어붙인다.
-- 사용자의 연구 키워드 중 `Vision-Language Navigation, Robotics, Navigation, Benchmark`와 직접적으로 연결된다.
+## 내 연구 방향에서 어떻게 활용할 수 있나
+- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
+- Language/semantic goal을 metric 3D map, BEV, scene graph, frontier/map memory와 연결해 navigation state representation으로 사용할 수 있다.
+- Navigation의 핵심 병목을 visual-language matching만이 아니라 spatial memory, localization, graph planning 문제로 재정의할 수 있다.
 
-## Paper Claim
-- 논문의 중심 claim은 기존 2D-only, closed-set, 또는 task-specific 접근보다 더 일반화 가능한 3D-aware representation/policy/reasoning을 제공한다는 것이다.
-- Abstract result cue: 자동 추출 없음.
+## 이 논문이 끝난 지점
+- 논문이 도달한 지점: To establish context for our results, we consider random and hand-crafted agents shown in Tab.
+- 논문 내 한계/논의 단서: In models presented here, we took an approach where observations were mapped directly to low-level control in an end-to-end manner; however, exploring modular approaches is exciting future work.
+- navigation 성능을 보인 뒤에도 geometry-aware memory의 누적 오류, unseen scene transfer, semantic grounding failure는 후속 연구 지점으로 남는다.
 
-## Future Work
-- dynamic scene, partial observation, sensor noise, cross-embodiment transfer, real-time inference, safety-aware planning을 추가 검증하는 것이 중요하다.
-- 3D scene graph/semantic Gaussian/SLAM map을 VLA policy의 persistent memory로 연결하는 방향이 유망하다.
+## 다음 연구 질문
+- 3D map/scene graph/gaussian map 중 어떤 representation이 language/semantic goal following에 가장 안정적인가?
+- semantic goal grounding과 metric path planning을 분리해야 하는가, 아니면 end-to-end로 결합해야 하는가?
+- online exploration 중 잘못된 language grounding을 어떻게 감지하고 수정할 수 있는가?
 
-## 내 관점
-- 이 논문은 `Navigation and Embodied AI` 축에서 읽어야 한다.
-- 후속 연구 아이디어: language-grounded 3D memory를 만들고, robot policy가 이를 action feasibility와 uncertainty까지 포함해 조회하도록 설계한다.
+## 실험으로 확인할 방향
+- 논문 내 evaluation 단서: ImageNet, Matterport3D, Habitat, R2R, VLN-CE / mAP, SPL, SR, nDTW, success rate
+- 내 연구 확장 benchmark 후보: R2R, RxR, VLN-CE, Habitat
+- 내 연구 확장 metric 후보: SR, SPL, nDTW, collision
+- 검증 초점: instruction/semantic goal following, path efficiency, unseen environment generalization, online correction을 확인한다.
+
+## 주의할 점
+- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
+- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+
+## 근거가 되는 논문 단서
+- Problem cue: This paradigm enables efficient data collection and high visual fidelity compared to 3D scanning or creating synthetic environments; however, scenes are only observed from a sparse set of ...
+- Method cue: We develop a language-guided navigation task set in a continuous 3D environment where agents must execute low-level actions to follow natural language navigation directions.
+- Result cue: To establish context for our results, we consider random and hand-crafted agents shown in Tab.

@@ -3,32 +3,33 @@
 - Year/Venue: 2025 / WACV
 - Category: Open-Vocabulary 3D Mapping
 - Tags: open-vocabulary, semantic, alignment
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/WACV2025/html/Wang_AIDE_Improving_3D_Open-Vocabulary_Semantic_Segmentation_by_Aligned_Vision-Language_Learning_WACV_2025_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified from primary page
+- Paper link: ./2025/WACV/2025_WACV_AIDE-Improving-3D-Open-Vocabulary-Semantic-Segmentation-by/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-3D semantic perception은 라벨 공간이 제한적이고 long-tail 객체/속성/affordance를 다루기 어려워 foundation model alignment가 필요하다.
+- Due to the lack of large-scale 3D-vision-language segmentation data, instead of training models from scratch, the current solutions distill knowledge from pre-trained 2D vision-language models (VLMs) into 3D ...
+- Moreover, as 2D VLMs are trained on 2D datasets, text encoders of VLMs, which serve as the bridge between 3D models and an unbounded set of categories, lack ...
+- Due to the lack of large-scale 3D-image-text pairs, instead of training a 3D-language model from scratch, recent works propose to transfer the knowledge encoded in pretrained 2D vision-language ...
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- In this paper, to address these issues and improve generalization performance, we propose an AlIgned 3D Open-Vocabulary S Emantic Segmentation framework, called A I D E, with two ...
+- Quantative Results In this part, we present the results on ScanNet, S3DIS, and nuScenes in Tabs.
 
 ## Input / Output
-Input: image/3D observations and natural language. Output: aligned representation, answer, reasoning trace, caption, or grounded decision.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `open-vocabulary 3D semantic understanding`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive experiments show that A I D E outperforms previous methods by a large margin on three representative benchmarks, demonstrating its effectiveness.
+- In this paper, to address these issues and improve generalization performance, we propose an AlIgned 3D Open-Vocabulary S Emantic Segmentation framework, called A I D E, with two ...
 
 ## Limitation
-2D foundation model에서 온 semantic feature가 3D geometry와 완벽히 정렬되지 않으며, long-tail 관계/속성 평가는 여전히 어렵다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- open-vocabulary 3D semantic understanding 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: open-vocabulary, semantic, alignment.
+- Extensive experiments show that A I D E outperforms previous methods by a large margin on three representative benchmarks, demonstrating its effectiveness.
+- In this paper, to address these issues and improve generalization performance, we propose an AlIgned 3D Open-Vocabulary S Emantic Segmentation framework, called A I D E, with two ...
+- Due to the lack of large-scale 3D-vision-language segmentation data, instead of training models from scratch, the current solutions distill knowledge from pre-trained 2D vision-language models (VLMs) into 3D ...
+
+## Abstract Cue
+- 3D open-vocabulary semantic segmentation aims at recognizing countless categories beyond the limited set of annotations used in traditional settings.

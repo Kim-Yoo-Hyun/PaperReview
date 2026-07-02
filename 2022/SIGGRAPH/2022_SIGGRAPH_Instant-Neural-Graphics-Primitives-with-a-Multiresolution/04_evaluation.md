@@ -1,26 +1,33 @@
 # Evaluation
 
-## Dataset
-OXE
+- Year/Venue: 2022 / SIGGRAPH
+- Category: Foundations: 3D Scene Representations
+- Tags: NeRF, 3D Vision, representation, efficiency
+- Paper link: ./2022/SIGGRAPH/2022_SIGGRAPH_Instant-Neural-Graphics-Primitives-with-a-Multiresolution/paper.pdf
+- Code/Project: https://nvlabs.github.io/instant-ngp/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `core 3D geometry and scene representation learning`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Metrics
-PSNR, SSIM, LPIPS, ATE, RPE, Chamfer, F-score, pose AUC
+- accuracy
+- IoU
+- mAP
+- PSNR
+- collision
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- 2021], which achieves state-of-the-art results in both quality and speed by prefixing its small MLP with a lookup from an octree of trainable feature vectors.
+- With a similar number of parameters (𝑇 = 224 ), our method achieves the same PSNR after 2.5 minutes of training, peaking at 41.9 dB after 4 min.
+- 2021] have shown impressive results when fitting very large images—up to a billion pixels—with high fidelity at even the smallest scales.
+- For comparison, on the Tokyo panorama from Figure 1, ACORN achieves a PSNR of 38.59 dB after 36.9 h of training.
+- 2021], which achieves state-of-the-art results in both quality and speed by prefixing its small MLP with a lookup from an octree of trainable feature vectors.
+- With a similar number of parameters (𝑇 = 224 ), our method achieves the same PSNR after 2.5 minutes of training, peaking at 41.9 dB after 4 min.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- As baseline, we compare with NGLOD [Takikawa et al.
+- To highlight the versatility and high quality of the encoding, we compare it with previous encodings in four distinct computer graphics primitives that benefit from encoding spatial coordinates.
 
 ## Reproducibility Notes
-- Code/Project: https://nvlabs.github.io/instant-ngp/
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

@@ -3,32 +3,31 @@
 - Year/Venue: 2024 / CVPR
 - Category: 3D Reconstruction, Geometry, and SLAM
 - Tags: 3D reconstruction, geometry, 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2024/CVPR/2024_CVPR_Total-Decom-Decomposed-3D-Scene-Reconstruction-with-Minima/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- Scene reconstruction from multi-view images is a fundamental problem in computer vision and graphics.
 
 ## Core Idea
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- In this paper, we present Total-Decom, a novel method for decomposed 3D reconstruction with minimal human interaction.
+- Our approach seamlessly integrates the Segment Anything Model (SAM) with hybrid implicitexplicit neural surface representations and a mesh-based Chamfer-L1 ↓ F-score ↑ Chamfer-L1 ↓ F-score ↑ ObjSDF++ 3.58 ...
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D reconstruction, calibration, and geometric consistency`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Recent neural implicit surface reconstruction methods have achieved high-quality results; however, editing and manipulating the 3D geometry of reconstructed scenes remains challenging due to the absence of naturally ...
+- We present the reconstruction results for the background, foreground and decomposed objects on Replica , ScanNet , NICE-SLAM and our self-captured billiard room.
 
 ## Limitation
-강한 benchmark 성능이 실제 로봇 센서 노이즈, rolling shutter, 동적 객체, 저조도 환경까지 보장하지는 않는다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D reconstruction, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D reconstruction, geometry, 3D Vision.
+- Recent neural implicit surface reconstruction methods have achieved high-quality results; however, editing and manipulating the 3D geometry of reconstructed scenes remains challenging due to the absence of naturally ...
+- In this paper, we present Total-Decom, a novel method for decomposed 3D reconstruction with minimal human interaction.
+- Our approach seamlessly integrates the Segment Anything Model (SAM) with hybrid implicitexplicit neural surface representations and a mesh-based
+
+## Abstract Cue
+- Scene reconstruction from multi-view images is a fundamental problem in computer vision and graphics.

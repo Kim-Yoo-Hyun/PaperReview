@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Robotics, 3D Vision, Imitation Learning
+- Paper link: ./2026/ICLR/2026_ICLR_Generalizable-Coarse-to-Fine-Robot-Manipulation-via-Langua/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To enhance generalization to novel instructions and environment variations, we propose Coarse-to-fine Language-Aligned manipulation Policy (CLAP), a framework that integrates three key components: 1) ...
+## Brief Method
+- Open Drawer+2 Pick& Lift+0 Pick& Lift+2 Pick& Lift+7 PickUp Cup+8 PickUp Cup+9 PickUp Cup+11 Push Button+0 Push Button+3 Push Button+4 PutIn Cupboard+0 HiveFormer (Guhur et al., 2023) PolarNet ...
+- Push Button+13 Push Button+15 Push Button+17 Pick& Lift+14 Pick& Lift+16 Pick& Lift+18 PickUp Cup+10 PickUp Cup+12 PickUp Cup+13 HiveFormer (Guhur et al., 2023) PolarNet (Chen et al., 2023) ...
+- We evaluate the all these eight tasks acroos different variations and record the success rate.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Open Drawer+2 Pick& Lift+0 Pick& Lift+2 Pick& Lift+7 PickUp Cup+8 PickUp Cup+9 PickUp Cup+11 Push Button+0 Push Button+3 Push Button+4 PutIn Cupboard+0 HiveFormer (Guhur et al., 2023) PolarNet ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Open Drawer+2 Pick& Lift+0 Pick& Lift+2 Pick& Lift+7 PickUp Cup+8 PickUp Cup+9 PickUp Cup+11 Push Button+0 Push Button+3 Push Button+4 PutIn Cupboard+0 HiveFormer (Guhur et al., 2023) PolarNet ...
+- Push Button+13 Push Button+15 Push Button+17 Pick& Lift+14 Pick& Lift+16 Pick& Lift+18 PickUp Cup+10 PickUp Cup+12 PickUp Cup+13 HiveFormer (Guhur et al., 2023) PolarNet (Chen et al., 2023) ...
+- We evaluate the all these eight tasks acroos different variations and record the success rate.

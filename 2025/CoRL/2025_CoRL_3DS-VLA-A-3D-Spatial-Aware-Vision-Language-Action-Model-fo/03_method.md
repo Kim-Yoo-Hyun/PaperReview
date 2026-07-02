@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2025 / CoRL
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, 3D Vision, Robotics
+- Paper link: ./2025/CoRL/2025_CoRL_3DS-VLA-A-3D-Spatial-Aware-Vision-Language-Action-Model-fo/paper.pdf
+- Code/Project: https://vis-www.cs.umass.edu/3ds-vla/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address this, we propose 3DS-VLA, which enhances pretrained 2D vision-language models (VLMs) with comprehensive 3D awareness, enabling the prediction of robust end-effector poses.
+## Brief Method
+- 3.1 Task Formulation and Model Architecture Given a dataset D = {τ1 , . . . , τN } of N expert demonstrations, each demonstration τ is paired ...
+- To address this, we propose 3DS-VLA, which enhances pretrained 2D vision-language models (VLMs) with comprehensive 3D awareness, enabling the prediction of robust end-effector poses.
+- Therefore, we propose a 2D-to-3D positional alignment mechanism that allows the original 2D PEs, which are interpretable to pretrained models, to encode semantically aligned 2D and 3D tokens.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, since robots operate in a complex 3D world, they face challenges in perceiving 3D geometry and reasoning about spatial context solely from 2D image observations .
+- Yet, robotic manipulation requires intricate environmental interactions, and such methods often lack a broader understanding of the robot’s action with its surroundings in terms of spatial and temporal.
+- 3.1 Task Formulation and Model Architecture Given a dataset D = {τ1 , . . . , τN } of N expert demonstrations, each demonstration τ is paired ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 3.1 Task Formulation and Model Architecture Given a dataset D = {τ1 , . . . , τN } of N expert demonstrations, each demonstration τ is paired ...
+- Therefore, we propose a 2D-to-3D positional alignment mechanism that allows the original 2D PEs, which are interpretable to pretrained models, to encode semantically aligned 2D and 3D tokens.
+- After generating 3D keypoints, instead of directly using them as task goals , we propose a text-based formulation to integrate these constraints into the VLA model as input ...
+- To avoid introducing computational overhead, we introduce a non-parametric 3D tokenizer to transform the low-dimensional point cloud into high-dimensional 3D tokens.
+- To model spatial constraints, we use task-specific 3D keypoints corresponding to scene entities.

@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2025 / NeurIPS spotlight
+- Category: 3D Semantic Understanding and Alignment
+- Tags: 3D reconstruction, semantic, alignment, 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_SIU3R-Simultaneous-Scene-Understanding-and-3D-Reconstructi/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In light of this, we propose SIU3R, the first alignment-free framework for generalizable simultaneous understanding and 3D reconstruction from unposed images.
+## Brief Method
+- Our method consists of Image and Text Encoders for extracting multi-view and text features, Gaussian Decoder for decoding pixel-aligned 3D Gaussians, Unified Query Decoder for decoding pixel-aligned 2D ...
+- In particular, to promote understanding from reconstruction, we propose Multi-View Mask Aggregation module, which utilizes 3D geometric clues in G to aggregate semantic information from all views to ...
+- In light of this, we propose SIU3R, the first alignment-free framework for generalizable simultaneous understanding and 3D reconstruction from unposed images.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- 2) Information loss in feature compression: To efficiently embed 2D features into 3D representations and save the memory cost during feature rasterization, existing methods usually need to compress ...
+- To address the challenges outlined above, we propose SIU3R, a novel generalizable framework achieving SI MULTANEOUS U NDERSTANDING and 3D R ECONSTRUCTION beyond feature alignment (Fig.1 b).
+- Our method consists of Image and Text Encoders for extracting multi-view and text features, Gaussian Decoder for decoding pixel-aligned 3D Gaussians, Unified Query Decoder for decoding pixel-aligned 2D ...
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: 3D reconstruction, semantic, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Our method consists of Image and Text Encoders for extracting multi-view and text features, Gaussian Decoder for decoding pixel-aligned 3D Gaussians, Unified Query Decoder for decoding pixel-aligned 2D ...
+- In particular, to promote understanding from reconstruction, we propose Multi-View Mask Aggregation module, which utilizes 3D geometric clues in G to aggregate semantic information from all views to ...
+- We design our Image Encoder following ’s architecture as a Vision Transformer (ViT) enhanced with an adapter module.
+- Moreover, to improve reconstruction by understanding, we introduce Mask-Guided Geometry Refinement module that leverages 2D masks to enforce intrainstance depth continuity for refining reconstructed 3D geometry.
+- We also introduce the following loss in training to enable matching supervision: Nt Ltext = 1 X t CrossEntropy(Softmax(Attn(ftext , Q) · qn ), δngt ), Nt t=1 ...

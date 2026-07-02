@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2021 / NeurIPS
+- Category: Foundations: 3D Scene Representations
+- Tags: 3D Vision, NeRF, surface reconstruction, geometry
+- Paper link: ./2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering/paper.pdf
+- Code/Project: https://lingjie0206.github.io/papers/NeuS/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In NeuS, we propose to represent a surface as the zero-level set of a signed distance function (SDF) and develop a new volume rendering method to train a ...
+- We present a novel neural surface reconstruction method, called NeuS, for reconstructing objects and scenes with high fidelity from 2D image inputs.
+- In order to learn the weights of the neural network, we developed a novel volume rendering method to render images from the implicit SDF and minimize the difference ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Reconstructing surfaces from multi-view images is a fundamental problem in computer vision and computer graphics.
+- The cause of this limitation is that the surface rendering method used in IDR only considers a single surface intersection point for each ray.
+- In NeuS, we propose to represent a surface as the zero-level set of a signed distance function (SDF) and develop a new volume rendering method to train a ...
 
 ## 핵심 방법론
-- Task family: core 3D geometry and scene representation learning
-- Representation: 3D Vision, NeRF, geometry
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- In order to learn the weights of the neural network, we developed a novel volume rendering method to render images from the implicit SDF and minimize the difference ...
+- The surface S of the object is represented by the zero-level set of its SDF, that is, S = x ∈ R3 |f (x) = 0 . (1) ...

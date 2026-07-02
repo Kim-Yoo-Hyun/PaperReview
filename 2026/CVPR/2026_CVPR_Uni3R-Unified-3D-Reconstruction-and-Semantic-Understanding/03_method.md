@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: 3D Semantic Understanding and Alignment
+- Tags: Gaussian Splatting, 3D reconstruction, geometry, semantic, alignment, 3D Vision
+- Paper link: ./2026/CVPR/2026_CVPR_Uni3R-Unified-3D-Reconstruction-and-Semantic-Understanding/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Our approach leverages a Cross-View Transformer to robustly integrate information across arbitrary multi-view inputs, which then regresses a set of 3D Gaussian primitives endowed with semantic feature fields.
+- Implementation Details We use DINOv2 as the image encoder, with a patch size of 16, and set the CrossView Transformer layers as L = 24.
+- In this paper, we introduce Uni3R, a novel feed-forward framework that jointly reconstructs a unified 3D scene representation enriched with open-vocabulary semantics, directly from unposed multiview images.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Reconstructing and semantically interpreting 3D scenes from sparse 2D views remains a fundamental challenge in computer vision.
+- Conventional methods often decouple semantic understanding from reconstruction or necessitate costly per-scene optimization, thereby restricting their scalability and generalizability.
+- Our approach leverages a Cross-View Transformer to robustly integrate information across arbitrary multi-view inputs, which then regresses a set of 3D Gaussian primitives endowed with semantic feature fields.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D reconstruction, geometry, semantic, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Implementation Details We use DINOv2 as the image encoder, with a patch size of 16, and set the CrossView Transformer layers as L = 24.
+- The final training objective is a weighted sum of the individual losses: \mathcal {L}_{\text {total}} = \mathcal {L}_{\text {rgb}} + \lambda _{\text {sem}}\mathcal {L}_{\text {sem}} + \lambda _{\text ...
+- We initialize the encoder and decoder with the weights from the pretrained Comparison with Per-Scene Optimized Methods To evaluate efficiency and generalization, we compare Uni3R with the per-scene ...
+- The loss is formulated as: VGGT , while the remaining intrinsic layer and Gaussian head are randomly initialized.

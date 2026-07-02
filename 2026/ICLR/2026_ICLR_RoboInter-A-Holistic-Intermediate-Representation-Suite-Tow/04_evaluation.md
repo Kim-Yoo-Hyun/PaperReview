@@ -1,26 +1,31 @@
 # Evaluation
 
-## Dataset
-Open X-Embodiment, OXE, WidowX, COCO
+- Year/Venue: 2026 / ICLR Poster
+- Category: Benchmarks and Datasets
+- Tags: Vision-Language Model, Robotics, Benchmark
+- Paper link: ./2026/ICLR/2026_ICLR_RoboInter-A-Holistic-Intermediate-Representation-Suite-Tow/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `robot manipulation and vision-language-action control`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Metrics
-success rate, task completion, language-conditioned generalization, real/sim transfer, IoU, AP, mAP, SR
+- BLEU
+- accuracy
+- IoU
+- success rate
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- Generate Trace Remove Outliers SAM Calibrate Camera Param Cross Validation & Formatting Spatial VQA Episodes Env Temporal VQA Trace Generation Q: The robot task is ‘drag the plate… ...
+- A: [, ] Q: The robot task is ‘drag the plate… Return the future 10 point of gripper.
+- A: (, , … Trace Choose Object Grounding Box Q: The robot task is ‘pick the orange… Determine manipulated object’s bbox.
+- Q: Which image describe the task ‘move the salt cellar to the table? (A/B/C/D) A: B Grasp Pose Choose Q: Which images contains the most suitable Grasp Pose ...
+- Generate Trace Remove Outliers SAM Calibrate Camera Param Cross Validation & Formatting Spatial VQA Episodes Env Temporal VQA Trace Generation Q: The robot task is ‘drag the plate… ...
+- A: [, ] Q: The robot task is ‘drag the plate… Return the future 10 point of gripper.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Reproducibility Notes
-- Code/Project: not identified from OpenReview
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

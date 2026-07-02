@@ -1,18 +1,17 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / ICLR Spotlight
+- Category: 3D Semantic Understanding and Alignment
+- Tags: semantic, alignment, point cloud, 3D Vision
+- Paper link: ./2025/ICLR/2025_ICLR_Multimodality-Helps-Few-shot-3D-Point-Cloud-Semantic-Segme/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-Under this easy-to-achieve setup, we present the MultiModal Few-Shot SegNet (MM-FSS), a model effectively harnessing complementary information from multiple modalities.
+## Brief Method
+- This adaptive indicator ensures that the TACC module effectively mitigates training bias by dynamically calibrating predictions during test time, leading to improved few-shot generalization.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- This adaptive indicator ensures that the TACC module effectively mitigates training bias by dynamically calibrating predictions during test time, leading to improved few-shot generalization.
 
 ## 핵심 방법론
-- Task family: open-vocabulary 3D semantic understanding
-- Representation: semantic, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- This adaptive indicator ensures that the TACC module effectively mitigates training bias by dynamically calibrating predictions during test time, leading to improved few-shot generalization.

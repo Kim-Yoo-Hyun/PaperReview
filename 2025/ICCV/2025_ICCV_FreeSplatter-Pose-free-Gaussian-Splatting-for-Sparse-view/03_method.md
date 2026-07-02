@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision
+- Paper link: ./2025/ICCV/2025_ICCV_FreeSplatter-Pose-free-Gaussian-Splatting-for-Sparse-view/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Our approach employs a streamlined transformer architecture where self-attention blocks facilitate information exchange among multi-view image tokens, decoding them into pixel-aligned 3D Gaussian primitives within a unified reference ...
+- We introduce FreeSplatter, a scalable feed-forward framework that generates high-quality 3D Gaussians from uncalibrated sparse-view images while estimating camera parameters within seconds.
+- We develop two specialized variants–for object-centric and scene-level reconstruction–trained on comprehensive datasets.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- While generalizable reconstruction models address sparse-view reconstruction using learned priors in a feed-forward manner, they still require accurate camera parameters, sidestepping a fundamental challenge in real-world applications.
+- However, these approaches fail in sparse-view scenarios where traditional camera calibration techniques like Structure-from-Motion (SfM) struggle due to insufficient image overlaps.
+- Our approach employs a streamlined transformer architecture where self-attention blocks facilitate information exchange among multi-view image tokens, decoding them into pixel-aligned 3D Gaussian primitives within a unified reference ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- The overall training objective is: RRA@15◦ ↑ Table 2.
+- We focus on reconstructing observed areas and adopt Splatt3R’s target-view masking strategy, computing rendering loss only for visible regions to prevent negative training guidance from occluded areas. (5) ...
+- PF-LRM FreeSplatter-O GSO RRE ↓ RRA@15◦ ↑ RRA@30◦ ↑ TE↓ 3.99 8.96 0.956 0.909 0.976 0.936 0.041 0.090 OmniObject3D (6) where the rendering loss Lrender is a combination ...
+- FreeSplatterS leverages a diverse training set comprising BlendedMVS , ScanNet++, and CO3Dv2—a subset of DUSt3R’s training data encompassing outdoor scenes, indoor environments, and real-world objects.
+- Experimental Settings Training Datasets.

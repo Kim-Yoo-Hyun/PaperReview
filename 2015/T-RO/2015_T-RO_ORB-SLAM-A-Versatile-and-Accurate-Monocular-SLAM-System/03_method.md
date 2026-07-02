@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2015 / T-RO
+- Category: Foundations: SLAM and Sensor Geometry
+- Tags: SLAM, calibration, geometry
+- Paper link: ./2015/T-RO/2015_T-RO_ORB-SLAM-A-Versatile-and-Accurate-Monocular-SLAM-System/paper.pdf
+- Code/Project: https://github.com/raulmur/ORB_SLAM2
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We present an exhaustive evaluation in 27 sequences from the most popular datasets.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- —This paper presents ORB-SLAM, a feature-based monocular SLAM system that operates in real time, in small and large, indoor and outdoor environments.
+- The system is robust to severe motion clutter, allows wide baseline loop closing and relocalization, and includes full automatic initialization.
+- We present an exhaustive evaluation in 27 sequences from the most popular datasets.
 
 ## 핵심 방법론
-- Task family: SLAM, calibration, and geometric consistency
-- Representation: SLAM, geometry
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- ORB-SLAM + Global BA (20 its.) Time (s) Pose Graph Edges RMSE (m) Dimension (m×m) RMSE (m) Time BA (s) - - 48.77 KFs RMSE (m) - Sequence ...
+- Number between brackets for BA (Bundle Adjustment) means number of Levenberg-Marquardt (LM) iterations, while for EG (Essential Graph) is the θmin to build the Essential Graph.
+- All EG optimizations perform 10 LM iterations.

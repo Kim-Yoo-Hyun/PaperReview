@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2019 / TOG
+- Category: Foundations: 3D Representation Learning
+- Tags: point cloud, 3D Vision
+- Paper link: ./2019/TOG/2019_TOG_Dynamic-Graph-CNN-for-Learning-on-Point-Clouds/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Traditional methods for solving these problems employ handcrafted features to capture geometric properties of point clouds [Lu et al.
+- This independence, however, neglects the geometric relationships among points, presenting a fundamental limitation that cannot capture local features.
+- This approach, however, usually introduces quantization artifacts and excessive memory usage, making it difficult to go to capture high-resolution or fine-grained features.
 
 ## 해결하려는 문제
-- 연구 유형: core 3D geometry and scene representation learning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `point cloud, 3D Vision` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- We summarize the key contributions of our work as follows: • We present a novel operation for learning from point clouds, EdgeConv, to better capture local geometric features ...
+- Traditional methods for solving these problems employ handcrafted features to capture geometric properties of point clouds [Lu et al.
+- This independence, however, neglects the geometric relationships among points, presenting a fundamental limitation that cannot capture local features.

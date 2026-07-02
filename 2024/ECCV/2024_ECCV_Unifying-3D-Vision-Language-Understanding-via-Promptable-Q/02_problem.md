@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2024 / ECCV
+- Category: 3D Large Multimodal Models
+- Tags: Vision-Language Model, 3D Vision
+- Paper link: ./2024/ECCV/2024_ECCV_Unifying-3D-Vision-Language-Understanding-via-Promptable-Q/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-VLM/LLM은 강한 semantic prior를 갖지만 3D 위치, 거리, 관점, affordance 같은 metric spatial reasoning에는 취약하다.
+- However, a considerable gap exists between existing methods and such a unified model, due to the independent application of representation and insufficient exploration of 3D multi-task training.
 
 ## 해결하려는 문제
-- 연구 유형: 3D vision-language spatial reasoning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- This is achieved through three key innovations: (1) unifying various 3D scene representations (i.e., voxels, point clouds, multi-view images) into a shared 3D coordinate space by segment-level grouping, ...
+- However, a considerable gap exists between existing methods and such a unified model, due to the independent application of representation and insufficient exploration of 3D multi-task training.
+- In this paper, we introduce PQ3D, a unified model capable of using Promptable Queries to tackle a wide range of 3D-VL tasks, from low-level instance segmentation to high-level ...
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Vision-Language Model, 3D Vision` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- Recent advancements in embodied artificial intelligence have emphasized the importance of connecting 3D scene understanding with natural language .
+- This step is crucial for embodied agents to understand and execute human instructions in real-world scenarios .
+- In recent years, numerous tasks and datasets for benchmarking 3D scene understanding with languages have been proposed, including 3D semantic segmentation , 3D vision-language ⋆ Work done as ...

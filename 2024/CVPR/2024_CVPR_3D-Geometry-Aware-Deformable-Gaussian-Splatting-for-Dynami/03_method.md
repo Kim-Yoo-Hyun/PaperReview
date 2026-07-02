@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, 3D Vision
+- Paper link: ./2024/CVPR/2024_CVPR_3D-Geometry-Aware-Deformable-Gaussian-Splatting-for-Dynami/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Dataset In the paper, we use both synthetic and real datasets for evaluating our method.
+- In this paper, we propose a 3D geometry-aware deformable Gaussian Splatting method for dynamic view synthesis.
+- 3, we use the Gaussians at the current moment to render the image.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Existing neural radiance fields (NeRF) based solutions learn the deformation in an implicit manner, which cannot incorporate 3D scene geometry.
+- Dataset In the paper, we use both synthetic and real datasets for evaluating our method.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Dataset In the paper, we use both synthetic and real datasets for evaluating our method.
+- 3, we use the Gaussians at the current moment to render the image.
+- Moreover, we use a 2-layer MLP with a width of 64 for the front point feature extraction, and a 3-layer MLP with a width of 64 for the ...
+- Meanwhile, for the HyperNeRF dataset, we use the point cloud provided in its dataset as the initial point cloud.
+- For the positional encoding process, we use L = 10 for position x and L = 6 for timestamp t.

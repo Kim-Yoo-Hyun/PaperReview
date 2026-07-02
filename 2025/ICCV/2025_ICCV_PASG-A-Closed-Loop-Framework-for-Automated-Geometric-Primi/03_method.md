@@ -1,18 +1,20 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Robotics, semantic
+- Paper link: ./2025/ICCV/2025_ICCV_PASG-A-Closed-Loop-Framework-for-Automated-Geometric-Primi/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To address these, we propose Primitive-Aware Semantic Grounding (PASG), a closed ReKep CoPa OmniManip FUNCTO Robotwin Geometric Primitives Keypoints Keypoints, Function Axes Keypoints, Main Axes Keypoints, Function Axes ...
+- OmniManip employs computational constraint optimization and scene rendering for VLM validation, while our method directly detects annotation-primitive misalignment for efficient self-correction. addresses this limitation by proposing direction-aware spatial ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- The fragmentation between high-level task semantics and low-level geometric features remains a persistent challenge in robotic manipulation.
+- While vision-language models (VLMs) have shown promise in generating affordanceaware visual representations, the lack of semantic grounding in canonical spaces and reliance on manual annotations severely limit their ...
+- To address these, we propose Primitive-Aware Semantic Grounding (PASG), a closed ReKep CoPa OmniManip FUNCTO Robotwin Geometric Primitives Keypoints Keypoints, Function Axes Keypoints, Main Axes Keypoints, Function Axes ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- OmniManip employs computational constraint optimization and scene rendering for VLM validation, while our method directly detects annotation-primitive misalignment for efficient self-correction. addresses this limitation by proposing direction-aware spatial ...

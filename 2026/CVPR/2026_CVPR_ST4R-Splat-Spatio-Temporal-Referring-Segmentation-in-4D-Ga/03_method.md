@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Gaussian Splatting, 4D, referring segmentation
+- Paper link: ./2026/CVPR/2026_CVPR_ST4R-Splat-Spatio-Temporal-Referring-Segmentation-in-4D-Ga/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We introduce Spatio-Temporal Referring Segmentation in 4D Gaussian Splatting (STRS-4DGS), a novel task aiming to jointly identify and segment a target instance across space and time given a ...
+- To tackle this, we propose ST4R-Splat, the first framework for STRS-4DGS.
+- To provide rich spatio-temporal semantic supervision, we develop an automatic, MLLM-based captioning pipeline that generates decoupled spatial and temporal textual descriptions.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- While existing methods focus on static 3D referring segmentation or openvocabulary 4D querying, they struggle to ground complex spatio-temporal referring expressions in explicit 4D reconstructions.
+- However, these representations are primarily optimized for geometric fidelity and novel view synthesis, inherently lacking support for se- zha@cis.pku.edu.cn mantic reasoning and language-based scene understanding.
+- We introduce Spatio-Temporal Referring Segmentation in 4D Gaussian Splatting (STRS-4DGS), a novel task aiming to jointly identify and segment a target instance across space and time given a ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- americano chicken cookie espresso choco keyboard Average ReferSplat 4DLangSplat 36.97 35.70 38.65 52.26 28.47 46.55 37.41 32.55 50.61 32.32 20.39 61.00 35.42 43.40 Ours 80.51 83.57 69.48 69.65 ...
+- Quantitative comparisons on the HyperNeRF dataset.
+- We report (a) time-agnostic referring querying (mIoU in %) and (b) timesensitive referring querying (Acc and vIoU in %).
+- Best results are highlighted in bold.
+- For time-agnostic referring queries, Fig.

@@ -1,26 +1,32 @@
 # Evaluation
 
-## Dataset
-ScanNet, ScanNet200, Replica, OXE
+- Year/Venue: 2023 / NeurIPS
+- Category: Open-Vocabulary 3D Mapping
+- Tags: open-vocabulary, 3D segmentation, CLIP
+- Paper link: ./2023/NeurIPS/2023_NeurIPS_OpenMask3D-Open-Vocabulary-3D-Instance-Segmentation/paper.pdf
+- Code/Project: https://openmask3d.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `open-vocabulary 3D semantic understanding`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- ScanNet
+- ScanNet200
+- Replica
+- LERF
 
 ## Metrics
-mIoU, AP, mAP, open-vocabulary accuracy, long-tail performance, IoU, SR, EM
+- accuracy
+- AP
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- 4.1 Quantitative results: closed-vocabulary 3D instance segmentation evaluation We evaluate our approach on the closed-vocabulary 3D instance segmentation task.
+- We report our ScanNet200 results on the validation set consisting of 312 scenes, and evaluate for the 3D instance segmentation task using the closed vocabulary of 200 categories ...
+- In this section, we present quantitative and qualitative results from our method OpenMask3D.
+- 4.2, we share qualitative results for open-vocabulary 3D instance segmentation, demonstrating potential applications.
+- Experiments and ablation studies on ScanNet200 and Replica show that OpenMask3D outperforms other open-vocabulary methods, especially on the long-tail distribution.
+- 4.1 Quantitative results: closed-vocabulary 3D instance segmentation evaluation We evaluate our approach on the closed-vocabulary 3D instance segmentation task.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- In Sec 4.1, we quantitatively evaluate our method, and compare OpenMask3D with supervised 3D instance segmentation approaches as well as existing open-vocabulary 3D scene understanding models we adapted ...
 
 ## Reproducibility Notes
-- Code/Project: https://openmask3d.github.io/
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

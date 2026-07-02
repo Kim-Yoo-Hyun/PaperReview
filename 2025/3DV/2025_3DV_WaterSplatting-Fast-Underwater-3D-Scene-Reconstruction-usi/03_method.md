@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / 3DV
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_WaterSplatting-Fast-Underwater-3D-Scene-Reconstruction-usi/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-Therefore, we propose a novel approach that fuses volumetric rendering with 3DGS to handle underwater data effectively.
+## Brief Method
+- Therefore, we propose a novel approach that fuses volumetric rendering with 3DGS to handle underwater data effectively.
+- The same advantages are observed in simulated scenes, where our method renders better details (indicated by the red square) than the SeaThru-NeRF in both easy and hard foggy ...
+- Overall, our method surpasses SeaThru-NeRF in both underwater and simulated scenes.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Furthermore, it does so while offering real-time rendering performance, addressing the efficiency limitations of existing methods.
+- The underwater 3D scene reconstruction is a challenging, yet interesting problem with applications ranging from naval robots to VR experiences.
+- Therefore, we propose a novel approach that fuses volumetric rendering with 3DGS to handle underwater data effectively.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- The same advantages are observed in simulated scenes, where our method renders better details (indicated by the red square) than the SeaThru-NeRF in both easy and hard foggy ...
+- Overall, our method surpasses SeaThru-NeRF in both underwater and simulated scenes.
+- We conduct a quantitative analysis on different combination of loss functions, between pixel-wise component {L1 , L2 , LReg-L1 , LReg-L2 } and frame-wise {LDSSIM , LReg-DSSIM }, ...
+- 3DGS prunes the Gaussians with low opacity, leaving dense and muddy cloud-like primitives to fit the medium, which causes artifacts in the novel views.

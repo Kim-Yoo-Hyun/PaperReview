@@ -3,33 +3,33 @@
 - Year/Venue: 2025 / ICML Poster
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: Robotics, Imitation Learning
-- Authors: Zhuoling Li, LiangLiang Ren, Jinrong Yang, Yong Zhao, Xiaoyang Wu, Zhenhua Xu, Xiang Bai, Hengshuang Zhao
-- Paper: https://openreview.net/forum?id=ccUNMIbpcf
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2025/ICML/2025_ICML_VIP-Vision-Instructed-Pre-training-for-Robotic-Manipulatio/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- To handle this problem, we propose to use sparse point flows to provide more detailed information.
+- A primary challenge in manipulation is the tasks are diverse, and the trained policy would be confused if the task targets are not specified clearly.
+- Existing works primarily rely on text instruction to describe targets.
 
 ## Core Idea
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: The effectiveness of scaling up training data in robotic manipulation is still limited.
-- Method cue: Therefore, we introduce utilizing vision instruction to specify targets.
-- Result cue: The results indicate VIP improves the performance on diverse tasks significantly, and the derived policy can complete competitive tasks like ``opening the lid of ...
+- To handle this problem, we propose to use sparse point flows to provide more detailed information.
+- Therefore, we introduce utilizing vision instruction to specify targets.
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `robot manipulation and vision-language-action control`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- The results indicate VIP improves the performance on diverse tasks significantly, and the derived policy can complete competitive tasks like “opening the lid of a tightly sealed bottle”.
+- Extensive tasks are designed based on real and simulated environments to evaluate the effectiveness of our vision instructed pre-training (VIP) method.
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Robotics, Imitation Learning.
-- 초록에서 확인되는 주요 cue: The, Existing, However, Therefore, Nevertheless, Extensive, VIP.
+- To handle this problem, we propose to use sparse point flows to provide more detailed information.
+- Extensive tasks are designed based on real and simulated environments to evaluate the effectiveness of our vision instructed pre-training (VIP) method.
+- A common practice in existing manipulation pre-training paradigms is describing task targets using text instructions like “pick up the green block”.
+
+## Abstract Cue
+- Pick up the green block The effectiveness of scaling up training data in robotic manipulation is still limited.

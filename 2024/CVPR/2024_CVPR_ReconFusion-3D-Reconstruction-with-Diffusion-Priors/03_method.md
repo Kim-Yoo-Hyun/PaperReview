@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: 3D Generative Modeling and Diffusion
+- Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
+- Paper link: ./2024/CVPR/2024_CVPR_ReconFusion-3D-Reconstruction-with-Diffusion-Priors/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We present ReconFusion to reconstruct real-world scenes using only a few photos.
+- Our approach leverages a diffusion prior for novel view synthesis, trained on synthetic and multiview datasets, which regularizes a NeRF-based 3D reconstruction pipeline at novel camera poses beyond ...
+- Our method synthesizes realistic geometry and texture in underconstrained regions while preserving the appearance of observed regions.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- NeRF’s dense capture requirement poses a major challenge, necessitating tens to hundreds of images for even simple objects to ensure a clean reconstruction (Fig.
+- While these models excel at generating realistic images from novel view points, they do not produce a single consistent 3D shape from a sparse set of input
+- We present ReconFusion to reconstruct real-world scenes using only a few photos.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- To ablate “PT,” we train the diffusion model from scratch.
+- 4, we ablate two aspects of our diffusion model: the use of pretrained diffusion model weights (PT) and conditioning signal.

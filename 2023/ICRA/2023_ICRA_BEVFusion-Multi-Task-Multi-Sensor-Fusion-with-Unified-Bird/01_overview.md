@@ -3,32 +3,34 @@
 - Year/Venue: 2023 / ICRA
 - Category: Sensor Fusion, LiDAR, and Autonomous Driving
 - Tags: sensor fusion, LiDAR, 3D perception
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2205.13542
-- PDF status: downloaded
-- GitHub/Project: https://github.com/mit-han-lab/bevfusion
+- Paper link: ./2023/ICRA/2023_ICRA_BEVFusion-Multi-Task-Multi-Sensor-Fusion-with-Unified-Bird/paper.pdf
+- Code/Project: https://github.com/mit-han-lab/bevfusion
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Such density differences will become even more drastic for sparser LiDARs (or radars).
+- To achieve this, we diagnose and lift the key efficiency bottlenecks in the view transformation with optimized BEV pooling, reducing latency by more than 40×.
+- It establishes the new state of the art on the nuScenes benchmark, achieving 1.3% higher mAP and NDS on 3D object detection and 13.6% higher mIoU on BEV ...
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- In this paper, we propose BEVFusion, an efficient and generic multi-task multi-sensor fusion framework.
+- In this paper, we propose BEVFusion to unify multi-modal space for task-agnostic learning.
 
 ## Input / Output
-Input/Output follows the paper task formulation; see PDF for the exact interface.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D vision and embodied AI`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- I: BEVFusion achieves state-of-the-art 3D object detection performance on nuScenes (val and test) without bells and whistles.
+- To achieve this, we diagnose and lift the key efficiency bottlenecks in the view transformation with optimized BEV pooling, reducing latency by more than 40×.
+- Code to reproduce our results is available at https://github.com/mit-han-lab/bevfusion.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D vision and embodied AI 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: sensor fusion, LiDAR, 3D perception.
+- In this paper, we propose BEVFusion, an efficient and generic multi-task multi-sensor fusion framework.
+- In this paper, we propose BEVFusion to unify multi-modal space for task-agnostic learning.
+- Although they have demonstrated remarkable performance on large-scale detection benchmarks, these point-level fusion methods barely work on semantic-oriented tasks, such as BEV map segmentation , , , .
+
+## Abstract Cue
+- — Multi-sensor fusion is essential for an accurate and reliable autonomous driving system.

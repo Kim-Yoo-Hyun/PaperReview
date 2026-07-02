@@ -1,18 +1,20 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2026 / ICRA
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Robotics, Gaussian Splatting, semantic
+- Paper link: ./2026/ICRA/2026_ICRA_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/paper.pdf
+- Code/Project: not identified from venue audit
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- — We present VISTA (Viewpoint-based Image selection with Semantic Task Awareness), an active exploration method for robots to plan informative trajectories that improve 3D map quality in areas ...
+- We build upon these traditional representations by introducing a Gaussian Splat embedded with 1 Department of Aeronautics and Astronautics, Stanford University, Stanford, CA 94305, USA knagami, chengine, javieryu, ...
+- Given an open-vocabulary search instruction (e.g., “find a person”), VISTA enables a robot to explore its environment to search for the object of interest, while simultaneously building a ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Prior work in robot exploration broadly uses traditional 3D scene representations, such as occupancy grids and voxel grids.
+- — We present VISTA (Viewpoint-based Image selection with Semantic Task Awareness), an active exploration method for robots to plan informative trajectories that improve 3D map quality in areas ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Easy RT-GuIDE Semantic VISTA [ours] 50 100 100 154.32 74.23 83.72 7.19 31.19 29.04 100 50 100 85.22 123.18 72.61 46.31 12.81 38.42 50 0 50 57.20 N/A ...

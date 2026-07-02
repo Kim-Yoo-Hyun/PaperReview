@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: 3D Generative Modeling and Diffusion
+- Tags: 3D reconstruction, Diffusion, Generation, point cloud, 3D Vision
+- Paper link: ./2024/CVPR/2024_CVPR_IPoD-Implicit-Field-Learning-with-Point-Diffusion-for-Gene/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose a novel approach, IPoD, which harmonizes implicit field learning with point diffusion.
+- 4, our method can well generalize to more various categories of objects than in the CO3D-v2 dataset.
+- See supplementary materials for more model architecture details of PVCNN-based and Transformer-based implementations.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Introduction 3D reconstruction from a single-view image is a challenging problem that with widespread implications in fields such as robotics, autonomous driving, and AR/VR.
+- Experiments conducted on the CO3D-v2 dataset affirm the superiority of IPoD, achieving 7.8% improvement in F-score and 28.6% in Chamfer distance over existing methods.
+- We propose a novel approach, IPoD, which harmonizes implicit field learning with point diffusion.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 4, our method can well generalize to more various categories of objects than in the CO3D-v2 dataset.
+- See supplementary materials for more model architecture details of PVCNN-based and Transformer-based implementations.
+- Besides, T is set as 1,000 in our diffusion model, λ=1.0 in training, and N =50k, the distance threshold ρ=0.1 for evaluation.
+- We implement the proposed approach with two versions that use PVCNN (Ours1) and Transformer (Ours2) as the decoder backbone, respectively.
+- The version of “Ours1” is constructed by adding the implicit learning branch and the self-conditioning mechanism into the diffusion-based PC2 , and for “Ours2”, we integrate the query ...

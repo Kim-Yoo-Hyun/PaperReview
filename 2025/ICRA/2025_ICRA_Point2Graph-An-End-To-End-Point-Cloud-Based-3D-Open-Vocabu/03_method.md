@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
+- Year/Venue: 2025 / ICRA
+- Category: Navigation and Embodied AI
+- Tags: Robotics, 3D Vision, Navigation, Graph Reasoning, semantic
+- Paper link: ./2025/ICRA/2025_ICRA_Point2Graph-An-End-To-End-Point-Cloud-Based-3D-Open-Vocabu/paper.pdf
+- Code/Project: not identified from venue audit
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To solve this problem, we propose Point2Graph, a novel end-to-end point cloud-based 3D open-vocabulary scene graph generation framework in which the requirement of posed ...
+## Brief Method
+- To solve this problem, we propose Point2Graph, a novel end-to-end point cloud-based 3D open-vocabulary scene graph generation framework in which the requirement of posed RGB-D image series is ...
+- Additionally, we present the qualitative results in Fig.
+- Furukawa, “Heat: Holistic edge attention transformer for structured reconstruction,” 2022. [Online].
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To solve this problem, we propose Point2Graph, a novel end-to-end point cloud-based 3D open-vocabulary scene graph generation framework in which the requirement of posed RGB-D image series is ...
+- One of the main challenges for both closed and open vocabulary 3D scene graph generation is the scarcity of largescale 3D-text datasets, especially compared to the abundance of ...
+- To solve this problem, we propose Point2Graph, a novel end-to-end point cloud-based 3D open-vocabulary scene graph generation framework in which the requirement of posed RGB-D image series is ...
 
 ## 핵심 방법론
-- Task family: structured 3D scene graph reasoning
-- Representation: 3D Vision, Graph Reasoning, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Additionally, we present the qualitative results in Fig.
+- Furukawa, “Heat: Holistic edge attention transformer for structured reconstruction,” 2022. [Online].

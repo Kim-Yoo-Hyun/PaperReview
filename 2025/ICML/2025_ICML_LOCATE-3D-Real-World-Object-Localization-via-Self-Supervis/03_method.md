@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / ICML Spotlight/Poster
+- Category: 3D Vision-Language Grounding
+- Tags: 3D Vision, Reinforcement Learning
+- Paper link: ./2025/ICML/2025_ICML_LOCATE-3D-Real-World-Object-Localization-via-Self-Supervis/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We present LOCATE 3D, a model for localizing objects in 3D scenes from referring expressions like "the small coffee table between the sofa and ...
+## Brief Method
+- Furthermore, when also trained with our L3DD dataset (L OCATE 3D+), the model demonstrates even stronger performance, improving across all metrics while maintaining the same architecture and training ...
+- We present the overall results in Table 1.
+- We present L OCATE 3D, a model for localizing objects in 3D scenes from referring expressions like “the small coffee table between the sofa and the lamp.” L ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- They often require human annotation at inference time in the form of detailed 3D meshes or object instance segmentation, making them difficult to deploy on real-world devices.
+- Furthermore, when also trained with our L3DD dataset (L OCATE 3D+), the model demonstrates even stronger performance, improving across all metrics while maintaining the same architecture and training ...
 
 ## 핵심 방법론
-- Task family: vision-language alignment and multimodal reasoning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Furthermore, when also trained with our L3DD dataset (L OCATE 3D+), the model demonstrates even stronger performance, improving across all metrics while maintaining the same architecture and training ...
+- We present the overall results in Table 1.
+- Section 4.3 presents ablation studies on various components of our architecture, and Section 4.4 evaluates generalization capabilities on novel environments and robotic deployment. observations with a modular pipeline ...
+- Section 4.2 analyzes the impact of 3D-JEPA pre-training.
+- Most prior work assumes access to refined meshes and mesh (object) region proposals at training and inference time.

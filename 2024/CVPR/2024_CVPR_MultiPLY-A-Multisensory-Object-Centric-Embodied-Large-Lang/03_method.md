@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: 3D Large Multimodal Models
+- Tags: LLM, 3D Vision, sensor fusion
+- Paper link: ./2024/CVPR/2024_CVPR_MultiPLY-A-Multisensory-Object-Centric-Embodied-Large-Lang/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To usher in the study of this area, we propose MultiPLY, a multisensory embodied large language model that could incorporate multisensory interactive data, including visual, audio, tactile, and ...
+- Likewise, we propose to represent the environment as an abstracted object-centric representation.
+- MultiPLY In this section, we introduce the MultiPLY framework.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Existing multi-modal large language models (e.g., LLaVA , Flamingo , BLIP-2 , PaLM-E ) excel at num
+- Current multi-modal large language models, however, passively absorb sensory data as inputs, lacking the capacity to actively interact with the objects in the 3D environment and dynamically collect ...
+- To usher in the study of this area, we propose MultiPLY, a multisensory embodied large language model that could incorporate multisensory interactive data, including visual, audio, tactile, and ...
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: LLM, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Likewise, we propose to represent the environment as an abstracted object-centric representation.
+- MultiPLY In this section, we introduce the MultiPLY framework.
+- We use concept graphs powered with a CLIP encoder to first encode the objects in the observed images, and fuse the outputs in images to 3D by multi-view ...
+- The object is chosen by the attention between the language features (i.e., the last hidden state of the LLM of the SELECT token), and the CLIP visual features ...
+- It selects the object with the maximum attention score.

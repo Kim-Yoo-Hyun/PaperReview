@@ -3,33 +3,36 @@
 - Year/Venue: 2025 / ICML Oral
 - Category: Benchmarks and Datasets
 - Tags: Benchmark
-- Authors: Rui Yang, Hanyang Chen, Junyu Zhang, Mark Zhao, Cheng Qian, Kangrui Wang, Qineng Wang, Teja Venkat Koripella
-- Paper: https://openreview.net/forum?id=DgGF2LEBPS
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2025/ICML/2025_ICML_EmbodiedBench-Comprehensive-Benchmarking-Multi-modal-Large/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- E MBODIED B ENCH provides a multifaceted standardized evaluation platform that not only highlights existing challenges but also offers valuable insights to advance MLLMbased embodied agents.
+- Developing embodied agents capable of solving complex tasks in real world remains a significant challenge (Durante et al., 2024).
+- While language-centric embodied agents have garnered substantial attention, MLLM-based embodied agents remain underexplored due to the lack of comprehensive evaluation frameworks.
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Leveraging Multi-modal Large Language Models (MLLMs) to create embodied agents offers a promising avenue for tackling real-world tasks.
-- Method cue: To bridge this gap, we introduce EmbodiedBench, an extensive benchmark designed to evaluate vision-driven embodied agents.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- To bridge this gap, we introduce E MBODIED B ENCH, an extensive benchmark designed to evaluate visiondriven embodied agents.
+- While language-centric embodied agents have garnered substantial attention, MLLM-based embodied agents remain underexplored due to the lack of comprehensive evaluation frameworks.
 
 ## Input / Output
-Input: benchmark-specific observations/instructions. Output: standardized labels, tasks, or evaluation scores for comparing models.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D vision and embodied AI`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Through extensive experiments, we evaluated 24 leading proprietary and open-source MLLMs within E MBODIED B ENCH.
+- To bridge this gap, we introduce E MBODIED B ENCH, an extensive benchmark designed to evaluate visiondriven embodied agents.
+- These models, trained on extensive internet-scale datasets, demonstrate exceptional proficiency in understanding human knowledge and performing human-like reasoning.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- Error Analysis We conducted an error analysis on GPT-4o to identify potential failure modes in EB-ALFRED and EB-Manipulation.
+- For each environment, we sample 10 failure episodes from each subset, resulting in a total of 110 failed episodes to be analyzed.
+- Another common failure is wrong termination errors (13%), where the model prematurely assumes the task is complete and stops too early.
 
 ## Contribution
-- 3D vision and embodied AI 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Benchmark.
-- 초록에서 확인되는 주요 cue: Leveraging, Multi-modal, Large, Language, Models, MLLMs, While, MLLM-based.
+- To bridge this gap, we introduce E MBODIED B ENCH, an extensive benchmark designed to evaluate visiondriven embodied agents.
+- Through extensive experiments, we evaluated 24 leading proprietary and open-source MLLMs within E MBODIED B ENCH.
+- While language-centric embodied agents have garnered substantial attention, MLLM-based embodied agents remain underexplored due to the lack of comprehensive evaluation frameworks.
+
+## Abstract Cue
+- Developing embodied agents capable of solving complex tasks in real world remains a significant challenge (Durante et al., 2024).

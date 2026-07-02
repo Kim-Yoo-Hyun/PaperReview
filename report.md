@@ -1,7 +1,33 @@
 # Survey Update Report
 
-- Last updated: 2026-06-30 KST
+- Last updated: 2026-07-02 KST
 - Scope: 3D Vision + Robotics + Vision-Language survey in `/home/yoohyun/KAIST/Paper`
+
+## 2026-07-02 Update
+
+- Audited all per-paper note files after finding survey-keyword template contamination in `03_method.md` for `Attention Is All You Need`.
+- Added `survey_work/regenerate_notes_from_pdf.py` to regenerate notes from local `paper.pdf` text cues instead of survey keywords.
+- Regenerated `01_overview.md` through `05_insights.md` for all 607 paper folders, covering 3,035 note files.
+- Added a source-audit marker to every regenerated note file so future edits can distinguish PDF-grounded notes from older template text.
+- Removed the known incorrect generic phrases about 3D structure, vision-language/LLM priors, deployment assumptions, and language-grounded 3D memory from all note files.
+- Tightened the note generator to ignore references, acknowledgements, author footnotes, obvious figure/OCR fragments, and broad survey-keyword fallbacks.
+- Rewrote every `05_insights.md` so the file is no longer a metadata/audit summary. The new structure focuses on:
+  - the paper-specific core concept to reuse
+  - how that concept can be used for the 3D Vision + Robotics research direction
+  - where the paper stops
+  - concrete next research questions
+  - candidate extension benchmarks/metrics
+  - the paper cues that grounded the interpretation
+- Removed `Year/Venue`, `Source audit`, `Strength`, `Paper Claim`, and generic survey memo sections from all 607 `05_insights.md` files.
+- Added `survey_work/note_audit_report.json` with extraction diagnostics:
+  - 607 papers processed
+  - 0 missing PDFs
+  - 0 `pdftotext` failures
+  - 74 papers with missing/unclear abstract extraction
+  - 149 papers with missing/unclear method-section extraction
+  - 452 papers with missing/unclear evaluation-section extraction
+- Important caveat: this is an automated PDF-grounded audit pass, not a complete manual rereading of every paper. When the script cannot extract a reliable cue, the note should leave an explicit manual-review marker instead of inventing content.
+- Going forward, note files must separate paper claims from survey-level interpretation. Survey keywords can be used for categorization and research-idea synthesis, but not as substitutes for a paper's actual problem, method, evaluation, or limitation.
 
 ## 2026-06-30 Update
 

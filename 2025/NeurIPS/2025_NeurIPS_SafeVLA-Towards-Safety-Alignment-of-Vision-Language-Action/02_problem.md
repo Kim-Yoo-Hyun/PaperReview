@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2025 / NeurIPS Spotlight
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_SafeVLA-Towards-Safety-Alignment-of-Vision-Language-Action/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- Our proposed pipeline employs multifaceted framework for the systematic safety alignment of vision-language-action (VLA) models. challenges posed by the complex and unpredictable physical world .
+- To tackle this challenge, we make the first systematic explorations into VLA safety alignment.
+- Our investigation addresses the significant engineering challenges in adapting and scaling these principles for VLAs, focusing on how to effectively model, elicit, and utilize safety signals.
 
 ## 해결하려는 문제
-- 연구 유형: robot manipulation and vision-language-action control
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: However, these models pose extreme safety challenges during real-world deployment, including the risk of harm to the environment, the robot itself, and humans. *How ...
+- Thus, policies aligned through this comprehensive approach achieve the following key features: (I) effective safety-performance trade-offs, reducing the cumulative cost of safety violations by 83.58% compared to the ...
+- We address this by exploring an integrated safety approach (ISA), systematically modeling safety requirements, then actively eliciting diverse unsafe behaviors, effectively constraining VLA policies via safe reinforcement learning, ...
+- Vision-language-action models (VLAs) show potential as generalist robot policies.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `VLA, Vision-Language Model` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- Our proposed pipeline employs multifaceted framework for the systematic safety alignment of vision-language-action (VLA) models. challenges posed by the complex and unpredictable physical world .
+- To tackle this challenge, we make the first systematic explorations into VLA safety alignment.
+- Our investigation addresses the significant engineering challenges in adapting and scaling these principles for VLAs, focusing on how to effectively model, elicit, and utilize safety signals.

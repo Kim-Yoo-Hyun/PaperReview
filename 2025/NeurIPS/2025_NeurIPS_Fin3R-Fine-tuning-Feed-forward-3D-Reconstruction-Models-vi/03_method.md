@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2025 / NeurIPS poster
+- Category: 3D Reconstruction, Geometry, and SLAM
+- Tags: 3D reconstruction, depth, 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_Fin3R-Fine-tuning-Feed-forward-3D-Reconstruction-Models-vi/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We present Fin3R, a simple, effective, and general fine-tuning method for feed-forward 3D reconstruction models.
+## Brief Method
+- To directly address this challenge, we propose a refined integration of LoRA with a re-normalization strategy specifically designed to constrain feature norm drift.
+- We present Fin3R, a simple, effective, and general fine-tuning method for feedforward 3D reconstruction models.
+- 3.3 Training We optimize two loss functions computed over images indexed by i in the training set.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Existing non-synthetic depth labels are noisy and predominantly biased toward indoor environments. (2) Long-sequence pointmap degradation: Inherent ambiguities in multi-view pointmap regression impede the network’s ability to capture ...
+- Fine structures are frequently over-smoothed, object boundaries become blurred, and transparent or glossy surfaces are reconstructed with significant inaccuracies, yielding point clouds that lack crisp geometry.
+- To directly address this challenge, we propose a refined integration of LoRA with a re-normalization strategy specifically designed to constrain feature norm drift.
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- To directly address this challenge, we propose a refined integration of LoRA with a re-normalization strategy specifically designed to constrain feature norm drift.
+- 3.3 Training We optimize two loss functions computed over images indexed by i in the training set.
+- Based on these observations, we introduce Fin3R—our solution that integrates a lightweight fine-tuning stage to simultaneously address both challenges by monocular knowledge distillation.
+- Teacher Pointmap Head Self-View Head 𝐿!"#$"%% We aim to enhance our model’s capability to capture fine details and complex surface geometries Figure 4: Pipeline of our method.
+- 3.1 Observations and Challenges Our analysis reveals two main challenges in existing datasets and long sequence scenarios that critically affect training of geometry regression heads: Data Scarcity.

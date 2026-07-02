@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: 3D Equivariance, Calibration, and Registration
+- Tags: geometry, sensor fusion, LiDAR, Diffusion, Generation, point cloud, 3D Vision
+- Paper link: ./2026/CVPR/2026_CVPR_C-GenReg-Training-Free-3D-Point-Cloud-Registration-by-Mult/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- For the VFM branch, we use K =4 input views from the L=50 views, and the probability temperature parameter is τm = 0.1.
+- Standard point cloud registration consists of feature extraction, feature matching, and robust pose estimation (e.g.
+- C-GenReg: A training-free point cloud registration framework.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Generated RGB Branch World Foundation Model Geometric Branch Geometric Feature Extractor (𝑹∗ , 𝒕∗ ) Geometric Feature Matching Figure 1.
+- C-GenReg: A training-free point cloud registration framework.
+- For the VFM branch, we use K =4 input views from the L=50 views, and the probability temperature parameter is τm = 0.1.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: geometry, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- For the VFM branch, we use K =4 input views from the L=50 views, and the probability temperature parameter is τm = 0.1.
+- All learning-based methods are trained on the official 3DMatch training split.
+- The geometric feature extractor is based on GeoTransformer , while the probabilistic fusion module follows the Noisy-AND formulation.
+- It reduces the mean RTE by nearly half compared to GeoTransformer and consistently 4.

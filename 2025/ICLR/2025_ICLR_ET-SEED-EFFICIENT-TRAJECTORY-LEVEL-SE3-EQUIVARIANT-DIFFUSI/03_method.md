@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / ICLR Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Robotics, Diffusion, equivariant
+- Paper link: ./2025/ICLR/2025_ICLR_ET-SEED-EFFICIENT-TRAJECTORY-LEVEL-SE3-EQUIVARIANT-DIFFUSI/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In this paper, we propose ET-SEED, a trajectorylevel end-to-end SE(3) equivariant diffusion model for robotic manipulation.
+- We will discuss equivariant Markov processes further to explain the correctness and advantages of our proposed diffusion process in section 4.1 , with only one denoising step SE(3) ...
+- Then introduce our modified SE(3) invariant and equivariant backbones in section 4.2 , and illustrate our SE(3) equivariant diffusion process in section 4.3 .
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- In this paper, we propose ET-SEED, a trajectorylevel end-to-end SE(3) equivariant diffusion model for robotic manipulation.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- In this paper, we propose ET-SEED, a trajectorylevel end-to-end SE(3) equivariant diffusion model for robotic manipulation.
+- We will discuss equivariant Markov processes further to explain the correctness and advantages of our proposed diffusion process in section 4.1 , with only one denoising step SE(3) ...
+- Then introduce our modified SE(3) invariant and equivariant backbones in section 4.2 , and illustrate our SE(3) equivariant diffusion process in section 4.3 .

@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
+- Year/Venue: 2025 / NeurIPS Poster
+- Category: Navigation and Embodied AI
+- Tags: Navigation
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_NavBench-Probing-Multimodal-Large-Language-Models-for-Embo/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We present NavBench, a benchmark to evaluate the embodied navigation capabilities of MLLMs under zero-shot settings.
+## Brief Method
+- We present NavBench, a benchmark to evaluate the embodied navigation capabilities of MLLMs under zero-shot settings.
+- To support real-world deployment, we introduce a pipeline that converts MLLMs’ outputs into robotic actions.
+- To fill these gaps, we introduce NavBench, a benchmark designed to systematically evaluate MLLMs in embodied navigation under zero-shot settings.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- For example, navigating across multiple rooms with ambiguous instructions poses greater challenges than following simple step-by-step commands in a single hallway.
+- The step-by-step navigation is assessed from different difficulty levels, which is defined by cognitive, spatial, and execution complexity. and ObjectNav , were developed prior to the emergence of ...
+- We present NavBench, a benchmark to evaluate the embodied navigation capabilities of MLLMs under zero-shot settings.
 
 ## 핵심 방법론
-- Task family: embodied navigation and spatial planning
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- To fill these gaps, we introduce NavBench, a benchmark designed to systematically evaluate MLLMs in embodied navigation under zero-shot settings.

@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Tags: sensor fusion, LiDAR, 3D Vision
+- Paper link: ./2026/ICLR/2026_ICLR_SimULi-Real-Time-LiDAR-and-Camera-Simulation-with-Unscente/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To overcome these limitations, we propose SimULi, the first method capable of rendering arbitrary camera models and LiDAR data in real-time.
+## Brief Method
+- We minimize the K-distance loss at each training iteration, and update the camera-to-LiDAR assignments every 1000 iterations.
+- We define a nearest-neighbor anchoring loss on Gaussian means: n 1 !
+- Lanchor = ↔µi ↓ N N (µi , Gl )↔2 , n N N (µ, G) = argminµ→ ↓G ↔µ ↓ µ↗ ↔2 i↓Gc (5) Since running full ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- We minimize the K-distance loss at each training iteration, and update the camera-to-LiDAR assignments every 1000 iterations.
 
 ## 핵심 방법론
-- Task family: 3D vision and embodied AI
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We minimize the K-distance loss at each training iteration, and update the camera-to-LiDAR assignments every 1000 iterations.
+- We define a nearest-neighbor anchoring loss on Gaussian means: n 1 !
+- Lanchor = ↔µi ↓ N N (µi , Gl )↔2 , n N N (µ, G) = argminµ→ ↓G ↔µ ↓ µ↗ ↔2 i↓Gc (5) Since running full ...
+- Existing methods encode camera and LiDAR data into a single NeRF (Yang et al., 2023b; Tonderski et al., 2024) or set of 3D Gaussian particles (Hess et al., ...

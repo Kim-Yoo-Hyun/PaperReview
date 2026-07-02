@@ -3,32 +3,35 @@
 - Year/Venue: 2022 / CoRL
 - Category: Foundations: Vision-Language-Action and Robotics
 - Tags: Robotics, Imitation Learning, Vision-Language Action
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/2202.02005
-- PDF status: downloaded
-- GitHub/Project: https://sites.google.com/view/bc-z/
+- Paper link: ./2022/CoRL/2022_CoRL_BC-Z-Zero-Shot-Task-Generalization-with-Robotic-Imitation/paper.pdf
+- Code/Project: https://sites.google.com/view/bc-z/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- In this paper, we study the problem of enabling a robot to generalize zero-shot or few-shot to new vision-based manipulation tasks.
+- We study this problem using the framework of imitation learning.
+- The key challenge in this endeavour is generalization: the robot must handle new environments, recognize and manipulate objects it has not seen before, and understand the intent of ...
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- To that end, we develop an interactive and flexible imitation learning system that can learn from both demonstrations and interventions and can be conditioned on different forms of ...
 
 ## Input / Output
-Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `vision or vision-language foundation model pretraining`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Our experiments aim to evaluate BC-Z in large-scale imitation learning settings.
+- Then, our experiments will aim to answer the following questions: (1) Can BC-Z enable zero-shot and few-shot generalization to new tasks from a command in the form of ...
+- We present experiments aimed at these questions in this section.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- Our system does have a number of limitations.
+- This suggests that an exciting direction for future work is to use our policies as a general-purpose initialization for finetuning of downstream tasks, where additional training, perhaps with ...
+- A direction to address this limitation is to relabel the dataset with a variety of human-provided annotations , which could enable the system to handle more variability in ...
 
 ## Contribution
-- vision or vision-language foundation model pretraining 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Robotics, Imitation Learning, Vision-Language Action.
+- To that end, we develop an interactive and flexible imitation learning system that can learn from both demonstrations and interventions and can be conditioned on different forms of ...
+- : In this paper, we study the problem of enabling a vision-based robotic manipulation system to generalize to novel tasks, a long-standing challenge in robot learning.
+- We approach the challenge from an imitation learning perspective, aiming to study how scaling and broadening the data collected can facilitate such generalization.
+
+## Abstract Cue
+- : In this paper, we study the problem of enabling a vision-based robotic manipulation system to generalize to novel tasks, a long-standing challenge in robot learning.

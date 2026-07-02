@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2025 / NeurIPS Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Vision-Language Model, Robotics, 3D Vision
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_ViSPLA-Visual-Iterative-Self-Prompting-for-Language-Guided/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this work, we introduce $\textit{ViSPLA}$, a novel iterative self-prompting framework that leverages the intrinsic geometry of predicted masks for continual refinement.
+## Brief Method
+- Project Website We propose ViSPLA, a novel iterative self-prompting framework for language-guided 3D affordance detection that incorporates differential geometric feedback for progressive mask refinement.
+- While existing approaches model this as a direct mapping fθ : (P, L) 7→ M, we introduce an iterative refinement process, as already described in section 1: Mt ...
+- To further enhance precision and coherence, we introduce Implicit Neural Affordance Fields, which define continuous probabilistic regions over the 3D surface without additional supervision.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- This approach addresses several critical challenges in the field: (1) Existing single-pass inference methods lack the ability to iteratively refine predictions, often leading to suboptimal segmentation, especially on ...
+- Formally, we can represent the affordance detection problem as a mapping function fθ : (P) 7→ A, where P ∈ RN ×3 denotes a point cloud with N ...
+- Project Website We propose ViSPLA, a novel iterative self-prompting framework for language-guided 3D affordance detection that incorporates differential geometric feedback for progressive mask refinement.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We propose ViSPLA, a novel iterative self-prompting framework for language-guided 3D affordance detection that incorporates differential geometric feedback for progressive mask refinement.
+- While existing approaches model this as a direct mapping fθ : (P, L) 7→ M, we introduce an iterative refinement process, as already described in section 1: Mt ...
+- Unlike previous methods that rely on single-pass inference, our approach employs a recurrent self-prompting mechanism that leverages the intrinsic geometric properties of predicted affordance masks to guide subsequent ...
+- 3.2 Preliminaries: Language-guided Affordance Detection Backbone We build upon the 3D-AffordanceLLM architecture, adopting it as our backbone, which comprises a pre-trained point encoder fPE , a point cloud ...
+- ViSPLA consists of three main components: (1) a language-guided affordance detection backbone based on 3D-AffordanceLLM, (2) a differential geometry-based self-prompting module, and (3) an iterative affordance refinement module, ...

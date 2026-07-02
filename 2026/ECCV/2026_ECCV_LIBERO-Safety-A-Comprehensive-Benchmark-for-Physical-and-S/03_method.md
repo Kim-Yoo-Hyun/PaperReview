@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ECCV
+- Category: Benchmarks and Datasets
+- Tags: VLA, Vision-Language Model, Benchmark, semantic
+- Paper link: ./2026/ECCV/2026_ECCV_LIBERO-Safety-A-Comprehensive-Benchmark-for-Physical-and-S/paper.pdf
+- Code/Project: https://libero-safety.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To address this, we introduce a parametric safety benchmark to procedurally generate safety-critical scenarios with comprehensive stochasticity.
+- To overcome the scalability bottlenecks of human teleoperation, we develop a novel keypose-driven data generation pipeline.
+- Our analysis reveals a critical generalization-safety tension: although high-diversity training fosters safer trajectories, task success remains fundamentally bottlenecked by sub-optimal trajectory synthesis and semantic misalignment.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- This infrastructure drives a fivedimensional curriculum that decouples safety into semantic reasoning and physical constraints. – Keypose-Driven Data Generation Pipeline: To overcome the inefficiency and scalability bottlenecks of ...
+- First, their exclusive reliance on human teleoperation is prohibitively time-consuming, severely bottlenecking the scalability required to train robust foundation models.
+- To address this, we introduce a parametric safety benchmark to procedurally generate safety-critical scenarios with comprehensive stochasticity.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Perceptual Parametric Perturbation Task Definition Scene Dynamics Physical Semantic Proximal Safety Safety HRI Data Acquisition RLBench CALVIN LIBERO RoboCasa RoboTwin 2.0 LIBERO-PRO LIBERO-Plus SafeLIBERO VLA-Arena LIBERO-X ✗ ✗ ...
+- Ours ✓ ✓ Static / Dynamic ✓ ✓ ✓ Gen. / Teleop.
+- 2.2 Safety-Aware Policy Learning The limitations of current robotic policies have motivated increasing research into safety-aware policy learning.
+- SafeVLA introduces explicit safety objectives into policy optimization, providing a foundation for improving robustness to long-tail failures and distributional shifts.
+- Extending the focus on robustness during execution, Latent Safety Filters estimates safe sets directly from high-dimensional observations and constrains policies to avoid entering unsafe regions.

@@ -1,26 +1,34 @@
 # Evaluation
 
-## Dataset
-Replica, KITTI, ImageNet, LAION
+- Year/Venue: 2023 / TMLR
+- Category: Foundations: Vision Foundation Models
+- Tags: self-supervised, representation
+- Paper link: ./2023/TMLR/2023_TMLR_DINOv2-Learning-Robust-Visual-Features-without-Supervision/paper.pdf
+- Code/Project: https://github.com/facebookresearch/dinov2
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `vision or vision-language foundation model pretraining`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- ImageNet
+- KITTI
 
 ## Metrics
-task-specific accuracy, generalization gap, ablation metrics, mIoU, IoU, AP, mAP, SR
+- accuracy
+- mIoU
+- mAP
+- RMSE
+- ADE
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- First, we show that our self-supervised features outperform the current state of the art by a very large margin.
+- In Table 5, we show that the Top-1 accuracy on the validation set of ImageNet-1k improves by more than +2% when the backbone is finetuned.
+- We also want to validate that our features are competitive with state-of-the-art open-source weakly supervised models.
+- We see the components proposed in this work lead to a very significant improvement (+4.2%) over the previous state of the art (iBOT ViT-L/16 trained on ImageNet-22k) on ...
+- First, we show that our self-supervised features outperform the current state of the art by a very large margin.
+- In Table 5, we show that the Top-1 accuracy on the validation set of ImageNet-1k improves by more than +2% when the backbone is finetuned.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- In our comparisons, we use two kinds of models as baselines.
+- We compare to the best performing self-supervised models that are openly available.
 
 ## Reproducibility Notes
-- Code/Project: https://github.com/facebookresearch/dinov2
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

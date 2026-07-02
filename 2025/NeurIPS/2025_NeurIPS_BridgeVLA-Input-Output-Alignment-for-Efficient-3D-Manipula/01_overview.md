@@ -3,33 +3,34 @@
 - Year/Venue: 2025 / NeurIPS Poster
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLA, Vision-Language Model, Robotics, 3D Vision
-- Authors: Peiyan Li, Yixiang Chen, Hongtao Wu, Xiao Ma, Xiangnan Wu, Yan Huang, Liang Wang, Tao Kong
-- Paper: https://openreview.net/forum?id=ffBF6hYuQv
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_BridgeVLA-Input-Output-Alignment-for-Efficient-3D-Manipula/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- Another significant challenge in developing 3D VLA models lies in the misalignment between the 3D inputs used in action fine-tuning and the 2D image inputs used in original ...
+- To tackle the challenges mentioned above, as inllustrated in Fig.
+- This strategy fails to take advantage of the 3D structural priors as previous efficient 3D policies [39, 25, 13–15] that align the observation input and action output into ...
 
 ## Core Idea
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Recently, leveraging pre-trained vision-language models (VLMs) for building vision-language-action (VLA) models has emerged as a promising approach to effective robot manipulation learning.
-- Method cue: In this paper, we introduce a new paradigm for constructing 3D VLAs.
-- Result cue: Extensive experiments show that the resulting model, BridgeVLA, can learn 3D manipulation both efficiently and effectively.
+- In this paper, we introduce a new paradigm for constructing 3D VLAs.
+- Even when the data are increased to 50 trajectories per task, its success rate is still much lower than BridgeVLA, which indicates only adding 3D information is not ...
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `robot manipulation and vision-language-action control`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- BridgeVLA outperforms state-of-the-art baselines across three simulation benchmarks.
+- BridgeVLA outperforms all existing state-of-the-art 3D manipulation methods on both benchmarks, addressing Q3 and Q4.
+- We compare BridgeVLA with multiple baselines. (1) Image-BC (CNN) and Image-BC (ViT) are two 2D baseline methods which predict the actions directly from 2D images using CNN and ...
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: VLA, Vision-Language Model, Robotics, 3D Vision.
-- 초록에서 확인되는 주요 cue: Recently, VLMs, VLA, However, VLAs, Specifically, VLM, Using.
+- BridgeVLA outperforms state-of-the-art baselines across three simulation benchmarks.
+- In real-robot experiments, BridgeVLA outperforms a stateof-the-art baseline method by 32% on average.
+- In this paper, we introduce a new paradigm for constructing 3D VLAs.
+
+## Abstract Cue
+- Recently, leveraging pre-trained vision-language models (VLMs) for building vision-language-action (VLA) models has emerged as a promising approach to effective robot manipulation learning.

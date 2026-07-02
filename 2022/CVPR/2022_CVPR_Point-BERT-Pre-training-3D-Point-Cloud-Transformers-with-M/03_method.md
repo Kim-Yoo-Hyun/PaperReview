@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2022 / CVPR
+- Category: Foundations: 3D Representation Learning
+- Tags: point cloud, 3D Vision
+- Paper link: ./2022/CVPR/2022_CVPR_Point-BERT-Pre-training-3D-Point-Cloud-Transformers-with-M/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Equipped with our pretraining strategy, we show that a pure Transformer architecture attains 93.8% accuracy on ModelNet40 and 83.1% accuracy on the hardest setting of ScanObjectNN, surpassing carefully ...
+- Tokenizer We present Point-BERT, a new paradigm for learning Transformers to generalize the concept of BERT to 3D point cloud.
+- The pre-training objective is to recover the original point tokens at the masked locations under the supervision of point tokens obtained by the Tokenizer.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Tokenizer We present Point-BERT, a new paradigm for learning Transformers to generalize the concept of BERT to 3D point cloud.
+- Inspired by BERT, we devise a Masked Point Modeling (MPM) task to pre-train point cloud Transformers.
+- Equipped with our pretraining strategy, we show that a pure Transformer architecture attains 93.8% accuracy on ModelNet40 and 83.1% accuracy on the hardest setting of ScanObjectNN, surpassing carefully ...
 
 ## 핵심 방법론
-- Task family: core 3D geometry and scene representation learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- During MPM pre-training, we fix the weights of Tokenizer learned by dVAE.
+- The stochastic depth with a 0.1 rate is applied in our transformer encoder.
+- PointNet PointNet++ SO-Net PointCNN DGCNN DensePoint RSCNN KPConv 1k 1k 1k 1k 1k 1k 1k ∼6.8k 89.2 90.5 92.5 92.2 92.9 92.8 92.9 92.9 [T] PCT [T] PointTransformer ...

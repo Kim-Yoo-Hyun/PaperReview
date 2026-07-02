@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Gaussian Splatting, language, generalization
+- Paper link: ./2026/CVPR/2026_CVPR_GenSplat-Bridging-the-Generalization-Gap-in-3DGS-Language/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In this paper, we propose GenSplat, a novel approach for language comprehension in 3D Gaussian Splatting (3DGS).
+- Following , we use diverse datasets for training, including ScanRefer , Nr3D , Sr3D , Multi3DRefer , ScanQA , SQA3D , Scan2Cap and Nr3DCaptioning .
+- To further improve spatial alignment and computational efficiency, we introduce a Geometry-Aware Frame Selector (GAFS), which adaptively selects the most informative views based on Gaussian and textural cues.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Our key insight for this problem is to formulate a structured learning process to progressively align linguistic concepts with 3D Gaussians.
+- However, they inherently lack cross-scene generalization (as they require per-scene optimization) and do not support comprehensive spatial reasoning beyond segmentation, e.g., for visual question answering (VQA) or captioning ...
+- In this paper, we propose GenSplat, a novel approach for language comprehension in 3D Gaussian Splatting (3DGS).
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Following , we use diverse datasets for training, including ScanRefer , Nr3D , Sr3D , Multi3DRefer , ScanQA , SQA3D , Scan2Cap and Nr3DCaptioning .
+- Note that our method does not require test-time per-scene optimization beyond 3DGS reconstruction.
+- We use AdamW optimizer with a learning rate initialized as 2 × 10−4 and updated using the cosine annealing schedule.
+- In the instruction-tuning stage, we use ground-truth selected views to train the MLLM.
+- In both stages, we use the AdamW optimizer with a learning rate of 1 × 10−4 (weight decay of 0.01) and a batch size of 2 per GPU.

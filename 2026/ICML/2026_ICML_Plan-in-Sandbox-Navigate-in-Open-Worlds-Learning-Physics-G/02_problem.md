@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2026 / ICML
+- Category: Navigation and Embodied AI
+- Tags: Navigation, Reinforcement Learning
+- Paper link: ./2026/ICML/2026_ICML_Plan-in-Sandbox-Navigate-in-Open-Worlds-Learning-Physics-G/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-실내/실외 이동 에이전트는 언어 목표와 3D 공간 구조를 연결해야 하며, partial observation과 탐색-활용 균형 때문에 단순 2D 인식만으로는 안정적이지 않다.
+- Although the research community has turned to Reinforcement Learning (RL) to facilitate policy adaptation (Zeng et al., 2024; Choi et al., 2024; Wang & Huang, 2025) from highlevel ...
+- Problem Formulation We formulate the learning problem via three core components: (1) a physics-grounded semantic sandbox S, which provides an environment ES ; (2) an unknown target task ...
+- Navigation Task We formulate the navigation task N as a Goal-Conditioned Reinforcement Learning (GCRL) (Liu et al., 2022) problem.
 
 ## 해결하려는 문제
-- 연구 유형: embodied navigation and spatial planning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: However, their performance in embodied navigation remains hindered by a scarcity of aligned open-world vision and robot control data.
+- These sub-goals are subsequently executed by • We introduce a novel Generative Experience-Driven Learning paradigm to address the severe data scarcity and real-world transfer challenges in embodied navigation. ...
+- Optimized Policy Observations Task Egocentric Views Visual Buffers 1 Frontier 1 Real-World Env Frontier Memory Node Node EVOLUTION black NAVIGATION Open-world Sandbox (a) SAGE Agent (c) GOAT-Bench Performance ...
+- We demonstrate that SAGE significantly improves planner-assisted embodied navigation, achieving a 53.21% LLM-Match Success Rate on A-EQA (+9.7% over baseline), while showing encouraging transfer to physical indoor robot ...
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Navigation, Reinforcement Learning` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

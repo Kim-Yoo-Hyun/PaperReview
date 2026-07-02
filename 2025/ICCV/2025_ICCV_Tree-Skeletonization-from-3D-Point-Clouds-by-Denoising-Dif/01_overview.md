@@ -3,32 +3,34 @@
 - Year/Venue: 2025 / ICCV
 - Category: 3D Generative Modeling and Diffusion
 - Tags: Diffusion, Generation, point cloud, 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Marks_Tree_Skeletonization_from_3D_Point_Clouds_by_Denoising_Diffusion_ICCV_2025_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/ICCV/2025_ICCV_Tree-Skeletonization-from-3D-Point-Clouds-by-Denoising-Dif/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-생성 모델 또는 policy 모델이 3D 구조와 물리 제약을 보존하지 못하면 로봇 실행이나 3D 장면 생성에서 일관성이 깨진다.
+- Traditionally, the task of tree skeletonization is approached as a regression problem , while more recent approaches tackle the problem also with gen- The natural world presents complex ...
+- Introduction The world around us is filled with natural structures, such as trees, that humans can interpret even when parts of them are occluded; however, this remains a ...
+- However, reconstructing tree topologies from sensor data, called tree skeletonization, remains a challenge for computer vision approaches.
 
 ## Core Idea
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- To this extent, we use uniform distance sampling on the predicted graphs to densely sample a set of points H from the predicted skeleton and a set of ...
+- To further measure the reconstructed skeleton’s quality, we use the F1-score, precision, and recall metrics proposed by Knapitsch et al. .
 
 ## Input / Output
-Input/Output follows the paper task formulation; see PDF for the exact interface.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `diffusion-based generation or policy learning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Introduction The world around us is filled with natural structures, such as trees, that humans can interpret even when parts of them are occluded; however, this remains a ...
+- Reconstructing tree topologies from sensor data is one application where this aspect matters.
+- There are many applications where inferring these topologies is fundamental, e.g., forest monitoring for understanding of these complex natural systems , monitoring growth , predicting quality and quantity ...
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- diffusion-based generation or policy learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Diffusion, Generation, point cloud, 3D Vision.
+- Tree skeletonization consists of inferring from sensor data the graph representing the medial axes of the trunk, branches, and twigs, collectively referred to as branches, for simplicity.
+- Traditionally, the task of tree skeletonization is approached as a regression problem , while more recent approaches tackle the problem also with gen- The natural world presents complex ...
+- Introduction The world around us is filled with natural structures, such as trees, that humans can interpret even when parts of them are occluded; however, this remains a ...
+
+## Abstract Cue
+- Introduction The world around us is filled with natural structures, such as trees, that humans can interpret even when parts of them are occluded; however, this remains a challenge for computer vision systems.

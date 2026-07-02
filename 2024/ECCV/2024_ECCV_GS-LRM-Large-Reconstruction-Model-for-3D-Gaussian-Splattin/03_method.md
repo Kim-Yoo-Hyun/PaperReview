@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Paper link: ./2024/ECCV/2024_ECCV_GS-LRM-Large-Reconstruction-Model-for-3D-Gaussian-Splattin/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In this section, we present the technical details of our method, including the architecture of our transformer-based model (Sec.
+- We propose GS-LRM, a scalable large reconstruction model that can predict high-quality 3D Gaussian primitives from 2-4 posed sparse images in ∼0.23 seconds on single A100 GPU.
+- Our model features a very simple transformer-based architecture; we patchify input posed images, pass the concatenated multi-view image tokens through a sequence of transformer blocks, and decode final ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Reconstructing a 3D scene from image captures is both a central problem and a long-standing challenge in computer vision.
+- However, these models adopt triplane NeRF as the scene representation, which suffers from a limited triplane resolution and expensive volume rendering.
+- In this section, we present the technical details of our method, including the architecture of our transformer-based model (Sec.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- In this section, we present the technical details of our method, including the architecture of our transformer-based model (Sec.
+- 3.1 Transformer-based Model Architecture As shown in Fig.
+- Following prior works , we use the Plücker ray coordinates of each image {Pi ∈ RH×W ×6 } computed from the camera parameters for pose conditioning.
+- Multi-view image tokens are then concatenated and passed through a sequence of transformer blocks consisting of self-attention and MLP layers.
+- 2, we train a transformer model to regress per-pixel 3D GS parameters from a set of images with known camera poses.

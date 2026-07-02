@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / CVPR
+- Category: Benchmarks and Datasets
+- Tags: Visual-Language Grounding, Benchmark, Robotics
+- Paper link: ./2026/CVPR/2026_CVPR_RealVLG-R1-A-Large-Scale-Real-World-Visual-Language-Ground/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To address these limitations, we propose the RealVLG framework, which integrates the RealVLG11B dataset and the RealVLG-R1 model to unify real-world visual-language grounding and grasping tasks.
+- This comprehensive and integrated methodology establishes a unified, quantifiable standard for comparing model architectures across visual-language grounding and grasping tasks.
+- The GSPO variant attains slightly lower geometric scores (mIoU=29.2%) but exhibits higher training stability and fully structured outputs (Rv =100%).
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Existing VLG approaches focus on coarse-grained, object-level localization, while traditional robotic grasping methods rely predominantly on geometric cues and lack language guidance, which limits their applicability in language-driven ...
+- To address these limitations, we propose the RealVLG framework, which integrates the RealVLG11B dataset and the RealVLG-R1 model to unify real-world visual-language grounding and grasping tasks.
+- To address these limitations, we propose the RealVLG framework, which integrates the RealVLG11B dataset and the RealVLG-R1 model to unify real-world visual-language grounding and grasping tasks.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- This comprehensive and integrated methodology establishes a unified, quantifiable standard for comparing model architectures across visual-language grounding and grasping tasks.
+- The GSPO variant attains slightly lower geometric scores (mIoU=29.2%) but exhibits higher training stability and fully structured outputs (Rv =100%).
+- Following the data split in Table 2, both RealVLG-R1 and Qwen2.5-VL+SFT were fine-tuned for 10 epochs using only 10% of the training set.

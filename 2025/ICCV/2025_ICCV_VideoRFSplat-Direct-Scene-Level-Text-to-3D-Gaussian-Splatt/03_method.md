@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Generative Modeling and Diffusion
+- Tags: Gaussian Splatting, geometry, Diffusion, Generation, 3D Vision
+- Paper link: ./2025/ICCV/2025_ICCV_VideoRFSplat-Direct-Scene-Level-Text-to-3D-Gaussian-Splatt/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In this work, we propose an architecture and a sampling strategy to jointly model multi-view images and camera poses when fine-tuning a video genera- tion model.
+- We propose VideoRFSplat, a direct text-to-3D model leveraging a video generation model to generate realistic 3D Gaussian Splatting (3DGS) for unbounded real-world scenes.
+- Additionally, we propose an asynchronous sampling strategy that denoises camera poses faster than multi-view images, allowing rapidly denoised poses to condition multi-view generation, reducing mutual ambiguity and enhancing ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Trained on multiple large-scale real-world datasets (RealEstate10K, MVImgNet, DL3DV-10K, ACID), VideoRFSplat outperforms existing text-to-3D direct generation methods that heavily depend on post-hoc refinement via score distillation sampling, achieving ...
+- In this work, we propose an architecture and a sampling strategy to jointly model multi-view images and camera poses when fine-tuning a video genera- tion model.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: Gaussian Splatting, geometry, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Quality Metrics BRISQUE↓ NIQE↓ CLIPScore↑ DreamFusion Magic3D LatentNeRF SJC Fantasia3D ProlificDreamer 90.2 92.8 88.6 82.0 69.6 61.5 10.48 11.20 9.19 10.15 7.65 7.07 - Director3D Director3D (w/ SDS++) ...
+- VideoRFSplat outperforms all baselines without SDS++ refinement.
+- Method MVImgNet 30.48 31.00 31.43 32.30 88.44 95.88 79.91 85.31 30.04 31.68 30.06 31.90 VideoRFSplat 30.33 33.0 73.69 32.5 34.9 35.3 5.32 5.64 33.3 33.3 32.8 32.8 δ ...
+- FID-10K↓ CLIPScore↑ FID-2.4K↓ CLIPScore↑ 39.55 41.80 34.85 35.46 Vanilla sampling Vanilla sampling (w/o Eq.
+- Ablation study on asynchronous sampling.

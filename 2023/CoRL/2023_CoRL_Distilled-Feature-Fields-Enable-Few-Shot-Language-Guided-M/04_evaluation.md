@@ -1,26 +1,30 @@
 # Evaluation
 
-## Dataset
-Replica, OXE
+- Year/Venue: 2023 / CoRL
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Robotics, NeRF, Vision-Language, manipulation
+- Paper link: ./2023/CoRL/2023_CoRL_Distilled-Feature-Fields-Enable-Few-Shot-Language-Guided-M/paper.pdf
+- Code/Project: https://f3rm.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `language-aware Gaussian/implicit 3D scene representation`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- LERF
 
 ## Metrics
-task-specific accuracy, generalization gap, ablation metrics, IoU, AP, mAP, success rate, SR
+- success rate
+- collision
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- While the baselines using density, RGB color values, or intermediate features from NeRF achieve respectable performance, they struggle to identify the semantic category of the objects we care ...
+- We include three types of objects in our test scenes: (1) novel objects from the same categories as the demonstrations, (2) out-ofdistribution (OOD) objects from new categories that ...
+- We break down the success rates by category in Table 2, and show the robot’s execution sequence for an example scene in Figure 7 (video).
+- For each task, we evaluate in ten scenes that contain novel objects in arbitrary poses and distractor objects.
+- We present a few-shot learning method for 6-DOF grasping and placing that harnesses these strong spatial and semantic priors to achieve in-the-wild generalization to unseen objects.
+- While the baselines using density, RGB color values, or intermediate features from NeRF achieve respectable performance, they struggle to identify the semantic category of the objects we care ...
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: We present a few-shot learning method for 6-DOF grasping and placing that harnesses these strong spatial and semantic priors to achieve in-the-wild generalization to ...
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- We consider three baselines, including (1) using density σ from the NeRF, (2) the intermediate NeRF features, and (3) the RGB color value as features, and compare against ...
+- While the baselines using density, RGB color values, or intermediate features from NeRF achieve respectable performance, they struggle to identify the semantic category of the objects we care ...
 
 ## Reproducibility Notes
-- Code/Project: https://f3rm.github.io/
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

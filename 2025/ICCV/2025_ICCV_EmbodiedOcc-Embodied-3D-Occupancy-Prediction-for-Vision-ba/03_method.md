@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Large Multimodal Models
+- Tags: 3D Vision
+- Paper link: ./2025/ICCV/2025_ICCV_EmbodiedOcc-Embodied-3D-Occupancy-Prediction-for-Vision-ba/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Following existing works , we use a pre-trained EfficientNet-B7 to initialize the image encoder in our local module.
+- We use mIoU and IoU as the evaluation metrics.
+- For each update, we extract semantic and structural features from the observed image and efficiently incorporate them via deformable crossattention to refine the regional Gaussians.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Most existing methods focus on offline perception from one or a few views and cannot be applied to embodied agents that demand to gradually perceive the scene through ...
+- Most existing methods still focus on local 3D occupancy prediction by integrati
+- Following existing works , we use a pre-trained EfficientNet-B7 to initialize the image encoder in our local module.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Following existing works , we use a pre-trained EfficientNet-B7 to initialize the image encoder in our local module.
+- We use mIoU and IoU as the evaluation metrics.
+- Each scene consists of 30 posed frames with their corresponding local occupancies.
+- The depth prediction network used in the depth-aware branch is a fine-tuned DepthAnything-V2 model that remains frozen during the training, and the depth-aware layer is a 3-layer MLP.
+- The resolutions of the monocular input are set to 480\times 640 and the number of Gaussians used to conduct the local prediction is 16200.

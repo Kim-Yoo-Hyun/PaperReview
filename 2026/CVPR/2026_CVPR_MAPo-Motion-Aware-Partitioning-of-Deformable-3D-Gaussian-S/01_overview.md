@@ -3,32 +3,33 @@
 - Year/Venue: 2026 / CVPR
 - Category: 3D Scene Representations and Neural Fields
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/CVPR2026/html/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2026/CVPR/2026_CVPR_MAPo-Motion-Aware-Partitioning-of-Deformable-3D-Gaussian-S/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- However, the inherent Gaussians, we recursively partition them temporally and reliance on dense spatial sampling and costly Multilayer duplicate their deformation networks for each new temporal Perceptron (MLP) ...
+- However, these deformation-based methReconstructing high-fidelity dynamic scenes from multiods often produce blurred renderings and lose fine motion view video inputs is a fundamental challenge in computer details in ...
+- Concurrently, low-dynamic 3D Gaussians are treated as static to reduce computational costs.
 
 ## Core Idea
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- However, the inherent Gaussians, we recursively partition them temporally and reliance on dense spatial sampling and costly Multilayer duplicate their deformation networks for each new temporal Perceptron (MLP) ...
+- We report PSNR, SSIM , and LPIPS for rendering quality, alongside computational costs including training time, rendering speed, and storage, which are calculated on an NVIDIA RTX A6000 ...
 
 ## Input / Output
-Input: multi-view images/poses or reconstructed scenes plus language query. Output: language-queryable 3D field, mask, grounding, rendering, or scene edit.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `language-aware Gaussian/implicit 3D scene representation`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive experiments demonstrate that MAPo achieves superior rendering quality compared to baselines while maintaining comparable computational costs, partic3D Gaussian Splatting, known for enabling high-quality ularly in regions with ...
+- To address these challenges, we introdiance Fields (NeRF) have demonstrated remarkable duce Motion-Aware Partitioning of Deformable 3D Gauscapabilities in representing static scenes for novel view synsian Splatting (MAPo), ...
 
 ## Limitation
-3DGS/NeRF 기반 방법은 scene reconstruction 품질, 카메라 포즈, memory/runtime, dynamic scene 처리에 민감하다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- language-aware Gaussian/implicit 3D scene representation 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Gaussian Splatting, 3D reconstruction, 3D Vision.
+- Extensive experiments demonstrate that MAPo achieves superior rendering quality compared to baselines while maintaining comparable computational costs, partic3D Gaussian Splatting, known for enabling high-quality ularly in regions with ...
+- However, the inherent Gaussians, we recursively partition them temporally and reliance on dense spatial sampling and costly Multilayer duplicate their deformation networks for each new temporal Perceptron (MLP) ...
+- To address these challenges, we introdiance Fields (NeRF) have demonstrated remarkable duce Motion-Aware Partitioning of Deformable 3D Gauscapabilities in representing static scenes for novel view synsian Splatting (MAPo), ...
+
+## Abstract Cue
+- Extensive experiments demonstrate that MAPo achieves superior rendering quality compared to baselines while maintaining comparable computational costs, partic3D Gaussian Splatting, known for enabling high-quality ularly in regions with complex or rapid motions. static scene reconstruction with fast rendering, is increasingly being applied to multi-view dynamic ...

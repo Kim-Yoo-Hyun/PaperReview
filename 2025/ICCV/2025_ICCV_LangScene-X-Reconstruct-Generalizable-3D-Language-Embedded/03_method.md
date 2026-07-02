@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Large Multimodal Models
+- Tags: 3D Vision, Diffusion
+- Paper link: ./2025/ICCV/2025_ICCV_LangScene-X-Reconstruct-Generalizable-3D-Language-Embedded/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Furthermore, we propose a Language Quantized Compressor (LQC), trained on largescale image datasets, to efficiently encode language embeddings, enabling cross-scene generalization without perscene retraining.
+- We visualize the training curve of our method and traditional autoencoder.
+- Ablations In this paper, we present LangScene-X, a generative framework that builds generalizable 3D language-embedded fields from only sparse views, which unify the information of reconstructing and understanding ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To reduce the memory cost and enhance scalability for large-scale data, we propose a generalizable Language Quantized Compressor (LQC) trained on largescale datasets, which encodes high-dimensional language features ...
+- Powered by the generative capability of creating more consistent novel observations, we can build generalizable 3D languageembedded scenes from only sparse views.
+- Furthermore, we propose a Language Quantized Compressor (LQC), trained on largescale image datasets, to efficiently encode language embeddings, enabling cross-scene generalization without perscene retraining.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We visualize the training curve of our method and traditional autoencoder.
+- Ablations In this paper, we present LangScene-X, a generative framework that builds generalizable 3D language-embedded fields from only sparse views, which unify the information of reconstructing and understanding ...
+- Then we introduce a language quantized compressor to map high-dimensional language features into efficient feature representations.
+- Training Curve comparison between our LQC and regular autoencoder technique. gressive training in TriMap video diffusion, which achieves more matched points.
+- 8, where our method enable to perform sharper boundaries and more accurate activation scores within the query objects.

@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: 3D Scene Representations and Neural Fields
+- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Paper link: ./2026/ICLR/2026_ICLR_SurfSplat-Conquering-Feedforward-2D-Gaussian-Splatting-wit/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To address this issue, we present SurfSplat, a feedforward framework based on 2D Gaussian Splatting (2DGS) primitive, which provides stronger anisotropy and higher geometric ...
+## Brief Method
+- PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ pixelSplat 26.049 0.862 0.137 25.782 0.868 0.207 24.920 0.877 0.269 25.584 0.869 0.204 HiSplat 27.193 0.882 ...
+- 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average Method PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ pixelSplat 28.284 0.842 0.146 27.687 0.848 0.243 26.462 ...
+- We report quantitative comparison on the RE10K dataset in Table 1 and on the ACID dataset in Table 2.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ pixelSplat 26.049 0.862 0.137 25.782 0.868 0.207 24.920 0.877 0.269 25.584 0.869 0.204 HiSplat 27.193 0.882 ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ pixelSplat 26.049 0.862 0.137 25.782 0.868 0.207 24.920 0.877 0.269 25.584 0.869 0.204 HiSplat 27.193 0.882 ...
+- 256×256 (Standard) 512×512 (HRRC) 1024×1024 (HRRC) Average Method PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ pixelSplat 28.284 0.842 0.146 27.687 0.848 0.243 26.462 ...
+- We report quantitative comparison on the RE10K dataset in Table 1 and on the ACID dataset in Table 2.
+- Our proposed SurfSplat method consistently outperforms previous stateof-the-art methods across various metrics and datasets, especially under high-resolution rendering settings.
+- As shown in Figure 4, we visualize the predicted 3D scenes rendered into both RGB and depth maps at the original, ×2, and ×4 resolutions.

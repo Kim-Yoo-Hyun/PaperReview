@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Generative Modeling and Diffusion
+- Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
+- Paper link: ./2025/ICCV/2025_ICCV_GSV3D-Gaussian-Splatting-based-Geometric-Distillation-with/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose a method that leverages 2D diffusion models’ implicit 3D reasoning ability while ensuring 3D consistency via Gaussian-splattingbased geometric distillation.
+- As a result, our approach simultaneously generates high-quality, multi-viewconsistent images and accurate 3D models, providing a 1.
+- This limitation stems from the restricted diversity of the training data, which hinders the model’s ability to generalize well to unseen or complex scenarios.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, existing methods have limitations: 3D diffusion models are limited by dataset scarcity and the absence of strong pretrained priors, while 2D diffusion-based approaches struggle with geometric consistency.
+- This limitation restricts the generalization ability of these models and makes it difficult for them to capture complex details across var- ious object types.
+- We propose a method that leverages 2D diffusion models’ implicit 3D reasoning ability while ensuring 3D consistency via Gaussian-splattingbased geometric distillation.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: Gaussian Splatting, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- This limitation stems from the restricted diversity of the training data, which hinders the model’s ability to generalize well to unseen or complex scenarios.
+- GaussianAnything and TriplaneGaussians are 3D methods, while LGM, Zero123Plus, Era3D, and SV3D are 2D methods.
+- GA and TGS are abbreviations for GaussianAnything and TriplaneGaussian, respectively.

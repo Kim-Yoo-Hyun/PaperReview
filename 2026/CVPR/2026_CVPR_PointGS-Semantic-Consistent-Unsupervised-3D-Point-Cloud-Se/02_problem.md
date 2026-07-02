@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2026 / CVPR
+- Category: 3D Semantic Understanding and Alignment
+- Tags: Gaussian Splatting, semantic, alignment, point cloud, 3D Vision
+- Paper link: ./2026/CVPR/2026_CVPR_PointGS-Semantic-Consistent-Unsupervised-3D-Point-Cloud-Se/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-NeRF/3DGS는 장면을 잘 렌더링하지만 언어 질의, open-vocabulary semantics, instance-level grounding을 직접 지원하지 않는 경우가 많다.
+- To address these limitations, this paper proposes PointGS, a simple yet effective pipeline for unsupervised 3D point cloud segmentation.
+- Unsupervised point cloud segmentation is critical for embodied artificial intelligence and autonomous driving, as it mitigates the prohibitive cost of dense point-level annotations required by fully supervised methods.
+- Input sparse point clouds are first reconstructed into dense 3D Gaussian spaces via multiview observations, filling spatial gaps and encoding occlusion relationships to eliminate projection-induced semantic conflation.
 
 ## 해결하려는 문제
-- 연구 유형: language-aware Gaussian/implicit 3D scene representation
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Experiments demonstrate that PointGS outperforms state-ofthe-art unsupervised methods, achieving +0.9% mIoU on ScanNet-V2 and +2.8% mIoU on S3DIS. and Its Semantics of Sparse Point Cloud and Its Semantics ...
+- In the conference room scene, the upper part of the figure shows that the sparse point cloud causes the foreground points and background points to overlap, while the ...
+- Input sparse point clouds are first reconstructed into dense 3D Gaussian spaces via multiview observations, filling spatial gaps and encoding occlusion relationships to eliminate projection-induced semantic conflation.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Gaussian Splatting, semantic, alignment, point cloud` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

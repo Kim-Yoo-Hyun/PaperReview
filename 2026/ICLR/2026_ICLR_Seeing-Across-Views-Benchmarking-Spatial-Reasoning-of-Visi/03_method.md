@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: Benchmarks and Datasets
+- Tags: Vision-Language Model, Robotics, 3D Vision, Benchmark
+- Paper link: ./2026/ICLR/2026_ICLR_Seeing-Across-Views-Benchmarking-Spatial-Reasoning-of-Visi/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To bridge this gap, we introduce \textbf{MV-RoboBench}, a benchmark specifically designed to evaluate the multi-view spatial reasoning capabilities of VLMs in robotic manipulation.
+## Brief Method
+- reasoning, or non-embodied multi-view perception.
+- The “Partial” in “Multi-View” indicates that these datasets contain only a subset of multi-view samples, mixed with single-view inputs.
+- MV-RoboBench uniquely targets multi-view spatial reasoning within robotic manipulation scenarios, combining embodiment with multi-view perception.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Singleview inputs are inherently limited by challenges like occlusion, depth ambiguity, and restricted fields of view.
+- Multi-view observations, by contrast, offer complementary perspectives that help overcome these limitations.
+- reasoning, or non-embodied multi-view perception.
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Rank Spatial Tasks Robotic Tasks Blind Evaluation Random Choice 19.71 GPT-3.5-turbo 18.52 GPT-4-turbo 22.91 – – – 17.80 15.50 19.00 19.40 22.39 13.43 20.00 20.31 19.92 19.07 12.25 ...

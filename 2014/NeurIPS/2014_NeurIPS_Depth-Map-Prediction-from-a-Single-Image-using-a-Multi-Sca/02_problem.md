@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2014 / NeurIPS
+- Category: Foundations: Monocular Geometry
+- Tags: 3D Vision, monocular depth, geometry
+- Paper link: ./2014/NeurIPS/2014_NeurIPS_Depth-Map-Prediction-from-a-Single-Image-using-a-Multi-Sca/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- Moreover, the task is inherently ambiguous, and a technically ill-posed problem: Given an image, an infinite number of possible world scenes may have produced it.
+- While there is much prior work on estimating depth based on stereo images or motion , there has been relatively little on estimating depth from a single image.
+- Moreover, the task is inherently ambiguous, with a large source of uncertainty coming from the overall scale.
 
 ## 해결하려는 문제
-- 연구 유형: 3D reconstruction, calibration, and geometric consistency
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- By leveraging the raw datasets as large sources of training data, our method achieves boundaries without the need for superpixelation.
+- In this paper, we present a new method that addresses this task by employing two deep network stacks: one that makes a coarse global prediction based on the ...
+- Moreover, the task is inherently ambiguous, with a large source of uncertainty coming from the overall scale.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `3D Vision, monocular depth, geometry` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- Moreover, the task is inherently ambiguous, and a technically ill-posed problem: Given an image, an infinite number of possible world scenes may have produced it.
+- In turn, such relations help provide richer representations of objects and their environment, often leading to improvements in existing recognition tasks , as well as enabling many further ...
+- While there is much prior work on estimating depth based on stereo images or motion , there has been relatively little on estimating depth from a single image.

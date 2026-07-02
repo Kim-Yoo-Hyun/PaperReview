@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
+- Year/Venue: 2025 / NeurIPS Poster
+- Category: Navigation and Embodied AI
+- Tags: Robotics, Navigation, Reinforcement Learning
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_SimWorld-Robotics-Synthesizing-Photorealistic-and-Dynamic/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this work, we present SimWorld-Robotics (SWR), a simulation platform for embodied AI in large-scale, photorealistic urban environments.
+## Brief Method
+- In this work, we present SimWorldRobotics (SWR), a simulation platform for embodied AI in large-scale, photorealistic urban environments.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, to address the critical challenges faced by real-world robotics in urban environments, they lack the necessary realism, customizability, scalability, and versatility.
+- Compared to indoor scenarios, robotics in outdoor environments, in particular, large urban environments, introduces additional challenges, such as (1) 3D perception, spatial reasoning and grounding in large environments; ...
+- In this work, we present SimWorldRobotics (SWR), a simulation platform for embodied AI in large-scale, photorealistic urban environments.
 
 ## 핵심 방법론
-- Task family: embodied navigation and spatial planning
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- CSR%↑ Task Progress%↑ Oracle Planner Oracle Planner RoCo 65.00 54.55 33.33 76.90 75.84 22.93 RoCo 11.11 35.94 Both robots have similar observation and action spaces as in the ...
+- Additionally, both robots can send natural language messages to each other.
+- Each robot can send a conﬁrmation signal whenever it believes that it has seen the other robot.
+- We provide more details of the benchmark in Appendix D.
+- For evaluation in the multi-robot search benchmark, we construct 100 unique urban environments, each covering an area of 2.5 km2 .

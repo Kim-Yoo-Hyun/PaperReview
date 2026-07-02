@@ -1,26 +1,32 @@
 # Evaluation
 
-## Dataset
-OXE, ShapeNet
+- Year/Venue: 2024 / ECCV
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: VLA, Vision-Language Model, Robotics
+- Paper link: ./2024/ECCV/2024_ECCV_QUAR-VLA-Vision-Language-Action-Model-for-Quadruped-Robots/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `robot manipulation and vision-language-action control`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Metrics
-success rate, task completion, language-conditioned generalization, real/sim transfer, IoU, AP, mAP, SR
+- accuracy
+- mAP
+- SR
+- success rate
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- As is shown in Table 2, Our model has achieved optimal performance on nearly all the baseline models.
+- In our study, we have achieved a decoder-only VLA framework.
+- QUART has achieved success rates far exceeding those of the baselines in tasks of all difficulty levels, especially in the most challenging crawl and unload tasks, where the ...
+- Conversely, QUART, leveraging the language prowess inherited from large language models, adeptly achieves generalization under novel instructions, thereby effectuating the harmonization of vision, language, and action. of action ...
+- As is shown in Table 2, Our model has achieved optimal performance on nearly all the baseline models.
+- In our study, we have achieved a decoder-only VLA framework.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: 자동 추출 없음.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- Ding et al. action architecture for multi-task quadruped task compared to previous VLM baselines?
+- Considering the absence of VLA models work on quadruped robots at present, we have taken the following baselines into account for a fair comparison: CLIP , R3M , ...
 
 ## Reproducibility Notes
-- Code/Project: not identified
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

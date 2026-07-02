@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: 3D Large Multimodal Models
+- Tags: semantic
+- Paper link: ./2024/ECCV/2024_ECCV_Global-Local-Collaborative-Inference-with-LLM-for-Lidar-Ba/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In this paper, we propose a Global-Local Collaborative Scheme (GLIS) for the lidar-based OVD task, which contains a local branch to generate object-level detection result and a global ...
+- We use LLaMA as the LLM backbone, which is initialized by the checkpoint vicuna-7b-v1.5-16k .
+- We choose the model architecture of 3DETR as our 3D backbone and bounding box prediction heads.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- In this way, the detection model fails to detect objects not belonging to the training object classes.
+- In this paper, we propose a Global-Local Collaborative Scheme (GLIS) for the lidar-based OVD task, which contains a local branch to generate object-level detection result and a global ...
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We use LLaMA as the LLM backbone, which is initialized by the checkpoint vicuna-7b-v1.5-16k .
+- We choose the model architecture of 3DETR as our 3D backbone and bounding box prediction heads.
+- The training of phase 2 lasts for 50 epochs with a total batch size of 16.
+- The training of phase 1 lasts for 400 epochs with a total batch size of 32 (i.e., a single batch size 4 × 8 GPUs).
+- 4.2 Implementation Details The training process contains two phases: 1) training the 3D backbone and the bounding box prediction heads; 2) training the object confidence prediction head, as ...

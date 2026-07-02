@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
+- Year/Venue: 2025 / CoRL
+- Category: Navigation and Embodied AI
+- Tags: VLM, Navigation, Benchmark
+- Paper link: ./2025/CoRL/2025_CoRL_SocialNav-SUB-Benchmarking-VLMs-for-Scene-Understanding-in/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this paper, we introduce the Social Navigation Scene Understanding Benchmark (SocialNav-SUB), a Visual Question Answering (VQA) dataset and benchmark designed to evaluate VLMs ...
+## Brief Method
+- Social Navigation VQA Benchmark for VLMs: We introduce the first VQA benchmark for assessing VLMs’ capabilities in social robot navigation scenarios using 60 unique scenarios from SCAND that ...
+- In this paper, we introduce the Social Navigation Scene Understanding Benchmark (SocialNav-SUB), a Visual Question Answering (VQA) dataset and benchmark designed to evaluate VLMs for scene understanding in ...
+- In this paper, we introduce the Social Navigation Scene Understanding Benchmark (S OCIAL NAVSUB), a novel Visual Question Answering (VQA) benchmark designed to evaluate VLMs on social robot ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Existing evaluations have offered only partial assessments , often focusing on controlled settings or lacking temporal components, leading to an incomplete picture of how effectively large VLMs can ...
+- By bridging the gap between VLM capabilities and the challenges of social robot navigation, our work provides a foundation for advancing the use of VLMs for social robot ...
+- Social Navigation VQA Benchmark for VLMs: We introduce the first VQA benchmark for assessing VLMs’ capabilities in social robot navigation scenarios using 60 unique scenarios from SCAND that ...
 
 ## 핵심 방법론
-- Task family: embodied navigation and spatial planning
-- Representation: VLM
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Social Navigation VQA Benchmark for VLMs: We introduce the first VQA benchmark for assessing VLMs’ capabilities in social robot navigation scenarios using 60 unique scenarios from SCAND that ...
+- In this paper, we introduce the Social Navigation Scene Understanding Benchmark (S OCIAL NAVSUB), a novel Visual Question Answering (VQA) benchmark designed to evaluate VLMs on social robot ...

@@ -1,18 +1,19 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: 3D Large Multimodal Models
+- Tags: 3D Vision
+- Paper link: ./2026/ICLR/2026_ICLR_OmniEVA-Embodied-Versatile-Planner-via-Task-Adaptive-3D-Gr/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-Second, **Embodiment Constraint Gap**: prior work often neglects the physical constraints of real robots, resulting in task plans that are theoretically valid but practically ...
+## Brief Method
+- In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, p SQA3D ScanQA Scan2Cap ScanRefer Average Indivisual 3D Input Cross-Attention (seperate vision & 3d tokens) Cross-Attention ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- In Proceedings of the Computer Vision and Pattern Recognition Conference, pp.
+- Visual genome: Connecting language and vision using crowdsourced dense image annotations.
+- In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, p SQA3D ScanQA Scan2Cap ScanRefer Average Indivisual 3D Input Cross-Attention (seperate vision & 3d tokens) Cross-Attention ...
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- SQA3D ScanQA Scan2Cap ScanRefer Average Indivisual 3D Input Cross-Attention (seperate vision & 3d tokens) Cross-Attention (interleaved vision & 3d tokens) 55.1 55.8 27.5 27.5 43.3 42.0 4.5 3.6 ...

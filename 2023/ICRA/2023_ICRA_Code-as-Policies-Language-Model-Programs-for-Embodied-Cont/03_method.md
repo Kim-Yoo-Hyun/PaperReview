@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2023 / ICRA
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: LLM, Planning, Robotics
+- Paper link: ./2023/ICRA/2023_ICRA_Code-as-Policies-Language-Model-Programs-for-Embodied-Cont/paper.pdf
+- Code/Project: https://code-as-policies.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- RoboCodeGen: we introduce a new benchmark with 37 function generation problems with several key differences from previous code-gen benchmarks: (i) it is robotics-themed with questions on spatial reasoning ...
+- Our method also inherits LLM capabilities unrelated to code writing e.g., supporting instructions with non-English languages or emojis (Appendix L.
+- Our approach also assumes all given instructions are feasible, and we cannot tell if a response will be correct a priori.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- More recent methods learn the grounding end-to-end (language to action) –, but they require copious amounts of training data, which can be expensive to obtain on real robots.
+- By chaining classic logic structures and referencing third-party libraries (e.g., NumPy, Shapely) to perform arithmetic, LLMs used in this way can write robot policies that (i) exhibit spatial-geometric ...
+- RoboCodeGen: we introduce a new benchmark with 37 function generation problems with several key differences from previous code-gen benchmarks: (i) it is robotics-themed with questions on spatial reasoning ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: LLM
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- RoboCodeGen: we introduce a new benchmark with 37 function generation problems with several key differences from previous code-gen benchmarks: (i) it is robotics-themed with questions on spatial reasoning ...
+- Our method also inherits LLM capabilities unrelated to code writing e.g., supporting instructions with non-English languages or emojis (Appendix L.
+- Our approach also assumes all given instructions are feasible, and we cannot tell if a response will be correct a priori.
+- Hierarchical LMPs on Code-Generation Benchmarks We evaluate our code-generation approach on two codegeneration benchmarks: (i) a robotics-themed RoboCodeGen and (ii) HumanEval , which consists of standard code-gen problems.

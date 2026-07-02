@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Large Multimodal Models
+- Tags: 3D Vision
+- Paper link: ./2025/ICCV/2025_ICCV_ZeroKey-Point-Level-Reasoning-and-Zero-Shot-3D-Keypoint-De/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose a novel zero-shot approach for keypoint detection on 3D shapes.
+- We then select the area overlapped with the bounding box prediction as the detected points and lift these 2D points to 3D using our method.
+- We then lift these 2D keypoints to 3D using the same backprojection technique described in our method.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Point-level reasoning on visual data is challenging as it requires precise localization capability, posing problems even for powerful models like DINO or CLIP.
+- This work opens new avenues for cross-modal learning and underscores the effectiveness of MLLMs in contributing to 3D computer vision challenges.
+- We propose a novel zero-shot approach for keypoint detection on 3D shapes.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We then select the area overlapped with the bounding box prediction as the detected points and lift these 2D points to 3D using our method.
+- We then lift these 2D keypoints to 3D using the same backprojection technique described in our method.
+- We lift the prediction of this method to 3D using the same lifting procedure used in our method to compare 3D Zero-shot keypoint detection.
+- In contrast, our method precisely locates keypoints.
+- Unlike our approach, this baseline does not retrieve keypoint according to a text prompt and operates fully unsupervised.

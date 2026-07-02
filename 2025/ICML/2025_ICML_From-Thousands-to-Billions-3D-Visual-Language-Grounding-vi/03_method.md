@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / ICML Poster
+- Category: 3D Vision-Language Grounding
+- Tags: Vision-Language Model, 3D Vision
+- Paper link: ./2025/ICML/2025_ICML_From-Thousands-to-Billions-3D-Visual-Language-Grounding-vi/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We introduce \textbf{\emph{LIFT-GS}}, a practical distillation technique that overcomes this limitation by using differentiable rendering to bridge 3D and 2D supervision.
+## Brief Method
+- This rendersupervised formulation enables end-to-end training of complete encoder-decoder architectures and is inherently model-agnostic.
+- Loss Ablation Existing pretraining pipelines primarily focus on the encoder (Zhu et al., 2023b; Banani et al., 2021), whereas the render-supervised formulation can pretrain the entire architecture in ...
+- We introduce LIFT-GS, a practical distillation technique that overcomes this limitation by using differentiable rendering to bridge 3D and 2D supervision.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- We introduce LIFT-GS, a practical distillation technique that overcomes this limitation by using differentiable rendering to bridge 3D and 2D supervision.
+- This six-order-of-magnitude gap in data availability severely limits the capabilities of current 3D grounding systems, creating one of the most significant challenges in embodied AI.
+- This rendersupervised formulation enables end-to-end training of complete encoder-decoder architectures and is inherently model-agnostic.
 
 ## 핵심 방법론
-- Task family: vision-language alignment and multimodal reasoning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Loss Ablation Existing pretraining pipelines primarily focus on the encoder (Zhu et al., 2023b; Banani et al., 2021), whereas the render-supervised formulation can pretrain the entire architecture in ...
+- For these evaluations, we use a model pretrained only on ScanNet as the baseline.
+- Moreover, LIFT-GS substantially outperforms PonderV2† (47.5% vs 45.4% Acc@0.25), underscoring the impact of multimodal decoder architectures enabled by the LIFT-GS render-supervised formulation. boxes from the SOTA object detector ...
+- Compare to SOTA pretraining methods We compare
+- Because PQ3D uses multiple backbones and a multi-stage training pipeline, we were not able to reproduce PQ3D on the sensor point cloud setting.

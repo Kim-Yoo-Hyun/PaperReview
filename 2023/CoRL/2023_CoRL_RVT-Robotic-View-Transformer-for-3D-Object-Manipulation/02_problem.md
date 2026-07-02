@@ -1,15 +1,22 @@
 # Problem
 
+- Year/Venue: 2023 / CoRL
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Robotics, 3D manipulation, Transformer
+- Paper link: ./2023/CoRL/2023_CoRL_RVT-Robotic-View-Transformer-for-3D-Object-Manipulation/paper.pdf
+- Code/Project: https://robotic-view-transformer.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- In simulations, we find that a single RVT model works well across 18 RLBench tasks with 249 task variations, achieving 26% higher relative success than the existing stateof-the-art ...
+- But using explicit 3D representations like voxels comes at large computing cost, adversely affecting scalability.
 
 ## 해결하려는 문제
-- 연구 유형: robot manipulation and vision-language-action control
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- In this work, we propose RVT, a multi-view transformer for 3D manipulation that is both scalable and accurate.
+- Visual results, code, and trained model are provided at: https://robotic-view-transformer.github.io/.
+- Some key features of RVT are an attention mechanism to aggregate information across views and re-rendering of the camera input from virtual views around the robot workspace.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Robotics, 3D manipulation, Transformer` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- A fundamental goal of robot learning is to build systems that can solve various manipulation tasks in unconstrained 3D settings.
+- A popular class of learning methods directly processes image(s) viewed from single or multiple cameras.
+- These view-based methods have achieved impressive success on a variety of pick-and-place and object rearrangement tasks .

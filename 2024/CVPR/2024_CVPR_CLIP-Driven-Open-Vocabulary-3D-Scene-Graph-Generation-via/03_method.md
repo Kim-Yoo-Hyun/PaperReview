@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: 3D Scene Graphs and Graph Reasoning
+- Tags: 3D Scene Graph, CLIP, Graph Reasoning
+- Paper link: ./2024/CVPR/2024_CVPR_CLIP-Driven-Open-Vocabulary-3D-Scene-Graph-Generation-via/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Specifically, we propose a novel Cross-Modality Contrastive Learning 3DSGG (CCL-3DSGG) method.
+- Our method surpasses the competing models in both tasks, registering an average Recall of 60.1 and a Mean Recall of 51.3.
+- Method SGPN SGFN non-VL-SAT VL-SAT Our method Head mA@3 mA@5 Predicate Body mA@3 mA@5 Tail mA@3 mA@5 Triplet Unseen Seen A@50 A@100 A@50 A@100 96.66 95.08 95.32 96.31 ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, current 3DSGG methods struggle with two main challenges.
+- Despite notable advancements in 3DSGG, existing stateof-the-art (SOTA) methods still encounter two obstacles that constrain their practicality in the open-vocabulary (OV) s
+- Specifically, we propose a novel Cross-Modality Contrastive Learning 3DSGG (CCL-3DSGG) method.
 
 ## 핵심 방법론
-- Task family: structured 3D scene graph reasoning
-- Representation: 3D Scene Graph, Graph Reasoning
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Our method surpasses the competing models in both tasks, registering an average Recall of 60.1 and a Mean Recall of 51.3.
+- Method SGPN SGFN non-VL-SAT VL-SAT Our method Head mA@3 mA@5 Predicate Body mA@3 mA@5 Tail mA@3 mA@5 Triplet Unseen Seen A@50 A@100 A@50 A@100 96.66 95.08 95.32 96.31 ...

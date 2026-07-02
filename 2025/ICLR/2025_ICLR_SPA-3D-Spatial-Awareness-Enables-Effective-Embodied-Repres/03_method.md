@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2025 / ICLR Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Robotics, 3D Vision
+- Paper link: ./2025/ICLR/2025_ICLR_SPA-3D-Spatial-Awareness-Enables-Effective-Embodied-Repres/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-In this paper, we introduce SPA, a novel representation learning framework that emphasizes the importance of 3D spatial awareness in embodied AI.
+## Brief Method
+- Input Size Patch Size #Param. #Frames Multi-Modal InternViT-300M InternViT-6B Embodied-Specific MVP VC-1 CLIP EVA (Chen et al., 2020b) (He et al., 2022) (Oquab et al., 2023) (Radford et ...
+- The best and second-best results are bolded and underlined respectively.
+- The number in parentheses denotes the number of tasks.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Input Size Patch Size #Param. #Frames Multi-Modal InternViT-300M InternViT-6B Embodied-Specific MVP VC-1 CLIP EVA (Chen et al., 2020b) (He et al., 2022) (Oquab et al., 2023) (Radford et ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Input Size Patch Size #Param. #Frames Multi-Modal InternViT-300M InternViT-6B Embodied-Specific MVP VC-1 CLIP EVA (Chen et al., 2020b) (He et al., 2022) (Oquab et al., 2023) (Radford et ...
+- The best and second-best results are bolded and underlined respectively.
+- The number in parentheses denotes the number of tasks.
+- Method Benchmark VC-1 AD (2) MW (5) DMC (5) TF (2) RLBench Group 1 (35) Group 2 (36) Meta-World (48) Object (10) Spatial (10) LIBERO Goal (10) 10 ...
+- We evaluate 9 SOTA representation learning models, all using ViT-L backbone, categorized into vision-centric, multi-modal, and embodied-specific.

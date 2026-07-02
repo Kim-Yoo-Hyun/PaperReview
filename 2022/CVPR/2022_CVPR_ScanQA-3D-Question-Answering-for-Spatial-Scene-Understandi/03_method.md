@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2022 / CVPR
+- Category: 3D Vision-Language Grounding
+- Tags: 3D Vision, Vision-Language, grounding, 3D QA
+- Paper link: ./2022/CVPR/2022_CVPR_ScanQA-3D-Question-Answering-for-Spatial-Scene-Understandi/paper.pdf
+- Code/Project: https://github.com/ATR-DBI/ScanQA
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose a new 3D spatial understanding task for 3D question answering (3D-QA).
+- We propose a baseline model for 3D-QA, called the ScanQA1 , which learns a fused descriptor from 3D object proposals and encoded sentence embeddings.
+- We introduce the new task of question answering for 3D modeling.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Given inputs of an entire 3D modeling and a linguistic question, models predict an answer phrase and the corresponding 3D-bounding boxes. suitcase located?”, the existing models based on ...
+- Unlike the 2D-question answering of visual question answering, the conventional 2D-QA models suffer from problems with spatial understanding of object alignment and directions and fail in object localization ...
+- We propose a new 3D spatial understanding task for 3D question answering (3D-QA).
 
 ## 핵심 방법론
-- Task family: vision-language alignment and multimodal reasoning
-- Representation: 3D Vision, 3D QA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

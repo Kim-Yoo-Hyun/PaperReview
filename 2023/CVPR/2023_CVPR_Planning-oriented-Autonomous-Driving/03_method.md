@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2023 / CVPR
+- Category: Sensor Fusion, LiDAR, and Autonomous Driving
+- Tags: Planning, sensor fusion, 3D perception
+- Paper link: ./2023/CVPR/2023_CVPR_Planning-oriented-Autonomous-Driving/paper.pdf
+- Code/Project: https://github.com/OpenDriveLab/UniAD
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We introduce Unified Autonomous Driving (UniAD), a comprehensive framework up-to-date that incorporates full-stack driving tasks in one network.
+- Mask” represent cross-attention and the attention mask in the pixel-agent interaction respectively. “Mask Feat.” denotes the reuse of the mask feature for instance-level occupancy.
+- Mask ✓ ✓ Mask Feat. ✓ IoU-n.↑ IoU-f.↑ VPQ-n.↑ VPQ-f.↑ 61.2 61.3 62.3 62.6 39.7 39.4 39.7 39.5 51.5 51.0 52.4 53.2 31.8 31.8 32.5 32.8 guided attention ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Although such a design simplifies the R&D difficulty across teams, it bares the risk of information loss across modules, error accumulation and feature misalignment due to the isolation ...
+- Modern autonomous driving system is characterized as modular tasks in sequential order, i.e., perception, prediction, and planning.
+- We introduce Unified Autonomous Driving (UniAD), a comprehensive framework up-to-date that incorporates full-stack driving tasks in one network.
 
 ## 핵심 방법론
-- Task family: 3D vision and embodied AI
-- Representation: 3D perception
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Mask” represent cross-attention and the attention mask in the pixel-agent interaction respectively. “Mask Feat.” denotes the reuse of the mask feature for instance-level occupancy.
+- Mask ✓ ✓ Mask Feat. ✓ IoU-n.↑ IoU-f.↑ VPQ-n.↑ VPQ-f.↑ 61.2 61.3 62.3 62.6 39.7 39.4 39.7 39.5 51.5 51.0 52.4 53.2 31.8 31.8 32.5 32.8 guided attention ...
+- Cross-attention with masks and the reuse of mask feature helps improve the prediction. “Cross.
+- As illustrated in Table 9, attending each pixel to all agents without locality constraints (Exp.2) results in slightly worse performance compared to an attention-free baseline (Exp.1).

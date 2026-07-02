@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Robotics, Diffusion
+- Paper link: ./2025/ICCV/2025_ICCV_On-Device-Diffusion-Transformer-Policy-for-Efficient-Robot/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To overcome performance degradation typically associated with conventional pruning methods, we introduce a unified pruning and retraining pipeline, optimizing the model’s postpruning recoverability explicitly.
+- In this paper, we propose LightDP, a novel framework specifically designed to accelerate Diffusion Policies for real-time deployment on mobile devices.
+- We first conduct an extensive computational analysis on existing Diffusion Policy architectures, identifying the denoising network as the primary contributor to latency.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- We first conduct an extensive computational analysis on existing Diffusion Policy architectures, identifying the denoising network as the primary contributor to latency.
+- However, this endeavor presents multifaceted challenges: 1) Diffusion Policies require multiple denoising steps, which slows down the generation process; 2) the standard architectures involve billions of parameters, leading ...
+- To overcome performance degradation typically associated with conventional pruning methods, we introduce a unified pruning and retraining pipeline, optimizing the model’s postpruning recoverability explicitly.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Depth Param (M) NFE GFLOPs Inference Speed (ms) Success Rate DP-T DP-T⋆ 8 8.97 100 4.39 90.6 0.772±0.039 0.754±0.023 DP-T-D6/6-8 DP-T-D6/4-4 6 6.87 4 0.134 4.79 0.752±0.019 0.732±0.034 ...
+- Performance comparison of LightDP compressed models with varying depth and inference steps.
+- All models are trained on the same Push-T dataset for 3K epochs.
+- DP-T⋆ refers to the baseline model evaluated by us.
+- DP-T-DL/N -M indicates that L blocks are retained during the pruning process, with a local block scheme of N :M .

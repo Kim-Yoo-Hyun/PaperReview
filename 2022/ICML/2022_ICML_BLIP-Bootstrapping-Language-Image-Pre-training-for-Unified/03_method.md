@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2022 / ICML
+- Category: Foundations: Vision-Language Models
+- Tags: Vision-Language Model, alignment, generation
+- Paper link: ./2022/ICML/2022_ICML_BLIP-Bootstrapping-Language-Image-Pre-training-for-Unified/paper.pdf
+- Code/Project: https://github.com/salesforce/BLIP
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To this end, we propose BLIP: Bootstrapping LanguageImage Pre-training for unified vision-language understanding and generation.
+- In this paper, we propose BLIP, a new VLP framework which transfers flexibly to both vision-language understanding and generation tasks.
+- Parameter Sharing and Decoupling During pre-training, the text encoder and decoder share all parameters except for the self-attention layers.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, existing methods have two major limitations: (1) Model perspective: most methods either adopt an encoder-based model (Radford et al., 2021; Li et al., 2021a), or an encoder-decoder ...
+- However, most existing pre-trained models only excel in either understanding-based tasks or generation-based tasks.
+- To this end, we propose BLIP: Bootstrapping LanguageImage Pre-training for unified vision-language understanding and generation.
 
 ## 핵심 방법론
-- Task family: vision or vision-language foundation model pretraining
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Parameter Sharing and Decoupling During pre-training, the text encoder and decoder share all parameters except for the self-attention layers.
+- Comparison between different parameter sharing strategies for the text encoder and decoder during pre-training.
+- In Table 4, we study the effect if the captioner and filter share parameters in the same way as pre-training.

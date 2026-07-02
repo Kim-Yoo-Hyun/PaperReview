@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: 3D Generative Modeling and Diffusion
+- Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
+- Paper link: ./2025/ICCV/2025_ICCV_Repurposing-2D-Diffusion-Models-with-Gaussian-Atlas-for-3D/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We introduce Gaussian Atlas, a novel representation that utilizes dense 2D grids, enabling the fine-tuning of 2D diffusion models to generate 3D Gaussians.
+- To fully harness the capabilities of these 2D diffusion models, we introduce Gaussian Atlas, a nove DreamGaussian LGM TriplaneGaussian GaussianCube “A carved GaussianAtlas stone” (Ours) CLIP score ⇒ ...
+- To address this challenge, we propose repurposing pre-trained 2D diffusion models for 3D object generation.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To address this challenge, we propose repurposing pre-trained 2D diffusion models for 3D object generation.
+- However, such models have significant limitations especially when trained solely on 3D data, as high-quality 3D data is relatively scarce compared to 2D images.
+- We introduce Gaussian Atlas, a novel representation that utilizes dense 2D grids, enabling the fine-tuning of 2D diffusion models to generate 3D Gaussians.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: Gaussian Splatting, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- The preference rate was even more pronounced against TriplaneGaussian, with 88% of users favoring our method. sive details.
+- Our method outVQA scores performs all counterparts while generating the minimum number of Gaussians required.
+- In contrast to TriplaneGaussian and GaussianCube, our method aligns closely with the text prompts, reflecting more precise prompt conditioning.
+- In Table 2, we present the CLIP and “A leathered book” for comparison methods.
+- They performed pairwise comparisons between generations by our method and those from a competing method.

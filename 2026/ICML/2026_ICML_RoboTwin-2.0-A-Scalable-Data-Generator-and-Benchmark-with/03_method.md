@@ -1,18 +1,19 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2026 / ICML
+- Category: Benchmarks and Datasets
+- Tags: VLA, Robotics, Benchmark
+- Paper link: ./2026/ICML/2026_ICML_RoboTwin-2.0-A-Scalable-Data-Generator-and-Benchmark-with/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-To this end, we present RoboTwin 2.0, a scalable simulation framework that enables closed-loop, automated, large-scale generation of diverse and realistic data, along with ...
+## Brief Method
+- To this end, we present RoboTwin 2.0, a scalable simulation framework that enables closed-loop, automated, large-scale generation of diverse and realistic data, along with unified evaluation protocols for ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- However, existing synthetic datasets remain insufficient for robust bimanual manipulation due to two key challenges: (1) the lack of an autonomous self-correcting mechanism to resolve execution failures in ...
+- While recent Vision–Language–Action (VLA) (Zheng et al., 2025; Bi et al., 2025; Team, 2025a; Intelligence et al., 2025a; Li et al., 2025; Cai et al., 2026; Wu et ...
+- To this end, we present RoboTwin 2.0, a scalable simulation framework that enables closed-loop, automated, large-scale generation of diverse and realistic data, along with unified evaluation protocols for ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: VLA
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Success Rate Distribution. expert code for novel manipulation tasks; (2) establishing RoboTwin 2.0 as a standardized benchmark for policy generalization across tasks, scenes, and embodiments; (3) improving policy ...

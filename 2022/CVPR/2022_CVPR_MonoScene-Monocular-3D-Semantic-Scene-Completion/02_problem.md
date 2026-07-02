@@ -1,15 +1,21 @@
 # Problem
 
+- Year/Venue: 2022 / CVPR
+- Category: Foundations: 3D Semantic Occupancy
+- Tags: 3D Vision, semantic, occupancy, monocular geometry
+- Paper link: ./2022/CVPR/2022_CVPR_MonoScene-Monocular-3D-Semantic-Scene-Completion/paper.pdf
+- Code/Project: https://github.com/cv-rits/MonoScene
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Different from the SSC literature, relying on 2.5 or 3D input, we solve the complex problem of 2D to 3D scene reconstruction while jointly inferring its semantics.
+- To solve this challenging problem, we project 2D features along their line of sight, inspired by optics, bridging 2D and 3D networks while letting the 3D network self-discover ...
+- Introduction Estimating 3D from an image is a problem that goes back to the roots of computer vision .
 
 ## 해결하려는 문제
-- 연구 유형: core 3D geometry and scene representation learning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- Experiments show we outperform the literature on all metrics and datasets while hallucinating plausible scenery even beyond the camera field of view.
+- Along with architectural contributions, we introduce novel global scene and local frustums losses.
+- 1, where it outperformed all comparable baselines and even some 3D input baselines.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `3D Vision, semantic, occupancy, monocular geometry` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

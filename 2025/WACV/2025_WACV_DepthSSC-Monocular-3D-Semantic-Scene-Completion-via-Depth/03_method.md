@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / WACV
+- Category: 3D Semantic Understanding and Alignment
+- Tags: semantic, alignment, depth, 3D Vision
+- Paper link: ./2025/WACV/2025_WACV_DepthSSC-Monocular-3D-Semantic-Scene-Completion-via-Depth/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- To address these issues, we propose DepthSSC, an advanced method for semantic scene completion using only monocular cameras.
+- We present the results for various distance intervals (12.8 meters, 25.6 meters, and 51.2 meters) and furnish metrics for both geometric evaluation (IoU) and semantic assessment (mIoU).
+- Conclusion In this study, we presented DepthSSC for monocular semantic scene completion that leverages spatial transformation and feature fusion to accurately align spatial and depth information.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Despite numerous existing methods, many face challenges such as inaccurately predicting object shapes and misclassifying object boundaries.
+- As illustrated in the first row, VoxFormer fails to adequately utilize depth relationships to distinguish between different vehicles.
+- To address these issues, we propose DepthSSC, an advanced method for semantic scene completion using only monocular cameras.
 
 ## 핵심 방법론
-- Task family: open-vocabulary 3D semantic understanding
-- Representation: semantic, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We present the results for various distance intervals (12.8 meters, 25.6 meters, and 51.2 meters) and furnish metrics for both geometric evaluation (IoU) and semantic assessment (mIoU).
+- Conclusion In this study, we presented DepthSSC for monocular semantic scene completion that leverages spatial transformation and feature fusion to accurately align spatial and depth information.
+- Our approach effectively mitigates these issues, enhancing the accuracy of 3D scene reconstruction.

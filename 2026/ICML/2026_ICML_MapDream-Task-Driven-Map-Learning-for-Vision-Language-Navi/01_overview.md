@@ -3,33 +3,32 @@
 - Year/Venue: 2026 / ICML
 - Category: Navigation and Embodied AI
 - Tags: Vision-Language Model, Navigation
-- Authors: Guoxin Lian, Shuo Wang, Yucheng Wang, Yongcai Wang, Maiyue Chen, Kaihui Wang, Bo Zhang, Zhizhong Su
-- Paper: https://openreview.net/forum?id=IkXFH6alZN
-- PDF status: downloaded
-- GitHub/Project: not identified from OpenReview
+- Paper link: ./2026/ICML/2026_ICML_MapDream-Task-Driven-Map-Learning-for-Vision-Language-Navi/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-실내/실외 이동 에이전트는 언어 목표와 3D 공간 구조를 연결해야 하며, partial observation과 탐색-활용 균형 때문에 단순 2D 인식만으로는 안정적이지 않다.
+- However, most existing approaches rely on hand-crafted maps constructed independently of the navigation policy.
+- A central difficulty of VLN is partial observability.
+- Agents perceive the environment only through local, sequential observations, which limits their understanding of the space.
 
 ## Core Idea
-핵심은 metric/semantic map, 3D scene graph, neural field, 또는 VLM reasoning을 이용해 언어 목표를 이동 가능한 공간 의사결정으로 바꾸는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: Vision-Language Navigation (VLN) requires agents to follow natural language instructions in partially observed 3D environments, motivating map representations that aggregate spatial context beyond local ...
-- Method cue: Based on this insight, we propose MapDream, a map-in-the-loop framework that formulates map construction as autoregressive bird’s-eye-view (BEV) image synthesis.
-- Result cue: Experiments on R2R-CE and RxR-CE achieve state-of-the-art monocular performance, validating task-driven generative map learning.
+- Based on this insight, we propose MapDream, a map-in-the-loop framework that formulates map construction as autoregressive bird’seye-view (BEV) image synthesis.
+- Supervised pretraining bootstraps a reliable mapping-to-control interface, while the autoregressive design enables end-to-end joint optimization through reinforcement fine-tuning.
 
 ## Input / Output
-Input: language/navigation goal plus egocentric observations or 3D maps. Output: waypoint, action, route, or grounded target decision.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `embodied navigation and spatial planning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Experiments on R2RCE and RxR-CE achieve state-of-the-art monocular performance, validating task-driven generative map learning.
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- embodied navigation and spatial planning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: Vision-Language Model, Navigation.
-- 초록에서 확인되는 주요 cue: Vision-Language, Navigation, VLN, However, Based, MapDream, BEV, The.
+- Experiments on R2RCE and RxR-CE achieve state-of-the-art monocular performance, validating task-driven generative map learning.
+- Based on this insight, we propose MapDream, a map-in-the-loop framework that formulates map construction as autoregressive bird’seye-view (BEV) image synthesis.
+- Supervised pretraining bootstraps a reliable mapping-to-control interface, while the autoregressive design enables end-to-end joint optimization through reinforcement fine-tuning.
+
+## Abstract Cue
+- Module Vision-Language Navigation (VLN) requires agents to follow natural language instructions in partially observed 3D environments, motivating map representations that aggregate spatial context beyond local perception.

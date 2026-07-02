@@ -3,32 +3,30 @@
 - Year/Venue: 2016 / ICML
 - Category: Foundations: Equivariance and Geometry
 - Tags: equivariant, representation, geometry
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/1602.07576
-- PDF status: downloaded
-- GitHub/Project: https://github.com/tscohen/gconv_experiments
+- Paper link: ./2016/ICML/2016_ICML_Group-Equivariant-Convolutional-Networks/paper.pdf
+- Code/Project: https://github.com/tscohen/gconv_experiments
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Although a strong theory of neural network design is currently lacking, a large amount of empirical evidence supports the notion that both convolutional weight sharing and depth (among ...
 
 ## Core Idea
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- We introduce Group equivariant Convolutional Neural Networks (G-CNNs), a natural generalization of convolutional neural networks that reduces sample complexity by exploiting symmetries.
 
 ## Input / Output
-Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `geometry-aware equivariant modeling`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- G-CNNs achieve state of the art results on CIFAR10 and rotated MNIST.
+- In this paper we show how convolutional networks can be generalized to exploit larger groups of symmetries, including rotations and reflections.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- geometry-aware equivariant modeling 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: equivariant, representation, geometry.
+- G-CNNs achieve state of the art results on CIFAR10 and rotated MNIST.
+- We introduce Group equivariant Convolutional Neural Networks (G-CNNs), a natural generalization of convolutional neural networks that reduces sample complexity by exploiting symmetries.
+- In this paper we show how convolutional networks can be generalized to exploit larger groups of symmetries, including rotations and reflections.
+
+## Abstract Cue
+- We introduce Group equivariant Convolutional Neural Networks (G-CNNs), a natural generalization of convolutional neural networks that reduces sample complexity by exploiting symmetries.

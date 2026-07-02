@@ -1,26 +1,39 @@
 # Evaluation
 
-## Dataset
-ScanNet, ScanRefer, ScanQA, Matterport3D, HM3D, Habitat, BridgeData, Open X-Embodiment, OXE
+- Year/Venue: 2026 / ICLR Poster
+- Category: 3D Large Multimodal Models
+- Tags: 3D Vision
+- Paper link: ./2026/ICLR/2026_ICLR_OmniEVA-Embodied-Versatile-Planner-via-Task-Adaptive-3D-Gr/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `3D vision-language spatial reasoning`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- ScanNet
+- Matterport3D
+- 3RScan
+- Habitat
+- HM3D
+- BridgeData
+- Open X-Embodiment
+- ScanRefer
+- SQA3D
+- ScanQA
 
 ## Metrics
-task-specific accuracy, generalization gap, ablation metrics, IoU, AP, mAP, success rate, SR
+- accuracy
+- IoU
+- ATE
+- SPL
+- SR
+- success rate
+- collision
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- These two reward components reflect distinct optimization objectives: ritask emphasizes performance on offline evaluation benchmarks, while riembod targets end-to-end execution success in real-world robotic deployments.
+- These two reward components reflect distinct optimization objectives: ritask emphasizes performance on offline evaluation benchmarks, while riembod targets end-to-end execution success in real-world robotic deployments.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: Extensive experiments show that OmniEVA achieves state-of-the-art performance on 7 of 8 embodied reasoning benchmarks and excels in downstream tasks such as object navigation ...
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Reproducibility Notes
-- Code/Project: not identified from OpenReview
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

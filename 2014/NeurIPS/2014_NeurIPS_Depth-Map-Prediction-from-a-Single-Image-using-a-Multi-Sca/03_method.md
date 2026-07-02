@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2014 / NeurIPS
+- Category: Foundations: Monocular Geometry
+- Tags: 3D Vision, monocular depth, geometry
+- Paper link: ./2014/NeurIPS/2014_NeurIPS_Depth-Map-Prediction-from-a-Single-Image-using-a-Multi-Sca/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In this paper, we present a new method that addresses this task by employing two deep network stacks: one that makes a coarse global prediction based on the ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Moreover, the task is inherently ambiguous, and a technically ill-posed problem: Given an image, an infinite number of possible world scenes may have produced it.
+- While there is much prior work on estimating depth based on stereo images or motion , there has been relatively little on estimating depth from a single image.
+- In this paper, we present a new method that addresses this task by employing two deep network stacks: one that makes a coarse global prediction based on the ...
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: 3D Vision, geometry
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Our network is made of two component stacks, shown in Fig.
+- A coarse-scale network first predicts the depth of the scene at a global level.
+- This is then refined within local regions by a fine-scale network.
+- Both stacks are applied to the original input, but in addition, the coarse network’s output is passed to the fine network as additional first-layer image features.
+- In this way, the local network can edit the global prediction to incorporate finer-scale details.

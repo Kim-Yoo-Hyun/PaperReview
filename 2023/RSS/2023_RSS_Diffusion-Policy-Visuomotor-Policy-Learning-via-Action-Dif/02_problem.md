@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2023 / RSS
+- Category: Foundations: RL and Imitation Learning
+- Tags: Diffusion, Imitation Learning, robotics
+- Paper link: ./2023/RSS/2023_RSS_Diffusion-Policy-Visuomotor-Policy-Learning-via-Action-Dif/paper.pdf
+- Code/Project: https://github.com/real-stanford/diffusion_policy
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Prior work attempts to address this challenge by exploring different action representations (Fig 1 a) – using mixtures of Gaussians Mandlekar et al. (2021), categorical representations of quantized ...
+- In practice however, the unique nature of predicting robot actions — such as the existence of multimodal distributions, sequential correlation, and the requirement of high precision — makes ...
+- In this work, we seek to address this challenge by introducing a new form of robot visuomotor policy that generates behavior via a “conditional denoising diffusion process Ho ...
 
 ## 해결하려는 문제
-- 연구 유형: RL and imitation learning for policies
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- We benchmark Diffusion Policy across 15 different tasks from 4 different robot manipulation benchmarks and find that it consistently outperforms existing state-of-the-art robot learning methods with an average ...
+- We find that the diffusion formulation yields powerful advantages when used for robot policies, including gracefully handling multimodal action distributions, being suitable for high-dimensional action spaces, and exhibiting ...
+- Code, data, and training details is available diffusion-policy.cs.columbia.edu
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `Diffusion, Imitation Learning, robotics` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- Prior work attempts to address this challenge by exploring different action representations (Fig 1 a) – using mixtures of Gaussians Mandlekar et al. (2021), categorical representations of quantized ...
+- In practice however, the unique nature of predicting robot actions — such as the existence of multimodal distributions, sequential correlation, and the requirement of high precision — makes ...
+- In this work, we seek to address this challenge by introducing a new form of robot visuomotor policy that generates behavior via a “conditional denoising diffusion process Ho ...

@@ -1,26 +1,28 @@
 # Evaluation
 
-## Dataset
-OXE, nuScenes, KITTI, SemanticKITTI
+- Year/Venue: 2025 / 3DV
+- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Tags: sensor fusion, LiDAR, 3D Vision
+- Paper link: ./2025/3DV/2025_3DV_LangOcc-Open-Vocabulary-Occupancy-Estimation-via-Volume-Re/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `3D vision and embodied AI`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- nuScenes
+- Occ3D
+- LERF
 
 ## Metrics
-task-specific accuracy, generalization gap, ablation metrics, mIoU, IoU, AP, mAP, SR
+- mIoU
+- IoU
+- mAP
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- We also achieve a mIoU score of 11.84 on the Occ3D-nuScenes dataset, surpassing previous vision-only semantic occupancy estimation methods (+1.71%), despite not being limited to a specific set ...
+- LangOcc outperforms LiDAR-supervised competitors in open vocabulary occupancy with a mAP of 22.7 by a large margin (+4.3%), solely relying on vision-based training.
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: Our model estimates vision-language aligned features in a 3D voxel grid using only images.It is trained in a weakly-supervised manner by rendering our estimations ...
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Reproducibility Notes
-- Code/Project: not identified
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2023 / ICCV
+- Category: 3D Large Multimodal Models
+- Tags: 3D Vision-Language, alignment, Transformer
+- Paper link: ./2023/ICCV/2023_ICCV_3D-VisTA-Pre-trained-Transformer-for-3D-Vision-and-Text-Al/paper.pdf
+- Code/Project: https://3d-vista.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- In this paper, we propose 3D-VisTA, a pre-trained Transformer for 3D Vision and Text Alignment that can be easily adapted to various downstream tasks.
+- 3D-VisTA In this section, we introduce 3D-VisTA, a simple and unified Transformer for aligning 3D scenes and text.
+- Then the text and 3D object tokens CA ✓ ✓ ✓ ✓ ✓ × Architecture 2D MV LC ✓ ✓ ✓ ✓ × × × Table 2: The ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- ScanScribe contains 2,995 RGBD scans for 1,185 unique indoor scenes originating from ScanNet and 3R-Scan datasets, along with paired 278K scene descriptions generated from existing 3D-VL tasks, templates, ...
+- In this paper, we propose 3D-VisTA, a pre-trained Transformer for 3D Vision and Text Alignment that can be easily adapted to various downstream tasks.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: 3D Vision-Language
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 3D-VisTA In this section, we introduce 3D-VisTA, a simple and unified Transformer for aligning 3D scenes and text.
+- Then the text and 3D object tokens CA ✓ ✓ ✓ ✓ ✓ × Architecture 2D MV LC ✓ ✓ ✓ ✓ × × × Table 2: The ...
+- Our final pre-training objective is obtained by simply adding the losses of the proxy tasks above: Lpre-train = LMLM + LMOM + LSTM (5) Notably, the proposed pre-training ...
+- Position Multi-modal fusion Masked language modeling 3D dense captioning 3D situated reasoning 3D question answering 3D visual grounding Masked object modeling Figure 2: The model architecture of our ...
+- We follow the BERT pre-training to perform MLM: (1) 15% of the text tokens are randomly chosen; (2) 80% of the time: replace these tokens with [MASK]; (2) ...

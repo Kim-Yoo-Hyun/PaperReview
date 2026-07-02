@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Gaussian Splatting, open-vocabulary, semantic
+- Paper link: ./2024/CVPR/2024_CVPR_Language-Embedded-3D-Gaussians-for-Open-Vocabulary-Scene-U/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Instead of embedding high-dimensional raw semantic features on 3D Gaussians, we propose a dedicated quantization scheme that drastically alleviates the memory requirement, and a novel embedding procedure that ...
+- In this work, we introduce Language Embedded 3D Gaussians, a novel scene representation for open-vocabulary query tasks.
+- We conduct a comparative evaluation of our method with DFF , LeRF , and 3DOVS , focusing on visual quality, languageembedded accuracy, rendering speed and model efficiency.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Open-vocabulary querying in 3D space is challenging but essential for scene understanding tasks such as object localization and segmentation.
+- Language-embedded scene representations have made progress by incorporating language features into 3D spaces.
+- Instead of embedding high-dimensional raw semantic features on 3D Gaussians, we propose a dedicated quantization scheme that drastically alleviates the memory requirement, and a novel embedding procedure that ...
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We conduct a comparative evaluation of our method with DFF , LeRF , and 3DOVS , focusing on visual quality, languageembedded accuracy, rendering speed and model efficiency.
+- Quantitative comparison of our method with DFF , LeRF , 3DOVS . mPA↑ mP↑ mIoU↑ mAP↑ Quantization w/o DINO w/o Llb 0.927 0.939 0.604 0.666 0.481 0.544 0.676 ...
+- Comparisons We compare our method both qualitatively and quantitatively with DFF , LeRF , and 3DOVS on our annotated Mip-NeRF360 dataset using a single RTX3090 GPU, following their ...
+- Our approach notably delivers the highest visual rendering quality and query accuracy across all the tested scenes.
+- The training involves 30,000 iterations, utilizing the Adam optimizer , with a learning rate set to 0.001 and betas equal to (0.9, 0.999).

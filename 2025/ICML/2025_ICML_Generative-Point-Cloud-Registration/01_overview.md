@@ -3,33 +3,34 @@
 - Year/Venue: 2025 / ICML poster
 - Category: 3D Equivariance, Calibration, and Registration
 - Tags: geometry, Diffusion, Generation, point cloud, 3D Vision
-- Authors: Haobo Jiang, Jin Xie, jian Yang, liang yu, Jianmin Zheng
-- Paper: https://openreview.net/forum?id=yoaErYlGE9
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/ICML/2025_ICML_Generative-Point-Cloud-Registration/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-생성 모델 또는 policy 모델이 3D 구조와 물리 제약을 보존하지 못하면 로봇 실행이나 3D 장면 생성에서 일관성이 깨진다.
+- Unlike geometry-only matching in previous methods, our approach introduces MatchControlNet, a matching-specific 2D generative model that generates cross-view images pairs from point cloud data, providing rich color cues ...
+- Introduction Point cloud registration is a problem of finding the optimal rigid transformation, comprising a 3D rotation and a 3D translation, which aligns the source and target point ...
+- Existing 3D registration methods can be roughly categorized into traditional approaches and data-driven deep methods.
 
 ## Core Idea
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: In this paper, we propose a novel 3D registration paradigm, Generative Point Cloud Registration, which bridges advanced 2D generative models with 3D matching tasks ...
-- Method cue: In this paper, we propose a novel 3D registration paradigm, Generative Point Cloud Registration, which bridges advanced 2D generative models with 3D matching tasks ...
-- Result cue: To achieve this, we introduce Match-ControlNet, a matching-specific, controllable 2D generative model.
+- We compare our method against with one representative traditional descriptor: FPFH (Rusu et al., 2009), one scene-level end-to-end registration network: RegTR (Yew & Lee, 2022), and five deep ...
+- Unlike geometry-only matching in previous methods, our approach introduces MatchControlNet, a matching-specific 2D generative model that generates cross-view images pairs from point cloud data, providing rich color cues ...
 
 ## Input / Output
-Input: one or more images/RGB-D/LiDAR observations. Output: depth, camera pose, point map, dense reconstruction, or consistent map.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `diffusion-based generation or policy learning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Recent RGB-D registration studies (Yuan et al., 2023; Mu et al., 2024) have shown images would significantly enhance the distinctiveness of point cloud descriptors, leading to improved matching ...
+- However, real-world Despite the impressive performance achieved by current point cloud registration methods, their robustness remains limited in challenging scenarios that contain low overlap, repetitive patterns, or noisy ...
+- These deep methods significantly enhance the quality of estimated correspondences and improve registration accuracy.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- diffusion-based generation or policy learning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: geometry, Diffusion, Generation, point cloud, 3D Vision.
-- 초록에서 확인되는 주요 cue: Generative, Point, Cloud, Registration, Our, Match-ControlNet, Specifically, ControlNet.
+- Unlike geometry-only matching in previous methods, our approach introduces MatchControlNet, a matching-specific 2D generative model that generates cross-view images pairs from point cloud data, providing rich color cues ...
+- Recent RGB-D registration studies (Yuan et al., 2023; Mu et al., 2024) have shown images would significantly enhance the distinctiveness of point cloud descriptors, leading to improved matching ...
+- However, real-world Despite the impressive performance achieved by current point cloud registration methods, their robustness remains limited in challenging scenarios that contain low overlap, repetitive patterns, or noisy ...
+
+## Abstract Cue
+- Paradigm comparison of our generative point cloud registration with conventional methods.

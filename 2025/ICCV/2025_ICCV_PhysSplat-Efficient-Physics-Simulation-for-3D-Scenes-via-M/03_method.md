@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: 3D Vision, Gaussian Splatting
+- Paper link: ./2025/ICCV/2025_ICCV_PhysSplat-Efficient-Physics-Simulation-for-3D-Scenes-via-M/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Then, we propose MLLM-based Physical Property Perception (MLLM-P3) to predict mean physical properties of objects.
+- Inspired by human visual reasoning, we propose MLLMbased Physical Property Perception (MLLM-P3) to predict the mean physical properties of objects in a zero-shot manner.
+- Conclusion AS 4.47 4.59 4.64 4.62 4.66 We introduce PhysSplat, a framework for generating physics-based dynamics and photorealistic renderings.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- The Material Property Distribution Prediction model (MPDP) then estimates physical property distributions via geometry-conditioned probabilistic sampling of MLLM-P3 outputs, reformulating the problem as probability distribu- 1.
+- Finally, we simulate objects in 3D scenes with particles sampled via the Physical-Geometric Adaptive Sampling (PGAS) strategy, efficiently capturing complex deformations and significantly reducing computational costs.
+- Then, we propose MLLM-based Physical Property Perception (MLLM-P3) to predict mean physical properties of objects.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: 3D Vision, Gaussian Splatting
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Then, we propose MLLM-based Physical Property Perception (MLLM-P3) to predict mean physical properties of objects.
+- Conclusion AS 4.47 4.59 4.64 4.62 4.66 We introduce PhysSplat, a framework for generating physics-based dynamics and photorealistic renderings.
+- Our method can generate closer content compared with the real capture.
+- RS AS PhysDreamer PhysGaussian 4.50 7.56 PhysDreamer 4.54 7.71 Physics3D 4.62 7.83 Feature Splatting 4.53 7.49 DreamGaussian4D 4.57 7.28 PhysSplat 4.66 7.89 synthesized dataset PhysGaussian 4.94 7.35 DreamPhysics ...

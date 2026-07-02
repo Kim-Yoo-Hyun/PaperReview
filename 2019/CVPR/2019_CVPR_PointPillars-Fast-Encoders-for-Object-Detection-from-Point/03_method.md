@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2019 / CVPR
+- Category: Foundations: 3D Detection and BEV Perception
+- Tags: 3D Vision, LiDAR, 3D detection, BEV
+- Paper link: ./2019/CVPR/2019_CVPR_PointPillars-Fast-Encoders-for-Object-Detection-from-Point/paper.pdf
+- Code/Project: https://github.com/nutonomy/second.pytorch
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Performance (AP) arXiv:1812.05784v2 [cs.LG] 7 May 2019 {alex, sourabh, holger, lubing, jiong.yang, oscar}@nutonomy.com Cyclist PP F A S V Runtime (Hz) Figure 1.
+- Bird’s eye view performance vs speed for our proposed PointPillars, PP method on the KITTI test set.
+- Lidar-only methods drawn as blue circles; lidar & vision methods drawn as red squares.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Introduction Deploying autonomous vehicles (AVs) in urban environments poses a difficult technological challenge.
+- This overhead perspective offers several advantages such as lack of scale ambiguity and the near lack of occlusion.
+- Performance (AP) arXiv:1812.05784v2 [cs.LG] 7 May 2019 {alex, sourabh, holger, lubing, jiong.yang, oscar}@nutonomy.com Cyclist PP F A S V Runtime (Hz) Figure 1.
 
 ## 핵심 방법론
-- Task family: core 3D geometry and scene representation learning
-- Representation: 3D Vision, 3D detection
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Modality MV3D Cont-Fuse Roarnet AVOD-FPN F-PointNet HDNET PIXOR++ VoxelNet SECOND PointPillars Lidar & Img.
+- Lidar & Map Lidar Lidar Lidar Lidar Method Modality MV3D Cont-Fuse Roarnet AVOD-FPN F-PointNet VoxelNet SECOND PointPillars Lidar & Img.
+- Lidar Lidar Lidar Speed mAP Car Pedestrian (Hz) Mod.
+- Hard 2.8 N/A 86.02 76.90 68.49 N/A N/A N/A 16.7 N/A 88.81 85.83 77.33 N/A N/A N/A

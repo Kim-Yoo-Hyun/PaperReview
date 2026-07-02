@@ -1,18 +1,24 @@
 # Method
 
-## Brief Method
-핵심은 diffusion score/denoising process를 action, 3D generation, 또는 structured scene representation에 적용하면서 geometry prior를 넣는 것이다.
+- Year/Venue: 2024 / CVPR
+- Category: 3D Generative Modeling and Diffusion
+- Tags: Diffusion, Generation, point cloud, 3D Vision
+- Paper link: ./2024/CVPR/2024_CVPR_TIGER-Time-Varying-Denoising-Model-for-3D-Point-Cloud-Gene/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose to merge these two properties across different timesteps in the diffusion process. plore and develop efficient and effective model architectures for 3D point cloud generation.
+- In light of this observation, we propose a time-varying twostream denoising model combined with convolution layers and transformer blocks.
+- The training set consists of 2, 832, 4, 612, and 2, 458 shapes, while the evaluation set is composed of 405, 662, and 352 shapes for airplanes, chairs, ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- Existing point cloud generative models are built on a range of frameworks, including generative adversarial networks (GANs) , variational autoenco
+- However, compared to 2D images, the cost and complexity of acquiring 3D point clouds make it crucial to ex- Figure 1.
+- We propose to merge these two properties across different timesteps in the diffusion process. plore and develop efficient and effective model architectures for 3D point cloud generation.
 
 ## 핵심 방법론
-- Task family: diffusion-based generation or policy learning
-- Representation: 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- The training set consists of 2, 832, 4, 612, and 2, 458 shapes, while the evaluation set is composed of 405, 662, and 352 shapes for airplanes, chairs, ...
+- Following the baselines PVD and LION , we use 1-NN (1-nearest neighbor) accuracy as our evaluation metric.
+- Generative Model r-GAN l-GAN(CD) l-GAN(EMD) PointFlow DPF-Net ShapeGF SoftFlow SetVAE DPM PVD TIGER LION TIGER GAN GAN GAN Normalizing Flow Normalizing Flow GAN Normalizing Flow VAE Diffusion Diffusion ...
+- The overview of our decoder is shown in Fig.

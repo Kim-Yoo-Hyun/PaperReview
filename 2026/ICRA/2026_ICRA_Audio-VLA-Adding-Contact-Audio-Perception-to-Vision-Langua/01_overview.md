@@ -3,33 +3,32 @@
 - Year/Venue: 2026 / ICRA
 - Category: Vision-Language-Action and Robot Manipulation
 - Tags: VLA, Vision-Language Model, Robotics
-- Authors: Xiangyi Wei, Haotian Zhang, Xinyi Cao, Siyu Xie, Weifeng Ge, Yang Li
-- Paper: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html
-- PDF status: downloaded
-- GitHub/Project: not identified from venue audit
+- Paper link: ./2026/ICRA/2026_ICRA_Audio-VLA-Adding-Contact-Audio-Perception-to-Vision-Langua/paper.pdf
+- Code/Project: not identified from venue audit
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-로봇은 언어 지시, 시각 관측, 3D 공간 제약을 동시에 만족하며 행동해야 하지만 데이터 수집 비용, embodiment 차이, 장기 과제 일반화가 병목이다.
+- However, vision-only VLA models create fundamental limitations, particularly in perceiving interactive and manipulation dynamic processes.
+- However, current VLA methods exhibit a fundamental limitation as they rely exclusively on visual perception – .
 
 ## Core Idea
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: The Vision-Language-Action models (VLA) have achieved significant advances in robotic manipulation recently.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: The Vision-Language-Action models (VLA) have achieved significant advances in robotic manipulation recently.
+- Audio-VLA employs pre-trained DINOv2 and SigLIP as visual encoders, AudioCLIP as the audio encoder, and Llama2 as the large language model backbone.
 
 ## Input / Output
-Input: language instruction plus RGB/RGB-D/point-cloud robot observations. Output: action tokens, poses, trajectories, constraints, or policy decisions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `robot manipulation and vision-language-action control`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- We apply LoRA fine-tuning to these pre-trained modules to achieve robust cross-modal understanding of both visual and acoustic inputs.
+- — The Vision-Language-Action models (VLA) have achieved significant advances in robotic manipulation recently.
+- Extensive experiments on LIBERO, RLBench, and two real-world tasks demonstrate Audio-VLA’s superior performance over vision-only comparative methods, while the TCR metric effectively quantifies dynamic process perception capabilities.
 
 ## Limitation
-실제 로봇 배치에서는 센서 calibration, latency, safety, embodiment mismatch, 실패 복구가 추가 변수다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- robot manipulation and vision-language-action control 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: VLA, Vision-Language Model, Robotics.
-- 초록에서 확인되는 주요 cue: The, Vision-Language-Action, VLA, However, This, Audio-VLA, Additionally, Task.
+- Large-scale vision-language pretraining enables VLA models to achieve generalizable manipulation capabilities across diverse scenarios.
+- Extensive experiments on LIBERO, RLBench, and two real-world tasks demonstrate Audio-VLA’s superior performance over vision-only comparative methods, while the TCR metric effectively quantifies dynamic process perception capabilities.
+- Audio-VLA employs pre-trained DINOv2 and SigLIP as visual encoders, AudioCLIP as the audio encoder, and Llama2 as the large language model backbone.
+
+## Abstract Cue
+- — The Vision-Language-Action models (VLA) have achieved significant advances in robotic manipulation recently.

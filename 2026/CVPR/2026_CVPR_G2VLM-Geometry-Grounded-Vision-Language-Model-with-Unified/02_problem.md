@@ -1,15 +1,19 @@
 # Problem
 
+- Year/Venue: 2026 / CVPR
+- Category: 3D Large Multimodal Models
+- Tags: VLM, 3D reconstruction, spatial reasoning
+- Paper link: ./2026/CVPR/2026_CVPR_G2VLM-Geometry-Grounded-Vision-Language-Model-with-Unified/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-VLM/LLM은 강한 semantic prior를 갖지만 3D 위치, 거리, 관점, affordance 같은 metric spatial reasoning에는 취약하다.
+- Our unified design is highly scalVision-Language Models (VLMs) still lack robustness <Navigate to the living roomit trains on abundant multi❷ <Navigate in to the bedroom able for ❸ ...
 
 ## 해결하려는 문제
-- 연구 유형: 3D vision-language spatial reasoning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- We present G VLM, a geometry grounded PC monitor vision-language on the desk? tasks, achieving comparable results to state-of-the-art feedRecall: the living model that bridges two fundamental aspects ...
+- We for a gift box> the gift box> of 3D visual priors that are typically aging the benefits into the gift box> Too small. <Try placing the this ...
+- Introduction Semantic Perception Expert Self-Attention Recent advancements in Vision-Language Models (VLMs) have established them as powerful foundation models across a wide range of tasks .
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `VLM, 3D reconstruction, spatial reasoning` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

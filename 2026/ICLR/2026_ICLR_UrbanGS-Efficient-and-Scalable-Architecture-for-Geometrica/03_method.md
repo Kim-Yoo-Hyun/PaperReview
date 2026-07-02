@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
+- Year/Venue: 2026 / ICLR Poster
+- Category: 3D Reconstruction, Geometry, and SLAM
+- Tags: 3D reconstruction, 3D Vision
+- Paper link: ./2026/ICLR/2026_ICLR_UrbanGS-Efficient-and-Scalable-Architecture-for-Geometrica/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We present UrbanGS, a scalable reconstruction framework that effectively addresses these challenges for city-scale applications.
+## Brief Method
+- We compare the training time of our method with that of existing methods.
+- 5, our method only takes 2 hours and 10 minutes to complete the training on the Rubble (Lin et al., 2022), which is significantly faster than competing methods.
+- 3, when compared with other large-scale scene algorithms, our method requires lower computational costs while achieving better rendering quality and geometric accuracy.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- We compare the training time of our method with that of existing methods.
 
 ## 핵심 방법론
-- Task family: 3D reconstruction, calibration, and geometric consistency
-- Representation: 3D reconstruction, 3D Vision
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We compare the training time of our method with that of existing methods.
+- 5, our method only takes 2 hours and 10 minutes to complete the training on the Rubble (Lin et al., 2022), which is significantly faster than competing methods.
+- 3, when compared with other large-scale scene algorithms, our method requires lower computational costs while achieving better rendering quality and geometric accuracy.

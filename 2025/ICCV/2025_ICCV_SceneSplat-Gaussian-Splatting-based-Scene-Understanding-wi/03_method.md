@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 Gaussian primitive 또는 rendered feature에 language-aligned semantic feature를 부여하여 3DGS를 질의 가능한 장면 표현으로 확장하는 것이다.
+- Year/Venue: 2025 / ICCV
+- Category: Language-Embedded NeRF and Gaussian Fields
+- Tags: Gaussian Splatting, Vision-Language, semantic
+- Paper link: ./2025/ICCV/2025_ICCV_SceneSplat-Gaussian-Splatting-based-Scene-Understanding-wi/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Furthermore, we propose a self-supervised 1.
+- To address these limitations, we introduce SceneSplat in Fig.
+- We adopt the pretraining on the SceneSplat-7K dataset and report fine-tuning mIoU and mAcc on indoor semantic segmentation tasks.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To address these limitations, we introduce SceneSplat in Fig.
+- However, effectively integrating semantic reasoning into 3DGS in a generalizable manner remains an open challenge.
+- Furthermore, we propose a self-supervised 1.
 
 ## 핵심 방법론
-- Task family: language-aware Gaussian/implicit 3D scene representation
-- Representation: Gaussian Splatting, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- We adopt the pretraining on the SceneSplat-7K dataset and report fine-tuning mIoU and mAcc on indoor semantic segmentation tasks.
+- Training Source OpenScene† PLA RegionPLC OV3D Mosaic3D SceneSplat (Ours) SN SN SN SN SN SN Mosaic3D SceneSplat (Ours) SceneSplat (Ours) SN, SN++, ARKitS, MP3D, S3D SN++ SN, SN++, ...
+- One may assume that the collected language labels cap the upper bound zero-shot performance since they provide the supervision signal during vision-language pretraining.
+- Method ScanNet20 (20) mIoU mAcc ScanNet200 (200) mIoU mAcc ScanNet++ (100) mIoU mAcc No-Pre MGM +DINO +iBOT +LA 77.1 76.7 77.0 77.2 77.2 35.4 35.5 35.9 35.2 34.7 ...
+- Although the collected labels are not perfect, large-scale pretraining can filter noise and learn meaningful patterns.

@@ -3,32 +3,31 @@
 - Year/Venue: 2014 / NeurIPS
 - Category: Foundations: Monocular Geometry
 - Tags: 3D Vision, monocular depth, geometry
-- Authors: not extracted
-- Paper: https://arxiv.org/abs/1406.2283
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2014/NeurIPS/2014_NeurIPS_Depth-Map-Prediction-from-a-Single-Image-using-a-Multi-Sca/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-현실의 3D reconstruction/SLAM은 calibration, pose, correspondence, temporal consistency가 불완전한 상태에서 metric geometry를 추정해야 한다.
+- Moreover, the task is inherently ambiguous, and a technically ill-posed problem: Given an image, an infinite number of possible world scenes may have produced it.
+- While there is much prior work on estimating depth based on stereo images or motion , there has been relatively little on estimating depth from a single image.
+- Moreover, the task is inherently ambiguous, with a large source of uncertainty coming from the overall scale.
 
 ## Core Idea
-핵심은 transformer, pointmap, dense matching, SLAM optimization, 또는 3DGS를 사용해 pose/depth/shape를 한 표현 안에서 일관되게 추정하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- In this paper, we present a new method that addresses this task by employing two deep network stacks: one that makes a coarse global prediction based on the ...
 
 ## Input / Output
-Input/Output follows the foundational formulation: tokens, images, point sets, trajectories, or scene coordinates mapped to reusable representations or predictions.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D reconstruction, calibration, and geometric consistency`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- By leveraging the raw datasets as large sources of training data, our method achieves boundaries without the need for superpixelation.
 
 ## Limitation
-강한 benchmark 성능이 실제 로봇 센서 노이즈, rolling shutter, 동적 객체, 저조도 환경까지 보장하지는 않는다.
+- In future work, we plan to extend our method to incorporate further 3D geometry information, such as surface normals.
 
 ## Contribution
-- 3D reconstruction, calibration, and geometric consistency 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D Vision, monocular depth, geometry.
+- By leveraging the raw datasets as large sources of training data, our method achieves boundaries without the need for superpixelation.
+- In this paper, we present a new method that addresses this task by employing two deep network stacks: one that makes a coarse global prediction based on the ...
+- Moreover, the task is inherently ambiguous, with a large source of uncertainty coming from the overall scale.
+
+## Abstract Cue
+- Predicting depth is an essential component in understanding the 3D geometry of a scene.

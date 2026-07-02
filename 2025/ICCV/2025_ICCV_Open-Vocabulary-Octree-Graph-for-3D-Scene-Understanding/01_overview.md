@@ -3,32 +3,32 @@
 - Year/Venue: 2025 / ICCV
 - Category: 3D Large Multimodal Models
 - Tags: 3D Vision, Graph Reasoning, semantic
-- Authors: not extracted
-- Paper: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.html
-- PDF status: downloaded
-- GitHub/Project: not identified
+- Paper link: ./2025/ICCV/2025_ICCV_Open-Vocabulary-Octree-Graph-for-3D-Scene-Understanding/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Problem
-VLM/LLM은 강한 semantic prior를 갖지만 3D 위치, 거리, 관점, affordance 같은 metric spatial reasoning에는 취약하다.
+- Despite progress, a point cloud is a set of unordered coordinates that requires substantial storage space and does not directly convey occupancy information or spatial relation, making existing ...
+- Point clouds are unordered discrete coordinates that require considerable storage space, making existing methods inefficient to deploy on embodied agents with limited
 
 ## Core Idea
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
-
-## Paper-Specific Cues
-- Topic cue: 초록 cue를 자동 추출하지 못함.
-- Method cue: 초록에서 명시적 propose/present 문장을 자동 추출하지 못함.
-- Result cue: 초록에서 result claim 문장을 자동 추출하지 못함.
+- To address these issues, we propose Octree-Graph, a novel scene representation for open-vocabulary 3D scene understanding.
+- Similarly, we present a +17.1% mIoU and a +17.0% mAcc on ScanNet with the same settings.
 
 ## Input / Output
-Input: 2D/3D observations, point/scene tokens, and natural-language prompts. Output: spatial answer, grounding result, caption, plan, or embodied reasoning response.
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
 
 ## Main Claims
-- 논문은 `3D vision-language spatial reasoning`에서 기존 방법의 일반화, 정렬, 효율, 또는 3D grounding 한계를 줄이는 것을 주장한다.
-- 평가가 확인된 경우, 아래 evaluation note의 datasets/metrics를 기준으로 비교한다.
+- Extensive experiments on various tasks are conducted on several widelyused datasets, demonstrating the versatility and effectiveness of our method.
+- Most mainstream methods build the 3D map based on point clouds, as shown in Fig.
 
 ## Limitation
-대규모 pretraining 의존성, benchmark 편향, compute 비용, 실제 환경 generalization을 별도로 검증해야 한다.
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
 
 ## Contribution
-- 3D vision-language spatial reasoning 문제를 명확한 시스템/모델/벤치마크 형태로 정의.
-- 핵심 키워드: 3D Vision, Graph Reasoning, semantic.
+- Extensive experiments on various tasks are conducted on several widelyused datasets, demonstrating the versatility and effectiveness of our method.
+- To address these issues, we propose Octree-Graph, a novel scene representation for open-vocabulary 3D scene understanding.
+- Most mainstream methods build the 3D map based on point clouds, as shown in Fig.
+
+## Abstract Cue
+- Open-vocabulary 3D scene understanding is indispensable for embodied agents.

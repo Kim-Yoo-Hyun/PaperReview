@@ -1,26 +1,31 @@
 # Evaluation
 
-## Dataset
-Replica, Habitat, OXE, HSSD
+- Year/Venue: 2025 / NeurIPS Poster
+- Category: Vision-Language-Action and Robot Manipulation
+- Tags: Vision-Language Model, Robotics, Reinforcement Learning
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_OWMM-Agent-Open-World-Mobile-Manipulation-With-Multi-modal/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Benchmark
-- 주요 benchmark는 task family `robot manipulation and vision-language-action control`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Dataset / Benchmark
+- Habitat
 
 ## Metrics
-success rate, task completion, language-conditioned generalization, real/sim transfer, IoU, AP, mAP, SR
+- accuracy
+- mAP
+- success rate
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Evaluation Protocol and Results
+- The OWMM-VLM-38B model achieves the best performance across all metrics, demonstrating its superior ability to integrate scene understanding, decision-making, and action generation. *: Since PIVOT and RoboPoint are ...
+- Our model excels in decision-making, achieving state-of-the-art results in image retrieval and affordance grounding.
+- Moreover, our model demonstrates a marked improvement over GPT-4o in decision-making tasks.
+- We present the experimental results of single-step evaluation for OWMM-VLM in our simulated benchmark in section 5.1 and episodic evaluation for the OWMM-Agent in our simulated benchmark in ...
+- Through experiments, we demonstrate that our model achieves SOTA performance compared to other foundation models including GPT-4o and strong zero-shot generalization in real world.
+- The OWMM-VLM-38B model achieves the best performance across all metrics, demonstrating its superior ability to integrate scene understanding, decision-making, and action generation. *: Since PIVOT and RoboPoint are ...
 
 ## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
-
-## Main Results
-- Abstract result cue: Through experiments, we demonstrate that our model achieves SOTA performance compared to other foundation models including GPT-4o and strong zero-shot generalization in real world.
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+- Regarding the baseline methods, we have evaluated both 1) multitasking foundation VLM models, including GPT-4o and InternVL-2.5-8B that share the same unified input and output configuration as ours ...
+- We further provide the qualitative comparisons of different models in Appendix J.
 
 ## Reproducibility Notes
-- Code/Project: not identified from OpenReview
-- PDF status: downloaded
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- 자동 추출 기준으로 확인된 내용만 위에 기록했다. dataset, split, hyperparameter, code availability는 `paper.pdf`의 experiment section과 공식 repository를 추가 확인해야 한다.

@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2025 / CVPR
+- Category: 3D Vision-Language Grounding
+- Tags: 3D visual grounding, zero-shot, open-vocabulary
+- Paper link: ./2025/CVPR/2025_CVPR_SeeGround-See-and-Ground-for-Zero-Shot-Open-Vocabulary-3D/paper.pdf
+- Code/Project: not identified from primary page
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- We propose two modules: the Perspective Adaptation Module, which dynamically selects viewpoints for query-relevant image rendering, and the Fusion Alignment Module, which integrates 2D images with 3D spatial ...
+- To address these limitations, we propose SeeGround, leveraging 2D Vision-Language Models (VLMs) for flexible 3DVG.
+- To overcome these limitations, we introduce SeeGround, a zero-shot 3DVG framework leveraging 2D Vision-Language Models (VLMs) trained on largescale 2D data.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- To overcome these limitations, we introduce SeeGround, a zero-shot 3DVG framework leveraging 2D Vision-Language Models (VLMs) trained on largescale 2D data.
+- To address these limitations, we propose SeeGround, leveraging 2D Vision-Language Models (VLMs) for flexible 3DVG.
+- We propose two modules: the Perspective Adaptation Module, which dynamically selects viewpoints for query-relevant image rendering, and the Fusion Alignment Module, which integrates 2D images with 3D spatial ...
 
 ## 핵심 방법론
-- Task family: open-vocabulary 3D semantic understanding
-- Representation: 3D visual grounding
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- In the challenging Multiple subset, with multiple instances of the target class, our approach attains Acc@0.25 of 34.0% and Acc@0.5 of 30.0%, in- 4.

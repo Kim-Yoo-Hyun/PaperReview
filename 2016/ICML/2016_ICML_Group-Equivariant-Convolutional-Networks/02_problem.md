@@ -1,15 +1,19 @@
 # Problem
 
+- Year/Venue: 2016 / ICML
+- Category: Foundations: Equivariance and Geometry
+- Tags: equivariant, representation, geometry
+- Paper link: ./2016/ICML/2016_ICML_Group-Equivariant-Convolutional-Networks/paper.pdf
+- Code/Project: https://github.com/tscohen/gconv_experiments
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-이 논문은 3D perception, language grounding, representation learning 사이의 연결 부족을 해결하려는 흐름에 속한다.
+- Although a strong theory of neural network design is currently lacking, a large amount of empirical evidence supports the notion that both convolutional weight sharing and depth (among ...
 
 ## 해결하려는 문제
-- 연구 유형: geometry-aware equivariant modeling
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: 자동 추출 없음.
+- G-CNNs achieve state of the art results on CIFAR10 and rotated MNIST.
+- We introduce Group equivariant Convolutional Neural Networks (G-CNNs), a natural generalization of convolutional neural networks that reduces sample complexity by exploiting symmetries.
+- In this paper we show how convolutional networks can be generalized to exploit larger groups of symmetries, including rotations and reflections.
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `equivariant, representation, geometry` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.

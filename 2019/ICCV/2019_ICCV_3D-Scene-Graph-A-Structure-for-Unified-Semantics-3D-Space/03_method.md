@@ -1,18 +1,23 @@
 # Method
 
-## Brief Method
-핵심은 객체 노드와 관계 엣지를 3D geometry 및 language embedding과 정렬해 queryable relation reasoning을 가능하게 하는 것이다.
+- Year/Venue: 2019 / ICCV
+- Category: 3D Scene Graphs and Graph Reasoning
+- Tags: 3D Scene Graph, semantic, geometry, Graph Reasoning
+- Paper link: ./2019/ICCV/2019_ICCV_3D-Scene-Graph-A-Structure-for-Unified-Semantics-3D-Space/paper.pdf
+- Code/Project: https://3dscenegraph.stanford.edu/
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- 3D Scene Graph: It consists of 4 layers, that represent semantics, 3D space and camera.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- obj1 obj1 obj2 (0.8, 0.3, - 0.1) obj2 0.85 obj2 class: bed color: blue, brown material: wood, fabric area: 2.2 m2 shape: prism rectangular action affordance: sit on, ...
+- Introduction B1 Where should semantic information be grounded and what structure should it have to be most useful and invariant?
+- 3D Scene Graph: It consists of 4 layers, that represent semantics, 3D space and camera.
 
 ## 핵심 방법론
-- Task family: structured 3D scene graph reasoning
-- Representation: 3D Scene Graph, semantic, geometry, Graph Reasoning
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Mask R-CNN 0.079 0.166 0.070 0.151 AP AP.50 AP.75 AR 2D Ours Mask R-CNN w/ Framing 0.160 (+0.081) 0.316 (+0.150) 0.147 (+0.077) 0.256 (+0.105) Ours Mask R-CNN w/ ...
+- Mask R-CNN with framing and multi-view consistency (d) further removed the painted vase and bed reflection, achieving results very close to the ground truth.
+- Similar improvements can be seen in the case of 3D (Figure 7).
+- Even though they might not appear as large quantitatively, they are crucial for getting consistent 3D results with most changes relating to consistent local regions and better object ...
+- Human Labor: We perform a user study to associate detection performance with human labor (hours spent).

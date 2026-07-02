@@ -1,15 +1,23 @@
 # Problem
 
+- Year/Venue: 2025 / NeurIPS Poster
+- Category: Navigation and Embodied AI
+- Tags: 3D Vision, Navigation
+- Paper link: ./2025/NeurIPS/2025_NeurIPS_BeliefMapNav-3D-Voxel-Based-Belief-Map-for-Zero-Shot-Objec/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+
 ## 왜 문제인가
-실내/실외 이동 에이전트는 언어 목표와 3D 공간 구조를 연결해야 하며, partial observation과 탐색-활용 균형 때문에 단순 2D 인식만으로는 안정적이지 않다.
+- Together, in existing works, the lack of semantic cues and spatial reasoning leads to inaccurate and imprecise target object position estimation.
+- However, both LLMs and VLMs face limitations in spatial understanding and reasoning , which significantly affect target location prediction accuracy.
+- Furthermore, existing methods generally rely on greedy navigation strategies , which cause frequent backand-forth movements, significantly hindering search efficiency.
 
 ## 해결하려는 문제
-- 연구 유형: embodied navigation and spatial planning
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: However, these models often greedily select the next goal without maintaining a global understanding of the environment and are fundamentally limited in the spatial ...
+- Experiments on HM3D and HSSD benchmarks show that BeliefMapNav achieves state-of-the-art (SOTA) Success Rate (SR) and Success weighted by Path Length (SPL), with a notable 9.7 SPL improvement ...
+- To overcome these limitations, we propose a novel 3D voxel-based belief map that estimates the target’s prior presence distribution within a voxelized 3D space.
+- Building on this 3D voxel map, we introduce BeliefMapNav, an efficient navigation system with two key advantages: i) grounding LLM semantic reasoning within the 3D hierarchical semantics voxel ...
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `3D Vision, Navigation` 관점의 개선을 제안한다.
+## 선행 연구 / 배경 단서
+- Together, in existing works, the lack of semantic cues and spatial reasoning leads to inaccurate and imprecise target object position estimation.
+- However, both LLMs and VLMs face limitations in spatial understanding and reasoning , which significantly affect target location prediction accuracy.
+- Furthermore, existing methods generally rely on greedy navigation strategies , which cause frequent backand-forth movements, significantly hindering search efficiency.

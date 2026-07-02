@@ -1,18 +1,25 @@
 # Method
 
-## Brief Method
-핵심은 foundation model feature와 3D 구조를 정렬하여 downstream task별 supervision 의존도를 줄이는 것이다.
+- Year/Venue: 2021 / CoRL
+- Category: Sensor Fusion, LiDAR, and Autonomous Driving
+- Tags: 3D Vision, BEV, 3D detection, camera
+- Paper link: ./2021/CoRL/2021_CoRL_DETR3D-3D-Object-Detection-from-Multi-view-Images-via-3D-t/paper.pdf
+- Code/Project: https://github.com/WangYueFt/detr3d
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- : We introduce a framework for multi-camera 3D object detection.
+- Our method performs worse than FCOS3D in terms of mATE.
+- Our method considers all cameras simultaneously, while FCOS3D predicts bounding boxes per camera individually.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- 3D object detection from visual information is a long-standing challenge for low-cost autonomous driving systems.
+- Our framework, termed DETR3D (Multi-View 3D Detection), addresses this problem in a top-down fashion.
+- : We introduce a framework for multi-camera 3D object detection.
 
 ## 핵심 방법론
-- Task family: 3D vision and embodied AI
-- Representation: 3D Vision, 3D detection
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Our method performs worse than FCOS3D in terms of mATE.
+- Our method considers all cameras simultaneously, while FCOS3D predicts bounding boxes per camera individually.
+- Hence, we implement a baseline ourselves to verify that our approach is more effective than explicit depth prediction.
+- We use a pre-trained PackNet network to predict dense depth maps from all six cameras and then convert these depth maps into point clouds using the camera transformations.
+- For evaluation, we use the nuScenes evalutation toolkit.

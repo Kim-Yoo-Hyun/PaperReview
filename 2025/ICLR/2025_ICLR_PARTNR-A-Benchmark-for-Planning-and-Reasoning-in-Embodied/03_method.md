@@ -1,18 +1,21 @@
 # Method
 
-## Brief Method
-핵심은 pretrained VLM/LLM 또는 3D representation을 policy/action space에 결합해 language-conditioned manipulation을 더 일반화 가능하게 만드는 것이다.
+- Year/Venue: 2025 / ICLR Poster
+- Category: Benchmarks and Datasets
+- Tags: Robotics, Benchmark
+- Paper link: ./2025/ICLR/2025_ICLR_PARTNR-A-Benchmark-for-Planning-and-Reasoning-in-Embodied/paper.pdf
+- Code/Project: not identified from OpenReview
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-We present a benchmark for Planning And Reasoning Tasks in humaN-Robot collaboration (PARTNR) designed to study human-robot coordination in household activities.
+## Brief Method
+- 4.3 H UMAN - IN - THE - LOOP E VALUATION We build on the human-in-the-loop infrastructure from Habitat 3.0 (Puig et al., 2024) and adapt it to ...
+- This indicates that the finetuning effectively distills task-relevant information from the training set and generalizes to new test tasks.
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- housenode denoting the environment where tasks are taking place.
+- Apart from the semantic information, each node also stores the 3D location of the entity and its affordance states e.g., clean/dirty, on/off, open/close, etc.
+- 4.3 H UMAN - IN - THE - LOOP E VALUATION We build on the human-in-the-loop infrastructure from Habitat 3.0 (Puig et al., 2024) and adapt it to ...
 
 ## 핵심 방법론
-- Task family: robot manipulation and vision-language-action control
-- Representation: paper-specific representation
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- 4.3 H UMAN - IN - THE - LOOP E VALUATION We build on the human-in-the-loop infrastructure from Habitat 3.0 (Puig et al., 2024) and adapt it to ...
+- This indicates that the finetuning effectively distills task-relevant information from the training set and generalizes to new test tasks.

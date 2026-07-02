@@ -1,18 +1,22 @@
 # Method
 
-## Brief Method
-핵심은 2D/3D visual tokens, point/scene representation, language model을 정렬해 공간 질의와 embodied reasoning을 한 모델에서 처리하는 것이다.
+- Year/Venue: 2024 / ECCV
+- Category: 3D Large Multimodal Models
+- Tags: Vision-Language Model, 3D Vision, semantic
+- Paper link: ./2024/ECCV/2024_ECCV_3D-Weakly-Supervised-Semantic-Segmentation-with-2D-Vision/paper.pdf
+- Code/Project: not identified
+- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
-## Abstract Method Cue
-자동 추출 없음.
+## Brief Method
+- Subsequently, we introduce semantic segmentation methods supervised by scene-level labels or subcloud-level labels and compare them with our method.
+- In this paper, we propose 3DSS-VLG, a weakly supervised approach for 3D Semantic Segmentation with 2D Vision-Language Guidance, an alternative approach that a 3D model predicts denseembedding for ...
+- Moreover, with extensive quantitative and qualitative experiments, we present that our 3DSS-VLG is able not only to achieve the state-ofthe-art performance on both S3DIS and ScanNet datasets, but ...
 
 ## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+- 3D point cloud semantic segmentation [13, 16, 27–29, 43] can provide valuable geometric and semantic data about the 3D environment and has gained considerable attention over the past ...
+- Subsequently, we introduce semantic segmentation methods supervised by scene-level labels or subcloud-level labels and compare them with our method.
 
 ## 핵심 방법론
-- Task family: 3D vision-language spatial reasoning
-- Representation: 3D Vision, semantic
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+- Subsequently, we introduce semantic segmentation methods supervised by scene-level labels or subcloud-level labels and compare them with our method.
+- Meanwhile, we compare our method with some full supervised methods.
+- Test PointNet 100% 41.1 TangentConv 100% 52.8 MinkowskiNet 100% 65.8 KPConv 100% 67.1 >20 min PointTransformer 100% 70.4 PointNetXt 100% 70.5 DeepViewAgg 100% 67.2 SemAffiNet 100% 71.6 MPRM ...
