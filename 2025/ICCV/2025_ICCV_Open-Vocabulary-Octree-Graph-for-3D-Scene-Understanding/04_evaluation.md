@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, Graph Reasoning, semantic
 - Paper link: ./2025/ICCV/2025_ICCV_Open-Vocabulary-Octree-Graph-for-3D-Scene-Understanding/paper.pdf
 - Code/Project: not identified

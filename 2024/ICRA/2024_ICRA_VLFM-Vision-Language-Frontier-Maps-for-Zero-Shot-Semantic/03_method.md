@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / ICRA
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Navigation, Robotics, Navigation, semantic
 - Paper link: ./2024/ICRA/2024_ICRA_VLFM-Vision-Language-Frontier-Maps-for-Zero-Shot-Semantic/paper.pdf
 - Code/Project: https://github.com/bdaiinstitute/vlfm

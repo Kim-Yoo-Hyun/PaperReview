@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Semantic Understanding and Alignment
+- Category: 3D Vision-Language Understanding
 - Tags: Gaussian Splatting, NeRF, semantic, alignment, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_NG-GS-NeRF-guided-3D-Gaussian-Splatting-Segmentation/paper.pdf
 - Code/Project: not identified

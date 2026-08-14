@@ -1,7 +1,9 @@
 # Method
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2021 / CoRL
-- Category: Foundations: Vision-Language-Action and Robotics
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, Vision-Language Action, CLIP, manipulation
 - Paper link: ./2021/CoRL/2021_CoRL_CLIPort-What-and-Where-Pathways-for-Robotic-Manipulation/paper.pdf
 - Code/Project: https://cliport.github.io/

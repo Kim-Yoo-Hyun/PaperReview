@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: VLA, Vision-Language Model, Robotics, 3D Vision
 - Paper link: ./2026/ICLR/2026_ICLR_From-Spatial-to-Actions-Grounding-Vision-Language-Action-M/paper.pdf
 - Code/Project: not identified from OpenReview

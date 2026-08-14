@@ -1,7 +1,7 @@
 # GS-SLAM: Dense Visual SLAM with 3D Gaussian Splatting
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Reconstruction, Geometry, and SLAM
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: SLAM, Gaussian Splatting, geometry
 - Paper link: ./2024/CVPR/2024_CVPR_GS-SLAM-Dense-Visual-SLAM-with-3D-Gaussian-Splatting/paper.pdf
 - Code/Project: not identified from primary page

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICML poster
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: sensor fusion, LiDAR, 3D Vision
 - Paper link: ./2025/ICML/2025_ICML_Towards-Learning-to-Complete-Anything-in-Lidar/paper.pdf
 - Code/Project: not identified

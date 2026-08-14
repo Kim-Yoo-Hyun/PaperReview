@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Reconstruction, Geometry, and SLAM
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D geometry, matching, calibration
 - Paper link: ./2024/ECCV/2024_ECCV_Grounding-Image-Matching-in-3D-with-MASt3R/paper.pdf
 - Code/Project: https://github.com/naver/mast3r

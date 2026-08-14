@@ -1,8 +1,8 @@
 # Method
 
 - Year/Venue: 2021 / ICCV
-- Category: 3D Vision-Language Grounding
-- Tags: 3D visual grounding, graph reasoning, Transformer
+- Category: 3D Vision-Language Understanding
+- Tags: 3D visual grounding, Graph Reasoning, Transformer
 - Paper link: ./2021/ICCV/2021_ICCV_3DVG-Transformer-Relation-Modeling-for-Visual-Grounding-on/paper.pdf
 - Code/Project: https://github.com/zlccccc/3DVG-Transformer
 - Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.

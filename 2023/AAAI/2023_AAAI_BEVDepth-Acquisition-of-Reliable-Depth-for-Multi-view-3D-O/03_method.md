@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2023 / AAAI
-- Category: Foundations: 3D Detection and BEV Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: depth, 3D Vision
 - Paper link: ./2023/AAAI/2023_AAAI_BEVDepth-Acquisition-of-Reliable-Depth-for-Multi-view-3D-O/paper.pdf
 - Code/Project: not identified

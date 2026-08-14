@@ -1,7 +1,7 @@
 # SceneGraphLoc: Cross-Modal Coarse Visual Localization on 3D Scene Graphs
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, Graph Reasoning
 - Paper link: ./2024/ECCV/2024_ECCV_SceneGraphLoc-Cross-Modal-Coarse-Visual-Localization-on-3D/paper.pdf
 - Code/Project: not identified

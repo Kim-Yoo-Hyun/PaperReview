@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics
 - Paper link: ./2025/ICLR/2025_ICLR_VLAS-Vision-Language-Action-Model-with-Speech-Instructions/paper.pdf
 - Code/Project: not identified from OpenReview

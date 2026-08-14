@@ -1,7 +1,9 @@
 # Problem
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2011 / AISTATS
-- Category: Foundations: RL and Imitation Learning
+- Category: Robotics Foundations: Robot Learning
 - Tags: Robotics, Imitation Learning, policy learning
 - Paper link: ./2011/AISTATS/2011_AISTATS_A-Reduction-of-Imitation-Learning-and-Structured-Predictio/paper.pdf
 - Code/Project: not identified

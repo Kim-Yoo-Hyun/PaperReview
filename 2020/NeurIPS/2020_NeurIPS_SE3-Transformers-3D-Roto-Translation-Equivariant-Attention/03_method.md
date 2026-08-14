@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2020 / NeurIPS
-- Category: Foundations: Equivariance and Geometry
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: equivariant, 3D geometry, Transformer
 - Paper link: ./2020/NeurIPS/2020_NeurIPS_SE3-Transformers-3D-Roto-Translation-Equivariant-Attention/paper.pdf
 - Code/Project: https://github.com/FabianFuchsML/se3-transformer-public

@@ -1,7 +1,7 @@
 # Dr. Splat: Directly Referring 3D Gaussian Splatting via Direct Language Embedding Registration
 
 - Year/Venue: 2025 / CVPR
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting, language embedding, grounding
 - Paper link: ./2025/CVPR/2025_CVPR_Dr.-Splat-Directly-Referring-3D-Gaussian-Splatting-via-Dir/paper.pdf
 - Code/Project: not identified from primary page

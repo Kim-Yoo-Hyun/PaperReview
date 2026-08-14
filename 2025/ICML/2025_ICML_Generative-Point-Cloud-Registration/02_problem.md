@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICML poster
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: geometry, Diffusion, Generation, point cloud, 3D Vision
 - Paper link: ./2025/ICML/2025_ICML_Generative-Point-Cloud-Registration/paper.pdf
 - Code/Project: not identified

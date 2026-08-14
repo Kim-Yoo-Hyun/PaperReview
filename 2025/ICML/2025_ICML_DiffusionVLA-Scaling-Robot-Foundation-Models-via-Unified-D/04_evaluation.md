@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICML Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics, Diffusion
 - Paper link: ./2025/ICML/2025_ICML_DiffusionVLA-Scaling-Robot-Foundation-Models-via-Unified-D/paper.pdf
 - Code/Project: not identified from OpenReview

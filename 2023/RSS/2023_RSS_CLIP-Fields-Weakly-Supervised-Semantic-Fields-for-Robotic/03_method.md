@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2023 / RSS
-- Category: Open-Vocabulary 3D Mapping
+- Category: Embodied Navigation and Mapping
 - Tags: CLIP, Robotics, semantic, NeRF
 - Paper link: ./2023/RSS/2023_RSS_CLIP-Fields-Weakly-Supervised-Semantic-Fields-for-Robotic/paper.pdf
 - Code/Project: https://mahis.life/clip-fields/

@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_Generative-Gaussian-Splatting-Generating-3D-Scenes-with-Vi/paper.pdf
 - Code/Project: not identified

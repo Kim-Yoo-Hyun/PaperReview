@@ -1,7 +1,9 @@
 # Problem
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2017 / arxiv
-- Category: Foundations: RL and Imitation Learning
+- Category: Robotics Foundations: Robot Learning
 - Tags: Reinforcement Learning, policy learning, Robotics
 - Paper link: ./2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms/paper.pdf
 - Code/Project: https://github.com/openai/baselines

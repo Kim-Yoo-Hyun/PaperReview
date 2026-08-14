@@ -1,35 +1,41 @@
-# Insights
+# Insights — Generative Adversarial Imitation Learning
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: We propose a new general framework for directly extracting a policy from data, as if it were obtained by reinforcement learning following inverse reinforcement learning.
-- 출발 문제 단서: There are two main approaches suitable for this setting: behavioral cloning , which learns a policy as a supervised learning problem over state-action pairs from expert trajectories; and ...
-- 주장된 효과 단서: Our algorithm almost always achieved at least 70% of expert performance for all dataset
+> Evidence maturity: `UNREAD`. 이 문서는 읽기 위치와 검증 질문을 정리한 curation note이며, 정독 완료를 뜻하지 않는다.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- Diffusion/generative prior를 sparse observation completion, 3D scene/object generation, action trajectory proposal에 사용할 수 있다.
-- 생성 모델의 prior는 부족한 geometry나 demonstration을 보완하지만, physical feasibility와 metric correctness를 별도 제약으로 확인해야 한다.
+## Why CORE
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: Our algorithm almost always achieved at least 70% of expert performance for all dataset
-- visual/shape generation 품질 이후에도 geometry correctness, controllability, physical plausibility, robot execution 가능성은 남는다.
+이 논문은 **RL, IL, and policy learning foundations**에서 data distribution, policy objective, value/sequence/generative action interface를 비교하기 위한 robot-learning 기반로 선정됐다.
 
-## 다음 연구 질문
-- 2D/3D diffusion prior가 실제 3D reconstruction이나 planning에서 metric error를 줄이는가, 아니면 plausible hallucination을 늘리는가?
-- language-conditioned generation 결과를 robot execution constraint로 어떻게 검증하고 거를 수 있는가?
-- generated scene/action 후보의 uncertainty를 downstream planner에 어떻게 전달할 수 있는가?
+## Captured Source Cues — Not Yet Independently Verified
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / 자동 추출에서 명확한 metric 단서 없음
-- 내 연구 확장 benchmark 후보: ShapeNet, Objaverse, ScanNet, RLBench
-- 내 연구 확장 metric 후보: Chamfer, F-score, CLIP score, success rate
-- 검증 초점: generation fidelity, geometric validity, physical feasibility, downstream task utility를 함께 확인한다.
-
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
-
-## 근거가 되는 논문 단서
 - Problem cue: There are two main approaches suitable for this setting: behavioral cloning , which learns a policy as a supervised learning problem over state-action pairs from expert trajectories; and ...
 - Method cue: We propose a new general framework for directly extracting a policy from data, as if it were obtained by reinforcement learning following inverse reinforcement learning.
-- Result cue: Our algorithm almost always achieved at least 70% of expert performance for all dataset
+- Result/evaluation cue: Our algorithm almost always achieved at least 70% of expert performance for all dataset
+
+위 cue는 기존 official abstract 또는 local text extraction에서 보존한 것이다. 수치·조건·인과적 해석은 full-text 정독 전까지 `UNVERIFIED`다.
+
+## Dependency Position
+
+`Learning Neural Network Policies with Guided Policy Search under Unknown Dynamics → Generative Adversarial Imitation Learning → Trust Region Policy Optimization`
+
+이 화살표는 reading dependency다. 직접 citation 관계는 references와 related work를 확인한 뒤 synthesis 문서에만 확정한다.
+
+## Close-Reading Checklist
+
+- learning setting, objective, policy/value representation, data source, interaction budget, generalization split, optimization failure
+- 논문이 고정한 가정과 실제 deployment에서 깨질 조건
+- strongest baseline과 공정한 비교가 성립하는 조건
+- negative result, failure case, compute/data/hardware dependency
+
+## Research Use
+
+- 성능 향상이 objective, data coverage, architecture 중 어디에서 오는지 분리한다.
+- 연결 gap: `G-06 / G-08 / G-12` in [RESEARCH_GAPS.md](../../../research/RESEARCH_GAPS.md)
+
+## Minimal Reproduction
+
+동일 observation/action/data split에서 objective만 바꾸고 success, OOD degradation와 calibration을 비교한다.
+
+## Promotion Rule
+
+`READ`로 올리려면 method/evaluation 필드를 채우고, `SYNTHESIZED`로 올리려면 같은 track의 선행·후속 논문과 comparison matrix를 갱신한다.

@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_Mamba-3VL-Taming-State-Space-Model-for-3D-Vision-Language/paper.pdf
 - Code/Project: not identified

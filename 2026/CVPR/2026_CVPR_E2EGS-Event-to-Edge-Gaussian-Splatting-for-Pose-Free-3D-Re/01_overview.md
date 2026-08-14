@@ -1,7 +1,7 @@
 # E2EGS: Event-to-Edge Gaussian Splatting for Pose-Free 3D Reconstruction
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_E2EGS-Event-to-Edge-Gaussian-Splatting-for-Pose-Free-3D-Re/paper.pdf
 - Code/Project: not identified

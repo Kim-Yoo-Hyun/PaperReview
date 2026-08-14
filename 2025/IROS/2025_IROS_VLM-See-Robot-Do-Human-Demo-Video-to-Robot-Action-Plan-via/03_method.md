@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / IROS
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Vision-Language Model, Robotics
 - Paper link: ./2025/IROS/2025_IROS_VLM-See-Robot-Do-Human-Demo-Video-to-Robot-Action-Plan-via/paper.pdf
 - Code/Project: https://ai4ce.github.io/SeeDo/

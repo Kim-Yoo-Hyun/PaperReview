@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / CVPR
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting, grounding, LVLM
 - Paper link: ./2025/CVPR/2025_CVPR_ReasonGrounder-LVLM-Guided-Hierarchical-Feature-Splatting/paper.pdf
 - Code/Project: not identified from primary page

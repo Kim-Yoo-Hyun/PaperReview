@@ -1,7 +1,7 @@
 # SeaLion: Semantic Part-Aware Latent Point Diffusion Models for 3D Generation
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: semantic, alignment, Diffusion, Generation, point cloud, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_SeaLion-Semantic-Part-Aware-Latent-Point-Diffusion-Models/paper.pdf
 - Code/Project: not identified

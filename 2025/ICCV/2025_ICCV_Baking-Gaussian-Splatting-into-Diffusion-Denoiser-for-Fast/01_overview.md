@@ -1,7 +1,7 @@
 # Baking Gaussian Splatting into Diffusion Denoiser for Fast and Scalable Single-stage Image-to-3D Generation and Reconstruction
 
 - Year/Venue: 2025 / ICCV
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: 3D Vision, Gaussian Splatting, Diffusion
 - Paper link: ./2025/ICCV/2025_ICCV_Baking-Gaussian-Splatting-into-Diffusion-Denoiser-for-Fast/paper.pdf
 - Code/Project: not identified

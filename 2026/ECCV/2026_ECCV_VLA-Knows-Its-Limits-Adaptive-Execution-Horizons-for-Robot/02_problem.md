@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / ECCV
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Robotics
 - Paper link: ./2026/ECCV/2026_ECCV_VLA-Knows-Its-Limits-Adaptive-Execution-Horizons-for-Robot/paper.pdf
 - Code/Project: https://hatchetproject.github.io/

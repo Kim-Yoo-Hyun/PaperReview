@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / 3DV
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: equivariant, point cloud, 3D Vision
 - Paper link: ./2025/3DV/2025_3DV_Efficient-Continuous-Group-Convolutions-for-Local-SE3-Equi/paper.pdf
 - Code/Project: not identified

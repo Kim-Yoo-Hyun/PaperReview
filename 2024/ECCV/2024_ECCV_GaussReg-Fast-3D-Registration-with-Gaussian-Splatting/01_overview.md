@@ -1,7 +1,7 @@
 # GaussReg: Fast 3D Registration with Gaussian Splatting
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: Gaussian Splatting, geometry, 3D Vision
 - Paper link: ./2024/ECCV/2024_ECCV_GaussReg-Fast-3D-Registration-with-Gaussian-Splatting/paper.pdf
 - Code/Project: not identified

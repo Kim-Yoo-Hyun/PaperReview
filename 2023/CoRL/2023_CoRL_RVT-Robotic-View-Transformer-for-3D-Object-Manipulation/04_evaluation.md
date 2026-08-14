@@ -1,7 +1,9 @@
 # Evaluation
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2023 / CoRL
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, 3D manipulation, Transformer
 - Paper link: ./2023/CoRL/2023_CoRL_RVT-Robotic-View-Transformer-for-3D-Object-Manipulation/paper.pdf
 - Code/Project: https://robotic-view-transformer.github.io/

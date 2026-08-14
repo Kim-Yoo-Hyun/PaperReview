@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / RA-L
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: Robotics, Graph Reasoning
 - Paper link: ./2024/RA-L/2024_RA-L_Language-Grounded-Dynamic-Scene-Graphs-for-Interactive-Obj/paper.pdf
 - Code/Project: https://moma-llm.cs.uni-freiburg.de/

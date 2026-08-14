@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2020 / CVPR
-- Category: Foundations: 3D Detection and BEV Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: point cloud, 3D Vision
 - Paper link: ./2020/CVPR/2020_CVPR_PV-RCNN-Point-Voxel-Feature-Set-Abstraction-for-3D-Object/paper.pdf
 - Code/Project: not identified

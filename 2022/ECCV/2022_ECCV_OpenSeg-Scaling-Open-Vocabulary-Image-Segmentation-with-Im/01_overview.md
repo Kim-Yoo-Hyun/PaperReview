@@ -1,7 +1,7 @@
 # OpenSeg: Scaling Open-Vocabulary Image Segmentation with Image-Level Labels
 
 - Year/Venue: 2022 / ECCV
-- Category: Open-Vocabulary 3D Mapping
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Model, semantic, open-vocabulary, segmentation
 - Paper link: ./2022/ECCV/2022_ECCV_OpenSeg-Scaling-Open-Vocabulary-Image-Segmentation-with-Im/paper.pdf
 - Code/Project: https://github.com/tensorflow/tpu/tree/master/models/official/detection/projects/openseg

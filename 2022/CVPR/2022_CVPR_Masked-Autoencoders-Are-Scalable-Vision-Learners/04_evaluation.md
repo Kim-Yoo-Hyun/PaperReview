@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2022 / CVPR
-- Category: Foundations: Vision Foundation Models
+- Category: Foundations: Vision and Language Models
 - Tags: Vision Foundation Model, self-supervised, representation
 - Paper link: ./2022/CVPR/2022_CVPR_Masked-Autoencoders-Are-Scalable-Vision-Learners/paper.pdf
 - Code/Project: https://github.com/facebookresearch/mae

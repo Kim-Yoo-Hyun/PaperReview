@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2021 / ICLR
-- Category: Foundations: Vision Foundation Models
+- Category: Foundations: Vision and Language Models
 - Tags: Vision Transformer, representation
 - Paper link: ./2021/ICLR/2021_ICLR_An-Image-is-Worth-16x16-Words-Transformers-for-Image-Recog/paper.pdf
 - Code/Project: https://github.com/google-research/vision_transformer

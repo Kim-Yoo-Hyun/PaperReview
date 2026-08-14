@@ -1,7 +1,7 @@
 # Egocentric Action-aware Inertial Localization in Point Clouds with Vision-Language Guidance
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model
 - Paper link: ./2025/ICCV/2025_ICCV_Egocentric-Action-aware-Inertial-Localization-in-Point-Clo/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_A-Lesson-in-Splats-Teacher-Guided-Diffusion-for-3D-Gaussia/paper.pdf
 - Code/Project: not identified

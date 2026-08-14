@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICML Poster
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision
 - Paper link: ./2025/ICML/2025_ICML_How-Do-Images-Align-and-Complement-LiDAR-Towards-a-Harmoni/paper.pdf
 - Code/Project: not identified from OpenReview

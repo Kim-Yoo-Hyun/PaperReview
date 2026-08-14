@@ -1,7 +1,7 @@
 # From Thousands to Billions: 3D Visual Language Grounding via Render-Supervised Distillation from 2D VLMs
 
 - Year/Venue: 2025 / ICML Poster
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model, 3D Vision
 - Paper link: ./2025/ICML/2025_ICML_From-Thousands-to-Billions-3D-Visual-Language-Grounding-vi/paper.pdf
 - Code/Project: not identified from OpenReview

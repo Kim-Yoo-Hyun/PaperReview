@@ -1,7 +1,7 @@
 # LSD-SLAM: Large-Scale Direct Monocular SLAM
 
 - Year/Venue: 2014 / ECCV
-- Category: Foundations: SLAM and Sensor Geometry
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D Vision, SLAM, monocular geometry, 3D reconstruction
 - Paper link: ./2014/ECCV/2014_ECCV_LSD-SLAM-Large-Scale-Direct-Monocular-SLAM/paper.pdf
 - Code/Project: https://github.com/tum-vision/lsd_slam

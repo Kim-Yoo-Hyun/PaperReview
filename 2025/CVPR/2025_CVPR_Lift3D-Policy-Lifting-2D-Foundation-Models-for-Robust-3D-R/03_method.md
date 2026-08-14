@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / CVPR
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: 3D Vision, foundation model, Robotics
 - Paper link: ./2025/CVPR/2025_CVPR_Lift3D-Policy-Lifting-2D-Foundation-Models-for-Robust-3D-R/paper.pdf
 - Code/Project: not identified from primary page

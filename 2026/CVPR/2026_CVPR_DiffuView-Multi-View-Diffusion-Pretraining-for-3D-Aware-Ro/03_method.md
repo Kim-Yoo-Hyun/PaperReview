@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / CVPR
-- Category: Equivariance, Diffusion, and 3D Action
+- Category: Manipulation, Contact, and Dexterity
 - Tags: Diffusion, 3D manipulation, Robotics
 - Paper link: ./2026/CVPR/2026_CVPR_DiffuView-Multi-View-Diffusion-Pretraining-for-3D-Aware-Ro/paper.pdf
 - Code/Project: not identified from primary page

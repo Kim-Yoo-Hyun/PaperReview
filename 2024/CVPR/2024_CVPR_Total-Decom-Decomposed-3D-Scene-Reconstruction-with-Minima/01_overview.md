@@ -1,7 +1,7 @@
 # Total-Decom: Decomposed 3D Scene Reconstruction with Minimal Interaction
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Reconstruction, Geometry, and SLAM
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D reconstruction, geometry, 3D Vision
 - Paper link: ./2024/CVPR/2024_CVPR_Total-Decom-Decomposed-3D-Scene-Reconstruction-with-Minima/paper.pdf
 - Code/Project: not identified

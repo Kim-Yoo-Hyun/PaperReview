@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2019 / CVPR
-- Category: Foundations: 3D Representation Learning
+- Category: 3D Representation Learning
 - Tags: 3D Vision
 - Paper link: ./2019/CVPR/2019_CVPR_4D-Spatio-Temporal-ConvNets-Minkowski-Convolutional-Neural/paper.pdf
 - Code/Project: not identified

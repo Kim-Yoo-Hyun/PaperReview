@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2021 / ICCV
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: NeRF, semantic, 3D Vision, alignment
 - Paper link: ./2021/ICCV/2021_ICCV_In-Place-Scene-Labelling-and-Understanding-with-Implicit-S/paper.pdf
 - Code/Project: https://shuaifengzhi.com/Semantic-NeRF/

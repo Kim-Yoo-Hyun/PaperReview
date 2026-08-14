@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: sensor fusion, LiDAR, 3D Vision
 - Paper link: ./2026/ICLR/2026_ICLR_SimULi-Real-Time-LiDAR-and-Camera-Simulation-with-Unscente/paper.pdf
 - Code/Project: not identified

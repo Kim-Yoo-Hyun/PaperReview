@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / RA-L
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting
 - Paper link: ./2025/RA-L/2025_RA-L_ActiveGS-Active-Scene-Reconstruction-using-Gaussian-Splatt/paper.pdf
 - Code/Project: https://github.com/dmar-bonn/active-gs

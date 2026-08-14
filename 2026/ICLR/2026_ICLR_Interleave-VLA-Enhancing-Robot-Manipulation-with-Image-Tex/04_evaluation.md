@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Robotics, Reinforcement Learning
 - Paper link: ./2026/ICLR/2026_ICLR_Interleave-VLA-Enhancing-Robot-Manipulation-with-Image-Tex/paper.pdf
 - Code/Project: not identified from OpenReview

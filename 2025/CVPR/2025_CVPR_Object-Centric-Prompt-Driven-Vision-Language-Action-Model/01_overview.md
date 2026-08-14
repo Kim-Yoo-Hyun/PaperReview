@@ -1,7 +1,7 @@
 # Object-Centric Prompt-Driven Vision-Language-Action Model for Robotic Manipulation
 
 - Year/Venue: 2025 / CVPR
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, prompting, Robotics
 - Paper link: ./2025/CVPR/2025_CVPR_Object-Centric-Prompt-Driven-Vision-Language-Action-Model/paper.pdf
 - Code/Project: not identified from primary page

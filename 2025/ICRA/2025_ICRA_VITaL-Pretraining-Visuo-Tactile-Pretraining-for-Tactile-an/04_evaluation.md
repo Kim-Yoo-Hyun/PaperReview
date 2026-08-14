@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICRA
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics
 - Paper link: ./2025/ICRA/2025_ICRA_VITaL-Pretraining-Visuo-Tactile-Pretraining-for-Tactile-an/paper.pdf
 - Code/Project: not identified from venue audit

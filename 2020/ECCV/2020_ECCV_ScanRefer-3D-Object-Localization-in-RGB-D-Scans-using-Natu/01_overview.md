@@ -1,7 +1,7 @@
 # ScanRefer: 3D Object Localization in RGB-D Scans using Natural Language
 
 - Year/Venue: 2020 / ECCV
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: 3D visual grounding, RGB-D, semantic
 - Paper link: ./2020/ECCV/2020_ECCV_ScanRefer-3D-Object-Localization-in-RGB-D-Scans-using-Natu/paper.pdf
 - Code/Project: https://daveredrum.github.io/ScanRefer/

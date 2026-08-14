@@ -1,7 +1,7 @@
 # GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D Vision
 - Paper link: ./2024/ECCV/2024_ECCV_GeoGaussian-Geometry-aware-Gaussian-Splatting-for-Scene-Re/paper.pdf
 - Code/Project: not identified

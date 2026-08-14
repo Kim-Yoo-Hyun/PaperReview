@@ -1,7 +1,7 @@
 # RoboRefer: Towards Spatial Referring with Reasoning in Vision-Language Models for Robotics
 
 - Year/Venue: 2025 / NeurIPS Poster
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model, Robotics, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_RoboRefer-Towards-Spatial-Referring-with-Reasoning-in-Visi/paper.pdf
 - Code/Project: not identified from OpenReview

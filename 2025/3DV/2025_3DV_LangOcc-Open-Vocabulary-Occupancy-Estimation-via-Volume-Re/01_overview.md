@@ -1,7 +1,7 @@
 # LangOcc: Open Vocabulary Occupancy Estimation via Volume Rendering
 
 - Year/Venue: 2025 / 3DV
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: sensor fusion, LiDAR, 3D Vision
 - Paper link: ./2025/3DV/2025_3DV_LangOcc-Open-Vocabulary-Occupancy-Estimation-via-Volume-Re/paper.pdf
 - Code/Project: not identified

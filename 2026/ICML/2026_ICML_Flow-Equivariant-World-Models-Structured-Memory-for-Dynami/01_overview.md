@@ -1,7 +1,7 @@
 # Flow Equivariant World Models: Structured Memory for Dynamic Environments
 
 - Year/Venue: 2026 / ICML
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: equivariant, 3D Vision
 - Paper link: ./2026/ICML/2026_ICML_Flow-Equivariant-World-Models-Structured-Memory-for-Dynami/paper.pdf
 - Code/Project: not identified

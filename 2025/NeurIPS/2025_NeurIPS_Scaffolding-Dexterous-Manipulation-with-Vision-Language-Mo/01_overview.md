@@ -1,7 +1,7 @@
 # Scaffolding Dexterous Manipulation with Vision-Language Models
 
 - Year/Venue: 2025 / NeurIPS Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Vision-Language Model, Robotics, Reinforcement Learning
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_Scaffolding-Dexterous-Manipulation-with-Vision-Language-Mo/paper.pdf
 - Code/Project: not identified from OpenReview

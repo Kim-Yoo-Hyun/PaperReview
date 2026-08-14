@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2024 / CVPR
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: NeRF, 3D reconstruction, sensor fusion, LiDAR, 3D Vision
 - Paper link: ./2024/CVPR/2024_CVPR_PlatoNeRF-3D-Reconstruction-in-Plato-s-Cave-via-Single-Vie/paper.pdf
 - Code/Project: not identified

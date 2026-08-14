@@ -1,7 +1,7 @@
 # 3D-AffordanceLLM: Harnessing Large Language Models for Open-Vocabulary Affordance Detection in 3D Worlds
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, 3D Vision, Reinforcement Learning, semantic
 - Paper link: ./2025/ICLR/2025_ICLR_3D-AffordanceLLM-Harnessing-Large-Language-Models-for-Open/paper.pdf
 - Code/Project: not identified from OpenReview

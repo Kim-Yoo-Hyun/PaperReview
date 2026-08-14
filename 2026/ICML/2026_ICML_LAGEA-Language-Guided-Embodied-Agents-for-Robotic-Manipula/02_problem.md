@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / ICML
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, Reinforcement Learning
 - Paper link: ./2026/ICML/2026_ICML_LAGEA-Language-Guided-Embodied-Agents-for-Robotic-Manipula/paper.pdf
 - Code/Project: not identified from OpenReview

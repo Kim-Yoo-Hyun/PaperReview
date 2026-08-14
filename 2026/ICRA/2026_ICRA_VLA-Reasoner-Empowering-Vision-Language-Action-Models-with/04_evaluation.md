@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICRA
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Reinforcement Learning
 - Paper link: ./2026/ICRA/2026_ICRA_VLA-Reasoner-Empowering-Vision-Language-Action-Models-with/paper.pdf
 - Code/Project: not identified from venue audit

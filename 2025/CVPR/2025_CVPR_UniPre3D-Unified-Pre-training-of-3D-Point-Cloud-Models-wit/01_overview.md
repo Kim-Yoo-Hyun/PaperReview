@@ -1,7 +1,7 @@
 # UniPre3D: Unified Pre-training of 3D Point Cloud Models with Cross-Modal Gaussian Splatting
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, point cloud, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_UniPre3D-Unified-Pre-training-of-3D-Point-Cloud-Models-wit/paper.pdf
 - Code/Project: not identified

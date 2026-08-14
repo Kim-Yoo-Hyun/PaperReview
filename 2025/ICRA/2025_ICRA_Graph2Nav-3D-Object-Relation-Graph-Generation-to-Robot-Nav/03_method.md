@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICRA
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Robotics, 3D Vision, Navigation, Graph Reasoning
 - Paper link: ./2025/ICRA/2025_ICRA_Graph2Nav-3D-Object-Relation-Graph-Generation-to-Robot-Nav/paper.pdf
 - Code/Project: not identified from venue audit

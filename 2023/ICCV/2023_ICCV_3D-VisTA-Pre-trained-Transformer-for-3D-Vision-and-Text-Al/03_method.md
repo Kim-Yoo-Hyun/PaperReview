@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2023 / ICCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision-Language, alignment, Transformer
 - Paper link: ./2023/ICCV/2023_ICCV_3D-VisTA-Pre-trained-Transformer-for-3D-Vision-and-Text-Al/paper.pdf
 - Code/Project: https://3d-vista.github.io/

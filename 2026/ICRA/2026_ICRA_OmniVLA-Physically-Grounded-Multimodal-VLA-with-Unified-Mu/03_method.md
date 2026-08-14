@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / ICRA
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Robotics
 - Paper link: ./2026/ICRA/2026_ICRA_OmniVLA-Physically-Grounded-Multimodal-VLA-with-Unified-Mu/paper.pdf
 - Code/Project: not identified from venue audit

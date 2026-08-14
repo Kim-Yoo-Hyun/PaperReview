@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Vision-Language Model, Robotics, 3D Vision
 - Paper link: ./2026/ICLR/2026_ICLR_From-Seeing-to-Doing-Bridging-Reasoning-and-Decision-for-R/paper.pdf
 - Code/Project: not identified from OpenReview

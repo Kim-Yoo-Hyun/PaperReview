@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2021 / ICCV
-- Category: Foundations: Vision Foundation Models
+- Category: Foundations: Vision and Language Models
 - Tags: Vision Foundation Model, self-supervised, representation
 - Paper link: ./2021/ICCV/2021_ICCV_Emerging-Properties-in-Self-Supervised-Vision-Transformers/paper.pdf
 - Code/Project: https://github.com/facebookresearch/dino

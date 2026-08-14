@@ -1,7 +1,9 @@
 # Method
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2017 / CVPR
-- Category: Foundations: 3D Geometry and Point Clouds
+- Category: 3D Representation Learning
 - Tags: 3D geometry, point cloud, representation
 - Paper link: ./2017/CVPR/2017_CVPR_PointNet-Deep-Learning-on-Point-Sets-for-3D-Classification/paper.pdf
 - Code/Project: https://github.com/charlesq34/pointnet
@@ -18,4 +20,4 @@
 - We propose a novel deep net architecture that consumes raw point cloud (set of points) without voxelization or rendering.
 
 ## 핵심 방법론
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.

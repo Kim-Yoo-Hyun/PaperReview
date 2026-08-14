@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICML Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, Imitation Learning
 - Paper link: ./2025/ICML/2025_ICML_VIP-Vision-Instructed-Pre-training-for-Robotic-Manipulatio/paper.pdf
 - Code/Project: not identified from OpenReview

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_PlaceIt3D-Language-Guided-Object-Placement-in-Real-3D-Scen/paper.pdf
 - Code/Project: not identified

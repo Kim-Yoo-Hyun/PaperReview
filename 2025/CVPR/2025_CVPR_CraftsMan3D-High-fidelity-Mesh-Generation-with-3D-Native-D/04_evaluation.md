@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_CraftsMan3D-High-fidelity-Mesh-Generation-with-3D-Native-D/paper.pdf
 - Code/Project: not identified

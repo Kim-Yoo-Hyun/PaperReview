@@ -1,7 +1,7 @@
 # VLMaps: Visual-Language Maps for Robot Navigation
 
 - Year/Venue: 2023 / ICRA
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Navigation, semantic map, Robotics
 - Paper link: ./2023/ICRA/2023_ICRA_VLMaps-Visual-Language-Maps-for-Robot-Navigation/paper.pdf
 - Code/Project: https://vlmaps.github.io/

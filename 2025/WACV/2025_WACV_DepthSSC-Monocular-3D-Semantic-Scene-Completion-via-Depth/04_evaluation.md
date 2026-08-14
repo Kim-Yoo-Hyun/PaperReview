@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / WACV
-- Category: 3D Semantic Understanding and Alignment
+- Category: 3D Vision-Language Understanding
 - Tags: semantic, alignment, depth, 3D Vision
 - Paper link: ./2025/WACV/2025_WACV_DepthSSC-Monocular-3D-Semantic-Scene-Completion-via-Depth/paper.pdf
 - Code/Project: not identified

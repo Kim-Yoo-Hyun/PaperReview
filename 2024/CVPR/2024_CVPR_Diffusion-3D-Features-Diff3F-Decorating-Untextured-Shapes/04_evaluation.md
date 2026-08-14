@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: semantic, alignment, Diffusion, Generation, 3D Vision
 - Paper link: ./2024/CVPR/2024_CVPR_Diffusion-3D-Features-Diff3F-Decorating-Untextured-Shapes/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2024 / CoRL
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLM, 3D manipulation, bimanual, Robotics
 - Paper link: ./2024/CoRL/2024_CoRL_VoxAct-B-Voxel-Based-Acting-and-Stabilizing-Policy-for-Bim/paper.pdf
 - Code/Project: https://voxact-b.github.io/

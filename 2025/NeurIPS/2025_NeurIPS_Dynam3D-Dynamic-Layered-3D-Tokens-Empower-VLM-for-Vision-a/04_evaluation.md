@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / NeurIPS Oral
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Model, 3D Vision, Navigation
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_Dynam3D-Dynamic-Layered-3D-Tokens-Empower-VLM-for-Vision-a/paper.pdf
 - Code/Project: not identified from OpenReview

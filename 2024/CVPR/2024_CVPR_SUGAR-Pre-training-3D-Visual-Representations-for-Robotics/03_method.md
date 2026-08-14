@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / CVPR
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: 3D representation, Robotics, pretraining
 - Paper link: ./2024/CVPR/2024_CVPR_SUGAR-Pre-training-3D-Visual-Representations-for-Robotics/paper.pdf
 - Code/Project: not identified from primary page

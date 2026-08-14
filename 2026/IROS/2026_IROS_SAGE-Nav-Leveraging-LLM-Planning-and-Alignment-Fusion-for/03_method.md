@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / IROS
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Navigation, Graph Reasoning
 - Paper link: ./2026/IROS/2026_IROS_SAGE-Nav-Leveraging-LLM-Planning-and-Alignment-Fusion-for/paper.pdf
 - Code/Project: not identified

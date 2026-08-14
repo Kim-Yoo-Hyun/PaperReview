@@ -1,7 +1,7 @@
 # Moto: Latent Motion Token as the Bridging Language for Learning Robot Manipulation from Videos
 
 - Year/Venue: 2025 / ICCV
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics
 - Paper link: ./2025/ICCV/2025_ICCV_Moto-Latent-Motion-Token-as-the-Bridging-Language-for-Lear/paper.pdf
 - Code/Project: not identified

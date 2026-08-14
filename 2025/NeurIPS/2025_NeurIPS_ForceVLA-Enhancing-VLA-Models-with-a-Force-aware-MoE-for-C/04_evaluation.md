@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / NeurIPS Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Robotics
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_ForceVLA-Enhancing-VLA-Models-with-a-Force-aware-MoE-for-C/paper.pdf
 - Code/Project: not identified from OpenReview

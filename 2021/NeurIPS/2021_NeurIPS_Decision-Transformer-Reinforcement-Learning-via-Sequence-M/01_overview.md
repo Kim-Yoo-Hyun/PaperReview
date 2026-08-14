@@ -1,7 +1,9 @@
 # Decision Transformer: Reinforcement Learning via Sequence Modeling
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2021 / NeurIPS
-- Category: Foundations: RL and Imitation Learning
+- Category: Robotics Foundations: Robot Learning
 - Tags: Reinforcement Learning, Transformer, policy
 - Paper link: ./2021/NeurIPS/2021_NeurIPS_Decision-Transformer-Reinforcement-Learning-via-Sequence-M/paper.pdf
 - Code/Project: https://github.com/kzl/decision-transformer
@@ -23,7 +25,7 @@
 - Despite its simplicity, Decision Transformer matches or exceeds the performance of state-of-the-art model-free offline RL baselines on Atari, OpenAI Gym, and Key-to-Door tasks. a a linear decoder ... ...
 
 ## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.
 
 ## Contribution
 - In particular, we present Decision Transformer, an architecture that casts the problem of RL as conditional sequence modeling.

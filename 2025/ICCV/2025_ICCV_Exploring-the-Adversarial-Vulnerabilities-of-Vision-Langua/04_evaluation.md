@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICCV
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics
 - Paper link: ./2025/ICCV/2025_ICCV_Exploring-the-Adversarial-Vulnerabilities-of-Vision-Langua/paper.pdf
 - Code/Project: not identified

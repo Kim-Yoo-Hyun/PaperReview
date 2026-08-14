@@ -1,7 +1,7 @@
 # Grounded 3D-Aware Spatial Vision-Language Modeling
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language, 3D spatial, grounding
 - Paper link: ./2026/CVPR/2026_CVPR_Grounded-3D-Aware-Spatial-Vision-Language-Modeling/paper.pdf
 - Code/Project: not identified from primary page

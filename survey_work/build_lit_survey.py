@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""Build the 3D vision + robotics + vision-language literature survey.
+"""Build or audit the literature survey without destructive defaults.
 
-The script intentionally keeps notes concise and provenance-heavy. It downloads
-the primary PDF where available, extracts lightweight metadata, and creates the
-folder/markdown registry requested by the user.
+Running this file without flags is read-only. Network metadata refresh, PDF
+downloads, note replacement, registry replacement, and manifest replacement
+must each be requested explicitly.
 """
 
 from __future__ import annotations
 
 import concurrent.futures
+import argparse
 import html
 import json
 import os
@@ -22,15 +23,29 @@ from pathlib import Path
 
 import requests
 
+try:
+    from taxonomy import canonicalize
+except ModuleNotFoundError:  # import as survey_work.build_lit_survey
+    from .taxonomy import canonicalize
+
 
 ROOT = Path(__file__).resolve().parents[1]
 WORK = ROOT / "survey_work"
-CVF_CANDIDATES = WORK / "cvf_candidates.json"
+SOURCES = WORK / "sources"
+IMPORTS = SOURCES / "imports"
+CVF_CANDIDATES = SOURCES / "candidates" / "cvf_candidates.json"
+MANIFEST = SOURCES / "papers.json"
 EXTRA_PAPERS_FILES = [
-    WORK / "extra_papers_2025_2026.json",
-    WORK / "extra_papers_eccv_iccv_ral_iros.json",
-    WORK / "extra_papers_3d_cv.json",
-    WORK / "extra_papers_priority_foundations.json",
+    IMPORTS / "extra_papers_2025_2026.json",
+    IMPORTS / "extra_papers_eccv_iccv_ral_iros.json",
+    IMPORTS / "extra_papers_3d_cv.json",
+    IMPORTS / "extra_papers_priority_foundations.json",
+    IMPORTS / "extra_papers_robotics.json",
+    IMPORTS / "extra_papers_robotics_humanoid.json",
+    IMPORTS / "extra_papers_robotics_core_expansion.json",
+    IMPORTS / "extra_papers_cross_axis_gaps.json",
+    IMPORTS / "extra_papers_robotics_missing_links.json",
+    IMPORTS / "extra_papers_registry_carryover.json",
 ]
 
 HEADERS = {
@@ -331,7 +346,7 @@ def build_papers() -> list[dict]:
         if key in seen:
             continue
         seen.add(key)
-        unique.append(p)
+        unique.append(canonicalize(p))
     return unique
 
 
@@ -407,8 +422,10 @@ def download_pdf(p: dict) -> dict:
     out_dir = ROOT / folder_name(p)
     out_dir.mkdir(parents=True, exist_ok=True)
     pdf_path = out_dir / "paper.pdf"
+    error_path = out_dir / "paper_pdf_error.txt"
     p["folder"] = str(out_dir.relative_to(ROOT))
     if pdf_path.exists() and pdf_path.stat().st_size > 20_000:
+        error_path.unlink(missing_ok=True)
         p["pdf_status"] = "downloaded"
         return p
     url = p.get("pdf")
@@ -417,7 +434,8 @@ def download_pdf(p: dict) -> dict:
         p["pdf_status"] = "missing-url"
         return p
     try:
-        with requests.get(url, headers=HEADERS, timeout=45, stream=True, allow_redirects=True) as r:
+        request_headers = {} if p.get("download_without_user_agent") else HEADERS
+        with requests.get(url, headers=request_headers, timeout=45, stream=True, allow_redirects=True) as r:
             if r.status_code != 200:
                 raise RuntimeError(f"HTTP {r.status_code}")
             tmp = pdf_path.with_suffix(".pdf.tmp")
@@ -429,6 +447,7 @@ def download_pdf(p: dict) -> dict:
             if data != b"%PDF" or tmp.stat().st_size < 20_000:
                 raise RuntimeError("downloaded file is not a valid PDF")
             tmp.replace(pdf_path)
+            error_path.unlink(missing_ok=True)
             p["pdf_status"] = "downloaded"
     except Exception as exc:
         p["pdf_status"] = f"failed: {exc}"
@@ -659,7 +678,7 @@ def contribution_bullets(p: dict) -> list[str]:
     return bullets
 
 
-def write_notes(p: dict) -> None:
+def write_notes(p: dict, *, overwrite: bool = False) -> None:
     out_dir = ROOT / p["folder"]
     pdf_path = out_dir / "paper.pdf"
     pdf_text = extract_pdf_text(pdf_path)
@@ -687,7 +706,6 @@ def write_notes(p: dict) -> None:
 - Tags: {', '.join(tags)}
 - Authors: {authors}
 - Paper: {paper_link}
-- PDF status: {p.get('pdf_status', 'unknown')}
 - GitHub/Project: {project}
 
 ## Problem
@@ -775,7 +793,6 @@ def write_notes(p: dict) -> None:
 
 ## Reproducibility Notes
 - Code/Project: {project}
-- PDF status: {p.get('pdf_status', 'unknown')}
 - 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
 """
 
@@ -809,86 +826,93 @@ def write_notes(p: dict) -> None:
         "05_insights.md": insights_md,
     }
     for name, content in files.items():
-        (out_dir / name).write_text(content, encoding="utf-8")
+        path = out_dir / name
+        if overwrite or not path.exists():
+            path.write_text(content, encoding="utf-8")
 
 
 def write_registry(papers: list[dict]) -> None:
-    papers_sorted = sorted(papers, key=lambda p: (p["category"], p["year"], p["title"]))
-    by_cat: dict[str, list[dict]] = {}
-    for p in papers_sorted:
-        by_cat.setdefault(p["category"], []).append(p)
-
-    lines = [
-        "# PAPER Registry",
-        "",
-        f"- Generated: {time.strftime('%Y-%m-%d %H:%M:%S %Z')}",
-        f"- Total papers with folders: {len(papers_sorted)}",
-        "- Scope: 3D Vision + Robotics + Vision-Language, with recent top-tier CVF/PMLR/arXiv primary PDFs and foundational CV/LLM/robotics papers.",
-        "- Note: `survey_work/cvf_candidates.json` contains the broad CVF keyword census used for the 2024-current screening pass.",
-        "",
-    ]
-
-    for cat, items in by_cat.items():
-        lines.append(f"## {cat}")
-        lines.append("")
-        lines.append("| Year | Venue | Paper | Tags | PDF | Code/Project |")
-        lines.append("|---:|---|---|---|---|---|")
-        for p in items:
-            folder = p["folder"]
-            title_link = f"[{p['title']}](./{urllib.parse.quote(folder)}/01_overview.md)"
-            pdf_link = f"[paper.pdf](./{urllib.parse.quote(folder)}/paper.pdf)" if (ROOT / folder / "paper.pdf").exists() else "missing"
-            proj = p.get("project", "not identified")
-            if proj and proj.startswith("http"):
-                proj_cell = f"[link]({proj})"
-            else:
-                proj_cell = proj
-            venue_label = venue_for_registry(p["venue"])
-            lines.append(f"| {p['year']} | {venue_label} | {title_link} | {', '.join(p.get('tags', []))} | {pdf_link} | {proj_cell} |")
-        lines.append("")
-
-    lines += [
-        "## Keyword Index",
-        "",
-    ]
-    keywords: dict[str, list[dict]] = {}
-    for p in papers_sorted:
-        for tag in p.get("tags", []):
-            keywords.setdefault(tag, []).append(p)
-    for tag in sorted(keywords, key=lambda s: s.lower()):
-        refs = ", ".join(f"[{safe_slug(p['title'], 24)}](./{urllib.parse.quote(p['folder'])}/01_overview.md)" for p in keywords[tag][:12])
-        lines.append(f"- **{tag}**: {refs}")
-
-    (ROOT / "PAPER.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    try:
+        from normalize_taxonomy import registry
+    except ModuleNotFoundError:
+        from .normalize_taxonomy import registry
+    (ROOT / "PAPER.md").write_text(registry(papers), encoding="utf-8")
 
 
 def write_manifest(papers: list[dict]) -> None:
     manifest = []
     for p in papers:
-        manifest.append({k: p.get(k) for k in ["title", "year", "venue", "category", "tags", "folder", "pdf", "page", "project", "pdf_status"]})
-    (WORK / "selected_papers.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+        manifest.append({k: p.get(k) for k in ["title", "year", "venue", "category", "tags", "folder", "pdf", "page", "project"]})
+    MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Read-only survey audit by default; mutations require explicit flags."
+    )
+    parser.add_argument(
+        "--refresh-metadata",
+        action="store_true",
+        help="query supported official/arXiv pages for metadata",
+    )
+    parser.add_argument(
+        "--download-pdfs",
+        action="store_true",
+        help="download optional PDF caches (never implied by another flag)",
+    )
+    parser.add_argument(
+        "--create-missing-notes",
+        action="store_true",
+        help="create only absent standard notes; existing notes are preserved",
+    )
+    parser.add_argument(
+        "--overwrite-notes",
+        action="store_true",
+        help="replace every generated note; use only for an intentional rebuild",
+    )
+    parser.add_argument("--write-registry", action="store_true")
+    parser.add_argument("--write-manifest", action="store_true")
+    return parser.parse_args()
 
 
 def main() -> None:
+    args = parse_args()
     WORK.mkdir(exist_ok=True)
     papers = build_papers()
+    existing_by_title = {}
+    if MANIFEST.exists():
+        existing_by_title = {
+            item["title"].casefold(): item
+            for item in json.loads(MANIFEST.read_text(encoding="utf-8"))
+        }
+    for paper in papers:
+        existing = existing_by_title.get(paper["title"].casefold(), {})
+        paper["folder"] = existing.get("folder") or folder_name(paper)
     print(f"[info] selected papers: {len(papers)}")
 
-    fetch_arxiv_metadata(papers)
-    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
-        list(ex.map(fetch_page_metadata, papers))
+    if args.refresh_metadata:
+        fetch_arxiv_metadata(papers)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
+            list(ex.map(fetch_page_metadata, papers))
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as ex:
-        papers = list(ex.map(download_pdf, papers))
+    if args.download_pdfs:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=5) as ex:
+            papers = list(ex.map(download_pdf, papers))
 
-    for p in papers:
-        write_notes(p)
+    if args.create_missing_notes or args.overwrite_notes:
+        for p in papers:
+            write_notes(p, overwrite=args.overwrite_notes)
 
-    write_registry(papers)
-    write_manifest(papers)
+    if args.write_registry:
+        write_registry(papers)
+    if args.write_manifest:
+        write_manifest(papers)
 
-    downloaded = sum(1 for p in papers if p.get("pdf_status") == "downloaded")
-    print(f"[info] PDFs downloaded: {downloaded}/{len(papers)}")
-    print(f"[info] registry: {ROOT / 'PAPER.md'}")
+    if args.download_pdfs:
+        downloaded = sum(1 for p in papers if p.get("pdf_status") == "downloaded")
+        print(f"[info] PDFs downloaded in this explicit run: {downloaded}/{len(papers)}")
+    if not any(vars(args).values()):
+        print("[info] read-only audit complete; no files or network state changed")
 
 
 if __name__ == "__main__":

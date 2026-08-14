@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2022 / ECCV
-- Category: Sensor Fusion, LiDAR, and Autonomous Driving
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: sensor fusion, 3D perception, Planning
 - Paper link: ./2022/ECCV/2022_ECCV_BEVFormer-Learning-Bird-s-Eye-View-Representation-from-Mul/paper.pdf
 - Code/Project: https://github.com/fundamentalvision/BEVFormer

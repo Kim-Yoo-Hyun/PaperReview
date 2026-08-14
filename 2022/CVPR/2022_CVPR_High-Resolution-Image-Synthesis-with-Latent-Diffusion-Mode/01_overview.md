@@ -1,8 +1,8 @@
 # High-Resolution Image Synthesis with Latent Diffusion Models
 
 - Year/Venue: 2022 / CVPR
-- Category: Foundations: Diffusion and Generative Models
-- Tags: Diffusion, latent representation, generation
+- Category: Foundations: Generative Models
+- Tags: Diffusion, latent representation, Generation
 - Paper link: ./2022/CVPR/2022_CVPR_High-Resolution-Image-Synthesis-with-Latent-Diffusion-Mode/paper.pdf
 - Code/Project: https://github.com/CompVis/latent-diffusion
 - Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.

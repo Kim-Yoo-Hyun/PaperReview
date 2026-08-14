@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICRA
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Model, Robotics, Navigation
 - Paper link: ./2025/ICRA/2025_ICRA_VLM-GroNav-Robot-Navigation-Using-Physically-Grounded-Visi/paper.pdf
 - Code/Project: not identified from venue audit

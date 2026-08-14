@@ -1,7 +1,7 @@
 # Search3D: Hierarchical Open-Vocabulary 3D Segmentation
 
 - Year/Venue: 2025 / RA-L
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, semantic
 - Paper link: ./2025/RA-L/2025_RA-L_Search3D-Hierarchical-Open-Vocabulary-3D-Segmentation/paper.pdf
 - Code/Project: http://search3d-segmentation.github.io/

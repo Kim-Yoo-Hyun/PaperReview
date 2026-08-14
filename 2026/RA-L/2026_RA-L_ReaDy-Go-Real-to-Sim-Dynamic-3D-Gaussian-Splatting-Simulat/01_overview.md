@@ -1,7 +1,7 @@
 # ReaDy-Go: Real-to-Sim Dynamic 3D Gaussian Splatting Simulation for Environment-Specific Visual Navigation with Moving Obstacles
 
 - Year/Venue: 2026 / RA-L
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: 3D Vision, Navigation, Gaussian Splatting
 - Paper link: ./2026/RA-L/2026_RA-L_ReaDy-Go-Real-to-Sim-Dynamic-3D-Gaussian-Splatting-Simulat/paper.pdf
 - Code/Project: https://syeon-yoo.github.io/readygo/

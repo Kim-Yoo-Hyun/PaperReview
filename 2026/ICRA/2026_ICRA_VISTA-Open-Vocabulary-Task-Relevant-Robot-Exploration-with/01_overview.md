@@ -1,7 +1,7 @@
 # VISTA: Open-Vocabulary, Task-Relevant Robot Exploration with Online Semantic Gaussian Splatting
 
 - Year/Venue: 2026 / ICRA
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Robotics, Gaussian Splatting, semantic
 - Paper link: ./2026/ICRA/2026_ICRA_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/paper.pdf
 - Code/Project: not identified from venue audit

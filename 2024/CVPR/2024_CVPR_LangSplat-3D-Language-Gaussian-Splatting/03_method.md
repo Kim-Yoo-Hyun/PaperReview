@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / CVPR
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting, Vision-Language, grounding
 - Paper link: ./2024/CVPR/2024_CVPR_LangSplat-3D-Language-Gaussian-Splatting/paper.pdf
 - Code/Project: not identified from primary page

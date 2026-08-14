@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2023 / TMLR
-- Category: Foundations: Vision Foundation Models
+- Category: Foundations: Vision and Language Models
 - Tags: self-supervised, representation
 - Paper link: ./2023/TMLR/2023_TMLR_DINOv2-Learning-Robust-Visual-Features-without-Supervision/paper.pdf
 - Code/Project: https://github.com/facebookresearch/dinov2

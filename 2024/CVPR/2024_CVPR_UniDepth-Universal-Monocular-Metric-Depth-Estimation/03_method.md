@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / CVPR
-- Category: Foundations: Monocular Geometry
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: depth, 3D Vision
 - Paper link: ./2024/CVPR/2024_CVPR_UniDepth-Universal-Monocular-Metric-Depth-Estimation/paper.pdf
 - Code/Project: not identified

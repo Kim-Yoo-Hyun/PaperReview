@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_DroneSplat-3D-Gaussian-Splatting-for-Robust-3D-Reconstruct/paper.pdf
 - Code/Project: not identified

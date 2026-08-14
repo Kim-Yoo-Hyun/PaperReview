@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: 3D Semantic Understanding and Alignment
+- Category: 3D Vision-Language Understanding
 - Tags: semantic, alignment, 3D Vision
 - Paper link: ./2026/ICLR/2026_ICLR_GeoPurify-A-Data-Efficient-Geometric-Distillation-Framewor/paper.pdf
 - Code/Project: not identified

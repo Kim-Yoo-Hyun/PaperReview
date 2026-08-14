@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2023 / CoRL
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, Imitation Learning, 3D manipulation
 - Paper link: ./2023/CoRL/2023_CoRL_Perceiver-Actor-A-Multi-Task-Transformer-for-Robotic-Manip/paper.pdf
 - Code/Project: https://peract.github.io/

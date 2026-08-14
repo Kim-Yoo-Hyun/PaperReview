@@ -1,7 +1,7 @@
 # TraceVLA: Visual Trace Prompting Enhances Spatial-Temporal Awareness for Generalist Robotic Policies
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Robotics, 3D Vision
 - Paper link: ./2025/ICLR/2025_ICLR_TraceVLA-Visual-Trace-Prompting-Enhances-Spatial-Temporal/paper.pdf
 - Code/Project: not identified from OpenReview

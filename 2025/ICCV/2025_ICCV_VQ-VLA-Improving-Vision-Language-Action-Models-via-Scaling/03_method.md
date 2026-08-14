@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICCV
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model
 - Paper link: ./2025/ICCV/2025_ICCV_VQ-VLA-Improving-Vision-Language-Action-Models-via-Scaling/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # PartGen: Part-level 3D Generation and Reconstruction with Multi-view Diffusion Models
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_PartGen-Part-level-3D-Generation-and-Reconstruction-with-M/paper.pdf
 - Code/Project: not identified

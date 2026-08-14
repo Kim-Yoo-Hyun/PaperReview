@@ -1,7 +1,9 @@
 # ConceptFusion: Open-set Multimodal 3D Mapping
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2023 / RSS
-- Category: Open-Vocabulary 3D Mapping
+- Category: Embodied Navigation and Mapping
 - Tags: sensor fusion, open-vocabulary, SLAM, Robotics
 - Paper link: ./2023/RSS/2023_RSS_ConceptFusion-Open-set-Multimodal-3D-Mapping/paper.pdf
 - Code/Project: https://concept-fusion.github.io/
@@ -23,7 +25,7 @@
 - We showcase new avenues for blending foundation models with 3D open-set multimodal mapping.
 
 ## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.
 
 ## Contribution
 - This enables effective zero-shot spatial reasoning, not needing any additional training or finetuning, and retains long-tailed concepts better than supervised approaches, outperforming them by more than 40% margin ...

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2021 / ICCV
-- Category: Foundations: 3D Scene Representations
+- Category: Neural Scene Representations
 - Tags: NeRF, 3D Vision, representation, geometry
 - Paper link: ./2021/ICCV/2021_ICCV_Mip-NeRF-A-Multiscale-Representation-for-Anti-Aliasing-Neu/paper.pdf
 - Code/Project: https://jonbarron.info/mipnerf/

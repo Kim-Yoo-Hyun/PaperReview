@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Diffusion, Generation, point cloud, 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_Tree-Skeletonization-from-3D-Point-Clouds-by-Denoising-Dif/paper.pdf
 - Code/Project: not identified

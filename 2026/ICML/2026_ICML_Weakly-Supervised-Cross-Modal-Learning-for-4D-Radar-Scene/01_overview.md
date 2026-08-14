@@ -1,7 +1,7 @@
 # Weakly Supervised Cross-Modal Learning for 4D Radar Scene Flow Estimation
 
 - Year/Venue: 2026 / ICML
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: sensor fusion, LiDAR, 3D Vision
 - Paper link: ./2026/ICML/2026_ICML_Weakly-Supervised-Cross-Modal-Learning-for-4D-Radar-Scene/paper.pdf
 - Code/Project: not identified

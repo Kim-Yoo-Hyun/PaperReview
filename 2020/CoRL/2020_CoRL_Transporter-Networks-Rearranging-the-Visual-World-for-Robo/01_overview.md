@@ -1,7 +1,7 @@
 # Transporter Networks: Rearranging the Visual World for Robotic Manipulation
 
 - Year/Venue: 2020 / CoRL
-- Category: Equivariance, Diffusion, and 3D Action
+- Category: Manipulation, Contact, and Dexterity
 - Tags: Robotics, Vision-Language Action, equivariance, Imitation Learning
 - Paper link: ./2020/CoRL/2020_CoRL_Transporter-Networks-Rearranging-the-Visual-World-for-Robo/paper.pdf
 - Code/Project: https://github.com/google-research/ravens

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / CVPR
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLM, grounding, Robotics
 - Paper link: ./2025/CVPR/2025_CVPR_RoboGround-Robotic-Manipulation-with-Grounded-Vision-Langu/paper.pdf
 - Code/Project: not identified from primary page

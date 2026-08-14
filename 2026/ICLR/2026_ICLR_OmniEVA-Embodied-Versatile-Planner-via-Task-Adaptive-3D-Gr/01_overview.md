@@ -1,7 +1,7 @@
 # OmniEVA: Embodied Versatile Planner via Task-Adaptive 3D-Grounded and Embodiment-aware Reasoning
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision
 - Paper link: ./2026/ICLR/2026_ICLR_OmniEVA-Embodied-Versatile-Planner-via-Task-Adaptive-3D-Gr/paper.pdf
 - Code/Project: not identified from OpenReview

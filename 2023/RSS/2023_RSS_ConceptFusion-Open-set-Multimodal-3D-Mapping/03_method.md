@@ -1,7 +1,9 @@
 # Method
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2023 / RSS
-- Category: Open-Vocabulary 3D Mapping
+- Category: Embodied Navigation and Mapping
 - Tags: sensor fusion, open-vocabulary, SLAM, Robotics
 - Paper link: ./2023/RSS/2023_RSS_ConceptFusion-Open-set-Multimodal-3D-Mapping/paper.pdf
 - Code/Project: https://concept-fusion.github.io/

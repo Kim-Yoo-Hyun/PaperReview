@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / NeurIPS
-- Category: Foundations: Monocular Geometry
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: depth, 3D Vision
 - Paper link: ./2024/NeurIPS/2024_NeurIPS_Depth-Anything-V2/paper.pdf
 - Code/Project: not identified

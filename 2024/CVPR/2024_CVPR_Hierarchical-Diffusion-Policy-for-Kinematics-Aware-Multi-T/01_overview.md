@@ -1,7 +1,7 @@
 # Hierarchical Diffusion Policy for Kinematics-Aware Multi-Task Robotic Manipulation
 
 - Year/Venue: 2024 / CVPR
-- Category: Equivariance, Diffusion, and 3D Action
+- Category: Manipulation, Contact, and Dexterity
 - Tags: Diffusion, Robotics, Imitation Learning
 - Paper link: ./2024/CVPR/2024_CVPR_Hierarchical-Diffusion-Policy-for-Kinematics-Aware-Multi-T/paper.pdf
 - Code/Project: not identified from primary page

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / ICRA
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: VLA, Vision-Language Model, Robotics, Navigation
 - Paper link: ./2026/ICRA/2026_ICRA_OmniVLA-An-Omni-Modal-Vision-Language-Action-Model-for-Rob/paper.pdf
 - Code/Project: not identified from venue audit

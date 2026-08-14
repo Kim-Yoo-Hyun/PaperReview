@@ -1,7 +1,7 @@
 # ALIGN: Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision
 
 - Year/Venue: 2021 / ICML
-- Category: Foundations: Vision-Language Models
+- Category: Foundations: Vision and Language Models
 - Tags: Vision-Language Model, alignment, representation
 - Paper link: ./2021/ICML/2021_ICML_ALIGN-Scaling-Up-Visual-and-Vision-Language-Representation/paper.pdf
 - Code/Project: not released

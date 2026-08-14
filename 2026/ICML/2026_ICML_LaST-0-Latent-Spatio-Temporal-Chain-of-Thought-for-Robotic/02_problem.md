@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / ICML Spotlight
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics
 - Paper link: ./2026/ICML/2026_ICML_LaST-0-Latent-Spatio-Temporal-Chain-of-Thought-for-Robotic/paper.pdf
 - Code/Project: not identified from OpenReview

@@ -1,7 +1,7 @@
 # Depth Map Prediction from a Single Image using a Multi-Scale Deep Network
 
 - Year/Venue: 2014 / NeurIPS
-- Category: Foundations: Monocular Geometry
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D Vision, monocular depth, geometry
 - Paper link: ./2014/NeurIPS/2014_NeurIPS_Depth-Map-Prediction-from-a-Single-Image-using-a-Multi-Sca/paper.pdf
 - Code/Project: not identified

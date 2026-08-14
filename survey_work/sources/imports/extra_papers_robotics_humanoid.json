@@ -1,0 +1,240 @@
+[
+  {
+    "title": "A Realtime Pattern Generator for Biped Walking",
+    "year": 2002,
+    "venue": "ICRA",
+    "category": "Foundations: Robot Motion Planning and Control",
+    "tags": ["Robotics", "humanoid", "bipedal locomotion", "3D linear inverted pendulum", "realtime control"],
+    "pdf": "https://www.cs.cmu.edu/~cga/legs/kuff1e.pdf",
+    "page": "https://doi.org/10.1109/ROBOT.2002.1013335",
+    "project": "not released"
+  },
+  {
+    "title": "Synthesis of Whole-Body Behaviors through Hierarchical Control of Behavioral Primitives",
+    "year": 2005,
+    "venue": "IJHR",
+    "category": "Foundations: Robot Motion Planning and Control",
+    "tags": ["Robotics", "humanoid", "whole-body control", "task hierarchy", "operational space"],
+    "pdf": "https://ai.stanford.edu/manips/publications/pdfs/Sentis_2005_IJHR.pdf",
+    "page": "https://ai.stanford.edu/~lsentis/files/publications.html",
+    "project": "https://ai.stanford.edu/~lsentis/files/publications.html"
+  },
+  {
+    "title": "Momentum Control with Hierarchical Inverse Dynamics on a Torque-Controlled Humanoid",
+    "year": 2016,
+    "venue": "Autonomous Robots",
+    "category": "Foundations: Robot Motion Planning and Control",
+    "tags": ["Robotics", "humanoid", "whole-body control", "momentum control", "inverse dynamics"],
+    "arxiv": "1410.7284",
+    "project": "https://is.mpg.de/am/publications/herzog_momentum_2016"
+  },
+  {
+    "title": "Optimization-Based Locomotion Planning, Estimation, and Control Design for the Atlas Humanoid Robot",
+    "year": 2016,
+    "venue": "Autonomous Robots",
+    "category": "Foundations: Robot Motion Planning and Control",
+    "tags": ["Robotics", "humanoid", "locomotion planning", "optimization", "state estimation"],
+    "pdf": "https://www.cs.cmu.edu/~cga/z/Kuindersma_AURO_2016.pdf",
+    "page": "https://www.research.ed.ac.uk/en/publications/optimization-based-locomotion-planning-estimation-and-controldesi/",
+    "project": "not released"
+  },
+  {
+    "title": "DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills",
+    "year": 2018,
+    "venue": "TOG / SIGGRAPH",
+    "category": "Foundations: Robot Learning and Sim-to-Real",
+    "tags": ["Robotics", "humanoid", "motion imitation", "reinforcement learning", "physics-based control"],
+    "arxiv": "1804.02717",
+    "project": "https://github.com/xbpeng/DeepMimic"
+  },
+  {
+    "title": "Learning Locomotion Skills for Cassie: Iterative Design and Sim-to-Real",
+    "year": 2019,
+    "venue": "CoRL",
+    "category": "Foundations: Robot Learning and Sim-to-Real",
+    "tags": ["Robotics", "bipedal locomotion", "reinforcement learning", "sim-to-real", "Cassie"],
+    "arxiv": "1903.09537",
+    "page": "https://www.cs.ubc.ca/~van/papers/2019-CORL-cassie/index.html",
+    "project": "https://www.cs.ubc.ca/~van/papers/2019-CORL-cassie/index.html"
+  },
+  {
+    "title": "Learning Memory-Based Control for Human-Scale Bipedal Locomotion",
+    "year": 2020,
+    "venue": "RSS",
+    "category": "Foundations: Robot Learning and Sim-to-Real",
+    "tags": ["Robotics", "bipedal locomotion", "recurrent policy", "sim-to-real", "online adaptation"],
+    "pdf": "https://www.roboticsproceedings.org/rss16/p031.pdf",
+    "page": "https://www.roboticsproceedings.org/rss16/p031.html",
+    "project": "https://www.roboticsproceedings.org/rss16/p031.html"
+  },
+  {
+    "title": "Blind Bipedal Stair Traversal via Sim-to-Real Reinforcement Learning",
+    "year": 2021,
+    "venue": "RSS",
+    "category": "Foundations: Robot Learning and Sim-to-Real",
+    "tags": ["Robotics", "bipedal locomotion", "reinforcement learning", "sim-to-real", "proprioception"],
+    "pdf": "https://www.roboticsproceedings.org/rss17/p061.pdf",
+    "page": "https://www.roboticsproceedings.org/rss17/p061.html",
+    "project": "https://www.roboticsproceedings.org/rss17/p061.html"
+  },
+  {
+    "title": "HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation",
+    "year": 2024,
+    "venue": "RSS",
+    "category": "Benchmarks and Datasets",
+    "tags": ["Robotics", "humanoid", "benchmark", "whole-body control", "loco-manipulation"],
+    "pdf": "https://www.roboticsproceedings.org/rss20/p061.pdf",
+    "page": "https://www.roboticsproceedings.org/rss20/p061.html",
+    "project": "https://humanoid-bench.github.io/"
+  },
+  {
+    "title": "Expressive Whole-Body Control for Humanoid Robots",
+    "year": 2024,
+    "venue": "RSS",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "humanoid", "whole-body control", "motion imitation", "sim-to-real"],
+    "pdf": "https://www.roboticsproceedings.org/rss20/p107.pdf",
+    "page": "https://www.roboticsproceedings.org/rss20/p107.html",
+    "project": "https://expressive-humanoid.github.io/"
+  },
+  {
+    "title": "HumanPlus: Humanoid Shadowing and Imitation from Humans",
+    "year": 2024,
+    "venue": "CoRL",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "humanoid", "human-to-humanoid", "imitation learning", "teleoperation"],
+    "arxiv": "2406.10454",
+    "page": "https://openreview.net/forum?id=WnSl42M9Z4",
+    "project": "https://humanoid-ai.github.io/"
+  },
+  {
+    "title": "OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning",
+    "year": 2024,
+    "venue": "CoRL",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "humanoid", "whole-body teleoperation", "loco-manipulation", "imitation learning"],
+    "arxiv": "2406.08858",
+    "page": "https://openreview.net/forum?id=oL1WEZQal8",
+    "project": "https://omni.human2humanoid.com/"
+  },
+  {
+    "title": "WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts",
+    "year": 2024,
+    "venue": "CoRL",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "humanoid", "whole-body control", "sequential contacts", "reinforcement learning"],
+    "arxiv": "2406.06005",
+    "page": "https://openreview.net/forum?id=Czs2xH9114",
+    "project": "https://wococo-humanoid.github.io/"
+  },
+  {
+    "title": "AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control",
+    "year": 2025,
+    "venue": "RSS",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "humanoid", "whole-body control", "trajectory optimization", "sim-to-real"],
+    "pdf": "https://www.roboticsproceedings.org/rss21/p061.pdf",
+    "page": "https://www.roboticsproceedings.org/rss21/p061.html",
+    "project": "https://amo-humanoid.github.io/"
+  },
+  {
+    "title": "Learning Humanoid Standing-up Control across Diverse Postures",
+    "year": 2025,
+    "venue": "RSS",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "humanoid", "standing up", "fall recovery", "sim-to-real"],
+    "pdf": "https://www.roboticsproceedings.org/rss21/p064.pdf",
+    "page": "https://www.roboticsproceedings.org/rss21/p064.html",
+    "project": "https://taohuang13.github.io/humanoid-standingup.github.io/"
+  },
+  {
+    "title": "LangWBC: Language-Directed Humanoid Whole-Body Control via End-to-End Learning",
+    "year": 2025,
+    "venue": "RSS",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "humanoid", "whole-body control", "language-conditioned control", "policy distillation"],
+    "pdf": "https://www.roboticsproceedings.org/rss21/p065.pdf",
+    "page": "https://www.roboticsproceedings.org/rss21/p065.html",
+    "project": "https://langwbc.github.io/"
+  },
+  {
+    "title": "ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills",
+    "year": 2025,
+    "venue": "RSS",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "humanoid", "whole-body control", "sim-to-real", "residual dynamics"],
+    "pdf": "https://www.roboticsproceedings.org/rss21/p066.pdf",
+    "page": "https://www.roboticsproceedings.org/rss21/p066.html",
+    "project": "https://agile.human2humanoid.com/"
+  },
+  {
+    "title": "BeamDojo: Learning Agile Humanoid Locomotion on Sparse Footholds",
+    "year": 2025,
+    "venue": "RSS",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "humanoid", "perceptive locomotion", "sparse footholds", "reinforcement learning"],
+    "pdf": "https://www.roboticsproceedings.org/rss21/p068.pdf",
+    "page": "https://www.roboticsproceedings.org/rss21/p068.html",
+    "project": "https://why618188.github.io/beamdojo/"
+  },
+  {
+    "title": "HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
+    "year": 2025,
+    "venue": "RSS",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "humanoid", "loco-manipulation", "teleoperation", "exoskeleton"],
+    "pdf": "https://www.roboticsproceedings.org/rss21/p070.pdf",
+    "page": "https://www.roboticsproceedings.org/rss21/p070.html",
+    "project": "https://homietele.github.io/"
+  },
+  {
+    "title": "Hold My Beer: Learning Gentle Humanoid Locomotion and End-Effector Stabilization Control",
+    "year": 2025,
+    "venue": "CoRL 2025 Poster",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "humanoid", "locomotion", "end-effector stabilization", "multi-rate control"],
+    "arxiv": "2505.24198",
+    "page": "https://openreview.net/forum?id=Bl2VfU9NhF",
+    "project": "https://lecar-lab.github.io/SoFTA/"
+  },
+  {
+    "title": "HWC-Loco: A Hierarchical Whole-Body Control Approach to Robust Humanoid Locomotion",
+    "year": 2026,
+    "venue": "ICLR 2026 Poster",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "humanoid", "whole-body control", "robust locomotion", "safety recovery"],
+    "arxiv": "2503.00923",
+    "page": "https://iclr.cc/virtual/2026/poster/10011640",
+    "project": "https://simonlinsx.github.io/HWC_Loco/"
+  },
+  {
+    "title": "Gallant: Voxel Grid-Based Humanoid Locomotion and Local Navigation across 3-D Constrained Terrains",
+    "year": 2026,
+    "venue": "CVPR",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "humanoid", "perceptive locomotion", "LiDAR", "3D navigation"],
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Ben_Gallant_Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3-D_Constrained_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Ben_Gallant_Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3-D_Constrained_CVPR_2026_paper.html",
+    "project": "https://gallantloco.github.io/"
+  },
+  {
+    "title": "VIRAL: Visual Sim-to-Real at Scale for Humanoid Loco-Manipulation",
+    "year": 2026,
+    "venue": "CVPR",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "humanoid", "visual sim-to-real", "loco-manipulation", "teacher-student learning"],
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.html",
+    "project": "https://openaccess.thecvf.com/content/CVPR2026/html/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.html"
+  },
+  {
+    "title": "Opening the Sim-to-Real Door for Humanoid Pixel-to-Action Policy Transfer",
+    "year": 2026,
+    "venue": "CVPR",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "humanoid", "pixel-to-action", "visual sim-to-real", "articulated object manipulation"],
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.html",
+    "project": "https://openaccess.thecvf.com/content/CVPR2026/html/Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.html"
+  }
+]

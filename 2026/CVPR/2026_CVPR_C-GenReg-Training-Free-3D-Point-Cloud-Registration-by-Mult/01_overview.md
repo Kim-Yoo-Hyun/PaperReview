@@ -1,7 +1,7 @@
 # C-GenReg: Training-Free 3D Point Cloud Registration by Multi-View-Consistent Geometry-to-Image Generation with Probabilistic Modalities Fusion
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: geometry, sensor fusion, LiDAR, Diffusion, Generation, point cloud, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_C-GenReg-Training-Free-3D-Point-Cloud-Registration-by-Mult/paper.pdf
 - Code/Project: not identified

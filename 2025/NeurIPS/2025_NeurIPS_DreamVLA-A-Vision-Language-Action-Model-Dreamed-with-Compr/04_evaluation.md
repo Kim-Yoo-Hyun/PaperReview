@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / NeurIPS Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics, Reinforcement Learning
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_DreamVLA-A-Vision-Language-Action-Model-Dreamed-with-Compr/paper.pdf
 - Code/Project: not identified from OpenReview

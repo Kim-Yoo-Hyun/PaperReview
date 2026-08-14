@@ -1,7 +1,7 @@
 # SGS-SLAM: Semantic Gaussian Splatting For Neural Dense SLAM
 
 - Year/Venue: 2024 / ECCV
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting, semantic
 - Paper link: ./2024/ECCV/2024_ECCV_SGS-SLAM-Semantic-Gaussian-Splatting-For-Neural-Dense-SLAM/paper.pdf
 - Code/Project: not identified

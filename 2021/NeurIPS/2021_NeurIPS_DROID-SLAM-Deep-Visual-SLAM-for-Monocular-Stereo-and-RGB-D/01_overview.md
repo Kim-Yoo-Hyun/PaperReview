@@ -1,7 +1,9 @@
 # DROID-SLAM: Deep Visual SLAM for Monocular, Stereo, and RGB-D Cameras
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2021 / NeurIPS
-- Category: Foundations: SLAM and Sensor Geometry
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: SLAM, RGB-D, geometry
 - Paper link: ./2021/NeurIPS/2021_NeurIPS_DROID-SLAM-Deep-Visual-SLAM-for-Monocular-Stereo-and-RGB-D/paper.pdf
 - Code/Project: https://github.com/princeton-vl/DROID-SLAM
@@ -25,7 +27,7 @@
 - DROID-SLAM is accurate, achieving large improvements over prior work, and robust, suffering from substantially fewer catastrophic failures.
 
 ## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.
 
 ## Contribution
 - Despite training on monocular video, it can leverage stereo or RGB-D video to achieve improved performance at test time.

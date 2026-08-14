@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / IROS
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Navigation, Graph Reasoning, semantic
 - Paper link: ./2025/IROS/2025_IROS_OpenObject-NAV-Open-Vocabulary-Object-Oriented-Navigation/paper.pdf
 - Code/Project: not identified

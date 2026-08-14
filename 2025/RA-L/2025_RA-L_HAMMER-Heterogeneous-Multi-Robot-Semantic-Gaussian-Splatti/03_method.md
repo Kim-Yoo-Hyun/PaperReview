@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / RA-L
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Robotics, Gaussian Splatting, semantic
 - Paper link: ./2025/RA-L/2025_RA-L_HAMMER-Heterogeneous-Multi-Robot-Semantic-Gaussian-Splatti/paper.pdf
 - Code/Project: https://hammer-project.github.io/

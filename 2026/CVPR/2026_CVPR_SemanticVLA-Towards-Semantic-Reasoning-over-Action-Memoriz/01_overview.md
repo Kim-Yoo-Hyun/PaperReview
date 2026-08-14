@@ -1,7 +1,7 @@
 # SemanticVLA: Towards Semantic Reasoning over Action Memorization via Synergistic Explicit Trace and Latent Action Planning
 
 - Year/Venue: 2026 / CVPR
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, semantic reasoning, Planning
 - Paper link: ./2026/CVPR/2026_CVPR_SemanticVLA-Towards-Semantic-Reasoning-over-Action-Memoriz/paper.pdf
 - Code/Project: not identified from primary page

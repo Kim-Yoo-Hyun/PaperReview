@@ -1,7 +1,7 @@
 # SplatFormer: Point Transformer for Robust 3D Gaussian Splatting
 
 - Year/Venue: 2025 / ICLR Spotlight
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, point cloud, 3D Vision
 - Paper link: ./2025/ICLR/2025_ICLR_SplatFormer-Point-Transformer-for-Robust-3D-Gaussian-Splat/paper.pdf
 - Code/Project: not identified

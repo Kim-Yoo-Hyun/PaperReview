@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2022 / ECCV
-- Category: Foundations: 3D Detection and BEV Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: 3D Vision
 - Paper link: ./2022/ECCV/2022_ECCV_PETR-Position-Embedding-Transformation-for-Multi-View-3D-O/paper.pdf
 - Code/Project: not identified

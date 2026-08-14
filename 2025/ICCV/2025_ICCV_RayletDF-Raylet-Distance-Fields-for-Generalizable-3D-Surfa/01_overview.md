@@ -1,7 +1,7 @@
 # RayletDF: Raylet Distance Fields for Generalizable 3D Surface Reconstruction from Point Clouds or Gaussians
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, point cloud, 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_RayletDF-Raylet-Distance-Fields-for-Generalizable-3D-Surfa/paper.pdf
 - Code/Project: not identified

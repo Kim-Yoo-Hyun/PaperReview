@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / CoRL
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Planning, Robotics
 - Paper link: ./2025/CoRL/2025_CoRL_Long-VLA-Unleashing-Long-Horizon-Capability-of-Vision-Lang/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # OWMM-Agent: Open World Mobile Manipulation With Multi-modal Agentic Data Synthesis
 
 - Year/Venue: 2025 / NeurIPS Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Vision-Language Model, Robotics, Reinforcement Learning
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_OWMM-Agent-Open-World-Mobile-Manipulation-With-Multi-modal/paper.pdf
 - Code/Project: not identified from OpenReview

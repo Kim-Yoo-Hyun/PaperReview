@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / NeurIPS poster
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: geometry, sensor fusion, LiDAR, point cloud, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_GeGS-PCR-Fast-and-Robust-Color-3D-Point-Cloud-Registration/paper.pdf
 - Code/Project: not identified

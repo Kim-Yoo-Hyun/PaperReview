@@ -1,7 +1,7 @@
 # LOCATE 3D: Real-World Object Localization via Self-Supervised Learning in 3D
 
 - Year/Venue: 2025 / ICML Spotlight/Poster
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, Reinforcement Learning
 - Paper link: ./2025/ICML/2025_ICML_LOCATE-3D-Real-World-Object-Localization-via-Self-Supervis/paper.pdf
 - Code/Project: not identified from OpenReview

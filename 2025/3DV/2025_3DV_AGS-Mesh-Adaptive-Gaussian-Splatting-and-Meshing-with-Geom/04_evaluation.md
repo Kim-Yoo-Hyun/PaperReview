@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / 3DV
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
 - Paper link: ./2025/3DV/2025_3DV_AGS-Mesh-Adaptive-Gaussian-Splatting-and-Meshing-with-Geom/paper.pdf
 - Code/Project: not identified

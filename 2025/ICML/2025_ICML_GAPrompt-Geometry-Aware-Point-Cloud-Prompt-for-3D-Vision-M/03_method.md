@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICML poster
-- Category: 3D Representation Learning and Foundation Models
+- Category: 3D Representation Learning
 - Tags: point cloud, 3D Vision
 - Paper link: ./2025/ICML/2025_ICML_GAPrompt-Geometry-Aware-Point-Cloud-Prompt-for-3D-Vision-M/paper.pdf
 - Code/Project: not identified

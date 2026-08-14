@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Diffusion, Generation, point cloud, 3D Vision
 - Paper link: ./2024/CVPR/2024_CVPR_TIGER-Time-Varying-Denoising-Model-for-3D-Point-Cloud-Gene/paper.pdf
 - Code/Project: not identified

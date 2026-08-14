@@ -1,7 +1,7 @@
 # ZeroKey: Point-Level Reasoning and Zero-Shot 3D Keypoint Detection from Large Language Models
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_ZeroKey-Point-Level-Reasoning-and-Zero-Shot-3D-Keypoint-De/paper.pdf
 - Code/Project: not identified

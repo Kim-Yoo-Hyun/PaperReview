@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2020 / ECCV
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: 3D visual grounding, language, scene
 - Paper link: ./2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/paper.pdf
 - Code/Project: https://github.com/referit3d/referit3d

@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2024 / CVPR
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
 - Paper link: ./2024/CVPR/2024_CVPR_SG-PGM-Partial-Graph-Matching-Network-with-Semantic-Geomet/paper.pdf
 - Code/Project: not identified

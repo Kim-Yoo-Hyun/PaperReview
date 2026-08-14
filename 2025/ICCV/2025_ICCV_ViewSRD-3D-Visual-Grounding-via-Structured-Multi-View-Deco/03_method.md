@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_ViewSRD-3D-Visual-Grounding-via-Structured-Multi-View-Deco/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # SDGS: Spatial Difference Guided Gaussian Splatting for Simultaneous Localization and 3D Reconstruction
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_SDGS-Spatial-Difference-Guided-Gaussian-Splatting-for-Simu/paper.pdf
 - Code/Project: not identified

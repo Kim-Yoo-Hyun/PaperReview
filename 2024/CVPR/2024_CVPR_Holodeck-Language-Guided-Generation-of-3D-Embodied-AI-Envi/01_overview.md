@@ -1,7 +1,7 @@
 # Holodeck: Language Guided Generation of 3D Embodied AI Environments
 
 - Year/Venue: 2024 / CVPR
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Generation, 3D scene, Embodied AI
 - Paper link: ./2024/CVPR/2024_CVPR_Holodeck-Language-Guided-Generation-of-3D-Embodied-AI-Envi/paper.pdf
 - Code/Project: not identified from primary page

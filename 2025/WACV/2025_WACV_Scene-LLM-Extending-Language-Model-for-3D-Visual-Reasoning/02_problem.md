@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / WACV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: LLM, 3D visual reasoning, Vision-Language
 - Paper link: ./2025/WACV/2025_WACV_Scene-LLM-Extending-Language-Model-for-3D-Visual-Reasoning/paper.pdf
 - Code/Project: not identified from primary page

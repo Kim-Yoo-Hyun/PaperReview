@@ -1,7 +1,7 @@
 # VTGaussian-SLAM: RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D Gaussians
 
 - Year/Venue: 2025 / ICML Poster
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: 3D Vision, Gaussian Splatting
 - Paper link: ./2025/ICML/2025_ICML_VTGaussian-SLAM-RGBD-SLAM-for-Large-Scale-Scenes-with-Spla/paper.pdf
 - Code/Project: not identified from OpenReview

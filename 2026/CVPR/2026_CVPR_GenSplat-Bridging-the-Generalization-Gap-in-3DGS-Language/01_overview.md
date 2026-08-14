@@ -1,7 +1,7 @@
 # GenSplat: Bridging the Generalization Gap in 3DGS Language Comprehension
 
 - Year/Venue: 2026 / CVPR
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting, language, generalization
 - Paper link: ./2026/CVPR/2026_CVPR_GenSplat-Bridging-the-Generalization-Gap-in-3DGS-Language/paper.pdf
 - Code/Project: not identified from primary page

@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2022 / ICLR
-- Category: Open-Vocabulary 3D Mapping
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Model, semantic, open-vocabulary, alignment
 - Paper link: ./2022/ICLR/2022_ICLR_Language-driven-Semantic-Segmentation/paper.pdf
 - Code/Project: https://github.com/isl-org/lang-seg

@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / 3DV
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: geometry, 3D Vision
 - Paper link: ./2025/3DV/2025_3DV_MASt3R-SfM-a-Fully-Integrated-Solution-for-Unconstrained-S/paper.pdf
 - Code/Project: not identified

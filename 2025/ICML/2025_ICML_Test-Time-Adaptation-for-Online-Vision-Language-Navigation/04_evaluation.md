@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICML Poster
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Model, Navigation, Reinforcement Learning
 - Paper link: ./2025/ICML/2025_ICML_Test-Time-Adaptation-for-Online-Vision-Language-Navigation/paper.pdf
 - Code/Project: not identified from OpenReview

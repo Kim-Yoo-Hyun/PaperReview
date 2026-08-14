@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: VLM, spatial reasoning, Robotics
 - Paper link: ./2025/CVPR/2025_CVPR_RoboSpatial-Teaching-Spatial-Understanding-to-2D-and-3D-Vi/paper.pdf
 - Code/Project: not identified from primary page

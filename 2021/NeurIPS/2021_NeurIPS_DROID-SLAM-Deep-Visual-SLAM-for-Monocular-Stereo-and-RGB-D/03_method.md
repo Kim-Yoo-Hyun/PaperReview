@@ -1,7 +1,9 @@
 # Method
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2021 / NeurIPS
-- Category: Foundations: SLAM and Sensor Geometry
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: SLAM, RGB-D, geometry
 - Paper link: ./2021/NeurIPS/2021_NeurIPS_DROID-SLAM-Deep-Visual-SLAM-for-Monocular-Stereo-and-RGB-D/paper.pdf
 - Code/Project: https://github.com/princeton-vl/DROID-SLAM

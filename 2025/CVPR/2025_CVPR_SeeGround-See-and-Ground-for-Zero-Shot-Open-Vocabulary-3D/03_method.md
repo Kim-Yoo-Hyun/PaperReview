@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: 3D visual grounding, zero-shot, open-vocabulary
 - Paper link: ./2025/CVPR/2025_CVPR_SeeGround-See-and-Ground-for-Zero-Shot-Open-Vocabulary-3D/paper.pdf
 - Code/Project: not identified from primary page

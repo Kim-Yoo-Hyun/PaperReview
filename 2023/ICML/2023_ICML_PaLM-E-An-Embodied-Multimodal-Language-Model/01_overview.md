@@ -1,7 +1,9 @@
 # PaLM-E: An Embodied Multimodal Language Model
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2023 / ICML
-- Category: Foundations: Vision-Language-Action and Robotics
+- Category: VLA and Generalist Robot Policies
 - Tags: LLM, Vision-Language, Robotics
 - Paper link: ./2023/ICML/2023_ICML_PaLM-E-An-Embodied-Multimodal-Language-Model/paper.pdf
 - Code/Project: https://palm-e.github.io/
@@ -25,7 +27,7 @@
 - Our evaluations show that PaLM-E, a single large embodied multimodal model, can address a variety of embodied reasoning tasks, from a variety of observation modalities, on multiple embodiments, ...
 
 ## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.
 
 ## Contribution
 - Further, in our experiments we show that current state-of-the-art visuallanguage models trained on typic

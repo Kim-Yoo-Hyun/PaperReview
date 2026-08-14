@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2023 / ICLR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: 3D Vision, Diffusion, Generation, text-to-3D
 - Paper link: ./2023/ICLR/2023_ICLR_DreamFusion-Text-to-3D-using-2D-Diffusion/paper.pdf
 - Code/Project: https://dreamfusion3d.github.io/

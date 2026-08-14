@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
 - Paper link: ./2024/CVPR/2024_CVPR_SuGaR-Surface-Aligned-Gaussian-Splatting-for-Efficient-3D/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / NeurIPS poster
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_PLANA3R-Zero-shot-Metric-Planar-3D-Reconstruction-via-Feed/paper.pdf
 - Code/Project: not identified

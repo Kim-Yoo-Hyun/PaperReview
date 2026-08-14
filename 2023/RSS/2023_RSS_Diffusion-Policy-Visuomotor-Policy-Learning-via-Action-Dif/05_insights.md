@@ -1,35 +1,41 @@
-# Insights
+# Insights — Diffusion Policy: Visuomotor Policy Learning via Action Diffusion
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: To successfully employ diffusion models for visuomotor policy learning, we present the following technical contributions that enhance the performance of Diffusion Policy and unlock its full potential on ...
-- 출발 문제 단서: Prior work attempts to address this challenge by exploring different action representations (Fig 1 a) – using mixtures of Gaussians Mandlekar et al. (2021), categorical representations of quantized ...
-- 주장된 효과 단서: We benchmark Diffusion Policy across 15 different tasks from 4 different robot manipulation benchmarks and find that it consistently outperforms existing state-of-the-art robot learning methods with an average ...
+> Evidence maturity: `UNREAD`. 이 문서는 읽기 위치와 검증 질문을 정리한 curation note이며, 정독 완료를 뜻하지 않는다.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- Language-conditioned perception을 바로 action/policy token으로 연결하는 방식을 3D object state, affordance, contact-aware manipulation으로 확장할 수 있다.
-- 2D image 중심 VLA가 놓치는 pose, metric distance, occlusion을 3D representation이나 scene memory로 보강하는 연구 질문으로 이어진다.
+## Why CORE
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: We benchmark Diffusion Policy across 15 different tasks from 4 different robot manipulation benchmarks and find that it consistently outperforms existing state-of-the-art robot learning methods with an average ...
-- robot action까지 보인 경우에도 3D state grounding, closed-loop correction, force/tactile feedback, unseen embodiment generalization은 별도 검증이 필요하다.
+이 논문은 **RL, IL, and policy learning foundations**에서 data distribution, policy objective, value/sequence/generative action interface를 비교하기 위한 robot-learning 기반로 선정됐다.
 
-## 다음 연구 질문
-- 3D geometry token을 VLA policy에 넣을 때 action success와 language following 중 어느 부분이 실제로 개선되는가?
-- open-vocabulary instruction과 metric manipulation constraint를 같은 representation에서 안정적으로 맞출 수 있는가?
-- long-horizon task에서 memory/action token이 누적될 때 failure recovery를 어떻게 설계할 수 있는가?
+## Captured Source Cues — Not Yet Independently Verified
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: ImageNet / accuracy, IoU, mAP, success rate, collision
-- 내 연구 확장 benchmark 후보: CALVIN, LIBERO, RLBench, Open X-Embodiment
-- 내 연구 확장 metric 후보: success rate, task completion, generalization gap, collision
-- 검증 초점: language-conditioned manipulation success, unseen object/task generalization, closed-loop recovery를 확인한다.
-
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
-
-## 근거가 되는 논문 단서
 - Problem cue: Prior work attempts to address this challenge by exploring different action representations (Fig 1 a) – using mixtures of Gaussians Mandlekar et al. (2021), categorical representations of quantized ...
 - Method cue: To successfully employ diffusion models for visuomotor policy learning, we present the following technical contributions that enhance the performance of Diffusion Policy and unlock its full potential on ...
-- Result cue: We benchmark Diffusion Policy across 15 different tasks from 4 different robot manipulation benchmarks and find that it consistently outperforms existing state-of-the-art robot learning methods with an average ...
+- Result/evaluation cue: We benchmark Diffusion Policy across 15 different tasks from 4 different robot manipulation benchmarks and find that it consistently outperforms existing state-of-the-art robot learning methods with an average ...
+
+위 cue는 기존 official abstract 또는 local text extraction에서 보존한 것이다. 수치·조건·인과적 해석은 full-text 정독 전까지 `UNVERIFIED`다.
+
+## Dependency Position
+
+`Flow Matching for Generative Modeling → Diffusion Policy: Visuomotor Policy Learning via Action Diffusion → Q-Transformer: Scalable Offline Reinforcement Learning via Autoregressive Q-Functions`
+
+이 화살표는 reading dependency다. 직접 citation 관계는 references와 related work를 확인한 뒤 synthesis 문서에만 확정한다.
+
+## Close-Reading Checklist
+
+- learning setting, objective, policy/value representation, data source, interaction budget, generalization split, optimization failure
+- 논문이 고정한 가정과 실제 deployment에서 깨질 조건
+- strongest baseline과 공정한 비교가 성립하는 조건
+- negative result, failure case, compute/data/hardware dependency
+
+## Research Use
+
+- 성능 향상이 objective, data coverage, architecture 중 어디에서 오는지 분리한다.
+- 연결 gap: `G-06 / G-08 / G-12` in [RESEARCH_GAPS.md](../../../research/RESEARCH_GAPS.md)
+
+## Minimal Reproduction
+
+동일 observation/action/data split에서 objective만 바꾸고 success, OOD degradation와 calibration을 비교한다.
+
+## Promotion Rule
+
+`READ`로 올리려면 method/evaluation 필드를 채우고, `SYNTHESIZED`로 올리려면 같은 track의 선행·후속 논문과 comparison matrix를 갱신한다.

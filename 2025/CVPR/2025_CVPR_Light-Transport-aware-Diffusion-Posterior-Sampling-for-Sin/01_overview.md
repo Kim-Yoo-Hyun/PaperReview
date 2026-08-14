@@ -1,7 +1,7 @@
 # Light Transport-aware Diffusion Posterior Sampling for Single-View Reconstruction of 3D Volumes
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_Light-Transport-aware-Diffusion-Posterior-Sampling-for-Sin/paper.pdf
 - Code/Project: not identified

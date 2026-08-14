@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2019 / CVPR
-- Category: Foundations: 3D Detection and BEV Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: 3D Vision, LiDAR, 3D detection, BEV
 - Paper link: ./2019/CVPR/2019_CVPR_PointPillars-Fast-Encoders-for-Object-Detection-from-Point/paper.pdf
 - Code/Project: https://github.com/nutonomy/second.pytorch

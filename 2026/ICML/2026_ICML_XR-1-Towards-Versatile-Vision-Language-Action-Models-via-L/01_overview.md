@@ -1,7 +1,7 @@
 # XR-1: Towards Versatile Vision-Language-Action Models via Learning Unified Vision-Motion Representations
 
 - Year/Venue: 2026 / ICML Spotlight
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Imitation Learning
 - Paper link: ./2026/ICML/2026_ICML_XR-1-Towards-Versatile-Vision-Language-Action-Models-via-L/paper.pdf
 - Code/Project: not identified from OpenReview

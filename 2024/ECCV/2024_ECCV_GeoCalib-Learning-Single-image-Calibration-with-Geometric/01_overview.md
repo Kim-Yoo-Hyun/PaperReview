@@ -1,7 +1,7 @@
 # GeoCalib: Learning Single-image Calibration with Geometric Optimization
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: geometry, 3D Vision
 - Paper link: ./2024/ECCV/2024_ECCV_GeoCalib-Learning-Single-image-Calibration-with-Geometric/paper.pdf
 - Code/Project: not identified

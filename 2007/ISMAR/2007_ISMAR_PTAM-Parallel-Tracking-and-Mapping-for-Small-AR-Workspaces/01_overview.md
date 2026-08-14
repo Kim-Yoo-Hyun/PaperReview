@@ -1,7 +1,7 @@
 # PTAM: Parallel Tracking and Mapping for Small AR Workspaces
 
 - Year/Venue: 2007 / ISMAR
-- Category: Foundations: SLAM and Sensor Geometry
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D Vision, SLAM, geometry, camera pose
 - Paper link: ./2007/ISMAR/2007_ISMAR_PTAM-Parallel-Tracking-and-Mapping-for-Small-AR-Workspaces/paper.pdf
 - Code/Project: https://www.robots.ox.ac.uk/~gk/PTAM/

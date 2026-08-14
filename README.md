@@ -5,9 +5,9 @@ This repository is a structured literature survey for research at the intersecti
 It collects papers, PDFs, and compact reading notes for topics such as vision-language-action models, 3D scene graphs, embodied navigation, Gaussian Splatting, NeRF, SLAM, sensor fusion, grounding, calibration, planning, reinforcement learning, imitation learning, and foundation models.
 
 The full paper registry is maintained in [PAPER.md](./PAPER.md).
-Category-wise reading priority is maintained in [PRIORITY.md](./PRIORITY.md).
-Research idea sketches derived from the registry are maintained in [RESEARCH_IDEAS.md](./RESEARCH_IDEAS.md).
-Survey update notes are tracked in [report.md](./report.md).
+The consolidated robotics-first priority and reading roadmap is maintained in [READING_PLAN.md](./research/READING_PLAN.md).
+Reading progress and cross-paper comparison are maintained in [READING_STATUS.csv](./research/READING_STATUS.csv) and [synthesis](./synthesis/README.md).
+Cross-track research gaps and experiment-ready hypotheses are maintained in [RESEARCH_GAPS.md](./research/RESEARCH_GAPS.md) and [RESEARCH_IDEAS.md](./research/RESEARCH_IDEAS.md).
 
 ## Scope
 
@@ -30,28 +30,30 @@ Secondary keywords include:
 
 | Item | Count |
 |---|---:|
-| Papers | 607 |
-| PDFs | 607 |
-| Per-paper markdown notes | 3,035 |
-| Years covered | 2007-2026 |
+| Papers | 811 |
+| Local PDFs | 194 |
+| Per-paper markdown notes | 4,055 |
+| Canonical categories | 23 |
+| Years covered | 1987-2026 |
 
 ## Venue Coverage
 
 | Venue | Count |
 |---|---:|
-| CVPR | 141 |
-| ICCV | 89 |
-| ICLR | 74 |
-| ICML | 64 |
-| NeurIPS | 59 |
+| CVPR | 155 |
+| ICCV | 91 |
+| ICLR | 101 |
+| ICML | 71 |
+| NeurIPS | 67 |
 | ECCV | 49 |
-| ICRA | 34 |
-| CoRL | 21 |
-| IROS | 17 |
-| RA-L | 16 |
+| ICRA | 55 |
+| CoRL | 52 |
+| IROS | 20 |
+| RSS | 58 |
+| RA-L | 21 |
 | 3DV | 16 |
 
-Additional papers are included from RSS, WACV, TMLR, SIGGRAPH, T-RO, TOG, AAAI, NAACL, AISTATS, EMNLP, ISMAR, and arXiv when they are foundational or directly relevant.
+Additional papers are included from ICAPS, WACV, TMLR, SIGGRAPH, T-RO, TOG, AAAI, NAACL, AISTATS, EMNLP, ISMAR, and arXiv when they are foundational or directly relevant.
 
 ## Directory Layout
 
@@ -77,7 +79,7 @@ Each paper folder contains:
 03_method.md
 04_evaluation.md
 05_insights.md
-paper.pdf
+paper.pdf  # optional local cache
 ```
 
 ## Note Format
@@ -92,7 +94,7 @@ Each paper is summarized with the same structure:
 
 ## Main Registry
 
-Use [PAPER.md](./PAPER.md) as the primary navigation file. Use [PRIORITY.md](./PRIORITY.md) when deciding what to read first by category.
+Use [PAPER.md](./PAPER.md) as the primary navigation file. Use [READING_PLAN.md](./research/READING_PLAN.md) for priority criteria, reading order, and the CORE/NEXT intensive-reading set.
 
 It groups papers by research theme:
 
@@ -110,6 +112,17 @@ It groups papers by research theme:
 - Open-Vocabulary 3D Mapping
 - 3D Reconstruction, Geometry, and SLAM
 - Foundations: Transformers, VLMs, diffusion, 3D geometry, SLAM, RL, and robot policies
+- Foundations: robot motion planning, control, robot learning, and sim-to-real
+- Reinforcement learning, offline RL, imitation learning, and inverse RL for robotics
+- Contact-rich and model-based manipulation
+- Robot learning and manipulation
+- Legged locomotion, loco-manipulation, mobile manipulation, and whole-body control
+- Safe robotics, constrained control, and robot world models
+- Failure detection, uncertainty, active perception, and long-horizon replanning
+- Tactile/force-aware VLA, articulated interaction, deformable objects, tools, and assembly
+- Cross-embodiment learning, robot datasets, and domain-diverse robotics
+- Tactile and dexterous manipulation
+- Multi-robot systems
 
 ## Recommended Reading Paths
 
@@ -119,12 +132,12 @@ Start from the foundation papers if you are entering the area:
 - Vision-language models: CLIP, ViT, Segment Anything, DINOv2
 - 3D representation: PointNet, NeRF, 3D Gaussian Splatting
 - Geometry and SLAM: ORB-SLAM, DROID-SLAM, DUSt3R, MASt3R, VGGT
-- Policy learning: Decision Transformer, Diffusion Policy, SayCan, RT-1, RT-2, PaLM-E, Open X-Embodiment
+- Policy learning: RoboMimic, Decision Transformer, DDPM/Flow Matching, Diffusion Policy, SayCan, RT-1, RT-2, PaLM-E, Open X-Embodiment
 
 For robotics and VLA research:
 
-- Read RT-1, RT-2, PaLM-E, OpenVLA, Octo, Diffusion Policy, PerAct, RVT, VoxPoser, ReKep.
-- Then move to recent VLA papers from ICRA, ICML, ICLR, NeurIPS, ICCV, CoRL, RA-L, and IROS.
+- Use [READING_PLAN.md](./research/READING_PLAN.md) for the planning/control, RL/IL, contact-rich manipulation, locomotion, whole-body/mobile manipulation, safety, and world-model backbone.
+- Then connect that backbone to PDDLStream, RLBench, RT-1, RT-2, PaLM-E, OpenVLA, Octo, π0, FAST, OpenVLA-OFT, Reactive Diffusion Policy, Perceiver-Actor, RVT, VoxPoser, and ReKep.
 
 For 3D vision-language and embodied spatial reasoning:
 
@@ -143,35 +156,40 @@ For 3D computer vision-first research:
 
 The collection follows these rules:
 
-- 2024-current: broad coverage of relevant top-tier conference and journal papers where official or public PDFs are available.
+- 2024-current: broad coverage of relevant top-tier conference and journal papers with verifiable official records.
 - 2021-current: emphasis on highly cited or field-shaping papers.
 - Foundational papers: included regardless of year when they define the underlying methods used by later work.
-- Each paper should have a stable PDF, venue or arXiv page, and a consistent note structure.
+- Each paper should have a stable official venue or arXiv page and a consistent note structure; a local PDF is optional.
 - Venue year is not repeated in venue folder names because papers are already grouped by year.
 
 ## Maintenance Workflow
 
-The survey is generated and checked through scripts under [survey_work](./survey_work).
+The survey is maintained through the idempotent tools documented in [survey_work/README.md](./survey_work/README.md). One-off augmentation and PDF retry scripts are historical artifacts under `survey_work/archive/` and are not part of the normal workflow.
 
 Useful commands:
 
 ```bash
-python3 survey_work/build_lit_survey.py
-python3 survey_work/reorganize_paper_dirs.py
-python3 survey_work/create_extra_eccv_iccv_ral_iros.py
+python3 survey_work/audit_repository.py
+python3 survey_work/register_papers.py --input /path/to/new_papers.json
+python3 survey_work/register_papers.py --input /path/to/new_papers.json --apply
+python3 survey_work/normalize_taxonomy.py
+python3 survey_work/build_reading_tiers.py
+python3 survey_work/audit_repository.py
 ```
 
-The generated manifest is:
+The canonical metadata manifest is:
 
 ```text
-survey_work/selected_papers.json
+survey_work/sources/papers.json
 ```
+
+`build_lit_survey.py` is read-only without flags. PDF download and note overwrite require separate explicit flags and are intentionally excluded from the normal workflow.
 
 ## Notes on Public Sharing
 
 This repository is designed for literature management and personal research use.
 
-If publishing the repository publicly, review publisher and conference copyright policies before redistributing downloaded PDFs. A safer public version may keep the markdown notes and replace local PDFs with official paper links.
+This checkout currently contains 194 local PDFs, but PDFs are an optional cache and never affect registry inclusion, tier, or reading priority. The nine papers in the latest robotics lineage update were intentionally registered without downloading PDFs. If publishing the repository publicly, review publisher and conference copyright policies before redistributing downloaded PDFs; a safer public version can keep the markdown notes and official source links only.
 
 ## README Style References
 

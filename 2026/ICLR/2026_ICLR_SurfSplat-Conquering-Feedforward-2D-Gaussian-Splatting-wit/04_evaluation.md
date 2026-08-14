@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
 - Paper link: ./2026/ICLR/2026_ICLR_SurfSplat-Conquering-Feedforward-2D-Gaussian-Splatting-wit/paper.pdf
 - Code/Project: not identified

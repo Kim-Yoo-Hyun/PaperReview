@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / CVPR
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, 3D-2D alignment, Robotics
 - Paper link: ./2026/CVPR/2026_CVPR_Localizing-Structuring-and-Rendering-Bridging-3D-and-2D-Vi/paper.pdf
 - Code/Project: not identified from primary page

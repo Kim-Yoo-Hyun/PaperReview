@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2016 / CVPR
-- Category: 3D Reconstruction, Geometry, and SLAM
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D Vision, 3D reconstruction, SLAM, geometry
 - Paper link: ./2016/CVPR/2016_CVPR_Structure-from-Motion-Revisited/paper.pdf
 - Code/Project: https://colmap.github.io/

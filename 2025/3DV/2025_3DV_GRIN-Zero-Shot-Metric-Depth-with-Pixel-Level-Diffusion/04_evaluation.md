@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / 3DV
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Diffusion, Generation, depth, 3D Vision
 - Paper link: ./2025/3DV/2025_3DV_GRIN-Zero-Shot-Metric-Depth-with-Pixel-Level-Diffusion/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
 - Paper link: ./2025/ICLR/2025_ICLR_DiffSplat-Repurposing-Image-Diffusion-Models-for-Scalable/paper.pdf
 - Code/Project: not identified

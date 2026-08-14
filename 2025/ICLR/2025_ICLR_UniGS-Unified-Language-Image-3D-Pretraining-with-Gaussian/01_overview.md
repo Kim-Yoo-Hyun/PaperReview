@@ -1,7 +1,7 @@
 # UniGS: Unified Language-Image-3D Pretraining with Gaussian Splatting
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: 3D Vision, Gaussian Splatting
 - Paper link: ./2025/ICLR/2025_ICLR_UniGS-Unified-Language-Image-3D-Pretraining-with-Gaussian/paper.pdf
 - Code/Project: not identified from OpenReview

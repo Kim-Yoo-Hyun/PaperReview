@@ -1,7 +1,7 @@
 # 3D Gaussian Map with Open-Set Semantic Grouping for Vision-Language Navigation
 
 - Year/Venue: 2025 / ICCV
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Gaussian Splatting, Vision-Language Navigation, semantic
 - Paper link: ./2025/ICCV/2025_ICCV_3D-Gaussian-Map-with-Open-Set-Semantic-Grouping-for-Vision/paper.pdf
 - Code/Project: not identified from primary page

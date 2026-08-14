@@ -1,0 +1,395 @@
+[
+  {
+    "title": "A Unified Approach for Motion and Force Control of Robot Manipulators: The Operational Space Formulation",
+    "year": 1987,
+    "venue": "IEEE JRA",
+    "category": "Foundations: Robot Motion Planning and Control",
+    "tags": ["Robotics", "operational space control", "force control", "manipulation"],
+    "pdf": "https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf",
+    "page": "https://cs.stanford.edu/group/manips/publications.html",
+    "project": "not released"
+  },
+  {
+    "title": "Probabilistic Roadmaps for Path Planning in High-Dimensional Configuration Spaces",
+    "year": 1996,
+    "venue": "IEEE T-RA",
+    "category": "Foundations: Robot Motion Planning and Control",
+    "tags": ["Robotics", "motion planning", "PRM", "configuration space"],
+    "pdf": "https://kavrakilab.org/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf",
+    "page": "https://kavrakilab.rice.edu/publications/kavraki-svestka1996probabilistic-roadmaps-for.html",
+    "project": "not released"
+  },
+  {
+    "title": "Rapidly-Exploring Random Trees: A New Tool for Path Planning",
+    "year": 1998,
+    "venue": "Technical Report",
+    "category": "Foundations: Robot Motion Planning and Control",
+    "tags": ["Robotics", "motion planning", "RRT", "kinodynamic planning"],
+    "pdf": "https://lavalle.pl/papers/Lav98c.pdf",
+    "page": "https://lavalle.pl/rrtpubs.html",
+    "project": "not released"
+  },
+  {
+    "title": "D* Lite",
+    "year": 2002,
+    "venue": "AAAI",
+    "category": "Foundations: Robot Motion Planning and Control",
+    "tags": ["Robotics", "path planning", "incremental search", "navigation"],
+    "pdf": "https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf",
+    "page": "https://idm-lab.org/bib/abstracts/Koen02e.html",
+    "project": "not released"
+  },
+  {
+    "title": "FastSLAM: A Factored Solution to the Simultaneous Localization and Mapping Problem",
+    "year": 2002,
+    "venue": "AAAI",
+    "category": "Foundations: SLAM and Sensor Geometry",
+    "tags": ["Robotics", "SLAM", "particle filter", "state estimation"],
+    "pdf": "https://cdn.aaai.org/AAAI/2002/AAAI02-089.pdf",
+    "page": "https://www.cs.cmu.edu/~thrun/papers/montemerlo.fastslam-tr.html",
+    "project": "not released"
+  },
+  {
+    "title": "CHOMP: Gradient Optimization Techniques for Efficient Motion Planning",
+    "year": 2009,
+    "venue": "ICRA",
+    "category": "Foundations: Robot Motion Planning and Control",
+    "tags": ["Robotics", "motion planning", "trajectory optimization", "manipulation"],
+    "pdf": "https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf",
+    "page": "https://www.ri.cmu.edu/publications/chomp-gradient-optimization-techniques-for-efficient-motion-planning/",
+    "project": "https://moveit.github.io/moveit_tutorials/doc/chomp_planner/chomp_planner_tutorial.html"
+  },
+  {
+    "title": "STOMP: Stochastic Trajectory Optimization for Motion Planning",
+    "year": 2011,
+    "venue": "ICRA",
+    "category": "Foundations: Robot Motion Planning and Control",
+    "tags": ["Robotics", "motion planning", "trajectory optimization", "stochastic optimization"],
+    "pdf": "https://whiteoak.umd.edu/roswiki/attachments/Papers%282f%29ICRA2011_Kalakrishnan/kalakrishnan_icra2011.pdf",
+    "page": "https://doi.org/10.1109/ICRA.2011.5980280",
+    "project": "https://moveit.github.io/moveit_tutorials/doc/stomp_planner/stomp_planner_tutorial.html"
+  },
+  {
+    "title": "Sampling-based Algorithms for Optimal Motion Planning",
+    "year": 2011,
+    "venue": "IJRR",
+    "category": "Foundations: Robot Motion Planning and Control",
+    "tags": ["Robotics", "motion planning", "RRT*", "asymptotic optimality"],
+    "arxiv": "1105.1186",
+    "project": "https://ompl.kavrakilab.org/"
+  },
+  {
+    "title": "TrajOpt: A Sequential Convex Optimization Algorithm for Robot Motion Planning",
+    "year": 2013,
+    "venue": "IROS",
+    "category": "Foundations: Robot Motion Planning and Control",
+    "tags": ["Robotics", "motion planning", "trajectory optimization", "collision avoidance"],
+    "arxiv": "1310.7730",
+    "project": "https://rll.berkeley.edu/trajopt/"
+  },
+  {
+    "title": "Dynamical Movement Primitives: Learning Attractor Models for Motor Behaviors",
+    "year": 2013,
+    "venue": "Neural Computation",
+    "category": "Foundations: Robot Motion Planning and Control",
+    "tags": ["Robotics", "movement primitives", "dynamical systems", "motor control"],
+    "pdf": "https://www.pure.ed.ac.uk/ws/portalfiles/portal/7874487/NECO_a_00393.pdf",
+    "page": "https://is.mpg.de/ics/publications/ijspeert_nc_2013",
+    "project": "not released"
+  },
+  {
+    "title": "Learning Neural Network Policies with Guided Policy Search under Unknown Dynamics",
+    "year": 2016,
+    "venue": "JMLR",
+    "category": "Foundations: Robot Learning and Sim-to-Real",
+    "tags": ["Robotics", "guided policy search", "policy learning", "manipulation"],
+    "pdf": "https://jmlr.org/papers/volume17/15-522/15-522.pdf",
+    "page": "https://jmlr.org/papers/v17/15-522.html",
+    "project": "not released"
+  },
+  {
+    "title": "Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World",
+    "year": 2017,
+    "venue": "IROS",
+    "category": "Foundations: Robot Learning and Sim-to-Real",
+    "tags": ["Robotics", "sim-to-real", "domain randomization", "perception"],
+    "arxiv": "1703.06907",
+    "project": "not released"
+  },
+  {
+    "title": "Dex-Net 2.0: Deep Learning to Plan Robust Grasps with Synthetic Point Clouds and Analytic Grasp Metrics",
+    "year": 2017,
+    "venue": "RSS",
+    "category": "Foundations: Robot Learning and Sim-to-Real",
+    "tags": ["Robotics", "grasping", "synthetic data", "analytic grasp metric"],
+    "arxiv": "1703.09312",
+    "project": "https://berkeleyautomation.github.io/dex-net/"
+  },
+  {
+    "title": "QT-Opt: Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation",
+    "year": 2018,
+    "venue": "CoRL",
+    "category": "Foundations: Robot Learning and Sim-to-Real",
+    "tags": ["Robotics", "reinforcement learning", "Q-learning", "manipulation"],
+    "arxiv": "1806.10293",
+    "project": "https://ai.googleblog.com/2018/06/scalable-deep-reinforcement-learning.html"
+  },
+  {
+    "title": "RMA: Rapid Motor Adaptation for Legged Robots",
+    "year": 2021,
+    "venue": "RSS",
+    "category": "Foundations: Robot Learning and Sim-to-Real",
+    "tags": ["Robotics", "locomotion", "sim-to-real", "online adaptation"],
+    "arxiv": "2107.04034",
+    "project": "https://ashish-kmr.github.io/rma-legged-robots/"
+  },
+  {
+    "title": "Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning",
+    "year": 2021,
+    "venue": "CoRL",
+    "category": "Foundations: Robot Learning and Sim-to-Real",
+    "tags": ["Robotics", "locomotion", "reinforcement learning", "massively parallel simulation"],
+    "pdf": "https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf",
+    "page": "https://proceedings.mlr.press/v164/rudin22a.html",
+    "project": "https://leggedrobotics.github.io/legged_gym/"
+  },
+  {
+    "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+    "year": 2023,
+    "venue": "RSS",
+    "category": "Foundations: Robot Learning and Sim-to-Real",
+    "tags": ["Robotics", "bimanual manipulation", "imitation learning", "action chunking"],
+    "arxiv": "2304.13705",
+    "project": "https://tonyzhaozh.github.io/aloha/"
+  },
+  {
+    "title": "SARA-RT: Scaling up Robotics Transformers with Self-Adaptive Robust Attention",
+    "year": 2024,
+    "venue": "ICRA",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "robot policy", "efficient attention", "manipulation"],
+    "arxiv": "2312.01990",
+    "project": "https://deepmind.google/discover/blog/shaping-the-future-of-advanced-robotics/"
+  },
+  {
+    "title": "NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration",
+    "year": 2024,
+    "venue": "ICRA",
+    "category": "Robot Motion Planning and Control",
+    "tags": ["Robotics", "navigation", "diffusion policy", "exploration"],
+    "arxiv": "2310.07896",
+    "project": "https://general-navigation-models.github.io/nomad/"
+  },
+  {
+    "title": "Resilient Legged Local Navigation: Learning to Traverse with Compromised Perception End-to-End",
+    "year": 2024,
+    "venue": "ICRA",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "legged locomotion", "navigation", "robust perception"],
+    "arxiv": "2310.03581",
+    "project": "https://bit.ly/45NBTuh"
+  },
+  {
+    "title": "Learning Vision-Based Bipedal Locomotion for Challenging Terrain",
+    "year": 2024,
+    "venue": "ICRA",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "bipedal locomotion", "sim-to-real", "reinforcement learning"],
+    "arxiv": "2309.14594",
+    "project": "not identified"
+  },
+  {
+    "title": "Hearing Touch: Audio-Visual Pretraining for Contact-Rich Manipulation",
+    "year": 2024,
+    "venue": "ICRA",
+    "category": "Tactile and Dexterous Manipulation",
+    "tags": ["Robotics", "tactile sensing", "audio-visual pretraining", "contact-rich manipulation"],
+    "arxiv": "2405.08576",
+    "project": "https://sites.google.com/view/hearing-touch"
+  },
+  {
+    "title": "Constrained Bimanual Planning with Analytic Inverse Kinematics",
+    "year": 2024,
+    "venue": "ICRA",
+    "category": "Robot Motion Planning and Control",
+    "tags": ["Robotics", "bimanual manipulation", "motion planning", "inverse kinematics"],
+    "arxiv": "2309.08770",
+    "project": "https://tommycohn.com/Bimanual-Web/"
+  },
+  {
+    "title": "Body Transformer: Leveraging Robot Embodiment for Policy Learning",
+    "year": 2024,
+    "venue": "CoRL",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "embodiment", "graph neural network", "policy learning"],
+    "pdf": "https://arxiv.org/pdf/2408.06316",
+    "page": "https://openreview.net/forum?id=Oce2215aJE",
+    "project": "https://sferrazza.cc/bot_site/"
+  },
+  {
+    "title": "Mobile ALOHA: Learning Bimanual Mobile Manipulation using Low-Cost Whole-Body Teleoperation",
+    "year": 2024,
+    "venue": "CoRL",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "mobile manipulation", "bimanual manipulation", "teleoperation"],
+    "arxiv": "2401.02117",
+    "project": "https://mobile-aloha.github.io/"
+  },
+  {
+    "title": "Learning to Walk from Three Minutes of Real-World Data with Semi-structured Dynamics Models",
+    "year": 2024,
+    "venue": "CoRL",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "locomotion", "model-based reinforcement learning", "real-world learning"],
+    "pdf": "https://arxiv.org/pdf/2410.09163",
+    "page": "https://openreview.net/forum?id=evCXwlCMIi",
+    "project": "https://sites.google.com/utexas.edu/ssrl"
+  },
+  {
+    "title": "Bootstrapping Reinforcement Learning with Imitation for Vision-Based Agile Flight",
+    "year": 2024,
+    "venue": "CoRL",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "aerial robotics", "reinforcement learning", "imitation learning"],
+    "pdf": "https://arxiv.org/pdf/2403.12203",
+    "page": "https://openreview.net/forum?id=bt0PX0e4rE",
+    "project": "https://bootstrap-rl-with-il.github.io/"
+  },
+  {
+    "title": "Learning Robotic Manipulation Policies from Point Clouds with Conditional Flow Matching",
+    "year": 2024,
+    "venue": "CoRL",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "point cloud", "conditional flow matching", "imitation learning"],
+    "arxiv": "2409.07343",
+    "project": "not identified"
+  },
+  {
+    "title": "SPIN: Simultaneous Perception, Interaction and Navigation",
+    "year": 2024,
+    "venue": "CVPR",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "mobile manipulation", "active perception", "whole-body control"],
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.html",
+    "project": "https://spin-robot.github.io/"
+  },
+  {
+    "title": "Geometry-aware RL for Manipulation of Varying Shapes and Deformable Objects",
+    "year": 2025,
+    "venue": "ICLR 2025 Oral",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "reinforcement learning", "SE(3) equivariance", "deformable manipulation"],
+    "pdf": "https://arxiv.org/pdf/2502.07005",
+    "page": "https://openreview.net/forum?id=7BLXhmWvwF",
+    "project": "https://thobotics.github.io/hepi"
+  },
+  {
+    "title": "Data Scaling Laws in Imitation Learning for Robotic Manipulation",
+    "year": 2025,
+    "venue": "ICLR 2025 Oral",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "imitation learning", "scaling laws", "data collection"],
+    "pdf": "https://arxiv.org/pdf/2410.18647",
+    "page": "https://openreview.net/forum?id=pISLZG7ktL",
+    "project": "not identified"
+  },
+  {
+    "title": "Predictive Inverse Dynamics Models are Scalable Learners for Robotic Manipulation",
+    "year": 2025,
+    "venue": "ICLR 2025 Oral",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "inverse dynamics", "world model", "manipulation"],
+    "pdf": "https://arxiv.org/pdf/2412.15109",
+    "page": "https://openreview.net/forum?id=meRCKuUpmc",
+    "project": "not identified"
+  },
+  {
+    "title": "Multi-Robot Motion Planning with Diffusion Models",
+    "year": 2025,
+    "venue": "ICLR 2025 Spotlight",
+    "category": "Multi-Robot Systems",
+    "tags": ["Robotics", "multi-robot", "motion planning", "diffusion model"],
+    "pdf": "https://arxiv.org/pdf/2410.03072",
+    "page": "https://openreview.net/forum?id=AUCYptvAf3",
+    "project": "not identified"
+  },
+  {
+    "title": "ManiSkill-HAB: A Benchmark for Low-Level Manipulation in Home Rearrangement Tasks",
+    "year": 2025,
+    "venue": "ICLR 2025 Poster",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "benchmark", "home rearrangement", "reinforcement learning"],
+    "pdf": "https://arxiv.org/pdf/2412.13211",
+    "page": "https://openreview.net/forum?id=6bKEWevgSd",
+    "project": "not identified"
+  },
+  {
+    "title": "Sensor-Invariant Tactile Representation",
+    "year": 2025,
+    "venue": "ICLR 2025 Poster",
+    "category": "Tactile and Dexterous Manipulation",
+    "tags": ["Robotics", "tactile sensing", "sensor transfer", "representation learning"],
+    "pdf": "https://arxiv.org/pdf/2502.19638",
+    "page": "https://openreview.net/forum?id=RnJY9WcpA3",
+    "project": "not identified"
+  },
+  {
+    "title": "DexTrack: Towards Generalizable Neural Tracking Control for Dexterous Manipulation from Human References",
+    "year": 2025,
+    "venue": "ICLR 2025 Poster",
+    "category": "Tactile and Dexterous Manipulation",
+    "tags": ["Robotics", "dexterous manipulation", "tracking control", "human demonstration"],
+    "pdf": "https://arxiv.org/pdf/2502.09614",
+    "page": "https://openreview.net/forum?id=ajSmXqgS24",
+    "project": "https://meowuu7.github.io/DexTrack/"
+  },
+  {
+    "title": "Object-centric 3D Motion Field for Robot Learning from Human Videos",
+    "year": 2025,
+    "venue": "NeurIPS 2025 Spotlight",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "learning from human videos", "3D motion field", "cross-embodiment"],
+    "pdf": "https://arxiv.org/pdf/2506.04227",
+    "page": "https://openreview.net/forum?id=kp9B9iQDIt",
+    "project": "not identified"
+  },
+  {
+    "title": "Rodrigues Network for Learning Robot Actions",
+    "year": 2026,
+    "venue": "ICLR 2026 Oral",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "kinematics", "action representation", "imitation learning"],
+    "pdf": "https://arxiv.org/pdf/2506.02618",
+    "page": "https://openreview.net/forum?id=IZHk6BXBST",
+    "project": "not identified"
+  },
+  {
+    "title": "Mean Flow Policy with Instantaneous Velocity Constraint for One-step Action Generation",
+    "year": 2026,
+    "venue": "ICLR 2026 Oral",
+    "category": "Robot Learning and Manipulation",
+    "tags": ["Robotics", "flow policy", "one-step generation", "manipulation"],
+    "pdf": "https://arxiv.org/pdf/2602.13810",
+    "page": "https://openreview.net/forum?id=mIeKe74W43",
+    "project": "not identified"
+  },
+  {
+    "title": "OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation and Scene Interaction",
+    "year": 2026,
+    "venue": "ICRA",
+    "category": "Locomotion and Whole-Body Control",
+    "tags": ["Robotics", "humanoid", "loco-manipulation", "motion retargeting"],
+    "arxiv": "2509.26633",
+    "project": "https://omniretarget.github.io/"
+  },
+  {
+    "title": "Push Anything: Single- and Multi-Object Pushing From First Sight with Contact-Implicit MPC",
+    "year": 2026,
+    "venue": "ICRA",
+    "category": "Robot Motion Planning and Control",
+    "tags": ["Robotics", "contact-rich manipulation", "model predictive control", "non-prehensile manipulation"],
+    "arxiv": "2510.19974",
+    "project": "https://dairlab.github.io/push-anything"
+  }
+]

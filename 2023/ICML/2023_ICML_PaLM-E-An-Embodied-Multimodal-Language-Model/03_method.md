@@ -1,7 +1,9 @@
 # Method
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2023 / ICML
-- Category: Foundations: Vision-Language-Action and Robotics
+- Category: VLA and Generalist Robot Policies
 - Tags: LLM, Vision-Language, Robotics
 - Paper link: ./2023/ICML/2023_ICML_PaLM-E-An-Embodied-Multimodal-Language-Model/paper.pdf
 - Code/Project: https://palm-e.github.io/
@@ -17,4 +19,4 @@
 - We propose embodied language models to directly incorporate real-world continuous sensor modalities into language models and thereby establish the link between words and percepts.
 
 ## 핵심 방법론
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.

@@ -1,7 +1,9 @@
 # OpenVLA: An Open-Source Vision-Language-Action Model
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2024 / CoRL
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Robotics, Imitation Learning
 - Paper link: ./2024/CoRL/2024_CoRL_OpenVLA-An-Open-Source-Vision-Language-Action-Model/paper.pdf
 - Code/Project: https://github.com/openvla/openvla
@@ -25,7 +27,7 @@
 - Concretely, we aim to answer the following questions: (1) How does OpenVLA compare to prior generalist robot policies, when evaluating on multiple robots and various types of generalization? ...
 
 ## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.
 
 ## Contribution
 - As a product of the added data diversity and new model components, OpenVLA demonstrates strong results for generalist manipulation, outperforming closed models such as RT-2-X (55B) by 16.5% ...

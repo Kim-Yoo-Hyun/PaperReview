@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Robotics, 3D Vision, Gaussian Splatting
 - Paper link: ./2025/ICLR/2025_ICLR_3D-SPATIAL-MULTIMODAL-MEMORY/paper.pdf
 - Code/Project: not identified from OpenReview

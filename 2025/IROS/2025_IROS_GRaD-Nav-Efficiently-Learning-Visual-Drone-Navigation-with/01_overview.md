@@ -1,7 +1,7 @@
 # GRaD-Nav: Efficiently Learning Visual Drone Navigation with Gaussian Radiance Fields and Differentiable Dynamics
 
 - Year/Venue: 2025 / IROS
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Navigation, Gaussian Splatting
 - Paper link: ./2025/IROS/2025_IROS_GRaD-Nav-Efficiently-Learning-Visual-Drone-Navigation-with/paper.pdf
 - Code/Project: https://qianzhong-chen.github.io/gradnav.github.io/

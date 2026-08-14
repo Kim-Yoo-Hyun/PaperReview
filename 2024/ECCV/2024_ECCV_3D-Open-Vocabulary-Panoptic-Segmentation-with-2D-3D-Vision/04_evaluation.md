@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model, 3D Vision, semantic
 - Paper link: ./2024/ECCV/2024_ECCV_3D-Open-Vocabulary-Panoptic-Segmentation-with-2D-3D-Vision/paper.pdf
 - Code/Project: not identified

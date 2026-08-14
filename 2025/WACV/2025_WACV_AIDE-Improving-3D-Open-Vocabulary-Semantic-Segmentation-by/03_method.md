@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / WACV
-- Category: Open-Vocabulary 3D Mapping
+- Category: Embodied Navigation and Mapping
 - Tags: open-vocabulary, semantic, alignment
 - Paper link: ./2025/WACV/2025_WACV_AIDE-Improving-3D-Open-Vocabulary-Semantic-Segmentation-by/paper.pdf
 - Code/Project: not identified from primary page

@@ -1,7 +1,7 @@
 # BlenderAlchemy: Editing 3D Graphics with Vision-Language Models
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model, 3D Vision, Graph Reasoning
 - Paper link: ./2024/ECCV/2024_ECCV_BlenderAlchemy-Editing-3D-Graphics-with-Vision-Language-Mo/paper.pdf
 - Code/Project: not identified

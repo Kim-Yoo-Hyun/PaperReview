@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Scene Graph, open-vocabulary, Graph Reasoning
 - Paper link: ./2024/CVPR/2024_CVPR_Open3DSG-Open-Vocabulary-3D-Scene-Graphs-from-Point-Clouds/paper.pdf
 - Code/Project: not identified from primary page

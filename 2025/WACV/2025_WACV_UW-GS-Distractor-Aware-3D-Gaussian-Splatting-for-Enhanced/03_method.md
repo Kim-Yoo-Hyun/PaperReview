@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / WACV
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
 - Paper link: ./2025/WACV/2025_WACV_UW-GS-Distractor-Aware-3D-Gaussian-Splatting-for-Enhanced/paper.pdf
 - Code/Project: not identified

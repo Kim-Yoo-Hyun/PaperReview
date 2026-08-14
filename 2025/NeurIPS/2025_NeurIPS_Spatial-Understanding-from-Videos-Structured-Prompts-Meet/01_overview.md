@@ -1,7 +1,7 @@
 # Spatial Understanding from Videos: Structured Prompts Meet Simulation Data
 
 - Year/Venue: 2025 / NeurIPS Spotlight
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_Spatial-Understanding-from-Videos-Structured-Prompts-Meet/paper.pdf
 - Code/Project: not identified from OpenReview

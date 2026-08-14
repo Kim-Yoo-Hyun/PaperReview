@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Gaussian Splatting, geometry, Diffusion, Generation, 3D Vision
 - Paper link: ./2024/CVPR/2024_CVPR_Align-Your-Gaussians-Text-to-4D-with-Dynamic-3D-Gaussians/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2021 / CVPR
-- Category: Foundations: 3D Detection and BEV Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: point cloud, 3D Vision
 - Paper link: ./2021/CVPR/2021_CVPR_CenterPoint-Center-based-3D-Object-Detection-and-Tracking/paper.pdf
 - Code/Project: not identified

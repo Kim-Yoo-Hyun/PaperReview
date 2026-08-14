@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Scene Graph, LLM, Graph Reasoning
 - Paper link: ./2025/ICCV/2025_ICCV_3DGraphLLM-Combining-Semantic-Graphs-and-Large-Language-Mo/paper.pdf
 - Code/Project: not identified from primary page

@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / NeurIPS poster
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: sensor fusion, LiDAR, semantic, alignment, Diffusion, Generation, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_Spiral-Semantic-Aware-Progressive-LiDAR-Scene-Generation-a/paper.pdf
 - Code/Project: not identified

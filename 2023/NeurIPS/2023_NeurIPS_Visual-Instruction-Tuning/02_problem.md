@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2023 / NeurIPS
-- Category: Foundations: Vision-Language Models
+- Category: Foundations: Vision and Language Models
 - Tags: Vision-Language Model, LLM, instruction tuning
 - Paper link: ./2023/NeurIPS/2023_NeurIPS_Visual-Instruction-Tuning/paper.pdf
 - Code/Project: https://github.com/haotian-liu/LLaVA

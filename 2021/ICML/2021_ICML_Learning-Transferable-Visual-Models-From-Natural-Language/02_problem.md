@@ -1,7 +1,9 @@
 # Problem
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2021 / ICML
-- Category: Foundations: Vision-Language Models
+- Category: Foundations: Vision and Language Models
 - Tags: CLIP, Vision-Language Model, alignment
 - Paper link: ./2021/ICML/2021_ICML_Learning-Transferable-Visual-Models-From-Natural-Language/paper.pdf
 - Code/Project: https://github.com/openai/CLIP
@@ -16,4 +18,4 @@
 - After pre-training, natural language is used to reference learned visual concepts (or describe new ones) enabling zero-shot transfer of the model to downstream tasks.
 
 ## 선행 연구 / 배경 단서
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.

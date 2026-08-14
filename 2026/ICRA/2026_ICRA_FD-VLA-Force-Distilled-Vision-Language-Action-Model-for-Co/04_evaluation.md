@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICRA
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics
 - Paper link: ./2026/ICRA/2026_ICRA_FD-VLA-Force-Distilled-Vision-Language-Action-Model-for-Co/paper.pdf
 - Code/Project: not identified from venue audit

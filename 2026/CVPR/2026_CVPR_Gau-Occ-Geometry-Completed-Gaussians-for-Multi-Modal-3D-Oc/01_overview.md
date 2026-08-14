@@ -1,7 +1,7 @@
 # Gau-Occ: Geometry-Completed Gaussians for Multi-Modal 3D Occupancy Prediction
 
 - Year/Venue: 2026 / CVPR
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: Gaussian Splatting, sensor fusion, LiDAR, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_Gau-Occ-Geometry-Completed-Gaussians-for-Multi-Modal-3D-Oc/paper.pdf
 - Code/Project: not identified

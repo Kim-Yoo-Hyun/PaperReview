@@ -1,7 +1,7 @@
 # ORION: A Holistic End-to-End Autonomous Driving Framework by Vision-Language Instructed Action Generation
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model
 - Paper link: ./2025/ICCV/2025_ICCV_ORION-A-Holistic-End-to-End-Autonomous-Driving-Framework-b/paper.pdf
 - Code/Project: not identified

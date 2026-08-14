@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2019 / NAACL
-- Category: Foundations: Transformer and Language Models
+- Category: Foundations: Vision and Language Models
 - Tags: LLM, Transformer, pretraining
 - Paper link: ./2019/NAACL/2019_NAACL_BERT-Pre-training-of-Deep-Bidirectional-Transformers-for-L/paper.pdf
 - Code/Project: https://github.com/google-research/bert

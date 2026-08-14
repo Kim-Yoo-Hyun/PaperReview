@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / NeurIPS poster
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: Gaussian Splatting, sensor fusion, LiDAR, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_ODG-Occupancy-Prediction-Using-Dual-Gaussians/paper.pdf
 - Code/Project: not identified

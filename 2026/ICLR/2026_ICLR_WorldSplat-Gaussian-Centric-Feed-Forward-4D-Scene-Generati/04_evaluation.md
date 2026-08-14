@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
 - Paper link: ./2026/ICLR/2026_ICLR_WorldSplat-Gaussian-Centric-Feed-Forward-4D-Scene-Generati/paper.pdf
 - Code/Project: not identified

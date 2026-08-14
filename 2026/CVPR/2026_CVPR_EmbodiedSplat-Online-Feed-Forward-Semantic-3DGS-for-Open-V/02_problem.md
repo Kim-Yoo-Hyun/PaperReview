@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / CVPR
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting, open-vocabulary, semantic
 - Paper link: ./2026/CVPR/2026_CVPR_EmbodiedSplat-Online-Feed-Forward-Semantic-3DGS-for-Open-V/paper.pdf
 - Code/Project: not identified from primary page

@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2017 / TOG
-- Category: 3D Reconstruction, Geometry, and SLAM
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D Vision, SLAM, RGB-D, 3D reconstruction
 - Paper link: ./2017/TOG/2017_TOG_BundleFusion-Real-time-Globally-Consistent-3D-Reconstructi/paper.pdf
 - Code/Project: https://graphics.stanford.edu/projects/bundlefusion/

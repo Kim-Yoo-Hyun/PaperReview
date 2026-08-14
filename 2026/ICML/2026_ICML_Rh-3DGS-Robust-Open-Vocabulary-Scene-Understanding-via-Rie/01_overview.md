@@ -1,7 +1,7 @@
 # Rh-3DGS: Robust Open-Vocabulary Scene Understanding via Riemannian Huber Distillation and Manifold-Aware Sampling
 
 - Year/Venue: 2026 / ICML
-- Category: 3D Semantic Understanding and Alignment
+- Category: 3D Vision-Language Understanding
 - Tags: semantic, alignment, 3D Vision
 - Paper link: ./2026/ICML/2026_ICML_Rh-3DGS-Robust-Open-Vocabulary-Scene-Understanding-via-Rie/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2017 / NeurIPS
-- Category: Foundations: Transformer and Language Models
+- Category: Foundations: Vision and Language Models
 - Tags: LLM, Transformer, representation
 - Paper link: ./2017/NeurIPS/2017_NeurIPS_Attention-Is-All-You-Need/paper.pdf
 - Code/Project: https://github.com/tensorflow/tensor2tensor

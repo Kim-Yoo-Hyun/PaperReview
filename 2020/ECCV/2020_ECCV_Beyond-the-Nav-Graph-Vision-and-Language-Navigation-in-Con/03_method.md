@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2020 / ECCV
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Navigation, Robotics, Navigation, Benchmark
 - Paper link: ./2020/ECCV/2020_ECCV_Beyond-the-Nav-Graph-Vision-and-Language-Navigation-in-Con/paper.pdf
 - Code/Project: https://jacobkrantz.github.io/vlnce/

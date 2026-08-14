@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICML poster
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: 3D reconstruction, equivariant, 3D Vision
 - Paper link: ./2025/ICML/2025_ICML_Thickness-aware-E3-Equivariant-3D-Mesh-Neural-Networks/paper.pdf
 - Code/Project: not identified

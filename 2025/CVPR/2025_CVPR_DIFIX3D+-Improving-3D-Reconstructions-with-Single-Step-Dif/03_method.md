@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_DIFIX3D+-Improving-3D-Reconstructions-with-Single-Step-Dif/paper.pdf
 - Code/Project: not identified

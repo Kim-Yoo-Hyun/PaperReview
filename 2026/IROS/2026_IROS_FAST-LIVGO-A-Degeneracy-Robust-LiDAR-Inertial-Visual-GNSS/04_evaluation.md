@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / IROS
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, Vision-Language
 - Paper link: ./2026/IROS/2026_IROS_FAST-LIVGO-A-Degeneracy-Robust-LiDAR-Inertial-Visual-GNSS/paper.pdf
 - Code/Project: not identified

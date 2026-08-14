@@ -1,7 +1,7 @@
 # Semantically Consistent Language Gaussian Splatting for 3D Point-Level Open-Vocabulary Querying
 
 - Year/Venue: 2026 / ICRA
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: 3D Vision, Gaussian Splatting, semantic
 - Paper link: ./2026/ICRA/2026_ICRA_Semantically-Consistent-Language-Gaussian-Splatting-for-3D/paper.pdf
 - Code/Project: not identified from venue audit

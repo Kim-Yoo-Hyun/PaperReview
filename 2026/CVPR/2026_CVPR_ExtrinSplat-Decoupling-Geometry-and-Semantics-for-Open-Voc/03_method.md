@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Semantic Understanding and Alignment
+- Category: 3D Vision-Language Understanding
 - Tags: Gaussian Splatting, semantic, alignment, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_ExtrinSplat-Decoupling-Geometry-and-Semantics-for-Open-Voc/paper.pdf
 - Code/Project: not identified

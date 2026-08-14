@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, Diffusion
 - Paper link: ./2025/ICLR/2025_ICLR_RDT-1B-a-Diffusion-Foundation-Model-for-Bimanual-Manipulat/paper.pdf
 - Code/Project: not identified from OpenReview

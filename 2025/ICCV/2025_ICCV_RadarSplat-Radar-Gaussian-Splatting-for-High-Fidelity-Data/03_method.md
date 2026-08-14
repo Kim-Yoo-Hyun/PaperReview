@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICCV
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: Gaussian Splatting, 3D reconstruction, sensor fusion, LiDAR, 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_RadarSplat-Radar-Gaussian-Splatting-for-High-Fidelity-Data/paper.pdf
 - Code/Project: not identified

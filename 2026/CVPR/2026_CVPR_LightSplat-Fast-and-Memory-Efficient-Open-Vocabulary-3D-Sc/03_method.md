@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / CVPR
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting, open-vocabulary, efficiency
 - Paper link: ./2026/CVPR/2026_CVPR_LightSplat-Fast-and-Memory-Efficient-Open-Vocabulary-3D-Sc/paper.pdf
 - Code/Project: not identified from primary page

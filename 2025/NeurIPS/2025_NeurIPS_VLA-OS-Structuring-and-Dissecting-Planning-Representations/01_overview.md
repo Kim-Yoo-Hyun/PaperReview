@@ -1,7 +1,7 @@
 # VLA-OS: Structuring and Dissecting Planning Representations and Paradigms in Vision-Language-Action Models
 
 - Year/Venue: 2025 / NeurIPS Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_VLA-OS-Structuring-and-Dissecting-Planning-Representations/paper.pdf
 - Code/Project: not identified from OpenReview

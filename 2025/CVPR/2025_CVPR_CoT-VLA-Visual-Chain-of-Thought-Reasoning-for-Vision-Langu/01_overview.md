@@ -1,7 +1,7 @@
 # CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action Models
 
 - Year/Venue: 2025 / CVPR
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Chain-of-Thought, Robotics
 - Paper link: ./2025/CVPR/2025_CVPR_CoT-VLA-Visual-Chain-of-Thought-Reasoning-for-Vision-Langu/paper.pdf
 - Code/Project: not identified from primary page

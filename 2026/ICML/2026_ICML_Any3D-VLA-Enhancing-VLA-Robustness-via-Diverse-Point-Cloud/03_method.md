@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / ICML
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, 3D Vision
 - Paper link: ./2026/ICML/2026_ICML_Any3D-VLA-Enhancing-VLA-Robustness-via-Diverse-Point-Cloud/paper.pdf
 - Code/Project: not identified from OpenReview

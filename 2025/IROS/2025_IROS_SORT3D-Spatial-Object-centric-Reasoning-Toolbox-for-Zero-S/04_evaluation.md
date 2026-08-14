@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / IROS
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision
 - Paper link: ./2025/IROS/2025_IROS_SORT3D-Spatial-Object-centric-Reasoning-Toolbox-for-Zero-S/paper.pdf
 - Code/Project: not identified

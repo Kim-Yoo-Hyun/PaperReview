@@ -1,7 +1,7 @@
 # GaussFusion: Improving 3D Reconstruction in the Wild with A Geometry-Informed Video Generator
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Reconstruction, Geometry, and SLAM
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D reconstruction, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_GaussFusion-Improving-3D-Reconstruction-in-the-Wild-with-A/paper.pdf
 - Code/Project: not identified

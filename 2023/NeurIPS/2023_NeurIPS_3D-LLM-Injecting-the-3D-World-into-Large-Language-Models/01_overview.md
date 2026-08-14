@@ -1,7 +1,7 @@
 # 3D-LLM: Injecting the 3D World into Large Language Models
 
 - Year/Venue: 2023 / NeurIPS
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: LLM, 3D Vision, Vision-Language
 - Paper link: ./2023/NeurIPS/2023_NeurIPS_3D-LLM-Injecting-the-3D-World-into-Large-Language-Models/paper.pdf
 - Code/Project: https://vis-www.cs.umass.edu/3dllm/

@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, semantic
 - Paper link: ./2025/ICCV/2025_ICCV_Details-Matter-for-Indoor-Open-vocabulary-3D-Instance-Segm/paper.pdf
 - Code/Project: not identified

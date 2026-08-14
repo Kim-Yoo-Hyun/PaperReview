@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICCV
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Navigation, grounding, exploration
 - Paper link: ./2025/ICCV/2025_ICCV_Move-to-Understand-a-3D-Scene-Bridging-Visual-Grounding-an/paper.pdf
 - Code/Project: not identified from primary page

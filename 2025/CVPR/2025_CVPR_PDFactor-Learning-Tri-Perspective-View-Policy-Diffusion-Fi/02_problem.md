@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / CVPR
-- Category: Equivariance, Diffusion, and 3D Action
+- Category: Manipulation, Contact, and Dexterity
 - Tags: Diffusion, Robotics, 3D action
 - Paper link: ./2025/CVPR/2025_CVPR_PDFactor-Learning-Tri-Perspective-View-Policy-Diffusion-Fi/paper.pdf
 - Code/Project: not identified from primary page

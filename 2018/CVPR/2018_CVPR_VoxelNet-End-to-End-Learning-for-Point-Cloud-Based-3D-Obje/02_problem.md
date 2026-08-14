@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2018 / CVPR
-- Category: Foundations: 3D Detection and BEV Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: 3D Vision, LiDAR, 3D detection, sensor fusion
 - Paper link: ./2018/CVPR/2018_CVPR_VoxelNet-End-to-End-Learning-for-Point-Cloud-Based-3D-Obje/paper.pdf
 - Code/Project: not identified

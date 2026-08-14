@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / 3DV
-- Category: 3D Representation Learning and Foundation Models
+- Category: 3D Representation Learning
 - Tags: point cloud, 3D Vision
 - Paper link: ./2025/3DV/2025_3DV_CoE-Deep-Coupled-Embedding-for-Non-Rigid-Point-Cloud-Corre/paper.pdf
 - Code/Project: not identified

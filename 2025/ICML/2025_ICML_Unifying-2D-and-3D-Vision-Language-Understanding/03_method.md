@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICML Poster
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model, 3D Vision
 - Paper link: ./2025/ICML/2025_ICML_Unifying-2D-and-3D-Vision-Language-Understanding/paper.pdf
 - Code/Project: not identified from OpenReview

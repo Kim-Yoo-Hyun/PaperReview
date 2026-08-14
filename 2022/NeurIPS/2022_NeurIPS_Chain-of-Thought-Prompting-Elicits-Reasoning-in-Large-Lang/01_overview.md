@@ -1,7 +1,7 @@
 # Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
 
 - Year/Venue: 2022 / NeurIPS
-- Category: Foundations: Transformer and Language Models
+- Category: Foundations: Vision and Language Models
 - Tags: LLM, reasoning, Chain-of-Thought
 - Paper link: ./2022/NeurIPS/2022_NeurIPS_Chain-of-Thought-Prompting-Elicits-Reasoning-in-Large-Lang/paper.pdf
 - Code/Project: not identified

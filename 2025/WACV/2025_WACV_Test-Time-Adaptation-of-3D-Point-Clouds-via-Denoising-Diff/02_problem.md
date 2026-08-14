@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / WACV
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Diffusion, Generation, point cloud, 3D Vision
 - Paper link: ./2025/WACV/2025_WACV_Test-Time-Adaptation-of-3D-Point-Clouds-via-Denoising-Diff/paper.pdf
 - Code/Project: not identified

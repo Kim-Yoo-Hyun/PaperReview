@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: 3D reconstruction, Diffusion, Generation, depth, 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_Dream-to-Recon-Monocular-3D-Reconstruction-with-Diffusion/paper.pdf
 - Code/Project: not identified

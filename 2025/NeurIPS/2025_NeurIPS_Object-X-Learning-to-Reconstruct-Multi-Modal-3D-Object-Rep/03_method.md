@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / NeurIPS poster
-- Category: 3D Representation Learning and Foundation Models
+- Category: 3D Representation Learning
 - Tags: 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_Object-X-Learning-to-Reconstruct-Multi-Modal-3D-Object-Rep/paper.pdf
 - Code/Project: not identified

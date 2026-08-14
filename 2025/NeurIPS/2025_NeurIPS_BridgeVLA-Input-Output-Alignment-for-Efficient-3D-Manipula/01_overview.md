@@ -1,7 +1,7 @@
 # BridgeVLA: Input-Output Alignment for Efficient 3D Manipulation Learning with Vision-Language Models
 
 - Year/Venue: 2025 / NeurIPS Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_BridgeVLA-Input-Output-Alignment-for-Efficient-3D-Manipula/paper.pdf
 - Code/Project: not identified from OpenReview

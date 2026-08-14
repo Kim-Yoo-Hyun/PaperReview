@@ -1,7 +1,7 @@
 # GSplatVNM: Point-of-View Synthesis for Visual Navigation Models Using Gaussian Splatting
 
 - Year/Venue: 2025 / IROS
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Navigation, Gaussian Splatting
 - Paper link: ./2025/IROS/2025_IROS_GSplatVNM-Point-of-View-Synthesis-for-Visual-Navigation-Mo/paper.pdf
 - Code/Project: not identified

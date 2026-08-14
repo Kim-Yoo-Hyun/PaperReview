@@ -1,7 +1,7 @@
 # UrbanGS: Efficient and Scalable Architecture for Geometrically Accurate Large-Scene Reconstruction
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: 3D Reconstruction, Geometry, and SLAM
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D reconstruction, 3D Vision
 - Paper link: ./2026/ICLR/2026_ICLR_UrbanGS-Efficient-and-Scalable-Architecture-for-Geometrica/paper.pdf
 - Code/Project: not identified

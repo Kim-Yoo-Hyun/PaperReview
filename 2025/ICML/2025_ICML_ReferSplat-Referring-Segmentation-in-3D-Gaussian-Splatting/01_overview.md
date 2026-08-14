@@ -1,7 +1,7 @@
 # ReferSplat: Referring Segmentation in 3D Gaussian Splatting
 
 - Year/Venue: 2025 / ICML Oral
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: 3D Vision, Gaussian Splatting
 - Paper link: ./2025/ICML/2025_ICML_ReferSplat-Referring-Segmentation-in-3D-Gaussian-Splatting/paper.pdf
 - Code/Project: not identified from OpenReview

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2024 / CVPR
-- Category: Open-Vocabulary 3D Mapping
+- Category: Embodied Navigation and Mapping
 - Tags: point-language, open-world, semantic
 - Paper link: ./2024/CVPR/2024_CVPR_RegionPLC-Regional-Point-Language-Contrastive-Learning-for/paper.pdf
 - Code/Project: not identified from primary page

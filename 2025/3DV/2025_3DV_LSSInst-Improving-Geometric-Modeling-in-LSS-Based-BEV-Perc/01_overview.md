@@ -1,7 +1,7 @@
 # LSSInst: Improving Geometric Modeling in LSS-Based BEV Perception with Instance Representation
 
 - Year/Venue: 2025 / 3DV
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: sensor fusion, LiDAR, 3D Vision
 - Paper link: ./2025/3DV/2025_3DV_LSSInst-Improving-Geometric-Modeling-in-LSS-Based-BEV-Perc/paper.pdf
 - Code/Project: not identified

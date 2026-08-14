@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2023 / NeurIPS
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: 3D Vision, occupancy, sensor fusion, Benchmark
 - Paper link: ./2023/NeurIPS/2023_NeurIPS_Occ3D-A-Large-Scale-3D-Occupancy-Prediction-Benchmark-for/paper.pdf
 - Code/Project: https://tsinghua-mars-lab.github.io/Occ3D/

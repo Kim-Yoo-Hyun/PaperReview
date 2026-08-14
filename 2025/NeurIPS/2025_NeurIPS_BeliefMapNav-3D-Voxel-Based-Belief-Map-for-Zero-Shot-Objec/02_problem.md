@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / NeurIPS Poster
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: 3D Vision, Navigation
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_BeliefMapNav-3D-Voxel-Based-Belief-Map-for-Zero-Shot-Objec/paper.pdf
 - Code/Project: not identified from OpenReview

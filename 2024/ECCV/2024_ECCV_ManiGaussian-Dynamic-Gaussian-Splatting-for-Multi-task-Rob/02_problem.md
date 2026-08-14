@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2024 / ECCV
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Robotics, Gaussian Splatting
 - Paper link: ./2024/ECCV/2024_ECCV_ManiGaussian-Dynamic-Gaussian-Splatting-for-Multi-task-Rob/paper.pdf
 - Code/Project: not identified

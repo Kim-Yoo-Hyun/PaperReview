@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2022 / CVPR
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, Vision-Language, grounding, 3D QA
 - Paper link: ./2022/CVPR/2022_CVPR_ScanQA-3D-Question-Answering-for-Spatial-Scene-Understandi/paper.pdf
 - Code/Project: https://github.com/ATR-DBI/ScanQA

@@ -1,7 +1,7 @@
 # Digging Into Self-Supervised Monocular Depth Estimation
 
 - Year/Venue: 2019 / ICCV
-- Category: Foundations: Monocular Geometry
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D Vision, monocular depth, self-supervised, geometry
 - Paper link: ./2019/ICCV/2019_ICCV_Digging-Into-Self-Supervised-Monocular-Depth-Estimation/paper.pdf
 - Code/Project: https://github.com/nianticlabs/monodepth2

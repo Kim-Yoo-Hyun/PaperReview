@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / NeurIPS spotlight
-- Category: 3D Semantic Understanding and Alignment
+- Category: 3D Vision-Language Understanding
 - Tags: 3D reconstruction, semantic, alignment, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_SIU3R-Simultaneous-Scene-Understanding-and-3D-Reconstructi/paper.pdf
 - Code/Project: not identified

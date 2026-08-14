@@ -1,7 +1,7 @@
 # SimWorld-Robotics: Synthesizing Photorealistic and Dynamic Urban Environments for Multimodal Robot Navigation and Collaboration
 
 - Year/Venue: 2025 / NeurIPS Poster
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Robotics, Navigation, Reinforcement Learning
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_SimWorld-Robotics-Synthesizing-Photorealistic-and-Dynamic/paper.pdf
 - Code/Project: not identified from OpenReview

@@ -1,7 +1,7 @@
 # TokenSplat: Token-aligned 3D Gaussian Splatting for Feed-forward Pose-free Reconstruction
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_TokenSplat-Token-aligned-3D-Gaussian-Splatting-for-Feed-fo/paper.pdf
 - Code/Project: not identified

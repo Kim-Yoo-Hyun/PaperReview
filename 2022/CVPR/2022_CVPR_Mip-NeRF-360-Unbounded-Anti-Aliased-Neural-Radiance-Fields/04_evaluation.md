@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2022 / CVPR
-- Category: Foundations: 3D Scene Representations
+- Category: Neural Scene Representations
 - Tags: NeRF, 3D Vision, representation, geometry
 - Paper link: ./2022/CVPR/2022_CVPR_Mip-NeRF-360-Unbounded-Anti-Aliased-Neural-Radiance-Fields/paper.pdf
 - Code/Project: https://jonbarron.info/mipnerf360/

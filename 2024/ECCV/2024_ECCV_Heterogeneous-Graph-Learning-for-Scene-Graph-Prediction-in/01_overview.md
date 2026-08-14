@@ -1,7 +1,7 @@
 # Heterogeneous Graph Learning for Scene Graph Prediction in 3D Point Clouds
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, Graph Reasoning
 - Paper link: ./2024/ECCV/2024_ECCV_Heterogeneous-Graph-Learning-for-Scene-Graph-Prediction-in/paper.pdf
 - Code/Project: not identified

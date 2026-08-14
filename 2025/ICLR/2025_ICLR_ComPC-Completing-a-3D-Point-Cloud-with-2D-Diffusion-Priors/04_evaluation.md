@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Diffusion, Generation, point cloud, 3D Vision
 - Paper link: ./2025/ICLR/2025_ICLR_ComPC-Completing-a-3D-Point-Cloud-with-2D-Diffusion-Priors/paper.pdf
 - Code/Project: not identified

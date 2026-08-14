@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2023 / ICML
-- Category: Foundations: Vision-Language Models
+- Category: Foundations: Vision and Language Models
 - Tags: Vision-Language Model, LLM, alignment
 - Paper link: ./2023/ICML/2023_ICML_BLIP-2-Bootstrapping-Language-Image-Pre-training-with-Froz/paper.pdf
 - Code/Project: https://github.com/salesforce/LAVIS

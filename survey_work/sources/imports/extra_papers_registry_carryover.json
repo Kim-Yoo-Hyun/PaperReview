@@ -1,0 +1,11 @@
+[
+  {
+    "title": "SAM 2: Segment Anything in Images and Videos",
+    "year": 2025,
+    "venue": "ICLR",
+    "category": "Foundations: Vision Foundation Models",
+    "tags": ["segmentation", "foundation model", "prompting", "video segmentation", "memory"],
+    "arxiv": "2408.00714",
+    "project": "https://github.com/facebookresearch/sam2"
+  }
+]

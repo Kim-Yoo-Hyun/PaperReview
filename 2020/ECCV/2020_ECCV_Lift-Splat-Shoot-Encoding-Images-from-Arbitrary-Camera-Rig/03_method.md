@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2020 / ECCV
-- Category: Foundations: 3D Detection and BEV Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: 3D Vision, BEV, sensor fusion, camera
 - Paper link: ./2020/ECCV/2020_ECCV_Lift-Splat-Shoot-Encoding-Images-from-Arbitrary-Camera-Rig/paper.pdf
 - Code/Project: https://github.com/nv-tlabs/lift-splat-shoot

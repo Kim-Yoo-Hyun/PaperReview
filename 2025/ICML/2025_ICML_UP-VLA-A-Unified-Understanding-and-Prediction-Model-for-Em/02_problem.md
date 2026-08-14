@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICML Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model
 - Paper link: ./2025/ICML/2025_ICML_UP-VLA-A-Unified-Understanding-and-Prediction-Model-for-Em/paper.pdf
 - Code/Project: not identified from OpenReview

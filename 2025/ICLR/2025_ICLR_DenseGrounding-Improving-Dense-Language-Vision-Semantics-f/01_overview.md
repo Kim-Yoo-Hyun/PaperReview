@@ -1,7 +1,7 @@
 # DenseGrounding: Improving Dense Language-Vision Semantics for Ego-centric 3D Visual Grounding
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, semantic
 - Paper link: ./2025/ICLR/2025_ICLR_DenseGrounding-Improving-Dense-Language-Vision-Semantics-f/paper.pdf
 - Code/Project: not identified from OpenReview

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / IROS
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Robotics, Navigation, Gaussian Splatting
 - Paper link: ./2025/IROS/2025_IROS_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/paper.pdf
 - Code/Project: not identified

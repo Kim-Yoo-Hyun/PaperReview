@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2022 / CVPR
-- Category: Foundations: 3D Semantic Occupancy
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: 3D Vision, semantic, occupancy, monocular geometry
 - Paper link: ./2022/CVPR/2022_CVPR_MonoScene-Monocular-3D-Semantic-Scene-Completion/paper.pdf
 - Code/Project: https://github.com/cv-rits/MonoScene

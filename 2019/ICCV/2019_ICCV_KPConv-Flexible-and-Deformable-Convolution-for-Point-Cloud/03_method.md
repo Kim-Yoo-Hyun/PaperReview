@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2019 / ICCV
-- Category: Foundations: 3D Representation Learning
+- Category: 3D Representation Learning
 - Tags: point cloud, 3D Vision
 - Paper link: ./2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/paper.pdf
 - Code/Project: not identified

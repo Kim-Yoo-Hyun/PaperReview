@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICRA
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Robotics, 3D Vision, Navigation, Graph Reasoning, semantic
 - Paper link: ./2025/ICRA/2025_ICRA_Point2Graph-An-End-To-End-Point-Cloud-Based-3D-Open-Vocabu/paper.pdf
 - Code/Project: not identified from venue audit

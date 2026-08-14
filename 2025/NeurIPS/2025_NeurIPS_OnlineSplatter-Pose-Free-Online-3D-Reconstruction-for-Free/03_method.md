@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / NeurIPS spotlight
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_OnlineSplatter-Pose-Free-Online-3D-Reconstruction-for-Free/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Reconstruction, Geometry, and SLAM
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D reconstruction, geometry, Transformer
 - Paper link: ./2025/CVPR/2025_CVPR_VGGT-Visual-Geometry-Grounded-Transformer/paper.pdf
 - Code/Project: https://github.com/facebookresearch/vggt

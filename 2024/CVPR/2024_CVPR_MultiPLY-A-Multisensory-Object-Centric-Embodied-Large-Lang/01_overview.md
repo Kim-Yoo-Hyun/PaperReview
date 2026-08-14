@@ -1,7 +1,7 @@
 # MultiPLY: A Multisensory Object-Centric Embodied Large Language Model in 3D World
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: LLM, 3D Vision, sensor fusion
 - Paper link: ./2024/CVPR/2024_CVPR_MultiPLY-A-Multisensory-Object-Centric-Embodied-Large-Lang/paper.pdf
 - Code/Project: not identified from primary page

@@ -2,7 +2,7 @@
 
 - Year/Venue: 2024 / CVPR
 - Category: Benchmarks and Datasets
-- Tags: 3D Vision, Embodied AI, dataset
+- Tags: 3D Vision, Embodied AI, Dataset
 - Paper link: ./2024/CVPR/2024_CVPR_EmbodiedScan-A-Holistic-Multi-Modal-3D-Perception-Suite-To/paper.pdf
 - Code/Project: not identified from primary page
 - Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.

@@ -1,7 +1,7 @@
 # Distilling Diffusion Models to Efficient 3D LiDAR Scene Completion
 
 - Year/Venue: 2025 / ICCV
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: sensor fusion, LiDAR, Diffusion, Generation, 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_Distilling-Diffusion-Models-to-Efficient-3D-LiDAR-Scene-Co/paper.pdf
 - Code/Project: not identified

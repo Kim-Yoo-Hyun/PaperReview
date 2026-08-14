@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_BA-GS-Bayesian-Adaptive-Gaussian-Splatting-for-SFM-Free-3D/paper.pdf
 - Code/Project: not identified

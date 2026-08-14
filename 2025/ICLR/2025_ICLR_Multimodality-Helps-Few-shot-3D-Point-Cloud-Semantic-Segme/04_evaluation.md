@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICLR Spotlight
-- Category: 3D Semantic Understanding and Alignment
+- Category: 3D Vision-Language Understanding
 - Tags: semantic, alignment, point cloud, 3D Vision
 - Paper link: ./2025/ICLR/2025_ICLR_Multimodality-Helps-Few-shot-3D-Point-Cloud-Semantic-Segme/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2023 / ICCV
-- Category: Foundations: Vision Foundation Models
+- Category: Foundations: Vision and Language Models
 - Tags: segmentation, foundation model, prompting
 - Paper link: ./2023/ICCV/2023_ICCV_Segment-Anything/paper.pdf
 - Code/Project: https://github.com/facebookresearch/segment-anything

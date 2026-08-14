@@ -1,7 +1,7 @@
 # PointGS: Semantic-Consistent Unsupervised 3D Point Cloud Segmentation with 3D Gaussian Splatting
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Semantic Understanding and Alignment
+- Category: 3D Vision-Language Understanding
 - Tags: Gaussian Splatting, semantic, alignment, point cloud, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_PointGS-Semantic-Consistent-Unsupervised-3D-Point-Cloud-Se/paper.pdf
 - Code/Project: not identified

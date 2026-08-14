@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / CVPR
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, active perception, Robotics
 - Paper link: ./2026/CVPR/2026_CVPR_SaPaVe-Towards-Active-Perception-and-Manipulation-in-Visio/paper.pdf
 - Code/Project: not identified from primary page

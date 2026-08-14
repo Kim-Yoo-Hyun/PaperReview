@@ -1,7 +1,7 @@
 # NeRF Is a Valuable Assistant for 3D Gaussian Splatting
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, NeRF, 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_NeRF-Is-a-Valuable-Assistant-for-3D-Gaussian-Splatting/paper.pdf
 - Code/Project: not identified

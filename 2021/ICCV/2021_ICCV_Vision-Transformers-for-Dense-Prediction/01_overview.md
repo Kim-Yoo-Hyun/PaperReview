@@ -1,7 +1,7 @@
 # Vision Transformers for Dense Prediction
 
 - Year/Venue: 2021 / ICCV
-- Category: Foundations: Monocular Geometry
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D Vision, monocular depth, Vision Transformer, geometry
 - Paper link: ./2021/ICCV/2021_ICCV_Vision-Transformers-for-Dense-Prediction/paper.pdf
 - Code/Project: https://github.com/isl-org/DPT

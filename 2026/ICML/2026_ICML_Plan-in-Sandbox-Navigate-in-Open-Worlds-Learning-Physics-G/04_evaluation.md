@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICML
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Navigation, Reinforcement Learning
 - Paper link: ./2026/ICML/2026_ICML_Plan-in-Sandbox-Navigate-in-Open-Worlds-Learning-Physics-G/paper.pdf
 - Code/Project: not identified from OpenReview

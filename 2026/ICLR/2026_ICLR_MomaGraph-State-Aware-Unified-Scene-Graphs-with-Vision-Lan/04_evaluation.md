@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICLR Oral
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model, Robotics, 3D Vision, Graph Reasoning
 - Paper link: ./2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan/paper.pdf
 - Code/Project: not identified from OpenReview

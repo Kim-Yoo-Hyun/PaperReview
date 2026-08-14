@@ -1,0 +1,23 @@
+# Problem
+
+- Year/Venue: 2022 / CoRL
+- Category: Planning and Long-Horizon Reasoning
+- Tags: Robotics, LLM planning, feedback, replanning, long-horizon manipulation
+- Paper link: [paper.pdf](./paper.pdf)
+- Code/Project: https://innermonologue.github.io/
+- Source audit: regenerated from local `paper.pdf` on 2026-08-11; survey-keyword template text removed.
+
+## 왜 문제인가
+- This raises an intriguing possibility: beyond their ability to interpret natural language instructions, can language models further serve as reasoning models that combine multiple sources of feedback and ...
+- While conventionally these challenges have been approached from the perspective of planning (e.g., TAMP ) or hierarchical learning (e.g., HRL ), effective high-level reasoning about complex tasks also ...
+- While prior work has investigated using language models as planners or incorporating Robot Planning & Interaction Grounded Closed-Loop Feedback Robot Environments Robot Human Can you bring me the ...
+
+## 해결하려는 문제
+- We propose that by leveraging environment feedback, LLMs are able to form an inner monologue that allows them to more richly process and plan in robotic control scenarios.
+- In this work, we investigate to what extent LLMs used in such embodied contexts can reason over sources of feedback provided through natural language, without any additional training.
+- We find that closed-loop language feedback significantly improves high-level instruction completion on three domains, including simulated and real table top rearrangement tasks and long-horizon mobile manipulation tasks in ...
+
+## 선행 연구 / 배경 단서
+- Notably, we show that it can efficiently retry under observed stochastic failure, replan under systematic infeasibility, or request human feedback for ambiguous queries, resulting in significantly improved performance ...
+- This raises an intriguing possibility: beyond their ability to interpret natural language instructions, can language models further serve as reasoning models that combine multiple sources of feedback and ...
+- While conventionally these challenges have been approached from the perspective of planning (e.g., TAMP ) or hierarchical learning (e.g., HRL ), effective high-level reasoning about complex tasks also ...

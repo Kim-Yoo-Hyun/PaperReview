@@ -1,7 +1,7 @@
 # CG-SLAM: Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware 3D Gaussian Field
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, geometry, 3D Vision
 - Paper link: ./2024/ECCV/2024_ECCV_CG-SLAM-Efficient-Dense-RGB-D-SLAM-in-a-Consistent-Uncerta/paper.pdf
 - Code/Project: not identified

@@ -1,0 +1,33 @@
+{
+  "date": "2026-08-11T10:42:11+09:00",
+  "papers_before": 648,
+  "papers_added": 24,
+  "papers_after": 672,
+  "downloaded": [
+    "A Realtime Pattern Generator for Biped Walking",
+    "Synthesis of Whole-Body Behaviors through Hierarchical Control of Behavioral Primitives",
+    "Momentum Control with Hierarchical Inverse Dynamics on a Torque-Controlled Humanoid",
+    "Optimization-Based Locomotion Planning, Estimation, and Control Design for the Atlas Humanoid Robot",
+    "DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills",
+    "Learning Locomotion Skills for Cassie: Iterative Design and Sim-to-Real",
+    "Learning Memory-Based Control for Human-Scale Bipedal Locomotion",
+    "Blind Bipedal Stair Traversal via Sim-to-Real Reinforcement Learning",
+    "HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation",
+    "Expressive Whole-Body Control for Humanoid Robots",
+    "HumanPlus: Humanoid Shadowing and Imitation from Humans",
+    "OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning",
+    "WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts",
+    "AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control",
+    "Learning Humanoid Standing-up Control across Diverse Postures",
+    "LangWBC: Language-Directed Humanoid Whole-Body Control via End-to-End Learning",
+    "ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills",
+    "BeamDojo: Learning Agile Humanoid Locomotion on Sparse Footholds",
+    "HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
+    "Hold My Beer: Learning Gentle Humanoid Locomotion and End-Effector Stabilization Control",
+    "HWC-Loco: A Hierarchical Whole-Body Control Approach to Robust Humanoid Locomotion",
+    "Gallant: Voxel Grid-Based Humanoid Locomotion and Local Navigation across 3-D Constrained Terrains",
+    "VIRAL: Visual Sim-to-Real at Scale for Humanoid Loco-Manipulation",
+    "Opening the Sim-to-Real Door for Humanoid Pixel-to-Action Policy Transfer"
+  ],
+  "failed": []
+}

@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / ECCV
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: 3D Vision, Gaussian Splatting, semantic
 - Paper link: ./2024/ECCV/2024_ECCV_GaussianFormer-Scene-as-Gaussians-for-Vision-Based-3D-Sema/paper.pdf
 - Code/Project: not identified

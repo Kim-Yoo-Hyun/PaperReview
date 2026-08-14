@@ -1,8 +1,8 @@
 # Classifier-Free Diffusion Guidance
 
 - Year/Venue: 2022 / arxiv
-- Category: Foundations: Diffusion and Generative Models
-- Tags: Diffusion, guidance, generation
+- Category: Foundations: Generative Models
+- Tags: Diffusion, guidance, Generation
 - Paper link: ./2022/arxiv/2022_arxiv_Classifier-Free-Diffusion-Guidance/paper.pdf
 - Code/Project: not identified
 - Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.

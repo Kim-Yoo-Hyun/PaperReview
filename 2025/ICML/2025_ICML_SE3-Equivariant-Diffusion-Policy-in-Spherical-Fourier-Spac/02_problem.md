@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICML Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, Diffusion, Imitation Learning, equivariant
 - Paper link: ./2025/ICML/2025_ICML_SE3-Equivariant-Diffusion-Policy-in-Spherical-Fourier-Spac/paper.pdf
 - Code/Project: not identified from OpenReview

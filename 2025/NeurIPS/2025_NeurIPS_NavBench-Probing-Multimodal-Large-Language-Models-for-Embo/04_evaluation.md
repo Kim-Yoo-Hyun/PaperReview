@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / NeurIPS Poster
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Navigation
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_NavBench-Probing-Multimodal-Large-Language-Models-for-Embo/paper.pdf
 - Code/Project: not identified from OpenReview

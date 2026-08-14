@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: geometry, point cloud, 3D Vision
 - Paper link: ./2026/ICLR/2026_ICLR_RayI2P-Learning-Rays-for-Image-to-Point-Cloud-Registration/paper.pdf
 - Code/Project: not identified

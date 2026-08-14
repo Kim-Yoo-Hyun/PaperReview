@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2017 / CVPR
-- Category: Foundations: 3D Semantic Occupancy
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: 3D Vision, semantic, occupancy, geometry
 - Paper link: ./2017/CVPR/2017_CVPR_SSCNet-Semantic-Scene-Completion-from-a-Single-Depth-Image/paper.pdf
 - Code/Project: https://github.com/shurans/sscnet

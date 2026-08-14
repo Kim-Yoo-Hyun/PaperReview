@@ -1,0 +1,91 @@
+# VLA and Generalist Robot Policies
+
+## Scope
+
+Language-conditioned manipulation에서 generalist VLA, cross-embodiment learning, long-horizon skill composition과 closed-loop reasoning으로 이어지는 흐름을 비교한다.
+
+## Reading Path
+
+CLIP/PaLM-E/CLIPort → RT-1/RT-2 → Open X-Embodiment → Octo/OpenVLA/π0 → FAST/OpenVLA-OFT/π0.5 → 3D-aware, memory-aware, progress-aware VLA.
+
+<!-- READING_QUEUE:START -->
+
+## Assigned Reading Queue
+
+### VLA and generalist robot policies — 11
+
+| Tier | Paper | Year / Venue | Status | Evidence |
+|---|---|---|---|---|
+| CORE | [Learning Transferable Visual Models From Natural Language Supervision](../2021/ICML/2021_ICML_Learning-Transferable-Visual-Models-From-Natural-Language/01_overview.md) | 2021 / ICML | `UNREAD` | `CURATION_ONLY` |
+| CORE | [CLIPort: What and Where Pathways for Robotic Manipulation](../2021/CoRL/2021_CoRL_CLIPort-What-and-Where-Pathways-for-Robotic-Manipulation/01_overview.md) | 2021 / CoRL | `UNREAD` | `CURATION_ONLY` |
+| CORE | [PaLM-E: An Embodied Multimodal Language Model](../2023/ICML/2023_ICML_PaLM-E-An-Embodied-Multimodal-Language-Model/01_overview.md) | 2023 / ICML | `UNREAD` | `CURATION_ONLY` |
+| CORE | [RT-1: Robotics Transformer for Real-World Control at Scale](../2022/arxiv/2022_arxiv_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale/01_overview.md) | 2022 / arxiv | `UNREAD` | `CURATION_ONLY` |
+| CORE | [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](../2023/CoRL/2023_CoRL_RT-2-Vision-Language-Action-Models-Transfer-Web-Knowledge/01_overview.md) | 2023 / CoRL | `UNREAD` | `CURATION_ONLY` |
+| CORE | [VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models](../2023/CoRL/2023_CoRL_VoxPoser-Composable-3D-Value-Maps-for-Robotic-Manipulation/01_overview.md) | 2023 / CoRL | `UNREAD` | `CURATION_ONLY` |
+| CORE | [Open X-Embodiment: Robotic Learning Datasets and RT-X Models](../2024/ICRA/2024_ICRA_Open-X-Embodiment-Robotic-Learning-Datasets-and-RT-X-Model/01_overview.md) | 2024 / ICRA | `UNREAD` | `CURATION_ONLY` |
+| CORE | [Octo: An Open-Source Generalist Robot Policy](../2024/RSS/2024_RSS_Octo-An-Open-Source-Generalist-Robot-Policy/01_overview.md) | 2024 / RSS | `UNREAD` | `CURATION_ONLY` |
+| CORE | [OpenVLA: An Open-Source Vision-Language-Action Model](../2024/CoRL/2024_CoRL_OpenVLA-An-Open-Source-Vision-Language-Action-Model/01_overview.md) | 2024 / CoRL | `UNREAD` | `CURATION_ONLY` |
+| CORE | [π0: A Vision-Language-Action Flow Model for General Robot Control](../2025/RSS/2025_RSS_pi0-A-Vision-Language-Action-Flow-Model-for-General-Robot/01_overview.md) | 2025 / RSS | `UNREAD` | `CURATION_ONLY` |
+| CORE | [π0.5: a Vision-Language-Action Model with Open-World Generalization](../2025/CoRL/2025_CoRL_pi0.5-a-Vision-Language-Action-Model-with-Open-World-Gener/01_overview.md) | 2025 / CoRL | `UNREAD` | `CURATION_ONLY` |
+
+### VLA, cross-embodiment, and long-horizon planning — 16
+
+| Tier | Paper | Year / Venue | Status | Evidence |
+|---|---|---|---|---|
+| NEXT | [BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning](../2022/CoRL/2022_CoRL_BC-Z-Zero-Shot-Task-Generalization-with-Robotic-Imitation/01_overview.md) | 2022 / CoRL | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation](../2023/CoRL/2023_CoRL_Perceiver-Actor-A-Multi-Task-Transformer-for-Robotic-Manip/01_overview.md) | 2023 / CoRL | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [VIMA: General Robot Manipulation with Multimodal Prompts](../2023/ICML/2023_ICML_VIMA-General-Robot-Manipulation-with-Multimodal-Prompts/01_overview.md) | 2023 / ICML | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [Inner Monologue: Embodied Reasoning through Planning with Language Models](../2022/CoRL/2022_CoRL_Inner-Monologue-Embodied-Reasoning-through-Planning-with-L/01_overview.md) | 2022 / CoRL | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning](../2023/CoRL/2023_CoRL_SayPlan-Grounding-Large-Language-Models-using-3D-Scene-Gra/01_overview.md) | 2023 / CoRL | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [XSkill: Cross Embodiment Skill Discovery](../2023/CoRL/2023_CoRL_XSkill-Cross-Embodiment-Skill-Discovery/01_overview.md) | 2023 / CoRL | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [Scaling Proprioceptive-Visual Learning with Heterogeneous Pre-trained Transformers](../2024/NeurIPS/2024_NeurIPS_Scaling-Proprioceptive-Visual-Learning-with-Heterogeneous/01_overview.md) | 2024 / NeurIPS | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [FAST: Efficient Action Tokenization for Vision-Language-Action Models](../2025/RSS/2025_RSS_FAST-Efficient-Action-Tokenization-for-Vision-Language-Act/01_overview.md) | 2025 / RSS | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success](../2025/RSS/2025_RSS_Fine-Tuning-Vision-Language-Action-Models-Optimizing-Speed/01_overview.md) | 2025 / RSS | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [AtomicVLA: Unlocking the Potential of Atomic Skill Learning in Robots](../2026/CVPR/2026_CVPR_AtomicVLA-Unlocking-the-Potential-of-Atomic-Skill-Learning/01_overview.md) | 2026 / CVPR | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [PALM: Progress-Aware Policy Learning via Affordance Reasoning for Long-Horizon Robotic Manipulation](../2026/CVPR/2026_CVPR_PALM-Progress-Aware-Policy-Learning-via-Affordance-Reasoni/01_overview.md) | 2026 / CVPR | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation](../2026/CVPR/2026_CVPR_ActiveVLA-Injecting-Active-Perception-into-Vision-Language/01_overview.md) | 2026 / CVPR | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [Spatial Memory for Out-of-Vision Manipulation in Vision-Language-Action](../2026/ICML/2026_ICML_Spatial-Memory-for-Out-of-Vision-Manipulation-in-Vision-La/01_overview.md) | 2026 / ICML | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [Counterfactual VLA: Self-Reflective Vision-Language-Action Model with Adaptive Reasoning](../2026/CVPR/2026_CVPR_Counterfactual-VLA-Self-Reflective-Vision-Language-Action/01_overview.md) | 2026 / CVPR | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [Any3D-VLA: Enhancing VLA Robustness via Diverse Point Clouds](../2026/ICML/2026_ICML_Any3D-VLA-Enhancing-VLA-Robustness-via-Diverse-Point-Cloud/01_overview.md) | 2026 / ICML | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [MomaGraph: State-Aware Unified Scene Graphs with Vision-Language Models for Embodied Task Planning](../2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan/01_overview.md) | 2026 / ICLR Oral | `UNREAD` | `CURATION_ONLY` |
+
+<!-- READING_QUEUE:END -->
+
+## Comparison Matrix
+
+> Matrix maturity: `CURATION-SEED`. 아래 행은 읽기 전 비교 가설이며 `READ`를 의미하지 않는다. 각 논문을 정독할 때 source location과 수치를 확인하고, 틀린 항목은 수정한 뒤 tracker를 갱신한다.
+
+| Paper | Model/input | State/spatial grounding | Action representation | Training objective | Robot data/embodiments | Control rate/horizon | Planning/memory | Evaluation | Failure mode | Reusable idea |
+|---|---|---|---|---|---|---|---|---|---|---|
+| [RT-1](../2022/arxiv/2022_arxiv_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale/01_overview.md) | image and language-conditioned transformer | implicit visual scene state | discretized/tokenized robot action sequence | behavior cloning | large multi-task real-robot dataset, mainly one robot family | chunked closed-loop; exact rate UNVERIFIED | short-horizon reactive policy | seen/new task and robustness studies | action tokenization, data concentration and recovery | transformer policy scaling 기준점 |
+| [Open X-Embodiment](../2024/ICRA/2024_ICRA_Open-X-Embodiment-Robotic-Learning-Datasets-and-RT-X-Model/01_overview.md) / [Octo](../2024/RSS/2024_RSS_Octo-An-Open-Source-Generalist-Robot-Policy/01_overview.md) | heterogeneous robot data / open generalist policy | multimodal observations with embodiment-dependent adapters | normalized/shared action interface | cross-dataset behavior cloning/pretraining | many datasets and embodiments | policy chunks; exact rates vary | task conditioning, limited explicit planning | cross-dataset and downstream fine-tuning | embodiment imbalance and inconsistent action semantics | data mixture와 adapter를 분리해 분석 |
+| [OpenVLA](../2024/CoRL/2024_CoRL_OpenVLA-An-Open-Source-Vision-Language-Action-Model/01_overview.md) / [OpenVLA-OFT](../2025/RSS/2025_RSS_Fine-Tuning-Vision-Language-Action-Models-Optimizing-Speed/01_overview.md) | open VLA and deployment-oriented fine-tuning | pretrained VLM features with robot observation | autoregressive action tokens → faster continuous/parallel decoding | pretraining/fine-tuning for robot control | multi-source pretraining plus downstream tasks | OFT targets lower latency; exact rate per setup UNVERIFIED | mainly reactive execution | manipulation success and inference efficiency | fine-tuning recipe confounds architecture gains | open baseline에서 speed/success를 함께 비교 |
+| [π0](../2025/RSS/2025_RSS_pi0-A-Vision-Language-Action-Flow-Model-for-General-Robot/01_overview.md) / [FAST](../2025/RSS/2025_RSS_FAST-Efficient-Action-Tokenization-for-Vision-Language-Act/01_overview.md) | flow-based generalist policy / efficient action tokenization | images, language, proprioception | continuous flow action chunks / compressed frequency-aware tokens | flow matching / token prediction | heterogeneous embodiments and tasks | chunked; FAST targets efficient high-frequency sequence modeling | limited explicit symbolic planning | dexterous tasks, transfer and efficiency | compression may discard contact transients | action representation를 latency–feedback 관점에서 선택 |
+| [VoxPoser](../2023/CoRL/2023_CoRL_VoxPoser-Composable-3D-Value-Maps-for-Robotic-Manipulation/01_overview.md) / [SayPlan](../2023/CoRL/2023_CoRL_SayPlan-Grounding-Large-Language-Models-using-3D-Scene-Gra/01_overview.md) | language-guided spatial manipulation / long-horizon planning | 3D value maps / 3D scene graph | executable motion targets or skill plan | prompted/planner composition rather than end-to-end BC | pretrained models plus task environment | planner-level, slower timescale | explicit spatial plan and replanning | task completion in manipulation/planning domains | perception/predicate error and open-loop execution | VLA 위에 explicit spatial/TAMP layer 연결 |
+| [π0.5](../2025/CoRL/2025_CoRL_pi0.5-a-Vision-Language-Action-Model-with-Open-World-Gener/01_overview.md) | open-world generalist VLA | multimodal context and heterogeneous robot state | continuous/chunked action conditioned on high-level behavior | heterogeneous co-training and downstream adaptation | broad robot/task mixture | long-horizon deployment focus; exact hierarchy UNVERIFIED | high-level subtask structure/context | open-world task generalization | recovery/contact robustness and data attribution | π0에서 open-world hierarchy로 이어지는 frontier |
+
+
+## Dependency and Evolution
+
+아래 표는 VLA를 하나의 architecture 계보가 아니라 data, representation, planning과 feedback interface의 결합으로 읽기 위한 지도다. 직접 citation 관계는 정독 시 확인한다.
+
+| Foundation → transition → frontier | 계승·변화 | 아직 확인할 경계 |
+|---|---|---|
+| [DAgger](../2011/AISTATS/2011_AISTATS_A-Reduction-of-Imitation-Learning-and-Structured-Predictio/01_overview.md) → [RoboMimic](../2021/CoRL/2021_CoRL_What-Matters-in-Learning-from-Offline-Human-Demonstrations/01_overview.md) / [BC-Z](../2022/CoRL/2022_CoRL_BC-Z-Zero-Shot-Task-Generalization-with-Robotic-Imitation/01_overview.md) → [RT-1](../2022/arxiv/2022_arxiv_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale/01_overview.md) → [Open X-Embodiment](../2024/ICRA/2024_ICRA_Open-X-Embodiment-Robotic-Learning-Datasets-and-RT-X-Model/01_overview.md) / [Octo](../2024/RSS/2024_RSS_Octo-An-Open-Source-Generalist-Robot-Policy/01_overview.md) / [OpenVLA](../2024/CoRL/2024_CoRL_OpenVLA-An-Open-Source-Vision-Language-Action-Model/01_overview.md) | reproducible imitation learning에서 language-conditioned multi-task data, 대규모 transformer policy와 cross-embodiment pretraining으로 확장된다. | data volume, web prior, action interface와 embodiment adaptation의 기여를 분리할 수 있는가 |
+| [CLIP](../2021/ICML/2021_ICML_Learning-Transferable-Visual-Models-From-Natural-Language/01_overview.md) / [CLIPort](../2021/CoRL/2021_CoRL_CLIPort-What-and-Where-Pathways-for-Robotic-Manipulation/01_overview.md) → [PaLM-E](../2023/ICML/2023_ICML_PaLM-E-An-Embodied-Multimodal-Language-Model/01_overview.md) / [RT-2](../2023/CoRL/2023_CoRL_RT-2-Vision-Language-Action-Models-Transfer-Web-Knowledge/01_overview.md) → [π0](../2025/RSS/2025_RSS_pi0-A-Vision-Language-Action-Flow-Model-for-General-Robot/01_overview.md) → [π0.5](../2025/CoRL/2025_CoRL_pi0.5-a-Vision-Language-Action-Model-with-Open-World-Gener/01_overview.md) | language–vision representation을 spatial manipulation과 embodied token에 연결하고, flow-matching action expert와 heterogeneous co-training을 long-horizon open-world deployment로 확장한다. | semantic generalization이 precise control, contact와 recovery에 실제로 전달되는가 |
+| [DDPM](../2020/NeurIPS/2020_NeurIPS_Denoising-Diffusion-Probabilistic-Models/01_overview.md) / [Flow Matching](../2023/ICLR/2023_ICLR_Flow-Matching-for-Generative-Modeling/01_overview.md) → [Diffusion Policy](../2023/RSS/2023_RSS_Diffusion-Policy-Visuomotor-Policy-Learning-via-Action-Dif/01_overview.md) / π0 → [FAST](../2025/RSS/2025_RSS_FAST-Efficient-Action-Tokenization-for-Vision-Language-Act/01_overview.md) | continuous action generation과 action chunking에서 시작해, 고주파 action sequence의 압축 tokenization으로 inference 및 학습 효율을 개선한다. | token compression이 빠른 feedback와 contact discontinuity를 얼마나 보존하는가 |
+| [OpenVLA](../2024/CoRL/2024_CoRL_OpenVLA-An-Open-Source-Vision-Language-Action-Model/01_overview.md) → [OpenVLA-OFT](../2025/RSS/2025_RSS_Fine-Tuning-Vision-Language-Action-Models-Optimizing-Speed/01_overview.md) | 범용 autoregressive action prediction을 parallel decoding, continuous action representation과 fine-tuning recipe로 바꾸어 deployment speed와 success를 높인다. | 효율 개선이 unseen embodiment와 long-horizon recovery에서도 유지되는가 |
+| [Inner Monologue](../2022/CoRL/2022_CoRL_Inner-Monologue-Embodied-Reasoning-through-Planning-with-L/01_overview.md) / [VoxPoser](../2023/CoRL/2023_CoRL_VoxPoser-Composable-3D-Value-Maps-for-Robotic-Manipulation/01_overview.md) / [SayPlan](../2023/CoRL/2023_CoRL_SayPlan-Grounding-Large-Language-Models-using-3D-Scene-Gra/01_overview.md) → [AtomicVLA](../2026/CVPR/2026_CVPR_AtomicVLA-Unlocking-the-Potential-of-Atomic-Skill-Learning/01_overview.md) / [PALM](../2026/CVPR/2026_CVPR_PALM-Progress-Aware-Policy-Learning-via-Affordance-Reasoni/01_overview.md) / [MomaGraph](../2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan/01_overview.md) | 외부 language planner와 spatial affordance interface에서 atomic skill, progress state와 persistent scene graph를 내부화하는 방향으로 이동한다. | plan correctness와 execution progress가 contact-level feedback으로 닫히는가 |
+| [PointNet](../2017/CVPR/2017_CVPR_PointNet-Deep-Learning-on-Point-Sets-for-3D-Classification/01_overview.md) → [RVT](../2023/CoRL/2023_CoRL_RVT-Robotic-View-Transformer-for-3D-Object-Manipulation/01_overview.md) / [SUGAR](../2024/CVPR/2024_CVPR_SUGAR-Pre-training-3D-Visual-Representations-for-Robotics/01_overview.md) → [PointVLA](../2026/RA-L/2026_RA-L_PointVLA-Injecting-the-3D-World-into-Vision-Language-Actio/01_overview.md) / [Any3D-VLA](../2026/ICML/2026_ICML_Any3D-VLA-Enhancing-VLA-Robustness-via-Diverse-Point-Cloud/01_overview.md) / [ActiveVLA](../2026/CVPR/2026_CVPR_ActiveVLA-Injecting-Active-Perception-into-Vision-Language/01_overview.md) | generic point-set encoding에서 manipulation-specific 3D pretraining, VLA input augmentation과 action-conditioned view selection로 확장된다. | 추가 3D input의 이득이 geometry, sensor coverage, data augmentation 중 어디에서 오는가 |
+| generalist VLA → [SAFE](../2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md) → [Counterfactual VLA](../2026/CVPR/2026_CVPR_Counterfactual-VLA-Self-Reflective-Vision-Language-Action/01_overview.md) / world-model policy improvement | open-loop success 중심에서 runtime failure signal, self-reflection과 imagined correction으로 확장된다. | detector confidence를 안전한 recovery action으로 바꾸는 interface가 있는가 |
+
+## Open Questions
+
+- VLA의 spatial reasoning이 실제 control robustness로 이어지는가?
+- Long-horizon task에서 memory, skill library, world model의 역할을 어떻게 나눌 것인가?
+- Generalist policy의 실패를 runtime에 탐지하고 안전하게 회복시키는 가장 좋은 interface는 무엇인가?
+
+## Research Gaps
+
+- 통합 gap은 [G-01: control latency](../research/RESEARCH_GAPS.md#g-01-vla와-접촉-제어의-시간-척도-불일치), [G-02: recovery loop](../research/RESEARCH_GAPS.md#g-02-detection에서-recovery까지-닫히지-않은-loop), [G-10: long-horizon evaluation](../research/RESEARCH_GAPS.md#g-10-long-horizon-평가의-낮은-failure-resolution), [G-12: data coverage](../research/RESEARCH_GAPS.md#g-12-data-scale와-data-coverage의-혼동)을 본다.
+- 이 문서에는 VLA별 input/action/control interface와 실제 failure evidence만 추가한다.

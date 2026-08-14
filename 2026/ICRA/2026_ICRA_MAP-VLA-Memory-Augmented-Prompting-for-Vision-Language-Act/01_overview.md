@@ -1,7 +1,7 @@
 # MAP-VLA: Memory-Augmented Prompting for Vision-Language-Action Model in Robotic Manipulation
 
 - Year/Venue: 2026 / ICRA
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics
 - Paper link: ./2026/ICRA/2026_ICRA_MAP-VLA-Memory-Augmented-Prompting-for-Vision-Language-Act/paper.pdf
 - Code/Project: not identified from venue audit

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICML poster
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: semantic, alignment, Diffusion, Generation, equivariant, 3D Vision
 - Paper link: ./2025/ICML/2025_ICML_Scalable-Non-Equivariant-3D-Molecule-Generation-via-Rotati/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2011 / ISMAR
-- Category: 3D Reconstruction, Geometry, and SLAM
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D Vision, SLAM, RGB-D, 3D reconstruction
 - Paper link: ./2011/ISMAR/2011_ISMAR_KinectFusion-Real-Time-Dense-Surface-Mapping-and-Tracking/paper.pdf
 - Code/Project: not released

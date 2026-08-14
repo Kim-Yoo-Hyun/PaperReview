@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2024 / ECCV
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting
 - Paper link: ./2024/ECCV/2024_ECCV_TCLC-GS-Tightly-Coupled-LiDAR-Camera-Gaussian-Splatting-fo/paper.pdf
 - Code/Project: not identified

@@ -1,35 +1,41 @@
-# Insights
+# Insights — Learning Transferable Visual Models From Natural Language Supervision
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: For instance, we match the accuracy of the original ResNet-50 on ImageNet zero-shot without needing to use any of the 1.28 million training examples it was trained on.
-- 출발 문제 단서: We study the performance of this approach by benchmarking on over 30 different existing computer vision datasets, spanning tasks such as OCR, action recognition in videos, geo-localization, and ...
-- 주장된 효과 단서: State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories.
+> Evidence maturity: `UNREAD`. 이 문서는 읽기 위치와 검증 질문을 정리한 curation note이며, 정독 완료를 뜻하지 않는다.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- 2D vision-language feature를 3D object/point/field/map에 정렬해 open-vocabulary querying과 semantic grounding에 사용할 수 있다.
-- 핵심은 language prior를 3D metric structure와 맞추면서 view inconsistency와 hallucination을 줄이는 것이다.
+## Why CORE
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories.
-- open-vocabulary recognition이나 grounding을 보인 뒤에도 3D consistency, ambiguous reference resolution, robot-action relevance는 남는다.
+이 논문은 **VLA and generalist robot policies**에서 vision-language prior를 robot state와 action으로 연결하는 data, architecture, action representation의 기준점로 선정됐다.
 
-## 다음 연구 질문
-- 2D VLM feature를 3D로 lift할 때 multi-view consistency와 fine-grained object boundary를 동시에 유지할 수 있는가?
-- language query가 robot action에 필요한 geometry/affordance까지 정확히 가리키는지 어떻게 평가할 수 있는가?
-- semantic confidence와 geometric uncertainty를 함께 쓰면 false grounding을 줄일 수 있는가?
+## Captured Source Cues — Not Yet Independently Verified
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: ImageNet, COCO, KITTI / accuracy, mAP
-- 내 연구 확장 benchmark 후보: ScanNet, ScanRefer, ReferIt3D, SQA3D
-- 내 연구 확장 metric 후보: mIoU, Acc@0.25, Acc@0.5, Recall@K
-- 검증 초점: open-vocabulary segmentation/localization, 3D consistency, task-relevant grounding을 확인한다.
-
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
-
-## 근거가 되는 논문 단서
 - Problem cue: We study the performance of this approach by benchmarking on over 30 different existing computer vision datasets, spanning tasks such as OCR, action recognition in videos, geo-localization, and ...
 - Method cue: For instance, we match the accuracy of the original ResNet-50 on ImageNet zero-shot without needing to use any of the 1.28 million training examples it was trained on.
-- Result cue: State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories.
+- Result/evaluation cue: State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories.
+
+위 cue는 기존 official abstract 또는 local text extraction에서 보존한 것이다. 수치·조건·인과적 해석은 full-text 정독 전까지 `UNVERIFIED`다.
+
+## Dependency Position
+
+`이 track의 출발점 → Learning Transferable Visual Models From Natural Language Supervision → CLIPort: What and Where Pathways for Robotic Manipulation`
+
+이 화살표는 reading dependency다. 직접 citation 관계는 references와 related work를 확인한 뒤 synthesis 문서에만 확정한다.
+
+## Close-Reading Checklist
+
+- input/state, action representation, data/embodiment scale, control rate, horizon, fine-tuning protocol, unseen-task evaluation와 recovery
+- 논문이 고정한 가정과 실제 deployment에서 깨질 조건
+- strongest baseline과 공정한 비교가 성립하는 조건
+- negative result, failure case, compute/data/hardware dependency
+
+## Research Use
+
+- semantic generalization과 low-level control 성능의 기여를 분리한다.
+- 연결 gap: `G-01 / G-02 / G-10 / G-12` in [RESEARCH_GAPS.md](../../../research/RESEARCH_GAPS.md)
+
+## Minimal Reproduction
+
+동일 robot/task split에서 representation, action head와 data recipe를 분리해 success, latency와 intervention을 비교한다.
+
+## Promotion Rule
+
+`READ`로 올리려면 method/evaluation 필드를 채우고, `SYNTHESIZED`로 올리려면 같은 track의 선행·후속 논문과 comparison matrix를 갱신한다.

@@ -1,7 +1,7 @@
 # Diffusion-EDFs: Bi-equivariant Denoising Generative Modeling on SE(3) for Visual Robotic Manipulation
 
 - Year/Venue: 2024 / CVPR
-- Category: Equivariance, Diffusion, and 3D Action
+- Category: Manipulation, Contact, and Dexterity
 - Tags: equivariant, Diffusion, Robotics
 - Paper link: ./2024/CVPR/2024_CVPR_Diffusion-EDFs-Bi-equivariant-Denoising-Generative-Modelin/paper.pdf
 - Code/Project: not identified from primary page

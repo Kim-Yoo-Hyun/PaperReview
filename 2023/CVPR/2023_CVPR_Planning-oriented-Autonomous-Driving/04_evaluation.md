@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2023 / CVPR
-- Category: Sensor Fusion, LiDAR, and Autonomous Driving
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: Planning, sensor fusion, 3D perception
 - Paper link: ./2023/CVPR/2023_CVPR_Planning-oriented-Autonomous-Driving/paper.pdf
 - Code/Project: https://github.com/OpenDriveLab/UniAD

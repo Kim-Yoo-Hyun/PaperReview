@@ -1,7 +1,7 @@
 # Segment Any 3D Object with Language
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: 3D Representation Learning and Foundation Models
+- Category: 3D Representation Learning
 - Tags: 3D Vision
 - Paper link: ./2025/ICLR/2025_ICLR_Segment-Any-3D-Object-with-Language/paper.pdf
 - Code/Project: not identified

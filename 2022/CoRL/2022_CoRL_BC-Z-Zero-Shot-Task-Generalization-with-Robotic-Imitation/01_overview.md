@@ -1,7 +1,7 @@
 # BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning
 
 - Year/Venue: 2022 / CoRL
-- Category: Foundations: Vision-Language-Action and Robotics
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, Imitation Learning, Vision-Language Action
 - Paper link: ./2022/CoRL/2022_CoRL_BC-Z-Zero-Shot-Task-Generalization-with-Robotic-Imitation/paper.pdf
 - Code/Project: https://sites.google.com/view/bc-z/

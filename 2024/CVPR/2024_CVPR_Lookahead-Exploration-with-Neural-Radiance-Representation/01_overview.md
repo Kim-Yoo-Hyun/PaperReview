@@ -1,7 +1,7 @@
 # Lookahead Exploration with Neural Radiance Representation for Continuous Vision-Language Navigation
 
 - Year/Venue: 2024 / CVPR
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Navigation, NeRF, Planning
 - Paper link: ./2024/CVPR/2024_CVPR_Lookahead-Exploration-with-Neural-Radiance-Representation/paper.pdf
 - Code/Project: not identified from primary page

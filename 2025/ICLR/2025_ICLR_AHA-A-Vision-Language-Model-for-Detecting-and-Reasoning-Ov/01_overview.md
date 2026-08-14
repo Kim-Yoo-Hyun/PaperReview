@@ -1,7 +1,7 @@
 # AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic Manipulation
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Vision-Language Model, Robotics
 - Paper link: ./2025/ICLR/2025_ICLR_AHA-A-Vision-Language-Model-for-Detecting-and-Reasoning-Ov/paper.pdf
 - Code/Project: not identified from OpenReview

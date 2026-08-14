@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / CVPR
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_Rethinking-Temporal-Fusion-with-a-Unified-Gradient-Descent/paper.pdf
 - Code/Project: not identified

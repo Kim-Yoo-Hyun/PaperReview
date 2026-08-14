@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / NeurIPS Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Vision-Language Model, Robotics, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_ViSPLA-Visual-Iterative-Self-Prompting-for-Language-Guided/paper.pdf
 - Code/Project: not identified from OpenReview

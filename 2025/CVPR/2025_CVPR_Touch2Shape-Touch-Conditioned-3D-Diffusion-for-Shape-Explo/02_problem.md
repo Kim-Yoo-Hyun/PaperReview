@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_Touch2Shape-Touch-Conditioned-3D-Diffusion-for-Shape-Explo/paper.pdf
 - Code/Project: not identified

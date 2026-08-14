@@ -1,7 +1,9 @@
 # DUSt3R: Geometric 3D Vision Made Easy
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2024 / CVPR
-- Category: 3D Reconstruction, Geometry, and SLAM
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D reconstruction, calibration, geometry
 - Paper link: ./2024/CVPR/2024_CVPR_DUSt3R-Geometric-3D-Vision-Made-Easy/paper.pdf
 - Code/Project: https://github.com/naver/dust3r
@@ -23,7 +25,7 @@
 - We show 1 https://dust3r.europe.naverlabs.com 1.
 
 ## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.
 
 ## Contribution
 - We base our network architecture on standard Transformer encoders and decoders, allowing us to leverage powerful pretrained models.

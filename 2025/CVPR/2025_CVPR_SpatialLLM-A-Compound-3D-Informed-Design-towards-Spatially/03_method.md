@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: LLM, spatial reasoning, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_SpatialLLM-A-Compound-3D-Informed-Design-towards-Spatially/paper.pdf
 - Code/Project: not identified from primary page

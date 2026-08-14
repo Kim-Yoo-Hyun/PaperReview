@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model, Graph Reasoning, semantic
 - Paper link: ./2025/ICCV/2025_ICCV_Vision-Language-Interactive-Relation-Mining-for-Open-Vocab/paper.pdf
 - Code/Project: not identified

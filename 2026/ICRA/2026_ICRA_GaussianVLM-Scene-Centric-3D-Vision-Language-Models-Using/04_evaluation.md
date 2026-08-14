@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICRA
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Vision-Language Model, 3D Vision, Gaussian Splatting
 - Paper link: ./2026/ICRA/2026_ICRA_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using/paper.pdf
 - Code/Project: not identified from venue audit

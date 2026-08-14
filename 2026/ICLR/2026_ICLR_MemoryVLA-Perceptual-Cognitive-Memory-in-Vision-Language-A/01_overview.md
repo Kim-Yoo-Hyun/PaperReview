@@ -1,7 +1,7 @@
 # MemoryVLA: Perceptual-Cognitive Memory in Vision-Language-Action Models for Robotic Manipulation
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics
 - Paper link: ./2026/ICLR/2026_ICLR_MemoryVLA-Perceptual-Cognitive-Memory-in-Vision-Language-A/paper.pdf
 - Code/Project: not identified from OpenReview

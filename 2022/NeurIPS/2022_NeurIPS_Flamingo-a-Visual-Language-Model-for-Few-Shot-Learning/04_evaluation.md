@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2022 / NeurIPS
-- Category: Foundations: Vision-Language Models
+- Category: Foundations: Vision and Language Models
 - Tags: Vision-Language Model, few-shot, alignment
 - Paper link: ./2022/NeurIPS/2022_NeurIPS_Flamingo-a-Visual-Language-Model-for-Few-Shot-Learning/paper.pdf
 - Code/Project: not released

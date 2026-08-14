@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Semantic Understanding and Alignment
+- Category: 3D Vision-Language Understanding
 - Tags: 3D reconstruction, semantic, alignment, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_Ov3R-Open-Vocabulary-Semantic-3D-Reconstruction-from-RGB-V/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICLR Oral
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, geometry, 3D Vision
 - Paper link: ./2025/ICLR/2025_ICLR_No-Pose-No-Problem-Surprisingly-Simple-3D-Gaussian-Splats/paper.pdf
 - Code/Project: not identified

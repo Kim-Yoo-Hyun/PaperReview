@@ -1,35 +1,41 @@
-# Insights
+# Insights — PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: We propose a novel deep net architecture that consumes raw point cloud (set of points) without voxelization or rendering.
-- 출발 문제 단서: Guibas PointNet Point cloud is an important type of geometric data structure.
-- 주장된 효과 단서: Empirically, it shows strong performance on par or even better than state of the art.
+> Evidence maturity: `UNREAD`. 이 문서는 읽기 위치와 검증 질문을 정리한 curation note이며, 정독 완료를 뜻하지 않는다.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- Geometry reconstruction, pose estimation, map update 원리를 robot의 spatial memory와 3D scene understanding 기반으로 사용할 수 있다.
-- Classical geometry/SLAM의 metric constraint는 VLM/LLM 기반 semantic reasoning이 놓치는 scale, pose, visibility 문제를 보정한다.
+## Why CORE
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: Empirically, it shows strong performance on par or even better than state of the art.
-- geometric accuracy 이후에도 open-vocabulary semantics, dynamic objects, learned priors, task-aware mapping은 후속 연구 지점으로 남는다.
+이 논문은 **Robotics-enabling 3D perception**에서 3D representation과 state estimation이 downstream planning/control에 주는 실질적 효과를 판별하기 위한 기반로 선정됐다.
 
-## 다음 연구 질문
-- SLAM/reconstruction map에 language-aligned semantic feature를 붙여도 geometric consistency가 유지되는가?
-- learned depth/geometry prior와 online sensor measurement를 어떻게 결합해야 drift와 hallucination을 줄일 수 있는가?
-- robot task success에 필요한 map detail은 reconstruction metric과 어떻게 다른가?
+## Captured Source Cues — Not Yet Independently Verified
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: ModelNet40, ShapeNet / accuracy, mIoU, IoU, mAP
-- 내 연구 확장 benchmark 후보: TUM RGB-D, EuRoC, KITTI, ScanNet
-- 내 연구 확장 metric 후보: ATE, RPE, AbsRel, RMSE
-- 검증 초점: pose/reconstruction accuracy, semantic map consistency, robot navigation/manipulation utility를 확인한다.
-
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
-
-## 근거가 되는 논문 단서
 - Problem cue: Guibas PointNet Point cloud is an important type of geometric data structure.
 - Method cue: We propose a novel deep net architecture that consumes raw point cloud (set of points) without voxelization or rendering.
-- Result cue: Empirically, it shows strong performance on par or even better than state of the art.
+- Result/evaluation cue: Empirically, it shows strong performance on par or even better than state of the art.
+
+위 cue는 기존 official abstract 또는 local text extraction에서 보존한 것이다. 수치·조건·인과적 해석은 full-text 정독 전까지 `UNVERIFIED`다.
+
+## Dependency Position
+
+`이 track의 출발점 → PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation → DROID-SLAM: Deep Visual SLAM for Monocular, Stereo, and RGB-D Cameras`
+
+이 화살표는 reading dependency다. 직접 citation 관계는 references와 related work를 확인한 뒤 synthesis 문서에만 확정한다.
+
+## Close-Reading Checklist
+
+- input/representation, temporal update, calibration, latency, uncertainty, downstream robot interface와 task-level metric
+- 논문이 고정한 가정과 실제 deployment에서 깨질 조건
+- strongest baseline과 공정한 비교가 성립하는 조건
+- negative result, failure case, compute/data/hardware dependency
+
+## Research Use
+
+- perception score와 closed-loop robot performance 사이의 causal link를 검증한다.
+- 연결 gap: `G-03 / G-04 / G-13` in [RESEARCH_GAPS.md](../../../research/RESEARCH_GAPS.md)
+
+## Minimal Reproduction
+
+동일 policy와 sensor budget에서 representation만 바꾸고 success, collision, latency와 stale-state failure를 비교한다.
+
+## Promotion Rule
+
+`READ`로 올리려면 method/evaluation 필드를 채우고, `SYNTHESIZED`로 올리려면 같은 track의 선행·후속 논문과 comparison matrix를 갱신한다.

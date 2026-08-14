@@ -1,7 +1,7 @@
 # Volumetric Environment Representation for Vision-Language Navigation
 
 - Year/Venue: 2024 / CVPR
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Navigation, 3D geometry, representation
 - Paper link: ./2024/CVPR/2024_CVPR_Volumetric-Environment-Representation-for-Vision-Language/paper.pdf
 - Code/Project: not identified from primary page

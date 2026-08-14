@@ -1,7 +1,7 @@
 # Open-Vocabulary 3D Semantic Segmentation with Text-to-Image Diffusion Models
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, Diffusion, semantic
 - Paper link: ./2024/ECCV/2024_ECCV_Open-Vocabulary-3D-Semantic-Segmentation-with-Text-to-Imag/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / ICRA
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Robotics, Navigation
 - Paper link: ./2026/ICRA/2026_ICRA_LaViRA-Language-Vision-Robot-Actions-Translation-for-Zero/paper.pdf
 - Code/Project: not identified from venue audit

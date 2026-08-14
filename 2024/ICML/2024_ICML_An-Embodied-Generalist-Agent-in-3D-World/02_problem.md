@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2024 / ICML
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: LLM, 3D Vision, Planning, Robotics
 - Paper link: ./2024/ICML/2024_ICML_An-Embodied-Generalist-Agent-in-3D-World/paper.pdf
 - Code/Project: https://embodied-generalist.github.io/

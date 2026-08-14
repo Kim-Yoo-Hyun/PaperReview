@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / NeurIPS poster
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_MS-GS-Multi-Appearance-Sparse-View-3D-Gaussian-Splatting-i/paper.pdf
 - Code/Project: not identified

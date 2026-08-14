@@ -1,7 +1,7 @@
 # GaussianZoom: Progressive Zoom-in Generative 3D Gaussian Splatting with Geometric and Semantic Guidance
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Gaussian Splatting, semantic, alignment, Diffusion, Generation, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_GaussianZoom-Progressive-Zoom-in-Generative-3D-Gaussian-Sp/paper.pdf
 - Code/Project: not identified

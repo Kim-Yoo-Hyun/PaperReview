@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / 3DV
-- Category: 3D Reconstruction, Geometry, and SLAM
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: geometry, depth, 3D Vision
 - Paper link: ./2025/3DV/2025_3DV_FlowMap-High-Quality-Camera-Poses-Intrinsics-and-Depth-via/paper.pdf
 - Code/Project: not identified

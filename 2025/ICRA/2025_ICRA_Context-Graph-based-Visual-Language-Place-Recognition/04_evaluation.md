@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICRA
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: Graph Reasoning
 - Paper link: ./2025/ICRA/2025_ICRA_Context-Graph-based-Visual-Language-Place-Recognition/paper.pdf
 - Code/Project: not identified from venue audit

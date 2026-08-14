@@ -1,7 +1,7 @@
 # MR-COGraphs: Communication-efficient Multi-Robot Open-vocabulary Mapping System via 3D Scene Graphs
 
 - Year/Venue: 2025 / IROS
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: Robotics, 3D Vision, Graph Reasoning, semantic
 - Paper link: ./2025/IROS/2025_IROS_MR-COGraphs-Communication-efficient-Multi-Robot-Open-vocab/paper.pdf
 - Code/Project: not identified

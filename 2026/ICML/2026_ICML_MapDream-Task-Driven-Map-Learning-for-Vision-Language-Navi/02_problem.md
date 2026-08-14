@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / ICML
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Model, Navigation
 - Paper link: ./2026/ICML/2026_ICML_MapDream-Task-Driven-Map-Learning-for-Vision-Language-Navi/paper.pdf
 - Code/Project: not identified from OpenReview

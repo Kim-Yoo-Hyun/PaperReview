@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / ICML
-- Category: 3D Semantic Understanding and Alignment
+- Category: 3D Vision-Language Understanding
 - Tags: semantic, alignment, depth, 3D Vision
 - Paper link: ./2026/ICML/2026_ICML_PRISM-Learning-Realistic-Depth-via-Physics-Grounded-Noise/paper.pdf
 - Code/Project: not identified

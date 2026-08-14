@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, point cloud, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_GaussianGrow-Geometry-aware-Gaussian-Growing-from-3D-Point/paper.pdf
 - Code/Project: not identified

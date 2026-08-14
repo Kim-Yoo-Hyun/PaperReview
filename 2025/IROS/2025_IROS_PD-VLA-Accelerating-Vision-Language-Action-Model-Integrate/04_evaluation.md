@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / IROS
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model
 - Paper link: ./2025/IROS/2025_IROS_PD-VLA-Accelerating-Vision-Language-Action-Model-Integrate/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2015 / RSS
-- Category: Foundations: SLAM and Sensor Geometry
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D Vision, SLAM, RGB-D, 3D reconstruction
 - Paper link: ./2015/RSS/2015_RSS_ElasticFusion-Dense-SLAM-Without-A-Pose-Graph/paper.pdf
 - Code/Project: https://github.com/mp3guy/ElasticFusion

@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: semantic
 - Paper link: ./2024/ECCV/2024_ECCV_Global-Local-Collaborative-Inference-with-LLM-for-Lidar-Ba/paper.pdf
 - Code/Project: not identified

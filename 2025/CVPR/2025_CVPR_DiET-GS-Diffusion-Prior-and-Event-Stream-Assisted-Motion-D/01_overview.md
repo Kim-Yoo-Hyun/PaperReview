@@ -1,7 +1,7 @@
 # DiET-GS: Diffusion Prior and Event Stream-Assisted Motion Deblurring 3D Gaussian Splatting
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_DiET-GS-Diffusion-Prior-and-Event-Stream-Assisted-Motion-D/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2024 / RA-L
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model, semantic
 - Paper link: ./2024/RA-L/2024_RA-L_FM-Fusion-Instance-aware-Semantic-Mapping-Boosted-by-Visio/paper.pdf
 - Code/Project: https://github.com/HKUST-Aerial-Robotics/FM-Fusion

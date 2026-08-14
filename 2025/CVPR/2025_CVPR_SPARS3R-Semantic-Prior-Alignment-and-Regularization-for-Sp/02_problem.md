@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Semantic Understanding and Alignment
+- Category: 3D Vision-Language Understanding
 - Tags: 3D reconstruction, semantic, alignment, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_SPARS3R-Semantic-Prior-Alignment-and-Regularization-for-Sp/paper.pdf
 - Code/Project: not identified

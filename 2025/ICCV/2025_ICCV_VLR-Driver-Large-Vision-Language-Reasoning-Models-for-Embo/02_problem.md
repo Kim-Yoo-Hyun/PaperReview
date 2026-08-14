@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model
 - Paper link: ./2025/ICCV/2025_ICCV_VLR-Driver-Large-Vision-Language-Reasoning-Models-for-Embo/paper.pdf
 - Code/Project: not identified

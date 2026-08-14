@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / IROS
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting
 - Paper link: ./2026/IROS/2026_IROS_LIT-GS-LiDAR-Inertial-Thermal-Gaussian-Splatting-for-Illum/paper.pdf
 - Code/Project: not identified

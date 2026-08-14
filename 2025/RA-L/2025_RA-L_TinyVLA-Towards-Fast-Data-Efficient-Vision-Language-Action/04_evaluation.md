@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / RA-L
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics
 - Paper link: ./2025/RA-L/2025_RA-L_TinyVLA-Towards-Fast-Data-Efficient-Vision-Language-Action/paper.pdf
 - Code/Project: https://tiny-vla.github.io/

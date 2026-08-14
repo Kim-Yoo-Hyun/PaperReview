@@ -1,14 +1,16 @@
 # Evaluation
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2020 / NeurIPS
-- Category: Foundations: Diffusion and Generative Models
-- Tags: Diffusion, generation
+- Category: Foundations: Generative Models
+- Tags: Diffusion, Generation
 - Paper link: ./2020/NeurIPS/2020_NeurIPS_Denoising-Diffusion-Probabilistic-Models/paper.pdf
 - Code/Project: https://github.com/hojonathanho/diffusion
 - Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Dataset / Benchmark
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.
 
 ## Metrics
 - mAP

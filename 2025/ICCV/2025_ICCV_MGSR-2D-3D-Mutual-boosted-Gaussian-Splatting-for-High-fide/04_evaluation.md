@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_MGSR-2D-3D-Mutual-boosted-Gaussian-Splatting-for-High-fide/paper.pdf
 - Code/Project: not identified

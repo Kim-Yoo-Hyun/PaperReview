@@ -1,7 +1,7 @@
 # LE-Object: Language Embedded Object-Level Neural Radiance Fields for Open-Vocabulary Scene
 
 - Year/Venue: 2025 / ICRA
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: semantic
 - Paper link: ./2025/ICRA/2025_ICRA_LE-Object-Language-Embedded-Object-Level-Neural-Radiance-F/paper.pdf
 - Code/Project: not identified from venue audit

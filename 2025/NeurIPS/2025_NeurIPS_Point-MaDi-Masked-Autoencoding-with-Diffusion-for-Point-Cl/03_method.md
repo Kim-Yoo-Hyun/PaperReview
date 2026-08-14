@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / NeurIPS poster
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Diffusion, Generation, point cloud, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_Point-MaDi-Masked-Autoencoding-with-Diffusion-for-Point-Cl/paper.pdf
 - Code/Project: not identified

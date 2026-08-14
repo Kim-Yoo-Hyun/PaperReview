@@ -1,7 +1,7 @@
 # FedVLA: Federated Vision-Language-Action Learning with Dual Gating Mixture-of-Experts for Robotic Manipulation
 
 - Year/Venue: 2025 / ICCV
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics
 - Paper link: ./2025/ICCV/2025_ICCV_FedVLA-Federated-Vision-Language-Action-Learning-with-Dual/paper.pdf
 - Code/Project: not identified

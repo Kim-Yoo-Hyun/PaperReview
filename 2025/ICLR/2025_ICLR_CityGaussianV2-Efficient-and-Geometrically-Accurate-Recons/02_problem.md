@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
 - Paper link: ./2025/ICLR/2025_ICLR_CityGaussianV2-Efficient-and-Geometrically-Accurate-Recons/paper.pdf
 - Code/Project: not identified

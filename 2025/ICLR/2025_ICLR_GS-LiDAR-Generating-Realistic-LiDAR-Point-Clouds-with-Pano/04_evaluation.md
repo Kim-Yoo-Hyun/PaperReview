@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: Gaussian Splatting, sensor fusion, LiDAR, point cloud, 3D Vision
 - Paper link: ./2025/ICLR/2025_ICLR_GS-LiDAR-Generating-Realistic-LiDAR-Point-Clouds-with-Pano/paper.pdf
 - Code/Project: not identified

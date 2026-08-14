@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2023 / ICRA
-- Category: Sensor Fusion, LiDAR, and Autonomous Driving
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: sensor fusion, LiDAR, 3D perception
 - Paper link: ./2023/ICRA/2023_ICRA_BEVFusion-Multi-Task-Multi-Sensor-Fusion-with-Unified-Bird/paper.pdf
 - Code/Project: https://github.com/mit-han-lab/bevfusion

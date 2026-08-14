@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2022 / ECCV
-- Category: Open-Vocabulary 3D Mapping
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Model, open-vocabulary, detection, semantic
 - Paper link: ./2022/ECCV/2022_ECCV_Detecting-Twenty-thousand-Classes-using-Image-level-Superv/paper.pdf
 - Code/Project: https://github.com/facebookresearch/Detic

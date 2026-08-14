@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D Vision
 - Paper link: ./2024/ECCV/2024_ECCV_MVSplat-Efficient-3D-Gaussian-Splatting-from-Sparse-Multi/paper.pdf
 - Code/Project: not identified

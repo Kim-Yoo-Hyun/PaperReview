@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2018 / arxiv
-- Category: Foundations: Equivariance and Geometry
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: 3D Vision, equivariant, 3D geometry, point cloud
 - Paper link: ./2018/arxiv/2018_arxiv_Tensor-Field-Networks-Rotation-and-Translation-Equivariant/paper.pdf
 - Code/Project: https://github.com/tensorfieldnetworks/tensorfieldnetworks

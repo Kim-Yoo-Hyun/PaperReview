@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / CVPR
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: 3D Scene Graph, Navigation, zero-shot
 - Paper link: ./2026/CVPR/2026_CVPR_MSGNav-Unleashing-the-Power-of-Multi-modal-3D-Scene-Graph/paper.pdf
 - Code/Project: not identified from primary page

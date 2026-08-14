@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, geometry, 3D Vision
 - Paper link: ./2024/CVPR/2024_CVPR_SplaTAM-Splat-Track-and-Map-3D-Gaussians-for-Dense-RGB-D-S/paper.pdf
 - Code/Project: not identified

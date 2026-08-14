@@ -1,7 +1,7 @@
 # L3DR: 3D-aware LiDAR Diffusion and Rectification
 
 - Year/Venue: 2026 / CVPR
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: sensor fusion, LiDAR, Diffusion, Generation, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_L3DR-3D-aware-LiDAR-Diffusion-and-Rectification/paper.pdf
 - Code/Project: not identified

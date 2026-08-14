@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2019 / ICCV
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: 3D Vision, registration, 3D geometry, representation
 - Paper link: ./2019/ICCV/2019_ICCV_Fully-Convolutional-Geometric-Features/paper.pdf
 - Code/Project: https://github.com/chrischoy/FCGF

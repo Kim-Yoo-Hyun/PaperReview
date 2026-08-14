@@ -1,7 +1,7 @@
 # Dens3R: A Foundation Model for 3D Geometry Prediction
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: 3D Representation Learning and Foundation Models
+- Category: 3D Representation Learning
 - Tags: 3D Vision
 - Paper link: ./2026/ICLR/2026_ICLR_Dens3R-A-Foundation-Model-for-3D-Geometry-Prediction/paper.pdf
 - Code/Project: not identified

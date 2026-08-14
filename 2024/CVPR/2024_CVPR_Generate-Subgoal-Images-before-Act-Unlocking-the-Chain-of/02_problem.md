@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2024 / CVPR
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Diffusion, VLA, Planning
 - Paper link: ./2024/CVPR/2024_CVPR_Generate-Subgoal-Images-before-Act-Unlocking-the-Chain-of/paper.pdf
 - Code/Project: not identified from primary page

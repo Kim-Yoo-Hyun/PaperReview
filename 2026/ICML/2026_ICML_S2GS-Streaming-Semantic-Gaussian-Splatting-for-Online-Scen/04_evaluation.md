@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICML
-- Category: 3D Semantic Understanding and Alignment
+- Category: 3D Vision-Language Understanding
 - Tags: Gaussian Splatting, 3D reconstruction, semantic, alignment, 3D Vision
 - Paper link: ./2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen/paper.pdf
 - Code/Project: not identified

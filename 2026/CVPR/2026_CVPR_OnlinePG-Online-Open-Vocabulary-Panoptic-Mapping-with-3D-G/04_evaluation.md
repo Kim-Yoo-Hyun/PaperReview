@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / CVPR
-- Category: Open-Vocabulary 3D Mapping
+- Category: Embodied Navigation and Mapping
 - Tags: Gaussian Splatting, semantic mapping, open-vocabulary
 - Paper link: ./2026/CVPR/2026_CVPR_OnlinePG-Online-Open-Vocabulary-Panoptic-Mapping-with-3D-G/paper.pdf
 - Code/Project: not identified from primary page

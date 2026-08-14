@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / NeurIPS Spotlight
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, 3D Vision, equivariant
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_3D-Equivariant-Visuomotor-Policy-Learning-via-Spherical-Pr/paper.pdf
 - Code/Project: not identified from OpenReview

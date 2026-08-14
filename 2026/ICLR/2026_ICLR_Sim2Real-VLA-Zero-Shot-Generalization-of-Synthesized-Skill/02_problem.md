@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics
 - Paper link: ./2026/ICLR/2026_ICLR_Sim2Real-VLA-Zero-Shot-Generalization-of-Synthesized-Skill/paper.pdf
 - Code/Project: not identified from OpenReview

@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / CVPR
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: sensor fusion, LiDAR, Diffusion, Generation, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_V2X-R-Cooperative-LiDAR-4D-Radar-Fusion-with-Denoising-Dif/paper.pdf
 - Code/Project: not identified

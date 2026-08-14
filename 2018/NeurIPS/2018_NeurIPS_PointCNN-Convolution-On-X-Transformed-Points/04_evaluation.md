@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2018 / NeurIPS
-- Category: Foundations: 3D Geometry and Point Clouds
+- Category: 3D Representation Learning
 - Tags: 3D Vision, point cloud, geometry, representation
 - Paper link: ./2018/NeurIPS/2018_NeurIPS_PointCNN-Convolution-On-X-Transformed-Points/paper.pdf
 - Code/Project: https://github.com/yangyanli/PointCNN

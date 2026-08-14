@@ -1,7 +1,7 @@
 # OccFormer: Dual-path Transformer for Vision-based 3D Semantic Occupancy Prediction
 
 - Year/Venue: 2023 / ICCV
-- Category: Foundations: 3D Semantic Occupancy
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: 3D Vision, semantic, occupancy, Transformer
 - Paper link: ./2023/ICCV/2023_ICCV_OccFormer-Dual-path-Transformer-for-Vision-based-3D-Semant/paper.pdf
 - Code/Project: https://github.com/zhangyp15/OccFormer

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / NeurIPS poster
-- Category: 3D Semantic Understanding and Alignment
+- Category: 3D Vision-Language Understanding
 - Tags: Gaussian Splatting, semantic, alignment, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_VA-GS-Enhancing-the-Geometric-Representation-of-Gaussian-S/paper.pdf
 - Code/Project: not identified

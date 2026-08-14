@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2015 / T-RO
-- Category: Foundations: SLAM and Sensor Geometry
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: SLAM, calibration, geometry
 - Paper link: ./2015/T-RO/2015_T-RO_ORB-SLAM-A-Versatile-and-Accurate-Monocular-SLAM-System/paper.pdf
 - Code/Project: https://github.com/raulmur/ORB_SLAM2

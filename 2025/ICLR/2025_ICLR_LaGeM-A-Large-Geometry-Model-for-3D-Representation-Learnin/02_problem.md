@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Diffusion, Generation, 3D Vision
 - Paper link: ./2025/ICLR/2025_ICLR_LaGeM-A-Large-Geometry-Model-for-3D-Representation-Learnin/paper.pdf
 - Code/Project: not identified

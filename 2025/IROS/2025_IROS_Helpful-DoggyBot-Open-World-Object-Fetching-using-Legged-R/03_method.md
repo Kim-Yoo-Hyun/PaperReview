@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / IROS
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Vision-Language Model, Robotics, Reinforcement Learning
 - Paper link: ./2025/IROS/2025_IROS_Helpful-DoggyBot-Open-World-Object-Fetching-using-Legged-R/paper.pdf
 - Code/Project: https://helpful-doggybot.github.io/

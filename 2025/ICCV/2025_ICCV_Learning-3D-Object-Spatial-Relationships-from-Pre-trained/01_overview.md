@@ -1,7 +1,7 @@
 # Learning 3D Object Spatial Relationships from Pre-trained 2D Diffusion Models
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Diffusion, Generation, 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_Learning-3D-Object-Spatial-Relationships-from-Pre-trained/paper.pdf
 - Code/Project: not identified

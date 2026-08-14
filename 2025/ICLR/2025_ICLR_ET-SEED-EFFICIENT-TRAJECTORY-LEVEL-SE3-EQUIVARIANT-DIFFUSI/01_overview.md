@@ -1,7 +1,7 @@
 # ET-SEED: EFFICIENT TRAJECTORY-LEVEL SE(3) EQUIVARIANT DIFFUSION POLICY
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, Diffusion, equivariant
 - Paper link: ./2025/ICLR/2025_ICLR_ET-SEED-EFFICIENT-TRAJECTORY-LEVEL-SE3-EQUIVARIANT-DIFFUSI/paper.pdf
 - Code/Project: not identified from OpenReview

@@ -1,7 +1,7 @@
 # VarSplat: Uncertainty-aware 3D Gaussian Splatting for Robust RGB-D SLAM
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, geometry, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_VarSplat-Uncertainty-aware-3D-Gaussian-Splatting-for-Robus/paper.pdf
 - Code/Project: not identified

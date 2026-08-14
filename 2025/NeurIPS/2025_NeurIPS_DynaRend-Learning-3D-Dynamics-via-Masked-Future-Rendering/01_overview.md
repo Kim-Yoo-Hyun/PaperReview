@@ -1,7 +1,7 @@
 # DynaRend: Learning 3D Dynamics via Masked Future Rendering for Robotic Manipulation
 
 - Year/Venue: 2025 / NeurIPS Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_DynaRend-Learning-3D-Dynamics-via-Masked-Future-Rendering/paper.pdf
 - Code/Project: not identified from OpenReview

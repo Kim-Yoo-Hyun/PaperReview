@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2024 / ECCV
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Model, Navigation
 - Paper link: ./2024/ECCV/2024_ECCV_NavGPT-2-Unleashing-Navigational-Reasoning-Capability-for/paper.pdf
 - Code/Project: not identified

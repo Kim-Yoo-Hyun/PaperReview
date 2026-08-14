@@ -1,7 +1,7 @@
 # AutoOcc: Automatic Open-Ended Semantic Occupancy Annotation via Vision-Language Guided Gaussian Splatting
 
 - Year/Venue: 2025 / ICCV
-- Category: Open-Vocabulary 3D Mapping
+- Category: Embodied Navigation and Mapping
 - Tags: semantic occupancy, Vision-Language, Gaussian Splatting
 - Paper link: ./2025/ICCV/2025_ICCV_AutoOcc-Automatic-Open-Ended-Semantic-Occupancy-Annotation/paper.pdf
 - Code/Project: not identified from primary page

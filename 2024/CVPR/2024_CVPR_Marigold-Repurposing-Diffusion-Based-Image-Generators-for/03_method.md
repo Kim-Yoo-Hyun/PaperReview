@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / CVPR
-- Category: Foundations: Monocular Geometry
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: Diffusion, Generation, depth, 3D Vision
 - Paper link: ./2024/CVPR/2024_CVPR_Marigold-Repurposing-Diffusion-Based-Image-Generators-for/paper.pdf
 - Code/Project: not identified

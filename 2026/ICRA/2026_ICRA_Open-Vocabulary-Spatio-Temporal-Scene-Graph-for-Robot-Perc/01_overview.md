@@ -1,7 +1,7 @@
 # Open-Vocabulary Spatio-Temporal Scene Graph for Robot Perception and Teleoperation Planning
 
 - Year/Venue: 2026 / ICRA
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: Robotics, Graph Reasoning, semantic
 - Paper link: ./2026/ICRA/2026_ICRA_Open-Vocabulary-Spatio-Temporal-Scene-Graph-for-Robot-Perc/paper.pdf
 - Code/Project: not identified from venue audit

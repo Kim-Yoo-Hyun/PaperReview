@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / RA-L
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: semantic
 - Paper link: ./2026/RA-L/2026_RA-L_Compact-Object-Level-Representations-with-Open-Vocabulary/paper.pdf
 - Code/Project: not identified

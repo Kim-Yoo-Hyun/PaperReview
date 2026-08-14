@@ -1,7 +1,7 @@
 # SAM 2: Segment Anything in Images and Videos
 
 - Year/Venue: 2025 / ICLR
-- Category: Foundations: Vision Foundation Models
+- Category: Foundations: Vision and Language Models
 - Tags: segmentation, foundation model, prompting, video segmentation, memory
 - Paper link: ./2025/ICLR/2025_ICLR_SAM-2-Segment-Anything-in-Images-and-Videos/paper.pdf
 - Code/Project: https://github.com/facebookresearch/sam2

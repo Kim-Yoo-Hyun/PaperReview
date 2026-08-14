@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / CVPR
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLM, Planning, simulation
 - Paper link: ./2026/CVPR/2026_CVPR_SIMPACT-Simulation-Enabled-Action-Planning-using-Vision-La/paper.pdf
 - Code/Project: not identified from primary page

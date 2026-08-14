@@ -1,0 +1,18 @@
+{
+  "date": "2026-08-12T17:47:39+09:00",
+  "papers_before": 802,
+  "papers_added": 9,
+  "papers_after": 811,
+  "pdf_policy": "official links only; no PDFs downloaded",
+  "titles": [
+    "Flow Matching for Generative Modeling",
+    "π0: A Vision-Language-Action Flow Model for General Robot Control",
+    "What Matters in Learning from Offline Human Demonstrations for Robot Manipulation",
+    "PDDLStream: Integrating Symbolic Planners and Blackbox Samplers via Optimistic Adaptive Planning",
+    "FAST: Efficient Action Tokenization for Vision-Language-Action Models",
+    "Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success",
+    "Reactive Diffusion Policy: Slow-Fast Visual-Tactile Policy Learning for Contact-Rich Manipulation",
+    "Can We Detect Failures Without Failure Data? Uncertainty-Aware Runtime Failure Detection for Imitation Learning Policies",
+    "RLBench: The Robot Learning Benchmark & Learning Environment"
+  ]
+}

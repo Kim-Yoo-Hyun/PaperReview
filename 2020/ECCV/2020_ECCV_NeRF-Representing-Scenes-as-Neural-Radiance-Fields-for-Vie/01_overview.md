@@ -1,7 +1,7 @@
 # NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis
 
 - Year/Venue: 2020 / ECCV
-- Category: Foundations: 3D Scene Representations
+- Category: Neural Scene Representations
 - Tags: NeRF, 3D reconstruction, representation
 - Paper link: ./2020/ECCV/2020_ECCV_NeRF-Representing-Scenes-as-Neural-Radiance-Fields-for-Vie/paper.pdf
 - Code/Project: https://github.com/bmild/nerf

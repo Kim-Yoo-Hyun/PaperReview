@@ -1,7 +1,7 @@
 # Deep Closest Point: Learning Representations for Point Cloud Registration
 
 - Year/Venue: 2019 / ICCV
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: 3D Vision, registration, point cloud, alignment
 - Paper link: ./2019/ICCV/2019_ICCV_Deep-Closest-Point-Learning-Representations-for-Point-Clou/paper.pdf
 - Code/Project: https://github.com/WangYueFt/dcp

@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: Graph Reasoning, Diffusion
 - Paper link: ./2024/ECCV/2024_ECCV_EchoScene-Indoor-Scene-Generation-via-Information-Echo-ove/paper.pdf
 - Code/Project: not identified

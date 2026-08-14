@@ -1,7 +1,7 @@
 # Generalizable Coarse-to-Fine Robot Manipulation via Language-Aligned 3D Keypoints
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, 3D Vision, Imitation Learning
 - Paper link: ./2026/ICLR/2026_ICLR_Generalizable-Coarse-to-Fine-Robot-Manipulation-via-Langua/paper.pdf
 - Code/Project: not identified from OpenReview

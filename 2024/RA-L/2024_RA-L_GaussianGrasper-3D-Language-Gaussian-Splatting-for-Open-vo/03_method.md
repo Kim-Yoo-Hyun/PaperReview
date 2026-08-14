@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / RA-L
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Robotics, 3D Vision, Gaussian Splatting, semantic
 - Paper link: ./2024/RA-L/2024_RA-L_GaussianGrasper-3D-Language-Gaussian-Splatting-for-Open-vo/paper.pdf
 - Code/Project: https://github.com/MrSecant/GaussianGrasper

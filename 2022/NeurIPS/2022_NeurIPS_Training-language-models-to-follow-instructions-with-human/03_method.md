@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2022 / NeurIPS
-- Category: Foundations: Transformer and Language Models
+- Category: Foundations: Vision and Language Models
 - Tags: LLM, instruction tuning, alignment
 - Paper link: ./2022/NeurIPS/2022_NeurIPS_Training-language-models-to-follow-instructions-with-human/paper.pdf
 - Code/Project: not released

@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: LLM, 3D Vision, Planning
 - Paper link: ./2024/CVPR/2024_CVPR_LL3DA-Visual-Interactive-Instruction-Tuning-for-Omni-3D-Un/paper.pdf
 - Code/Project: https://github.com/Open3DA/LL3DA

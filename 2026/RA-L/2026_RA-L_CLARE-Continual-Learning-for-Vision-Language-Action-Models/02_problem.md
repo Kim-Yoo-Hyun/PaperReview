@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / RA-L
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model
 - Paper link: ./2026/RA-L/2026_RA-L_CLARE-Continual-Learning-for-Vision-Language-Action-Models/paper.pdf
 - Code/Project: https://tum-lsy.github.io/CLARE/

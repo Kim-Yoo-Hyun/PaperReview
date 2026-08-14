@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Diffusion, Generation, 3D Vision
 - Paper link: ./2026/ICLR/2026_ICLR_Geometry-Forcing-Marrying-Video-Diffusion-and-3D-Represent/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,9 @@
 # A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2011 / AISTATS
-- Category: Foundations: RL and Imitation Learning
+- Category: Robotics Foundations: Robot Learning
 - Tags: Robotics, Imitation Learning, policy learning
 - Paper link: ./2011/AISTATS/2011_AISTATS_A-Reduction-of-Imitation-Learning-and-Structured-Predictio/paper.pdf
 - Code/Project: not identified
@@ -24,7 +26,7 @@
 - We show that any such no regret algorithm, combined with additional reduction assumptions, must find a policy with good performance under the distribution of observations it induces in ...
 
 ## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.
 
 ## Contribution
 - We demonstrate that this new approach outperforms previous approaches on two challenging imitation learning problems and a benchmark sequence labeling problem.

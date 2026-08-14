@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / IROS
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting
 - Paper link: ./2025/IROS/2025_IROS_FOCI-Trajectory-Optimization-on-Gaussian-Splats/paper.pdf
 - Code/Project: https://rffr.leggedrobotics.com/works/foci/

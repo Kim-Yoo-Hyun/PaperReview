@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, semantic
 - Paper link: ./2025/ICCV/2025_ICCV_OV-SCAN-Semantically-Consistent-Alignment-for-Novel-Object/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # ReKep: Spatio-Temporal Reasoning of Relational Keypoint Constraints for Robotic Manipulation
 
 - Year/Venue: 2024 / CoRL
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Planning, 3D geometry, Robotics, VLM
 - Paper link: ./2024/CoRL/2024_CoRL_ReKep-Spatio-Temporal-Reasoning-of-Relational-Keypoint-Con/paper.pdf
 - Code/Project: https://github.com/huangwl18/ReKep

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2020 / ECCV
-- Category: Foundations: 3D Representation Learning
+- Category: 3D Representation Learning
 - Tags: 3D Vision, point cloud, representation, self-supervised
 - Paper link: ./2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/paper.pdf
 - Code/Project: https://github.com/facebookresearch/PointContrast

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2021 / NeurIPS
-- Category: Foundations: 3D Scene Representations
+- Category: Neural Scene Representations
 - Tags: 3D Vision, NeRF, surface reconstruction, geometry
 - Paper link: ./2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering/paper.pdf
 - Code/Project: https://lingjie0206.github.io/papers/NeuS/

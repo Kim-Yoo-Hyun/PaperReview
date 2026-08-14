@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICML
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Model, Robotics, 3D Vision, Navigation
 - Paper link: ./2026/ICML/2026_ICML_Joint-Navigation-and-Manipulation-Planning-with-3D-Interac/paper.pdf
 - Code/Project: not identified from OpenReview

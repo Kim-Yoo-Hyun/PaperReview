@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2023 / ICRA
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: LLM, Planning, Robotics
 - Paper link: ./2023/ICRA/2023_ICRA_Code-as-Policies-Language-Model-Programs-for-Embodied-Cont/paper.pdf
 - Code/Project: https://code-as-policies.github.io/

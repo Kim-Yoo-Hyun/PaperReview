@@ -1,7 +1,7 @@
 # TIC-VLA: A Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments
 
 - Year/Venue: 2026 / ICML
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: VLA, Vision-Language Model, Robotics, Navigation, Reinforcement Learning
 - Paper link: ./2026/ICML/2026_ICML_TIC-VLA-A-Think-in-Control-Vision-Language-Action-Model-fo/paper.pdf
 - Code/Project: not identified from OpenReview

@@ -1,35 +1,41 @@
-# Insights
+# Insights — A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: In this paper, we propose a new iterative algorithm, which trains a stationary deterministic policy, that can be seen as a no regret algorithm in an online learning ...
-- 출발 문제 단서: Sequence Prediction problems arise commonly in practice.
-- 주장된 효과 단서: We demonstrate that this new approach outperforms previous approaches on two challenging imitation learning problems and a benchmark sequence labeling problem.
+> Evidence maturity: `UNREAD`. 이 문서는 읽기 위치와 검증 질문을 정리한 curation note이며, 정독 완료를 뜻하지 않는다.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- 논문이 제안한 representation/method를 3D scene understanding과 robot decision-making 사이의 중간 표현으로 재해석할 수 있다.
-- 핵심 단서를 그대로 쓰기보다 geometry, semantics, action constraint 중 무엇을 보강해야 하는지 확인하는 출발점으로 삼는다.
+## Why CORE
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: We demonstrate that this new approach outperforms previous approaches on two challenging imitation learning problems and a benchmark sequence labeling problem.
-- 논문이 다룬 task 범위 밖의 3D consistency, robotics transfer, open-world generalization은 후속 연구 질문으로 남는다.
+이 논문은 **RL, IL, and policy learning foundations**에서 data distribution, policy objective, value/sequence/generative action interface를 비교하기 위한 robot-learning 기반로 선정됐다.
 
-## 다음 연구 질문
-- 이 방법의 핵심 representation이 3D geometry와 semantic grounding을 동시에 보존하는가?
-- 동일한 idea가 online robot perception/action setting에서도 유지되는가?
-- failure case가 data 부족, geometry mismatch, language ambiguity, policy limitation 중 어디에서 오는가?
+## Captured Source Cues — Not Yet Independently Verified
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / accuracy
-- 내 연구 확장 benchmark 후보: ScanNet, Matterport3D, nuScenes, CALVIN
-- 내 연구 확장 metric 후보: mIoU, accuracy, success rate, generalization gap
-- 검증 초점: paper task 성능과 3D/robotics downstream utility를 함께 확인한다.
-
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
-
-## 근거가 되는 논문 단서
 - Problem cue: Sequence Prediction problems arise commonly in practice.
 - Method cue: In this paper, we propose a new iterative algorithm, which trains a stationary deterministic policy, that can be seen as a no regret algorithm in an online learning ...
-- Result cue: We demonstrate that this new approach outperforms previous approaches on two challenging imitation learning problems and a benchmark sequence labeling problem.
+- Result/evaluation cue: We demonstrate that this new approach outperforms previous approaches on two challenging imitation learning problems and a benchmark sequence labeling problem.
+
+위 cue는 기존 official abstract 또는 local text extraction에서 보존한 것이다. 수치·조건·인과적 해석은 full-text 정독 전까지 `UNVERIFIED`다.
+
+## Dependency Position
+
+`이 track의 출발점 → A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning → Learning Neural Network Policies with Guided Policy Search under Unknown Dynamics`
+
+이 화살표는 reading dependency다. 직접 citation 관계는 references와 related work를 확인한 뒤 synthesis 문서에만 확정한다.
+
+## Close-Reading Checklist
+
+- learning setting, objective, policy/value representation, data source, interaction budget, generalization split, optimization failure
+- 논문이 고정한 가정과 실제 deployment에서 깨질 조건
+- strongest baseline과 공정한 비교가 성립하는 조건
+- negative result, failure case, compute/data/hardware dependency
+
+## Research Use
+
+- 성능 향상이 objective, data coverage, architecture 중 어디에서 오는지 분리한다.
+- 연결 gap: `G-06 / G-08 / G-12` in [RESEARCH_GAPS.md](../../../research/RESEARCH_GAPS.md)
+
+## Minimal Reproduction
+
+동일 observation/action/data split에서 objective만 바꾸고 success, OOD degradation와 calibration을 비교한다.
+
+## Promotion Rule
+
+`READ`로 올리려면 method/evaluation 필드를 채우고, `SYNTHESIZED`로 올리려면 같은 track의 선행·후속 논문과 comparison matrix를 갱신한다.

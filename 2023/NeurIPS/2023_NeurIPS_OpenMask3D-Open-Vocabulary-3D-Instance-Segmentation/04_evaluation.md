@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2023 / NeurIPS
-- Category: Open-Vocabulary 3D Mapping
+- Category: Embodied Navigation and Mapping
 - Tags: open-vocabulary, 3D segmentation, CLIP
 - Paper link: ./2023/NeurIPS/2023_NeurIPS_OpenMask3D-Open-Vocabulary-3D-Instance-Segmentation/paper.pdf
 - Code/Project: https://openmask3d.github.io/

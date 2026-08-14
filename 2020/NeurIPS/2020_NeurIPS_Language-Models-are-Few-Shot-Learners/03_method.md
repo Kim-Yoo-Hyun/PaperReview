@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2020 / NeurIPS
-- Category: Foundations: Transformer and Language Models
+- Category: Foundations: Vision and Language Models
 - Tags: LLM, in-context learning
 - Paper link: ./2020/NeurIPS/2020_NeurIPS_Language-Models-are-Few-Shot-Learners/paper.pdf
 - Code/Project: not released

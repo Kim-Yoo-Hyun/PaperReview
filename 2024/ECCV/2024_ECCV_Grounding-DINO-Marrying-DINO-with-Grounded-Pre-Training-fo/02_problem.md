@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2024 / ECCV
-- Category: Foundations: Vision Foundation Models
+- Category: Foundations: Vision and Language Models
 - Tags: Vision Foundation Model, grounding, open-vocabulary
 - Paper link: ./2024/ECCV/2024_ECCV_Grounding-DINO-Marrying-DINO-with-Grounded-Pre-Training-fo/paper.pdf
 - Code/Project: https://github.com/IDEA-Research/GroundingDINO

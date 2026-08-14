@@ -1,0 +1,23 @@
+# Method
+
+- Year/Venue: 2026 / ICLR Poster
+- Category: Robot Learning and Data
+- Tags: Robotics, Reinforcement Learning, batch online RL, real robot
+- Paper link: [paper.pdf](./paper.pdf)
+- Code/Project: https://pd-perry.github.io/batch-online-rl/
+- Source audit: regenerated from local `paper.pdf` on 2026-08-11; survey-keyword template text removed.
+
+## Brief Method
+- On top of the recipe, we propose a simple practical addition to induce even more diversity and achieve better sample efficiency: applying a small amount of temporally correlated ...
+- Based on this analysis, we propose a general recipe for effective batch online RL.
+- Based on these observations, we propose a general recipe for effective batch online RL: train an expressive IL policy as the actor, train a Q-function on the autonomous ...
+
+## 원리적 동기
+- In this work, we perform a systematic empirical study to investigate what enables effective batch online RL in robotics with the goal of providing a general recipe to ...
+- Prior approaches to the batch online RL problem in robotics often focus on IL or filtered-IL methods as approaches that are easy to carry out.
+- On top of the recipe, we propose a simple practical addition to induce even more diversity and achieve better sample efficiency: applying a small amount of temporally correlated ...
+
+## 핵심 방법론
+- On top of the recipe, we propose a simple practical addition to induce even more diversity and achieve better sample efficiency: applying a small amount of temporally correlated ...
+- Based on these observations, we propose a general recipe for effective batch online RL: train an expressive IL policy as the actor, train a Q-function on the autonomous ...
+- We refer to this as batch online RL, a training paradigm in which policies generate large batches of data that are then used to iteratively refine those same ...

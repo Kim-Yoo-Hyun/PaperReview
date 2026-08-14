@@ -1,7 +1,7 @@
 # HAD: Hallucination-Aware Diffusion Priors for 3D Reconstruction
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_HAD-Hallucination-Aware-Diffusion-Priors-for-3D-Reconstruc/paper.pdf
 - Code/Project: not identified

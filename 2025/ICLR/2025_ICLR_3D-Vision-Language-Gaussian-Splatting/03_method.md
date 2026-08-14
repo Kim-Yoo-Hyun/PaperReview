@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Vision-Language Model, 3D Vision, Gaussian Splatting, semantic
 - Paper link: ./2025/ICLR/2025_ICLR_3D-Vision-Language-Gaussian-Splatting/paper.pdf
 - Code/Project: not identified from OpenReview

@@ -1,7 +1,7 @@
 # VGGT-Motion: Motion-Aware Calibration-Free Monocular SLAM for Long-Range Consistency
 
 - Year/Venue: 2026 / ICML spotlight
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: geometry, depth, 3D Vision
 - Paper link: ./2026/ICML/2026_ICML_VGGT-Motion-Motion-Aware-Calibration-Free-Monocular-SLAM-f/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: NeRF, 3D reconstruction, 3D Vision
 - Paper link: ./2024/ECCV/2024_ECCV_SG-NeRF-Neural-Surface-Reconstruction-with-Scene-Graph-Opt/paper.pdf
 - Code/Project: not identified

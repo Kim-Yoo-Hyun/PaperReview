@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2021 / ICCV
-- Category: Foundations: 3D Representation Learning
+- Category: 3D Representation Learning
 - Tags: point cloud, 3D Vision
 - Paper link: ./2021/ICCV/2021_ICCV_Point-Transformer/paper.pdf
 - Code/Project: not identified

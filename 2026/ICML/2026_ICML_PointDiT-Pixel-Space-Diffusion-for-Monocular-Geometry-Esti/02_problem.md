@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / ICML
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Diffusion, Generation, depth, point cloud, 3D Vision
 - Paper link: ./2026/ICML/2026_ICML_PointDiT-Pixel-Space-Diffusion-for-Monocular-Geometry-Esti/paper.pdf
 - Code/Project: not identified

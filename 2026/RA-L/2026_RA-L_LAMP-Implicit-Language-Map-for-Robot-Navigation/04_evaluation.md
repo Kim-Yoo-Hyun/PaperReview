@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / RA-L
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Robotics, Navigation
 - Paper link: ./2026/RA-L/2026_RA-L_LAMP-Implicit-Language-Map-for-Robot-Navigation/paper.pdf
 - Code/Project: https://lab-of-ai-and-robotics.github.io/LAMP/

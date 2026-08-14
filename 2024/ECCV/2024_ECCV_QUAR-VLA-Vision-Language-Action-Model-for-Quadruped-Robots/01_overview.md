@@ -1,7 +1,7 @@
 # QUAR-VLA: Vision-Language-Action Model for Quadruped Robots
 
 - Year/Venue: 2024 / ECCV
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics
 - Paper link: ./2024/ECCV/2024_ECCV_QUAR-VLA-Vision-Language-Action-Model-for-Quadruped-Robots/paper.pdf
 - Code/Project: not identified

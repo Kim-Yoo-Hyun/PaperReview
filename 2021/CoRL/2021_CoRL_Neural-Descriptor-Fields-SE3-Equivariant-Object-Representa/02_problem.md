@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2021 / CoRL
-- Category: Equivariance, Diffusion, and 3D Action
+- Category: Manipulation, Contact, and Dexterity
 - Tags: Robotics, equivariant, 3D geometry, manipulation
 - Paper link: ./2021/CoRL/2021_CoRL_Neural-Descriptor-Fields-SE3-Equivariant-Object-Representa/paper.pdf
 - Code/Project: https://github.com/anthonysimeonov/ndf_robot

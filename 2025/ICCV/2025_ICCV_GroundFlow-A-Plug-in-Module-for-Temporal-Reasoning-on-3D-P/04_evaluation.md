@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_GroundFlow-A-Plug-in-Module-for-Temporal-Reasoning-on-3D-P/paper.pdf
 - Code/Project: not identified

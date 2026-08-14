@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / ICML Spotlight
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model, 3D Vision
 - Paper link: ./2026/ICML/2026_ICML_SpatioLM-Towards-General-Physical-Spatial-Intelligence-in/paper.pdf
 - Code/Project: not identified from OpenReview

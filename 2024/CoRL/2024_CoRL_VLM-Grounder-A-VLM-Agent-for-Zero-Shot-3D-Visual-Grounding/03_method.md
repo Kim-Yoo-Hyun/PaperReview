@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / CoRL
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: 3D visual grounding, VLM, zero-shot
 - Paper link: ./2024/CoRL/2024_CoRL_VLM-Grounder-A-VLM-Agent-for-Zero-Shot-3D-Visual-Grounding/paper.pdf
 - Code/Project: https://github.com/InternRobotics/VLM-Grounder

@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model, 3D Vision
 - Paper link: ./2026/ICLR/2026_ICLR_GPT4Scene-Understand-3D-Scenes-from-Videos-with-Vision-Lan/paper.pdf
 - Code/Project: not identified from OpenReview

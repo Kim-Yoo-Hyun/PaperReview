@@ -1,7 +1,7 @@
 # GaussianDreamer: Fast Generation from Text to 3D Gaussians by Bridging 2D and 3D Diffusion Models
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
 - Paper link: ./2024/CVPR/2024_CVPR_GaussianDreamer-Fast-Generation-from-Text-to-3D-Gaussians/paper.pdf
 - Code/Project: not identified

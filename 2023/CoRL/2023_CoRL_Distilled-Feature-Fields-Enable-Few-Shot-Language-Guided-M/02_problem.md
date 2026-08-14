@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2023 / CoRL
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Robotics, NeRF, Vision-Language, manipulation
 - Paper link: ./2023/CoRL/2023_CoRL_Distilled-Feature-Fields-Enable-Few-Shot-Language-Guided-M/paper.pdf
 - Code/Project: https://f3rm.github.io/

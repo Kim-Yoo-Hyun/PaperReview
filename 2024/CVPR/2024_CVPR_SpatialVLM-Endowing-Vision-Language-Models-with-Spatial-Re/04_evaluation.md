@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model, spatial reasoning, Robotics
 - Paper link: ./2024/CVPR/2024_CVPR_SpatialVLM-Endowing-Vision-Language-Models-with-Spatial-Re/paper.pdf
 - Code/Project: https://spatial-vlm.github.io/

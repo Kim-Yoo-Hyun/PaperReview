@@ -1,7 +1,7 @@
 # OVA-Fields: Weakly Supervised Open-Vocabulary Affordance Fields for Robot Operational Part Detection
 
 - Year/Venue: 2025 / ICCV
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, semantic
 - Paper link: ./2025/ICCV/2025_ICCV_OVA-Fields-Weakly-Supervised-Open-Vocabulary-Affordance-Fi/paper.pdf
 - Code/Project: not identified

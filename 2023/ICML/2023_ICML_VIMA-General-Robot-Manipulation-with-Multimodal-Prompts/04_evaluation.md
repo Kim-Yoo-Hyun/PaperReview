@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2023 / ICML
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Vision-Language-Action, Imitation Learning, Robotics
 - Paper link: ./2023/ICML/2023_ICML_VIMA-General-Robot-Manipulation-with-Multimodal-Prompts/paper.pdf
 - Code/Project: https://vimalabs.github.io/

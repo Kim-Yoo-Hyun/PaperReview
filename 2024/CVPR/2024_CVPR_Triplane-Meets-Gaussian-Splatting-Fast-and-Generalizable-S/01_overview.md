@@ -1,7 +1,7 @@
 # Triplane Meets Gaussian Splatting: Fast and Generalizable Single-View 3D Reconstruction with Transformers
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
 - Paper link: ./2024/CVPR/2024_CVPR_Triplane-Meets-Gaussian-Splatting-Fast-and-Generalizable-S/paper.pdf
 - Code/Project: not identified

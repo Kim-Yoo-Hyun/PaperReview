@@ -1,7 +1,7 @@
 # ST4R-Splat: Spatio-Temporal Referring Segmentation in 4D Gaussian Splatting
 
 - Year/Venue: 2026 / CVPR
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting, 4D, referring segmentation
 - Paper link: ./2026/CVPR/2026_CVPR_ST4R-Splat-Spatio-Temporal-Referring-Segmentation-in-4D-Ga/paper.pdf
 - Code/Project: not identified from primary page

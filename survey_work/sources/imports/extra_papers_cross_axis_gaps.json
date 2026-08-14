@@ -1,0 +1,522 @@
+[
+  {
+    "title": "AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models",
+    "year": 2026,
+    "venue": "CVPR",
+    "category": "Tactile, Force, and Contact-Aware VLA",
+    "tags": ["Robotics", "VLA", "tactile sensing", "contact-rich manipulation", "real-time control"],
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.html",
+    "project": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.html"
+  },
+  {
+    "title": "ForceVLA2: Unleashing Hybrid Force-Position Control with Force Awareness for Contact-Rich Manipulation",
+    "year": 2026,
+    "venue": "CVPR",
+    "category": "Tactile, Force, and Contact-Aware VLA",
+    "tags": ["Robotics", "VLA", "force sensing", "hybrid force-position control", "contact-rich manipulation"],
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.html",
+    "project": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.html"
+  },
+  {
+    "title": "AtomicVLA: Unlocking the Potential of Atomic Skill Learning in Robots",
+    "year": 2026,
+    "venue": "CVPR",
+    "category": "Long-Horizon VLA and Skill Composition",
+    "tags": ["Robotics", "VLA", "atomic skills", "skill composition", "long-horizon manipulation"],
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.html",
+    "project": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.html"
+  },
+  {
+    "title": "Counterfactual VLA: Self-Reflective Vision-Language-Action Model with Adaptive Reasoning",
+    "year": 2026,
+    "venue": "CVPR",
+    "category": "Failure Recovery and Test-Time VLA Reasoning",
+    "tags": ["Robotics", "VLA", "self-reflection", "failure recovery", "test-time reasoning"],
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.html",
+    "project": "https://openaccess.thecvf.com/content/CVPR2026/html/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.html"
+  },
+  {
+    "title": "FM-Steer: Enhance Generalist Policies with Value-Guided Cascaded Denoising",
+    "year": 2026,
+    "venue": "CVPR",
+    "category": "Failure Recovery and Test-Time VLA Reasoning",
+    "tags": ["Robotics", "VLA", "test-time computation", "value guidance", "dexterous manipulation", "real-time control"],
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Song_FM-Steer_Enhance_Generalist_Policies_with_Value-Guided_Cascaded_Denoising_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Song_FM-Steer_Enhance_Generalist_Policies_with_Value-Guided_Cascaded_Denoising_CVPR_2026_paper.html",
+    "project": "https://hume-vla.github.io/"
+  },
+  {
+    "title": "PALM: Progress-Aware Policy Learning via Affordance Reasoning for Long-Horizon Robotic Manipulation",
+    "year": 2026,
+    "venue": "CVPR",
+    "category": "Long-Horizon VLA and Skill Composition",
+    "tags": ["Robotics", "VLA", "affordance", "progress estimation", "long-horizon manipulation"],
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.html",
+    "project": "https://openaccess.thecvf.com/content/CVPR2026/html/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.html"
+  },
+  {
+    "title": "SAFE: Multitask Failure Detection for Vision-Language-Action Models",
+    "year": 2025,
+    "venue": "NeurIPS",
+    "category": "Safe VLA, Uncertainty, and Failure Detection",
+    "tags": ["Robotics", "VLA", "failure detection", "conformal prediction", "uncertainty"],
+    "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/392d0d05e2f514063e6ce6f8b370834c-Paper-Conference.pdf",
+    "page": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/392d0d05e2f514063e6ce6f8b370834c-Abstract-Conference.html",
+    "project": "https://vla-safe.github.io/"
+  },
+  {
+    "title": "Learning to Be Uncertain: Pre-training World Models with Horizon-Calibrated Uncertainty",
+    "year": 2026,
+    "venue": "ICLR",
+    "category": "Uncertainty-Aware Robot World Models",
+    "tags": ["Robotics", "world model", "uncertainty", "long-horizon prediction", "model-based reinforcement learning"],
+    "pdf": "https://openreview.net/pdf?id=pZuZWRuPyi",
+    "page": "https://iclr.cc/virtual/2026/poster/10007319",
+    "project": "https://iclr.cc/virtual/2026/poster/10007319"
+  },
+  {
+    "title": "WorldGym: World Model as An Environment for Policy Evaluation",
+    "year": 2026,
+    "venue": "ICLR",
+    "category": "Robot World Models and Policy Evaluation",
+    "tags": ["Robotics", "VLA", "world model", "policy evaluation", "video prediction"],
+    "arxiv": "2506.00613",
+    "page": "https://iclr.cc/virtual/2026/poster/10008029",
+    "project": "https://world-model-eval.github.io/"
+  },
+  {
+    "title": "RoboDreamer: Learning Compositional World Models for Robot Imagination",
+    "year": 2024,
+    "venue": "ICML",
+    "category": "Robot World Models and Policy Evaluation",
+    "tags": ["Robotics", "world model", "video prediction", "language planning", "compositional generalization"],
+    "arxiv": "2404.12377",
+    "page": "https://proceedings.mlr.press/v235/zhou24f.html",
+    "project": "https://robodreamer.github.io/"
+  },
+  {
+    "title": "Learning Interactive Real-World Simulators",
+    "year": 2024,
+    "venue": "ICLR",
+    "category": "Robot World Models and Policy Evaluation",
+    "tags": ["Robotics", "world model", "interactive simulator", "Vision-Language", "zero-shot transfer"],
+    "arxiv": "2310.06114",
+    "page": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/c4d66eae503694424123b93ac0fbaf17-Abstract-Conference.html",
+    "project": "https://universal-simulator.github.io/"
+  },
+  {
+    "title": "Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets",
+    "year": 2025,
+    "venue": "RSS",
+    "category": "Robot World Models and Policy Evaluation",
+    "tags": ["Robotics", "VLA", "world model", "video diffusion", "action diffusion", "robot data"],
+    "arxiv": "2504.02792",
+    "page": "https://roboticsconference.org/2025/program/papers/15/",
+    "project": "https://weirdlabuw.github.io/uwm/"
+  },
+  {
+    "title": "Robotic World Model: A Neural Network Simulator for Robust Policy Optimization in Robotics",
+    "year": 2025,
+    "venue": "arXiv",
+    "category": "Robot World Models and Policy Evaluation",
+    "tags": ["Robotics", "world model", "policy optimization", "simulation", "robustness"],
+    "arxiv": "2501.10100",
+    "project": "not released"
+  },
+  {
+    "title": "FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation",
+    "year": 2025,
+    "venue": "arXiv",
+    "category": "4D and Geometry-Grounded Robot World Models",
+    "tags": ["Robotics", "world model", "RGB-D", "3D scene flow", "robot manipulation", "4D reasoning"],
+    "arxiv": "2505.10075",
+    "project": "not released"
+  },
+  {
+    "title": "Strengthening Generative Robot Policies through Predictive World Modeling",
+    "year": 2025,
+    "venue": "RA-L",
+    "category": "Robot World Models and Policy Evaluation",
+    "tags": ["Robotics", "world model", "diffusion policy", "model-based planning", "contact-rich manipulation"],
+    "arxiv": "2502.00622",
+    "page": "https://computationalrobotics.seas.harvard.edu/GPC/",
+    "project": "https://computationalrobotics.seas.harvard.edu/GPC/"
+  },
+  {
+    "title": "World Action Models are Zero-shot Policies",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Robot World Models and Policy Evaluation",
+    "tags": ["Robotics", "VLA", "world model", "zero-shot policy", "action representation"],
+    "arxiv": "2602.15922",
+    "project": "not released"
+  },
+  {
+    "title": "Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners",
+    "year": 2023,
+    "venue": "CoRL",
+    "category": "Safe VLA, Uncertainty, and Failure Detection",
+    "tags": ["Robotics", "LLM planning", "uncertainty", "conformal prediction", "human intervention"],
+    "arxiv": "2307.01928",
+    "project": "https://robot-help.github.io/"
+  },
+  {
+    "title": "Failure Prediction with Statistical Guarantees for Vision-Based Robot Control",
+    "year": 2022,
+    "venue": "RSS",
+    "category": "Safe VLA, Uncertainty, and Failure Detection",
+    "tags": ["Robotics", "failure prediction", "vision-based control", "statistical guarantees", "safe deployment"],
+    "arxiv": "2202.05894",
+    "project": "not released"
+  },
+  {
+    "title": "Dynamic Safety in Complex Environments: Synthesizing Safety Filters with Poisson's Equation",
+    "year": 2025,
+    "venue": "RSS",
+    "category": "Safe Robotics and Perception-Based Safety Filters",
+    "tags": ["Robotics", "safety filter", "control barrier function", "perception", "humanoid", "quadruped"],
+    "pdf": "https://www.roboticsproceedings.org/rss21/p137.pdf",
+    "page": "https://www.roboticsproceedings.org/rss21/p137.html",
+    "project": "https://www.roboticsproceedings.org/rss21/p137.html"
+  },
+  {
+    "title": "Octopi: Object Property Reasoning with Large Tactile-Language Models",
+    "year": 2024,
+    "venue": "RSS",
+    "category": "Tactile, Force, and Contact-Aware VLA",
+    "tags": ["Robotics", "tactile sensing", "Vision-Language", "object properties", "multimodal reasoning"],
+    "arxiv": "2405.02794",
+    "project": "https://octopi-tactile-lvlm.github.io/"
+  },
+  {
+    "title": "Sparsh: Self-supervised touch representations for vision-based tactile sensing",
+    "year": 2024,
+    "venue": "CoRL",
+    "category": "Tactile, Force, and Contact-Aware VLA",
+    "tags": ["Robotics", "tactile sensing", "self-supervised learning", "foundation model", "contact"],
+    "arxiv": "2410.24090",
+    "project": "https://sparsh-ssl.github.io/"
+  },
+  {
+    "title": "Binding Touch to Everything: Learning Unified Multimodal Tactile Representations",
+    "year": 2024,
+    "venue": "CVPR",
+    "category": "Tactile, Force, and Contact-Aware VLA",
+    "tags": ["Robotics", "tactile sensing", "Vision-Language", "multimodal representation", "open-vocabulary"],
+    "arxiv": "2401.18084",
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Binding_Touch_to_Everything_Learning_Unified_Multimodal_Tactile_Representations_CVPR_2024_paper.html",
+    "project": "https://cfeng16.github.io/UniTouch/"
+  },
+  {
+    "title": "Where2Act: From Pixels to Actions for Articulated 3D Objects",
+    "year": 2021,
+    "venue": "ICCV",
+    "category": "Active 3D Perception and Articulated Object Interaction",
+    "tags": ["Robotics", "3D Vision", "affordance", "articulated objects", "active perception", "point cloud"],
+    "arxiv": "2101.02692",
+    "project": "https://cs.stanford.edu/~kaichun/where2act/"
+  },
+  {
+    "title": "Act the Part: Learning Interaction Strategies for Articulated Object Part Discovery",
+    "year": 2021,
+    "venue": "ICCV",
+    "category": "Active 3D Perception and Articulated Object Interaction",
+    "tags": ["Robotics", "3D Vision", "active perception", "articulated objects", "part discovery"],
+    "arxiv": "2105.01047",
+    "project": "https://act-the-part.github.io/"
+  },
+  {
+    "title": "Ditto: Building Digital Twins of Articulated Objects from Interaction",
+    "year": 2022,
+    "venue": "CVPR",
+    "category": "Active 3D Perception and Articulated Object Interaction",
+    "tags": ["Robotics", "3D Vision", "digital twin", "articulated objects", "interaction", "implicit representation"],
+    "arxiv": "2202.08227",
+    "project": "https://ut-austin-rpl.github.io/Ditto/"
+  },
+  {
+    "title": "FlowBot3D: Learning 3D Articulation Flow to Manipulate Articulated Objects",
+    "year": 2022,
+    "venue": "RSS",
+    "category": "Active 3D Perception and Articulated Object Interaction",
+    "tags": ["Robotics", "3D Vision", "scene flow", "articulated objects", "point cloud", "manipulation"],
+    "arxiv": "2205.04382",
+    "project": "https://flowbot3d.github.io/"
+  },
+  {
+    "title": "UMPNet: Universal Manipulation Policy Network for Articulated Objects",
+    "year": 2022,
+    "venue": "RA-L",
+    "category": "Active 3D Perception and Articulated Object Interaction",
+    "tags": ["Robotics", "3D Vision", "active perception", "articulated objects", "manipulation policy"],
+    "arxiv": "2109.05668",
+    "project": "https://ump-net.cs.columbia.edu/"
+  },
+  {
+    "title": "Where2Explore: Few-shot Affordance Learning for Unseen Novel Categories of Articulated Objects",
+    "year": 2023,
+    "venue": "NeurIPS",
+    "category": "Active 3D Perception and Articulated Object Interaction",
+    "tags": ["Robotics", "3D Vision", "active exploration", "affordance", "articulated objects", "few-shot learning"],
+    "arxiv": "2309.07473",
+    "project": "https://sites.google.com/view/where2explore/"
+  },
+  {
+    "title": "Inner Monologue: Embodied Reasoning through Planning with Language Models",
+    "year": 2022,
+    "venue": "CoRL",
+    "category": "Long-Horizon Task and Motion Planning with Language",
+    "tags": ["Robotics", "LLM planning", "feedback", "replanning", "long-horizon manipulation"],
+    "arxiv": "2207.05608",
+    "page": "https://proceedings.mlr.press/v205/huang23c.html",
+    "project": "https://innermonologue.github.io/"
+  },
+  {
+    "title": "ProgPrompt: Generating Situated Robot Task Plans using Large Language Models",
+    "year": 2023,
+    "venue": "ICRA",
+    "category": "Long-Horizon Task and Motion Planning with Language",
+    "tags": ["Robotics", "LLM planning", "program synthesis", "situated planning", "long-horizon tasks"],
+    "arxiv": "2209.11302",
+    "page": "https://ieeexplore.ieee.org/document/10161317",
+    "project": "https://progprompt.github.io/"
+  },
+  {
+    "title": "SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning",
+    "year": 2023,
+    "venue": "CoRL",
+    "category": "Long-Horizon Task and Motion Planning with Language",
+    "tags": ["Robotics", "3D Vision", "LLM planning", "3D scene graph", "replanning", "mobile manipulation"],
+    "arxiv": "2307.06135",
+    "page": "https://proceedings.mlr.press/v229/rana23a.html",
+    "project": "https://sayplan.github.io/"
+  },
+  {
+    "title": "Text2Motion: From Natural Language Instructions to Feasible Plans",
+    "year": 2023,
+    "venue": "ICRA",
+    "category": "Long-Horizon Task and Motion Planning with Language",
+    "tags": ["Robotics", "LLM planning", "task and motion planning", "feasibility", "skill chaining"],
+    "arxiv": "2303.12153",
+    "project": "https://sites.google.com/view/text-to-motion/"
+  },
+  {
+    "title": "LLM+P: Empowering Large Language Models with Optimal Planning Proficiency",
+    "year": 2023,
+    "venue": "arXiv",
+    "category": "Long-Horizon Task and Motion Planning with Language",
+    "tags": ["Robotics", "LLM planning", "classical planning", "PDDL", "plan verification"],
+    "arxiv": "2304.11477",
+    "project": "https://github.com/Cranial-XIX/llm-p"
+  },
+  {
+    "title": "RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation",
+    "year": 2023,
+    "venue": "arXiv",
+    "category": "Cross-Embodiment Robot Learning and Action Representations",
+    "tags": ["Robotics", "generalist policy", "cross-embodiment", "self-improvement", "robot manipulation"],
+    "arxiv": "2306.11706",
+    "project": "https://deepmind.google/discover/blog/robocat-a-self-improving-robotic-agent/"
+  },
+  {
+    "title": "Scaling Proprioceptive-Visual Learning with Heterogeneous Pre-trained Transformers",
+    "year": 2024,
+    "venue": "NeurIPS",
+    "category": "Cross-Embodiment Robot Learning and Action Representations",
+    "tags": ["Robotics", "cross-embodiment", "proprioception", "visual representation", "heterogeneous data", "Transformer"],
+    "arxiv": "2409.20537",
+    "page": "https://papers.nips.cc/paper_files/paper/2024/hash/e0f393e7980a24fd12fa6f15adfa25fb-Abstract-Conference.html",
+    "project": "https://liruiw.github.io/hpt/"
+  },
+  {
+    "title": "XSkill: Cross Embodiment Skill Discovery",
+    "year": 2023,
+    "venue": "CoRL",
+    "category": "Cross-Embodiment Robot Learning and Action Representations",
+    "tags": ["Robotics", "cross-embodiment", "skill discovery", "human video", "imitation learning", "Diffusion"],
+    "arxiv": "2307.09955",
+    "page": "https://proceedings.mlr.press/v229/xu23a.html",
+    "project": "https://xskill.cs.columbia.edu/"
+  },
+  {
+    "title": "AnyTeleop: A General Vision-Based Dexterous Robot Arm-Hand Teleoperation System",
+    "year": 2023,
+    "venue": "RSS",
+    "category": "Cross-Embodiment Robot Learning and Action Representations",
+    "tags": ["Robotics", "teleoperation", "cross-embodiment", "dexterous manipulation", "data collection"],
+    "arxiv": "2307.04577",
+    "page": "https://www.roboticsproceedings.org/rss19/p015.html",
+    "project": "https://yzqin.github.io/anyteleop/"
+  },
+  {
+    "title": "MimicPlay: Long-Horizon Imitation Learning by Watching Human Play",
+    "year": 2023,
+    "venue": "CoRL",
+    "category": "Cross-Embodiment Robot Learning and Action Representations",
+    "tags": ["Robotics", "imitation learning", "human video", "cross-embodiment", "hierarchical policy", "long-horizon manipulation"],
+    "arxiv": "2302.12422",
+    "project": "https://mimic-play.github.io/"
+  },
+  {
+    "title": "RT-Trajectory: Robotic Task Generalization via Hindsight Trajectory Sketches",
+    "year": 2023,
+    "venue": "arXiv",
+    "category": "Cross-Embodiment Robot Learning and Action Representations",
+    "tags": ["Robotics", "VLA", "trajectory representation", "spatial reasoning", "task generalization"],
+    "arxiv": "2311.01977",
+    "project": "https://rt-trajectory.github.io/"
+  },
+  {
+    "title": "OPEN TEACH: A Versatile Teleoperation System for Robotic Manipulation",
+    "year": 2024,
+    "venue": "CoRL",
+    "category": "Cross-Embodiment Robot Learning and Action Representations",
+    "tags": ["Robotics", "teleoperation", "cross-embodiment", "dexterous manipulation", "bimanual manipulation", "data collection"],
+    "arxiv": "2403.07870",
+    "page": "https://proceedings.mlr.press/v270/iyer25a.html",
+    "project": "https://open-teach.github.io/"
+  },
+  {
+    "title": "BEHAVIOR-1K: A Benchmark for Embodied AI with 1,000 Everyday Activities and Realistic Simulation",
+    "year": 2022,
+    "venue": "CoRL",
+    "category": "Robot Datasets and Long-Horizon Embodied Benchmarks",
+    "tags": ["Robotics", "benchmark", "embodied AI", "long-horizon tasks", "simulation", "household robotics"],
+    "arxiv": "2403.09227",
+    "page": "https://proceedings.mlr.press/v205/li23s.html",
+    "project": "https://behavior.stanford.edu/"
+  },
+  {
+    "title": "RoboCasa: Large-Scale Simulation of Everyday Tasks for Generalist Robots",
+    "year": 2024,
+    "venue": "RSS",
+    "category": "Robot Datasets and Long-Horizon Embodied Benchmarks",
+    "tags": ["Robotics", "benchmark", "simulation", "household manipulation", "long-horizon tasks", "generalist policy"],
+    "arxiv": "2406.02523",
+    "project": "https://robocasa.ai/"
+  },
+  {
+    "title": "DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset",
+    "year": 2024,
+    "venue": "RSS",
+    "category": "Robot Datasets and Long-Horizon Embodied Benchmarks",
+    "tags": ["Robotics", "dataset", "in-the-wild", "robot manipulation", "data diversity", "generalist policy"],
+    "arxiv": "2403.12945",
+    "project": "https://droid-dataset.github.io/"
+  },
+  {
+    "title": "BridgeData V2: A Dataset for Robot Learning at Scale",
+    "year": 2023,
+    "venue": "CoRL",
+    "category": "Robot Datasets and Long-Horizon Embodied Benchmarks",
+    "tags": ["Robotics", "dataset", "imitation learning", "robot manipulation", "data scaling", "generalization"],
+    "arxiv": "2308.12952",
+    "project": "https://rail-berkeley.github.io/bridgedata/"
+  },
+  {
+    "title": "RH20T: A Comprehensive Robotic Dataset for Learning Diverse Skills in One-Shot",
+    "year": 2024,
+    "venue": "ICRA",
+    "category": "Robot Datasets and Long-Horizon Embodied Benchmarks",
+    "tags": ["Robotics", "dataset", "multimodal sensing", "robot manipulation", "one-shot learning", "cross-embodiment"],
+    "arxiv": "2307.00595",
+    "project": "https://rh20t.github.io/"
+  },
+  {
+    "title": "FurnitureBench: Reproducible Real-World Benchmark for Long-Horizon Complex Manipulation",
+    "year": 2023,
+    "venue": "RSS",
+    "category": "Robot Datasets and Long-Horizon Embodied Benchmarks",
+    "tags": ["Robotics", "benchmark", "assembly", "long-horizon manipulation", "real-world evaluation", "reproducibility"],
+    "arxiv": "2305.12821",
+    "project": "https://clvrai.github.io/furniture-bench/"
+  },
+  {
+    "title": "Factory: Fast Contact for Robotic Assembly",
+    "year": 2022,
+    "venue": "RSS",
+    "category": "Assembly, Tools, and Deformable Object Manipulation",
+    "tags": ["Robotics", "assembly", "contact-rich manipulation", "simulation", "reinforcement learning", "sim-to-real"],
+    "arxiv": "2205.03532",
+    "project": "https://github.com/NVIDIA-Omniverse/IsaacGymEnvs"
+  },
+  {
+    "title": "IndustReal: Transferring Contact-Rich Assembly Tasks from Simulation to Reality",
+    "year": 2023,
+    "venue": "RSS",
+    "category": "Assembly, Tools, and Deformable Object Manipulation",
+    "tags": ["Robotics", "assembly", "contact-rich manipulation", "reinforcement learning", "sim-to-real", "industrial robotics"],
+    "arxiv": "2305.17110",
+    "project": "https://research.nvidia.com/labs/srl/projects/industreal/"
+  },
+  {
+    "title": "SoftGym: Benchmarking Deep Reinforcement Learning for Deformable Object Manipulation",
+    "year": 2020,
+    "venue": "CoRL",
+    "category": "Assembly, Tools, and Deformable Object Manipulation",
+    "tags": ["Robotics", "deformable object", "benchmark", "reinforcement learning", "simulation"],
+    "arxiv": "2011.07215",
+    "project": "https://sites.google.com/view/softgym/"
+  },
+  {
+    "title": "FlingBot: The Unreasonable Effectiveness of Dynamic Manipulation for Cloth Unfolding",
+    "year": 2022,
+    "venue": "ICRA",
+    "category": "Assembly, Tools, and Deformable Object Manipulation",
+    "tags": ["Robotics", "deformable object", "cloth manipulation", "dynamic manipulation", "vision-based control"],
+    "arxiv": "2105.03655",
+    "project": "https://flingbot.cs.columbia.edu/"
+  },
+  {
+    "title": "Learning to Rearrange Deformable Cables, Fabrics, and Bags with Goal-Conditioned Transporter Networks",
+    "year": 2021,
+    "venue": "ICRA",
+    "category": "Assembly, Tools, and Deformable Object Manipulation",
+    "tags": ["Robotics", "deformable object", "cable manipulation", "cloth manipulation", "goal-conditioned learning", "vision-based control"],
+    "arxiv": "2012.03385",
+    "project": "https://sites.google.com/view/berkeley-deformable/"
+  },
+  {
+    "title": "DiffSkill: Skill Abstraction from Differentiable Physics for Deformable Object Manipulations with Tools",
+    "year": 2022,
+    "venue": "ICLR",
+    "category": "Assembly, Tools, and Deformable Object Manipulation",
+    "tags": ["Robotics", "deformable object", "tool use", "differentiable physics", "skill abstraction", "planning"],
+    "arxiv": "2203.17275",
+    "project": "https://diffskill.github.io/"
+  },
+  {
+    "title": "DextAIRity: Deformable Manipulation Can be a Breeze",
+    "year": 2022,
+    "venue": "RSS",
+    "category": "Assembly, Tools, and Deformable Object Manipulation",
+    "tags": ["Robotics", "deformable object", "cloth manipulation", "air flow", "dexterous manipulation", "real-world control"],
+    "arxiv": "2203.01197",
+    "project": "https://dextairity.cs.columbia.edu/"
+  },
+  {
+    "title": "Flying Hand: End-Effector-Centric Framework for Versatile Aerial Manipulation Teleoperation and Policy Learning",
+    "year": 2025,
+    "venue": "RSS",
+    "category": "Domain-Diverse Robot Learning",
+    "tags": ["Robotics", "aerial manipulation", "whole-body control", "teleoperation", "imitation learning", "assembly"],
+    "pdf": "https://www.roboticsproceedings.org/rss21/p130.pdf",
+    "page": "https://www.roboticsproceedings.org/rss21/p130.html",
+    "project": "https://lecar-lab.github.io/flying_hand/"
+  },
+  {
+    "title": "SurRoL: An Open-source Reinforcement Learning Centered and dVRK Compatible Platform for Surgical Robot Learning",
+    "year": 2021,
+    "venue": "IROS",
+    "category": "Domain-Diverse Robot Learning",
+    "tags": ["Robotics", "surgical robotics", "reinforcement learning", "simulation", "sim-to-real", "dexterous manipulation"],
+    "arxiv": "2108.13035",
+    "page": "https://ieeexplore.ieee.org/document/9635867",
+    "project": "https://github.com/med-air/SurRoL"
+  }
+]

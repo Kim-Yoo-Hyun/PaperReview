@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / CoRL
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, grasping, synthetic data
 - Paper link: ./2025/CoRL/2025_CoRL_GraspVLA-a-Grasping-Foundation-Model-Pre-trained-on-Billio/paper.pdf
 - Code/Project: not identified

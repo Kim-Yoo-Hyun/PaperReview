@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2022 / CoRL
-- Category: Foundations: Vision-Language-Action and Robotics
+- Category: VLA and Generalist Robot Policies
 - Tags: LLM, affordance, Planning, Robotics
 - Paper link: ./2022/CoRL/2022_CoRL_Do-As-I-Can-Not-As-I-Say-Grounding-Language-in-Robotic-Aff/paper.pdf
 - Code/Project: https://say-can.github.io/

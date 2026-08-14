@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Reconstruction, Geometry, and SLAM
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D reconstruction, SLAM, representation
 - Paper link: ./2025/CVPR/2025_CVPR_Continuous-3D-Perception-Model-with-Persistent-State/paper.pdf
 - Code/Project: https://cut3r.github.io/

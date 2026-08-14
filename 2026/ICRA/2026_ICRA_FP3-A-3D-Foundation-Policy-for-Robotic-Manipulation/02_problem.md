@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / ICRA
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, 3D Vision
 - Paper link: ./2026/ICRA/2026_ICRA_FP3-A-3D-Foundation-Policy-for-Robotic-Manipulation/paper.pdf
 - Code/Project: not identified from venue audit

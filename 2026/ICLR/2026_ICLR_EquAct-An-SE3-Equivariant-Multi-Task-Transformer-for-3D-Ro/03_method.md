@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, 3D Vision, equivariant
 - Paper link: ./2026/ICLR/2026_ICLR_EquAct-An-SE3-Equivariant-Multi-Task-Transformer-for-3D-Ro/paper.pdf
 - Code/Project: not identified from OpenReview

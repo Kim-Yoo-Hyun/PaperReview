@@ -1,7 +1,7 @@
 # FROSS: Faster-Than-Real-Time Online 3D Semantic Scene Graph Generation from RGB-D Images
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, Graph Reasoning, semantic
 - Paper link: ./2025/ICCV/2025_ICCV_FROSS-Faster-Than-Real-Time-Online-3D-Semantic-Scene-Graph/paper.pdf
 - Code/Project: not identified

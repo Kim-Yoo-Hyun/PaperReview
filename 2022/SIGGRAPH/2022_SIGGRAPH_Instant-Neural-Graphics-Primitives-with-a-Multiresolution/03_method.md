@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2022 / SIGGRAPH
-- Category: Foundations: 3D Scene Representations
+- Category: Neural Scene Representations
 - Tags: NeRF, 3D Vision, representation, efficiency
 - Paper link: ./2022/SIGGRAPH/2022_SIGGRAPH_Instant-Neural-Graphics-Primitives-with-a-Multiresolution/paper.pdf
 - Code/Project: https://nvlabs.github.io/instant-ngp/

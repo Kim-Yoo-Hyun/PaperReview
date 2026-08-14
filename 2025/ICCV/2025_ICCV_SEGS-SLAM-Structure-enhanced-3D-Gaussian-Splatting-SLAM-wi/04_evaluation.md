@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, geometry, 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_SEGS-SLAM-Structure-enhanced-3D-Gaussian-Splatting-SLAM-wi/paper.pdf
 - Code/Project: not identified

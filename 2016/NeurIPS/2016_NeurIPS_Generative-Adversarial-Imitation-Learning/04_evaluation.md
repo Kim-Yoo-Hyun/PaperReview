@@ -1,17 +1,19 @@
 # Evaluation
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2016 / NeurIPS
-- Category: Foundations: RL and Imitation Learning
+- Category: Robotics Foundations: Robot Learning
 - Tags: Robotics, Imitation Learning, Reinforcement Learning
 - Paper link: ./2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/paper.pdf
 - Code/Project: not identified
 - Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
 
 ## Dataset / Benchmark
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.
 
 ## Metrics
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.
 
 ## Evaluation Protocol and Results
 - Our algorithm almost always achieved at least 70% of expert performance for all dataset

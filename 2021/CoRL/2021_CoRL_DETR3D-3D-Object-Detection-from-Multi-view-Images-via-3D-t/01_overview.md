@@ -1,7 +1,7 @@
 # DETR3D: 3D Object Detection from Multi-view Images via 3D-to-2D Queries
 
 - Year/Venue: 2021 / CoRL
-- Category: Sensor Fusion, LiDAR, and Autonomous Driving
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: 3D Vision, BEV, 3D detection, camera
 - Paper link: ./2021/CoRL/2021_CoRL_DETR3D-3D-Object-Detection-from-Multi-view-Images-via-3D-t/paper.pdf
 - Code/Project: https://github.com/WangYueFt/detr3d

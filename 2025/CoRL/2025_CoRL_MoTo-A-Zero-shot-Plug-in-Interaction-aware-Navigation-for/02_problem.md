@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / CoRL
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Navigation, mobile manipulation, VLM
 - Paper link: ./2025/CoRL/2025_CoRL_MoTo-A-Zero-shot-Plug-in-Interaction-aware-Navigation-for/paper.pdf
 - Code/Project: not identified

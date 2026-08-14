@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / RA-L
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: Robotics, 3D Vision, Graph Reasoning, semantic
 - Paper link: ./2025/RA-L/2025_RA-L_Dynamic-Open-Vocabulary-3D-Scene-Graphs-for-Long-term-Lang/paper.pdf
 - Code/Project: https://github.com/BJHYZJ/DovSG

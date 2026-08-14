@@ -1,7 +1,7 @@
 # 3DS-VLA: A 3D Spatial-Aware Vision Language Action Model for Robust Multi-Task Manipulation
 
 - Year/Venue: 2025 / CoRL
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, 3D Vision, Robotics
 - Paper link: ./2025/CoRL/2025_CoRL_3DS-VLA-A-3D-Spatial-Aware-Vision-Language-Action-Model-fo/paper.pdf
 - Code/Project: https://vis-www.cs.umass.edu/3ds-vla/

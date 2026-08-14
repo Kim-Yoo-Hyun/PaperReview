@@ -1,8 +1,10 @@
 # Diffusion Policy: Visuomotor Policy Learning via Action Diffusion
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2023 / RSS
-- Category: Foundations: RL and Imitation Learning
-- Tags: Diffusion, Imitation Learning, robotics
+- Category: Robotics Foundations: Robot Learning
+- Tags: Diffusion, Imitation Learning, Robotics
 - Paper link: ./2023/RSS/2023_RSS_Diffusion-Policy-Visuomotor-Policy-Learning-via-Action-Dif/paper.pdf
 - Code/Project: https://github.com/real-stanford/diffusion_policy
 - Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
@@ -25,7 +27,7 @@
 - For each variant, we report results for both stateand image-based observations.
 
 ## Limitation
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.
 
 ## Contribution
 - We benchmark Diffusion Policy across 15 different tasks from 4 different robot manipulation benchmarks and find that it consistently outperforms existing state-of-the-art robot learning methods with an average ...

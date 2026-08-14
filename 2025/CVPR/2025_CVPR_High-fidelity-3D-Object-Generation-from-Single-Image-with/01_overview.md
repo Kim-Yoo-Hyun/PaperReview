@@ -1,7 +1,7 @@
 # High-fidelity 3D Object Generation from Single Image with RGBN-Volume Gaussian Reconstruction Model
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Gaussian Splatting, 3D reconstruction, Diffusion, Generation, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_High-fidelity-3D-Object-Generation-from-Single-Image-with/paper.pdf
 - Code/Project: not identified

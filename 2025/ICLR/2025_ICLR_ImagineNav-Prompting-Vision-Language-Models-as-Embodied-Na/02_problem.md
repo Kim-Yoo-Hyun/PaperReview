@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Model, Robotics, Navigation
 - Paper link: ./2025/ICLR/2025_ICLR_ImagineNav-Prompting-Vision-Language-Models-as-Embodied-Na/paper.pdf
 - Code/Project: not identified from OpenReview

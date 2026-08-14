@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2019 / ICCV
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Scene Graph, semantic, geometry, Graph Reasoning
 - Paper link: ./2019/ICCV/2019_ICCV_3D-Scene-Graph-A-Structure-for-Unified-Semantics-3D-Space/paper.pdf
 - Code/Project: https://3dscenegraph.stanford.edu/

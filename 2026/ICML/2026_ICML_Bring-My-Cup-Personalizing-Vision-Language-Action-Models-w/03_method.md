@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / ICML
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics
 - Paper link: ./2026/ICML/2026_ICML_Bring-My-Cup-Personalizing-Vision-Language-Action-Models-w/paper.pdf
 - Code/Project: not identified from OpenReview

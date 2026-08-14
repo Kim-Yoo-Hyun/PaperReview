@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICCV
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting, Vision-Language, semantic
 - Paper link: ./2025/ICCV/2025_ICCV_SceneSplat-Gaussian-Splatting-based-Scene-Understanding-wi/paper.pdf
 - Code/Project: not identified from primary page

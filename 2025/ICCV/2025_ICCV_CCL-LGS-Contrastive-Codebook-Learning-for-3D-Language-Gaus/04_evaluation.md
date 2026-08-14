@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICCV
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: 3D Vision, Gaussian Splatting
 - Paper link: ./2025/ICCV/2025_ICCV_CCL-LGS-Contrastive-Codebook-Learning-for-3D-Language-Gaus/paper.pdf
 - Code/Project: not identified

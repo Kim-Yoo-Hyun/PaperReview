@@ -1,0 +1,37 @@
+{
+  "date": "2026-08-11",
+  "registry_entries": 55,
+  "local_pdfs": 54,
+  "pdfinfo_valid": 54,
+  "pdfinfo_invalid": 0,
+  "total_pages": 1072,
+  "title_text_matches": 52,
+  "image_only_or_no_text_layer_visually_verified": [
+    "Dynamic Safety in Complex Environments: Synthesizing Safety Filters with Poisson's Equation",
+    "Flying Hand: End-Effector-Centric Framework for Versatile Aerial Manipulation Teleoperation and Policy Learning"
+  ],
+  "representative_first_pages_visually_verified": [
+    "AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models",
+    "SAFE: Multitask Failure Detection for Vision-Language-Action Models",
+    "FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation",
+    "SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning",
+    "Scaling Proprioceptive-Visual Learning with Heterogeneous Pre-trained Transformers",
+    "DextAIRity: Deformable Manipulation Can be a Breeze",
+    "Flying Hand: End-Effector-Centric Framework for Versatile Aerial Manipulation Teleoperation and Policy Learning",
+    "SurRoL: An Open-source Reinforcement Learning Centered and dVRK Compatible Platform for Surgical Robot Learning",
+    "Dynamic Safety in Complex Environments: Synthesizing Safety Filters with Poisson's Equation"
+  ],
+  "missing": [
+    {
+      "title": "Learning to Be Uncertain: Pre-training World Models with Horizon-Calibrated Uncertainty",
+      "reason": "Official OpenReview PDF returned HTTP 403 to automated download attempts; official ICLR and OpenReview links remain in the registry."
+    }
+  ],
+  "corrections": [
+    {
+      "title": "DextAIRity: Deformable Manipulation Can be a Breeze",
+      "issue": "Initial arXiv identifier resolved to an unrelated physics paper.",
+      "resolution": "Replaced with arXiv:2203.01197 and corrected the venue year to RSS 2022."
+    }
+  ]
+}

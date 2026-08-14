@@ -1,7 +1,7 @@
 # OpenGS-Fusion: Open-Vocabulary Dense Mapping with Hybrid 3D Gaussian Splatting for Refined Object-Level Understanding
 
 - Year/Venue: 2025 / IROS
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: 3D Vision, Gaussian Splatting, semantic
 - Paper link: ./2025/IROS/2025_IROS_OpenGS-Fusion-Open-Vocabulary-Dense-Mapping-with-Hybrid-3D/paper.pdf
 - Code/Project: not identified

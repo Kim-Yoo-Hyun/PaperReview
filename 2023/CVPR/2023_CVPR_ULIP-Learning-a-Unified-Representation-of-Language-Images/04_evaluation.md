@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2023 / CVPR
-- Category: 3D Representation Learning and Foundation Models
+- Category: 3D Representation Learning
 - Tags: 3D Vision, Vision-Language Model, point cloud, alignment
 - Paper link: ./2023/CVPR/2023_CVPR_ULIP-Learning-a-Unified-Representation-of-Language-Images/paper.pdf
 - Code/Project: https://github.com/salesforce/ULIP

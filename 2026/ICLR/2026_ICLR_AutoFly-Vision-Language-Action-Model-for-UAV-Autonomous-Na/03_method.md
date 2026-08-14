@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: VLA, Vision-Language Model, Robotics, Navigation
 - Paper link: ./2026/ICLR/2026_ICLR_AutoFly-Vision-Language-Action-Model-for-UAV-Autonomous-Na/paper.pdf
 - Code/Project: not identified from OpenReview

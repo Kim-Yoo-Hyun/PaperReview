@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICRA
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Robotics, Gaussian Splatting, Reinforcement Learning
 - Paper link: ./2025/ICRA/2025_ICRA_Persistent-Object-Gaussian-Splat-POGS-for-Tracking-Human-a/paper.pdf
 - Code/Project: not identified from venue audit

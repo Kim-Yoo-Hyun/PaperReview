@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: geometry, Diffusion, Generation, point cloud, 3D Vision
 - Paper link: ./2024/CVPR/2024_CVPR_HandDiff-3D-Hand-Pose-Estimation-with-Diffusion-on-Image-P/paper.pdf
 - Code/Project: not identified

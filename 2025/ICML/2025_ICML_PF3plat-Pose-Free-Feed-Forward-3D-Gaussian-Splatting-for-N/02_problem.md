@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICML poster
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, geometry, 3D Vision
 - Paper link: ./2025/ICML/2025_ICML_PF3plat-Pose-Free-Feed-Forward-3D-Gaussian-Splatting-for-N/paper.pdf
 - Code/Project: not identified

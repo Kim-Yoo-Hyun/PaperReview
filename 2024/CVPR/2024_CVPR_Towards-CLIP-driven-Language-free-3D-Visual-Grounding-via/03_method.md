@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Vision-Language Grounding
+- Category: 3D Vision-Language Understanding
 - Tags: 3D visual grounding, CLIP, consistency
 - Paper link: ./2024/CVPR/2024_CVPR_Towards-CLIP-driven-Language-free-3D-Visual-Grounding-via/paper.pdf
 - Code/Project: not identified from primary page

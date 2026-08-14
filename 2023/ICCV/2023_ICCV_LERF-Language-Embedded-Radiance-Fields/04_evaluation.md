@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2023 / ICCV
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: NeRF, Vision-Language, grounding
 - Paper link: ./2023/ICCV/2023_ICCV_LERF-Language-Embedded-Radiance-Fields/paper.pdf
 - Code/Project: https://www.lerf.io/

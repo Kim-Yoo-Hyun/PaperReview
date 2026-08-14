@@ -1,7 +1,7 @@
 # Taming Video Diffusion Prior with Scene-Grounding Guidance for 3D Gaussian Splatting from Sparse Inputs
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_Taming-Video-Diffusion-Prior-with-Scene-Grounding-Guidance/paper.pdf
 - Code/Project: not identified

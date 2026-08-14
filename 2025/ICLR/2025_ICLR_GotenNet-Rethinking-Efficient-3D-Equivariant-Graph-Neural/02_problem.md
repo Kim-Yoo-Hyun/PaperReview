@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / ICLR Poster
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: equivariant, 3D Vision
 - Paper link: ./2025/ICLR/2025_ICLR_GotenNet-Rethinking-Efficient-3D-Equivariant-Graph-Neural/paper.pdf
 - Code/Project: not identified

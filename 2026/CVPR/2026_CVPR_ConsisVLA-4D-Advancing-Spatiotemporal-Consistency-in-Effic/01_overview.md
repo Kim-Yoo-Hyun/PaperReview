@@ -1,7 +1,7 @@
 # ConsisVLA-4D: Advancing Spatiotemporal Consistency in Efficient 3D-Perception and 4D-Reasoning for Robotic Manipulation
 
 - Year/Venue: 2026 / CVPR
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, consistency, 4D reasoning
 - Paper link: ./2026/CVPR/2026_CVPR_ConsisVLA-4D-Advancing-Spatiotemporal-Consistency-in-Effic/paper.pdf
 - Code/Project: not identified from primary page

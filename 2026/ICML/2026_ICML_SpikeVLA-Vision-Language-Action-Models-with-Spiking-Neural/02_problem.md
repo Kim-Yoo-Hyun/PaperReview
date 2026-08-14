@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / ICML
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model
 - Paper link: ./2026/ICML/2026_ICML_SpikeVLA-Vision-Language-Action-Models-with-Spiking-Neural/paper.pdf
 - Code/Project: not identified from OpenReview

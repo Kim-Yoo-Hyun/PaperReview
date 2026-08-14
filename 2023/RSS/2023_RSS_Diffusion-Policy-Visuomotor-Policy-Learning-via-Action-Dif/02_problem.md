@@ -1,8 +1,10 @@
 # Problem
 
+> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+
 - Year/Venue: 2023 / RSS
-- Category: Foundations: RL and Imitation Learning
-- Tags: Diffusion, Imitation Learning, robotics
+- Category: Robotics Foundations: Robot Learning
+- Tags: Diffusion, Imitation Learning, Robotics
 - Paper link: ./2023/RSS/2023_RSS_Diffusion-Policy-Visuomotor-Policy-Learning-via-Action-Dif/paper.pdf
 - Code/Project: https://github.com/real-stanford/diffusion_policy
 - Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.

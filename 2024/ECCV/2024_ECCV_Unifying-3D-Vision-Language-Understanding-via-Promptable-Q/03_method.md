@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model, 3D Vision
 - Paper link: ./2024/ECCV/2024_ECCV_Unifying-3D-Vision-Language-Understanding-via-Promptable-Q/paper.pdf
 - Code/Project: not identified

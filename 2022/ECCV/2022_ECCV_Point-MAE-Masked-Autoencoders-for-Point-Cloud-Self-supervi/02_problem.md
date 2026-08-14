@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2022 / ECCV
-- Category: Foundations: 3D Representation Learning
+- Category: 3D Representation Learning
 - Tags: point cloud, 3D Vision
 - Paper link: ./2022/ECCV/2022_ECCV_Point-MAE-Masked-Autoencoders-for-Point-Cloud-Self-supervi/paper.pdf
 - Code/Project: not identified

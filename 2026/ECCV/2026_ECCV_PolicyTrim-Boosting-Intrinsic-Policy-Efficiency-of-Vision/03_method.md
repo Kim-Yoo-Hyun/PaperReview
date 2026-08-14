@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / ECCV
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model
 - Paper link: ./2026/ECCV/2026_ECCV_PolicyTrim-Boosting-Intrinsic-Policy-Efficiency-of-Vision/paper.pdf
 - Code/Project: https://inceptionwang.github.io/PolicyTrim/

@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICML Poster
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: Vision-Language Model, 3D Vision
 - Paper link: ./2025/ICML/2025_ICML_3D-Question-Answering-via-only-2D-Vision-Language-Models/paper.pdf
 - Code/Project: not identified from OpenReview

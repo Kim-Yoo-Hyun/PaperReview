@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / CVPR
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Chain-of-Thought, Planning
 - Paper link: ./2026/CVPR/2026_CVPR_ACoT-VLA-Action-Chain-of-Thought-for-Vision-Language-Actio/paper.pdf
 - Code/Project: not identified from primary page

@@ -1,8 +1,8 @@
 # Problem
 
 - Year/Venue: 2022 / ICML
-- Category: Foundations: Vision-Language Models
-- Tags: Vision-Language Model, alignment, generation
+- Category: Foundations: Vision and Language Models
+- Tags: Vision-Language Model, alignment, Generation
 - Paper link: ./2022/ICML/2022_ICML_BLIP-Bootstrapping-Language-Image-Pre-training-for-Unified/paper.pdf
 - Code/Project: https://github.com/salesforce/BLIP
 - Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.

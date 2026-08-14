@@ -1,7 +1,7 @@
 # OpenScene: 3D Scene Understanding with Open Vocabularies
 
 - Year/Venue: 2023 / CVPR
-- Category: Open-Vocabulary 3D Mapping
+- Category: Embodied Navigation and Mapping
 - Tags: open-vocabulary, 3D semantic, CLIP
 - Paper link: ./2023/CVPR/2023_CVPR_OpenScene-3D-Scene-Understanding-with-Open-Vocabularies/paper.pdf
 - Code/Project: https://pengsongyou.github.io/openscene

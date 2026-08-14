@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICRA
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Model, Navigation
 - Paper link: ./2026/ICRA/2026_ICRA_SINGER-An-Onboard-Generalist-Vision-Language-Navigation-Po/paper.pdf
 - Code/Project: not identified from venue audit

@@ -1,7 +1,7 @@
 # OpenIns3D: Snap and Lookup for 3D Open-vocabulary Instance Segmentation
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Large Multimodal Models
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, semantic
 - Paper link: ./2024/ECCV/2024_ECCV_OpenIns3D-Snap-and-Lookup-for-3D-Open-vocabulary-Instance/paper.pdf
 - Code/Project: not identified

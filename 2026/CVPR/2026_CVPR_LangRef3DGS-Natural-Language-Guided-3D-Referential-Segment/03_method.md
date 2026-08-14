@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / CVPR
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting, referring segmentation, language
 - Paper link: ./2026/CVPR/2026_CVPR_LangRef3DGS-Natural-Language-Guided-3D-Referential-Segment/paper.pdf
 - Code/Project: not identified from primary page

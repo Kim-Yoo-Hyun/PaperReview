@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: 3D Vision, Navigation, Gaussian Splatting
 - Paper link: ./2026/ICLR/2026_ICLR_Towards-Physically-Executable-3D-Gaussian-for-Embodied-Nav/paper.pdf
 - Code/Project: not identified from OpenReview

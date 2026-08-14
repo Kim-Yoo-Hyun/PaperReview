@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Vision-Language Model, Robotics, Reinforcement Learning
 - Paper link: ./2026/ICLR/2026_ICLR_Embodied-R1-Reinforced-Embodied-Reasoning-for-General-Robo/paper.pdf
 - Code/Project: not identified from OpenReview

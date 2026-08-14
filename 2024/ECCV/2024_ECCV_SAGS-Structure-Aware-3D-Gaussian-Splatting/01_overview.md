@@ -1,7 +1,7 @@
 # SAGS: Structure-Aware 3D Gaussian Splatting
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D Vision
 - Paper link: ./2024/ECCV/2024_ECCV_SAGS-Structure-Aware-3D-Gaussian-Splatting/paper.pdf
 - Code/Project: not identified

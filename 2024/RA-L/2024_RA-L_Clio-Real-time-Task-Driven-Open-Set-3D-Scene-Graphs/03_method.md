@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / RA-L
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, Graph Reasoning
 - Paper link: ./2024/RA-L/2024_RA-L_Clio-Real-time-Task-Driven-Open-Set-3D-Scene-Graphs/paper.pdf
 - Code/Project: https://github.com/MIT-SPARK/Clio

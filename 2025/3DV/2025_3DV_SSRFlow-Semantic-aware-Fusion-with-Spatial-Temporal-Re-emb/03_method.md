@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / 3DV
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
 - Paper link: ./2025/3DV/2025_3DV_SSRFlow-Semantic-aware-Fusion-with-Spatial-Temporal-Re-emb/paper.pdf
 - Code/Project: not identified

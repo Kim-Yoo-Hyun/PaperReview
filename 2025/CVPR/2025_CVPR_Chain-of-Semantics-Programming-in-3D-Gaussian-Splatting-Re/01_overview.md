@@ -1,7 +1,7 @@
 # Chain of Semantics Programming in 3D Gaussian Splatting Representation for 3D Vision Grounding
 
 - Year/Venue: 2025 / CVPR
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: Gaussian Splatting, semantic, grounding
 - Paper link: ./2025/CVPR/2025_CVPR_Chain-of-Semantics-Programming-in-3D-Gaussian-Splatting-Re/paper.pdf
 - Code/Project: not identified from primary page

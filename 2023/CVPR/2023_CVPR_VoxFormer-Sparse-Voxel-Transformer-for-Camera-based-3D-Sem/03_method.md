@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2023 / CVPR
-- Category: Foundations: 3D Semantic Occupancy
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: semantic, alignment, 3D Vision
 - Paper link: ./2023/CVPR/2023_CVPR_VoxFormer-Sparse-Voxel-Transformer-for-Camera-based-3D-Sem/paper.pdf
 - Code/Project: not identified

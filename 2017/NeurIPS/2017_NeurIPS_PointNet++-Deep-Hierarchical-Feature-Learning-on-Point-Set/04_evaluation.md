@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2017 / NeurIPS
-- Category: Foundations: 3D Geometry and Point Clouds
+- Category: 3D Representation Learning
 - Tags: 3D geometry, point cloud, representation
 - Paper link: ./2017/NeurIPS/2017_NeurIPS_PointNet++-Deep-Hierarchical-Feature-Learning-on-Point-Set/paper.pdf
 - Code/Project: https://github.com/charlesq34/pointnet2

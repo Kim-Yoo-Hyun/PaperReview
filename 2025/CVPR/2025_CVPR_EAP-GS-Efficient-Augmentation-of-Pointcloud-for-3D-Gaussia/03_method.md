@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / CVPR
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, point cloud, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_EAP-GS-Efficient-Augmentation-of-Pointcloud-for-3D-Gaussia/paper.pdf
 - Code/Project: not identified

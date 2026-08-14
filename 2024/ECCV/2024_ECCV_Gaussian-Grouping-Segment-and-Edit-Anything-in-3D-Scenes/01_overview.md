@@ -1,7 +1,7 @@
 # Gaussian Grouping: Segment and Edit Anything in 3D Scenes
 
 - Year/Venue: 2024 / ECCV
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D Vision
 - Paper link: ./2024/ECCV/2024_ECCV_Gaussian-Grouping-Segment-and-Edit-Anything-in-3D-Scenes/paper.pdf
 - Code/Project: not identified

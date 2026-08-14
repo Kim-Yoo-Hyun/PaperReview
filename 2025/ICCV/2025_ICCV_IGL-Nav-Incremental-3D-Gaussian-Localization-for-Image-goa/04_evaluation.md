@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / ICCV
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: 3D Vision, Navigation, Gaussian Splatting
 - Paper link: ./2025/ICCV/2025_ICCV_IGL-Nav-Incremental-3D-Gaussian-Localization-for-Image-goa/paper.pdf
 - Code/Project: not identified

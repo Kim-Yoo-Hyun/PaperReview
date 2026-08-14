@@ -1,7 +1,7 @@
 # DualSplat: Robust 3D Gaussian Splatting via Pseudo-Mask Bootstrapping from Reconstruction Failures
 
 - Year/Venue: 2026 / CVPR
-- Category: 3D Scene Representations and Neural Fields
+- Category: Neural Scene Representations
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
 - Paper link: ./2026/CVPR/2026_CVPR_DualSplat-Robust-3D-Gaussian-Splatting-via-Pseudo-Mask-Boo/paper.pdf
 - Code/Project: not identified

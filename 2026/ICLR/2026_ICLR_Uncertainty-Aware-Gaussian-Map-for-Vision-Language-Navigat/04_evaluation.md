@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / ICLR Poster
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Model, 3D Vision, Navigation, Gaussian Splatting
 - Paper link: ./2026/ICLR/2026_ICLR_Uncertainty-Aware-Gaussian-Map-for-Vision-Language-Navigat/paper.pdf
 - Code/Project: not identified from OpenReview

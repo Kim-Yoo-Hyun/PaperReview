@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2024 / CVPR
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
 - Paper link: ./2024/CVPR/2024_CVPR_Bayesian-Diffusion-Models-for-3D-Shape-Reconstruction/paper.pdf
 - Code/Project: not identified

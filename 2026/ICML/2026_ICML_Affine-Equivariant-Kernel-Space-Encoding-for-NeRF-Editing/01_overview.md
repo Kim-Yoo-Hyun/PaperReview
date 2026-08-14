@@ -1,7 +1,7 @@
 # Affine-Equivariant Kernel Space Encoding for NeRF Editing
 
 - Year/Venue: 2026 / ICML
-- Category: 3D Equivariance, Calibration, and Registration
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: NeRF, equivariant, 3D Vision
 - Paper link: ./2026/ICML/2026_ICML_Affine-Equivariant-Kernel-Space-Encoding-for-NeRF-Editing/paper.pdf
 - Code/Project: not identified

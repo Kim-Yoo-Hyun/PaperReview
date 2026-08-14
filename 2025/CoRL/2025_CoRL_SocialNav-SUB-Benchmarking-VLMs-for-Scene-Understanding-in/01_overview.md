@@ -1,7 +1,7 @@
 # SocialNav-SUB: Benchmarking VLMs for Scene Understanding in Social Robot Navigation
 
 - Year/Venue: 2025 / CoRL
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: VLM, Navigation, Benchmark
 - Paper link: ./2025/CoRL/2025_CoRL_SocialNav-SUB-Benchmarking-VLMs-for-Scene-Understanding-in/paper.pdf
 - Code/Project: not identified

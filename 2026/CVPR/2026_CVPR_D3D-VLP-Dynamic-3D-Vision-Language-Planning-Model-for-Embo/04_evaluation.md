@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2026 / CVPR
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: 3D Vision, Vision-Language, Planning, Navigation
 - Paper link: ./2026/CVPR/2026_CVPR_D3D-VLP-Dynamic-3D-Vision-Language-Planning-Model-for-Embo/paper.pdf
 - Code/Project: not identified from primary page

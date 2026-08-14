@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / NeurIPS Spotlight
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, Robotics
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_Knowledge-Insulating-Vision-Language-Action-Models-Train-F/paper.pdf
 - Code/Project: not identified from OpenReview

@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / IROS
-- Category: 3D Scene Graphs and Graph Reasoning
+- Category: 3D Vision-Language Understanding
 - Tags: 3D Vision, Graph Reasoning
 - Paper link: ./2025/IROS/2025_IROS_FunGraph-Functionality-Aware-3D-Scene-Graphs-for-Language/paper.pdf
 - Code/Project: not identified

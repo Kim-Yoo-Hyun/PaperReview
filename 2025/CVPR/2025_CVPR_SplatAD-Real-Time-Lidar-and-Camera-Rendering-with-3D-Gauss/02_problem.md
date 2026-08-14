@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / CVPR
-- Category: Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
+- Category: Autonomous 3D Perception and Sensor Fusion
 - Tags: Gaussian Splatting, sensor fusion, LiDAR, 3D Vision
 - Paper link: ./2025/CVPR/2025_CVPR_SplatAD-Real-Time-Lidar-and-Camera-Rendering-with-3D-Gauss/paper.pdf
 - Code/Project: not identified

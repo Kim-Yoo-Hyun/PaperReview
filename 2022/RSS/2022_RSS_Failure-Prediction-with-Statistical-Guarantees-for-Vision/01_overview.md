@@ -1,0 +1,36 @@
+# Failure Prediction with Statistical Guarantees for Vision-Based Robot Control
+
+- Year/Venue: 2022 / RSS
+- Category: World Models, Safety, and Recovery
+- Tags: Robotics, failure prediction, vision-based control, statistical guarantees, safe deployment
+- Paper link: [paper.pdf](./paper.pdf)
+- Code/Project: not released
+- Source audit: regenerated from local `paper.pdf` on 2026-08-11; survey-keyword template text removed.
+
+## Problem
+- Motivated by this challenge, we consider the following problem in this paper.
+- —We are motivated by the problem of performing failure prediction for safety-critical robotic systems with highdimensional sensor observations (e.g., vision).
+- Given access to a black-box control policy (e.g., in the form of a neural network) and a dataset of training environments, we present an approach for synthesizing a ...
+
+## Core Idea
+- Given access to a black-box control policy (e.g., in the form of a neural network) and a dataset of training environments, we present an approach for synthesizing a ...
+- We propose algorithms that train failure predictors (that take as input the history of sensor observations) by minimizing our theoretical error bounds.
+
+## Input / Output
+- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
+
+## Main Claims
+- These experiments illustrate the ability of our approach to (1) provide strong bounds on failure prediction error rates (that closely match empirical error rates), and (2) improve safety ...
+- In order to achieve this, we utilize techniques from Probably Approximately Correct (PAC)-Bayes generalization theory.
+- We demonstrate the resulting approach using extensive simulation and hardware experiments for vision-based navigation with a drone and grasping objects with a robotic manipulator equipped with a wrist-mounted ...
+
+## Limitation
+- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+
+## Contribution
+- Given access to a black-box control policy (e.g., in the form of a neural network) and a dataset of training environments, we present an approach for synthesizing a ...
+- These experiments illustrate the ability of our approach to (1) provide strong bounds on failure prediction error rates (that closely match empirical error rates), and (2) improve safety ...
+- We propose algorithms that train failure predictors (that take as input the history of sensor observations) by minimizing our theoretical error bounds.
+
+## Abstract Cue
+- —We are motivated by the problem of performing failure prediction for safety-critical robotic systems with highdimensional sensor observations (e.g., vision).

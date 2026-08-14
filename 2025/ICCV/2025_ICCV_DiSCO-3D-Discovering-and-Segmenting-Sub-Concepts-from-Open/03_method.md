@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICCV
-- Category: Language-Embedded NeRF and Gaussian Fields
+- Category: Language-Grounded 3D Scene Representations
 - Tags: 3D Vision, semantic
 - Paper link: ./2025/ICCV/2025_ICCV_DiSCO-3D-Discovering-and-Segmenting-Sub-Concepts-from-Open/paper.pdf
 - Code/Project: not identified

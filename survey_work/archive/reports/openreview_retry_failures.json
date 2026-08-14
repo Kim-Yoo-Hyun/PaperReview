@@ -1,0 +1,134 @@
+[
+  [
+    "MemoryVLA: Perceptual-Cognitive Memory in Vision-Language-Action Models for Robotic Manipulation",
+    "HTTP 429"
+  ],
+  [
+    "From Spatial to Actions: Grounding Vision-Language-Action Model in Spatial Foundation Priors",
+    "HTTP 429"
+  ],
+  [
+    "Seeing Across Views: Benchmarking Spatial Reasoning of Vision-Language Models in Robotic Scenes",
+    "HTTP 429"
+  ],
+  [
+    "Spatially Guided Training for Vision-Language-Action Model",
+    "HTTP 429"
+  ],
+  [
+    "Interleave-VLA: Enhancing Robot Manipulation with Image-Text Interleaved Instructions",
+    "HTTP 429"
+  ],
+  [
+    "RobotArena $\\infty$: Scalable Robot Benchmarking via Real-to-Sim Translation",
+    "HTTP 429"
+  ],
+  [
+    "Sim2Real VLA: Zero-Shot Generalization of Synthesized Skills to Realistic Manipulation",
+    "HTTP 429"
+  ],
+  [
+    "Generalizable Coarse-to-Fine Robot Manipulation via Language-Aligned 3D Keypoints",
+    "HTTP 429"
+  ],
+  [
+    "JanusVLN: Decoupling Semantics and Spatiality with Dual Implicit Memory for Vision-Language Navigation",
+    "HTTP 429"
+  ],
+  [
+    "DynaRend: Learning 3D Dynamics via Masked Future Rendering for Robotic Manipulation",
+    "HTTP 429"
+  ],
+  [
+    "SimWorld-Robotics: Synthesizing Photorealistic and Dynamic Urban Environments for Multimodal Robot Navigation and Collaboration",
+    "HTTP 429"
+  ],
+  [
+    "Fast-in-Slow: A Dual-System VLA Model Unifying Fast Manipulation within Slow Reasoning",
+    "HTTP 429"
+  ],
+  [
+    "Knowledge Insulating Vision-Language-Action Models: Train Fast, Run Fast, Generalize Better",
+    "HTTP 429"
+  ],
+  [
+    "VLA-Cache: Efficient Vision-Language-Action Manipulation via Adaptive Token Caching",
+    "HTTP 429"
+  ],
+  [
+    "4D-VLA:  Spatiotemporal Vision-Language-Action Pretraining with Cross-Scene Calibration",
+    "HTTP 429"
+  ],
+  [
+    "3D Equivariant Visuomotor Policy Learning via Spherical Projection",
+    "HTTP 429"
+  ],
+  [
+    "Segment then Splat: Unified 3D Open-Vocabulary Segmentation via Gaussian Splatting",
+    "HTTP 429"
+  ],
+  [
+    "ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning",
+    "HTTP 429"
+  ],
+  [
+    "UP-VLA:  A Unified Understanding and Prediction Model for Embodied Agent",
+    "HTTP 429"
+  ],
+  [
+    "DiffusionVLA: Scaling Robot Foundation Models via Unified Diffusion and Autoregression",
+    "HTTP 429"
+  ],
+  [
+    "OTTER: A Vision-Language-Action Model with Text-Aware Visual Feature Extraction",
+    "HTTP 429"
+  ],
+  [
+    "VIP: Vision Instructed Pre-training for Robotic Manipulation",
+    "HTTP 429"
+  ],
+  [
+    "LOCATE 3D: Real-World Object Localization via Self-Supervised Learning in 3D",
+    "HTTP 429"
+  ],
+  [
+    "How Do Images Align and Complement LiDAR? Towards a Harmonized Multi-modal 3D Panoptic Segmentation",
+    "HTTP 429"
+  ],
+  [
+    "Joint Navigation and Manipulation Planning with 3D Interaction Chains",
+    "HTTP 429"
+  ],
+  [
+    "AIR-VLA: Vision-Language-Action Systems for Aerial Manipulation",
+    "HTTP 429"
+  ],
+  [
+    "TIC-VLA: A Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments",
+    "HTTP 429"
+  ],
+  [
+    "XR-1: Towards Versatile Vision-Language-Action Models via Learning Unified Vision-Motion Representations",
+    "HTTP 429"
+  ],
+  [
+    "Plan in Sandbox, Navigate in Open Worlds: Learning Physics-Grounded Abstracted Experience for Embodied Navigation",
+    "HTTP 429"
+  ],
+  [
+    "RoboFlow4D: A Lightweight Flow World Model Toward Real-Time Flow-Guided Robotic Manipulation",
+    "HTTP 429"
+  ],
+  [
+    "RoboOmni: Actions Are Just Another Modality for Vision-Language Models",
+    "HTTP 429"
+  ],
+  [
+    "SpikeVLA: Vision-Language-Action Models with Spiking Neural Networks",
+    "HTTP 429"
+  ],
+  [
+    "MapDream: Task-Driven Map Learning for Vision-Language Navigation",
+    "HTTP 429"
+  ]
+]

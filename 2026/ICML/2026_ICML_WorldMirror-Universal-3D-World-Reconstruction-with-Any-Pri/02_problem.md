@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2026 / ICML
-- Category: 3D Reconstruction, Geometry, and SLAM
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D reconstruction, 3D Vision
 - Paper link: ./2026/ICML/2026_ICML_WorldMirror-Universal-3D-World-Reconstruction-with-Any-Pri/paper.pdf
 - Code/Project: not identified

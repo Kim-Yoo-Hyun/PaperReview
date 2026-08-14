@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2019 / TOG
-- Category: Foundations: 3D Representation Learning
+- Category: 3D Representation Learning
 - Tags: point cloud, 3D Vision
 - Paper link: ./2019/TOG/2019_TOG_Dynamic-Graph-CNN-for-Learning-on-Point-Clouds/paper.pdf
 - Code/Project: not identified

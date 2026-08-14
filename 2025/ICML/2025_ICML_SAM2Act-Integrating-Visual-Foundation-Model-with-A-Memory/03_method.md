@@ -1,7 +1,7 @@
 # Method
 
 - Year/Venue: 2025 / ICML Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: Robotics, Imitation Learning
 - Paper link: ./2025/ICML/2025_ICML_SAM2Act-Integrating-Visual-Foundation-Model-with-A-Memory/paper.pdf
 - Code/Project: not identified from OpenReview

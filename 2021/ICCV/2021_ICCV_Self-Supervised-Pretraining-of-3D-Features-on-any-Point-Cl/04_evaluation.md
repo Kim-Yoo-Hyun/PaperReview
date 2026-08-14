@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2021 / ICCV
-- Category: Foundations: 3D Representation Learning
+- Category: 3D Representation Learning
 - Tags: 3D Vision, point cloud, representation, self-supervised
 - Paper link: ./2021/ICCV/2021_ICCV_Self-Supervised-Pretraining-of-3D-Features-on-any-Point-Cl/paper.pdf
 - Code/Project: https://github.com/facebookresearch/DepthContrast

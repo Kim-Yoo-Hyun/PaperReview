@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2018 / CVPR
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Navigation, Robotics, Navigation, Benchmark
 - Paper link: ./2018/CVPR/2018_CVPR_Vision-and-Language-Navigation-Interpreting-Visually-Groun/paper.pdf
 - Code/Project: https://bringmeaspoon.org/

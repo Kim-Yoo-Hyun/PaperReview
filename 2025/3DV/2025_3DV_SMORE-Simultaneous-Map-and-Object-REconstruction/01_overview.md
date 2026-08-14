@@ -1,7 +1,7 @@
 # SMORE: Simultaneous Map and Object REconstruction
 
 - Year/Venue: 2025 / 3DV
-- Category: 3D Reconstruction, Geometry, and SLAM
+- Category: 3D Geometry, Reconstruction, and SLAM
 - Tags: 3D reconstruction, 3D Vision
 - Paper link: ./2025/3DV/2025_3DV_SMORE-Simultaneous-Map-and-Object-REconstruction/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2025 / IROS
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Model, Navigation, Reinforcement Learning
 - Paper link: ./2025/IROS/2025_IROS_WMNav-Integrating-Vision-Language-Models-into-World-Models/paper.pdf
 - Code/Project: https://b0b8k1ng.github.io/WMNav/

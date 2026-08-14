@@ -1,7 +1,7 @@
 # U-CAN: Unsupervised Point Cloud Denoising with Consistency-Aware Noise2Noise Matching
 
 - Year/Venue: 2025 / NeurIPS poster
-- Category: 3D Representation Learning and Foundation Models
+- Category: 3D Representation Learning
 - Tags: point cloud, 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_U-CAN-Unsupervised-Point-Cloud-Denoising-with-Consistency/paper.pdf
 - Code/Project: not identified

@@ -1,7 +1,7 @@
 # Problem
 
 - Year/Venue: 2020 / EMNLP
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Navigation, Navigation, grounding, Benchmark
 - Paper link: ./2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati/paper.pdf
 - Code/Project: https://github.com/google-research-datasets/RxR

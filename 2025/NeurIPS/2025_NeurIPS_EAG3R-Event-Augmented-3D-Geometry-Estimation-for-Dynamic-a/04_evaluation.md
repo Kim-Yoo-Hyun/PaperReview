@@ -1,7 +1,7 @@
 # Evaluation
 
 - Year/Venue: 2025 / NeurIPS spotlight
-- Category: 3D Representation Learning and Foundation Models
+- Category: 3D Representation Learning
 - Tags: 3D Vision
 - Paper link: ./2025/NeurIPS/2025_NeurIPS_EAG3R-Event-Augmented-3D-Geometry-Estimation-for-Dynamic-a/paper.pdf
 - Code/Project: not identified

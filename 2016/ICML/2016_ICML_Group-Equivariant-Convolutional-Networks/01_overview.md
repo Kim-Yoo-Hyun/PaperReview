@@ -1,7 +1,7 @@
 # Group Equivariant Convolutional Networks
 
 - Year/Venue: 2016 / ICML
-- Category: Foundations: Equivariance and Geometry
+- Category: 3D Geometry, Registration, and Equivariance
 - Tags: equivariant, representation, geometry
 - Paper link: ./2016/ICML/2016_ICML_Group-Equivariant-Convolutional-Networks/paper.pdf
 - Code/Project: https://github.com/tscohen/gconv_experiments

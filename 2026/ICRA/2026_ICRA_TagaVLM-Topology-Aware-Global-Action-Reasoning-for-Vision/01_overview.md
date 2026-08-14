@@ -1,7 +1,7 @@
 # TagaVLM: Topology-Aware Global Action Reasoning for Vision-Language Navigation
 
 - Year/Venue: 2026 / ICRA
-- Category: Navigation and Embodied AI
+- Category: Embodied Navigation and Mapping
 - Tags: Vision-Language Model, Navigation
 - Paper link: ./2026/ICRA/2026_ICRA_TagaVLM-Topology-Aware-Global-Action-Reasoning-for-Vision/paper.pdf
 - Code/Project: not identified from venue audit

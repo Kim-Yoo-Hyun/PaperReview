@@ -1,7 +1,7 @@
 # Point-BERT: Pre-training 3D Point Cloud Transformers with Masked Point Modeling
 
 - Year/Venue: 2022 / CVPR
-- Category: Foundations: 3D Representation Learning
+- Category: 3D Representation Learning
 - Tags: point cloud, 3D Vision
 - Paper link: ./2022/CVPR/2022_CVPR_Point-BERT-Pre-training-3D-Point-Cloud-Transformers-with-M/paper.pdf
 - Code/Project: not identified

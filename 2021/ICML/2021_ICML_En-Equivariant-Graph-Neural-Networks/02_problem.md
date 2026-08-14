@@ -1,8 +1,8 @@
 # Problem
 
 - Year/Venue: 2021 / ICML
-- Category: Foundations: Equivariance and Geometry
-- Tags: equivariant, graph reasoning, 3D geometry
+- Category: 3D Geometry, Registration, and Equivariance
+- Tags: equivariant, Graph Reasoning, 3D geometry
 - Paper link: ./2021/ICML/2021_ICML_En-Equivariant-Graph-Neural-Networks/paper.pdf
 - Code/Project: https://github.com/vgsatorras/egnn
 - Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.

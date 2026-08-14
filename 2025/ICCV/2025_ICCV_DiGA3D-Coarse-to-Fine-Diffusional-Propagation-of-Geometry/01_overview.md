@@ -1,7 +1,7 @@
 # DiGA3D: Coarse-to-Fine Diffusional Propagation of Geometry and Appearance for Versatile 3D Inpainting
 
 - Year/Venue: 2025 / ICCV
-- Category: 3D Generative Modeling and Diffusion
+- Category: 3D Generative Modeling
 - Tags: Diffusion, Generation, 3D Vision
 - Paper link: ./2025/ICCV/2025_ICCV_DiGA3D-Coarse-to-Fine-Diffusional-Propagation-of-Geometry/paper.pdf
 - Code/Project: not identified

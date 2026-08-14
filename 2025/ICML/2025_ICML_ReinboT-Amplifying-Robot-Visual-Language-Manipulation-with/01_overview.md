@@ -1,7 +1,7 @@
 # ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning
 
 - Year/Venue: 2025 / ICML Poster
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Robotics, Reinforcement Learning
 - Paper link: ./2025/ICML/2025_ICML_ReinboT-Amplifying-Robot-Visual-Language-Manipulation-with/paper.pdf
 - Code/Project: not identified from OpenReview

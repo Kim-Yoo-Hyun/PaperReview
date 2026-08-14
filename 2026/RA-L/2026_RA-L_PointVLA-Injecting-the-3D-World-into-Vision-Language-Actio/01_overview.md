@@ -1,7 +1,7 @@
 # PointVLA: Injecting the 3D World into Vision-Language-Action Models
 
 - Year/Venue: 2026 / RA-L
-- Category: Vision-Language-Action and Robot Manipulation
+- Category: VLA and Generalist Robot Policies
 - Tags: VLA, Vision-Language Model, 3D Vision, Reinforcement Learning
 - Paper link: ./2026/RA-L/2026_RA-L_PointVLA-Injecting-the-3D-World-into-Vision-Language-Actio/paper.pdf
 - Code/Project: not identified
