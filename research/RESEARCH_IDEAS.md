@@ -8,6 +8,8 @@
 - Gap-method alignment: 2026-08-24에 6개 macro-gap과 robotics `R-M-C-O-T-S` 범위로 재검토했다.
 - Hypothesis status: 모든 아이디어는 아직 `UNTESTED`다. 문헌 근거가 있다는 사실과 제안 가설이 실험적으로 지지됐다는 사실을 구분한다.
 - Active project spec: [RP-2 Failure-to-Recovery Loop](./projects/RP-2_FAILURE_RECOVERY.md)
+- RP-2 reading spine: [P0–P4 priority reading sequence](#rp-2-i-02-priority-reading-spine) — 전체 dependency는 [READING_PLAN.md](./READING_PLAN.md#rp-2-i-02-priority-reading-sequence)를 canonical source로 둔다.
+- RP-2 novelty status: `CONDITIONALLY_FIT` — 현재 아이디어는 motivation은 명확하지만, method novelty는 principled decision derivation과 failure-case evidence를 통과해야 한다.
 
 ## 이 문서의 역할
 
@@ -106,6 +108,91 @@
 - **판정 지표:** detection lead time, false intervention, type accuracy, recovery success, irreversible failure, added action cost, final completion.
 - **Reject criterion:** oracle failure type을 제공해도 typed recovery가 retry/replan baseline을 이기지 못하면 detector 연구가 아니라 recovery skill library의 expressivity 문제로 판정한다.
 - **Paper basis:** [POMDP](../1998/Artificial-Intelligence/1998_Artificial-Intelligence_Planning-and-Acting-in-Partially-Observable-Stochastic-Dom/01_overview.md), [SAFE](../2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md), [Recovery RL](../2020/RA-L/2020_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/01_overview.md), [PDDLStream](../2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp/01_overview.md), [FAIL-Detect](../2025/RSS/2025_RSS_Can-We-Detect-Failures-Without-Failure-Data-Uncertainty-Aw/01_overview.md), [FLARE](../2026/CVPR/2026_CVPR_FLARE-A-Failure-Aware-Framework-for-Autonomous-Correction/01_overview.md), [VLA-FixBench/FaultEval](../2026/ICML/2026_ICML_Can-VLMs-Diagnose-and-Recover-from-VLA-Manipulation-Faults/01_overview.md), [TD calibration](../2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/01_overview.md).
+
+## RP-2 I-02 priority reading spine
+
+이 목록은 전체 CORE/NEXT tier가 아니라 **RP-2를 실제로 설계·구현하기 위한 dependency 순서**다. P0–P2는 첫 decision experiment의 필수 spine이고, P3는 frozen policy adapter를 고정하기 위한 implementation branch, P4는 transfer와 후속 확장이다. 15편 hard cap은 두지 않는다. 각 paper를 읽은 뒤에는 단순 요약 대신 아래 exit artifact를 남긴다.
+
+| Phase | 읽기 목적 | Exit artifact | 구현 의존성 |
+|---|---|---|---|
+| `P0` | partial observation, recovery, safety, planning의 문제 formulation 고정 | belief/state/action/budget 정의와 failure-state causal map | method 설계 전 필수 |
+| `P1` | detector·diagnosis·binary recovery의 실제 한계 확인 | detector/selector baseline audit와 failure taxonomy | Phase 0 wrapper 전에 필수 |
+| `P2` | benchmark·termination·event metric의 의미 고정 | benchmark adapter와 `rp2.event.v1` mapping 표 | Phase 1 전에 필수 |
+| `P3` | frozen VLA와 offline/value branch 선택 | base checkpoint, action interface, inference budget 결정 | pilot 구현 branch |
+| `P4` | long-horizon·world-model·memory·data extension 판단 | transfer/revise/defer 결정 memo | pilot 결과 후 읽기 |
+
+### P0 — Concept prerequisites (10)
+
+1. [Planning and Acting in Partially Observable Stochastic Domains](../1998/Artificial-Intelligence/1998_Artificial-Intelligence_Planning-and-Acting-in-Partially-Observable-Stochastic-Dom/01_overview.md) — belief state, partial observability, finite-memory decision.
+2. [A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning](../2011/AISTATS/2011_AISTATS_A-Reduction-of-Imitation-Learning-and-Structured-Predictio/01_overview.md) — learner-induced failure states와 covariate shift.
+3. [Proximal Policy Optimization Algorithms](../2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms/01_overview.md) — policy optimization과 trust-region 직관.
+4. [Trust Region Policy Optimization](../2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/01_overview.md) — constrained/stable policy update.
+5. [Recovery RL: Safe Reinforcement Learning with Learned Recovery Zones](../2020/RA-L/2020_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/01_overview.md) — task/recovery policy 분리와 safety critic.
+6. [Failure Prediction with Statistical Guarantees for Vision-Based Robot Control](../2022/RSS/2022_RSS_Failure-Prediction-with-Statistical-Guarantees-for-Vision/01_overview.md) — runtime monitoring과 failure prediction.
+7. [Control Barrier Function Based Quadratic Programs for Safety Critical Systems](../2017/TAC/2017_TAC_Control-Barrier-Function-Based-Quadratic-Programs-for-Safe/01_overview.md) — safe set, constraint violation, irreversible event.
+8. [Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners](../2023/CoRL/2023_CoRL_Robots-That-Ask-For-Help-Uncertainty-Alignment-for-Large-L/01_overview.md) — uncertainty-aligned escalation.
+9. [PDDLStream: Integrating Symbolic Planners and Blackbox Samplers via Optimistic Adaptive Planning](../2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp/01_overview.md) — symbolic–continuous replanning interface.
+10. [Relay Policy Learning: Solving Long-Horizon Tasks via Imitation and Reinforcement Learning](../2020/CoRL/2020_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita/01_overview.md) — long-horizon skill decomposition과 relaying.
+
+### P1 — Direct detector and recovery baselines (8)
+
+1. [Can We Detect Failures Without Failure Data? Uncertainty-Aware Runtime Failure Detection for Imitation Learning Policies](../2025/RSS/2025_RSS_Can-We-Detect-Failures-Without-Failure-Data-Uncertainty-Aw/01_overview.md) — failure-data-free uncertainty detector.
+2. [SAFE: Multitask Failure Detection for Vision-Language-Action Models](../2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md) — frozen VLA latent score와 conformal alert threshold.
+3. [FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation](../2026/CVPR/2026_CVPR_FLARE-A-Failure-Aware-Framework-for-Autonomous-Correction/01_overview.md) — binary Retry/Reset dispatcher.
+4. [Can VLMs Diagnose and Recover from VLA Manipulation Faults?](../2026/ICML/2026_ICML_Can-VLMs-Diagnose-and-Recover-from-VLA-Manipulation-Faults/01_overview.md) — fault taxonomy, diagnosis, rollback recovery.
+5. [Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models](../2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/01_overview.md) — sequential success-confidence calibration.
+6. [AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic Manipulation](../2025/ICLR/2025_ICLR_AHA-A-Vision-Language-Model-for-Detecting-and-Reasoning-Ov/01_overview.md) — VLM failure detection/reasoning alternative.
+7. [Counterfactual VLA: Self-Reflective Vision-Language-Action Model with Adaptive Reasoning](../2026/CVPR/2026_CVPR_Counterfactual-VLA-Self-Reflective-Vision-Language-Action/01_overview.md) — self-reflection과 test-time recovery comparison.
+8. [SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained Learning](../2025/NeurIPS/2025_NeurIPS_SafeVLA-Towards-Safety-Alignment-of-Vision-Language-Action/01_overview.md) — constrained VLA safety alignment.
+
+### P2 — Benchmark and metric semantics (8)
+
+1. [Benchmarking Knowledge Transfer for Lifelong Robot Learning](../2023/NeurIPS/2023_NeurIPS_Benchmarking-Knowledge-Transfer-for-Lifelong-Robot-Learnin/01_overview.md) — LIBERO fixed states와 goal predicates.
+2. [CALVIN: A Benchmark for Language-Conditioned Policy Learning for Long-Horizon Robot Manipulation Tasks](../2022/RA-L/2022_RA-L_CALVIN-A-Benchmark-for-Language-Conditioned-Policy-Learnin/01_overview.md) — language-conditioned long-horizon sequence.
+3. [AtomicVLA: Unlocking the Potential of Atomic Skill Learning in Robots](../2026/CVPR/2026_CVPR_AtomicVLA-Unlocking-the-Potential-of-Atomic-Skill-Learning/01_overview.md) — termination semantics와 post-failure continuation.
+4. [FurnitureBench: Reproducible Real-World Benchmark for Long-Horizon Complex Manipulation](../2023/RSS/2023_RSS_FurnitureBench-Reproducible-Real-World-Benchmark-for-Long/01_overview.md) — phase/skill progress beyond final success.
+5. [LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models](../2026/ECCV/2026_ECCV_LIBERO-Safety-A-Comprehensive-Benchmark-for-Physical-and-S/01_overview.md) — physical/semantic safety perturbation.
+6. [VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models](../2026/ICML/2026_ICML_VLA-Arena-An-Open-Source-Framework-for-Benchmarking-Vision/01_overview.md) — safety, distractor, extrapolation, long-horizon stress axes.
+7. [BEHAVIOR-1K: A Benchmark for Embodied AI with 1,000 Everyday Activities and Realistic Simulation](../2022/CoRL/2022_CoRL_BEHAVIOR-1K-A-Benchmark-for-Embodied-AI-with-1000-Everyday/01_overview.md) — embodied long-horizon evaluation context.
+8. [RLBench: The Robot Learning Benchmark & Learning Environment](../2020/RA-L/2020_RA-L_RLBench-The-Robot-Learning-Benchmark-and-Learning-Environm/01_overview.md) — task suite와 simulator design 비교.
+
+### P3 — Frozen VLA and implementation branch (11)
+
+1. [OpenVLA: An Open-Source Vision-Language-Action Model](../2024/CoRL/2024_CoRL_OpenVLA-An-Open-Source-Vision-Language-Action-Model/01_overview.md) — 첫 pilot의 frozen base 후보.
+2. [Octo: An Open-Source Generalist Robot Policy](../2024/RSS/2024_RSS_Octo-An-Open-Source-Generalist-Robot-Policy/01_overview.md) — generalist policy/action conditioning 대안.
+3. [RT-1: Robotics Transformer for Real-World Control at Scale](../2022/arxiv/2022_arxiv_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale/01_overview.md) — robot policy/action-token lineage.
+4. [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](../2023/CoRL/2023_CoRL_RT-2-Vision-Language-Action-Models-Transfer-Web-Knowledge/01_overview.md) — language-to-action VLA lineage.
+5. [π0: A Vision-Language-Action Flow Model for General Robot Control](../2025/RSS/2025_RSS_pi0-A-Vision-Language-Action-Flow-Model-for-General-Robot/01_overview.md) — flow-based VLA alternative.
+6. [π0.5: a Vision-Language-Action Model with Open-World Generalization](../2025/CoRL/2025_CoRL_pi0.5-a-Vision-Language-Action-Model-with-Open-World-Gener/01_overview.md) — open-world VLA extension.
+7. [Decision Transformer: Reinforcement Learning via Sequence Modeling](../2021/NeurIPS/2021_NeurIPS_Decision-Transformer-Reinforcement-Learning-via-Sequence-M/01_overview.md) — trajectory-conditioned sequence modeling.
+8. [Offline Reinforcement Learning with Implicit Q-Learning](../2022/ICLR/2022_ICLR_Offline-Reinforcement-Learning-with-Implicit-Q-Learning/01_overview.md) — selector value-learning branch.
+9. [Conservative Q-Learning for Offline Reinforcement Learning](../2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/01_overview.md) — conservative offline recovery/value baseline.
+10. [Implicit Behavioral Cloning](../2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/01_overview.md) — multimodal behavior-cloning alternative.
+11. [Q-Transformer: Scalable Offline Reinforcement Learning via Autoregressive Q-Functions](../2024/CoRL/2024_CoRL_Q-Transformer-Scalable-Offline-Reinforcement-Learning-via/01_overview.md) — autoregressive action-value extension.
+
+### P4 — Optional extensions and transfer checks (11)
+
+1. [Long-VLA: Unleashing Long-Horizon Capability of Vision Language Action Model for Robot Manipulation](../2025/CoRL/2025_CoRL_Long-VLA-Unleashing-Long-Horizon-Capability-of-Vision-Lang/01_overview.md) — long-horizon VLA context.
+2. [PALM: Progress-Aware Policy Learning via Affordance Reasoning for Long-Horizon Robotic Manipulation](../2026/CVPR/2026_CVPR_PALM-Progress-Aware-Policy-Learning-via-Affordance-Reasoni/01_overview.md) — progress-aware state.
+3. [Learning to Be Uncertain: Pre-training World Models with Horizon-Calibrated Uncertainty](../2026/ICLR/2026_ICLR_Learning-to-Be-Uncertain-Pre-training-World-Models-with-Ho/01_overview.md) — horizon-calibrated uncertainty.
+4. [WorldGym: World Model as An Environment for Policy Evaluation](../2026/ICLR/2026_ICLR_WorldGym-World-Model-as-An-Environment-for-Policy-Evaluati/01_overview.md) — world-model policy evaluation.
+5. [WMPO: World Model-based Policy Optimization for Vision-Language-Action Models](../2026/ICLR/2026_ICLR_WMPO-World-Model-based-Policy-Optimization-for-Vision-Lang/01_overview.md) — imagined policy improvement/calibration.
+6. [Memory Retrieval in Visuomotor Policies for Long-Horizon Robot Control](../2026/RSS/2026_RSS_Memory-Retrieval-in-Visuomotor-Policies-for-Long-Horizon-R/01_overview.md) — memory/retrieval effects.
+7. [Inner Monologue: Embodied Reasoning through Planning with Language Models](../2022/CoRL/2022_CoRL_Inner-Monologue-Embodied-Reasoning-through-Planning-with-L/01_overview.md) — language-mediated replanning and feedback.
+8. [SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning](../2023/CoRL/2023_CoRL_SayPlan-Grounding-Large-Language-Models-using-3D-Scene-Gra/01_overview.md) — scene-graph task planning.
+9. [MimicPlay: Long-Horizon Imitation Learning by Watching Human Play](../2023/CoRL/2023_CoRL_MimicPlay-Long-Horizon-Imitation-Learning-by-Watching-Huma/01_overview.md) — long-horizon imitation/play data.
+10. [MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations](../2023/CoRL/2023_CoRL_MimicGen-A-Data-Generation-System-for-Scalable-Robot-Learn/01_overview.md) — recovery-data augmentation.
+11. [Data Scaling Laws in Imitation Learning for Robotic Manipulation](../2025/ICLR/2025_ICLR_Data-Scaling-Laws-in-Imitation-Learning-for-Robotic-Manipu/01_overview.md) — data coverage and failure-data curation.
+
+P0–P2를 읽고도 `same alert score → different optimal recovery`와 `remaining budget에 따른 option crossing`을 관찰하지 못하면 I-02의 typed/budgeted formulation을 유지하지 않는다. 그 경우 scalar risk-triggered recovery 또는 benchmark/event-protocol contribution으로 범위를 축소한다.
+
+### RP-2 novelty audit
+
+[Motivation ≠ Novelty](https://gisbi-kim.github.io/motivation-is-not-novelty/)의 기준으로 보면, “VLA가 실패한다”, “기존 detector는 recovery를 선택하지 않는다”, “그래서 typed recovery module을 추가한다”는 아직 motivation이다. I-02가 연구 아이디어로 남으려면 다음 한 문장으로 설명할 수 있어야 한다.
+
+> Scalar failure confidence만으로는 action-conditioned recovery outcome을 구분할 수 없고, partial-observation belief와 multidimensional remaining budget을 decision state로 넣으면 option-value의 crossing이 발생한다. 따라서 risk-constrained budgeted selector가 binary retry/reset보다 필요한 경우에만 다른 recovery를 선택한다.
+
+이 문장이 실제 failure table·수식·ablation으로 지지되지 않으면 module 조합의 novelty를 주장하지 않는다. 최소 검증은 (1) naive baseline의 원인별 failure census, (2) same alert/different optimal option, (3) budget 감소에 따른 policy crossing, (4) scalar/type-only/heuristic selector와의 matched comparison, (5) hold-out failure family 또는 CALVIN transfer다. 이 조건을 통과하기 전까지 I-02의 상태는 `CONDITIONALLY_FIT`이다.
 
 ### I-03. Phase-aware spatial memory with learned expiry
 

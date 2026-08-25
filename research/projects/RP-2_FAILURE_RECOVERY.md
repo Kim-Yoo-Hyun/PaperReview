@@ -6,6 +6,8 @@
 - Primary benchmark: `LIBERO-Long` (`libero_10`)
 - Secondary validation: `CALVIN` long-horizon five-subtask sequences
 - Hypothesis evidence: `UNTESTED`
+- Priority reading: [RP-2 P0–P4 spine](../RESEARCH_IDEAS.md#rp-2-i-02-priority-reading-spine)
+- Novelty status: `CONDITIONALLY_FIT` — motivation은 충분하지만 method novelty는 failure analysis와 decision derivation으로 검증해야 한다.
 
 이 문서는 새 foundation model을 만드는 계획이 아니다. 기존 VLA와 failure detector를 고정하고, **failure가 발생한 뒤 어떤 recovery option을 선택해야 하는지**를 동일한 시간·행동·위험 예산 아래 검증하는 최소 프로젝트 명세다. I-12는 공통 측정 도구이고 I-02가 그 위에서 검증할 방법 가설이다.
 
@@ -22,6 +24,14 @@
 - **H3 — Clean non-degradation:** perturbation이 없는 episode에서 불필요한 intervention 때문에 native task success가 3 percentage point를 초과해 하락하지 않는다.
 - **H4 — Attribution:** oracle detector와 oracle recovery type을 줘도 이득이 없으면 detector가 아니라 recovery skill library 또는 task-state interface가 병목이다.
 
+### 결정해야 할 세부 연구 질문
+
+- **RQ1 — Typed state의 필요성:** 같은 scalar failure score와 비슷한 detection time을 가진 두 episode에서 최적 recovery option이 달라지는가? 달라지지 않으면 `cause × recoverability`는 장식적 label이다.
+- **RQ2 — Budget의 인과적 역할:** remaining recovery budget이 줄어들 때 최적 option이 실제로 바뀌는가? option 선택이 budget과 무관하면 `budgeted`라는 명칭을 제거한다.
+- **RQ3 — 병목 분해:** detector calibration, belief/type inference, option-value estimation, option library 중 어느 요소가 BRCR–IFR trade-off를 제한하는가?
+- **RQ4 — 전이성:** 동일한 selector와 event semantics가 LIBERO의 perturbation family에서 CALVIN sequence와 unseen onset으로 옮겨가는가? transfer가 없으면 benchmark-specific protocol로 주장 범위를 축소한다.
+- **RQ5 — protocol의 독립성:** benchmark-native final success만 사용했을 때와 공통 event schema를 사용했을 때 method ranking이 바뀌는가? ranking이 바뀌지 않으면 schema는 method contribution이 아니라 logging convenience다.
+
 ### novelty boundary
 
 FLARE는 이미 error를 recoverable in-distribution `Retry`와 state-breaking/out-of-distribution `Reset`으로 나누고 recovery를 수행한다. VLA-FixBench/FaultEval은 fault taxonomy와 rollback recovery를 benchmark 문제로 구체화하고, TD calibration은 sequential success confidence를 alert에 연결한다. FailSafe도 failure–recovery action pair 생성 문제를 다룬다. 그러므로 이 프로젝트는 “typed recovery가 처음”이라고 주장하지 않는다. 남은 검증 단위는 다음으로 제한한다.
@@ -31,6 +41,30 @@ FLARE는 이미 error를 recoverable in-distribution `Retry`와 state-breaking/o
 3. injection, onset, detection, intervention, recovery, terminal outcome을 분리한 **event protocol**,
 4. detector 오류와 selector 오류를 분리하는 **oracle decomposition**,
 5. LIBERO에서 시작해 CALVIN으로 옮길 수 있는 **benchmark-independent semantics**.
+
+## 1.1 Motivation과 novelty의 분리
+
+[Motivation ≠ Novelty](https://gisbi-kim.github.io/motivation-is-not-novelty/)의 rubric을 적용하면, 현재 RP-2는 **문제 motivation은 강하지만 아직 novelty를 통과했다고 볼 수 없다**. 기존 VLA가 failure 뒤에 취약하고, detector만으로 recovery decision이 닫히지 않는다는 관찰은 좋은 motivation이다. 그러나 `detector + type head + option selector`를 붙이는 것만으로는 “왜 그 형태여야 하는가”가 설명되지 않는다.
+
+현재 문서가 method paper 수준의 주장으로 올라가기 위해 반드시 추가해야 하는 것은 다음이다.
+
+1. **Naive baseline의 전수 failure audit:** SAFE/FAIL-Detect + abort/retry/binary Retry–Reset을 먼저 구현하고, failure 원인·onset·budget별로 같은 alert score가 왜 다른 option을 요구하는지 표로 만든다.
+2. **원리적 진단:** detector score는 `failure가 일어났을 확률`만 주고, action-conditioned recovery outcome과 remaining budget을 주지 않는다는 점을 formalize한다.
+3. **해법 도출:** `belief × option-conditioned value × risk constraint × budget`에서 selector가 유도되어야 한다. type label을 임의로 추가하지 않는다.
+4. **단순화 반증:** scalar-risk selector, cause-only, budget-only, heuristic type map, uncalibrated selector를 모두 비교해 typed budget state가 실제로 필요한지 보인다.
+5. **새 failure mode 분석:** typed selector를 붙인 뒤 생기는 stale belief, detector delay, option-call cost, false intervention, budget exhaustion을 별도 event로 기록한다.
+6. **일반화 검증:** task·failure family·onset landmark·benchmark 중 최소 하나를 완전히 hold-out해, 단일 LIBERO perturbation에 맞춘 규칙이 아님을 확인한다.
+
+따라서 이 프로젝트의 현재 claim ladder는 다음처럼 제한한다.
+
+| Level | 주장 | 조건 |
+|---|---|---|
+| `C0` | benchmark-independent recovery event protocol | schema adapter와 inter-rater/metric 재현성만 확인된 경우 |
+| `C1` | matched budget에서 typed recovery selection이 scalar/binary baseline보다 유리 | RQ1/RQ2의 crossing evidence, option-value ablation, IFR non-degradation |
+| `C2` | typed selector가 benchmark·failure family를 넘어 일반화 | CALVIN 또는 hold-out family에서 frozen selector transfer |
+| `C3` | 실제 safety improvement | LIBERO-Safety 또는 real-robot physical safety에서 별도 검증. LIBERO pilot만으로 주장하지 않음 |
+
+현재 최소 목표는 `C1`이며, `C0`만 남으면 method paper가 아니라 evaluation/protocol 결과로 보고한다.
 
 ## 2. 기반 논문과 차용 방법
 
@@ -66,6 +100,40 @@ FLARE는 이미 error를 recoverable in-distribution `Retry`와 state-breaking/o
 5. feasible option이 없으면 `ABORT_HELP`를 선택한다.
 
 Conformal calibration은 alert threshold에만 적용한다. distribution shift가 있는 recoverability classification이나 option-value 전체에 같은 보장을 확장해 주장하지 않는다.
+
+### Novelty를 위해 필요한 decision formulation
+
+typed label을 먼저 정하고 classifier를 붙이는 방식은 novelty 근거가 약하다. 최소 formulation은 관측 history와 recovery budget에서 option-conditioned outcome을 결정하는 constrained belief decision이어야 한다.
+
+```text
+b_t = p(cause, recoverability, progress | o_1:t, a_1:t-1)
+q_o  = P(goal_completion | b_t, option=o, B_t)
+r_o  = P(irreversible_event | b_t, option=o, B_t)
+
+o* = argmax_o q_o - λ · cost(o, B_t)
+     subject to r_o ≤ δ and feasible(o, B_t) = 1
+```
+
+- `b_t`는 detector score 하나가 아니라 관측 history, 최근 action, progress, current subgoal, remaining budget을 요약한다.
+- `q_o`와 `r_o`는 option마다 달라야 한다. 같은 alert score에서도 `REOBSERVE_WAIT`, `RETRY_CURRENT`, `RETREAT_RESET`, `REPLAN`의 outcome이 달라지는 것이 typed decision의 전제다.
+- `B_t`는 native horizon, recovery steps, option calls, replans, irreversible-event allowance의 vector다. scalar penalty 하나로 합쳐서 budget effect를 숨기지 않는다.
+- `δ`는 safety gate이며 calibration의 대상이다. 모든 option-value prediction에 formal guarantee가 있다고 주장하지 않는다.
+
+이 formulation에서 `failure_cause`는 최종 contribution이 아니라 action value를 설명하는 latent variable이다. 만약 `q_o`가 scalar alert와 remaining budget만으로 충분히 예측되고 type을 제거해도 같은 ranking이 나오면, typed selector를 유지할 이유가 없다.
+
+### 기반 논문에서 baseline으로 가져올 역할
+
+| 역할 | 필수 paper | RP-2에서 가져올 것 | 구현상 주의 |
+|---|---|---|---|
+| partial-observation formulation | [POMDP](../../1998/Artificial-Intelligence/1998_Artificial-Intelligence_Planning-and-Acting-in-Partially-Observable-Stochastic-Dom/01_overview.md), [DAgger](../../2011/AISTATS/2011_AISTATS_A-Reduction-of-Imitation-Learning-and-Structured-Predictio/01_overview.md) | belief, learner-induced failure-state, history dependence | hidden state를 oracle feature로 넣지 않음 |
+| safety/recovery switching | [Recovery RL](../../2020/RA-L/2020_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/01_overview.md), [CBF-QP](../../2017/TAC/2017_TAC_Control-Barrier-Function-Based-Quadratic-Programs-for-Safe/01_overview.md) | task/recovery 분리, risk gate와 safe set | semantic recovery 전체를 safety critic 하나로 대체하지 않음 |
+| runtime detector | [FAIL-Detect](../../2025/RSS/2025_RSS_Can-We-Detect-Failures-Without-Failure-Data-Uncertainty-Aw/01_overview.md), [SAFE](../../2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md), [TD calibration](../../2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/01_overview.md) | detector/threshold/calibration baseline | alert와 cause inference를 분리 |
+| recovery dispatcher | [FLARE](../../2026/CVPR/2026_CVPR_FLARE-A-Failure-Aware-Framework-for-Autonomous-Correction/01_overview.md), [VLA-FixBench/FaultEval](../../2026/ICML/2026_ICML_Can-VLMs-Diagnose-and-Recover-from-VLA-Manipulation-Faults/01_overview.md) | binary Retry/Reset, fault/rollback taxonomy | 저자 구현을 재현하기 전 reported number를 이식하지 않음 |
+| continuous replanning | [PDDLStream](../../2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp/01_overview.md) | task predicate와 continuous feasibility interface | pilot에서는 privileged replan과 learned replan을 구분 |
+| evaluation semantics | [LIBERO](../../2023/NeurIPS/2023_NeurIPS_Benchmarking-Knowledge-Transfer-for-Lifelong-Robot-Learnin/01_overview.md), [CALVIN](../../2022/RA-L/2022_RA-L_CALVIN-A-Benchmark-for-Language-Conditioned-Policy-Learnin/01_overview.md), [AtomicVLA](../../2026/CVPR/2026_CVPR_AtomicVLA-Unlocking-the-Potential-of-Atomic-Skill-Learning/01_overview.md), [FurnitureBench](../../2023/RSS/2023_RSS_FurnitureBench-Reproducible-Real-World-Benchmark-for-Long/01_overview.md) | fixed state, subtask progress, post-failure continuation | final success만으로 recovery를 평가하지 않음 |
+| frozen base policy | [OpenVLA](../../2024/CoRL/2024_CoRL_OpenVLA-An-Open-Source-Vision-Language-Action-Model/01_overview.md), [Octo](../../2024/RSS/2024_RSS_Octo-An-Open-Source-Generalist-Robot-Policy/01_overview.md), [π0](../../2025/RSS/2025_RSS_pi0-A-Vision-Language-Action-Flow-Model-for-General-Robot/01_overview.md) | action interface와 inference budget 비교 | base policy를 바꾸면서 recovery claim을 섞지 않음 |
+
+이 표의 핵심은 논문 수를 늘리는 것이 아니라, `detector → belief → option value → constrained selector → benchmark outcome`의 각 경계를 독립 baseline으로 고정하는 것이다.
 
 ## 3. Benchmark 결정
 
@@ -221,11 +289,27 @@ Pilot 이후 `recovery execution ∈ {60, 120, 180}` sensitivity를 수행한다
 | B3 | SAFE + blind retry | 동일 SAFE | 모든 alert에 `RETRY_CURRENT` | 가장 단순한 recovery baseline |
 | B4 | SAFE + privileged replan | 동일 SAFE | 모든 alert에 simulator predicate 기반 `REPLAN` | planning interface의 강한 privileged baseline |
 | B5 | FLARE-style binary dispatcher | learned 또는 oracle-labeled | local/ID는 `RETRY_CURRENT`, state-breaking/OOD는 `RETREAT_RESET` | 이미 발표된 binary retry/reset counter-evidence |
+| B6 | FAIL-Detect + abort | FAIL-Detect | alert 시 `ABORT_HELP` | failure-data-free detector family 비교 |
+| B7 | SAFE + scalar-risk selector | 동일 SAFE | `P(goal) − λ·P(irreversible)`만으로 option 선택 | typed state가 불필요하다는 가장 가까운 naive method |
+| B8 | TD-calibrated scalar selector | TD calibration + SAFE score | calibrated scalar risk로 option 선택 | calibration만으로 typed recovery가 대체되는지 확인 |
 | P1 | SAFE + typed budgeted selector | 동일 SAFE | 6개 option 중 risk-constrained 선택 | 제안 방법 |
 
 B4는 true simulator predicate를 보므로 일반 learned baseline으로 보고하지 않고 `PRIVILEGED`로 표시한다. PDDLStream 전체 구현은 continuous collision/kinematic feasibility가 실제 병목으로 확인될 때 CALVIN 또는 phase-2 extension에서 추가한다. 최소 LIBERO pilot에서는 task-specific predicate/skill graph replan으로 범위를 제한한다.
 
 B5의 저자 코드를 동일 조건에서 재현하지 못하면 임의 구현을 FLARE 결과라고 부르지 않는다. 대신 oracle ID/OOD label을 쓰는 `privileged binary Retry/Reset`으로 이름을 바꾸어 binary taxonomy의 upper bound로 보고한다.
+
+### 제안 method를 약화한 필수 ablation
+
+| ID | 제거/변경 요소 | 검증하는 주장 |
+|---|---|---|
+| A1 | `cause`만 사용하고 remaining budget을 고정 | budget dimension의 필요성 |
+| A2 | remaining budget만 사용하고 `cause/recoverability` 제거 | typed state의 필요성 |
+| A3 | type→option 고정 heuristic map, option-value head 제거 | learned action-conditioned value의 필요성 |
+| A4 | typed selector는 유지하되 alert/calibration 제거 | calibration과 selection의 분리 효과 |
+| A5 | type head는 유지하되 `q_o/r_o` 대신 scalar task value 사용 | option별 outcome modeling의 필요성 |
+| A6 | `REOBSERVE_WAIT`와 `RETREAT_RESET`을 제거한 reduced library | option expressivity와 method novelty의 구분 |
+
+A1–A6 중 하나라도 P1과 같은 성능을 내면 해당 component를 contribution으로 주장하지 않는다. 특히 A3이 P1과 같으면 typed label을 classifier로 학습하는 것은 단순 routing이며, `C1` method claim을 유지할 수 없다.
 
 ### 오류 분해와 upper bound
 
@@ -297,7 +381,7 @@ articulated receptacle, multi-object sequence, precise placement를 함께 포�
 | severity | S1, S2 |
 | fixed initial states | task당 10개 |
 | paired scenario | `4 × 4 × 2 × 10 = 320` / system |
-| systems | B1–B5, P1, O1–O3 중 구현 가능한 전부 |
+| systems | B1–B8, A1–A6, P1, O1–O3 중 사전 등록한 비교군 전부 |
 | clean audit | 4 task × 10 init state / 실행 system |
 
 R4 perturbation은 각 task/init state에 무조건 곱하지 않고 별도 diagnostic set으로 둔다. standard LIBERO의 R4 결과는 simulator-specific correct-abort 성능으로만 해석한다.
@@ -375,7 +459,8 @@ Phase 1 결과를 본 뒤 perturbation 정의나 threshold를 바꾸면 Phase 2�
 2. 네 pilot task의 clean success와 state landmarks를 확인한다.
 3. `rp2.event.v1` logger와 clone/restore test를 먼저 작성한다.
 4. 네 perturbation family의 S1만 구현하고 oracle option sweep으로 R1–R4 label이 실제로 분리되는지 확인한다.
-5. B1–B4와 O3를 먼저 실행한다. 이 단계에서 option library upper bound가 없으면 learned selector를 만들지 않는다.
-6. SAFE detector를 연결해 B2–B5를 고정한다.
-7. 작은 cause/recoverability head와 option-value head를 학습해 P1/O1/O2를 실행한다.
-8. Phase 1 decision rule을 통과한 경우에만 full LIBERO와 CALVIN으로 확장한다.
+5. B1–B4, B6와 O3를 먼저 실행한다. 이 단계에서 option library upper bound가 없으면 learned selector를 만들지 않는다.
+6. SAFE와 TD-calibrated detector를 연결해 B2, B5–B8을 고정하고, scalar-risk selector(B7/B8)를 먼저 만든다.
+7. 같은 rollout에서 A1–A6를 실행해 type, budget, calibration, option-value 각 요소의 필요성을 확인한다.
+8. 작은 cause/recoverability belief head와 option-value head를 학습해 P1/O1/O2를 실행한다. RQ1/RQ2의 crossing evidence가 없으면 P1을 중단한다.
+9. Phase 1 decision rule을 통과한 경우에만 full LIBERO와 CALVIN으로 확장한다.
