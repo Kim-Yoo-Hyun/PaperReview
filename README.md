@@ -1,173 +1,198 @@
-# 3D Vision, Robotics, and Vision-Language Paper Survey
+# PaperReview — Robotics-first Literature System
 
-This repository is a structured literature survey for research at the intersection of 3D vision, robotics, and vision-language intelligence.
+`PaperReview`는 3D vision, robotics, VLA를 함께 다루되 **Robotics를 주 연구축**으로 삼는 장기 문헌 연구 저장소다. 논문을 모으는 데서 끝내지 않고, foundation → 최신 방법 → failure mode → 검증 가능한 연구 질문으로 연결한다.
 
-It collects papers, PDFs, and compact reading notes for topics such as vision-language-action models, 3D scene graphs, embodied navigation, Gaussian Splatting, NeRF, SLAM, sensor fusion, grounding, calibration, planning, reinforcement learning, imitation learning, and foundation models.
+핵심 폐루프는 다음과 같다.
 
-The full paper registry is maintained in [PAPER.md](./PAPER.md).
-The consolidated robotics-first priority and reading roadmap is maintained in [READING_PLAN.md](./research/READING_PLAN.md).
-Reading progress and cross-paper comparison are maintained in [READING_STATUS.csv](./research/READING_STATUS.csv) and [synthesis](./synthesis/README.md).
-Cross-track research gaps and experiment-ready hypotheses are maintained in [RESEARCH_GAPS.md](./research/RESEARCH_GAPS.md) and [RESEARCH_IDEAS.md](./research/RESEARCH_IDEAS.md).
-The latest registry and frontier audit is recorded in [UPDATES_2026-08-25.md](./research/UPDATES_2026-08-25.md).
+```text
+observation → state / belief / world model → task & motion decision
+→ policy / control → contact → feedback / failure detection / recovery
+```
 
-## Scope
+현재의 연구 관점은 다음과 같다.
 
-The survey focuses on papers that connect at least one of the following core areas:
+- **Robotics:** planning, control, RL/IL, offline learning, manipulation, contact, locomotion, whole-body control, safety, recovery를 중심에 둔다.
+- **VLA:** language understanding 자체보다 action representation, feedback, latency, memory, embodiment transfer, long-horizon execution을 본다.
+- **3D Vision:** 독립적인 reconstruction 성능보다 state estimation, spatial memory, active perception, collision/contact reasoning, robot control에 주는 효과를 본다.
+- **Humanoid:** 별도 축이 아니라 locomotion, whole-body control, imitation, mobile/loco-manipulation 안에서 다룬다.
 
-- 3D Vision
-- Robotics
-- Vision-Language
+## Contents
 
-Secondary keywords include:
+- [빠른 탐색](#빠른-탐색)
+- [현재 snapshot](#현재-snapshot)
+- [어떤 종류의 논문이 있는가](#어떤-종류의-논문이-있는가)
+- [최근 경향](#최근-경향)
+- [현재 연구 방향](#현재-연구-방향)
+- [읽는 방법](#읽는-방법)
+- [문서 구조와 note 규칙](#문서-구조와-note-규칙)
+- [논문 추가와 provenance 규칙](#논문-추가와-provenance-규칙)
+- [Curation and maintenance policy](#curation-and-maintenance-policy)
+- [공개 registry 참고](#공개-registry-참고)
 
-- Vision-Language-Action, Vision-Language Navigation, 3D Scene Graphs
-- Gaussian Splatting, NeRF, 3D reconstruction, SLAM
-- Grounding, alignment, consistency, calibration, sensor fusion
-- Diffusion, generation, representation learning
-- Reinforcement learning, imitation learning, planning
-- LLMs, VLMs, graph reasoning, semantic and geometric scene understanding
+## 빠른 탐색
 
-## Current Snapshot
+| 목적 | 문서 |
+|---|---|
+| 전체 논문 registry | [PAPER.md](./PAPER.md) |
+| 우선순위·읽기 순서·CORE/NEXT | [research/READING_PLAN.md](./research/READING_PLAN.md) |
+| 전체 tier assignment | [research/READING_TIERS.csv](./research/READING_TIERS.csv) |
+| 정독 진행 상태 | [research/READING_STATUS.csv](./research/READING_STATUS.csv), [research/READING_STATUS.md](./research/READING_STATUS.md) |
+| 연구 공백 | [research/RESEARCH_GAPS.md](./research/RESEARCH_GAPS.md) |
+| 연구 아이디어·가설 | [research/RESEARCH_IDEAS.md](./research/RESEARCH_IDEAS.md) |
+| 현재 진행 프로젝트 | [research/projects/RP-2_FAILURE_RECOVERY.md](./research/projects/RP-2_FAILURE_RECOVERY.md) |
+| 계보·트랙별 synthesis | [synthesis/README.md](./synthesis/README.md) |
+| 최신 변경 기록 | [research/UPDATES_2026-08-25.md](./research/UPDATES_2026-08-25.md) |
 
-| Item | Count |
+## 현재 snapshot
+
+| 항목 | 수치 |
 |---|---:|
-| Papers | 821 |
-| Local PDFs | 194 |
-| Per-paper markdown notes | 4,105 |
-| Canonical categories | 23 |
-| Years covered | 1987-2026 |
+| 전체 registry | **821편** |
+| CORE / NEXT | **61 / 89편** |
+| REFERENCE / ARCHIVE | **438 / 233편** |
+| intensive reading set | **150편** |
+| paper당 표준 Markdown note | **4,105개** |
+| local PDF cache | 194개 |
+| canonical category | 23개 |
+| 대상 연도 | 1987–2026 |
+| 2024–2026 논문 | 595편 |
+| 2025–2026 논문 | 468편 |
+| 2026 논문 | 177편 |
 
-## Venue Coverage
+`CORE/NEXT`는 논문 수를 맞추기 위한 quota가 아니다. 연구의 prerequisite와 현재 연구축에 따라 중요도가 바뀔 수 있다. PDF 보유 여부는 tier, 우선순위, 연구 relevance의 기준이 아니다.
 
-| Venue | Count |
-|---|---:|
-| CVPR | 157 |
-| ICCV | 91 |
-| ICLR | 101 |
-| ICML | 75 |
-| NeurIPS | 68 |
-| ECCV | 49 |
-| ICRA | 55 |
-| CoRL | 52 |
-| IROS | 20 |
-| RSS | 61 |
-| RA-L | 21 |
-| 3DV | 16 |
+## 어떤 종류의 논문이 있는가
 
-Additional papers are included from ICAPS, WACV, TMLR, SIGGRAPH, T-RO, TOG, AAAI, NAACL, AISTATS, EMNLP, ISMAR, and arXiv when they are foundational or directly relevant.
+### Intensive reading set의 연구 트랙
 
-## Directory Layout
+| 트랙 | CORE | NEXT | 주로 다루는 질문 |
+|---|---:|---:|---|
+| Planning, decision, control foundations | 10 | 0 | belief/state, motion planning, task-and-motion planning, feasibility, whole-body constraint |
+| RL, IL, offline learning, robot data | 15 | 13 | expert distribution, policy/value learning, offline conservatism, data coverage |
+| Manipulation, contact, tactile, dexterity | 8 | 21 | grasp/contact dynamics, force/tactile feedback, deformable and dexterous interaction |
+| VLA, cross-embodiment, long horizon | 11 | 18 | generalist policy, action interface, memory, skill composition, feedback |
+| World models, safety, uncertainty, recovery | 5 | 14 | runtime monitoring, calibration, safety filter, failure diagnosis, recovery |
+| Locomotion, whole-body, mobile manipulation, humanoid | 6 | 12 | balance, contact switching, loco-manipulation, sim-to-real, humanoid execution |
+| Robotics-enabling 3D perception | 6 | 11 | geometry, SLAM, spatial memory, active perception, 3D-to-control utility |
+| **합계** | **61** | **89** | **Robotics-first intensive reading** |
 
-Papers are organized first by year, then by venue or journal.
+전체 registry의 canonical category는 더 세분화되어 VLA/generalist, 3D vision-language, scene representation, embodied navigation, robot data, world models/safety, locomotion, manipulation/contact, planning/control foundation 등 23개로 관리된다. 자세한 분류는 [PAPER.md](./PAPER.md)와 [READING_TIERS.csv](./research/READING_TIERS.csv)에서 검색한다.
+
+### 논문이 맡는 역할
+
+- **Foundation:** POMDP, operational-space control, PRM/RRT, DAgger, PPO/TRPO, Recovery RL, CBF, PDDLStream 등 후속 논문을 이해하기 위한 기반.
+- **Policy and data:** behavior cloning, offline RL, diffusion/flow action policy, generalist robot policy, cross-embodiment data.
+- **Physical interaction:** contact-rich manipulation, tactile/force feedback, dexterity, deformables, assembly.
+- **VLA and long horizon:** RT-1/RT-2, PaLM-E, Open X-Embodiment, Octo, OpenVLA, π0/π0.5, memory, atomic skills, progress estimation.
+- **Safety and recovery:** failure prediction, uncertainty calibration, safety alignment, retry/reset, diagnosis, rollback, recovery selection.
+- **Benchmark and evidence:** LIBERO, CALVIN, RLBench, FurnitureBench, LIBERO-Safety, VLA-Arena, long-horizon and real-robot evaluation.
+- **Robotics-enabling perception:** PointNet, SLAM, 3DGS, DUSt3R/VGGT, semantic mapping, active view, 3D-aware policy state.
+
+## 최근 경향
+
+현재 registry의 2024–2026 frontier는 다음 방향으로 수렴한다.
+
+| 경향 | 대표 registry anchor | 연구적 의미 |
+|---|---|---|
+| VLA가 language interface에서 closed-loop controller로 이동 | [OpenVLA](./2024/CoRL/2024_CoRL_OpenVLA-An-Open-Source-Vision-Language-Action-Model/01_overview.md), [π0](./2025/RSS/2025_RSS_pi0-A-Vision-Language-Action-Flow-Model-for-General-Robot/01_overview.md) | action chunk, control rate, feedback, embodiment 조건이 핵심 변수가 됨 |
+| failure detection에서 recovery selection으로 확장 | [SAFE](./2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md), [FLARE](./2026/CVPR/2026_CVPR_FLARE-A-Failure-Aware-Framework-for-Autonomous-Correction/01_overview.md), [FaultEval](./2026/ICML/2026_ICML_Can-VLMs-Diagnose-and-Recover-from-VLA-Manipulation-Faults/01_overview.md) | alert 자체보다 원인·recoverability·budget에 따른 operational decision이 중요해짐 |
+| sequential confidence와 safety calibration 강화 | [FAIL-Detect](./2025/RSS/2025_RSS_Can-We-Detect-Failures-Without-Failure-Data-Uncertainty-Aw/01_overview.md), [Temporal Difference Calibration](./2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/01_overview.md) | 평균 success가 아니라 detection delay, false intervention, risk calibration을 측정해야 함 |
+| tactile/force가 VLA의 fast feedback 경로로 편입 | [Reactive Diffusion Policy](./2025/RSS/2025_RSS_Reactive-Diffusion-Policy-Slow-Fast-Visual-Tactile-Policy/01_overview.md), [Tabero](./2026/ICML/2026_ICML_Tabero-Learning-Gentle-Manipulation-with-Closed-Loop-Force/01_overview.md), [TactAlign](./2026/RSS/2026_RSS_TactAlign-Human-to-Robot-Policy-Transfer-via-Tactile-Align/01_overview.md) | sensor delay, calibration, contact regime 전이와 safety–success trade-off가 남은 문제 |
+| long-horizon policy의 state/memory/skill 구조화 | [AtomicVLA](./2026/CVPR/2026_CVPR_AtomicVLA-Unlocking-the-Potential-of-Atomic-Skill-Learning/01_overview.md), [Memory Retrieval](./2026/RSS/2026_RSS_Memory-Retrieval-in-Visuomotor-Policies-for-Long-Horizon-R/01_overview.md), [PALM](./2026/CVPR/2026_CVPR_PALM-Progress-Aware-Policy-Learning-via-Affordance-Reasoni/01_overview.md) | failure 이후 continuation, stale state, progress-aware recovery가 중요해짐 |
+| world model을 policy evaluation·uncertainty에 사용 | [WorldGym](./2026/ICLR/2026_ICLR_WorldGym-World-Model-as-An-Environment-for-Policy-Evaluati/01_overview.md), [WMPO](./2026/ICLR/2026_ICLR_WMPO-World-Model-based-Policy-Optimization-for-Vision-Lang/01_overview.md) | visual fidelity보다 contact/control fidelity와 real-gain calibration이 핵심 |
+| benchmark가 final success에서 failure resolution으로 이동 | [LIBERO-Safety](./2026/ECCV/2026_ECCV_LIBERO-Safety-A-Comprehensive-Benchmark-for-Physical-and-S/01_overview.md), [VLA-Arena](./2026/ICML/2026_ICML_VLA-Arena-An-Open-Source-Framework-for-Benchmarking-Vision/01_overview.md) | event timing, perturbation, intervention cost, recovery 이후 progress 기록이 필요 |
+| humanoid·whole-body와 contact feasibility 결합 | [HumanoidBench](./2024/RSS/2024_RSS_HumanoidBench-Simulated-Humanoid-Benchmark-for-Whole-Body/01_overview.md), [HWC-Loco](./2026/ICLR/2026_ICLR_HWC-Loco-A-Hierarchical-Whole-Body-Control-Approach-to-Rob/01_overview.md) | task progress, balance, torque, contact, recovery reserve를 같은 hierarchy에서 조정해야 함 |
+| 3D perception이 control utility·active sensing으로 재평가 | [ActiveVLA](./2026/CVPR/2026_CVPR_ActiveVLA-Injecting-Active-Perception-into-Vision-Language/01_overview.md), [PointVLA](./2026/RA-L/2026_RA-L_PointVLA-Injecting-the-3D-World-into-Vision-Language-Actio/01_overview.md) | geometry 정확도 자체보다 compute/latency-matched downstream action value가 중요 |
+
+## 현재 연구 방향
+
+현재 가장 구체화된 연구 프로그램은 **RP-2 / I-02: Budgeted Typed Recovery for VLA**다.
+
+> 동일한 detector와 동일한 time/action/risk budget에서, failure cause와 operational recoverability를 추정해 recovery option을 선택하면 abort, blind retry, binary Retry/Reset, privileged replan보다 recoverable failure의 최종 완료율을 높일 수 있는가?
+
+### RP-2의 최소 실험 구조
+
+| 요소 | 현재 결정 |
+|---|---|
+| Base policy | OpenVLA 계열 frozen VLA부터 시작 |
+| Primary benchmark | LIBERO-Long (`libero_10`) |
+| Transfer check | CALVIN long-horizon sequence |
+| Detector | SAFE/FAIL-Detect 계열, TD calibration은 독립 ablation |
+| Recovery baseline | abort, blind retry, FLARE-style binary Retry/Reset, privileged replan |
+| Proposed unit | `cause × recoverability × remaining budget` typed selector |
+| Primary outcome | Budgeted Recovery Completion Rate (BRCR) |
+| Safety gate | Irreversible Failure Rate (IFR) non-degradation |
+| Evaluation artifact | benchmark-independent JSONL recovery event schema |
+
+이 연구에서 가장 중요한 남은 gap은 failure를 검출하는 것 자체가 아니라, **부분 관측 아래에서 무엇이 일어났는지 추정하고, 제한된 budget에서 어떤 recovery를 선택하며, 그 선택이 최종 task outcome을 개선했는지 측정하는 것**이다.
+
+### 후속 연구 후보
+
+- **I-01:** sensor/embodiment transfer가 가능한 dual-rate tactile/force feedback.
+- **I-03:** stale spatial memory를 phase-aware하게 refresh/expire하는 policy.
+- **I-07:** 동일 compute에서 2D·dense 3D·task-conditioned state의 control utility 비교.
+- **I-09:** 추가 관측의 action value와 camera/latency 비용을 비교하는 active-perception stopping.
+
+World-model policy update, whole-body risk-budget hierarchy, cross-embodiment data scaling은 중요한 축이지만 첫 석사 프로젝트보다 큰 후속 범위로 둔다.
+
+## 읽는 방법
+
+RP-2 전용 정독 순서는 [READING_PLAN.md의 P0–P4 목록](./research/READING_PLAN.md#rp-2-i-02-priority-reading-sequence)에 있다. 15편 hard cap이 아니라 dependency 순서로 48편을 관리한다.
+
+1. **P0 — Concept prerequisites:** POMDP, DAgger, PPO/TRPO, Recovery RL, failure prediction, CBF, PDDLStream.
+2. **P1 — Direct baselines:** FAIL-Detect, SAFE, FLARE, FaultEval, TD calibration.
+3. **P2 — Evaluation semantics:** LIBERO, CALVIN, AtomicVLA, FurnitureBench, LIBERO-Safety, VLA-Arena.
+4. **P3 — Implementation branch:** OpenVLA를 첫 base로 두고 Octo, RT-1/RT-2, π0/π0.5, offline value methods를 필요할 때 읽는다.
+5. **P4 — Extensions:** long-horizon memory, progress, world model, language replanning, data augmentation.
+
+논문을 읽을 때는 다음 네 가지를 모두 기록한다.
+
+- 문제 설정과 핵심 가정
+- observation/state/action/control interface
+- embodiment, task, data, metric, baseline, failure mode
+- 현재 연구에서 재사용·반박·확장할 지점
+
+## 문서 구조와 note 규칙
 
 ```text
 <year>/<venue>/<year>_<venue>_<short-title>/
+├── 01_overview.md
+├── 02_problem.md
+├── 03_method.md
+├── 04_evaluation.md
+└── 05_insights.md
 ```
 
-Example:
+- `01_overview.md`: 문제, 핵심 아이디어, interface, contribution, limitation
+- `02_problem.md`: formulation, bottleneck, 가정, closed-loop 위치
+- `03_method.md`: pipeline, objective, state/action, temporal horizon, implementation
+- `04_evaluation.md`: robot, task, data, metric, baseline, ablation, failure, 재현성
+- `05_insights.md`: 선행/후속 연결, 연구 relevance, 최소 재현과 아이디어
 
-```text
-2026/ICRA/2026_ICRA_Audio-VLA-Adding-Contact-Audio-Perception-to-Vision-Langua/
-2025/ICCV/2025_ICCV_EmbodiedOcc-Embodied-3D-Occupancy-Prediction-for-Vision-ba/
-2024/ECCV/2024_ECCV_SceneVerse-Scaling-3D-Vision-Language-Learning-for-Grounde/
-```
+새 논문은 [survey_work/sources/papers.json](./survey_work/sources/papers.json)을 canonical manifest로 등록한다. PDF는 선택적 local cache이며 paper inclusion이나 priority를 결정하지 않는다.
 
-Each paper folder contains:
+## 논문 추가와 provenance 규칙
 
-```text
-01_overview.md
-02_problem.md
-03_method.md
-04_evaluation.md
-05_insights.md
-paper.pdf  # optional local cache
-```
+이 저장소는 exhaustive bibliography가 아니라 **근거와 연구 연결을 보존하는 curated registry**다. 새 논문은 다음 admission checklist를 통과해야 한다.
 
-## Note Format
+1. `PAPER.md`, `READING_TIERS.csv`, `survey_work/sources/papers.json`에서 제목·subtitle·conference version 중복을 확인한다.
+2. 공식 proceedings, publisher, OpenReview, CVF/PMLR/RSS page 또는 저자 project page에서 title·year·venue/status를 확인한다.
+3. primary category, tags, `foundation / frontier / benchmark / dataset / safety-recovery` 역할과 registry에 추가하는 이유를 기록한다.
+4. `register_papers.py`로 5개 표준 note를 만들고, 원문을 아직 확인하지 않은 내용은 `CURATION_ONLY` 또는 `UNVERIFIED`로 둔다.
+5. CORE/NEXT를 바꿀 때는 CSV를 직접 수정하지 않고 `build_reading_tiers.py`의 canonical group을 수정한다.
+6. `normalize_taxonomy.py`, `build_reading_tiers.py`, `audit_repository.py`, `git diff --check`를 순서대로 실행한다.
 
-Each paper is summarized with the same structure:
+논문을 정독한 뒤에는 `05_insights.md`, `READING_STATUS.csv`, 해당 synthesis matrix, 필요하면 `RESEARCH_GAPS.md`를 함께 갱신한다. 개인 note의 해석과 paper가 직접 보고한 결과를 분리한다.
 
-- `01_overview.md`: problem, core idea, input/output, claims, limitations, contributions, project/code link
-- `02_problem.md`: motivation, target problem, relation to prior work
-- `03_method.md`: method summary, principle, key mechanisms
-- `04_evaluation.md`: datasets, benchmarks, metrics, splits, baselines, main results, reproducibility notes
-- `05_insights.md`: strengths, limitations, paper claims, future work, personal research directions
+## Curation and maintenance policy
 
-## Main Registry
-
-Use [PAPER.md](./PAPER.md) as the primary navigation file. Use [READING_PLAN.md](./research/READING_PLAN.md) for priority criteria, reading order, and the CORE/NEXT intensive-reading set.
-
-It groups papers by research theme:
-
-- Vision-Language-Action and Robot Manipulation
-- 3D Large Multimodal Models
-- Navigation and Embodied AI
-- Language-Embedded NeRF and Gaussian Fields
-- 3D Scene Representations and Neural Fields
-- 3D Generative Modeling and Diffusion
-- Sensor Fusion, LiDAR, Occupancy, and Autonomous 3D Perception
-- 3D Semantic Understanding and Alignment
-- 3D Equivariance, Calibration, and Registration
-- 3D Vision-Language Grounding
-- 3D Scene Graphs and Graph Reasoning
-- Open-Vocabulary 3D Mapping
-- 3D Reconstruction, Geometry, and SLAM
-- Foundations: Transformers, VLMs, diffusion, 3D geometry, SLAM, RL, and robot policies
-- Foundations: robot motion planning, control, robot learning, and sim-to-real
-- Reinforcement learning, offline RL, imitation learning, and inverse RL for robotics
-- Contact-rich and model-based manipulation
-- Robot learning and manipulation
-- Legged locomotion, loco-manipulation, mobile manipulation, and whole-body control
-- Safe robotics, constrained control, and robot world models
-- Failure detection, uncertainty, active perception, and long-horizon replanning
-- Tactile/force-aware VLA, articulated interaction, deformable objects, tools, and assembly
-- Cross-embodiment learning, robot datasets, and domain-diverse robotics
-- Tactile and dexterous manipulation
-- Multi-robot systems
-
-## Recommended Reading Paths
-
-Start from the foundation papers if you are entering the area:
-
-- Transformers and language models: Attention, BERT, GPT-style few-shot learning
-- Vision-language models: CLIP, ViT, Segment Anything, DINOv2
-- 3D representation: PointNet, NeRF, 3D Gaussian Splatting
-- Geometry and SLAM: ORB-SLAM, DROID-SLAM, DUSt3R, MASt3R, VGGT
-- Policy learning: RoboMimic, Decision Transformer, DDPM/Flow Matching, Diffusion Policy, SayCan, RT-1, RT-2, PaLM-E, Open X-Embodiment
-
-For robotics and VLA research:
-
-- Use [READING_PLAN.md](./research/READING_PLAN.md) for the planning/control, RL/IL, contact-rich manipulation, locomotion, whole-body/mobile manipulation, safety, and world-model backbone.
-- Then connect that backbone to PDDLStream, RLBench, RT-1, RT-2, PaLM-E, OpenVLA, Octo, π0, FAST, OpenVLA-OFT, Reactive Diffusion Policy, Perceiver-Actor, RVT, VoxPoser, and ReKep.
-
-For 3D vision-language and embodied spatial reasoning:
-
-- Start with ScanRefer, ReferIt3D, 3DVG-Transformer, 3D-VisTA, 3D-LLM, SpatialVLM, SceneVerse, Uni3DL, RoboSpatial.
-- Then read open-vocabulary 3D mapping and Gaussian-language field papers such as LERF, CLIP-Fields, ConceptFusion, OpenScene, LangSplat, SceneSplat, ReasonGrounder, and related 3DGS works.
-
-For 3D computer vision-first research:
-
-- Start with PointNet/PointNet++, DGCNN, KPConv, MinkowskiNet, Point Transformer, Point-BERT, Point-MAE, CenterPoint, PV-RCNN, PETR, BEVDepth, VoxFormer.
-- Then read modern geometry and reconstruction work such as DUSt3R, MASt3R, VGGT, CUT3R, Dens3R, MASt3R-SfM, FlowMap, Flash3D, VGGT-Motion, WorldMirror.
-- For neural scene representations, read 3D Gaussian Splatting, SuGaR, pixelSplat, MVSplat, SplaTAM, SplatFormer, No Pose No Problem, TokenSplat, Uni3R, SDGS, VarSplat.
-- For sensor fusion and autonomous 3D perception, read BEVFormer, BEVFusion, VoxFormer, GaussianFormer, RIOcc, V2X-R, SplatAD, L3DR, RadarSplat, SimULi, UniSplat.
-- For diffusion and generative 3D, read Marigold, Depth Anything, ReconFusion, LaGeM, DiffSplat, G4Splat, HAD, GaussFusion, PartGen, SeaLion, CraftsMan3D.
-
-## Curation Policy
-
-The collection follows these rules:
-
-- 2024-current: broad coverage of relevant top-tier conference and journal papers with verifiable official records.
-- 2021-current: emphasis on highly cited or field-shaping papers.
-- Foundational papers: included regardless of year when they define the underlying methods used by later work.
-- Each paper should have a stable official venue or arXiv page and a consistent note structure; a local PDF is optional.
-- Venue year is not repeated in venue folder names because papers are already grouped by year.
-
-## Maintenance Workflow
-
-The survey is maintained through the idempotent tools documented in [survey_work/README.md](./survey_work/README.md). One-off augmentation and PDF retry scripts are historical artifacts under `survey_work/archive/` and are not part of the normal workflow.
-
-Useful commands:
+- 2024–2026은 현재 robotics/VLA frontier와 benchmark를 넓게 수집한다.
+- 오래된 foundation은 후속 연구의 prerequisite이거나 연구 문제를 정의하면 포함한다.
+- 최신 논문은 venue 이름보다 method novelty, closed-loop relevance, evaluation quality, research gap 연결을 우선한다.
+- Foundation, frontier, benchmark, dataset, safety/recovery, enabling perception을 서로 다른 역할로 구분한다.
+- 논문 수나 venue quota를 채우기 위해 약한 논문을 추가하지 않는다.
+- 공식 proceedings/project/abstract를 우선 사용하고, 불확실한 claim은 `CURATION_ONLY` 또는 `UNVERIFIED`로 표시한다.
+- 생성·검증 workflow는 [survey_work/README.md](./survey_work/README.md)에 있다.
 
 ```bash
 python3 survey_work/audit_repository.py
@@ -178,35 +203,21 @@ python3 survey_work/build_reading_tiers.py
 python3 survey_work/audit_repository.py
 ```
 
-The canonical metadata manifest is:
+현재 snapshot의 상세 변경은 [UPDATES_2026-08-25.md](./research/UPDATES_2026-08-25.md), 운영 규칙은 [AGENTS.md](./AGENTS.md)에 기록한다.
 
-```text
-survey_work/sources/papers.json
-```
+## 공개 registry 참고
 
-`build_lit_survey.py` is read-only without flags. PDF download and note overwrite require separate explicit flags and are intentionally excluded from the normal workflow.
+README와 운영 방식은 다음 공개 paper/resource registry의 장점을 참고하되, 이 저장소의 robotics-first 연구 workflow에 맞게 변형했다.
 
-## Notes on Public Sharing
+- [Awesome Physical AI](https://github.com/junyuan-fang/awesome-physical-ai): `classic / must-read / project / code / benchmark` 역할을 구분하는 legend와 논문·dataset·simulator를 함께 보여주는 방식.
+- [Awesome-VLA](https://github.com/KwanWaiPang/Awesome-VLA): 연도·venue·paper·repository·note를 한 행에 두고, 짧은 설명과 기여 안내를 제공하는 방식.
+- [Awesome VLA/WAM](https://github.com/wangskyone/awesome-VLA-WAM): agentic robotics, world-action models, failure/recovery, efficient deployment처럼 현재 active direction을 먼저 제시하는 방식.
+- [Awesome VLA](https://github.com/DravenALG/awesome-vla): VLA의 정의와 scope boundary를 먼저 명시하고, research flow를 계보로 설명하는 방식.
+- [Papers We Love](https://github.com/papers-we-love/papers-we-love): contribution guideline, 디렉토리 규칙, 저작권과 PDF 재배포를 분리해서 관리하는 방식.
 
-This repository is designed for literature management and personal research use.
+이 저장소에서 추가로 관리하는 부분은 다음과 같다.
 
-This checkout currently contains 194 local PDFs, but PDFs are an optional cache and never affect registry inclusion, tier, or reading priority. The nine papers in the latest robotics lineage update were intentionally registered without downloading PDFs. If publishing the repository publicly, review publisher and conference copyright policies before redistributing downloaded PDFs; a safer public version can keep the markdown notes and official source links only.
-
-## README Style References
-
-This README follows common patterns used in GitHub paper lists and awesome lists:
-
-- clear scope and target audience
-- table of contents or fast navigation
-- topic-based grouping
-- links to paper, code, project pages, and notes
-- update and contribution rules
-- citation or attribution section when the list is public
-
-Representative examples:
-
-- [awesome-vla-wam](https://github.com/DravenALG/awesome-vla-wam)
-- [Awesome-Robotics-3D](https://github.com/zubair-irshad/Awesome-Robotics-3D)
-- [Awesome VLA](https://github.com/Orlando-CS/Awesome-VLA)
-- [awesome-physical-ai](https://github.com/keon/awesome-physical-ai)
-- [Awesome-Embodied-AI](https://github.com/wadeKeith/Awesome-Embodied-AI)
+- paper link 목록과 별도로 **CORE/NEXT/REFERENCE/ARCHIVE**를 운영한다.
+- 각 paper에 문제·방법·평가·insight note를 고정 schema로 둔다.
+- 전체 논문 목록과 별개로 **gap → hypothesis → minimum experiment → reject criterion**을 유지한다.
+- registry snapshot, 최신 frontier update, reading status, synthesis queue를 서로 다른 artifact로 분리한다.
