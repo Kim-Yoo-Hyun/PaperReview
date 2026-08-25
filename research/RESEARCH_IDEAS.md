@@ -1,11 +1,11 @@
 # Robotics Research Ideas
 
-- Updated: 2026-08-13 KST
+- Updated: 2026-08-25 KST
 - Research stance: Robotics가 주축이며 VLA와 3D perception은 실제 closed-loop behavior를 개선하는 구성요소로 다룬다.
 - Gap source: [RESEARCH_GAPS.md](./RESEARCH_GAPS.md)
 - Lineage source: [synthesis/](../synthesis/README.md)
-- Literature basis: 12개 아이디어 모두 관련 gap의 `READING-SUPPORTED` 원문 감사에 근거한다.
-- Gap-method alignment: 2026-08-13에 6개 macro-gap과 robotics `R-M-C-O-T-S` 범위로 재검토했다.
+- Literature basis: 12개 아이디어는 기존 gap의 `READING-SUPPORTED` 원문 감사에 근거하며, 2026 최신 9편은 이미 입증된 module과 남은 boundary를 갱신하는 counter-evidence로 별도 표시한다.
+- Gap-method alignment: 2026-08-24에 6개 macro-gap과 robotics `R-M-C-O-T-S` 범위로 재검토했다.
 - Hypothesis status: 모든 아이디어는 아직 `UNTESTED`다. 문헌 근거가 있다는 사실과 제안 가설이 실험적으로 지지됐다는 사실을 구분한다.
 - Active project spec: [RP-2 Failure-to-Recovery Loop](./projects/RP-2_FAILURE_RECOVERY.md)
 
@@ -19,6 +19,19 @@
 4. **Decision rule:** 어떤 결과에서 가설을 지지·축소·기각하는가.
 
 논문의 module 이름만 바꾸거나 이미 입증된 결합을 반복하지 않는다. 예를 들어 slow–fast tactile VLA 자체는 Reactive Diffusion Policy와 AT-VLA가, hybrid force–position VLA는 ForceVLA2가 이미 다룬다. 새 연구는 cross-sensor transfer, calibration, uncertainty 또는 safety처럼 원문에서 남긴 경계를 검증해야 한다.
+
+## 2026 frontier update to method basis
+
+이번 갱신에서 추가한 최신 논문은 새 아이디어를 자동으로 만들지 않고 기존 method card의 baseline·reject boundary를 보강한다.
+
+| 연구 축 | 최신 근거 | 아이디어 문서에 반영한 범위 |
+|---|---|---|
+| Contact/tactile | [Tabero](../2026/ICML/2026_ICML_Tabero-Learning-Gentle-Manipulation-with-Closed-Loop-Force/01_overview.md), [TactAlign](../2026/RSS/2026_RSS_TactAlign-Human-to-Robot-Policy-Transfer-via-Tactile-Align/01_overview.md) | force-quality metric과 cross-embodiment alignment를 I-01의 counter-evidence로 포함하되 unseen sensor calibration은 가설로 유지 |
+| Failure/recovery | [FLARE](../2026/CVPR/2026_CVPR_FLARE-A-Failure-Aware-Framework-for-Autonomous-Correction/01_overview.md), [VLA-FixBench/FaultEval](../2026/ICML/2026_ICML_Can-VLMs-Diagnose-and-Recover-from-VLA-Manipulation-Faults/01_overview.md), [TD calibration](../2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/01_overview.md) | I-02가 “recovery가 없다”가 아니라 multi-option, matched budget, calibration→selection을 검증하도록 범위를 고정 |
+| Memory/active state | [Memory Retrieval/HALO](../2026/RSS/2026_RSS_Memory-Retrieval-in-Visuomotor-Policies-for-Long-Horizon-R/01_overview.md), [AVA-VLA](../2026/CVPR/2026_CVPR_AVA-VLA-Improving-Vision-Language-Action-Models-with-Activ/01_overview.md) | I-03의 sparse retrieval counter-baseline과 I-09의 recurrent active-attention baseline을 추가 |
+| Evaluation | [VLA-Arena](../2026/ICML/2026_ICML_VLA-Arena-An-Open-Source-Framework-for-Benchmarking-Vision/01_overview.md) | I-12의 event schema가 safety·distractor·extrapolation·long-horizon stress axes를 보존하도록 확장 |
+
+이 9편은 아직 `READING_STATUS.csv`에서 `CURATION_ONLY`다. method card의 `READING-SUPPORTED`는 기존 full-text evidence를 뜻하며, 최신 paper의 세부 수치·실패 원인은 정독 후에만 승격한다.
 
 ## 프로젝트 승격 기준
 
@@ -71,42 +84,42 @@
 - **Program / execution:** RP-1 / E1.
 - **Gap:** [G-01](./RESEARCH_GAPS.md#g-01-vla와-접촉-제어의-시간-척도-불일치), [G-05](./RESEARCH_GAPS.md#g-05-contact-state의-불완전한-observability와-sensor-종속성)
 - **`R-M-C-O-T-S`:** multi-sensor manipulator / uncertainty-calibrated slow–fast fusion·authority scheduling / vision-only·early fusion·gated dual stream / success·peak force·reaction latency·calibration / contact event, delay·dropout sweep / peg insertion·wiping on real or high-fidelity contact setup.
-- **방법론 근거:** AT-VLA의 Adaptive Tactile Injection·Tactile Gate·slow visual/fast tactile dual stream, ForceVLA2의 Cross-Scale MoE와 hybrid force–position action, Tactile-Driven Non-Prehensile Manipulation의 explicit contact/friction constraint를 사용한다.
+- **방법론 근거:** AT-VLA의 Adaptive Tactile Injection·Tactile Gate·slow visual/fast tactile dual stream, ForceVLA2의 Cross-Scale MoE와 hybrid force–position action, Tactile-Driven Non-Prehensile Manipulation의 explicit contact/friction constraint, Tabero의 decoupled force-position interface와 process-aware force metrics, TactAlign의 unpaired cross-embodiment tactile latent alignment를 사용한다.
 - **선행 연구가 해결한 것:** gated multimodal injection이 naïve fusion보다 낫고, 빠른 tactile/force pathway가 contact-rich task success를 높일 수 있다는 점은 이미 입증됐다.
 - **새 연구 단위:** sensor가 바뀌거나 stiffness·latency·calibration이 달라질 때 fast stream의 confidence를 추정하고, confidence가 낮으면 residual authority를 줄이거나 safe position control로 전환한다.
 - **가설:** gated slow–fast controller에 sensor-calibrated uncertainty와 authority scheduling을 추가하면, 단순 slow–fast 구조보다 unseen sensor/delay에서 peak force를 늘리지 않고 성공률을 유지한다.
 - **최소 실험:** peg insertion과 wiping에서 vision-only, naïve force concatenation, AT-VLA식 gated dual stream, uncertainty-gated dual stream을 비교한다. 같은 demonstration과 backbone을 사용하고 sensor delay, dropout, stiffness 또는 sensor model을 독립적으로 바꾼다.
 - **판정 지표:** success, peak/impulse force, reaction latency, force tracking error, unsafe residual activation, calibration error.
 - **Reject criterion:** uncertainty gate가 unseen condition에서 naïve gated dual stream보다 safety–success Pareto frontier를 개선하지 못하면 별도 architecture 연구를 중단하고 calibration/data augmentation 문제로 축소한다.
-- **Paper basis:** [AT-VLA](../2026/CVPR/2026_CVPR_AT-VLA-Adaptive-Tactile-Injection-for-Enhanced-Feedback-Re/01_overview.md), [ForceVLA2](../2026/CVPR/2026_CVPR_ForceVLA2-Unleashing-Hybrid-Force-Position-Control-with-Fo/01_overview.md), [Tactile-Driven Non-Prehensile Manipulation](../2024/RSS/2024_RSS_Tactile-Driven-Non-Prehensile-Object-Manipulation-via-Extr/01_overview.md), [Reactive Diffusion Policy](../2025/RSS/2025_RSS_Reactive-Diffusion-Policy-Slow-Fast-Visual-Tactile-Policy/01_overview.md).
+- **Paper basis:** [AT-VLA](../2026/CVPR/2026_CVPR_AT-VLA-Adaptive-Tactile-Injection-for-Enhanced-Feedback-Re/01_overview.md), [ForceVLA2](../2026/CVPR/2026_CVPR_ForceVLA2-Unleashing-Hybrid-Force-Position-Control-with-Fo/01_overview.md), [Tabero](../2026/ICML/2026_ICML_Tabero-Learning-Gentle-Manipulation-with-Closed-Loop-Force/01_overview.md), [TactAlign](../2026/RSS/2026_RSS_TactAlign-Human-to-Robot-Policy-Transfer-via-Tactile-Align/01_overview.md), [Tactile-Driven Non-Prehensile Manipulation](../2024/RSS/2024_RSS_Tactile-Driven-Non-Prehensile-Object-Manipulation-via-Extr/01_overview.md), [Reactive Diffusion Policy](../2025/RSS/2025_RSS_Reactive-Diffusion-Policy-Slow-Fast-Visual-Tactile-Policy/01_overview.md).
 
 ### I-02. Risk-budgeted typed recovery for VLA
 
 - **Program / execution:** RP-2 / E1; [project spec](./projects/RP-2_FAILURE_RECOVERY.md)의 I-12 event protocol을 먼저 사용한다.
 - **Gap:** [G-02](./RESEARCH_GAPS.md#g-02-detection에서-recovery까지-닫히지-않은-loop), [G-10](./RESEARCH_GAPS.md#g-10-long-horizon-평가의-낮은-failure-resolution)
 - **`R-M-C-O-T-S`:** VLA manipulator / typed recovery selector / abort·blind retry·replan / final completion·irreversible failure·intervention cost / failure onset에서 post-recovery까지 / LIBERO·CALVIN perturbation wrapper.
-- **방법론 근거:** SAFE의 VLA latent-feature failure score와 conformal threshold, Recovery RL의 task/recovery policy 분리와 safety critic, PDDLStream의 symbolic–continuous replanning interface를 사용한다. FLARE의 Retry/Reset taxonomy는 피해야 할 중복이자 strong baseline이다.
+- **방법론 근거:** POMDP의 belief-state와 finite-memory decision formulation, SAFE의 VLA latent-feature failure score와 conformal threshold, Recovery RL의 task/recovery policy 분리와 safety critic, PDDLStream의 symbolic–continuous replanning interface를 사용한다. FLARE의 Retry/Reset taxonomy, VLA-FixBench/FaultEval의 fault/rollback benchmark, TD calibration의 sequential value-based confidence를 중복이 아닌 strong baseline·calibration component로 둔다.
 - **선행 연구가 해결한 것:** SAFE는 unseen-task failure detection을, Recovery RL은 learned recovery zone을, FLARE는 ID/OOD 오류에 대한 Retry/Reset recovery를 이미 다룬다. 따라서 단순히 type을 붙여 retry/reset하는 것은 새 연구 단위가 아니다.
-- **새 연구 단위:** 공통 event schema에서 scalar alert를 `failure cause × operational recoverability × remaining budget`으로 변환하고, 동일한 skill library와 budget 아래 retry, reobserve, retreat/reset, replan, ask-for-help 중 option을 선택한다. detector와 selector 오류는 oracle ablation으로 분리한다.
+- **새 연구 단위:** 부분 관측 아래의 belief/progress/budget state와 공통 event schema를 사용해 scalar alert를 `failure cause × operational recoverability × remaining budget`으로 변환하고, 동일한 skill library와 budget 아래 retry, reobserve, retreat/reset, replan, ask-for-help 중 option을 선택한다. detector와 selector 오류는 oracle ablation으로 분리한다.
 - **가설:** detector와 recovery selector를 분리해 각각 calibration하면 binary abort, blind retry, FLARE-style binary retry/reset보다 irreversible failure를 늘리지 않으면서 recoverable failure의 budgeted completion을 높인다.
 - **최소 실험:** LIBERO-Long 4개 task에 observation, execution/contact, world-state, plan-semantic perturbation을 event landmark에서 삽입한다. abort, blind retry, privileged replan, binary retry/reset, typed selector를 600-step native horizon과 같은 recovery budget에서 비교하고 이후 CALVIN으로 옮긴다.
 - **판정 지표:** detection lead time, false intervention, type accuracy, recovery success, irreversible failure, added action cost, final completion.
 - **Reject criterion:** oracle failure type을 제공해도 typed recovery가 retry/replan baseline을 이기지 못하면 detector 연구가 아니라 recovery skill library의 expressivity 문제로 판정한다.
-- **Paper basis:** [SAFE](../2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md), [Recovery RL](../2020/RA-L/2020_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/01_overview.md), [PDDLStream](../2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp/01_overview.md), [FAIL-Detect](../2025/RSS/2025_RSS_Can-We-Detect-Failures-Without-Failure-Data-Uncertainty-Aw/01_overview.md), [FLARE (CVPR 2026)](https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.html).
+- **Paper basis:** [POMDP](../1998/Artificial-Intelligence/1998_Artificial-Intelligence_Planning-and-Acting-in-Partially-Observable-Stochastic-Dom/01_overview.md), [SAFE](../2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md), [Recovery RL](../2020/RA-L/2020_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/01_overview.md), [PDDLStream](../2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp/01_overview.md), [FAIL-Detect](../2025/RSS/2025_RSS_Can-We-Detect-Failures-Without-Failure-Data-Uncertainty-Aw/01_overview.md), [FLARE](../2026/CVPR/2026_CVPR_FLARE-A-Failure-Aware-Framework-for-Autonomous-Correction/01_overview.md), [VLA-FixBench/FaultEval](../2026/ICML/2026_ICML_Can-VLMs-Diagnose-and-Recover-from-VLA-Manipulation-Faults/01_overview.md), [TD calibration](../2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/01_overview.md).
 
 ### I-03. Phase-aware spatial memory with learned expiry
 
 - **Program / execution:** RP-3 / E1; I-07의 state comparison protocol을 가능하면 재사용한다.
 - **Gap:** [G-04](./RESEARCH_GAPS.md#g-04-persistent-spatial-memory의-staleness와-uncertainty)
 - **`R-M-C-O-T-S`:** mobile/manipulation VLA / phase·confidence·expiry memory / no memory·persistent memory·similarity refinement / stale read·unsafe action·success·rescan / multi-step state transition / RoboCasa·RLBench relocation·removal·delay.
-- **방법론 근거:** MomaGraph의 observed state transition 기반 graph-edge update, SOMA의 Spatial Memory Construction·Dynamic Memory Refinement·Contextual Memory Retrieval을 사용한다.
+- **방법론 근거:** MomaGraph의 observed state transition 기반 graph-edge update, SOMA의 Spatial Memory Construction·Dynamic Memory Refinement·Contextual Memory Retrieval, Memory Retrieval/HALO의 task-relevant sparse retrieval과 drift 완화 신호를 사용한다.
 - **선행 연구가 해결한 것:** out-of-view object memory와 interaction 후 graph update는 가능하다. 그러나 SOMA는 object-level refinement가 drawer open/closed 같은 task phase를 구분하지 못하고, stale/incorrect memory의 safety risk를 명시한다.
 - **새 연구 단위:** memory token에 phase-transition probability, geometric confidence, age를 붙이고 `retain / refresh / expire / actively verify`를 선택한다.
 - **가설:** similarity-only update보다 phase-aware confidence와 expiry를 쓰면 relocation·object removal에서 stale-memory-induced action을 줄이면서 불필요한 re-scan 증가를 제한한다.
 - **최소 실험:** RoboCasa 또는 RLBench에서 object relocation, disappearance, drawer state change, delayed observation을 통제한다. no-memory, SOMA-style refinement, phase+expiry memory를 같은 policy에 연결한다.
 - **판정 지표:** stale read rate, phase-state accuracy, task success, unsafe grasp/placement, re-scan count, latency.
 - **Reject criterion:** oracle phase label에서도 expiry가 persistent memory보다 이득이 없으면 memory update가 아니라 downstream policy의 memory usage가 병목이라고 판정한다.
-- **Paper basis:** [MomaGraph](../2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan/01_overview.md), [Spatial Memory for Out-of-Vision Manipulation](../2026/ICML/2026_ICML_Spatial-Memory-for-Out-of-Vision-Manipulation-in-Vision-La/01_overview.md), [ConceptFusion](../2023/RSS/2023_RSS_ConceptFusion-Open-set-Multimodal-3D-Mapping/01_overview.md).
+- **Paper basis:** [MomaGraph](../2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan/01_overview.md), [Spatial Memory for Out-of-Vision Manipulation](../2026/ICML/2026_ICML_Spatial-Memory-for-Out-of-Vision-Manipulation-in-Vision-La/01_overview.md), [Memory Retrieval/HALO](../2026/RSS/2026_RSS_Memory-Retrieval-in-Visuomotor-Policies-for-Long-Horizon-R/01_overview.md), [ConceptFusion](../2023/RSS/2023_RSS_ConceptFusion-Open-set-Multimodal-3D-Mapping/01_overview.md).
 
 ### I-04. Contact-calibrated world model for policy ranking and improvement
 
@@ -186,14 +199,14 @@
 - **Program / execution:** RP-3 / E2; I-07의 compute-matched state baseline 이후 진행한다.
 - **Gap:** [G-03](./RESEARCH_GAPS.md#g-03-3d-perception-향상과-control-향상의-compute-matched-인과성), [G-13](./RESEARCH_GAPS.md#g-13-active-perception의-비용-대비-control-value)
 - **`R-M-C-O-T-S`:** active-camera manipulator / action-value·disagreement stopping / fixed view·fixed count·geometry entropy / success gain per second·travel·collision·unnecessary view / pre-action·mid-task acquisition / occluded grasp·articulation with physical/virtual camera budget.
-- **방법론 근거:** ActiveVLA의 active viewpoint scoring과 3D zoom, Where2Act의 actionability score, FlowBot3D의 re-observation-based flow execution을 사용한다.
+- **방법론 근거:** ActiveVLA의 active viewpoint scoring과 3D zoom, AVA-VLA의 recurrent active visual attention, Where2Act의 actionability score, FlowBot3D의 re-observation-based flow execution을 사용한다.
 - **선행 연구가 해결한 것:** 여러 view가 성공을 높이지만 ActiveVLA에서 세 view 이후 포화되고 inference time이 늘어난다.
 - **새 연구 단위:** geometry uncertainty가 아니라 새 view가 action distribution 또는 predicted task value를 얼마나 바꿀지를 추정해 `observe / act`를 결정한다.
 - **가설:** action-value stopping이 fixed three-view와 geometry-entropy selection보다 적은 sensing/motion cost로 같은 success를 낸다.
 - **최소 실험:** occluded grasp와 articulated-object task에서 fixed-view, fixed-three-view, entropy, action-disagreement/value-of-information을 비교한다.
 - **판정 지표:** success, views, sensing latency, physical/virtual camera travel, unnecessary-view rate, collision.
 - **Reject criterion:** oracle future-view outcome으로도 adaptive stopping 이득이 작으면 해당 task에서는 active sensing보다 robust policy training이 더 적합하다.
-- **Paper basis:** [ActiveVLA](../2026/CVPR/2026_CVPR_ActiveVLA-Injecting-Active-Perception-into-Vision-Language/01_overview.md), [Where2Act](../2021/ICCV/2021_ICCV_Where2Act-From-Pixels-to-Actions-for-Articulated-3D-Object/01_overview.md), [FlowBot3D](../2022/RSS/2022_RSS_FlowBot3D-Learning-3D-Articulation-Flow-to-Manipulate-Arti/01_overview.md).
+- **Paper basis:** [ActiveVLA](../2026/CVPR/2026_CVPR_ActiveVLA-Injecting-Active-Perception-into-Vision-Language/01_overview.md), [AVA-VLA](../2026/CVPR/2026_CVPR_AVA-VLA-Improving-Vision-Language-Action-Models-with-Activ/01_overview.md), [Where2Act](../2021/ICCV/2021_ICCV_Where2Act-From-Pixels-to-Actions-for-Articulated-3D-Object/01_overview.md), [FlowBot3D](../2022/RSS/2022_RSS_FlowBot3D-Learning-3D-Articulation-Flow-to-Manipulate-Arti/01_overview.md).
 
 ### I-10. Contact-feasible human-to-humanoid retargeting
 
@@ -230,7 +243,7 @@
 - **Program / execution:** RP-2 / INFRA; [구체 명세](./projects/RP-2_FAILURE_RECOVERY.md)를 따르며 I-02와 독립 논문으로 확대하기보다 공통 evaluator로 유지한다.
 - **Gap:** [G-02](./RESEARCH_GAPS.md#g-02-detection에서-recovery까지-닫히지-않은-loop), [G-10](./RESEARCH_GAPS.md#g-10-long-horizon-평가의-낮은-failure-resolution)
 - **`R-M-C-O-T-S`:** long-horizon manipulation/VLA / shared perturbation·event schema·recovery budget / native final-success metric / phase progress·time-to-failure·recovery·irreversible event / full episode after first failure / at least two of CALVIN·LIBERO·FurnitureBench.
-- **방법론 근거:** FurnitureBench의 skill/phase progress, BEHAVIOR-1K의 planning/grasp/place/detection failure taxonomy, AtomicVLA가 지적한 failure 후 benchmark termination 문제를 사용한다.
+- **방법론 근거:** FurnitureBench의 skill/phase progress, BEHAVIOR-1K의 planning/grasp/place/detection failure taxonomy, AtomicVLA가 지적한 failure 후 benchmark termination 문제, VLA-Arena의 Safety·Distractor·Extrapolation·Long Horizon stress axes를 사용한다.
 - **선행 연구가 해결한 것:** benchmark 내부의 phase progress와 failure taxonomy는 있지만, 동일한 recovery budget과 event semantics로 여러 suite를 비교하지는 못한다.
 - **새 연구 단위:** 새 task suite를 만드는 대신 기존 benchmark에 동일한 perturbation, recovery budget, event log schema를 붙여 model ranking 변화를 측정한다.
 - **가설:** clean-start final success 순위는 perturbation과 bounded recovery를 포함하면 유의미하게 달라지며, phase progress와 irreversible event가 그 차이를 설명한다.
@@ -238,7 +251,7 @@
 - **판정 지표:** failure-conditioned success, phase progress, detection lead time, recovery attempts/time, intervention cost, irreversible failure, total execution cost.
 - **Reject criterion:** 여러 perturbation에서도 기존 final-success ranking이 안정적이고 event metric이 추가 설명력을 주지 못하면 독립 benchmark 연구로 확대하지 않는다.
 - **산출물:** perturbation wrapper, event schema, evaluator, cross-benchmark report template.
-- **Paper basis:** [FurnitureBench](../2023/RSS/2023_RSS_FurnitureBench-Reproducible-Real-World-Benchmark-for-Long/01_overview.md), [BEHAVIOR-1K](../2022/CoRL/2022_CoRL_BEHAVIOR-1K-A-Benchmark-for-Embodied-AI-with-1000-Everyday/01_overview.md), [AtomicVLA](../2026/CVPR/2026_CVPR_AtomicVLA-Unlocking-the-Potential-of-Atomic-Skill-Learning/01_overview.md), [RLBench](../2020/RA-L/2020_RA-L_RLBench-The-Robot-Learning-Benchmark-and-Learning-Environm/01_overview.md).
+- **Paper basis:** [FurnitureBench](../2023/RSS/2023_RSS_FurnitureBench-Reproducible-Real-World-Benchmark-for-Long/01_overview.md), [BEHAVIOR-1K](../2022/CoRL/2022_CoRL_BEHAVIOR-1K-A-Benchmark-for-Embodied-AI-with-1000-Everyday/01_overview.md), [AtomicVLA](../2026/CVPR/2026_CVPR_AtomicVLA-Unlocking-the-Potential-of-Atomic-Skill-Learning/01_overview.md), [VLA-Arena](../2026/ICML/2026_ICML_VLA-Arena-An-Open-Source-Framework-for-Benchmarking-Vision/01_overview.md), [RLBench](../2020/RA-L/2020_RA-L_RLBench-The-Robot-Learning-Benchmark-and-Learning-Environm/01_overview.md).
 
 ## 실행 순서
 

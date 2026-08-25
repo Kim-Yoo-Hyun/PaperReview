@@ -8,6 +8,7 @@ The full paper registry is maintained in [PAPER.md](./PAPER.md).
 The consolidated robotics-first priority and reading roadmap is maintained in [READING_PLAN.md](./research/READING_PLAN.md).
 Reading progress and cross-paper comparison are maintained in [READING_STATUS.csv](./research/READING_STATUS.csv) and [synthesis](./synthesis/README.md).
 Cross-track research gaps and experiment-ready hypotheses are maintained in [RESEARCH_GAPS.md](./research/RESEARCH_GAPS.md) and [RESEARCH_IDEAS.md](./research/RESEARCH_IDEAS.md).
+The latest registry and frontier audit is recorded in [UPDATES_2026-08-25.md](./research/UPDATES_2026-08-25.md).
 
 ## Scope
 
@@ -30,9 +31,9 @@ Secondary keywords include:
 
 | Item | Count |
 |---|---:|
-| Papers | 811 |
+| Papers | 821 |
 | Local PDFs | 194 |
-| Per-paper markdown notes | 4,055 |
+| Per-paper markdown notes | 4,105 |
 | Canonical categories | 23 |
 | Years covered | 1987-2026 |
 
@@ -40,16 +41,16 @@ Secondary keywords include:
 
 | Venue | Count |
 |---|---:|
-| CVPR | 155 |
+| CVPR | 157 |
 | ICCV | 91 |
 | ICLR | 101 |
-| ICML | 71 |
-| NeurIPS | 67 |
+| ICML | 75 |
+| NeurIPS | 68 |
 | ECCV | 49 |
 | ICRA | 55 |
 | CoRL | 52 |
 | IROS | 20 |
-| RSS | 58 |
+| RSS | 61 |
 | RA-L | 21 |
 | 3DV | 16 |
 

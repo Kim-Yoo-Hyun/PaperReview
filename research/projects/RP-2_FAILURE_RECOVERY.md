@@ -1,7 +1,7 @@
 # RP-2 Failure-to-Recovery Loop
 
 - Status: `SCOPED`
-- Updated: 2026-08-13 KST
+- Updated: 2026-08-25 KST
 - Parent ideas: [I-12 Recovery event protocol](../RESEARCH_IDEAS.md#i-12-recovery-event-protocol-for-existing-long-horizon-benchmarks) → [I-02 Risk-budgeted typed recovery](../RESEARCH_IDEAS.md#i-02-risk-budgeted-typed-recovery-for-vla)
 - Primary benchmark: `LIBERO-Long` (`libero_10`)
 - Secondary validation: `CALVIN` long-horizon five-subtask sequences
@@ -24,7 +24,7 @@
 
 ### novelty boundary
 
-FLARE는 이미 error를 recoverable in-distribution `Retry`와 state-breaking/out-of-distribution `Reset`으로 나누고 recovery를 수행한다. FailSafe도 failure–recovery action pair 생성 문제를 다룬다. 그러므로 이 프로젝트는 “typed recovery가 처음”이라고 주장하지 않는다. 남은 검증 단위는 다음으로 제한한다.
+FLARE는 이미 error를 recoverable in-distribution `Retry`와 state-breaking/out-of-distribution `Reset`으로 나누고 recovery를 수행한다. VLA-FixBench/FaultEval은 fault taxonomy와 rollback recovery를 benchmark 문제로 구체화하고, TD calibration은 sequential success confidence를 alert에 연결한다. FailSafe도 failure–recovery action pair 생성 문제를 다룬다. 그러므로 이 프로젝트는 “typed recovery가 처음”이라고 주장하지 않는다. 남은 검증 단위는 다음으로 제한한다.
 
 1. binary retry/reset보다 세분된 **operational recoverability**와 option set,
 2. 모든 방법에 적용되는 **동일한 time/action/risk budget**,
@@ -36,17 +36,22 @@ FLARE는 이미 error를 recoverable in-distribution `Retry`와 state-breaking/o
 
 | 근거 | 차용하는 요소 | 그대로 주장하지 않을 부분 |
 |---|---|---|
+| [POMDP](../../1998/Artificial-Intelligence/1998_Artificial-Intelligence_Planning-and-Acting-in-Partially-Observable-Stochastic-Dom/01_overview.md) | belief-state와 finite-memory decision formulation | 관측 history가 정확한 hidden state나 recoverability label을 제공한다는 가정 |
 | [SAFE](../../2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md) | frozen VLA latent feature, temporal failure score, functional conformal threshold | conformal alert가 곧 원인 진단이나 recovery guarantee라는 해석 |
 | [Recovery RL](../../2020/RA-L/2020_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/01_overview.md) | task policy와 recovery policy 분리, safety critic에 의한 switching | 하나의 recovery policy가 semantic failure type 전체를 해결한다는 가정 |
 | [PDDLStream](../../2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp/01_overview.md) | symbolic predicate와 continuous feasibility를 잇는 replanning interface | 최소 LIBERO 실험부터 전체 PDDLStream domain을 새로 구축하는 것 |
 | [FurnitureBench](../../2023/RSS/2023_RSS_FurnitureBench-Reproducible-Real-World-Benchmark-for-Long/01_overview.md) | final success 외 phase/skill progress 기록 | FurnitureBench 고유 taxonomy를 다른 benchmark에 그대로 이식하는 것 |
 | [AtomicVLA](../../2026/CVPR/2026_CVPR_AtomicVLA-Unlocking-the-Potential-of-Atomic-Skill-Learning/01_overview.md) | CALVIN의 failure 이후 termination이 recovery 측정을 왜곡할 수 있다는 문제 제기 | benchmark 결과와 실제 recovery capability를 동일시하는 것 |
+| [VLA-FixBench/FaultEval](../../2026/ICML/2026_ICML_Can-VLMs-Diagnose-and-Recover-from-VLA-Manipulation-Faults/01_overview.md) | fault taxonomy, diagnosis, rollback recovery benchmark cue | benchmark의 reported upper bound를 typed selector의 일반화 보장으로 해석하는 것 |
+| [Temporal Difference Calibration](../../2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/01_overview.md) | sequential value/confidence calibration signal | calibrated confidence가 원인·recoverability를 직접 식별한다고 가정하는 것 |
 | [CALVIN](../../2022/RA-L/2022_RA-L_CALVIN-A-Benchmark-for-Language-Conditioned-Policy-Learnin/01_overview.md) | 언어 조건 five-subtask sequence와 task oracle | 첫 실패에서 sequence를 끝내는 표준 evaluator |
 | [LIBERO](../../2023/NeurIPS/2023_NeurIPS_Benchmarking-Knowledge-Transfer-for-Lifelong-Robot-Learnin/01_overview.md) | fixed initial states, BDDL goal predicate, long-horizon task suite | lifelong-learning 평균만을 recovery 성능으로 해석하는 것 |
 
 직접적인 frontier counter-evidence도 baseline 설계에 포함한다.
 
 - [FLARE (CVPR 2026)](https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.html): Retry/Reset 이진 recovery dispatcher. 반드시 strong baseline 또는 privileged binary upper bound로 둔다.
+- [VLA-FixBench/FaultEval (ICML 2026)](https://kakigo.github.io/VLA-FixBench/): fault diagnosis와 rollback recovery benchmark. taxonomy·rollback을 비교 protocol에 포함하되, 저자 구현을 재현하기 전에는 reported result를 upper bound로 복사하지 않는다.
+- [Temporal Difference Calibration (ICML 2026)](https://arxiv.org/abs/2604.20472): sequential task-success confidence를 TD/value estimation으로 보정하는 calibration baseline. alert threshold와 selector를 분리한다.
 - [FailSafe (arXiv 2025)](https://arxiv.org/abs/2510.01642): failure generation과 executable recovery pair. peer-reviewed 결과와 구분해 perturbation/recovery-pair 설계의 참고로만 쓴다.
 - [LIBERO-Safety (ECCV 2026)](https://libero-safety.github.io/): physical/semantic safety perturbation과 violation 평가. 표준 LIBERO pilot 이후 R4 안전성 검증용 확장으로 둔다.
 
@@ -54,8 +59,8 @@ FLARE는 이미 error를 recoverable in-distribution `Retry`와 state-breaking/o
 
 대형 VLA를 다시 학습하지 않는다.
 
-1. SAFE 방식으로 frozen VLA feature `z_1:t`에서 alert score를 계산한다.
-2. 작은 temporal head가 `p(cause, recoverability | z_1:t, progress, budget)`을 출력한다.
+1. SAFE 방식으로 frozen VLA feature `z_1:t`와 관측 history에서 alert score를 계산하고, TD calibration을 독립 ablation으로 둔다.
+2. 작은 temporal/belief head가 `p(cause, recoverability | z_1:t, progress, budget)`을 출력한다.
 3. 별도 option-value head가 각 고정 recovery option의 `P(goal completion)`과 `P(irreversible event)`를 예측한다.
 4. selector는 남은 budget 안에서 irreversible-risk threshold를 만족하는 option 중 completion probability가 가장 높은 것을 고른다.
 5. feasible option이 없으면 `ABORT_HELP`를 선택한다.
@@ -73,7 +78,7 @@ Conformal calibration은 alert threshold에만 적용한다. distribution shift�
 | 장기 구조 | `libero_10`의 multi-object/articulated tasks | 5개 instruction sequence, 1,000 sequence 표준 평가 | CALVIN이 transfer validation에 적합 |
 | simulator state clone/injection | MuJoCo state와 BDDL predicate 활용 가능 | scene/task oracle adapter 필요 | I-12 구현은 LIBERO부터 시작 |
 
-**결론:** minimum experiment는 `LIBERO-Long`으로 확정한다. CALVIN은 event schema가 안정화된 뒤 두 번째 benchmark로 추가한다. 표준 LIBERO는 실제 물리적 위해를 충분히 표현하지 못하므로 R4 결과를 real-world safety claim으로 확대하지 않고, 이후 LIBERO-Safety 또는 실제 robot safety setup에서 별도로 확인한다.
+**결론:** minimum experiment는 `LIBERO-Long`으로 확정한다. CALVIN은 event schema가 안정화된 뒤 두 번째 benchmark로 추가한다. VLA-Arena의 170-task Safety·Distractor·Extrapolation·Long-Horizon suite는 event-level clone/injection interface가 없어 primary evaluator로 쓰지 않고, schema가 안정화된 뒤 stress-suite로 결과를 교차 확인한다. 표준 LIBERO는 실제 물리적 위해를 충분히 표현하지 못하므로 R4 결과를 real-world safety claim으로 확대하지 않고, 이후 LIBERO-Safety 또는 실제 robot safety setup에서 별도로 확인한다.
 
 공식 구현 감사 기준은 다음과 같다.
 

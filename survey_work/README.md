@@ -12,7 +12,7 @@
 
 ## Sources
 
-- `sources/papers.json`: 현재 811편 registry metadata의 canonical manifest
+- `sources/papers.json`: 현재 821편 registry metadata의 canonical manifest
 - `sources/imports/`: 과거 batch별 admission metadata
 - `sources/candidates/`: screening에 사용한 broad candidate census. 등록 논문 목록이 아니다.
 

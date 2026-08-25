@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Planning and Acting in Partially Observable Stochastic Domains",
+    "year": 1998,
+    "venue": "Artificial Intelligence",
+    "category": "Robotics Foundations: Planning and Control",
+    "tags": [
+      "Robotics",
+      "Planning",
+      "POMDP",
+      "partial observability",
+      "uncertainty",
+      "decision making"
+    ],
+    "pdf": "https://www.cassandra.org/arc/papers/aij98.pdf",
+    "page": "https://www.sciencedirect.com/science/article/pii/S000437029800023X",
+    "project": "not identified",
+    "role": "POMDP의 대표적인 고전 논문. MDP/POMDP formulation, belief-state planning, finite-memory controller를 정리해 RP-2의 partial observability, failure diagnosis, recovery decision을 개념적으로 연결하는 prerequisite다."
+  }
+]

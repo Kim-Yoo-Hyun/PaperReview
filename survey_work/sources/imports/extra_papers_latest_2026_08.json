@@ -1,0 +1,101 @@
+[
+  {
+    "title": "FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "World Models, Safety, and Recovery",
+    "tags": ["Robotics", "VLA", "failure recovery", "retry", "reset", "contact-rich manipulation", "safety"],
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.html",
+    "project": "not identified",
+    "role": "최신 VLA failure-recovery 기준점. Retry와 Reset을 분리해 RP-2의 novelty boundary와 binary recovery baseline을 다시 좁히는 paper."
+  },
+  {
+    "title": "Can VLMs Diagnose and Recover from VLA Manipulation Faults?",
+    "year": 2026,
+    "venue": "ICML 2026 regular",
+    "category": "World Models, Safety, and Recovery",
+    "tags": ["Robotics", "VLA", "failure diagnosis", "recovery", "benchmark", "LIBERO", "real robot"],
+    "pdf": "",
+    "page": "https://kakigo.github.io/VLA-FixBench/",
+    "project": "https://kakigo.github.io/VLA-FixBench/",
+    "role": "VLA-FixBench/FaultEval의 fault taxonomy와 rollback recovery를 통해 failure diagnosis를 평가 가능한 benchmark 문제로 구체화한 최신 기준점."
+  },
+  {
+    "title": "VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models",
+    "year": 2026,
+    "venue": "ICML 2026 regular",
+    "category": "Robot Learning and Data",
+    "tags": ["Robotics", "VLA", "Benchmark", "safety", "distractor", "extrapolation", "long horizon", "manipulation"],
+    "pdf": "https://arxiv.org/pdf/2512.22539",
+    "page": "https://vla-arena.github.io/",
+    "project": "https://vla-arena.github.io/",
+    "role": "170개 task와 Safety/Distractor/Extrapolation/Long-Horizon 축을 제공하는 최신 VLA 평가 프레임워크. 평균 success를 failure resolution으로 분해하는 G-10의 benchmark anchor."
+  },
+  {
+    "title": "Tabero: Learning Gentle Manipulation with Closed-Loop Force Feedback from Vision, Touch, and Language",
+    "year": 2026,
+    "venue": "ICML 2026 regular",
+    "category": "Manipulation, Contact, and Dexterity",
+    "tags": ["Robotics", "VLA", "tactile", "force feedback", "contact-rich manipulation", "benchmark", "dexterity", "language-conditioned manipulation"],
+    "pdf": "https://arxiv.org/pdf/2605.27886",
+    "page": "https://arxiv.org/abs/2605.27886",
+    "project": "https://github.com/NathanWu7/Tabero",
+    "role": "vision-touch-language와 decoupled force-position interface를 함께 평가하는 최신 gentle manipulation benchmark/model. Contact state와 force quality를 binary success 밖으로 확장하는 G-01/G-05 anchor."
+  },
+  {
+    "title": "Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models",
+    "year": 2026,
+    "venue": "ICML 2026 regular",
+    "category": "World Models, Safety, and Recovery",
+    "tags": ["Robotics", "VLA", "uncertainty", "calibration", "temporal difference", "failure detection", "LIBERO"],
+    "pdf": "https://arxiv.org/pdf/2604.20472",
+    "page": "https://arxiv.org/abs/2604.20472",
+    "project": "https://shellytechnion.github.io/",
+    "role": "순차 task-success confidence를 TD/value estimation으로 calibration하는 최신 방법. Alert 시점과 recovery selector를 분리하는 G-02의 calibration counter-evidence."
+  },
+  {
+    "title": "AVA-VLA: Improving Vision-Language-Action Models with Active Visual Attention",
+    "year": 2026,
+    "venue": "CVPR 2026",
+    "category": "VLA and Generalist Robot Policies",
+    "tags": ["Robotics", "VLA", "active perception", "visual attention", "POMDP", "recurrent state", "long horizon"],
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.html",
+    "project": "not identified",
+    "role": "POMDP에서 recurrent state와 active visual attention을 결합한 최신 VLA. ActiveVLA의 view-value 질문을 memory/state update와 연결하는 G-03/G-04 anchor."
+  },
+  {
+    "title": "TactAlign: Human-to-Robot Policy Transfer via Tactile Alignment",
+    "year": 2026,
+    "venue": "RSS 2026",
+    "category": "Manipulation, Contact, and Dexterity",
+    "tags": ["Robotics", "tactile", "cross-embodiment", "human-to-robot transfer", "contact-rich manipulation", "dexterity", "representation alignment"],
+    "pdf": "",
+    "page": "https://roboticsconference.org/program/papers/6/",
+    "project": "https://roboticsconference.org/program/papers/6/",
+    "role": "paired data와 동일 sensor 없이 human tactile signal을 robot tactile latent로 옮기는 RSS 2026 기준점. G-01의 cross-sensor/cross-embodiment boundary를 직접 시험한다."
+  },
+  {
+    "title": "Memory Retrieval in Visuomotor Policies for Long-Horizon Robot Control",
+    "year": 2026,
+    "venue": "RSS 2026",
+    "category": "World Models, Safety, and Recovery",
+    "tags": ["Robotics", "VLA", "memory", "long horizon", "partial observability", "imitation learning", "retrieval"],
+    "pdf": "",
+    "page": "https://roboticsconference.org/program/papers/10/",
+    "project": "https://roboticsconference.org/program/papers/10/",
+    "role": "HALO의 task-relevant sparse memory retrieval과 drift 완화 설계를 통해 G-04의 stale memory·long-horizon failure를 최신 closed-loop 기준으로 보강한다."
+  },
+  {
+    "title": "DexterityGen: Foundation Controller for Unprecedented Dexterity",
+    "year": 2026,
+    "venue": "RSS 2026",
+    "category": "Manipulation, Contact, and Dexterity",
+    "tags": ["Robotics", "dexterous manipulation", "reinforcement learning", "foundation controller", "teleoperation", "sim-to-real", "tool use"],
+    "pdf": "",
+    "page": "https://roboticsconference.org/2026/program/papers/103/",
+    "project": "https://roboticsconference.org/2026/program/papers/103/",
+    "role": "RL로 저수준 dexterous primitive를 선학습하고 human teleoperation을 prompt로 쓰는 RSS 2026 foundation controller. Dexterous long-horizon skill과 contact stability의 최신 anchor."
+  }
+]

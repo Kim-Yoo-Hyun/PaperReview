@@ -23,6 +23,7 @@ CORE_GROUPS = OrderedDict(
         (
             "Planning, control, and whole-body foundations",
             [
+                "=Planning and Acting in Partially Observable Stochastic Domains",
                 "Unified Approach for Motion and Force",
                 "Probabilistic Roadmaps",
                 "Rapidly-Exploring Random Trees",
@@ -119,6 +120,89 @@ CORE_GROUPS = OrderedDict(
 )
 
 
+# Project-specific reading order for the I-02/RP-2 failure-to-recovery study.
+# This is not a fourth tier: it is a dependency-based view over CORE/NEXT/
+# REFERENCE papers and is intentionally broader than the 100–150 paper
+# intensive-reading operating guide.
+RP2_PRIORITY_GROUPS = OrderedDict(
+    [
+        (
+            "P0 — Concept prerequisites",
+            [
+                ("=Planning and Acting in Partially Observable Stochastic Domains", "MDP/POMDP, belief state, finite-memory policy"),
+                ("A Reduction of Imitation Learning", "covariate shift and learner-induced failure states"),
+                ("Proximal Policy Optimization Algorithms", "policy optimization and trust-region intuition"),
+                ("Trust Region Policy Optimization", "stable constrained policy updates"),
+                ("Recovery RL:", "task policy, recovery policy, safety critic"),
+                ("Failure Prediction with Statistical Guarantees", "runtime monitoring and statistical failure prediction"),
+                ("Control Barrier Function Based", "safe set, constraint violation, irreversible event"),
+                ("Robots That Ask For Help", "uncertainty-aligned human escalation"),
+                ("PDDLStream:", "symbolic–continuous task-and-motion replanning"),
+                ("Relay Policy Learning", "long-horizon skill decomposition and relaying"),
+            ],
+        ),
+        (
+            "P1 — Direct detector and recovery baselines",
+            [
+                ("Can We Detect Failures Without Failure Data?", "uncertainty-aware detector without failure-data dependence"),
+                ("SAFE: Multitask", "VLA latent failure score and conformal alert threshold"),
+                ("FLARE:", "binary Retry/Reset recovery dispatcher"),
+                ("Can VLMs Diagnose and Recover", "fault taxonomy, diagnosis, rollback recovery"),
+                ("Temporal Difference Calibration", "sequential success-confidence calibration"),
+                ("AHA: A Vision-Language-Model", "VLM failure detection and reasoning alternative"),
+                ("Counterfactual VLA", "self-reflection and test-time recovery comparison"),
+                ("SafeVLA:", "constrained VLA safety alignment"),
+            ],
+        ),
+        (
+            "P2 — Benchmark and metric semantics",
+            [
+                ("Benchmarking Knowledge Transfer for Lifelong Robot Learning", "LIBERO fixed states and goal predicates"),
+                ("CALVIN:", "language-conditioned long-horizon sequence evaluation"),
+                ("AtomicVLA:", "termination semantics and post-failure continuation"),
+                ("FurnitureBench:", "phase/skill progress beyond final success"),
+                ("LIBERO-Safety:", "physical and semantic safety perturbations"),
+                ("VLA-Arena:", "safety, distractor, extrapolation, long-horizon stress axes"),
+                ("BEHAVIOR-1K:", "large-scale embodied long-horizon evaluation context"),
+                ("RLBench:", "task suite and simulator design comparison"),
+            ],
+        ),
+        (
+            "P3 — Frozen VLA and implementation branch",
+            [
+                ("OpenVLA", "recommended open frozen policy base for the first pilot"),
+                ("Octo: An Open", "generalist policy and action conditioning alternative"),
+                ("RT-1:", "robot policy/action-token lineage"),
+                ("RT-2:", "language-to-action VLA lineage"),
+                ("π0: A Vision-Language-Action Flow Model", "current flow-based VLA alternative"),
+                ("π0.5", "open-world VLA extension"),
+                ("Decision Transformer:", "trajectory-conditioned sequence modeling"),
+                ("Implicit Q-Learning", "offline value learning if selector becomes value-based"),
+                ("Conservative Q-Learning", "conservative offline recovery/value baseline"),
+                ("Implicit Behavioral Cloning", "multimodal behavior-cloning alternative"),
+                ("Q-Transformer:", "autoregressive action-value modeling extension"),
+            ],
+        ),
+        (
+            "P4 — Optional extensions and transfer checks",
+            [
+                ("Long-VLA:", "long-horizon VLA context"),
+                ("PALM:", "progress-aware policy state"),
+                ("Learning to Be Uncertain", "horizon-calibrated uncertainty context"),
+                ("WorldGym", "world-model policy evaluation alternative"),
+                ("WMPO", "imagined policy improvement and calibration context"),
+                ("Memory Retrieval in Visuomotor Policies", "memory/retrieval effects on long-horizon execution"),
+                ("Inner Monologue:", "language-mediated replanning and feedback"),
+                ("SayPlan", "scene-graph task planning extension"),
+                ("MimicPlay:", "long-horizon imitation and play data"),
+                ("MimicGen", "demonstration augmentation if recovery data is scarce"),
+                ("Data Scaling Laws", "data coverage and failure-data curation context"),
+            ],
+        ),
+    ]
+)
+
+
 NEXT_GROUPS = OrderedDict(
     [
         (
@@ -160,6 +244,9 @@ NEXT_GROUPS = OrderedDict(
                 "ForceVLA2",
                 "Dexterous World Models",
                 "EquAct:",
+                "Tabero:",
+                "TactAlign:",
+                "DexterityGen:",
             ],
         ),
         (
@@ -181,6 +268,8 @@ NEXT_GROUPS = OrderedDict(
                 "Counterfactual VLA",
                 "Any3D-VLA",
                 "MomaGraph",
+                "AVA-VLA:",
+                "VLA-Arena:",
             ],
         ),
         (
@@ -196,6 +285,10 @@ NEXT_GROUPS = OrderedDict(
                 "SAFE: Multitask",
                 "WorldGym",
                 "WMPO",
+                "FLARE:",
+                "Can VLMs Diagnose and Recover",
+                "Temporal Difference Calibration",
+                "Memory Retrieval in Visuomotor Policies",
             ],
         ),
         (
@@ -337,6 +430,25 @@ def resolve_groups(
     return resolved
 
 
+def resolve_priority_groups(
+    rows: list[dict[str, str]], groups: OrderedDict[str, list[tuple[str, str]]]
+) -> OrderedDict[str, list[tuple[dict[str, str], str]]]:
+    resolved: OrderedDict[str, list[tuple[dict[str, str], str]]] = OrderedDict()
+    for group, entries in groups.items():
+        papers: list[tuple[dict[str, str], str]] = []
+        for query, rationale in entries:
+            if query.startswith("="):
+                hits = [row for row in rows if row["title"] == query[1:]]
+            else:
+                hits = [row for row in rows if query.lower() in row["title"].lower()]
+            if len(hits) != 1:
+                titles = [row["title"] for row in hits]
+                raise RuntimeError(f"RP-2 query {query!r} resolved to {len(hits)} papers: {titles}")
+            papers.append((hits[0], rationale))
+        resolved[group] = papers
+    return resolved
+
+
 def classify(rows: list[dict[str, str]]) -> tuple[dict[str, str], dict[str, str]]:
     core_groups = resolve_groups(rows, CORE_GROUPS)
     next_groups = resolve_groups(rows, NEXT_GROUPS)
@@ -458,7 +570,7 @@ def write_plan(
     lines = [
         "# Long-Term Robotics Reading Plan",
         "",
-        "- Updated: 2026-08-12 KST",
+        "- Updated: 2026-08-25 KST",
         "- Source registry: [PAPER.md](../PAPER.md)",
         "- Full tier index: [READING_TIERS.csv](./READING_TIERS.csv)",
         "- Reading tracker: [READING_STATUS.csv](./READING_STATUS.csv)",
@@ -504,6 +616,20 @@ def write_plan(
         "9. 최신 trend 중 후속 연구가 이어지는 핵심 flow를 형성하는가",
         "10. 현재 연구에서 반박·재사용·확장 가능한 contribution이 있는가",
         "",
+        "## RP-2 / I-02 Priority Reading Sequence",
+        "",
+        "아래 순서는 전체 registry tier가 아니라 `Budgeted Typed Recovery for VLA` 연구를 시작할 때의 project-specific dependency다. 15편 hard cap을 두지 않으며, P0부터 P4로 갈수록 직접 구현 필요성이 낮아진다. 각 논문은 정독 후 RP-2 event schema, detector, selector, budget, benchmark 중 어느 요소를 바꾸는지 기록한다.",
+        "",
+    ]
+    for priority, entries in resolve_priority_groups(rows, RP2_PRIORITY_GROUPS).items():
+        lines.extend([f"### {priority} — {len(entries)} papers", ""])
+        for index, (paper, rationale) in enumerate(entries, 1):
+            lines.append(
+                f"{index}. [{paper['title']}]({'.' + paper['path']}) "
+                f"— {paper['year']} {paper['venue']}; {rationale}."
+            )
+        lines.append("")
+    lines.extend([
         "## Tier Definitions",
         "",
         "| Tier | Papers | Use |",
@@ -526,7 +652,7 @@ def write_plan(
         "",
         "## Long-Term Reading Sequence",
         "",
-        "1. **Mechanics and control:** Operational Space Control → PRM/RRT → CHOMP/TrajOpt → PDDLStream → whole-body/force control.",
+        "1. **Decision, mechanics, and control:** POMDP belief-state planning → Operational Space Control → PRM/RRT → CHOMP/TrajOpt → PDDLStream → whole-body/force control.",
         "2. **Policy learning:** DAgger/GAIL → RoboMimic/RLBench → TRPO/PPO/SAC → offline RL → DDPM/Flow Matching → Diffusion Policy and scalable robot data.",
         "3. **Physical interaction:** contact mechanics and grasping → tactile/force feedback → dexterous, deformable, tool, assembly tasks.",
         "4. **Generalist policies:** CLIP/PaLM-E/CLIPort → RT-1/RT-2 → Open X-Embodiment → Octo/OpenVLA/π0 → FAST/OpenVLA-OFT/π0.5.",
@@ -540,7 +666,7 @@ def write_plan(
         "",
         "| Batch | Core question | Required spine | Branch after the spine | Exit artifact |",
         "|---|---|---|---|---|",
-        "| A. Mechanics and feasibility | 학습 이전에 robot action의 feasibility와 constraint는 어떻게 표현되는가? | Operational Space Control → PRM/RRT → CHOMP/TrajOpt → PDDLStream | HQP / Whole-Body NMPC / contact optimization | planner·controller별 state, decision variable, guarantee 표 |",
+        "| A. Decision, mechanics, and feasibility | partial observability 아래 robot action의 belief, feasibility와 constraint는 어떻게 표현되는가? | POMDP → Operational Space Control → PRM/RRT → CHOMP/TrajOpt → PDDLStream | HQP / Whole-Body NMPC / contact optimization | belief/state·planner·controller별 decision variable과 guarantee 표 |",
         "| B. Learning objectives and data | policy가 expert, reward, value와 logged data에서 무엇을 학습하는가? | DAgger/GPS/GAIL → TRPO/PPO/SAC → RoboMimic → IBC/IQL | CQL/MOPO/TD3+BC, RLBench, MimicGen/DROID | objective × data-support × interaction 비교 표 |",
         "| C. Generative action policies | multimodal continuous action을 어떤 생성 과정으로 나타내는가? | DDPM / Flow Matching → Diffusion Policy → π0 | Diffusion-EDFs, Reactive Diffusion Policy, FAST | sampling step·chunk·latency·feedback 비교 표 |",
         "| D. Generalist VLA and scaling | semantic prior와 heterogeneous robot data가 action으로 어떻게 연결되는가? | CLIP/CLIPort/PaLM-E → RT-1/RT-2 → Open X-Embodiment → Octo/OpenVLA | OpenVLA-OFT, π0/π0.5, memory/planning VLA | data × embodiment × action interface 비교 표 |",
@@ -561,7 +687,7 @@ def write_plan(
         "- Generative action model의 inference latency와 실제 closed-loop control frequency를 확인한다.",
         "- Tabletop success rate를 넘어 long horizon, real-world disturbances, sensor degradation, compromised contact, recovery를 평가한다.",
         "",
-    ]
+    ])
     lines.extend(plan_section("CORE", core_groups))
     lines.extend(plan_section("NEXT", next_groups))
     lines.extend(
