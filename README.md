@@ -21,8 +21,6 @@ observation → state / belief / world model → task & motion decision
 - [빠른 탐색](#빠른-탐색)
 - [현재 snapshot](#현재-snapshot)
 - [어떤 종류의 논문이 있는가](#어떤-종류의-논문이-있는가)
-- [최근 경향](#최근-경향)
-- [현재 연구 방향](#현재-연구-방향)
 - [읽는 방법](#읽는-방법)
 - [문서 구조와 note 규칙](#문서-구조와-note-규칙)
 - [논문 추가와 provenance 규칙](#논문-추가와-provenance-규칙)
@@ -39,9 +37,9 @@ observation → state / belief / world model → task & motion decision
 | 정독 진행 상태 | [research/READING_STATUS.csv](./research/READING_STATUS.csv), [research/READING_STATUS.md](./research/READING_STATUS.md) |
 | 연구 공백 | [research/RESEARCH_GAPS.md](./research/RESEARCH_GAPS.md) |
 | 연구 아이디어·가설 | [research/RESEARCH_IDEAS.md](./research/RESEARCH_IDEAS.md) |
-| 현재 진행 프로젝트 | [research/projects/RP-2_FAILURE_RECOVERY.md](./research/projects/RP-2_FAILURE_RECOVERY.md) |
+| 연구 프로젝트 문서 | [research/projects/RP-2_FAILURE_RECOVERY.md](./research/projects/RP-2_FAILURE_RECOVERY.md) |
 | 계보·트랙별 synthesis | [synthesis/README.md](./synthesis/README.md) |
-| 최신 변경 기록 | [research/UPDATES_2026-08-25.md](./research/UPDATES_2026-08-25.md) |
+| 최신 변경 기록 | [work/update/UPDATES_2026-08-25.md](./work/update/UPDATES_2026-08-25.md) |
 
 ## 현재 snapshot
 
@@ -88,62 +86,9 @@ observation → state / belief / world model → task & motion decision
 - **Benchmark and evidence:** LIBERO, CALVIN, RLBench, FurnitureBench, LIBERO-Safety, VLA-Arena, long-horizon and real-robot evaluation.
 - **Robotics-enabling perception:** PointNet, SLAM, 3DGS, DUSt3R/VGGT, semantic mapping, active view, 3D-aware policy state.
 
-## 최근 경향
-
-현재 registry의 2024–2026 frontier는 다음 방향으로 수렴한다.
-
-| 경향 | 대표 registry anchor | 연구적 의미 |
-|---|---|---|
-| VLA가 language interface에서 closed-loop controller로 이동 | [OpenVLA](./2024/CoRL/2024_CoRL_OpenVLA-An-Open-Source-Vision-Language-Action-Model/01_overview.md), [π0](./2025/RSS/2025_RSS_pi0-A-Vision-Language-Action-Flow-Model-for-General-Robot/01_overview.md) | action chunk, control rate, feedback, embodiment 조건이 핵심 변수가 됨 |
-| failure detection에서 recovery selection으로 확장 | [SAFE](./2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md), [FLARE](./2026/CVPR/2026_CVPR_FLARE-A-Failure-Aware-Framework-for-Autonomous-Correction/01_overview.md), [FaultEval](./2026/ICML/2026_ICML_Can-VLMs-Diagnose-and-Recover-from-VLA-Manipulation-Faults/01_overview.md) | alert 자체보다 원인·recoverability·budget에 따른 operational decision이 중요해짐 |
-| sequential confidence와 safety calibration 강화 | [FAIL-Detect](./2025/RSS/2025_RSS_Can-We-Detect-Failures-Without-Failure-Data-Uncertainty-Aw/01_overview.md), [Temporal Difference Calibration](./2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/01_overview.md) | 평균 success가 아니라 detection delay, false intervention, risk calibration을 측정해야 함 |
-| tactile/force가 VLA의 fast feedback 경로로 편입 | [Reactive Diffusion Policy](./2025/RSS/2025_RSS_Reactive-Diffusion-Policy-Slow-Fast-Visual-Tactile-Policy/01_overview.md), [Tabero](./2026/ICML/2026_ICML_Tabero-Learning-Gentle-Manipulation-with-Closed-Loop-Force/01_overview.md), [TactAlign](./2026/RSS/2026_RSS_TactAlign-Human-to-Robot-Policy-Transfer-via-Tactile-Align/01_overview.md) | sensor delay, calibration, contact regime 전이와 safety–success trade-off가 남은 문제 |
-| long-horizon policy의 state/memory/skill 구조화 | [AtomicVLA](./2026/CVPR/2026_CVPR_AtomicVLA-Unlocking-the-Potential-of-Atomic-Skill-Learning/01_overview.md), [Memory Retrieval](./2026/RSS/2026_RSS_Memory-Retrieval-in-Visuomotor-Policies-for-Long-Horizon-R/01_overview.md), [PALM](./2026/CVPR/2026_CVPR_PALM-Progress-Aware-Policy-Learning-via-Affordance-Reasoni/01_overview.md) | failure 이후 continuation, stale state, progress-aware recovery가 중요해짐 |
-| world model을 policy evaluation·uncertainty에 사용 | [WorldGym](./2026/ICLR/2026_ICLR_WorldGym-World-Model-as-An-Environment-for-Policy-Evaluati/01_overview.md), [WMPO](./2026/ICLR/2026_ICLR_WMPO-World-Model-based-Policy-Optimization-for-Vision-Lang/01_overview.md) | visual fidelity보다 contact/control fidelity와 real-gain calibration이 핵심 |
-| benchmark가 final success에서 failure resolution으로 이동 | [LIBERO-Safety](./2026/ECCV/2026_ECCV_LIBERO-Safety-A-Comprehensive-Benchmark-for-Physical-and-S/01_overview.md), [VLA-Arena](./2026/ICML/2026_ICML_VLA-Arena-An-Open-Source-Framework-for-Benchmarking-Vision/01_overview.md) | event timing, perturbation, intervention cost, recovery 이후 progress 기록이 필요 |
-| humanoid·whole-body와 contact feasibility 결합 | [HumanoidBench](./2024/RSS/2024_RSS_HumanoidBench-Simulated-Humanoid-Benchmark-for-Whole-Body/01_overview.md), [HWC-Loco](./2026/ICLR/2026_ICLR_HWC-Loco-A-Hierarchical-Whole-Body-Control-Approach-to-Rob/01_overview.md) | task progress, balance, torque, contact, recovery reserve를 같은 hierarchy에서 조정해야 함 |
-| 3D perception이 control utility·active sensing으로 재평가 | [ActiveVLA](./2026/CVPR/2026_CVPR_ActiveVLA-Injecting-Active-Perception-into-Vision-Language/01_overview.md), [PointVLA](./2026/RA-L/2026_RA-L_PointVLA-Injecting-the-3D-World-into-Vision-Language-Actio/01_overview.md) | geometry 정확도 자체보다 compute/latency-matched downstream action value가 중요 |
-
-## 현재 연구 방향
-
-현재 가장 구체화된 연구 프로그램은 **RP-2 / I-02: Budgeted Typed Recovery for VLA**다.
-
-> 동일한 detector와 동일한 time/action/risk budget에서, failure cause와 operational recoverability를 추정해 recovery option을 선택하면 abort, blind retry, binary Retry/Reset, privileged replan보다 recoverable failure의 최종 완료율을 높일 수 있는가?
-
-### RP-2의 최소 실험 구조
-
-| 요소 | 현재 결정 |
-|---|---|
-| Base policy | OpenVLA 계열 frozen VLA부터 시작 |
-| Primary benchmark | LIBERO-Long (`libero_10`) |
-| Transfer check | CALVIN long-horizon sequence |
-| Detector | SAFE/FAIL-Detect 계열, TD calibration은 독립 ablation |
-| Recovery baseline | abort, blind retry, FLARE-style binary Retry/Reset, privileged replan |
-| Proposed unit | `cause × recoverability × remaining budget` typed selector |
-| Primary outcome | Budgeted Recovery Completion Rate (BRCR) |
-| Safety gate | Irreversible Failure Rate (IFR) non-degradation |
-| Evaluation artifact | benchmark-independent JSONL recovery event schema |
-
-이 연구에서 가장 중요한 남은 gap은 failure를 검출하는 것 자체가 아니라, **부분 관측 아래에서 무엇이 일어났는지 추정하고, 제한된 budget에서 어떤 recovery를 선택하며, 그 선택이 최종 task outcome을 개선했는지 측정하는 것**이다.
-
-### 후속 연구 후보
-
-- **I-01:** sensor/embodiment transfer가 가능한 dual-rate tactile/force feedback.
-- **I-03:** stale spatial memory를 phase-aware하게 refresh/expire하는 policy.
-- **I-07:** 동일 compute에서 2D·dense 3D·task-conditioned state의 control utility 비교.
-- **I-09:** 추가 관측의 action value와 camera/latency 비용을 비교하는 active-perception stopping.
-
-World-model policy update, whole-body risk-budget hierarchy, cross-embodiment data scaling은 중요한 축이지만 첫 석사 프로젝트보다 큰 후속 범위로 둔다.
-
 ## 읽는 방법
 
-RP-2 전용 정독 순서는 [READING_PLAN.md의 P0–P4 목록](./research/READING_PLAN.md#rp-2-i-02-priority-reading-sequence)에 있다. 15편 hard cap이 아니라 dependency 순서로 48편을 관리한다.
-
-1. **P0 — Concept prerequisites:** POMDP, DAgger, PPO/TRPO, Recovery RL, failure prediction, CBF, PDDLStream.
-2. **P1 — Direct baselines:** FAIL-Detect, SAFE, FLARE, FaultEval, TD calibration.
-3. **P2 — Evaluation semantics:** LIBERO, CALVIN, AtomicVLA, FurnitureBench, LIBERO-Safety, VLA-Arena.
-4. **P3 — Implementation branch:** OpenVLA를 첫 base로 두고 Octo, RT-1/RT-2, π0/π0.5, offline value methods를 필요할 때 읽는다.
-5. **P4 — Extensions:** long-horizon memory, progress, world model, language replanning, data augmentation.
+장기 정독 순서와 프로젝트별 우선순위는 [READING_PLAN.md](./research/READING_PLAN.md)에서 dependency 단위로 관리한다. CORE/NEXT 전체 계보를 먼저 확인하고, foundation → learning/data → physical interaction → generalist policy → safety/recovery → embodiment → action-relevant 3D 순서로 필요한 가지를 확장한다.
 
 논문을 읽을 때는 다음 네 가지를 모두 기록한다.
 
@@ -169,13 +114,13 @@ RP-2 전용 정독 순서는 [READING_PLAN.md의 P0–P4 목록](./research/READ
 - `04_evaluation.md`: robot, task, data, metric, baseline, ablation, failure, 재현성
 - `05_insights.md`: 선행/후속 연결, 연구 relevance, 최소 재현과 아이디어
 
-새 논문은 [survey_work/sources/papers.json](./survey_work/sources/papers.json)을 canonical manifest로 등록한다. PDF는 선택적 local cache이며 paper inclusion이나 priority를 결정하지 않는다.
+새 논문은 [work/sources/papers.json](./work/sources/papers.json)을 canonical manifest로 등록한다. PDF는 선택적 local cache이며 paper inclusion이나 priority를 결정하지 않는다.
 
 ## 논문 추가와 provenance 규칙
 
 이 저장소는 exhaustive bibliography가 아니라 **근거와 연구 연결을 보존하는 curated registry**다. 새 논문은 다음 admission checklist를 통과해야 한다.
 
-1. `PAPER.md`, `READING_TIERS.csv`, `survey_work/sources/papers.json`에서 제목·subtitle·conference version 중복을 확인한다.
+1. `PAPER.md`, `READING_TIERS.csv`, `work/sources/papers.json`에서 제목·subtitle·conference version 중복을 확인한다.
 2. 공식 proceedings, publisher, OpenReview, CVF/PMLR/RSS page 또는 저자 project page에서 title·year·venue/status를 확인한다.
 3. primary category, tags, `foundation / frontier / benchmark / dataset / safety-recovery` 역할과 registry에 추가하는 이유를 기록한다.
 4. `register_papers.py`로 5개 표준 note를 만들고, 원문을 아직 확인하지 않은 내용은 `CURATION_ONLY` 또는 `UNVERIFIED`로 둔다.
@@ -192,18 +137,18 @@ RP-2 전용 정독 순서는 [READING_PLAN.md의 P0–P4 목록](./research/READ
 - Foundation, frontier, benchmark, dataset, safety/recovery, enabling perception을 서로 다른 역할로 구분한다.
 - 논문 수나 venue quota를 채우기 위해 약한 논문을 추가하지 않는다.
 - 공식 proceedings/project/abstract를 우선 사용하고, 불확실한 claim은 `CURATION_ONLY` 또는 `UNVERIFIED`로 표시한다.
-- 생성·검증 workflow는 [survey_work/README.md](./survey_work/README.md)에 있다.
+- 생성·검증 workflow는 [work/README.md](./work/README.md)에 있다.
 
 ```bash
-python3 survey_work/audit_repository.py
-python3 survey_work/register_papers.py --input /path/to/new_papers.json
-python3 survey_work/register_papers.py --input /path/to/new_papers.json --apply
-python3 survey_work/normalize_taxonomy.py
-python3 survey_work/build_reading_tiers.py
-python3 survey_work/audit_repository.py
+python3 work/scripts/audit_repository.py
+python3 work/scripts/register_papers.py --input /path/to/new_papers.json
+python3 work/scripts/register_papers.py --input /path/to/new_papers.json --apply
+python3 work/scripts/normalize_taxonomy.py
+python3 work/scripts/build_reading_tiers.py
+python3 work/scripts/audit_repository.py
 ```
 
-현재 snapshot의 상세 변경은 [UPDATES_2026-08-25.md](./research/UPDATES_2026-08-25.md), 운영 규칙은 [AGENTS.md](./AGENTS.md)에 기록한다.
+현재 snapshot의 상세 변경은 [work/update/UPDATES_2026-08-25.md](./work/update/UPDATES_2026-08-25.md), 운영 규칙은 [AGENTS.md](./AGENTS.md)에 기록한다.
 
 ## 공개 registry 참고
 

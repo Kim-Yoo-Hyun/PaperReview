@@ -52,4 +52,4 @@
 3. 해당 [synthesis](../synthesis/README.md) 문서의 comparison matrix와 research gap evidence를 갱신한다.
 4. 다른 논문과의 차이가 명시되면 `status=SYNTHESIZED`와 `completed_on`을 기록한다.
 5. 사용한 근거 수준에 맞춰 `evidence_level`을 올리고 full-text claim에는 page/section/table 위치를 남긴다.
-6. 분류표 재생성 시 `python3 survey_work/build_reading_tiers.py`를 실행한다. 경로가 같은 논문의 사용자 입력 필드는 보존된다.
+6. 분류표 재생성 시 `python3 work/scripts/build_reading_tiers.py`를 실행한다. 경로가 같은 논문의 사용자 입력 필드는 보존된다.

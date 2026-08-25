@@ -51,10 +51,10 @@ Humanoid는 별도 taxonomy로 만들지 않는다. Locomotion, whole-body contr
 | [synthesis/](./synthesis/) | 7개 트랙의 cross-paper comparison과 paper lineage | queue marker 내부는 자동 생성, 나머지는 수동 합성 영역이다. |
 | [RESEARCH_GAPS.md](./research/RESEARCH_GAPS.md) | 트랙을 가로지르는 failure·assumption·evaluation gap | gap 설명의 canonical source다. |
 | [RESEARCH_IDEAS.md](./research/RESEARCH_IDEAS.md) | gap에서 파생한 가설과 최소 실험 | gap 내용을 복제하지 않고 gap ID를 참조한다. |
-| [UPDATES_2026-08-25.md](./research/UPDATES_2026-08-25.md) | 최신 registry·frontier·gap 갱신 기록 | 날짜별 audit log로 유지하고 canonical gap/plan 내용을 중복 관리하지 않는다. |
-| [survey_work/build_reading_tiers.py](./survey_work/build_reading_tiers.py) | tier·plan·tracker·synthesis queue 생성 규칙 | CORE/NEXT membership의 canonical source다. |
-| [survey_work/sources/papers.json](./survey_work/sources/papers.json) | 전체 registry metadata의 canonical manifest | 신규 등록은 `register_papers.py`를 사용한다. |
-| [survey_work/audit_repository.py](./survey_work/audit_repository.py) | registry·tier·tracker·queue·note·taxonomy 무결성 검사 | read-only이며 주요 변경 전후에 실행한다. |
+| [work/update/UPDATES_2026-08-25.md](./work/update/UPDATES_2026-08-25.md) | 최신 registry·frontier·gap 갱신 기록 | 날짜별 audit log로 유지하고 canonical gap/plan 내용을 중복 관리하지 않는다. 앞으로의 update log도 `work/update/`에 작성한다. |
+| [work/scripts/build_reading_tiers.py](./work/scripts/build_reading_tiers.py) | tier·plan·tracker·synthesis queue 생성 규칙 | CORE/NEXT membership의 canonical source다. |
+| [work/sources/papers.json](./work/sources/papers.json) | 전체 registry metadata의 canonical manifest | 신규 등록은 `register_papers.py`를 사용한다. |
+| [work/scripts/audit_repository.py](./work/scripts/audit_repository.py) | registry·tier·tracker·queue·note·taxonomy 무결성 검사 | read-only이며 주요 변경 전후에 실행한다. |
 
 현재 snapshot은 CORE 61편, NEXT 89편, REFERENCE 438편, ARCHIVE 233편이다. 이 숫자는 결과이지 목표 quota가 아니다. 논문 중요성 때문에 필요하면 CORE/NEXT를 늘릴 수 있으며, 장기 정독 규모 100–150편은 운영상 가이드일 뿐 hard cap이 아니다.
 
@@ -155,7 +155,7 @@ Tier 결정에서 PDF, 로컬 노트 개수, 다운로드 성공 여부는 절�
 
 논문을 추가하기 전에 다음을 모두 확인한다.
 
-1. `rg -i`로 exact title과 distinctive title phrase를 `PAPER.md`, `READING_TIERS.csv`, `survey_work/*.json`에서 검색한다.
+1. `rg -i`로 exact title과 distinctive title phrase를 `PAPER.md`, `READING_TIERS.csv`, `work/sources/*.json`에서 검색한다.
 2. punctuation, subtitle, `+`, Greek symbol, arXiv→conference version 차이를 정규화해 중복을 검사한다.
 3. Conference version이 생기면 별도 논문으로 중복 등록하기보다 기존 entry의 venue/status를 갱신하는 것을 우선한다.
 4. 같은 연구의 tech report와 peer-reviewed version을 모두 남겨야 한다면 차이와 이유를 명시한다.
@@ -352,12 +352,12 @@ PDF column은 compatibility를 위해 남아 있을 수 있지만 curation decis
 
 ### Tier or registry update
 
-CORE/NEXT membership을 바꿀 때는 `READING_PLAN.md`나 CSV를 직접 고치지 말고 [build_reading_tiers.py](./survey_work/build_reading_tiers.py)의 `CORE_GROUPS` / `NEXT_GROUPS`를 수정한다.
+CORE/NEXT membership을 바꿀 때는 `READING_PLAN.md`나 CSV를 직접 고치지 말고 [build_reading_tiers.py](./work/scripts/build_reading_tiers.py)의 `CORE_GROUPS` / `NEXT_GROUPS`를 수정한다.
 
 그다음 실행한다.
 
 ```bash
-python3 survey_work/build_reading_tiers.py
+python3 work/scripts/build_reading_tiers.py
 ```
 
 이 명령은 다음을 갱신한다.
@@ -371,10 +371,10 @@ python3 survey_work/build_reading_tiers.py
 
 ### Paper registration and full rebuild safety
 
-- 신규 metadata는 `python3 survey_work/register_papers.py --input <json>`으로 dry-run한 뒤 `--apply`로 등록한다.
+- 신규 metadata는 `python3 work/scripts/register_papers.py --input <json>`으로 dry-run한 뒤 `--apply`로 등록한다.
 - `build_lit_survey.py`는 인자 없이 read-only다. metadata refresh, PDF download, note overwrite, registry/manifest write는 각각 명시적 flag 없이는 실행되지 않아야 한다.
 - `--overwrite-notes`는 기존 수동 분석을 덮어쓰므로 사용자의 명시적 전체 재생성 요청 없이는 사용하지 않는다.
-- `survey_work/archive/`의 one-off script와 과거 report는 실행하거나 현재 source of truth로 사용하지 않는다.
+- `work/scripts/archive/`의 one-off script와 `work/archive/reports/`의 과거 report는 실행하거나 현재 source of truth로 사용하지 않는다.
 
 ### File editing
 
@@ -391,8 +391,8 @@ python3 survey_work/build_reading_tiers.py
 ### Always
 
 ```bash
-python3 -m py_compile survey_work/build_reading_tiers.py
-python3 survey_work/build_reading_tiers.py
+python3 -m py_compile work/scripts/build_reading_tiers.py
+python3 work/scripts/build_reading_tiers.py
 git diff --check
 ```
 

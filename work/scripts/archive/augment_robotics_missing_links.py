@@ -12,7 +12,7 @@ import build_lit_survey as survey
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WORK = ROOT / "survey_work"
+WORK = ROOT / "work"
 EXTRA = WORK / "extra_papers_robotics_missing_links.json"
 MANIFEST = WORK / "selected_papers.json"
 REGISTRY = ROOT / "PAPER.md"

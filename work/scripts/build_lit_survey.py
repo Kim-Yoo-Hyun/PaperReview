@@ -25,12 +25,12 @@ import requests
 
 try:
     from taxonomy import canonicalize
-except ModuleNotFoundError:  # import as survey_work.build_lit_survey
+except ModuleNotFoundError:  # import as work.scripts.build_lit_survey
     from .taxonomy import canonicalize
 
 
-ROOT = Path(__file__).resolve().parents[1]
-WORK = ROOT / "survey_work"
+ROOT = Path(__file__).resolve().parents[2]
+WORK = ROOT / "work"
 SOURCES = WORK / "sources"
 IMPORTS = SOURCES / "imports"
 CVF_CANDIDATES = SOURCES / "candidates" / "cvf_candidates.json"

@@ -20,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PAPER_MD = ROOT / "PAPER.md"
-REPORT_JSON = ROOT / "survey_work" / "note_audit_report.json"
+REPORT_JSON = ROOT / "work" / "note_audit_report.json"
 TODAY = datetime.now().strftime("%Y-%m-%d")
 
 

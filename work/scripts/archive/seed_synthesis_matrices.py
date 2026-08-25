@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = json.loads((ROOT / "survey_work" / "sources" / "papers.json").read_text())
+MANIFEST = json.loads((ROOT / "work" / "sources" / "papers.json").read_text())
 
 
 def paper(prefix: str, label: str | None = None) -> str:

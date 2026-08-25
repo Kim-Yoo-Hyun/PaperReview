@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Add the curated robotics expansion without redownloading the full survey."""
+"""Add the RL/IL/manipulation/locomotion/WBC/safety/world-model backbone."""
 
 from __future__ import annotations
 
@@ -14,24 +14,13 @@ import build_lit_survey as survey
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WORK = ROOT / "survey_work"
-EXTRA = WORK / "extra_papers_robotics.json"
+WORK = ROOT / "work"
+EXTRA = WORK / "extra_papers_robotics_core_expansion.json"
 MANIFEST = WORK / "selected_papers.json"
-LOG = WORK / "robotics_augmentation_log.json"
-AUDIT = WORK / "robotics_note_audit_report.json"
-
-
-SAM2 = {
-    "title": "SAM 2: Segment Anything in Images and Videos",
-    "year": 2025,
-    "venue": "ICLR",
-    "category": "Foundations: Vision Foundation Models",
-    "tags": ["segmentation", "foundation model", "prompting", "video segmentation", "memory"],
-    "folder": "2025/ICLR/2025_ICLR_SAM-2-Segment-Anything-in-Images-and-Videos",
-    "pdf": "https://arxiv.org/pdf/2408.00714",
-    "page": "https://arxiv.org/abs/2408.00714",
-    "project": "https://github.com/facebookresearch/sam2",
-    "pdf_status": "not-present-locally",
+LOG = WORK / "robotics_core_expansion_log.json"
+AUDIT = WORK / "robotics_core_expansion_note_audit_report.json"
+SUPERSEDED_TITLES = {
+    "Safety Gym: A Benchmark for Safe Exploration in Reinforcement Learning".casefold()
 }
 
 
@@ -51,17 +40,17 @@ def main() -> int:
         paper["title"].casefold()
         for paper in existing
         if paper["title"].casefold() not in extra_titles
+        and paper["title"].casefold() not in SUPERSEDED_TITLES
     }
-    baseline_titles.add(SAM2["title"].casefold())
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
         extras = list(executor.map(survey.download_pdf, extras))
 
-    for paper in extras:
-        survey.write_notes(paper)
-
-    by_title = {paper["title"].casefold(): paper for paper in existing}
-    by_title.setdefault(SAM2["title"].casefold(), SAM2)
+    by_title = {
+        paper["title"].casefold(): paper
+        for paper in existing
+        if paper["title"].casefold() not in SUPERSEDED_TITLES
+    }
     for paper in extras:
         by_title[paper["title"].casefold()] = paper
     merged = list(by_title.values())
@@ -85,7 +74,9 @@ def main() -> int:
         "papers_before": len(baseline_titles),
         "papers_added": len(extras),
         "papers_after": len(merged),
-        "downloaded": [paper["title"] for paper in extras if paper.get("pdf_status") == "downloaded"],
+        "downloaded": [
+            paper["title"] for paper in extras if paper.get("pdf_status") == "downloaded"
+        ],
         "failed": [
             {"title": paper["title"], "status": paper.get("pdf_status", "unknown")}
             for paper in extras

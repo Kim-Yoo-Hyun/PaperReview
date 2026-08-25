@@ -11,7 +11,7 @@ import requests
 
 
 ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = ROOT / "survey_work" / "selected_papers.json"
+MANIFEST = ROOT / "work" / "selected_papers.json"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 literature-survey-bot (academic personal use)",
 }

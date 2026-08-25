@@ -17,8 +17,8 @@ except ModuleNotFoundError:
     from .taxonomy import canonicalize
 
 
-ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = ROOT / "survey_work" / "sources" / "papers.json"
+ROOT = Path(__file__).resolve().parents[2]
+MANIFEST = ROOT / "work" / "sources" / "papers.json"
 NOTE_NAMES = ["01_overview.md", "02_problem.md", "03_method.md", "04_evaluation.md", "05_insights.md"]
 REQUIRED = {"title", "year", "venue", "category", "tags", "page"}
 

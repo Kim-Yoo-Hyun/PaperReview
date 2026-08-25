@@ -31,6 +31,24 @@
 
 이 delta의 paper note는 metadata와 official abstract/proceedings를 등록한 상태이며, `READING_STATUS.csv`에서 모두 `UNREAD / CURATION_ONLY`로 시작한다. 수치·실패 분석을 gap evidence로 승격하려면 full text의 section/table 위치를 확인해야 한다.
 
+## 2024–2026 frontier trend map
+
+최근 frontier는 개별 architecture의 교체보다 **closed-loop execution, failure/recovery, contact feedback, state/memory, evaluation protocol**을 명시하는 방향으로 이동하고 있다. 아래 표는 이 문서의 gap index와 연결해 trend가 어떤 검증 질문을 남기는지 기록한다.
+
+| 경향 | 대표 registry anchor | 연구적 의미와 남은 검증 질문 |
+|---|---|---|
+| VLA가 language interface에서 closed-loop controller로 이동 | [OpenVLA](../2024/CoRL/2024_CoRL_OpenVLA-An-Open-Source-Vision-Language-Action-Model/01_overview.md), [π0](../2025/RSS/2025_RSS_pi0-A-Vision-Language-Action-Flow-Model-for-General-Robot/01_overview.md) | action chunk, control rate, feedback, embodiment 조건을 함께 봐야 한다. 동일 policy의 latency·feedback 차이가 실제 recovery와 long-horizon outcome을 얼마나 바꾸는지는 G-02/G-10과 연결된다. |
+| failure detection에서 recovery selection으로 확장 | [SAFE](../2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md), [FLARE](../2026/CVPR/2026_CVPR_FLARE-A-Failure-Aware-Framework-for-Autonomous-Correction/01_overview.md), [FaultEval](../2026/ICML/2026_ICML_Can-VLMs-Diagnose-and-Recover-from-VLA-Manipulation-Faults/01_overview.md) | alert 자체보다 cause·recoverability·remaining budget에 따른 operational decision이 중요해졌다. binary Retry/Reset을 넘어 multi-option typed recovery를 비교하는 RP-2의 직접 배경이다. |
+| sequential confidence와 safety calibration 강화 | [FAIL-Detect](../2025/RSS/2025_RSS_Can-We-Detect-Failures-Without-Failure-Data-Uncertainty-Aw/01_overview.md), [Temporal Difference Calibration](../2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/01_overview.md) | 평균 success가 아니라 detection delay, false intervention, risk calibration을 측정해야 한다. calibrated score가 selector decision으로 이어지는지는 G-02의 evidence void다. |
+| tactile/force가 VLA의 fast feedback 경로로 편입 | [Reactive Diffusion Policy](../2025/RSS/2025_RSS_Reactive-Diffusion-Policy-Slow-Fast-Visual-Tactile-Policy/01_overview.md), [Tabero](../2026/ICML/2026_ICML_Tabero-Learning-Gentle-Manipulation-with-Closed-Loop-Force/01_overview.md), [TactAlign](../2026/RSS/2026_RSS_TactAlign-Human-to-Robot-Policy-Transfer-via-Tactile-Align/01_overview.md) | sensor delay, calibration, contact-regime 전이와 safety–success trade-off가 핵심 변수가 됐다. sensor mechanics와 embodiment가 바뀌어도 state/uncertainty가 유지되는지는 G-01/G-05에 남는다. |
+| long-horizon policy의 state/memory/skill 구조화 | [AtomicVLA](../2026/CVPR/2026_CVPR_AtomicVLA-Unlocking-the-Potential-of-Atomic-Skill-Learning/01_overview.md), [Memory Retrieval](../2026/RSS/2026_RSS_Memory-Retrieval-in-Visuomotor-Policies-for-Long-Horizon-R/01_overview.md), [PALM](../2026/CVPR/2026_CVPR_PALM-Progress-Aware-Policy-Learning-via-Affordance-Reasoni/01_overview.md) | failure 이후 continuation, stale state, phase-aware progress와 skill composition이 중요해졌다. memory expiry와 post-recovery state refresh는 G-04/G-10의 미해결 문제다. |
+| world model을 policy evaluation·uncertainty에 사용 | [WorldGym](../2026/ICLR/2026_ICLR_WorldGym-World-Model-as-An-Environment-for-Policy-Evaluati/01_overview.md), [WMPO](../2026/ICLR/2026_ICLR_WMPO-World-Model-based-Policy-Optimization-for-Vision-Lang/01_overview.md) | visual fidelity보다 contact/control fidelity와 real-gain calibration이 중요해졌다. imagined rollout의 ranking이 contact·OOD에서도 유지되는지는 G-07/G-08의 검증 범위다. |
+| benchmark가 final success에서 failure resolution으로 이동 | [LIBERO-Safety](../2026/ECCV/2026_ECCV_LIBERO-Safety-A-Comprehensive-Benchmark-for-Physical-and-S/01_overview.md), [VLA-Arena](../2026/ICML/2026_ICML_VLA-Arena-An-Open-Source-Framework-for-Benchmarking-Vision/01_overview.md) | event timing, perturbation, intervention cost, recovery 이후 progress를 기록해야 한다. benchmark 간 공통 event schema와 recovery-aware metric은 G-10에 해당한다. |
+| humanoid·whole-body와 contact feasibility 결합 | [HumanoidBench](../2024/RSS/2024_RSS_HumanoidBench-Simulated-Humanoid-Benchmark-for-Whole-Body/01_overview.md), [HWC-Loco](../2026/ICLR/2026_ICLR_HWC-Loco-A-Hierarchical-Whole-Body-Control-Approach-to-Rob/01_overview.md) | task progress, balance, torque, contact, recovery reserve를 같은 hierarchy에서 조정해야 한다. locomotion–manipulation coupling과 hardware risk의 bandwidth 문제는 G-09/G-11로 이어진다. |
+| 3D perception이 control utility·active sensing으로 재평가 | [ActiveVLA](../2026/CVPR/2026_CVPR_ActiveVLA-Injecting-Active-Perception-into-Vision-Language/01_overview.md), [PointVLA](../2026/RA-L/2026_RA-L_PointVLA-Injecting-the-3D-World-into-Vision-Language-Actio/01_overview.md) | geometry 정확도 자체보다 compute/latency-matched downstream action value가 중요해졌다. representation·view·compute의 인과 효과와 active stopping은 G-03/G-13에서 검증한다. |
+
+이 trend map은 최신 논문을 별도 priority list로 만드는 문서가 아니다. 각 trend를 기존 foundation과 gap index에 연결해, 다음 정독·실험에서 무엇을 고정하고 어떤 outcome을 측정할지 결정하는 용도로 사용한다.
+
 판정은 다음 네 값을 쓴다.
 
 - `strengthened`: 여러 원문에서 같은 failure 또는 limitation이 반복됨
