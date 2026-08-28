@@ -1,5 +1,7 @@
 # Robotics Research Synthesis
 
+- Updated: 2026-08-28 KST
+
 이 디렉토리는 논문별 요약을 반복하는 곳이 아니라, CORE/NEXT 논문을 연구 트랙별로 비교하고 연구 공백을 축적하는 공간이다.
 
 ## Documents

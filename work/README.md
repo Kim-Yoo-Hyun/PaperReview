@@ -1,5 +1,7 @@
 # Registry Work
 
+- Updated: 2026-08-28 KST
+
 이 디렉토리는 registry source, 반복 실행 가능한 유지보수 도구, 날짜별 update log를 관리한다. Python 도구는 `scripts/`에 모아두며, 모든 active command는 PDF availability를 중요도나 완료 기준으로 사용하지 않는다.
 
 ## Active tools
@@ -13,7 +15,7 @@
 
 ## Sources
 
-- `sources/papers.json`: 현재 821편 registry metadata의 canonical manifest
+- `sources/papers.json`: 현재 872편 registry metadata의 canonical manifest
 - `sources/imports/`: 과거 batch별 admission metadata
 - `sources/candidates/`: screening에 사용한 broad candidate census. 등록 논문 목록이 아니다.
 

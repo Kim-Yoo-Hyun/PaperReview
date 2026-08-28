@@ -7,7 +7,9 @@ import json
 import re
 import urllib.parse
 from collections import Counter
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 try:
     from taxonomy import canonicalize
@@ -45,7 +47,7 @@ def registry(papers: list[dict]) -> str:
         groups.setdefault(item["category"], []).append(item)
     lines = [
         "# PAPER Registry", "",
-        "- Generated: 2026-08-25 KST",
+        f"- Generated: {datetime.now(ZoneInfo('Asia/Seoul')).date().isoformat()} KST",
         f"- Total papers with folders: {len(papers)}",
         "- Long-term reading tiers: [READING_PLAN.md](./research/READING_PLAN.md) and [READING_TIERS.csv](./research/READING_TIERS.csv)",
         "- Reading progress and synthesis: [READING_STATUS.csv](./research/READING_STATUS.csv), [READING_STATUS.md](./research/READING_STATUS.md), [synthesis/README.md](./synthesis/README.md)",

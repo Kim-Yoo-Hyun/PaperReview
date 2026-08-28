@@ -29,15 +29,34 @@ def notes(item: dict) -> dict[str, str]:
 - Tags: {', '.join(item['tags'])}
 - Official paper: {item['page']}
 - Code/Project: {item.get('project', 'not identified')}
-- Source audit: metadata registration only; full-text claims are UNVERIFIED.
+- Source audit: {item.get('source_audit', 'metadata registration only; full-text claims are UNVERIFIED.')}
 """
-    warning = "> Evidence maturity: `CURATION_ONLY`. 이 문서는 정독 완료를 뜻하지 않는다.\n"
+    evidence = item.get("evidence", "CURATION_ONLY")
+    warning = f"> Evidence maturity: `{evidence}`. 이 문서는 정독 완료를 뜻하지 않는다.\n"
+    problem = item.get("problem", "UNVERIFIED — official abstract/full text에서 확인한다.")
+    method = item.get("method", "UNVERIFIED — method section에서 확인한다.")
+    interface = item.get(
+        "interface",
+        "UNVERIFIED — observation/state/action/control interface를 확인한다.",
+    )
+    evaluation = item.get(
+        "evaluation",
+        "UNVERIFIED — embodiment, task, data, metrics와 baselines를 확인한다.",
+    )
+    limitations = item.get(
+        "limitations",
+        "UNVERIFIED — failure condition, negative result와 재현성 제약을 full text에서 확인한다.",
+    )
+    lineage = item.get(
+        "lineage",
+        "UNVERIFIED — 어떤 foundation에서 출발하고 어떤 후속 연구로 이어지는지 확인한다.",
+    )
     return {
-        "01_overview.md": f"# {item['title']}\n\n{warning}\n{common}\n## Why This Paper Is Here\n\n{item.get('role', 'Registry admission rationale must be verified during reading.')}\n\n## Problem\n\nUNVERIFIED — official abstract/full text에서 확인한다.\n\n## Core Idea\n\nUNVERIFIED — method section에서 확인한다.\n\n## Interface\n\nUNVERIFIED — observation/state/action/control interface를 확인한다.\n\n## Evaluation Scope\n\nUNVERIFIED — embodiment, task, data, metrics와 baselines를 확인한다.\n",
-        "02_problem.md": f"# Problem — {item['title']}\n\n{warning}\n{common}\n## Target Problem and Assumptions\n\nUNVERIFIED — 문제 formulation, bottleneck과 핵심 가정을 full text에서 확인한다.\n\n## Closed-Loop Position\n\n`observation → state/world model → task & motion decision → policy/control → contact → feedback/recovery` 중 위치를 정독 후 기록한다.\n",
-        "03_method.md": f"# Method — {item['title']}\n\n{warning}\n{common}\n## Pipeline\n\nUNVERIFIED — objective, representation, temporal horizon와 planner/controller interface를 확인한다.\n\n## Implementation Audit\n\nLoss, architecture, data scale, control rate와 hardware detail은 source location과 함께 기록한다.\n",
-        "04_evaluation.md": f"# Evaluation — {item['title']}\n\n{warning}\n{common}\n## Protocol\n\nUNVERIFIED — embodiment, simulator/real robot, task, dataset split, metric, baseline와 trial count를 확인한다.\n\n## Failure and Reproducibility\n\nUNVERIFIED — negative result, failure condition, code/checkpoint와 compute dependency를 확인한다.\n",
-        "05_insights.md": f"# Insights — {item['title']}\n\n{warning}\n{common}\n## Reading Dependency\n\nUNVERIFIED — 어떤 CORE에서 출발하고 어떤 frontier로 이어지는지 확인한다.\n\n## Research Use\n\n정독 후 paper-supported conclusion과 researcher interpretation을 분리한다.\n\n## Minimal Reproduction\n\nUNVERIFIED — 가장 작은 반증 실험을 정의한다.\n",
+        "01_overview.md": f"# {item['title']}\n\n{warning}\n{common}\n## Why This Paper Is Here\n\n{item.get('role', 'Registry admission rationale must be verified during reading.')}\n\n## Problem\n\n{problem}\n\n## Core Idea\n\n{method}\n\n## Interface\n\n{interface}\n\n## Evaluation Scope\n\n{evaluation}\n",
+        "02_problem.md": f"# Problem — {item['title']}\n\n{warning}\n{common}\n## Target Problem and Assumptions\n\n{problem}\n\n## Closed-Loop Position\n\n{interface}\n\n## Audit Questions\n\n정독 시 가정이 실제 robot dynamics, partial observability, contact와 distribution shift에서 유지되는지 확인한다.\n",
+        "03_method.md": f"# Method — {item['title']}\n\n{warning}\n{common}\n## Pipeline\n\n{method}\n\n## Interface\n\n{interface}\n\n## Implementation Audit\n\nLoss/objective, representation, data scale, temporal horizon, control rate와 hardware detail은 원문의 section/page와 함께 보강한다.\n",
+        "04_evaluation.md": f"# Evaluation — {item['title']}\n\n{warning}\n{common}\n## Protocol\n\n{evaluation}\n\n## Limitations and Reproducibility\n\n{limitations}\n\n정독 시 embodiment, simulator/real robot, split, metric, baseline, trial count, code/checkpoint와 compute dependency를 표로 확정한다.\n",
+        "05_insights.md": f"# Insights — {item['title']}\n\n{warning}\n{common}\n## Reading Dependency and Lineage\n\n{lineage}\n\n## Research Use\n\n{item.get('role', '정독 후 research relevance를 확정한다.')}\n\n## Minimal Reproduction\n\nUNVERIFIED — 핵심 claim을 반증할 수 있는 가장 작은 실험을 정독 후 정의한다.\n",
     }
 
 

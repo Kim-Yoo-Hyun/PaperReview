@@ -6,7 +6,9 @@ from __future__ import annotations
 import csv
 import re
 from collections import OrderedDict
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -23,12 +25,18 @@ CORE_GROUPS = OrderedDict(
         (
             "Planning, control, and whole-body foundations",
             [
+                "=A New Approach to Linear Filtering and Prediction Problems",
+                "=A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
                 "=Planning and Acting in Partially Observable Stochastic Domains",
                 "Unified Approach for Motion and Force",
+                "=Hybrid Position/Force Control of Manipulators",
+                "=Impedance Control: An Approach to Manipulation: Part I—Theory",
                 "Probabilistic Roadmaps",
                 "Rapidly-Exploring Random Trees",
                 "CHOMP:",
                 "TrajOpt:",
+                "=MuJoCo: A Physics Engine for Model-Based Control",
+                "=Information Theoretic MPC for Model-Based Reinforcement Learning",
                 "PDDLStream:",
                 "Dynamic Whole-Body Motion Generation",
                 "Hierarchical Quadratic Programming",
@@ -38,6 +46,11 @@ CORE_GROUPS = OrderedDict(
         (
             "RL, IL, and policy learning foundations",
             [
+                "=Learning to Predict by the Methods of Temporal Differences",
+                "=Q-Learning",
+                "=Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning",
+                "=Policy Gradient Methods for Reinforcement Learning with Function Approximation",
+                "=PILCO: A Model-Based and Data-Efficient Approach to Policy Search",
                 "A Reduction of Imitation Learning",
                 "Guided Policy Search under Unknown Dynamics",
                 "Generative Adversarial Imitation Learning",
@@ -58,6 +71,8 @@ CORE_GROUPS = OrderedDict(
         (
             "Manipulation, contact, tactile, and dexterity",
             [
+                "=Planning Optimal Grasps",
+                "=GelSight: High-Resolution Robot Tactile Sensors for Estimating Geometry and Force",
                 "Contact-Invariant Optimization",
                 "GraspNet-1Billion",
                 "Contact-GraspNet",
@@ -97,6 +112,8 @@ CORE_GROUPS = OrderedDict(
         (
             "Locomotion, mobile manipulation, and humanoid systems",
             [
+                "=Biped Walking Pattern Generation by using Preview Control of Zero-Moment Point",
+                "=AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control",
                 "RMA:",
                 "Robust Perceptive Locomotion",
                 "ANYmal Parkour",
@@ -108,6 +125,7 @@ CORE_GROUPS = OrderedDict(
         (
             "Robotics-enabling 3D perception",
             [
+                "=A Method for Registration of 3-D Shapes",
                 "=PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation",
                 "DROID-SLAM",
                 "=3D Gaussian Splatting for Real-Time Radiance Field Rendering",
@@ -142,7 +160,7 @@ RP2_PRIORITY_GROUPS = OrderedDict(
             ],
         ),
         (
-            "P1 — Direct detector and recovery baselines",
+            "P1 — Direct detector, recovery, and selector baselines",
             [
                 ("Can We Detect Failures Without Failure Data?", "uncertainty-aware detector without failure-data dependence"),
                 ("SAFE: Multitask", "VLA latent failure score and conformal alert threshold"),
@@ -177,8 +195,8 @@ RP2_PRIORITY_GROUPS = OrderedDict(
                 ("π0: A Vision-Language-Action Flow Model", "current flow-based VLA alternative"),
                 ("π0.5", "open-world VLA extension"),
                 ("Decision Transformer:", "trajectory-conditioned sequence modeling"),
-                ("Implicit Q-Learning", "offline value learning if selector becomes value-based"),
-                ("Conservative Q-Learning", "conservative offline recovery/value baseline"),
+                ("Implicit Q-Learning", "chosen-action or partial-feedback sensitivity; not the primary all-option estimator"),
+                ("Conservative Q-Learning", "support-mismatch baseline for later policy reuse; not the primary all-option estimator"),
                 ("Implicit Behavioral Cloning", "multimodal behavior-cloning alternative"),
                 ("Q-Transformer:", "autoregressive action-value modeling extension"),
             ],
@@ -203,11 +221,93 @@ RP2_PRIORITY_GROUPS = OrderedDict(
 )
 
 
+# These fast-moving 2026 papers stay outside the registry-backed tier system
+# until their metadata admission is audited. They are still mandatory RP-2
+# reading because they directly constrain the project's novelty boundary.
+RP2_EXTERNAL_COLLISION_READING = [
+    (
+        "Learning Robust Execution with Agentic RL",
+        "https://arxiv.org/html/2607.13818v1",
+        "PREPRINT / FULL-TEXT-CHECKED",
+        "strongest collision: a history-conditioned Execute/Retry/Repair/Reset manager trained with PPO on LIBERO",
+    ),
+    (
+        "ActFovea",
+        "https://arxiv.org/abs/2607.29169",
+        "PREPRINT / FULL-TEXT-CHECKED",
+        "verified observation recovery, bounded safe failure, and short-horizon/action-smoothing controls",
+    ),
+    (
+        "ProbeAct",
+        "https://arxiv.org/abs/2606.09740",
+        "PREPRINT / FULL-TEXT-CHECKED",
+        "hidden-state probing, a kinematic failure state machine, and training-free CBF correction",
+    ),
+    (
+        "ViFailback",
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.html",
+        "CVPR 2026 / FULL-TEXT-CHECKED",
+        "diagnosis plus visual/text correction with real failure data",
+    ),
+    (
+        "AgentChord",
+        "https://roboticsconference.org/program/papers/180/",
+        "RSS 2026 / SOURCE-VERIFIED",
+        "precompiled recovery branches and low-latency orchestration",
+    ),
+    (
+        "When to Act, Ask, or Learn",
+        "https://roboticsconference.org/program/papers/142/",
+        "RSS 2026 / SOURCE-VERIFIED",
+        "calibrated act/clarify/intervene selection and selective autonomy",
+    ),
+    (
+        "See, Plan, Rewind",
+        "https://arxiv.org/abs/2603.09292",
+        "PREPRINT / SOURCE-VERIFIED",
+        "progress-aware subgoal rewind",
+    ),
+    (
+        "FAR",
+        "https://arxiv.org/abs/2607.01111",
+        "PREPRINT / SOURCE-VERIFIED",
+        "retry perturbation and failure-preference adaptation",
+    ),
+    (
+        "Imagining Recovery / CoRe",
+        "https://arxiv.org/abs/2608.14822",
+        "PREPRINT / FULL-TEXT-CHECKED",
+        "imagined continuation and state realignment; a different estimand from cloned same-onset branch outcomes",
+    ),
+    (
+        "VLCP",
+        "https://arxiv.org/abs/2608.16978",
+        "PREPRINT / SOURCE-VERIFIED",
+        "control-code abstraction and closed-loop replanning",
+    ),
+]
+
+
 NEXT_GROUPS = OrderedDict(
     [
         (
+            "Planning, control, simulation, and TAMP extensions",
+            [
+                "=Logic-Geometric Programming: An Optimization-Based Approach to Combined Task and Motion Planning",
+                "=FFRob: Leveraging Symbolic Planning for Efficient Task and Motion Planning",
+            ],
+        ),
+        (
             "RL, IL, offline learning, and robot data",
             [
+                "=Behavior Transformers: Cloning k modes with one stone",
+                "=R3M: A Universal Visual Representation for Robot Manipulation",
+                "=Where are we in the search for an Artificial Visual Cortex for Embodied Intelligence?",
+                "=Maximum a Posteriori Policy Optimisation",
+                "=MT-Opt: Continuous Multi-Task Robotic Reinforcement Learning at Scale",
+                "=Isaac Gym: High Performance GPU Based Physics Simulation For Robot Learning",
+                "=Eureka: Human-Level Reward Design via Coding Large Language Models",
+                "=DrEureka: Language Model Guided Sim-To-Real Transfer",
                 "Continuous Control with Deep",
                 "Addressing Function Approximation Error",
                 "Hindsight Experience Replay",
@@ -226,6 +326,9 @@ NEXT_GROUPS = OrderedDict(
         (
             "Contact-rich, deformable, force, and dexterous manipulation",
             [
+                "=Dense Object Nets: Learning Dense Visual Object Descriptors By and For Robotic Manipulation",
+                "=DIGIT: A Novel Design for a Low-Cost Compact High-Resolution Tactile Sensor with Application to In-Hand Manipulation",
+                "=DeXtreme: Transfer of Agile In-hand Manipulation from Simulation to Reality",
                 "Control-Limited Differential",
                 "In-Hand Manipulation via Motion Cones",
                 "Towards Tight Convex Relaxations",
@@ -252,6 +355,11 @@ NEXT_GROUPS = OrderedDict(
         (
             "VLA, cross-embodiment, and long-horizon planning",
             [
+                "=A Generalist Agent",
+                "=AutoRT: Embodied Foundation Models for Large Scale Orchestration of Robotic Agents",
+                "=RT-H: Action Hierarchies Using Language",
+                "=Gemini Robotics: Bringing AI into the Physical World",
+                "=NVIDIA Isaac GR00T N1: An Open Foundation Model for Humanoid Robots",
                 "BC-Z",
                 "Perceiver-Actor",
                 "VIMA:",
@@ -275,6 +383,8 @@ NEXT_GROUPS = OrderedDict(
         (
             "World models, uncertainty, failure detection, and recovery",
             [
+                "=DreamGen: Unlocking Generalization in Robot Learning through Video World Models",
+                "=DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos",
                 "Learning Latent Dynamics for Planning from Pixels",
                 "Dream to Control",
                 "Mastering Diverse Domains through World Models",
@@ -294,6 +404,10 @@ NEXT_GROUPS = OrderedDict(
         (
             "Locomotion, whole-body control, mobile manipulation, and humanoids",
             [
+                "=Perpetual Humanoid Control for Real-time Simulated Avatars",
+                "=MaskedMimic: Unified Physics-Based Character Control Through Masked Motion Inpainting",
+                "=HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots",
+                "=SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control",
                 "DeepMimic",
                 "Sim-to-Real: Learning Agile Locomotion",
                 "Learning Quadrupedal Locomotion over Challenging Terrain",
@@ -332,7 +446,10 @@ SYNTHESIS_FILES = OrderedDict(
     [
         (
             "01_planning_control.md",
-            ["Planning, control, and whole-body foundations"],
+            [
+                "Planning, control, and whole-body foundations",
+                "Planning, control, simulation, and TAMP extensions",
+            ],
         ),
         (
             "02_rl_il_offline.md",
@@ -570,7 +687,7 @@ def write_plan(
     lines = [
         "# Long-Term Robotics Reading Plan",
         "",
-        "- Updated: 2026-08-25 KST",
+        f"- Updated: {datetime.now(ZoneInfo('Asia/Seoul')).date().isoformat()} KST",
         "- Source registry: [PAPER.md](../PAPER.md)",
         "- Full tier index: [READING_TIERS.csv](./READING_TIERS.csv)",
         "- Reading tracker: [READING_STATUS.csv](./READING_STATUS.csv)",
@@ -618,7 +735,7 @@ def write_plan(
         "",
         "## RP-2 / I-02 Priority Reading Sequence",
         "",
-        "아래 순서는 전체 registry tier가 아니라 `Budgeted Typed Recovery for VLA` 연구를 시작할 때의 project-specific dependency다. 15편 hard cap을 두지 않으며, P0부터 P4로 갈수록 직접 구현 필요성이 낮아진다. 각 논문은 정독 후 RP-2 event schema, detector, selector, budget, benchmark 중 어느 요소를 바꾸는지 기록한다.",
+        "아래 순서는 전체 registry tier가 아니라 `Same-Onset Failure Recovery Arbitration` 연구를 시작할 때의 project-specific dependency다. broad high-level recovery selector는 Agentic RL이 이미 직접 다루므로, RP-2는 same-onset all-option supervision, vector budget, best-fixed regret가 실제로 필요한지부터 반증한다. 15편 hard cap을 두지 않으며, 각 논문은 event schema, detector, option contract, budget, estimator, benchmark 중 어느 결정을 바꾸는지 기록한다.",
         "",
     ]
     for priority, entries in resolve_priority_groups(rows, RP2_PRIORITY_GROUPS).items():
@@ -629,6 +746,20 @@ def write_plan(
                 f"— {paper['year']} {paper['venue']}; {rationale}."
             )
         lines.append("")
+        if priority.startswith("P1 —"):
+            lines.extend([
+                f"#### P1.5 — 2026 direct novelty-collision audit — {len(RP2_EXTERNAL_COLLISION_READING)} papers",
+                "",
+                "아래 자료는 registry tier와 별개인 필수 frontier audit다. 특히 Agentic RL을 재현 가능한 최우선 비교군으로 두고, `paper → policy-visible history → option set → decision timing → budget → supervision → outcome metric` 계약을 표로 남긴다.",
+                "",
+            ])
+            for index, (title, url, status, rationale) in enumerate(RP2_EXTERNAL_COLLISION_READING, 1):
+                lines.append(f"{index}. [{title}]({url}) — `{status}`; {rationale}.")
+            lines.extend([
+                "",
+                "Implementation companion: [SAFE official code](https://github.com/vla-safe/SAFE), [SAFE OpenVLA fork](https://github.com/vla-safe/openvla), and the pinned manifests in [RP-2](./projects/RP-2_FAILURE_RECOVERY.md) define the detector/base-policy reproduction contract.",
+                "",
+            ])
     lines.extend([
         "## Tier Definitions",
         "",
@@ -765,6 +896,25 @@ def write_status(
         tier = tier_by_path[path]
         sequence_by_tier[tier] += 1
         old = preserved.get(path, {})
+        overview = ROOT / path.removeprefix("./")
+        evidence_match = re.search(
+            r"Evidence maturity: `([^`]+)`", overview.read_text(encoding="utf-8")
+        )
+        note_evidence = evidence_match.group(1) if evidence_match else ""
+        if note_evidence not in {
+            "CURATION_ONLY",
+            "ABSTRACT_CHECKED",
+            "FULL_TEXT_CHECKED",
+            "EXPERIMENT_CHECKED",
+        }:
+            note_evidence = ""
+        evidence = old.get("evidence_level") or note_evidence or "CURATION_ONLY"
+        if (
+            old.get("status", "UNREAD") == "UNREAD"
+            and evidence == "CURATION_ONLY"
+            and note_evidence in {"ABSTRACT_CHECKED", "FULL_TEXT_CHECKED", "EXPERIMENT_CHECKED"}
+        ):
+            evidence = note_evidence
         output = {field: old.get(field, "") for field in fieldnames}
         output.update(
             {
@@ -772,7 +922,7 @@ def write_status(
                 "track": track_by_path[path],
                 "sequence": str(sequence_by_tier[tier]),
                 "status": old.get("status") or "UNREAD",
-                "evidence_level": old.get("evidence_level") or "CURATION_ONLY",
+                "evidence_level": evidence,
                 "year": row["year"],
                 "venue": row["venue"],
                 "title": row["title"],

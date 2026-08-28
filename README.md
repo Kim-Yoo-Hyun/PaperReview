@@ -1,5 +1,7 @@
 # PaperReview — Robotics-first Literature System
 
+- Snapshot verified: 2026-08-28 KST
+
 `PaperReview`는 3D vision, robotics, VLA를 함께 다루되 **Robotics를 주 연구축**으로 삼는 장기 문헌 연구 저장소다. 논문을 모으는 데서 끝내지 않고, foundation → 최신 방법 → failure mode → 검증 가능한 연구 질문으로 연결한다.
 
 핵심 폐루프는 다음과 같다.
@@ -9,7 +11,7 @@ observation → state / belief / world model → task & motion decision
 → policy / control → contact → feedback / failure detection / recovery
 ```
 
-현재의 연구 관점은 다음과 같다.
+Registry의 수집·정리 범위는 다음과 같다.
 
 - **Robotics:** planning, control, RL/IL, offline learning, manipulation, contact, locomotion, whole-body control, safety, recovery를 중심에 둔다.
 - **VLA:** language understanding 자체보다 action representation, feedback, latency, memory, embodiment transfer, long-horizon execution을 본다.
@@ -37,25 +39,25 @@ observation → state / belief / world model → task & motion decision
 | 정독 진행 상태 | [research/READING_STATUS.csv](./research/READING_STATUS.csv), [research/READING_STATUS.md](./research/READING_STATUS.md) |
 | 연구 공백 | [research/RESEARCH_GAPS.md](./research/RESEARCH_GAPS.md) |
 | 연구 아이디어·가설 | [research/RESEARCH_IDEAS.md](./research/RESEARCH_IDEAS.md) |
-| 연구 프로젝트 문서 | [research/projects/RP-2_FAILURE_RECOVERY.md](./research/projects/RP-2_FAILURE_RECOVERY.md) |
+| 실행 단계 연구 프로젝트 문서 | [RP-2 Failure Recovery](./research/projects/RP-2_FAILURE_RECOVERY.md), [RP-3 Memory Expiry](./research/projects/RP-3_MEMORY_EXPIRY.md) |
 | 계보·트랙별 synthesis | [synthesis/README.md](./synthesis/README.md) |
-| 최신 변경 기록 | [work/update/UPDATES_2026-08-25.md](./work/update/UPDATES_2026-08-25.md) |
+| 최신 변경 기록 | [work/update/UPDATES_2026-08-28.md](./work/update/UPDATES_2026-08-28.md) |
 
 ## 현재 snapshot
 
 | 항목 | 수치 |
 |---|---:|
-| 전체 registry | **821편** |
-| CORE / NEXT | **61 / 89편** |
-| REFERENCE / ARCHIVE | **438 / 233편** |
-| intensive reading set | **150편** |
-| paper당 표준 Markdown note | **4,105개** |
-| local PDF cache | 194개 |
+| 전체 registry | **872편** |
+| CORE / NEXT | **77 / 113편** |
+| REFERENCE / ARCHIVE | **449 / 233편** |
+| intensive reading set | **190편** |
+| paper당 표준 Markdown note | **4,360개** |
+| local PDF cache | 0개 |
 | canonical category | 23개 |
-| 대상 연도 | 1987–2026 |
-| 2024–2026 논문 | 595편 |
-| 2025–2026 논문 | 468편 |
-| 2026 논문 | 177편 |
+| 대상 연도 | 1960–2026 |
+| 2024–2026 논문 | 607편 |
+| 2025–2026 논문 | 475편 |
+| 2026 논문 | 179편 |
 
 `CORE/NEXT`는 논문 수를 맞추기 위한 quota가 아니다. 연구의 prerequisite와 현재 연구축에 따라 중요도가 바뀔 수 있다. PDF 보유 여부는 tier, 우선순위, 연구 relevance의 기준이 아니다.
 
@@ -65,25 +67,26 @@ observation → state / belief / world model → task & motion decision
 
 | 트랙 | CORE | NEXT | 주로 다루는 질문 |
 |---|---:|---:|---|
-| Planning, decision, control foundations | 10 | 0 | belief/state, motion planning, task-and-motion planning, feasibility, whole-body constraint |
-| RL, IL, offline learning, robot data | 15 | 13 | expert distribution, policy/value learning, offline conservatism, data coverage |
-| Manipulation, contact, tactile, dexterity | 8 | 21 | grasp/contact dynamics, force/tactile feedback, deformable and dexterous interaction |
-| VLA, cross-embodiment, long horizon | 11 | 18 | generalist policy, action interface, memory, skill composition, feedback |
-| World models, safety, uncertainty, recovery | 5 | 14 | runtime monitoring, calibration, safety filter, failure diagnosis, recovery |
-| Locomotion, whole-body, mobile manipulation, humanoid | 6 | 12 | balance, contact switching, loco-manipulation, sim-to-real, humanoid execution |
-| Robotics-enabling 3D perception | 6 | 11 | geometry, SLAM, spatial memory, active perception, 3D-to-control utility |
-| **합계** | **61** | **89** | **Robotics-first intensive reading** |
+| Planning, decision, control foundations | 16 | 2 | belief/state, motion planning, task-and-motion planning, feasibility, whole-body constraint |
+| RL, IL, offline learning, robot data | 20 | 21 | expert distribution, policy/value learning, offline conservatism, data coverage |
+| Manipulation, contact, tactile, dexterity | 10 | 24 | grasp/contact dynamics, force/tactile feedback, deformable and dexterous interaction |
+| VLA, cross-embodiment, long horizon | 11 | 23 | generalist policy, action interface, memory, skill composition, feedback |
+| World models, safety, uncertainty, recovery | 5 | 16 | runtime monitoring, calibration, safety filter, failure diagnosis, recovery |
+| Locomotion, whole-body, mobile manipulation, humanoid | 8 | 16 | balance, contact switching, loco-manipulation, sim-to-real, humanoid execution |
+| Robotics-enabling 3D perception | 7 | 11 | geometry, SLAM, spatial memory, active perception, 3D-to-control utility |
+| **합계** | **77** | **113** | **Robotics-first intensive reading** |
 
 전체 registry의 canonical category는 더 세분화되어 VLA/generalist, 3D vision-language, scene representation, embodied navigation, robot data, world models/safety, locomotion, manipulation/contact, planning/control foundation 등 23개로 관리된다. 자세한 분류는 [PAPER.md](./PAPER.md)와 [READING_TIERS.csv](./research/READING_TIERS.csv)에서 검색한다.
 
 ### 논문이 맡는 역할
 
-- **Foundation:** POMDP, operational-space control, PRM/RRT, DAgger, PPO/TRPO, Recovery RL, CBF, PDDLStream 등 후속 논문을 이해하기 위한 기반.
+- **Foundation:** Kalman filter, A*, ICP, force/impedance control, ZMP, POMDP, PRM/RRT, TAMP, TD/Q/policy-gradient learning 등 후속 논문을 이해하기 위한 기반.
 - **Policy and data:** behavior cloning, offline RL, diffusion/flow action policy, generalist robot policy, cross-embodiment data.
 - **Physical interaction:** contact-rich manipulation, tactile/force feedback, dexterity, deformables, assembly.
 - **VLA and long horizon:** RT-1/RT-2, PaLM-E, Open X-Embodiment, Octo, OpenVLA, π0/π0.5, memory, atomic skills, progress estimation.
 - **Safety and recovery:** failure prediction, uncertainty calibration, safety alignment, retry/reset, diagnosis, rollback, recovery selection.
-- **Benchmark and evidence:** LIBERO, CALVIN, RLBench, FurnitureBench, LIBERO-Safety, VLA-Arena, long-horizon and real-robot evaluation.
+- **Benchmark and evidence:** MuJoCo, Meta-World, robosuite, ManiSkill, LIBERO, CALVIN, RLBench, FurnitureBench, VLA-Arena와 real-robot evaluation.
+- **Institutional lineages:** Google/DeepMind의 DQN–A3C–MPO–MT-Opt–Gato–RT-H–Gemini Robotics와 NVIDIA의 Isaac Gym–Isaac Lab–Eureka/DrEureka–GR00T–DreamGen/DreamDojo–SONIC 계보.
 - **Robotics-enabling perception:** PointNet, SLAM, 3DGS, DUSt3R/VGGT, semantic mapping, active view, 3D-aware policy state.
 
 ## 읽는 방법
@@ -127,7 +130,7 @@ observation → state / belief / world model → task & motion decision
 5. CORE/NEXT를 바꿀 때는 CSV를 직접 수정하지 않고 `build_reading_tiers.py`의 canonical group을 수정한다.
 6. `normalize_taxonomy.py`, `build_reading_tiers.py`, `audit_repository.py`, `git diff --check`를 순서대로 실행한다.
 
-논문을 정독한 뒤에는 `05_insights.md`, `READING_STATUS.csv`, 해당 synthesis matrix, 필요하면 `RESEARCH_GAPS.md`를 함께 갱신한다. 개인 note의 해석과 paper가 직접 보고한 결과를 분리한다.
+논문을 정독한 뒤에는 `05_insights.md`, `READING_STATUS.csv`, 해당 synthesis matrix, 필요하면 `RESEARCH_GAPS.md`를 함께 갱신한다. 개인 note의 해석과 paper가 직접 보고한 결과를 분리한다. 구현 단계의 연구 문서는 literature collision, exact environment/checkpoint, method contract, baseline, metric, ablation, reject rule, pre-implementation freeze를 갖춘 실행 명세로 유지한다.
 
 ## Curation and maintenance policy
 
@@ -148,7 +151,7 @@ python3 work/scripts/build_reading_tiers.py
 python3 work/scripts/audit_repository.py
 ```
 
-현재 snapshot의 상세 변경은 [work/update/UPDATES_2026-08-25.md](./work/update/UPDATES_2026-08-25.md), 운영 규칙은 [AGENTS.md](./AGENTS.md)에 기록한다.
+현재 snapshot의 상세 변경은 [work/update/UPDATES_2026-08-28.md](./work/update/UPDATES_2026-08-28.md), 운영 규칙은 [AGENTS.md](./AGENTS.md)에 기록한다.
 
 ## 공개 registry 참고
 

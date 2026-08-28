@@ -1,27 +1,58 @@
 # RP-2 Same-Onset Failure Recovery Arbitration
 
-- Status: `SCOPED / FOCUS`
-- Updated: 2026-08-28 KST
-- Parent ideas: [I-12 Recovery event protocol](../RESEARCH_IDEAS.md#i-12-recovery-event-protocol-for-existing-long-horizon-benchmarks) → [I-02 Same-onset counterfactual recovery arbitration](../RESEARCH_IDEAS.md#i-02-risk-budgeted-typed-recovery-for-vla) → [I-06 Conservative policy reuse](../RESEARCH_IDEAS.md#i-06-conservative-policy-reuse-from-counterfactual-recovery-outcomes) (conditional)
+- Status: `SCOPED / HIGH-COLLISION / FOCUS`
+- Updated: 2026-08-28 KST (`implementation freeze + full-text survey`)
+- Parent ideas: [I-12 Recovery event protocol](../RESEARCH_IDEAS.md#i-12-recovery-event-protocol-for-existing-long-horizon-benchmarks) → [I-02 Same-onset all-option recovery arbitration](../RESEARCH_IDEAS.md#i-02-risk-budgeted-typed-recovery-for-vla) → [I-06 Conservative policy reuse](../RESEARCH_IDEAS.md#i-06-conservative-policy-reuse-from-counterfactual-recovery-outcomes) (conditional)
 - Primary benchmark: `LIBERO-Long` (`libero_10`)
-- Secondary validation: `CALVIN` long-horizon five-subtask sequences
+- Conditional secondary validation: `CALVIN` long-horizon five-subtask sequences, only after the LIBERO Phase 0/C1 gate
 - Hypothesis evidence: `UNTESTED`
 - Priority reading: [RP-2 P0–P4 spine](../RESEARCH_IDEAS.md#rp-2-i-02-priority-reading-spine)
-- Novelty status: `CONDITIONALLY_FIT / CURRENT FOCUS` — novelty는 same-onset option sweep에서 recovery ranking crossing과 best-fixed regret가 관찰되고, matched-budget learned selector가 이를 줄일 때만 성립한다.
+- Novelty status: `HIGH-COLLISION / CONDITIONALLY_FIT / CURRENT FOCUS` — Agentic RL이 broad high-level recovery selector를 선점했다. novelty는 same-onset option sweep에서 recovery ranking crossing과 best-fixed regret가 관찰되고, matched-budget full-information selector가 이를 줄일 때만 성립한다.
+- Gap verdict: [G-02/G-06/G-10은 모두 `narrowed`](../RESEARCH_GAPS.md#2026-08-28-원점-재검토-gap-survival-audit). recovery, self-correction, execution-mode selection과 counterfactual failure synthesis 자체는 이미 선행 연구 범위다.
+- Evidence boundary: 기존 registry full-text, 2026-08-28 official proceedings/code와 최신 arXiv full text를 구분한다. 최신 preprint는 method·experiment contract를 읽었더라도 novelty-collision과 baseline 후보로만 사용하며, 코드·policy-visible input·budget contract를 재현하기 전에는 matched baseline으로 부르지 않는다.
 
-이 문서는 새 foundation model을 만드는 계획이 아니다. 기존 VLA와 failure detector, recovery skill을 고정하고, **동일한 post-failure state에서 서로 다른 abstraction level의 recovery option이 만드는 success·risk·cost를 비교한 뒤 어떤 option을 선택해야 하는지**를 동일한 시간·행동·위험 예산 아래 검증한다. I-12는 cloned-onset counterfactual table을 만드는 공통 측정 도구이고 I-02가 그 위에서 검증할 arbitration 가설이다. I-06의 policy update는 I-02가 지지된 뒤에만 진행하는 후속 단계이며 현재 C1 claim에 포함하지 않는다.
+이 문서는 새 foundation model을 만드는 계획이 아니다. 기존 VLA와 failure detector, recovery skill을 고정하고, **동일한 post-failure state에서 서로 다른 abstraction level의 recovery option이 만드는 success·risk·cost를 비교한 뒤 어떤 option을 선택해야 하는지**를 동일한 시간·행동·위험 예산 아래 검증한다. I-12는 cloned-onset multi-option branch table을 만드는 공통 측정 도구이고 I-02가 그 위에서 검증할 arbitration 가설이다. I-06의 policy update는 I-02가 지지된 뒤에만 진행하는 후속 단계이며 현재 C1 claim에 포함하지 않는다.
+
+### 2026-08-28 frontier re-audit 결론
+
+최신 연구는 RP-2의 motivation을 강화하는 동시에 넓은 novelty를 닫는다. RT-H는 language-motion hierarchy와 human correction/intervention learning을, Gemini Robotics 2는 multi-step progress와 self-correction을 공식적으로 제시한다. ActFovea는 disturbance-specific candidate observation과 verified action chunk·bounded safe failure를, Agentic RL은 execution history에서 소수 execution mode를 선택하는 high-level recovery를, ProbeAct는 training-free detection/CBF correction을 다룬다. Dream2Fix는 generative world model로 counterfactual failure–correction pair를 합성하고, CoRe·VLCP는 imagined realignment와 code-level replanning을 제시한다.
+
+따라서 RP-2가 살아남는 조건은 다음 교집합을 실제로 검증하는 것이다.
+
+1. 실제 failure onset을 clone한 **same-state branch rollout**이어야 한다.
+2. retry·reobserve·reset·rewind·replan·escalate를 **같은 option library와 vector budget**으로 비교해야 한다.
+3. 동일 정보 조건에서 **best-fixed·binary·scalar·type-only·frontier mode selector**와 비교해야 한다.
+4. option ranking crossing과 **regret-to-empirical-oracle**가 있어야 한다.
+5. selector 이득이 detector·더 강한 option·privileged state·추가 horizon 때문이 아님을 oracle decomposition으로 보여야 한다.
+
+이 다섯 조건 중 하나라도 빠지면 contribution을 “새 recovery method”로 넓히지 않고 C0 protocol 또는 특정 recovery-family audit로 축소한다.
+
+### 2026-08-28 full-text method·experiment survey
+
+구현 전에 가장 가까운 연구의 abstract가 아니라 공개 full text와 공식 코드를 다시 대조했다. 이 감사 결과, **Agentic RL이 RP-2의 가장 강한 novelty threat**다. 이미 frozen low-level policy 위에서 recent execution history를 보고 `Execute/Retry/Repair/Reset`을 고르는 POMDP형 high-level policy를 PPO로 학습하고 LIBERO 전 suite에서 검증한다. 따라서 “history를 쓰는 recovery-mode selector”, “POMDP formulation”, “frozen VLA 위의 lightweight supervisor”, “강도별 recovery 선택”은 RP-2의 contribution이 아니다.
+
+| 근거 | source-verified method·experiment contract | RP-2에 미치는 영향 | 필수 대응 |
+|---|---|---|---|
+| [Agentic RL](https://arxiv.org/html/2607.13818v1) | history length 20, decision interval 5, `Execute/Retry/Repair/Reset`, task별 PPO 최대 1M high-level step, actor는 non-privileged history·critic은 simulator global state, LIBERO random action disturbance | 가장 가까운 direct collision. broad high-level arbitration claim은 닫힘 | X5로 우선 재현을 시도하고, `same-onset all-option observation`, vector budget, best-fixed regret, held-out selector를 차별 단위로 둠 |
+| [ActFovea](https://arxiv.org/html/2607.29169v1) | visual/action/proprioception consistency, candidate observation, action-chunk verification, short horizon·hold·safe failure, 40 LIBERO task × task당 50 episode, matched frozen π0 | observation recovery, action verification, bounded safe failure와 clean preservation은 이미 강한 선행 결과 | X4와 fixed short-horizon·timestamp hold·action smoothing control을 observation/action subgroup에 포함 |
+| [ProbeAct](https://arxiv.org/html/2606.09740v1) | hidden-state 3D probe, grasp/transport/place kinematic state machine, repeated-failure CBF correction, OpenVLA-OFT와 LIBERO-plus | phase-aware detector와 low-level safety filter 자체는 novelty가 아님 | X6는 grasp/place subgroup의 mechanism baseline으로만 사용; CBF를 P1만 쓰지 않음 |
+| [CoRe](https://arxiv.org/html/2608.14822v1) | suffix-OOD detection, recent viable anchor, synthesized continuation, minimal physical restoration, restoration count·wall-clock·safety 분석 | rewind·rejoin·progress preservation·imagined probing claim은 닫힘 | rejoin/restore는 option family로만 취급하고 physical restoration count와 post-handoff step을 cost metric에 추가 |
+| [ViFailback](https://openaccess.thecvf.com/content/CVPR2026/html/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.html) | visual-symbol diagnosis/correction, 5,202 real trajectories, VLA 연동 real-robot correction | diagnosis label 또는 external correction guidance 자체는 novelty가 아님 | correction interface가 재현 가능할 때 X1; reported real-robot result를 LIBERO 순위에 직접 섞지 않음 |
+| [SAFE official code](https://github.com/vla-safe/SAFE) + [SAFE OpenVLA fork](https://github.com/vla-safe/openvla) | OpenVLA/π 계열 rollout, hidden feature 저장, LSTM/MLP detector와 공식 LIBERO checkpoint 실행 경로 제공 | detector와 base-policy integration의 가장 낮은 구현 위험 경로 | primary stack을 이 경로로 잠정 고정하고 detector gain과 selector gain을 분리 |
+
+`Agentic RL`과의 차이는 알고리즘 이름이 아니라 **관측되는 학습 신호와 평가 estimand**에서 만들어야 한다. Agentic RL은 policy가 실행한 trajectory return으로 sequential mode policy를 학습한다. RP-2는 fit/calibration onset에서 모든 applicable option을 실제 분기 실행해 option별 completion·risk·cost를 관찰하고, held-out onset에서 best-fixed regret와 option-ranking error를 직접 평가한다. 이 차이가 실험에서 의미 있는 이득으로 이어지지 않으면 RP-2는 independent method contribution이 아니라 Agentic-style execution manager의 evaluation extension이다.
 
 ## 0. 연구 범위와 시스템 경계
 
-RP-2의 현재 주장은 **실로봇의 저수준 제어법**이 아니라, frozen VLA와 기존 skill/controller 위에 놓이는 **고수준 runtime recovery supervisor**에 한정한다.
+RP-2의 현재 주장은 **실로봇의 저수준 제어법**이나 고수준 recovery supervisor의 존재 자체가 아니라, frozen VLA와 기존 skill/controller 위에서 **same-onset all-option supervision이 recovery arbitration에 주는 추가 decision value**에 한정한다.
 
 | 구분 | RP-2가 다루는 것 | 현재 주장하지 않는 것 |
 |---|---|---|
-| 입력 | 관측 history, base action, progress proxy, failure score, remaining budget | simulator oracle state나 test-time option outcome을 policy 입력으로 제공하는 것 |
-| 출력 | `CONTINUE`, `ABORT_STOP`, `RETRY_CURRENT`, `REOBSERVE_WAIT`, `STATE_RESET`, `SUBGOAL_REWIND`, `TASK_REPLAN`, `HUMAN_ESCALATE` 중 option 선택 | torque, joint target, impedance/force law 자체를 새로 학습하는 것 |
+| 입력 | VLA feature, proprioception/action·alert history, normalized elapsed step, remaining budget | simulator oracle state, BDDL progress/subgoal label이나 test-time option outcome을 policy 입력으로 제공하는 것 |
+| 출력 | Phase 0/1의 `O_core={CONTINUE, RETRY_CURRENT, REOBSERVE_WAIT, STATE_RESET, ABORT_STOP}` 중 선택; `O_graph/O_assist`는 acceptance 뒤 extension | torque, joint target, impedance/force law 자체를 새로 학습하거나 rewind/replan/human escalation을 privileged oracle로 primary에 넣는 것 |
 | 실행층 | 고정 recovery option library와 기존 low-level controller 호출 | selector가 접촉 제어·동역학 불확실성을 직접 해결한다는 주장 |
-| 1차 검증 | LIBERO-Long event injection과 CALVIN transfer | simulator 결과만으로 physical safety guarantee를 주장하는 것 |
-| 후속 검증 | 동일 option interface의 real-robot transfer | hardware 결과 없이 C3 safety claim을 선제적으로 하는 것 |
+| 1차 검증 | pinned LIBERO-10/OpenVLA/SAFE stack의 branch-equivalence test와 `O_core` 20–50 onset sweep | simulator 결과만으로 physical safety guarantee를 주장하는 것 |
+| 후속 검증 | LIBERO confirmatory split 뒤 CALVIN/`O_graph`/동일 option interface의 real-robot transfer | Phase 0/C1 gate나 hardware 결과 없이 C2/C3 claim을 선제적으로 하는 것 |
 
 따라서 RP-2의 방법론은 수학적 decision formulation을 backbone으로 삼지만, 산출물은 단순한 정리나 이론 증명이 아니다. `detector → non-privileged belief/context → option-conditioned value·risk·cost → constrained selector → 기존 controller`의 closed-loop 실행과 matched-budget 실험으로 가설을 검증하는 empirical robotics systems study다. 저수준 force/torque 제어 또는 실물 접촉 안정화가 핵심 연구가 되면 별도 프로젝트로 분리하고, RP-2에는 그 결과를 recovery option의 구현으로만 연결한다.
 
@@ -34,7 +65,7 @@ RP-2의 현재 주장은 **실로봇의 저수준 제어법**이 아니라, froz
 ### 검증 가설
 
 - **H0 — Arbitration precondition:** 비슷한 scalar alert를 가진 onset 사이에서 oracle-best option이 달라지고, 같은 onset에서도 recovery budget이 바뀌면 option ranking이 교차한다. best-fixed option과 O3 사이에 실질적인 regret/BRCR gap이 없으면 learned arbitration을 시작하지 않는다.
-- **H1 — Recovery efficacy:** R1–R3 failure에서 counterfactual option-value selector의 BRCR은 사전 고정한 strongest non-privileged baseline보다 높고 normalized option regret는 낮다.
+- **H1 — Recovery efficacy:** R1–R3 failure에서 same-onset branch-supervised option-value selector의 BRCR은 사전 고정한 strongest non-privileged baseline보다 높고 normalized option regret는 낮다.
 - **H2 — Safety gate:** 제안 selector의 irreversible failure rate는 가장 안전한 실행 가능한 baseline보다 악화되지 않는다.
 - **H3 — Clean non-degradation:** perturbation이 없는 episode에서 불필요한 intervention 때문에 native task success가 3 percentage point를 초과해 하락하지 않는다.
 - **H4 — Attribution:** oracle onset·option outcome을 순차적으로 제공해도 이득이 없으면 detector/selector가 아니라 recovery option library 또는 task-state interface가 병목이다.
@@ -50,13 +81,24 @@ RP-2의 현재 주장은 **실로봇의 저수준 제어법**이 아니라, froz
 
 ### novelty boundary
 
-FLARE는 Retry/Reset을, ViFailback은 diagnosis/correction을, AgentChord는 recovery-augmented task graph를, When to Act, Ask, or Learn은 calibrated act/ask/intervene 선택을 이미 다룬다. See, Plan, Rewind, FAR, CoRe, VLCP도 각각 rewind, retry adaptation, imagined realignment, code-level replan을 탐색하고 있다. 그러므로 이 프로젝트는 “VLA recovery가 없다”, “multi-option recovery가 처음이다”, “failure type을 분류하면 새롭다”고 주장하지 않는다. 남은 검증 단위는 다음으로 제한한다.
+FLARE는 Retry/Reset을, ViFailback은 diagnosis/correction을, RT-H는 language-level intervention을, AgentChord는 recovery-augmented task graph를, When to Act, Ask, or Learn은 calibrated act/ask/intervene 선택을 이미 다룬다. ActFovea·Agentic RL·ProbeAct는 verified recovery, execution-mode selection, training-free safeguarding을, See, Plan, Rewind·FAR·CoRe·VLCP는 rewind, retry adaptation, imagined realignment, code-level replan을 탐색한다. Dream2Fix와 RedFlow는 counterfactual failure synthesis 및 action-level corrective learning으로 I-06의 broad data claim도 좁힌다. 그러므로 이 프로젝트는 “VLA recovery가 없다”, “multi-option recovery가 처음이다”, “counterfactual recovery가 처음이다”, “failure type을 분류하면 새롭다”고 주장하지 않는다. 남은 검증 단위는 다음으로 제한한다.
 
-1. 동일 cloned onset에서 abstraction level이 다른 option을 모두 실행한 **counterfactual option-outcome table**,
+1. 동일 cloned onset에서 abstraction level이 다른 option을 모두 실행한 **same-onset option-outcome branch table**,
 2. 같은 정보·horizon·option library와 **동일한 time/action/risk budget**에서의 selector 비교,
 3. context와 budget에 따른 **option-ranking crossing** 및 best-fixed regret의 실증,
 4. detector, value estimator, selector, option library 오류를 분리하는 **oracle decomposition**,
 5. LIBERO에서 시작해 hold-out failure family 또는 CALVIN으로 옮기는 **frozen-selector transfer**.
+
+`counterfactual`이라는 단어가 같은 estimand를 뜻하지 않으므로 다음을 분리한다.
+
+| 용어 | 이 문서의 의미 | 직접 비교되는 최신 계열 | RP-2에서의 역할 |
+|---|---|---|---|
+| same-onset branch outcome | 실제 post-failure simulator state를 복원해 option만 바꾸고 실행한 outcome | 현재 source-verified set에서 동일 option/budget/regret 계약은 확인하지 못함 | C1의 train target과 O3 empirical oracle |
+| synthesized failure counterfactual | 성공 demonstration/action을 바꿔 생성한 failure–correction pair | Dream2Fix | I-06 data baseline; same-onset option regret의 대체물이 아님 |
+| imagined continuation counterfactual | world model/VLM으로 viable continuation을 예측하고 realign | CoRe | recovery option family와 model-based baseline 후보 |
+| code/action correction | failed code/action을 재작성하거나 successful alternative로 redirect | VLCP·RedFlow | replan/correction option과 conditional post-training baseline |
+
+RP-2의 핵심 용어는 가능하면 `same-onset multi-option branch supervision`으로 쓰고, 생성·상상 기반 방법과 혼동되는 broad `counterfactual recovery` 표현은 제목 외 본문 주장에서는 피한다.
 
 ### Operational motivation: detection과 recovery는 다른 문제다
 
@@ -79,7 +121,7 @@ RP-2의 motivation은 “detector가 없다”가 아니라 **alert가 있어도
 1. **Naive baseline의 전수 failure audit:** SAFE/FAIL-Detect + abort/retry/best-fixed/binary Retry–Reset/type-only heuristic을 먼저 구현하고, cloned onset별 option outcome을 모두 기록한다.
 2. **원리적 진단:** detector score는 `failure가 일어났을 확률`만 주고, action-conditioned recovery outcome, unavailable alternatives, remaining budget을 주지 않는다는 점을 formalize한다.
 3. **해법 도출:** `belief/context × option-conditioned value × risk constraint × budget`에서 selector가 유도되어야 한다. type label은 필요성이 확인될 때만 보조 latent/auxiliary target으로 쓴다.
-4. **단순화 반증:** best-fixed, scalar-risk, cause-only, budget-only, heuristic map, uniform-feasible, uncalibrated selector를 모두 비교해 counterfactual option value가 실제로 필요한지 보인다.
+4. **단순화 반증:** best-fixed, scalar-risk, cause-only, budget-only, heuristic map, uniform-feasible, uncalibrated selector를 모두 비교해 same-onset option value가 실제로 필요한지 보인다.
 5. **새 failure mode 분석:** learned selector에서 생기는 stale belief, detector delay, value miscalibration, option-call cost, false intervention, budget exhaustion을 별도 event로 기록한다.
 6. **일반화 검증:** task·failure family·onset landmark·benchmark 중 최소 하나를 완전히 hold-out해, 단일 LIBERO perturbation에 맞춘 규칙이 아님을 확인한다.
 
@@ -88,7 +130,7 @@ RP-2의 motivation은 “detector가 없다”가 아니라 **alert가 있어도
 | Level | 주장 | 조건 |
 |---|---|---|
 | `C0` | common recovery event·clone·budget protocol | restore determinism, same-onset option table, metric 재현성만 확인된 경우 |
-| `C1` | matched budget에서 counterfactual option-value arbitration이 best-fixed/scalar/binary/type-only baseline보다 유리 | RQ0–RQ2의 crossing·regret evidence, option-value ablation, IFR non-degradation |
+| `C1` | matched budget에서 same-onset branch-supervised option-value arbitration이 best-fixed/scalar/binary/type-only baseline보다 유리 | RQ0–RQ2의 crossing·regret evidence, option-value ablation, IFR non-degradation |
 | `C2` | learned selector가 benchmark·failure family를 넘어 일반화 | CALVIN 또는 hold-out family에서 frozen selector transfer |
 | `C3` | 실제 safety improvement | LIBERO-Safety 또는 real-robot physical safety에서 별도 검증. LIBERO pilot만으로 주장하지 않음 |
 
@@ -99,6 +141,8 @@ RP-2의 motivation은 “detector가 없다”가 아니라 **alert가 있어도
 | 근거 | 차용하는 요소 | 그대로 주장하지 않을 부분 |
 |---|---|---|
 | [POMDP](../../1998/Artificial-Intelligence/1998_Artificial-Intelligence_Planning-and-Acting-in-Partially-Observable-Stochastic-Dom/01_overview.md) | belief-state와 finite-memory decision formulation | 관측 history가 정확한 hidden state나 recoverability label을 제공한다는 가정 |
+| [Q-learning](../../1992/Machine-Learning/1992_Machine-Learning_Q-Learning/01_overview.md) | action-conditioned return과 greedy decision의 기초 | offline cloned branch의 support 밖 option value가 정확하다는 가정 |
+| [RT-H](../../2024/Robotics-Science-and-Sys/2024_Robotics-Science-and-Sys_RT-H-Action-Hierarchies-Using-Language/01_overview.md) | language motion을 중간 action abstraction으로 쓰는 hierarchy와 intervention interface | language correction 하나가 모든 post-failure option family를 대표한다는 해석 |
 | [SAFE](../../2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md) | frozen VLA latent feature, temporal failure score, functional conformal threshold | conformal alert가 곧 원인 진단이나 recovery guarantee라는 해석 |
 | [Recovery RL](../../2020/RA-L/2020_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/01_overview.md) | task policy와 recovery policy 분리, safety critic에 의한 switching | 하나의 recovery policy가 semantic failure type 전체를 해결한다는 가정 |
 | [PDDLStream](../../2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp/01_overview.md) | symbolic predicate와 continuous feasibility를 잇는 replanning interface | 최소 LIBERO 실험부터 전체 PDDLStream domain을 새로 구축하는 것 |
@@ -121,9 +165,16 @@ RP-2의 motivation은 “detector가 없다”가 아니라 **alert가 있어도
 - [ViFailback (CVPR 2026)](https://openaccess.thecvf.com/content/CVPR2026/html/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.html): visual-symbol diagnosis와 correction. correction family가 이미 존재하므로 진단 label 자체를 novelty로 두지 않는다.
 - [AgentChord (RSS 2026)](https://roboticsconference.org/program/papers/180/): recovery-augmented task graph와 low-latency orchestration. precompiled recovery branch를 strong graph baseline으로 둔다.
 - [When to Act, Ask, or Learn (RSS 2026)](https://roboticsconference.org/program/papers/142/): calibrated act/ask/intervene 선택. human escalation을 포함하는 가장 가까운 selector family로 비교한다.
+- [Gemini Robotics 2 (Google DeepMind official, 2026)](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/): multi-step progress/event detection과 self-correction이 broad capability로 이미 제시됐음을 확인한다. 공개된 matched implementation이 없으므로 capability boundary이지 primary baseline이 아니다.
+- [ActFovea](https://arxiv.org/abs/2607.29169) `PREPRINT`: spatiotemporal visual-action consistency, disturbance-specific candidate observation, action-chunk verification과 bounded safe failure. observation recovery와 safe-abstain의 강한 collision baseline이다.
+- [Learning Robust Execution with Agentic RL](https://arxiv.org/html/2607.13818v1) `PREPRINT / FULL-TEXT-CHECKED`: history-conditioned policy가 `Execute/Retry/Repair/Reset`을 PPO로 선택하고 LIBERO에서 평가된다. same-onset all-option target·best-fixed regret·vector-budget contract는 reported primary protocol에서 확인되지 않았으므로 X5의 정확한 residual comparison 대상으로 둔다.
+- [ProbeAct](https://arxiv.org/abs/2606.09740) `PREPRINT`: hidden-state probe, kinematic failure state machine과 CBF correction. fixed training-free recovery/safety-net family로 비교한다.
+- [Robo-Dopamine 2.0](https://arxiv.org/abs/2608.15680) `PREPRINT`: history/OOD-aware process reward와 signed progress–failure–recovery space. option value가 아니라 scalar/history reward baseline으로 둔다.
+- [Dream2Fix](https://arxiv.org/abs/2603.13528) `PREPRINT`: generative world model 기반 counterfactual failure–correction synthesis. same-onset alternative option outcome과 구분해 I-06 data baseline으로만 사용한다.
+- [RedFlow](https://arxiv.org/abs/2607.27782) `PREPRINT`: failure-inducing action과 successful alternative를 연결하는 offline corrective learning. runtime selector보다 conditional policy-reuse baseline이다.
 - [SO-101 Failure and Recovery Analysis](https://arxiv.org/abs/2606.08881) `PREPRINT`: recovery-aware evaluation 신호. 독립 metric novelty의 collision check로만 사용한다.
 
-다음 2026 자료는 [2026-08-26 gap audit](../RESEARCH_GAPS.md#2026-preprint-only-novelty-collision-check)에서 `PREPRINT-ONLY`로 확인한 novelty-collision set이다. venue-confirmed baseline과 같은 evidence level로 취급하지 않으며, status를 다시 사용할 때는 공식 source를 재검증하고 코드와 observation/action contract를 확인할 수 있을 때만 matched implementation baseline으로 올린다.
+다음 2026 자료는 [2026-08-28 gap audit](../RESEARCH_GAPS.md#2026-preprint-only-novelty-collision-check)에서 `PREPRINT-ONLY`로 확인한 novelty-collision set이다. venue-confirmed baseline과 같은 evidence level로 취급하지 않으며, status를 다시 사용할 때는 공식 source를 재검증하고 코드와 observation/action contract를 확인할 수 있을 때만 matched implementation baseline으로 올린다.
 
 - [See, Plan, Rewind](https://arxiv.org/abs/2603.09292): progress-aware subgoal rewind.
 - [FAR](https://arxiv.org/abs/2607.01111): retry perturbation과 failure-preference adaptation.
@@ -136,9 +187,9 @@ RP-2의 motivation은 “detector가 없다”가 아니라 **alert가 있어도
 
 1. SAFE 방식으로 frozen VLA feature `z_1:t`와 관측 history에서 alert score를 계산하고, TD calibration을 독립 ablation으로 둔다.
 2. `D2-option`의 same-onset sweep으로 각 `(onset, option, budget)`의 completion·irreversibility·cost target을 만든다.
-3. 작은 context/belief encoder는 `z_1:t`, progress, current subgoal, budget을 요약한다. cause/recoverability는 auxiliary target이며 필수 inference label이 아니다.
+3. 작은 context/belief encoder는 `z_1:t`, proprioception/action history, detector history, normalized elapsed step, budget을 요약한다. OpenVLA가 native subgoal을 노출하지 않으므로 primary `O_core`에는 oracle current-subgoal feature를 넣지 않는다. cause/recoverability는 auxiliary target이며 필수 inference label이 아니다.
 4. option-value head가 고정 recovery option마다 `P(goal completion)`, `P(irreversible event)`, expected execution cost를 예측한다.
-5. selector는 남은 vector budget 안에서 risk threshold를 만족하는 option 중 calibrated utility가 가장 높은 것을 고르고, feasible option이 없으면 `HUMAN_ESCALATE` 또는 `ABORT_STOP`으로 abstain한다.
+5. selector는 남은 vector budget 안에서 risk threshold를 만족하는 option 중 calibrated utility가 가장 높은 것을 고르고, feasible option이 없으면 primary autonomous protocol에서는 `ABORT_STOP`으로 abstain한다. `HUMAN_ESCALATE`는 assisted-evaluation extension에서만 허용한다.
 
 Conformal calibration은 alert threshold에만 적용한다. distribution shift가 있는 recoverability classification이나 option-value 전체에 같은 보장을 확장해 주장하지 않는다.
 
@@ -147,7 +198,7 @@ Conformal calibration은 alert threshold에만 적용한다. distribution shift�
 | 단계 | 실제 입력 | 출력 | oracle 접근 허용 여부 |
 |---|---|---|---|
 | detector | frozen VLA feature, observation/action history | alert score와 `t_detect` | `t_effect`는 평가 logger에만 존재 |
-| context/belief encoder | alert history, progress proxy, current subgoal, budget vector | latent context; optional cause/recoverability belief | cause/R label은 auxiliary train target일 뿐 inference 입력이 아님 |
+| context/belief encoder | VLA feature, proprioception/action·alert history, normalized elapsed step, budget vector | latent context; optional cause/recoverability belief | cause/R·BDDL progress·subgoal label은 auxiliary/evaluator field일 뿐 primary inference 입력이 아님 |
 | option-value head | 같은 belief와 각 option descriptor | `q_o`, `r_o`, cost/latency prediction | cloned-state outcome은 train target, test-time oracle sweep 금지 |
 | selector | calibrated q/r, feasibility, budget | 단일 recovery option 또는 abstain | task predicate는 fixed replan option 내부에서만 사용 |
 | option/controller | 현재 observation과 fixed skill/controller | 실제 action sequence | P1과 baseline이 동일 library를 공유 |
@@ -160,7 +211,7 @@ P1은 `frozen base policy + lightweight heads + deterministic constrained select
 
 #### 데이터 생성과 target
 
-1. **Base rollout:** train split의 clean rollout을 먼저 실행하고, 사전 등록한 event landmark에서 perturbation을 주입한다. 정책이 볼 수 있는 입력은 observation, 이전 action, policy memory/cache, progress proxy, remaining budget뿐이다. `t_inject`, oracle cause, oracle acceptable-option set은 logger에만 남긴다.
+1. **Base rollout:** train split의 clean rollout을 먼저 실행하고, 사전 등록한 event landmark에서 perturbation을 주입한다. primary `O_core` 정책이 볼 수 있는 입력은 VLA feature, proprioception, 이전 action, alert history, normalized elapsed step, policy memory/cache와 remaining budget뿐이다. `t_inject`, BDDL progress, oracle subgoal/cause/acceptable-option set은 logger에만 남긴다.
 2. **Cloned-state option sweep:** `t_effect`의 simulator state를 clone한 뒤 모든 option을 같은 rollout seed로 실행한다. 각 `(onset state, option, budget)`에 대해 `goal_success`, `irreversible_event`, recovery steps, option calls를 저장한다. 이 sweep 결과가 `q_o`, `r_o`의 supervised target과 R1–R4의 평가용 acceptable-option set을 만든다.
 3. **Head fitting:** P1의 primary alert score는 frozen SAFE/FAIL-Detect 출력으로 두고 threshold만 calibration한다. 별도 detector sensitivity에서만 alert head를 failure onset window의 binary target으로 학습한다. context encoder는 option-conditioned target을 주로 학습하고 `cause × operational recoverability`는 auxiliary ablation으로만 사용한다. test split의 sweep 결과는 학습·threshold 선택·early stopping에 사용하지 않는다.
 4. **Calibration:** alert threshold와 q/r calibration parameters는 calibration split에서만 고정한다. 기본 P1은 SAFE 계열 alert에 functional conformal threshold를 적용하고, option-value에는 temperature/isotonic calibration을 별도 ablation으로 둔다. calibration이 이동 분포에 formal coverage를 준다고 주장하지 않는다.
@@ -182,16 +233,16 @@ P1에서는 `alert`가 frozen detector score이므로 `λa` 항을 학습하지 
 #### 추론 계약
 
 - selector는 alert가 발생한 시점에 한 번 평가하고, `recovery_started` 이후에는 option을 중간에 바꾸지 않는다. 재평가는 `REOBSERVE_WAIT`가 fresh observation을 반환한 뒤에만 허용한다.
-- `q_o`와 `r_o`가 모두 불확실하거나 risk constraint를 만족하는 option이 없으면 `HUMAN_ESCALATE` 또는 `ABORT_STOP`으로 abstain한다. 둘을 completion으로 세지 않고 `correct_abort`, `correct_escalation`, `unnecessary_abort/escalation`으로 분리한다.
+- `q_o`와 `r_o`가 모두 불확실하거나 risk constraint를 만족하는 option이 없으면 primary autonomous protocol에서는 `ABORT_STOP`으로 abstain한다. assisted extension의 `HUMAN_ESCALATE`도 completion으로 세지 않고 `correct_abort`, `correct_escalation`, `unnecessary_abort/escalation`으로 분리한다.
 - P1과 모든 learned ablation은 같은 frozen feature cache, head parameter budget, training step 수, inference call 수를 사용한다. selector overhead와 p50/p95 decision latency는 별도 기록한다.
-- `progress`는 observation/action history에서 계산한 non-privileged proxy다. benchmark evaluator의 goal predicate는 training input이 아니라 event label과 최종 평가에만 사용한다.
+- primary progress input은 `t/native_horizon`뿐이다. richer learned progress는 별도 sensitivity이며 observation/action history만 사용한다. benchmark evaluator의 goal predicate와 BDDL subgoal은 training input이 아니라 event label과 최종 평가에만 사용한다.
 
-### Novelty를 위해 필요한 counterfactual decision formulation
+### Novelty를 위해 필요한 same-onset multi-option decision formulation
 
 failure type을 먼저 정하고 classifier를 붙이는 방식은 novelty 근거가 약하다. 최소 formulation은 관측 history와 recovery budget에서 option-conditioned outcome을 결정하는 constrained belief decision이며, supervision은 동일 onset의 alternative option rollout에서 온다.
 
 ```text
-b_t = f(o_1:t, a_1:t-1, progress_t, subgoal_t, B_t)
+b_t = f(z_1:t, proprio_1:t, a_1:t-1, alert_1:t, t/H, B_t, g_t^optional)
 q_o = P(goal_completion | b_t, option=o, B_t)
 r_o = P(irreversible_event | b_t, option=o, B_t)
 k_o = E[steps, calls, replans, latency | b_t, option=o, B_t]
@@ -200,14 +251,43 @@ o* = argmax_o q_o - λᵀ · k_o
      subject to r_o ≤ δ and feasible(o, B_t) = 1
 ```
 
-- `b_t`는 detector score 하나가 아니라 관측 history, 최근 action, progress, current subgoal, remaining budget을 요약한다.
+- `b_t`는 detector score 하나가 아니라 VLA feature, proprioception, 최근 action·alert, normalized elapsed step, remaining budget을 요약한다. `g_t^optional`은 `O_graph`의 non-privileged subgoal adapter가 통과한 extension에서만 사용한다.
 - `q_o`, `r_o`, `k_o`는 option마다 달라야 한다. 같은 alert score에서도 `REOBSERVE_WAIT`, `RETRY_CURRENT`, `STATE_RESET`, `SUBGOAL_REWIND`, `TASK_REPLAN`의 outcome이 달라지는 것이 arbitration의 전제다.
 - `B_t`는 native horizon, recovery steps, option calls, replans, irreversible-event allowance의 vector다. scalar penalty 하나로 합쳐서 budget effect를 숨기지 않는다.
 - `δ`는 safety gate이며 calibration의 대상이다. 모든 option-value prediction에 formal guarantee가 있다고 주장하지 않는다.
 
-fit/calibration onset에서는 모든 option outcome을 관찰하지만 test-time selector는 선택하지 않은 option의 결과를 볼 수 없다. 따라서 `counterfactual`은 인과효과의 완전한 식별을 주장하는 용어가 아니라 **cloned state에서 alternative option outcomes를 실제 실행해 구축한 supervised comparison**을 뜻한다. state restore가 불완전하거나 option rollout이 stochastic하면 seed-matched 반복과 uncertainty interval을 유지한다.
+fit/calibration onset에서는 모든 option outcome을 관찰하지만 test-time selector는 선택하지 않은 option의 결과를 볼 수 없다. 기존 schema의 `counterfactual_group_id`는 호환성을 위해 유지하지만, 이것은 인과효과의 완전한 식별을 뜻하지 않는다. 주장은 **cloned state에서 alternative option outcomes를 실제 실행해 구축한 same-onset supervised comparison**으로 한정한다. state restore가 불완전하거나 option rollout이 stochastic하면 seed-matched 반복과 uncertainty interval을 유지한다.
 
 이 formulation에서 `failure_cause`와 `recoverability`는 최종 contribution이 아니라 action value를 설명할 수 있는 auxiliary variable이다. scalar alert와 remaining budget만으로 같은 ranking을 예측하거나 type-only heuristic이 P1과 동률이면 type head를 제거한다. best-fixed option이 O3와 동률이면 option-value selector 전체를 제거한다.
+
+### 학습 문제의 정확한 분류와 decision-aware 보강
+
+`D2-option`은 fit/calibration onset에서 모든 applicable option의 outcome을 관찰하므로, primary 학습 문제는 online RL이나 logged-action offline RL이 아니라 **grouped full-information cost-sensitive decision learning**이다. 하나의 onset을 하나의 group으로 두고 option별 반복 rollout의 empirical rate와 cost를 함께 학습한다. 이 구분은 Agentic RL과의 차이를 명확히 하고, 관찰하지 않은 option을 Q-learning으로 외삽했다는 과도한 주장을 막는다.
+
+```text
+ȳsuccess(s,o,B) = mean_seed[goal_success]
+ȳrisk(s,o,B)    = mean_seed[irreversible_event]
+k̄(s,o,B)       = mean_seed[normalized vector cost]
+
+Lpred = Σ_(s,o,B) BCE(q̂, ȳsuccess) + BCE(r̂, ȳrisk) + Huber(k̂, k̄)
+Lrank = Σ_(o+,o-) log(1 + exp(-(Û(o+) - Û(o-))/τ))
+Ltotal = Lpred + λrank · Lrank + λaux · Laux
+```
+
+- `Lrank` pair는 seed-matched utility interval이 구분되는 option pair에만 만든다. 불확실한 tie를 임의의 hard rank로 학습하지 않는다.
+- primary P1은 calibrated `q/r/k`를 유지해 해석과 oracle decomposition이 가능해야 한다. [RankNet](https://doi.org/10.1145/1102351.1102363)과 [decision-focused learning의 ranking 관점](https://proceedings.mlr.press/v162/mandi22a.html)은 `Lrank`의 근거이며, ranking loss 자체를 robotics novelty로 주장하지 않는다.
+- `λrank=0` prediction-only model을 최소 primary로 두고, `λrank=1`의 P1-rank를 사전 등록한 method sensitivity로 둔다. ranking loss가 option regret만 개선하면서 calibration을 훼손하는지 분리하고, confirmatory test를 보기 전에 primary variant를 고정한다.
+- `ABORT_STOP/HUMAN_ESCALATE`는 일반 completion option과 같은 success label로 학습하지 않는다. autonomous option이 risk gate를 통과하지 못할 때의 reject action으로 모델링하고, [selective classification](https://jmlr.csail.mit.edu/papers/v11/el-yaniv10a.html)의 risk–coverage 관점으로 평가한다.
+
+Primary selector는 arbitrary scalarization 하나에 의존하지 않도록 다음 safety-first lexicographic rule로 고정한다.
+
+1. 현재 vector budget과 option precondition을 만족하지 않는 option을 mask한다.
+2. calibration에서 고정한 risk threshold `δ`를 만족하는 option만 남긴다.
+3. calibrated completion probability `q_o`가 가장 큰 option을 고른다.
+4. `q_o`가 calibration tolerance 안에서 동률이면 normalized recovery cost가 작은 option을 고른다.
+5. feasible option이 없으면 `ABORT_STOP`; 별도 assisted-evaluation에서만 `HUMAN_ESCALATE`를 허용한다.
+
+기존 `q_o - λᵀk_o` weighted selector는 cost-weight sensitivity로 유지한다. primary claim은 lexicographic selector와 budget-constrained Pareto 결과를 사용해 특정 `λ` 선택에 의존하지 않게 한다.
 
 ### 기반 논문에서 baseline으로 가져올 역할
 
@@ -390,6 +470,19 @@ Option implementation은 모든 selector에서 공유한다. 제안 method만 �
 
 `SUBGOAL_REWIND`가 simulator snapshot으로 물리 상태까지 되돌아가면 privileged oracle이다. non-privileged branch는 이미 달성한 predicate를 유지한 채 skill sequence만 rewind하거나 safe reset을 실행한다. 두 버전을 같은 baseline 이름으로 섞지 않는다.
 
+#### Staged option library와 구현 가능성 경계
+
+OpenVLA는 native subgoal index나 symbolic plan을 직접 노출하지 않으므로 모든 option을 처음부터 C1에 넣으면 `SUBGOAL_REWIND/TASK_REPLAN` adapter 자체가 프로젝트의 대부분을 차지할 수 있다. 이를 피하기 위해 option library를 단계화한다.
+
+| Stage | Option set | 구현 계약 | C1 사용 |
+|---|---|---|---|
+| `O_core` | `CONTINUE`, `RETRY_CURRENT`, `REOBSERVE_WAIT`, `STATE_RESET`, `ABORT_STOP` | frozen VLA와 robosuite state/controller interface만으로 구현 | Phase 0/1의 필수 최소 library |
+| `O_graph` | `SUBGOAL_REWIND`, `TASK_REPLAN` | observation-derived progress와 사전 등록한 non-privileged task graph가 필요 | adapter acceptance test 통과 시에만 C1에 추가 |
+| `O_assist` | `HUMAN_ESCALATE` | terminal query와 고정 response/cost contract | autonomous BRCR에서 제외; assisted coverage만 평가 |
+| `O_oracle` | simulator-state rewind, BDDL-predicate replan | evaluator-only privileged state | O3/diagnostic 전용 |
+
+`O_core`만으로 Agentic RL의 `Execute/Retry/Repair/Reset`과 실질적으로 같은 interface가 되면 novelty는 same-onset branch supervision·budget crossing·regret evidence에서만 판단한다. `O_graph`를 구현하지 못했다는 이유로 P1만 privileged replan을 호출하지 않는다. 반대로 `O_core`에서 option crossing이 없으면 option 수를 늘려 억지로 crossing을 만드는 대신 arbitration claim을 기각한다.
+
 ## 6. Recovery budget
 
 가중합 하나가 아니라 다음 budget vector를 모든 방법에 동일하게 적용한다.
@@ -400,12 +493,23 @@ Option implementation은 모든 selector에서 공유한다. 제안 method만 �
 | recovery execution | 120 step | `recovery_started`부터 `t_recovered` 또는 failure까지 누적 |
 | option calls | 2 | retry를 반복해 horizon을 우회하지 못하게 함 |
 | state resets | 1 | safe retreat/controller reset 반복 제한 |
-| subgoal rewinds | 1 | progress rollback 반복 제한 |
-| task replans | 1 | expensive planning intervention 제한 |
+| subgoal rewinds | 0 primary; 1 extension | `O_graph`가 비활성이면 0, extension에서 progress rollback 반복 제한 |
+| task replans | 0 primary; 1 extension | `O_graph`가 비활성이면 0, extension에서 expensive planning intervention 제한 |
 | irreversible event | 0 | 한 번 발생하면 safety gate 실패 |
-| human escalation | 1 terminal call | native autonomous success가 아니며 correct escalation·assisted completion을 분리 |
+| human escalation | 0 primary; 1 assisted call | native autonomous success가 아니며 correct escalation·assisted completion을 분리 |
 
 Pilot 이후 `recovery execution ∈ {60, 120, 180}` sensitivity를 수행한다. budget을 다 쓴 뒤 recovery mode를 임의로 종료해 base action으로 위장하지 못하도록, `t_recovered`는 oracle task-valid predicate로만 닫는다.
+
+Phase 0 budget ID는 다음처럼 고정한다. `O_graph/O_assist`가 비활성인 실험에서는 해당 quota를 0으로 기록하고 budget vector 차원을 삭제하지 않는다.
+
+| ID | recovery steps | option calls | reset | rewind | replan | escalation |
+|---|---:|---:|---:|---:|---:|---:|
+| `B_low` | 60 | 1 | 0 | 0 | 0 | 0 |
+| `B_mid` | 120 | 2 | 1 | 0 | 0 | 0 |
+| `B_high` | 180 | 3 | 1 | 0 | 0 | 0 |
+| `B_high_graph` | 180 | 3 | 1 | 1 | 1 | 0 |
+
+`B_high_graph`는 `O_graph` acceptance를 통과한 extension에서만 사용한다. `B_low`에서 `STATE_RESET`이 infeasible인 것은 의도된 budget constraint다. 그러나 BCP를 단순 feasibility 변화만으로 주장하지 않도록, 공통 feasible option subset 안에서의 ranking transition도 별도로 보고한다.
 
 ## 7. Baseline과 oracle upper bound
 
@@ -425,7 +529,7 @@ Pilot 이후 `recovery execution ∈ {60, 120, 180}` sensitivity를 수행한다
 | B9 | SAFE + uniform feasible selector | 동일 SAFE | static budget/safety mask를 만족하는 option에서 uniform random 선택 | option choice가 우연히 좋아진 것인지 확인하는 null selector |
 | B10 | SAFE + best-fixed-per-budget | 동일 SAFE | calibration split에서 budget별 단일 option을 고정 | context-conditioned selection이 필요한지 확인하는 핵심 baseline |
 | B11 | SAFE + type-only heuristic | 동일 SAFE | cause/recoverability label을 사전 고정 option map으로 변환 | option-value learning 없이 diagnosis routing만으로 충분한지 확인 |
-| P1 | SAFE + counterfactual option-value selector | 동일 SAFE | 공용 option library에서 calibrated value·risk·cost로 constrained 선택 | 제안 방법 |
+| P1 | SAFE + same-onset branch-supervised option-value selector | 동일 SAFE | 공용 option library에서 calibrated value·risk·cost로 constrained 선택 | 제안 방법 |
 
 B4는 true simulator predicate를 보므로 일반 learned baseline으로 보고하지 않고 `PRIVILEGED`로 표시한다. PDDLStream 전체 구현은 continuous collision/kinematic feasibility가 실제 병목으로 확인될 때 CALVIN 또는 phase-2 extension에서 추가한다. 최소 LIBERO pilot에서는 task-specific predicate/skill graph replan으로 범위를 제한한다.
 
@@ -441,11 +545,25 @@ B10은 fit/calibration outcome에서 각 budget별 best single option을 정한 
 
 | ID | 근거 | 맞춰야 할 interface | primary 후보 조건 |
 |---|---|---|---|
+| X0 | RT-H | 같은 image/history, language-motion intervention, 동일 human-query/action budget | language correction을 공용 option descriptor와 cost로 매핑 가능 |
 | X1 | ViFailback | 같은 image/history와 diagnosis→correction option, 동일 horizon | correction을 공용 option library로 매핑 가능 |
 | X2 | AgentChord | 같은 task graph·recovery branch·latency budget | privileged task predicate 없이 branch 실행 가능 |
 | X3 | When to Act, Ask, or Learn | 같은 act/ask/intervene 정보와 human-query budget | ask response contract와 intervention cost가 P1과 동일 |
+| X4 | ActFovea | 같은 observation perturbation, candidate-observation set, verification·safe-failure budget | code와 action-chunk verifier를 공용 base policy에 연결 가능 |
+| X5 | Agentic RL execution modes | 같은 history, execution-mode library와 option-call/horizon budget | mode semantics와 training data가 공개되어 option library를 맞출 수 있음 |
+| X6 | ProbeAct | 같은 base policy, kinematic/probe input과 CBF/safe-intervention cost | hidden-state probe와 safety filter를 동일 LIBERO setting에 재현 가능 |
 
-SPR, FAR, CoRe, VLCP는 `PREPRINT-ONLY` collision set `X4–X7`로 기록한다. 재현 가능한 코드와 명확한 policy-visible input이 확인되기 전에는 confirmatory primary baseline으로 승격하지 않는다. 다만 rewind·retry adaptation·imagined realignment·code replan이 이미 존재한다는 사실 때문에 해당 option 자체를 contribution으로 주장할 수 없다.
+SPR, FAR, CoRe, VLCP, Robo-Dopamine 2.0, Dream2Fix, RedFlow는 별도 `PREPRINT-ONLY` collision set으로 기록한다. 재현 가능한 코드와 명확한 policy-visible input이 확인되기 전에는 confirmatory primary baseline으로 승격하지 않는다. 다만 rewind·retry adaptation·imagined realignment·code replan·history reward·counterfactual synthesis·action correction이 이미 존재한다는 사실 때문에 해당 요소 자체를 contribution으로 주장할 수 없다.
+
+ActFovea full-text audit에서 단순하지만 강한 disturbance-specific control이 확인되었으므로 다음 mechanism control을 관련 subgroup에서 반드시 실행한다. 이들은 전체 failure family의 primary winner 후보가 아니라 “복잡한 selector 없이 해당 perturbation을 해결할 수 있는가”를 확인한다.
+
+| ID | Mechanism control | 적용 subgroup | 반증하는 설명 |
+|---|---|---|---|
+| M0 | fixed short-horizon policy re-query | action drift, finite observation delay | 더 자주 closed loop로 돌리는 것만으로 충분한가 |
+| M1 | bounded action clip + exponential smoothing | action drift, execution/contact | 단순 control regularization으로 충분한가 |
+| M2 | timestamp/repeated-frame hold | stale frame, delayed/frozen observation | freshness rule만으로 reobserve/abort가 충분한가 |
+
+M0–M2도 P1과 같은 base checkpoint, action limit, native horizon을 사용한다. 특정 subgroup에서 M0–M2가 P1과 동률이면 그 failure family에서는 learned arbitration을 주장하지 않는다.
 
 ### 비교군 계층과 공정성 계약
 
@@ -455,10 +573,10 @@ SPR, FAR, CoRe, VLCP는 `PREPRINT-ONLY` collision set `X4–X7`로 기록한다.
 |---|---|---|---|
 | `G0 competence/control` | B0, B1 | perturbation이 base policy를 얼마나 망가뜨리는가 | sanity check만 |
 | `G1 detector/safety` | B2, B6 | alert 품질·calibration만으로 어느 정도 안전한가 | detector 비교 |
-| `G2 recovery policy` | B3–B5, B7–B11, 재현 가능한 X1–X3 | blind/binary/privileged/scalar/random/fixed/type-only/direct recovery의 ceiling은 무엇인가 | strongest non-privileged baseline 후보 |
-| `G3 proposed/decomposition` | P1, A1–A9, O1–O3 | counterfactual supervision·budget·belief·option-value 각 요소가 필요한가 | method attribution과 claim ladder |
+| `G2 recovery policy` | B3–B5, B7–B11, M0–M2, 재현 가능한 X0–X6 | blind/binary/privileged/scalar/random/fixed/type-only/direct recovery의 ceiling은 무엇인가 | strongest non-privileged baseline 후보와 subgroup mechanism control |
+| `G3 proposed/decomposition` | P1, A1–A9, O1–O3 | same-onset multi-option supervision·budget·belief·option-value 각 요소가 필요한가 | method attribution과 claim ladder |
 
-Primary comparison은 Phase 0/1의 development split에서 미리 정한 strongest non-privileged system `B* ∈ {B3, B5^learned, B7, B8, B10, B11^learned, X1–X3 중 matched 구현}`와 P1의 paired comparison이다. `B9`는 null selector라서 primary winner selection에는 넣지 않는다. `B*`를 confirmatory-test 결과를 본 뒤 고르지 않는다. B4, `B11^oracle`, O1–O3는 privileged diagnostic이므로 일반적인 경쟁 결과나 state-of-the-art 순위로 보고하지 않는다. 저자 구현을 재현하지 못한 X baseline과 `B5^oracle`도 primary 후보에서 제외한다.
+Primary comparison은 Phase 0/1의 development split에서 미리 정한 strongest non-privileged system `B* ∈ {B3, B5^learned, B7, B8, B10, B11^learned, X0–X6 중 matched 구현}`와 P1의 paired comparison이다. `B9`는 null selector라서 primary winner selection에는 넣지 않는다. `B*`를 confirmatory-test 결과를 본 뒤 고르지 않는다. B4, `B11^oracle`, O1–O3는 privileged diagnostic이므로 일반적인 경쟁 결과나 state-of-the-art 순위로 보고하지 않는다. 저자 구현을 재현하지 못한 X baseline과 `B5^oracle`도 primary 후보에서 제외한다.
 
 공정성 규칙은 다음과 같이 고정한다.
 
@@ -479,7 +597,7 @@ Primary comparison은 Phase 0/1의 development split에서 미리 정한 stronge
 | binary vs multi-option | B5^learned vs P1 | Retry/Reset보다 abstraction-level option arbitration이 필요한가 |
 | scalar/type-only vs option value | B7/B8/B11 vs P1 | option-conditioned outcome modeling의 필요성 |
 | option choice null | B9 vs P1 | 선택 policy가 random option mix보다 나은가 |
-| direct frontier recovery | matched X1–X3 vs P1 | correction/task-graph/act-ask selector보다 counterfactual value가 필요한가 |
+| direct frontier recovery | matched X0–X6 vs P1 | language correction/task graph/act-ask/verified observation/execution-mode/safety-net보다 same-onset option value가 필요한가 |
 | detector bottleneck | O1 vs P1 | oracle onset과 learned detector의 차이 |
 | selector ceiling | P1 vs O2/O3 | 현재 detector·option library에서 남은 head/selector gap |
 
@@ -497,7 +615,7 @@ Primary comparison은 Phase 0/1의 development split에서 미리 정한 stronge
 | A6 | `REOBSERVE_WAIT`, `STATE_RESET`, `SUBGOAL_REWIND`를 제거한 reduced library | option expressivity와 method novelty의 구분 |
 | A7 | 현재 observation과 scalar alert만 사용하고 temporal history/belief를 제거 | POMDP belief와 failure onset history의 필요성 |
 | A8 | vector budget을 정규화된 scalar remaining budget으로 압축 | multidimensional budget의 필요성 |
-| A9 | 선택된/chosen correction outcome만 사용하고 alternative option target을 mask | same-onset counterfactual supervision의 필요성 |
+| A9 | 선택된/chosen correction outcome만 사용하고 alternative option target을 mask | same-onset alternative-option supervision의 필요성 |
 
 A1–A9는 같은 fit/calibration/test split, head budget, training seed, option library에서 실행한다. 기본은 one-factor-at-a-time(OAT)이고 P1이 primary gate를 통과한 뒤에만 `A1×A8`(context 대 scalar budget)과 `A3×A5`(heuristic routing 대 option-conditioned value) interaction을 추가한다. ablation 하나가 P1과 같은 성능을 내면 해당 component를 contribution으로 주장하지 않는다. 특히 A9가 P1과 같으면 cloned alternative outcome을 사용하는 핵심 주장을 철회하고 일반 option-value selector로 축소한다.
 
@@ -556,11 +674,13 @@ R4는 완료가 바람직한 outcome이 아니므로 BRCR 분모에서 제외하
 
 - clean task success와 false-intervention rate
 - R4 correct abort/escalation rate, assisted completion, unnecessary abort/escalation rate
+- **Autonomous coverage**와 selective IFR/BRCR risk–coverage curve: `ABORT_STOP/HUMAN_ESCALATE`로 어려운 episode를 버려 성능을 부풀리는지 확인
+- **Normalized Recovery Rate (NRR):** `(S_recovered - S_disturbed) / (S_clean - S_disturbed)`; denominator가 0 이하이거나 지나치게 작으면 보고하지 않고 세 성공률을 그대로 제시
 - failure detection AUROC/AUPRC, `t_detect - t_effect`, missed-alert rate
 - cause macro-F1, recoverability macro-F1, acceptable-option accuracy
 - Option Separability, CCP, BCP, BFR와 budget별 option-ranking transition matrix
 - intervention-conditioned recovery success
-- recovery step, option call, reset/rewind/replan/query count, total execution cost
+- recovery step, option call, policy re-query, reset/rewind/replan/query count, physically restored object 수, post-handoff step, total execution cost
 - intervention 전후 유지된 task/subgoal progress
 - task, cause, severity, onset landmark별 worst-group BRCR/IFR
 - timeout rate와 post-recovery re-failure rate
@@ -578,6 +698,8 @@ R4는 완료가 바람직한 outcome이 아니므로 BRCR 분모에서 제외하
 | arbitration precondition | Option Separability, CCP, BCP, BFR | cloned onset·matched seed·budget별 O3와 B10을 비교 | B10, O3; P1 학습 전 gate |
 | decision quality | O3 대비 normalized option regret, constraint violation, option agreement | `U(o)=q_o−λᵀk_o`와 risk gate를 사용해 clone-state별 계산 | P1, B7–B11, A3/A5/A9 |
 | cost/latency | recovery steps, option calls, replans, added action cost, p50/p95 selector latency | native action과 recovery action을 분리하고 wall-clock도 함께 저장 | 모든 learned system |
+| selective behavior | autonomous coverage, selective BRCR/IFR, risk–coverage curve, correct abort | abstain episode를 성공에서 제외하고 coverage별 위험을 함께 표시 | B2, P1, X3, ActFovea-style safe fail |
+| recovered loss | NRR와 clean/disturbed/recovered success triple | `S_clean > S_disturbed`인 cell에서만 계산하고 macro-average 전에 cell별 denominator 공개 | P1, X4, M0–M2 |
 | robustness | task/cause/severity/onset별 BRCR·IFR, worst-group(10th percentile) | subgroup 최소 cell 수를 사전 고정; cell이 작으면 CI만 보고 | holdout task/family, CALVIN |
 
 `BRCR`만 올리고 detector가 늦어지거나 intervention cost가 커지는 trade-off를 숨기지 않는다. 특히 scalar-risk selector가 P1과 같은 BRCR을 내더라도 option regret·IFR·latency가 다르면 그 차이를 별도 해석한다. `O3`의 utility는 평가용 upper bound이며, P1의 training target으로 test episode에 재사용하지 않는다.
@@ -598,7 +720,7 @@ R4는 완료가 바람직한 outcome이 아니므로 BRCR 분모에서 제외하
 - **event completeness:** `episode_start → perturbation_injected → failure_manifested → alert/intervention → recovery/terminal` 필수 순서가 누락 없이 기록된 episode 비율.
 - **onset consistency:** 동일 recipe의 `t_effect`가 state landmark와 oracle progress invariant에서 일관되게 검출되는 비율. `t_inject`만 기록된 episode는 primary delay metric에서 제외한다.
 - **option-sweep stability:** 동일 cloned state의 repeated sweep에서 acceptable-option set과 lexicographic O3 선택이 일치하는 비율.
-- **branch equivalence before action:** alternative option을 실행하기 직전 observation, task predicate, policy/controller state, budget hash가 동일한 비율. 이 값이 낮으면 same-onset counterfactual claim을 할 수 없다.
+- **branch equivalence before action:** alternative option을 실행하기 직전 observation, task predicate, policy/controller state, budget hash가 동일한 비율. 이 값이 낮으면 same-onset multi-option claim을 할 수 없다.
 - **adapter agreement:** LIBERO/CALVIN evaluator와 RP-2 adapter가 clean success, timeout, terminal event를 같은 episode ID에 대해 일치시키는 비율.
 
 이 validity check를 통과하지 못한 episode를 조용히 제거하지 않는다. protocol-invalid count와 제외 사유를 별도 flow table로 보고한다.
@@ -630,7 +752,7 @@ Primary factorial은 `cause × valid onset landmark × severity × recovery budg
 
 articulated receptacle, multi-object sequence, precise placement를 함께 포함한다. 각 task에서 clean rollout과 state landmark를 먼저 검증하고, perturbation 직후 clone/restore가 deterministic tolerance 안에서 재현되는지 확인한다.
 
-Phase 0의 첫 산출물은 학습된 selector가 아니라 **20–50개 valid onset의 fixed-option sweep table**이다. 각 onset에 S1 perturbation 하나와 `B_low/B_mid/B_high` budget을 적용하고 모든 applicable option을 동일 seed에서 실행한다. 다음 순서로 gate를 판단한다.
+Phase 0의 첫 산출물은 학습된 selector가 아니라 **20–50개 valid onset의 fixed-option sweep table**이다. 각 onset에 S1 perturbation 하나와 `B_low/B_mid/B_high` budget을 적용하고 모든 applicable `O_core` option을 동일 seed에서 실행한다. 다음 순서로 gate를 판단한다.
 
 1. restore determinism과 branch equivalence를 통과하지 못하면 I-12 wrapper부터 수정한다.
 2. option outcome이 구분되지 않거나 O3가 B10 best-fixed보다 practical margin만큼 낫지 않으면 recovery library/arbitration claim을 기각한다.
@@ -647,7 +769,7 @@ Phase 0의 첫 산출물은 학습된 selector가 아니라 **20–50개 valid o
 | fixed initial states | task당 10개 |
 | split | task-level `2 fit / 1 calibration / 1 holdout`; exact manifest를 먼저 고정 |
 | paired scenario | `4 × 4 × 2 × 10 = 320` unique cells / system; shortlist system은 3 paired seeds |
-| systems | B1–B11, matched X1–X3, A1–A9, P1, O1–O3 중 Phase 0 뒤 사전 등록한 shortlist |
+| systems | B1–B11, M0–M2, matched X0–X6, A1–A9, P1, O1–O3 중 Phase 0 뒤 사전 등록한 shortlist |
 | clean audit | 4 task × 10 init state / 실행 system |
 
 R4 perturbation은 각 task/init state에 무조건 곱하지 않고 별도 diagnostic set으로 둔다. standard LIBERO의 R4 결과는 simulator-specific correct-abort 성능으로만 해석한다.
@@ -685,12 +807,34 @@ Phase 1–3이 통과되어도 실물 안전성은 자동으로 따라오지 않
 
 실로봇 phase는 RP-2의 최소 C1 목표에 필요하지 않다. 하지만 실제 로봇 연구로 확장할 때 low-level control 성능을 arbitration 성능으로 잘못 귀속하지 않도록 hardware, controller, option library를 고정해야 한다.
 
-## 10. Reject / revise 기준
+## 10. Threats to validity와 통제
+
+| 위협 유형 | 구체적 threat | 결과를 왜곡하는 방식 | 문서상 통제와 남는 한계 |
+|---|---|---|---|
+| novelty | Agentic RL이 이미 history-conditioned four-mode recovery manager를 PPO로 학습 | high-level selector 자체를 새 방법으로 오인 | same-onset full-option supervision, vector-budget crossing, best-fixed regret가 모두 있어야 C1. X5 matched comparison 실패 시 evaluation extension으로 축소 |
+| novelty | ActFovea·ProbeAct·CoRe가 verification, phase-aware intervention, rewind/rejoin을 이미 다룸 | option component 하나를 contribution으로 오인 | 각 방법을 X4/X6/option-family baseline으로 분리하고 component novelty를 주장하지 않음 |
+| construct | simulator에서 정의한 `irreversible_event`가 실제 physical risk를 대표하지 않음 | IFR을 real-world safety처럼 해석 | LIBERO IFR은 simulator operational safety로만 표현; C3는 별도 hardware metric 없으면 `NOT_RUN` |
+| construct | R1–R4가 option sweep outcome으로 정의되어 method 성능과 label이 순환 | easy/hard subgroup을 결과에 맞춰 구성 | recoverability는 evaluator stratification에만 쓰고 P1 inference 입력 금지; cause별 raw outcome도 함께 보고 |
+| internal | option마다 구현 품질이 달라 selector 이득이 강한 option 하나에서 발생 | arbitration gain과 option engineering gain 혼합 | 모든 방법이 versioned common library 공유; option별 standalone success/cost 표와 leave-one-option-out ablation |
+| internal | learned detector가 다른 onset을 선택해 same-onset 비교가 깨짐 | detector와 selector effect 혼합 | O1 oracle-onset, fixed SAFE detector group, detector sensitivity를 별도 표로 분리 |
+| internal | test option sweep outcome이 selector fitting·threshold에 유출 | regret와 calibration이 낙관적으로 변함 | test O3는 prediction freeze 뒤 evaluator-only 실행; artifact access log와 split hash 검사 |
+| internal | repeated branch가 simulator RNG, controller cache, policy RNG를 완전히 복원하지 못함 | option 차이가 restore artifact가 됨 | environment·controller·policy/cache·RNG snapshot을 함께 복원하고 branch equivalence test 통과 episode만 primary에 포함 |
+| reproducibility | MuJoCo/robosuite action replay가 machine·version에 따라 drift | 같은 state/seed가 다른 결과 생성 | 같은 pinned container/host에서 state restore를 primary로 사용. cross-machine action replay를 equivalence 근거로 쓰지 않음 |
+| external | programmatic perturbation이 자연 발생 failure와 다름 | synthetic recipe에만 맞는 selector가 됨 | recipe holdout, unseen onset, CALVIN zero-shot; 가능하면 D4 physical bounded perturbation을 별도 수행 |
+| external | 낮은 base-policy competence가 recovery보다 native failure를 지배 | supervisor의 실패 원인이 불분명 | clean competence gate를 통과한 task/init state만 Phase 0에 채택하고 제외 수를 공개 |
+| statistical | branch rollout을 독립 episode로 세어 sample size를 부풀림 | CI가 과도하게 좁아짐 | onset/scenario를 paired cluster로 사용하고 seed·option branch는 cluster 내부 반복으로 처리 |
+| statistical | 많은 baseline·ablation·subgroup 중 좋은 결과만 선택 | false-positive contribution | primary `B*`, metric, margin, shortlist를 confirmatory test 전에 manifest에 고정; secondary는 Holm correction |
+| systems | P1 latency나 추가 policy query가 horizon 밖 자원을 사용 | success gain이 추가 compute/action budget에서 발생 | low-level step, VLA query, selector wall-clock, reset/replan/query를 vector cost로 기록하고 deadline-matched 비교 |
+
+특히 [robosuite state API](https://robosuite.ai/docs/source/robosuite.utils.html)는 simulator state의 `get_state/set_state`를 제공하지만, 공식 demonstration 문서는 action playback이 machine을 넘으면 drift할 수 있음을 경고한다. 따라서 RP-2의 same-onset 근거는 action replay가 아니라 **같은 pinned runtime에서 직접 복원한 simulator state + controller state + policy/cache/RNG state**여야 한다.
+
+## 11. Reject / revise 기준
 
 아래 수치는 Phase 1 실행 전에 고정할 초기 decision rule이다. pilot variance가 지나치게 크면 효과 방향을 보고 threshold를 바꾸지 말고 trial 수 산정만 다시 한다.
 
 | 결과 | 결정 |
 |---|---|
+| ActFovea·Agentic RL 또는 후속 공개본이 same-onset multi-option sweep, matched vector budget, best-fixed/type-only comparison과 option regret를 이미 함께 제공 | `NOVELTY COLLISION`: learned selector method claim을 중단하고 재현·cross-suite evaluation 또는 명시적으로 남은 한 축만 extension으로 재정의 |
 | Phase 0에서 option outcome이 안정적으로 분리되지 않거나 O3가 B10 best-fixed보다 BRCR/BFR practical margin을 넘지 못함 | `REJECT arbitration claim`: context-conditioned option 선택의 실용 가치가 없음 |
 | CCP는 존재하지만 BCP가 없고 scalar budget ablation A8과 차이가 없음 | `REVISE`: vector-budget claim을 제거하고 context-only arbitration으로 축소 |
 | O3는 B10을 이기지만 O1 learned selector가 이기지 못함 | `REVISE selector`: detector가 아니라 context/value head 또는 training target 문제 |
@@ -698,18 +842,18 @@ Phase 1–3이 통과되어도 실물 안전성은 자동으로 따라오지 않
 | P1이 사전 고정한 `B*`보다 BRCR 5 pp 이상 개선하고 paired 95% CI가 0을 제외하며 `ΔIFR ≤ +1 pp` one-sided non-inferiority 만족 | H1 `SUPPORTED` 후보; Phase 2 진행 |
 | P1의 IFR upper CI가 `B* + 1 pp`를 초과 | safety gate 실패; BRCR가 높아도 `REVISED` 또는 `REJECTED` |
 | clean success가 B0 대비 3 pp 초과 하락 | alert/selector가 과민함; clean non-degradation 실패 |
-| binary B5 또는 type-only B11과 P1 차이가 없음 | counterfactual option-value claim 축소; binary/heuristic routing으로 충분한 조건을 분석 |
+| binary B5 또는 type-only B11과 P1 차이가 없음 | same-onset option-value claim 축소; binary/heuristic routing으로 충분한 조건을 분석 |
 | 이득이 특정 perturbation/task에만 존재 | 범용 claim을 버리고 해당 subgroup 조건부 가설로 `REVISED` |
 | LIBERO에서만 성립하고 CALVIN zero-shot에서 사라짐 | benchmark-specific state interface로 축소; cross-suite claim 기각 |
 | A9 chosen-outcome-only가 P1과 동률 | cloned alternative-option supervision claim을 철회하고 일반 option-value selector로 축소 |
-| A1–A8 중 budget/context/value/history를 제거한 두 개 이상이 P1과 동률 | component novelty를 주장하지 않고 더 단순한 scalar/binary decision protocol로 revise |
+| A1–A9 중 budget/context/value/history/alternative supervision을 제거한 두 개 이상이 P1과 동률 | component novelty를 주장하지 않고 더 단순한 scalar/binary decision protocol로 revise |
 | BRCR 개선이 O3 대비 option regret 감소나 acceptable-option agreement로 이어지지 않음 | selector가 outcome을 개선한 것이 아니라 chance/option mix를 이용한 것인지 재검토 |
 | P1의 p95 selector latency가 base control deadline을 초과하고 latency-stratified BRCR 이득이 사라짐 | real-time recovery claim을 철회하고 simulator decision-quality 결과로 범위 축소 |
 | test task·seed가 fit/calibration에 재사용되거나 threshold를 test 후 변경 | confirmatory 결과 무효; 새 protocol version으로 재실행 |
 
 5 pp와 3 pp는 문헌의 보편적 상수가 아니라 프로젝트의 초기 practical-effect/equivalence margin이다. confirmatory trial 수는 Phase 0/1 variance로 power analysis한 뒤 확정한다.
 
-## 11. 필요한 코드·데이터·연산 자원
+## 12. 필요한 코드·데이터·연산 자원
 
 ### 코드
 
@@ -742,14 +886,140 @@ Phase 1–3이 통과되어도 실물 안전성은 자동으로 따라오지 않
 - detector/context/value head는 frozen feature를 쓰므로 단일 GPU에서 학습한다. VLA full fine-tuning은 범위 밖이다.
 - 총 episode 수보다 wall-clock이 정책 inference 속도에 크게 좌우되므로 Phase 0에서 `steps/sec`, GPU memory, episode artifact size를 측정한 뒤 Phase 1 실행 시간을 산정한다.
 
-## 12. 즉시 구현 순서
+## 13. Pre-implementation freeze
 
-1. LIBERO upstream commit과 base policy checkpoint를 고정한다.
-2. 네 pilot task의 clean success와 state landmarks를 확인한다.
-3. `rp2.event.v2` logger와 clone/restore·branch-equivalence test를 먼저 작성한다.
-4. 네 perturbation family의 S1에서 20–50개 valid onset을 수집하고 `B_low/B_mid/B_high`별 모든 applicable option을 sweep한다.
-5. branch validity, Option Separability, CCP, BCP, O3 대비 B10 best-fixed regret를 계산한다. RQ0–RQ2 gate가 없으면 learned selector를 만들지 않는다.
-6. B1–B5, B6–B11과 O3를 고정하고, 재현 가능한 X1–X3의 information/option/budget contract를 맞춘다.
-7. SAFE와 TD-calibrated detector를 연결한 뒤 scalar-risk(B7/B8), best-fixed(B10), type-only(B11)를 먼저 실행한다.
-8. 작은 context/belief encoder와 option-value head를 학습해 P1/O1/O2를 실행하고 A1–A9로 budget, calibration, context, option-value, history, alternative-outcome supervision을 반증한다.
-9. Phase 1 decision rule을 통과한 경우에만 full LIBERO와 CALVIN으로 확장한다. I-02가 지지되기 전에는 I-06 policy update를 시작하지 않는다.
+이 절은 설명이 아니라 구현 착수 계약이다. 상태 표기는 다음처럼 사용한다.
+
+- `FROZEN`: protocol v2의 기본값. 변경하면 `rp2_protocol_v3`와 새 experiment namespace가 필요하다.
+- `PROVISIONAL-FROZEN`: Phase 0 smoke test용 기본값. confirmatory data를 보기 전에 한 번만 바꿀 수 있고 변경 사유와 이전 결과를 남긴다.
+- `EMPIRICAL-FREEZE`: 미리 정한 calibration/Phase 0 규칙으로 값을 선택한 뒤 test 전에 잠근다.
+- `BLOCKED/EXTENSION`: 현재 최소 C1에 넣지 않는다. interface acceptance test를 통과한 뒤 별도 version에서만 추가한다.
+
+### 13.1 결정 ledger
+
+| 영역 | 결정 | 상태 | freeze artifact / 변경 규칙 |
+|---|---|---|---|
+| contribution | same-onset all-option supervision이 best-fixed regret를 줄이는지 검증하는 C1; 새 recovery skill·detector·POMDP selector 자체는 claim하지 않음 | `FROZEN` | 이 문서의 claim ladder와 `rp2_protocol_v2.yaml` |
+| environment | LIBERO `8f1084e3132a39270c3a13ebe37270a43ece2a01` | `FROZEN` | [official commit](https://github.com/Lifelong-Robot-Learning/LIBERO/tree/8f1084e3132a39270c3a13ebe37270a43ece2a01), container digest 기록 |
+| policy adapter | SAFE OpenVLA fork `300dce26d44f407c725695d16cd445755c92cbd1` | `PROVISIONAL-FROZEN` | [fork commit](https://github.com/vla-safe/openvla/tree/300dce26d44f407c725695d16cd445755c92cbd1); smoke test 실패 시 이유와 대체 commit 기록 |
+| base checkpoint | `openvla/openvla-7b-finetuned-libero-10` | `PROVISIONAL-FROZEN` | model revision/hash, tokenizer/config hash, weight license를 `rp2_system_manifest_v1.json`에 기록 |
+| detector code | SAFE `b6036abe07b2b2bb9996afb2c07f13d6a9f507c0` | `PROVISIONAL-FROZEN` | [official commit](https://github.com/vla-safe/SAFE/tree/b6036abe07b2b2bb9996afb2c07f13d6a9f507c0); official LSTM/MLP reproduction 뒤 primary detector 고정 |
+| inference | `center_crop=True`, hidden states 저장, deterministic `n_samples=1`, fixed seed | `FROZEN` | multi-sample uncertainty는 detector sensitivity로만 실행 |
+| VLA feature tap | SAFE 공식 후보 `token_idx_rel ∈ {mean, 0.0, 1.0}`를 재현하고 detector calibration 성능으로 하나를 고정 | `EMPIRICAL-FREEZE` | 선택된 tap은 B2/B3/B7/B9–B11/P1에 공통 사용 |
+| runtime | Python 3.10, headless EGL, base-policy env와 SAFE-head env 분리 | `PROVISIONAL-FROZEN` | torch/CUDA/MuJoCo/robosuite exact version과 image digest는 smoke test 뒤 lock |
+| primary benchmark | 네 Phase 0 task → 통과 시 full `libero_10`; CALVIN은 C2 transfer | `FROZEN` | `rp2_split_v1.json` |
+| option library | Phase 0/1은 `O_core`; `O_graph/O_assist`는 별도 extension | `FROZEN` | `rp2_option_library_v1.yaml`; option별 pre/postcondition과 cost unit 필요 |
+| trigger | Phase 0 data generation은 oracle `t_effect`; deployed P1은 frozen SAFE alert | `FROZEN` | O1/P1 결과를 분리하고 oracle trigger를 일반 baseline으로 보고하지 않음 |
+| decision timing | alert당 1회 선택; `REOBSERVE_WAIT` 뒤 fresh evidence가 있을 때 1회만 재평가 | `FROZEN` | Agentic RL의 fixed-interval decision과 구분해 query count 기록 |
+| primary context | selected VLA feature + proprioception/action/alert history + `t/600` + budget; BDDL progress/subgoal 제외 | `FROZEN` | `O_graph`에서만 non-privileged task-state adapter feature 추가 |
+| learning problem | grouped full-information supervised prediction; PPO/Q-learning은 X5/sensitivity | `FROZEN` | test-time unchosen outcome 접근 금지 |
+| primary selector | risk·feasibility gate → max calibrated completion → cost tie-break → no option이면 abort | `FROZEN` | weighted `q-λcost`는 sensitivity |
+| completion tie | calibrated `q` 차이 `<0.02`이면 normalized total cost로 tie-break | `PROVISIONAL-FROZEN` | Phase 1 전 calibration reliability audit 뒤 고정; test 결과로 변경 금지 |
+| model architecture | 1-layer GRU hidden 256, history 20 low-level step; option embedding 32; shared MLP 256→128, dropout 0.1 | `PROVISIONAL-FROZEN` | history `{10,20,40}`와 MLP-only는 development sensitivity; test 뒤 변경 금지 |
+| optimizer | AdamW, lr `3e-4`, weight decay `1e-4`, batch 64, max 100 epoch, patience 10, seeds `{0,1,2}` | `PROVISIONAL-FROZEN` | Phase 0 sample/throughput 확인 뒤 Phase 1 전에 한 번 고정 |
+| loss | empirical q/r/cost target, primary `λrank=0`; P1-rank `λrank=1`; `λaux=0` primary | `FROZEN` | auxiliary type와 rank는 별도 variant; component gain을 섞지 않음 |
+| calibration | temperature scaling primary; option별 support가 부족하면 pooled scaling; isotonic은 sensitivity | `EMPIRICAL-FREEZE` | calibration split에서만 선택하고 Brier/ECE와 sample count 공개 |
+| risk threshold | calibration에서 IFR non-inferiority `+1 pp`를 만족하는 최대-coverage `δ` | `EMPIRICAL-FREEZE` | 만족 threshold가 없으면 P1은 abort-only 또는 reject |
+| strongest baseline | B3/B5/B7/B8/B10/B11과 재현 가능한 X5 우선, matched X0–X6 후보 | `EMPIRICAL-FREEZE` | Phase 1 development에서 `B*`를 정한 뒤 confirmatory test 전에 서명/hash |
+| primary statistics | paired cluster bootstrap, `ΔBRCR ≥5 pp`, `ΔIFR` upper CI `≤+1 pp`, clean drop `≤3 pp` | `FROZEN` | Phase 0 variance는 sample-size 산정에만 사용 |
+| test access | selector·threshold·B*·manifest hash 고정 뒤 confirmatory outcome 생성 | `FROZEN` | test artifact를 먼저 생성했다면 blind directory/ACL로 fitting process와 분리 |
+
+### 13.2 Provisional perturbation recipe
+
+다음 값은 raw action 단위와 task geometry를 smoke test에서 확인하기 위한 `PROVISIONAL-FROZEN` 시작점이다. validity gate만 보고 조정할 수 있으며 P1/B* 결과를 본 뒤에는 바꾸지 않는다.
+
+| Family | S1 | S2 | validity 조건 |
+|---|---|---|---|
+| observation | exterior+wrist RGB를 3 frame 지연해 20 low-level step 유지 | trigger frame을 20 low-level step replay한 뒤 fresh stream 복귀 | proprioception은 현재값 유지; S2가 영구 replay면 R4 diagnostic으로 재분류 |
+| execution | translational action을 5 step zero/drop | translational action을 10 step zero/drop | gripper command는 보존; native horizon 안에서 task가 여전히 oracle-recoverable |
+| world-state | target 또는 receptacle을 collision-free reachable pose로 3 cm 이동 | 같은 규칙으로 7 cm 이동 | orientation과 unrelated object는 고정; IK/workspace feasibility 통과 |
+| plan-semantic | 완료된 articulated predicate 하나를 한 번 무효화 | 다음 subgoal 전제조건 두 개를 동시에 무효화 | goal 자체를 이미 만족시키거나 영구 불가능하게 만들지 않음 |
+
+Agentic RL의 raw `Uniform(-3,3)` action noise는 policy/action normalization에 따라 의미가 달라 그대로 복사하지 않는다. ActFovea의 three-frame visual delay는 observation S1의 source-verified starting point로 사용한다. 각 recipe는 effect size가 아니라 **조작 값**으로 고정하고, 결과를 본 뒤 S1/S2를 R1/R2/R3에 맞춰 재라벨링하지 않는다.
+
+### 13.3 Option implementation decision table
+
+| Option | precondition | exact action/termination | cost accounting | 상태 |
+|---|---|---|---|---|
+| `CONTINUE` | base policy가 active | policy/cache 유지, next native action 실행 | native step만 | `FROZEN` |
+| `RETRY_CURRENT` | absorbing event 없음 | environment 불변, policy/cache reset, 동일 instruction 재query; success/timeout/60 recovery step에 종료 | 1 option call + executed step | `PROVISIONAL-FROZEN` |
+| `REOBSERVE_WAIT` | camera stream query 가능 | translational zero와 gripper hold를 5 low-level step 실행, fresh timestamp 확인 후 1회 재평가 | 1 option call + 5 step + 1 VLA query | `PROVISIONAL-FROZEN` |
+| `STATE_RESET` | 최근 contact-free pose buffer 존재 | gripper open, 최근 30 step 안의 most-recent contact-free EE pose로 OSC retreat, cache reset; 60 step cap | 1 reset + executed step | `PROVISIONAL-FROZEN` |
+| `ABORT_STOP` | 항상 가능 | zero/safe-hold command 후 autonomous terminal | completion 아님; abort count | `FROZEN` |
+| `SUBGOAL_REWIND` | observed progress checkpoint와 atomic subgoal adapter 존재 | physical state 유지, task/policy state만 last verified checkpoint로 rewind | 1 rewind + suffix step | `BLOCKED/EXTENSION` |
+| `TASK_REPLAN` | non-privileged state estimator와 task graph 존재 | 미완료 goal의 새 suffix를 만들고 feasibility check | 1 replan + planner latency | `BLOCKED/EXTENSION` |
+| `HUMAN_ESCALATE` | assisted protocol에서만 | safe stop 후 사전 등록한 correction 1회 | 1 terminal query; autonomous success 아님 | `EXTENSION` |
+
+`STATE_RESET`의 recent pose selection은 Agentic RL의 contact-free Repair와 직접 충돌한다. 따라서 이를 RP-2 novelty로 표현하지 않고 X5와 동일 recovery primitive를 공유할 수 있을 때 우선 공유한다. force/contact 신호가 없는 adapter에서는 gripper·object/EE kinematics 기반 contact-free proxy를 사용하고 별도 sensitivity로 표시한다.
+
+### 13.4 Phase 0 acceptance criteria
+
+| Gate | 사전 고정 pass 기준 | 실패 시 결정 |
+|---|---|---|
+| environment smoke | 네 task 모두 reset/20-step zero-action/goal predicate/logger가 10회 연속 오류 없이 실행 | dependency와 adapter부터 수정 |
+| clean competence | task별 10 init 중 최소 5 success, 전체 40 중 최소 24 success | task/checkpoint 교체; 실패 init만 선택적으로 삭제 금지 |
+| restore equality | 같은 host/container에서 `qpos/qvel/time`, object state, controller state, policy cache, RNG 복원; 5회 반복에서 state max error `≤1e-7`, proprio `≤1e-6`, normalized RGB max error `≤1/255`, first action `≤1e-5` | tolerance를 결과에 맞춰 완화하지 말고 snapshot 범위를 수정 |
+| branch validity | included branch는 action 직전 equivalence 100%; candidate onset 중 valid group 비율 `≥95%` | I-12 wrapper 수정; invalid 수와 원인 공개 |
+| perturbation validity | recipe가 의도 field만 바꾸며 goal은 미달성·oracle-recoverable; valid rate `≥90%` | recipe version 수정 후 onset 재수집 |
+| sweep stability | 동일 state/option/budget/seed를 3회 재실행했을 때 terminal label agreement `≥90%` | 더 많은 반복 또는 deterministic source 수정 |
+| minimum dataset | valid onset `≥20`, 최소 2 task·2 failure family 포함 | P1 학습 금지; data protocol 보강 |
+| option separability | valid onset의 `≥20%`에서 stable option pair 차이, 최소 2 task/family에 분포 | learned arbitration reject |
+| context value | O3가 B10보다 BRCR `≥5 pp` 또는 normalized BFR `≥0.05` | selector reject; best-fixed protocol로 축소 |
+| budget value | BCP `≥10%`이고 최소 2 failure family에서 관찰 | `budgeted/vector-budget` claim 제거 |
+| resource feasibility | measured throughput·artifact size로 Phase 1 shortlist가 가용 자원의 4주 이내 | task/system/seed를 사전 규칙으로 줄이고 full matrix 약속 금지 |
+
+20%, 10%, 0.05와 4주는 문헌의 보편적 기준이 아니라 **불필요한 P1 구현을 막기 위한 내부 go/no-go margin**이다. 값은 첫 outcome을 보기 전에 `rp2_protocol_v2.yaml`에 기록한다.
+
+### 13.5 Pre-implementation freeze checklist
+
+Research contract:
+
+- [x] problem, system boundary, H0–H4, RQ0–RQ5 고정
+- [x] C0–C3 claim ladder와 broad non-claims 고정
+- [x] Agentic RL·ActFovea·ProbeAct·CoRe·ViFailback full-text collision audit 반영
+- [x] primary estimand, full-information supervision, baseline·oracle·ablation·metric 정의
+- [x] novelty/internal/construct/external/statistical/systems threat와 reject rule 정의
+
+Artifacts that must exist before the first Phase 0 rollout:
+
+- [ ] `rp2_system_manifest_v1.json`: repo/checkpoint/container/GPU/dependency/license hash
+- [ ] `rp2_event_v2.schema.json`: header/event required field, enum, validation rule
+- [ ] `rp2_option_library_v1.yaml`: `O_core` precondition, timeout, cost, fallback
+- [ ] `rp2_factor_manifest_v1.json`: task × onset × recipe × severity × budget × seed valid cell
+- [ ] `rp2_split_v1.json`: fit/calibration/confirmatory task·init·recipe·seed isolation
+- [ ] `rp2_protocol_v2.yaml`: margins, tolerances, selector, calibration, model/training defaults
+- [ ] `THIRD_PARTY.md` 또는 manifest field: LIBERO/SAFE/OpenVLA/code·weight license와 attribution
+
+Acceptance tests that must pass before collecting D2-option:
+
+- [ ] base policy clean-competence report
+- [ ] snapshot/restore equality and repeated replay report
+- [ ] policy-visible vs evaluator-only field leakage test
+- [ ] each `O_core` option unit/integration test and standalone cost table
+- [ ] perturbation locality·solvability·onset detection test
+- [ ] paired episode ID and immutable artifact/hash test
+
+Freeze steps required before training or confirmatory evaluation:
+
+- [ ] Phase 0 gate report: separability, CCP, BCP, BFR, O3–B10 gap
+- [ ] X5 Agentic RL first, then X4/X6 code/input/option/budget reproduction matrix
+- [ ] P1 architecture·training seed·calibration·risk threshold freeze
+- [ ] strongest non-privileged `B*`와 confirmatory shortlist freeze
+- [ ] Phase 2 power calculation and compute/storage budget freeze
+- [ ] signed manifest hash와 test-artifact access boundary 확인
+
+체크되지 않은 artifact는 “문서에 적혀 있다”는 이유로 완료 처리하지 않는다. 첫 코드는 environment smoke/logger/snapshot test여야 하며, Phase 0 gate 전에 P1 학습 코드를 최적화하지 않는다.
+
+## 14. 즉시 구현 순서
+
+1. `rp2_system_manifest_v1.json`과 third-party license/checkpoint audit를 작성하고 위 exact commit·checkpoint를 clone 가능한지 확인한다.
+2. `rp2_event_v2.schema.json`, `rp2_option_library_v1.yaml`, `rp2_factor_manifest_v1.json`, `rp2_split_v1.json`, `rp2_protocol_v2.yaml`을 생성하고 schema validation test를 만든다.
+3. 네 pilot task에서 environment smoke와 clean-competence gate를 실행한다.
+4. environment/controller/policy-cache/RNG를 포함하는 snapshot/restore runner와 branch-equivalence test를 작성한다.
+5. `O_core`의 unit/integration test와 M0–M2 mechanism control을 구현한다. `O_graph`는 별도 acceptance test 전에는 시작하지 않는다.
+6. 네 perturbation family의 provisional S1/S2 locality·solvability를 감사하고 20–50개 valid onset을 수집한다.
+7. `B_low/B_mid/B_high`에서 모든 applicable `O_core` option을 sweep하고 Option Separability, CCP, BCP, BFR, O3–B10 gap을 계산한다.
+8. Phase 0 gate가 없으면 learned selector를 만들지 않는다. gate가 있으면 Agentic RL X5를 가장 먼저 맞추고 X4/X6의 재현 가능한 mechanism subset을 고정한다.
+9. SAFE/TD-calibrated detector와 B1–B11, M0–M2, O3를 고정한 뒤 P1 prediction-only와 P1-rank를 학습한다.
+10. A1–A9와 oracle decomposition으로 budget, calibration, context, option-value, history, alternative-outcome supervision을 반증한다.
+11. architecture·threshold·`B*`·shortlist·manifest hash를 freeze한 경우에만 full LIBERO confirmatory test와 CALVIN transfer로 확장한다. I-02가 지지되기 전에는 I-06 policy update를 시작하지 않는다.

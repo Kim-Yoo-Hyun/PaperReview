@@ -1,15 +1,31 @@
-# RP-3 Phase-Aware Memory Expiry
+# RP-3 Risk-Calibrated Memory Expiry under State Change
 
 - Status: `SCOPED / NEXT`
-- Updated: 2026-08-28 KST
+- Updated: 2026-08-28 KST (`frontier re-audit`)
 - Parent idea: [I-03 Phase-aware spatial memory with learned expiry](../RESEARCH_IDEAS.md#i-03-phase-aware-spatial-memory-with-learned-expiry)
 - Primary gap: [G-04 Persistent spatial memory staleness and uncertainty](../RESEARCH_GAPS.md#g-04-persistent-spatial-memory의-staleness와-uncertainty)
 - Primary environment: `RoboCasa` dynamic manipulation tasks
 - Secondary transfer: `RLBench` state-change task subset
 - Hypothesis evidence: `UNTESTED`
-- Novelty status: `CONDITIONALLY_FIT` — persistent memory, sparse retrieval, drift mitigation, memory-trap rollback은 이미 존재한다. novelty는 item-level validity·unsafe-action risk calibration과 selective expiry/verification이 closed-loop safety–success trade-off를 개선할 때만 성립한다.
+- Novelty status: `HIGH-COLLISION / CONDITIONALLY_FIT` — persistent/temporal memory, transition-aware verification, learned retention, object-state divergence checking까지 이미 존재한다. novelty는 **exogenous state change에서 item exposure가 만든 unsafe action을 paired branch로 귀속하고, calibrated unsafe-use risk와 bounded verification cost로 retain/refresh/expire/verify를 선택하는 것**이 strongest frontier-style baseline을 이길 때만 성립한다.
+- Gap verdict: [G-04는 `narrowed`](../RESEARCH_GAPS.md#g-04-persistent-spatial-memory의-staleness와-uncertainty). memory, verification, transition awareness와 learned update 자체는 gap이 아니다.
+- Evidence boundary: MomaGraph/SOMA의 기존 full-text audit와 2026-08-28 arXiv/official abstract를 분리한다. 최신 preprint는 collision/baseline 후보이며 section-level claim이나 venue acceptance의 근거로 쓰지 않는다.
 
-이 프로젝트는 새로운 3D map이나 대형 VLA를 만드는 연구가 아니다. frozen visuomotor/VLA policy와 고정 memory representation 위에서, **현재 task phase가 바뀐 뒤 어떤 memory item을 계속 믿고, 갱신하고, 폐기하고, 다시 관측해야 하는지**를 결정하는 lightweight memory supervisor를 검증한다.
+이 프로젝트는 새로운 3D map이나 대형 VLA를 만드는 연구가 아니다. frozen visuomotor/VLA policy와 고정 memory representation 위에서, **task 진행 중 world state가 바뀐 뒤 어떤 memory item을 계속 믿고, 갱신하고, 폐기하고, 다시 관측해야 하는지**를 결정하는 lightweight memory supervisor를 검증한다. phase는 후보 context feature이지 그 자체가 contribution은 아니다.
+
+### 2026-08-28 frontier re-audit 결론
+
+8월 최신 preprint는 broad memory claim을 크게 좁힌다. POT-VLA는 persistent role-indexed 3D object record를 action과 geometric predicate verification에 함께 사용한다. BATON은 subtask transition-aware memory와 invocation/handoff/lookahead verification을, HyMeS는 stage-completion verification을 통한 high-level memory update를, OnEvoMemory는 rollout value로 retention을 학습한다. StreamPI·PonderPounce·Remember Smarter·Explicit Language Memory도 temporal context, cognition age, history compression, dynamic language-memory correction을 각각 다룬다.
+
+따라서 RP-3의 남은 식별 가능한 단위는 다음 교집합뿐이다.
+
+1. relocation·removal·articulated-state change처럼 **관측되지 않은 exogenous world change**를 분리한다.
+2. 동일 environment/policy state에서 fresh·stale·masked·verified branch를 실행해 **item exposure → unsafe action**을 귀속한다.
+3. item validity와 별도로 **unsafe-use probability**를 calibration한다.
+4. fixed TTL·confidence·divergence verification·transition verifier·value-guided retention과 **같은 observation/verification budget**으로 비교한다.
+5. task/shift family holdout에서 risk–coverage와 safety–success–observation-cost Pareto를 검증한다.
+
+이 중 paired unsafe-use attribution이나 matched verification budget이 빠지면 “memory expiry method”가 아니라 state-change benchmark 또는 memory-policy sensitivity study로 축소한다.
 
 ## 0. 연구 범위와 시스템 경계
 
@@ -31,12 +47,12 @@ RP-3의 closed loop는 다음과 같다.
 
 ### 핵심 질문
 
-> object relocation·removal·drawer/receptacle state transition 뒤 memory item의 validity와 그 item을 사용할 때의 unsafe-action probability를 calibration해 `retain / refresh / expire / verify`를 선택하면, persistent memory·fixed TTL·similarity refinement·sparse retrieval·rollback보다 stale-memory-induced unsafe action을 줄이면서 task success와 observation budget을 유지할 수 있는가?
+> object relocation·removal·drawer/receptacle state transition 뒤 memory item의 validity와 그 item을 사용할 때의 unsafe-action probability를 calibration해 `retain / refresh / expire / verify`를 선택하면, fixed TTL·confidence·sparse retrieval뿐 아니라 object-divergence verification·transition verifier·value-guided retention보다 stale-memory-induced unsafe action을 줄이면서 task success와 observation budget을 유지할 수 있는가?
 
 ### 검증 가설
 
 - **H0 — Memory-causality precondition:** 동일 world state에서 fresh-oracle, stale-persistent, masked-memory branch의 action/outcome이 구분된다. stale memory가 no-memory보다 해롭지 않거나 fresh memory가 유용하지 않으면 expiry project를 진행하지 않는다.
-- **H1 — Validity calibration:** phase·age·geometric confidence를 사용하는 supervisor는 fixed TTL 또는 confidence-only baseline보다 memory validity와 unsafe-use risk의 Brier/ECE·selective risk를 개선한다.
+- **H1 — Risk calibration:** phase·age·geometric confidence와 action context를 사용하는 supervisor는 fixed TTL·confidence-only·divergence trigger·transition verifier보다 item validity와 unsafe-use risk의 Brier/ECE·selective risk를 개선한다.
 - **H2 — Closed-loop safety:** shift episode에서 제안 supervisor는 strongest non-privileged baseline보다 stale-memory-induced unsafe action을 줄이고 Memory-Shift Completion Rate를 높인다.
 - **H3 — Observation-cost gate:** H2의 이득은 verify/re-scan 횟수와 latency를 무제한으로 늘려 얻은 것이 아니며, 같은 verification budget에서 유지된다.
 - **H4 — Generalization:** task 또는 state-change family를 hold-out해도 validity calibration과 safety–success gain이 유지된다.
@@ -45,7 +61,7 @@ RP-3의 closed loop는 다음과 같다.
 
 - **RQ0 — Downstream memory use:** base policy가 retrieved memory를 실제 action에 사용하는가? oracle fresh memory와 no-memory가 동률이면 policy interface가 병목이다.
 - **RQ1 — Staleness harm:** stale item을 노출한 branch가 masked/fresh branch보다 empty grasp, invalid placement, collision 또는 progress regression을 더 자주 만드는가?
-- **RQ2 — Phase의 필요성:** age·similarity가 같아도 subgoal/scene-state transition 이후 최적 memory action이 달라지는가?
+- **RQ2 — Phase의 추가 가치:** age·similarity·object-state divergence가 같아도 subgoal/scene-state transition과 downstream action context에 따라 최적 memory action이 달라지는가? 아니면 POT/BATON류 divergence·transition trigger로 충분한가?
 - **RQ3 — Expire와 verify의 구분:** 불확실한 item을 항상 삭제하거나 항상 다시 관측하는 것보다 calibrated selective decision이 유리한가?
 - **RQ4 — 병목 분해:** state-change detection, item association, validity calibration, downstream policy sensitivity 중 무엇이 safety–success trade-off를 제한하는가?
 - **RQ5 — 전이성:** 동일 supervisor가 unseen object category, task template, perturbation family 또는 RLBench adapter로 옮겨가는가?
@@ -55,7 +71,7 @@ RP-3의 closed loop는 다음과 같다.
 | Level | 주장 | 필요한 증거 |
 |---|---|---|
 | `C0` | dynamic-memory perturbation·branch evaluator | reproducible state change, memory provenance, branch equivalence, unsafe-action annotation |
-| `C1` | calibrated memory expiry/verification이 fixed update rule보다 유리 | H0 통과, H1/H2, verification-budget matching, oracle decomposition |
+| `C1` | calibrated unsafe-use-aware item decision이 fixed/frontier-style update rule보다 유리 | H0 통과, H1/H2, verification-budget matching, oracle decomposition, POT/BATON/OnEvo 계열과의 matched comparison |
 | `C2` | state-change/task family 일반화 | hold-out family 또는 RLBench에서 frozen supervisor transfer |
 | `C3` | real-world memory safety improvement | 실제 perception/association error와 physical safety metric을 포함한 별도 검증 |
 
@@ -70,25 +86,35 @@ RP-3의 closed loop는 다음과 같다.
 - task-relevant sparse retrieval과 accumulated drift 완화는 Memory Retrieval/HALO가 직접 탐색한다.
 - memory trap detection과 high-affordance rollback은 Affordance Field Intervention이 다룬다.
 - open-set 3D feature fusion과 semantic map construction은 ConceptFusion 계열의 범위다.
+- persistent 3D object token과 object-state divergence에 대한 geometric predicate verification은 POT-VLA가 탐색한다.
+- subtask transition-aware memory·stage-completion verification은 BATON과 HyMeS가, rollout value 기반 learned retention은 OnEvoMemory가 탐색한다.
+- temporal streaming context, episode cognition+age, compressed history/experience와 explicit language-memory correction은 StreamPI·PonderPounce·Remember Smarter·Explicit Language Memory가 각각 다룬다.
 
-따라서 RP-3는 “memory가 stale해진다”, “retrieval이 필요하다”, “rollback을 추가한다”, “3D memory를 만든다”를 contribution으로 주장하지 않는다. 남은 연구 단위는 다음 세 가지의 결합이다.
+따라서 RP-3는 “memory가 stale해진다”, “retrieval이 필요하다”, “transition-aware memory가 필요하다”, “verification/retention을 학습한다”, “rollback을 추가한다”, “3D memory를 만든다”를 contribution으로 주장하지 않는다. 남은 연구 단위는 다음 네 가지의 결합이다.
 
-1. task-retrieved **item-level validity probability**,
-2. 해당 item을 policy에 노출할 때의 **unsafe-action probability**,
-3. validity·risk·phase·observation cost에 따른 **selective retain/refresh/expire/verify decision**.
+1. exogenous state change 뒤 task-retrieved **item-level validity probability**,
+2. 동일 state branch로 귀속한 해당 item의 **unsafe-action exposure probability**,
+3. validity·risk·phase·observation cost에 따른 **selective retain/refresh/expire/verify decision**,
+4. unseen shift family에서의 **selective-risk calibration과 matched verification-budget Pareto**.
 
 ### 방법론과 평가에서 차용할 요소
 
 | 근거 | 차용하는 요소 | 그대로 주장하지 않을 부분 | Evidence level |
 |---|---|---|---|
 | [POMDP](../../1998/Artificial-Intelligence/1998_Artificial-Intelligence_Planning-and-Acting-in-Partially-Observable-Stochastic-Dom/01_overview.md) | hidden world state 대신 history-conditioned belief를 쓰는 formulation | finite memory가 true state를 복원한다는 가정 | registry foundation |
+| [Kalman filtering](../../1960/Journal-of-Basic-Enginee/1960_Journal-of-Basic-Enginee_A-New-Approach-to-Linear-Filtering-and-Prediction-Problems/01_overview.md) | observation update와 uncertainty propagation의 기초 | learned embedding confidence가 calibrated state uncertainty와 같다는 해석 | registry foundation |
 | [ConceptFusion](../../2023/RSS/2023_RSS_ConceptFusion-Open-set-Multimodal-3D-Mapping/01_overview.md) | object/region feature와 geometry를 가진 persistent map interface | open-set representation accuracy가 control safety를 보장한다는 해석 | registry anchor; note maturity `UNREAD` |
 | [MomaGraph](../../2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan/01_overview.md) | observed state-transition graph와 state-aware update | graph reasoning 성능을 expiry calibration 결과로 해석하는 것 | G-04 full-text audit |
 | [SOMA / Spatial Memory for OOV Manipulation](../../2026/ICML/2026_ICML_Spatial-Memory-for-Out-of-Vision-Manipulation-in-Vision-La/01_overview.md) | multi-view persistent memory, dynamic refinement, RoboCasa evaluation cue | SOMA-style refinement가 item validity를 calibration한다고 가정하는 것 | G-04 full-text audit |
 | [Memory Retrieval/HALO](../../2026/RSS/2026_RSS_Memory-Retrieval-in-Visuomotor-Policies-for-Long-Horizon-R/01_overview.md) | task-relevant sparse retrieval과 drift-aware comparison | full method·수치·limitation을 정독 전에 확정하는 것 | `SOURCE-VERIFIED / CURATION_ONLY` |
 | [Affordance Field Intervention](https://openaccess.thecvf.com/content/CVPR2026/html/Xu_Affordance_Field_Intervention_Enabling_VLAs_to_Escape_Memory_Traps_in_CVPR_2026_paper.html) | memory-trap detection과 rollback intervention baseline | rollback이 item-level expiry·risk calibration을 해결한다는 해석 | `SOURCE-VERIFIED` |
+| [POT-VLA](https://arxiv.org/abs/2607.18016) | role-indexed persistent 3D object record와 object-state divergence/predicate verification | object token이나 verification 자체를 novelty로 주장하는 것 | `PREPRINT-ONLY / SOURCE-VERIFIED` |
+| [BATON](https://arxiv.org/abs/2608.16889) | subtask invocation·handoff·lookahead transition verifier와 transition-aware memory | subtask transition rule이 item-level unsafe-use calibration을 대체한다고 가정하는 것 | `PREPRINT-ONLY / SOURCE-VERIFIED` |
+| [HyMeS](https://arxiv.org/abs/2608.09410) | multimodal stage-completion verification과 executable high-level memory management | coding-agent memory update가 calibrated per-item expiry라는 해석 | `PREPRINT-ONLY / SOURCE-VERIFIED` |
+| [OnEvoMemory](https://arxiv.org/abs/2608.08749) | successful/unsuccessful rollout value 기반 retention과 stage-transition memory | learned retention score가 exogenous shift의 unsafe-use risk를 직접 나타낸다는 해석 | `PREPRINT-ONLY / SOURCE-VERIFIED` |
+| [StreamPI](https://arxiv.org/abs/2608.26067), [PonderPounce](https://arxiv.org/abs/2608.24115), [Remember Smarter](https://arxiv.org/abs/2608.15269), [Explicit Language Memory](https://arxiv.org/abs/2608.04765) | streaming history, cognition token+age, compressed visual/experience memory, explicit language-memory correction | 더 긴 context·압축·language correction 자체를 expiry contribution으로 주장하는 것 | `PREPRINT-ONLY / SOURCE-VERIFIED` |
 
-HALO와 AFI는 direct counter-evidence이므로 strong baseline family로 다루되, 저자 코드·input·intervention contract를 동일 조건으로 맞추지 못하면 `-style` adaptation과 원 논문의 reported result를 구분한다.
+HALO·AFI와 최신 POT/BATON/HyMeS/OnEvoMemory 계열은 direct counter-evidence이므로 strong baseline family로 다루되, 저자 코드·input·intervention contract를 동일 조건으로 맞추지 못하면 `-style` adaptation과 원 논문의 reported result를 구분한다. Gemini Robotics 2의 progress/event detection과 self-correction은 [official system page](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/)에서 capability boundary로만 사용하고, 공개된 memory interface가 없으므로 baseline으로 가장하지 않는다.
 
 ## 3. Benchmark와 base-policy 결정
 
@@ -170,13 +196,15 @@ d_i* = argmin_d E[L_task(d)] + λu · u_i(d) + λcᵀ · c_i(d)
 
 ### Controlled memory-shift taxonomy
 
+Primary claim은 **exogenous state change**에 한정한다. 즉 memory가 정상적으로 기록된 뒤 robot이 보지 못한 사이 environment state가 바뀌어 stale해지는 경우다. update 누락·association error처럼 memory system 자체에서 생긴 **endogenous error**는 sensitivity로 분리한다. 둘을 섞으면 state-change detection, association quality와 expiry decision의 효과를 식별할 수 없다. 모든 event에 `shift_origin ∈ {exogenous_world_change, endogenous_update_error}`를 기록한다.
+
 | Shift family | 조작 | stale memory가 만드는 대표 위험 | 적용 phase |
 |---|---|---|---|
 | `RELOCATION` | target 또는 receptacle을 reachable한 다른 pose로 이동 | old pose로 reach/grasp/place | pre-grasp, transport, pre-place |
 | `REMOVAL_REAPPEARANCE` | item을 scene에서 제거하거나 다른 view에 재등장 | empty grasp, duplicate/false association | post-scan, between-subgoals |
 | `STATE_TRANSITION` | drawer/door/receptacle의 open/closed 또는 occupancy 상태 변경 | invalid approach·placement·collision | subgoal transition |
-| `DELAY_DROPOUT` | observation 또는 memory update를 N step 지연·누락 | old state 유지, late refresh | transition 직후 |
-| `ASSOCIATION_NOISE` | feature/pose perturbation으로 merge/swap 유도 | wrong-object action | Phase 2 sensitivity |
+| `DELAY_DROPOUT` | exogenous transition 뒤 observation을 N step 지연·누락 | old state 유지, late refresh | transition 직후; primary exogenous condition |
+| `ASSOCIATION_NOISE` | feature/pose perturbation으로 merge/swap 유도 | wrong-object action | endogenous-error Phase 2 sensitivity |
 
 각 family는 S1/S2 severity를 사전 등록한다. arbitrary wall-clock percentage 대신 `post_scan`, `pre_grasp`, `post_grasp`, `pre_place`, `between_subgoals` landmark에서 삽입한다. task semantics와 맞지 않는 cell은 `not_applicable`로 manifest에 남긴다.
 
@@ -226,9 +254,14 @@ unsafe action은 단순한 최종 task failure가 아니다. evaluator가 다음
 | B5 | HALO-style sparse retrieval | task-relevant top-k retrieval, 별도 expiry 없음 | retrieval만으로 staleness가 해결되는지 |
 | B6 | AFI-style rollback | trap detector가 recent high-affordance state로 rollback | 사후 intervention과 사전 expiry 비교 |
 | B7 | verify-all | 불확실한 retrieved item을 항상 `VERIFY` | observation을 많이 쓰는 ceiling/비용 baseline |
-| P1 | phase-aware calibrated supervisor | `RETAIN/REFRESH/EXPIRE/VERIFY` 선택 | 제안 방법 |
+| B8 | POT-style divergence verifier | current observation과 persistent object/state record의 divergence가 threshold를 넘으면 `VERIFY`, 실패 시 `EXPIRE` | explicit object-state verification으로 충분한지 |
+| B9 | BATON/HyMeS-style transition verifier | subtask entry/exit 또는 completion event마다 relevant item을 verify/refresh | phase transition trigger가 per-item risk head를 대체하는지 |
+| B10 | OnEvo-style value-guided retention | rollout outcome으로 learned retention score를 만들고 낮은 item을 expire | unsafe-use target 없이 value-based retention만으로 충분한지 |
+| P1 | unsafe-use-risk-calibrated item supervisor | phase·validity·risk·cost에 따라 `RETAIN/REFRESH/EXPIRE/VERIFY` 선택 | 제안 방법 |
 
-B4–B6는 저자 구현을 동일 policy/environment에 이식할 수 있을 때만 원 method 이름으로 부른다. 그렇지 않으면 구현 차이를 명시한 `-style adaptation`으로 보고한다. 모든 방법은 같은 base policy, memory encoder, retrieved top-k, camera interface, horizon, verify budget을 공유한다.
+B4–B6·B8–B10은 저자 구현을 동일 policy/environment에 이식할 수 있을 때만 원 method 이름으로 부른다. 그렇지 않으면 구현 차이를 명시한 `-style adaptation`으로 보고한다. 모든 방법은 같은 base policy, memory encoder, retrieved top-k, camera interface, horizon, verify budget을 공유한다. `B*`는 Phase 1 development split에서 B2–B10 중 strongest non-privileged system으로 사전 고정하고 confirmatory test를 본 뒤 바꾸지 않는다.
+
+StreamPI·PonderPounce·Remember Smarter는 memory backbone/context capacity를 바꾸므로 P1과의 primary selector 비교에 바로 넣지 않는다. 공개 구현을 사용할 수 있으면 동일 supervisor를 붙인 **backbone sensitivity**로만 실행해, larger context/backbone gain을 expiry decision gain으로 귀속하지 않는다. POT-VLA 원 구현은 humanoid/object-token stack이 달라 reported result를 RoboCasa P1과 직접 순위 비교하지 않는다.
 
 ### Oracle decomposition
 
@@ -252,8 +285,9 @@ O0–O3는 privileged diagnostic이며 P1의 일반 baseline이나 state-of-the-
 | A5 | `VERIFY` 제거 | expire 대 active confirmation의 구분 |
 | A6 | calibration 제거, raw score threshold | calibrated selective decision의 필요성 |
 | A7 | branch-derived unsafe target 없이 item-validity target만 사용 | closed-loop action label의 필요성 |
+| A8 | observation/latency cost를 제거하고 risk만으로 decision | bounded verification-cost objective의 필요성 |
 
-A1–A7은 같은 split, head capacity, training budget, memory/verify interface에서 실행한다. 제거해도 P1과 동률인 component는 contribution에서 제외한다.
+A1–A8은 같은 split, head capacity, training budget, memory/verify interface에서 실행한다. 제거해도 P1과 동률인 component는 contribution에서 제외한다.
 
 ## 7. Metric과 통계
 
@@ -262,7 +296,7 @@ A1–A7은 같은 split, head capacity, training budget, memory/verify interface
 - **Fresh-memory utility:** O0와 B0의 task success/action quality 차이.
 - **Stale-memory harm:** B1과 B0/O3의 unsafe-action 및 success 차이.
 - **Branch disagreement:** 동일 onset에서 fresh, stale, masked branch의 first action target 또는 short-horizon outcome이 달라지는 비율.
-- **Oracle expiry value:** O2/O3와 strongest fixed baseline 사이의 safety–success–observation-cost gap.
+- **Oracle expiry value:** O2/O3와 strongest fixed/frontier-style baseline B2–B10 사이의 safety–success–observation-cost gap.
 
 이 값이 실질적으로 구분되지 않으면 P1을 학습하지 않는다.
 
@@ -331,10 +365,10 @@ invalid episode를 조용히 제거하지 않고 수와 사유를 flow table로 
 | severity | S1, S2 |
 | initial states | task당 10개를 시작점으로 하고 Phase 0 variance로 확정 |
 | split | 2 fit / 1 calibration / 1 holdout task, unseen landmark/family 포함 |
-| systems | B0–B7, P1, O0–O3, A1–A7 중 사전 등록 shortlist |
+| systems | B0–B10, P1, O0–O3, A1–A8 중 사전 등록 shortlist |
 | budgets | native horizon 고정, verify call `{0, 1, 2}` sensitivity |
 
-Phase 1은 method selection용 development 결과다. B4–B6 재현 여부, threshold, top-k, practical margin은 confirmatory test 전에 고정한다.
+Phase 1은 method selection용 development 결과다. B4–B6·B8–B10 재현 여부, threshold, top-k, practical margin과 strongest non-privileged `B*`는 confirmatory test 전에 고정한다.
 
 ### Phase 2 — Confirmatory RoboCasa
 
@@ -361,10 +395,12 @@ Phase 1은 method selection용 development 결과다. B4–B6 재현 여부, thr
 
 | 결과 | 결정 |
 |---|---|
+| POT-VLA·BATON·HyMeS·OnEvoMemory의 공개 full text/후속본이 paired item-exposure unsafe-use attribution, calibrated risk, matched verify budget과 동일 four-way decision을 이미 제공 | `NOVELTY COLLISION`: expiry method claim을 중단하고 cross-family calibration benchmark 또는 명시적으로 남은 한 축만 extension으로 재정의 |
 | O0 fresh memory가 B0 no-memory보다 유용하지 않음 | `REJECT memory-interface claim`: downstream policy가 memory를 사용하지 않음 |
 | B1 stale memory가 B0/O3보다 해롭지 않음 | `REJECT expiry claim`: 선택한 task/shift에서 staleness가 action bottleneck이 아님 |
 | O2/O3도 fixed TTL·confidence baseline보다 낫지 않음 | decision library 또는 perturbation이 차별적 가치를 만들지 못함 |
-| B2 fixed TTL 또는 B3 confidence-only가 P1과 동률 | learned phase-aware contribution을 제거하고 단순 rule로 축소 |
+| B2 fixed TTL 또는 B3 confidence-only가 P1과 동률 | learned calibrated decision contribution을 제거하고 단순 rule로 축소 |
+| B8 divergence verifier, B9 transition verifier 또는 B10 value retention이 P1과 동률 | item-level unsafe-use/calibration contribution을 기각하고 해당 simpler frontier-style rule로 축소 |
 | A1 no-phase가 P1과 동률 | phase-aware claim을 제거하고 uncertainty/age calibration으로 축소 |
 | A4 no-risk-head 또는 A7 validity-only가 P1과 동률 | unsafe-action modeling claim을 제거하고 item validity 문제로 축소 |
 | verify-all B7만 이기고 matched verify budget에서 P1 이득이 없음 | selective supervisor claim 기각; observation policy 문제로 이동 |
@@ -404,12 +440,13 @@ Phase 1은 method selection용 development 결과다. B4–B6 재현 여부, thr
 
 ## 11. 즉시 구현 순서
 
-1. RoboCasa task와 compatible base-policy 후보를 감사하고 exact environment/checkpoint를 고정한다.
-2. 2개 pilot task에서 clean competence, oracle fresh-memory utility, memory injection이 action을 바꾸는지 확인한다.
-3. `rp3.memory.v1` logger와 environment/policy/memory branch snapshot test를 구현한다.
-4. 네 S1 shift family에서 20–50개 valid onset을 수집한다.
-5. B0, B1, O0, O3 paired branch로 H0 memory-causality gate를 판단한다.
-6. gate를 통과하면 B2 fixed TTL, B3 confidence-only, B7 verify-all을 먼저 고정한다.
-7. phase/context encoder와 item validity·unsafe-use head를 학습해 P1/O1/O2를 실행한다.
-8. SOMA/HALO/AFI-style baseline과 A1–A7을 같은 memory·observation budget으로 비교한다.
-9. Phase 1 gate를 통과한 경우에만 confirmatory RoboCasa와 RLBench transfer로 확장한다.
+1. POT-VLA·BATON·HyMeS·OnEvoMemory·StreamPI·PonderPounce·Remember Smarter·Explicit Language Memory의 공개 full text/code를 감사해 `item unit / update signal / verification action / unsafe-risk target / budget / exogenous shift / evaluation` matrix를 고정한다. same claim이 확인되면 구현 전에 novelty를 revise한다.
+2. RoboCasa task와 compatible base-policy 후보를 감사하고 exact environment/checkpoint를 고정한다.
+3. 2개 pilot task에서 clean competence, oracle fresh-memory utility, memory injection이 action을 바꾸는지 확인한다.
+4. `rp3.memory.v1` logger와 environment/policy/memory branch snapshot test를 구현한다.
+5. 네 S1 shift family에서 20–50개 valid onset을 수집한다.
+6. B0, B1, O0, O3 paired branch로 H0 memory-causality gate를 판단한다.
+7. gate를 통과하면 B2 fixed TTL, B3 confidence-only, B7 verify-all, B8 divergence verifier, B9 transition verifier, B10 value retention을 먼저 고정한다.
+8. phase/context encoder와 item validity·unsafe-use head를 학습해 P1/O1/O2를 실행한다.
+9. SOMA/HALO/AFI와 POT/BATON/HyMeS/OnEvo-style B4–B6·B8–B10, A1–A8을 같은 memory·observation budget으로 비교한다. 재현 불가능한 방법은 `-style`로 명시한다.
+10. Phase 1 gate를 통과한 경우에만 confirmatory RoboCasa와 RLBench transfer로 확장한다.

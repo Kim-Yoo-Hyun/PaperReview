@@ -1,10 +1,10 @@
 # Long-Term Robotics Reading Plan
 
-- Updated: 2026-08-25 KST
+- Updated: 2026-08-28 KST
 - Source registry: [PAPER.md](../PAPER.md)
 - Full tier index: [READING_TIERS.csv](./READING_TIERS.csv)
 - Reading tracker: [READING_STATUS.csv](./READING_STATUS.csv)
-- Intensive-reading set: **150 papers** (CORE 61 + NEXT 89)
+- Intensive-reading set: **190 papers** (CORE 77 + NEXT 113)
 - Research stance: Robotics is the main axis; 3D Vision is selected when it changes robot state estimation, planning, control, or evaluation.
 
 ## How to Use This Plan
@@ -47,7 +47,7 @@
 
 ## RP-2 / I-02 Priority Reading Sequence
 
-아래 순서는 전체 registry tier가 아니라 `Budgeted Typed Recovery for VLA` 연구를 시작할 때의 project-specific dependency다. 15편 hard cap을 두지 않으며, P0부터 P4로 갈수록 직접 구현 필요성이 낮아진다. 각 논문은 정독 후 RP-2 event schema, detector, selector, budget, benchmark 중 어느 요소를 바꾸는지 기록한다.
+아래 순서는 전체 registry tier가 아니라 `Same-Onset Failure Recovery Arbitration` 연구를 시작할 때의 project-specific dependency다. broad high-level recovery selector는 Agentic RL이 이미 직접 다루므로, RP-2는 same-onset all-option supervision, vector budget, best-fixed regret가 실제로 필요한지부터 반증한다. 15편 hard cap을 두지 않으며, 각 논문은 event schema, detector, option contract, budget, estimator, benchmark 중 어느 결정을 바꾸는지 기록한다.
 
 ### P0 — Concept prerequisites — 10 papers
 
@@ -62,7 +62,7 @@
 9. [PDDLStream: Integrating Symbolic Planners and Blackbox Samplers via Optimistic Adaptive Planning](../2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp/01_overview.md) — 2020 ICAPS; symbolic–continuous task-and-motion replanning.
 10. [Relay Policy Learning: Solving Long-Horizon Tasks via Imitation and Reinforcement Learning](../2020/CoRL/2020_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita/01_overview.md) — 2020 CoRL; long-horizon skill decomposition and relaying.
 
-### P1 — Direct detector and recovery baselines — 8 papers
+### P1 — Direct detector, recovery, and selector baselines — 8 papers
 
 1. [Can We Detect Failures Without Failure Data? Uncertainty-Aware Runtime Failure Detection for Imitation Learning Policies](../2025/RSS/2025_RSS_Can-We-Detect-Failures-Without-Failure-Data-Uncertainty-Aw/01_overview.md) — 2025 RSS; uncertainty-aware detector without failure-data dependence.
 2. [SAFE: Multitask Failure Detection for Vision-Language-Action Models](../2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md) — 2025 NeurIPS; VLA latent failure score and conformal alert threshold.
@@ -72,6 +72,23 @@
 6. [AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic Manipulation](../2025/ICLR/2025_ICLR_AHA-A-Vision-Language-Model-for-Detecting-and-Reasoning-Ov/01_overview.md) — 2025 ICLR Poster; VLM failure detection and reasoning alternative.
 7. [Counterfactual VLA: Self-Reflective Vision-Language-Action Model with Adaptive Reasoning](../2026/CVPR/2026_CVPR_Counterfactual-VLA-Self-Reflective-Vision-Language-Action/01_overview.md) — 2026 CVPR; self-reflection and test-time recovery comparison.
 8. [SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained Learning](../2025/NeurIPS/2025_NeurIPS_SafeVLA-Towards-Safety-Alignment-of-Vision-Language-Action/01_overview.md) — 2025 NeurIPS Spotlight; constrained VLA safety alignment.
+
+#### P1.5 — 2026 direct novelty-collision audit — 10 papers
+
+아래 자료는 registry tier와 별개인 필수 frontier audit다. 특히 Agentic RL을 재현 가능한 최우선 비교군으로 두고, `paper → policy-visible history → option set → decision timing → budget → supervision → outcome metric` 계약을 표로 남긴다.
+
+1. [Learning Robust Execution with Agentic RL](https://arxiv.org/html/2607.13818v1) — `PREPRINT / FULL-TEXT-CHECKED`; strongest collision: a history-conditioned Execute/Retry/Repair/Reset manager trained with PPO on LIBERO.
+2. [ActFovea](https://arxiv.org/abs/2607.29169) — `PREPRINT / FULL-TEXT-CHECKED`; verified observation recovery, bounded safe failure, and short-horizon/action-smoothing controls.
+3. [ProbeAct](https://arxiv.org/abs/2606.09740) — `PREPRINT / FULL-TEXT-CHECKED`; hidden-state probing, a kinematic failure state machine, and training-free CBF correction.
+4. [ViFailback](https://openaccess.thecvf.com/content/CVPR2026/html/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.html) — `CVPR 2026 / FULL-TEXT-CHECKED`; diagnosis plus visual/text correction with real failure data.
+5. [AgentChord](https://roboticsconference.org/program/papers/180/) — `RSS 2026 / SOURCE-VERIFIED`; precompiled recovery branches and low-latency orchestration.
+6. [When to Act, Ask, or Learn](https://roboticsconference.org/program/papers/142/) — `RSS 2026 / SOURCE-VERIFIED`; calibrated act/clarify/intervene selection and selective autonomy.
+7. [See, Plan, Rewind](https://arxiv.org/abs/2603.09292) — `PREPRINT / SOURCE-VERIFIED`; progress-aware subgoal rewind.
+8. [FAR](https://arxiv.org/abs/2607.01111) — `PREPRINT / SOURCE-VERIFIED`; retry perturbation and failure-preference adaptation.
+9. [Imagining Recovery / CoRe](https://arxiv.org/abs/2608.14822) — `PREPRINT / FULL-TEXT-CHECKED`; imagined continuation and state realignment; a different estimand from cloned same-onset branch outcomes.
+10. [VLCP](https://arxiv.org/abs/2608.16978) — `PREPRINT / SOURCE-VERIFIED`; control-code abstraction and closed-loop replanning.
+
+Implementation companion: [SAFE official code](https://github.com/vla-safe/SAFE), [SAFE OpenVLA fork](https://github.com/vla-safe/openvla), and the pinned manifests in [RP-2](./projects/RP-2_FAILURE_RECOVERY.md) define the detector/base-policy reproduction contract.
 
 ### P2 — Benchmark and metric semantics — 8 papers
 
@@ -93,8 +110,8 @@
 5. [π0: A Vision-Language-Action Flow Model for General Robot Control](../2025/RSS/2025_RSS_pi0-A-Vision-Language-Action-Flow-Model-for-General-Robot/01_overview.md) — 2025 RSS; current flow-based VLA alternative.
 6. [π0.5: a Vision-Language-Action Model with Open-World Generalization](../2025/CoRL/2025_CoRL_pi0.5-a-Vision-Language-Action-Model-with-Open-World-Gener/01_overview.md) — 2025 CoRL; open-world VLA extension.
 7. [Decision Transformer: Reinforcement Learning via Sequence Modeling](../2021/NeurIPS/2021_NeurIPS_Decision-Transformer-Reinforcement-Learning-via-Sequence-M/01_overview.md) — 2021 NeurIPS; trajectory-conditioned sequence modeling.
-8. [Offline Reinforcement Learning with Implicit Q-Learning](../2022/ICLR/2022_ICLR_Offline-Reinforcement-Learning-with-Implicit-Q-Learning/01_overview.md) — 2022 ICLR; offline value learning if selector becomes value-based.
-9. [Conservative Q-Learning for Offline Reinforcement Learning](../2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/01_overview.md) — 2020 NeurIPS; conservative offline recovery/value baseline.
+8. [Offline Reinforcement Learning with Implicit Q-Learning](../2022/ICLR/2022_ICLR_Offline-Reinforcement-Learning-with-Implicit-Q-Learning/01_overview.md) — 2022 ICLR; chosen-action or partial-feedback sensitivity; not the primary all-option estimator.
+9. [Conservative Q-Learning for Offline Reinforcement Learning](../2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/01_overview.md) — 2020 NeurIPS; support-mismatch baseline for later policy reuse; not the primary all-option estimator.
 10. [Implicit Behavioral Cloning](../2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/01_overview.md) — 2022 CoRL; multimodal behavior-cloning alternative.
 11. [Q-Transformer: Scalable Offline Reinforcement Learning via Autoregressive Q-Functions](../2024/CoRL/2024_CoRL_Q-Transformer-Scalable-Offline-Reinforcement-Learning-via/01_overview.md) — 2024 CoRL; autoregressive action-value modeling extension.
 
@@ -116,9 +133,9 @@
 
 | Tier | Papers | Use |
 |---|---:|---|
-| CORE | 61 | 공통 기반과 주력 연구축. 순서대로 정독하고 비교 노트를 남긴다. |
-| NEXT | 89 | CORE 이후 트랙별로 정독한다. 연구 주제에 따라 내부 순서는 바꿀 수 있다. |
-| REFERENCE | 438 | 설계·실험 중 필요한 논문만 찾아 읽는다. 완독 목표가 아니다. |
+| CORE | 77 | 공통 기반과 주력 연구축. 순서대로 정독하고 비교 노트를 남긴다. |
+| NEXT | 113 | CORE 이후 트랙별로 정독한다. 연구 주제에 따라 내부 순서는 바꿀 수 있다. |
+| REFERENCE | 449 | 설계·실험 중 필요한 논문만 찾아 읽는다. 완독 목표가 아니다. |
 | ARCHIVE | 233 | 현재 robotics-first 범위 밖의 검색·역사 자료. 삭제하지 않지만 읽기 큐에서 제외한다. |
 
 CORE와 NEXT만 장기 정독 대상이다. REFERENCE와 ARCHIVE의 개별 분류는 CSV에서 검색·필터링한다.
@@ -169,49 +186,62 @@ Batch exit artifact를 채우기 전에는 해당 계보를 `SYNTHESIZED`로 올
 - Generative action model의 inference latency와 실제 closed-loop control frequency를 확인한다.
 - Tabletop success rate를 넘어 long horizon, real-world disturbances, sensor degradation, compromised contact, recovery를 평가한다.
 
-## CORE — 61 papers
+## CORE — 77 papers
 
-### Planning, control, and whole-body foundations — 10
+### Planning, control, and whole-body foundations — 16
 
-1. [Planning and Acting in Partially Observable Stochastic Domains](../1998/Artificial-Intelligence/1998_Artificial-Intelligence_Planning-and-Acting-in-Partially-Observable-Stochastic-Dom/01_overview.md) — 1998 Artificial Intelligence.
-2. [A Unified Approach for Motion and Force Control of Robot Manipulators: The Operational Space Formulation](../1987/IEEE-JRA/1987_IEEE-JRA_A-Unified-Approach-for-Motion-and-Force-Control-of-Robot-M/01_overview.md) — 1987 IEEE JRA.
-3. [Probabilistic Roadmaps for Path Planning in High-Dimensional Configuration Spaces](../1996/IEEE-T-RA/1996_IEEE-T-RA_Probabilistic-Roadmaps-for-Path-Planning-in-High-Dimension/01_overview.md) — 1996 IEEE T-RA.
-4. [Rapidly-Exploring Random Trees: A New Tool for Path Planning](../1998/Technical-Report/1998_Technical-Report_Rapidly-Exploring-Random-Trees-A-New-Tool-for-Path-Plannin/01_overview.md) — 1998 Technical Report.
-5. [CHOMP: Gradient Optimization Techniques for Efficient Motion Planning](../2009/ICRA/2009_ICRA_CHOMP-Gradient-Optimization-Techniques-for-Efficient-Motio/01_overview.md) — 2009 ICRA.
-6. [TrajOpt: A Sequential Convex Optimization Algorithm for Robot Motion Planning](../2013/IROS/2013_IROS_TrajOpt-A-Sequential-Convex-Optimization-Algorithm-for-Rob/01_overview.md) — 2013 IROS.
-7. [PDDLStream: Integrating Symbolic Planners and Blackbox Samplers via Optimistic Adaptive Planning](../2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp/01_overview.md) — 2020 ICAPS.
-8. [Dynamic Whole-Body Motion Generation under Rigid Contacts and Other Unilateral Constraints](../2013/T-RO/2013_T-RO_Dynamic-Whole-Body-Motion-Generation-under-Rigid-Contacts/01_overview.md) — 2013 T-RO.
-9. [Hierarchical Quadratic Programming: Fast Online Humanoid-Robot Motion Generation](../2014/IJRR/2014_IJRR_Hierarchical-Quadratic-Programming-Fast-Online-Humanoid-Ro/01_overview.md) — 2014 IJRR.
-10. [Whole-Body Nonlinear Model Predictive Control Through Contacts for Quadrupeds](../2018/RA-L/2018_RA-L_Whole-Body-Nonlinear-Model-Predictive-Control-Through-Cont/01_overview.md) — 2018 RA-L.
+1. [A New Approach to Linear Filtering and Prediction Problems](../1960/Journal-of-Basic-Enginee/1960_Journal-of-Basic-Enginee_A-New-Approach-to-Linear-Filtering-and-Prediction-Problems/01_overview.md) — 1960 Journal of Basic Engineering.
+2. [A Formal Basis for the Heuristic Determination of Minimum Cost Paths](../1968/IEEE-Transactions-on-Sys/1968_IEEE-Transactions-on-Sys_A-Formal-Basis-for-the-Heuristic-Determination-of-Minimum/01_overview.md) — 1968 IEEE Transactions on Systems Science and Cybernetics.
+3. [Planning and Acting in Partially Observable Stochastic Domains](../1998/Artificial-Intelligence/1998_Artificial-Intelligence_Planning-and-Acting-in-Partially-Observable-Stochastic-Dom/01_overview.md) — 1998 Artificial Intelligence.
+4. [A Unified Approach for Motion and Force Control of Robot Manipulators: The Operational Space Formulation](../1987/IEEE-JRA/1987_IEEE-JRA_A-Unified-Approach-for-Motion-and-Force-Control-of-Robot-M/01_overview.md) — 1987 IEEE JRA.
+5. [Hybrid Position/Force Control of Manipulators](../1981/Journal-of-Dynamic-Syste/1981_Journal-of-Dynamic-Syste_Hybrid-Position-Force-Control-of-Manipulators/01_overview.md) — 1981 Journal of Dynamic Systems, Measurement, and Control.
+6. [Impedance Control: An Approach to Manipulation: Part I—Theory](../1985/Journal-of-Dynamic-Syste/1985_Journal-of-Dynamic-Syste_Impedance-Control-An-Approach-to-Manipulation-Part-ITheory/01_overview.md) — 1985 Journal of Dynamic Systems, Measurement, and Control.
+7. [Probabilistic Roadmaps for Path Planning in High-Dimensional Configuration Spaces](../1996/IEEE-T-RA/1996_IEEE-T-RA_Probabilistic-Roadmaps-for-Path-Planning-in-High-Dimension/01_overview.md) — 1996 IEEE T-RA.
+8. [Rapidly-Exploring Random Trees: A New Tool for Path Planning](../1998/Technical-Report/1998_Technical-Report_Rapidly-Exploring-Random-Trees-A-New-Tool-for-Path-Plannin/01_overview.md) — 1998 Technical Report.
+9. [CHOMP: Gradient Optimization Techniques for Efficient Motion Planning](../2009/ICRA/2009_ICRA_CHOMP-Gradient-Optimization-Techniques-for-Efficient-Motio/01_overview.md) — 2009 ICRA.
+10. [TrajOpt: A Sequential Convex Optimization Algorithm for Robot Motion Planning](../2013/IROS/2013_IROS_TrajOpt-A-Sequential-Convex-Optimization-Algorithm-for-Rob/01_overview.md) — 2013 IROS.
+11. [MuJoCo: A Physics Engine for Model-Based Control](../2012/IROS/2012_IROS_MuJoCo-A-Physics-Engine-for-Model-Based-Control/01_overview.md) — 2012 IROS.
+12. [Information Theoretic MPC for Model-Based Reinforcement Learning](../2017/ICRA/2017_ICRA_Information-Theoretic-MPC-for-Model-Based-Reinforcement-Le/01_overview.md) — 2017 ICRA.
+13. [PDDLStream: Integrating Symbolic Planners and Blackbox Samplers via Optimistic Adaptive Planning](../2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp/01_overview.md) — 2020 ICAPS.
+14. [Dynamic Whole-Body Motion Generation under Rigid Contacts and Other Unilateral Constraints](../2013/T-RO/2013_T-RO_Dynamic-Whole-Body-Motion-Generation-under-Rigid-Contacts/01_overview.md) — 2013 T-RO.
+15. [Hierarchical Quadratic Programming: Fast Online Humanoid-Robot Motion Generation](../2014/IJRR/2014_IJRR_Hierarchical-Quadratic-Programming-Fast-Online-Humanoid-Ro/01_overview.md) — 2014 IJRR.
+16. [Whole-Body Nonlinear Model Predictive Control Through Contacts for Quadrupeds](../2018/RA-L/2018_RA-L_Whole-Body-Nonlinear-Model-Predictive-Control-Through-Cont/01_overview.md) — 2018 RA-L.
 
-### RL, IL, and policy learning foundations — 15
+### RL, IL, and policy learning foundations — 20
 
-1. [A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning](../2011/AISTATS/2011_AISTATS_A-Reduction-of-Imitation-Learning-and-Structured-Predictio/01_overview.md) — 2011 AISTATS.
-2. [Learning Neural Network Policies with Guided Policy Search under Unknown Dynamics](../2016/JMLR/2016_JMLR_Learning-Neural-Network-Policies-with-Guided-Policy-Search/01_overview.md) — 2016 JMLR.
-3. [Generative Adversarial Imitation Learning](../2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/01_overview.md) — 2016 NeurIPS.
-4. [Trust Region Policy Optimization](../2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/01_overview.md) — 2015 ICML.
-5. [Proximal Policy Optimization Algorithms](../2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms/01_overview.md) — 2017 arxiv.
-6. [Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor](../2018/ICML/2018_ICML_Soft-Actor-Critic-Off-Policy-Maximum-Entropy-Deep-Reinforc/01_overview.md) — 2018 ICML.
-7. [Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World](../2017/IROS/2017_IROS_Domain-Randomization-for-Transferring-Deep-Neural-Networks/01_overview.md) — 2017 IROS.
-8. [What Matters in Learning from Offline Human Demonstrations for Robot Manipulation](../2021/CoRL/2021_CoRL_What-Matters-in-Learning-from-Offline-Human-Demonstrations/01_overview.md) — 2021 CoRL.
-9. [Implicit Behavioral Cloning](../2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/01_overview.md) — 2022 CoRL.
-10. [Offline Reinforcement Learning with Implicit Q-Learning](../2022/ICLR/2022_ICLR_Offline-Reinforcement-Learning-with-Implicit-Q-Learning/01_overview.md) — 2022 ICLR.
-11. [Decision Transformer: Reinforcement Learning via Sequence Modeling](../2021/NeurIPS/2021_NeurIPS_Decision-Transformer-Reinforcement-Learning-via-Sequence-M/01_overview.md) — 2021 NeurIPS.
-12. [Denoising Diffusion Probabilistic Models](../2020/NeurIPS/2020_NeurIPS_Denoising-Diffusion-Probabilistic-Models/01_overview.md) — 2020 NeurIPS.
-13. [Flow Matching for Generative Modeling](../2023/ICLR/2023_ICLR_Flow-Matching-for-Generative-Modeling/01_overview.md) — 2023 ICLR.
-14. [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](../2023/RSS/2023_RSS_Diffusion-Policy-Visuomotor-Policy-Learning-via-Action-Dif/01_overview.md) — 2023 RSS.
-15. [Q-Transformer: Scalable Offline Reinforcement Learning via Autoregressive Q-Functions](../2024/CoRL/2024_CoRL_Q-Transformer-Scalable-Offline-Reinforcement-Learning-via/01_overview.md) — 2024 CoRL.
+1. [Learning to Predict by the Methods of Temporal Differences](../1988/Machine-Learning/1988_Machine-Learning_Learning-to-Predict-by-the-Methods-of-Temporal-Differences/01_overview.md) — 1988 Machine Learning.
+2. [Q-Learning](../1992/Machine-Learning/1992_Machine-Learning_Q-Learning/01_overview.md) — 1992 Machine Learning.
+3. [Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning](../1992/Machine-Learning/1992_Machine-Learning_Simple-Statistical-Gradient-Following-Algorithms-for-Conne/01_overview.md) — 1992 Machine Learning.
+4. [Policy Gradient Methods for Reinforcement Learning with Function Approximation](../1999/NeurIPS/1999_NeurIPS_Policy-Gradient-Methods-for-Reinforcement-Learning-with-Fu/01_overview.md) — 1999 NeurIPS.
+5. [PILCO: A Model-Based and Data-Efficient Approach to Policy Search](../2011/ICML/2011_ICML_PILCO-A-Model-Based-and-Data-Efficient-Approach-to-Policy/01_overview.md) — 2011 ICML.
+6. [A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning](../2011/AISTATS/2011_AISTATS_A-Reduction-of-Imitation-Learning-and-Structured-Predictio/01_overview.md) — 2011 AISTATS.
+7. [Learning Neural Network Policies with Guided Policy Search under Unknown Dynamics](../2016/JMLR/2016_JMLR_Learning-Neural-Network-Policies-with-Guided-Policy-Search/01_overview.md) — 2016 JMLR.
+8. [Generative Adversarial Imitation Learning](../2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/01_overview.md) — 2016 NeurIPS.
+9. [Trust Region Policy Optimization](../2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/01_overview.md) — 2015 ICML.
+10. [Proximal Policy Optimization Algorithms](../2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms/01_overview.md) — 2017 arxiv.
+11. [Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor](../2018/ICML/2018_ICML_Soft-Actor-Critic-Off-Policy-Maximum-Entropy-Deep-Reinforc/01_overview.md) — 2018 ICML.
+12. [Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World](../2017/IROS/2017_IROS_Domain-Randomization-for-Transferring-Deep-Neural-Networks/01_overview.md) — 2017 IROS.
+13. [What Matters in Learning from Offline Human Demonstrations for Robot Manipulation](../2021/CoRL/2021_CoRL_What-Matters-in-Learning-from-Offline-Human-Demonstrations/01_overview.md) — 2021 CoRL.
+14. [Implicit Behavioral Cloning](../2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/01_overview.md) — 2022 CoRL.
+15. [Offline Reinforcement Learning with Implicit Q-Learning](../2022/ICLR/2022_ICLR_Offline-Reinforcement-Learning-with-Implicit-Q-Learning/01_overview.md) — 2022 ICLR.
+16. [Decision Transformer: Reinforcement Learning via Sequence Modeling](../2021/NeurIPS/2021_NeurIPS_Decision-Transformer-Reinforcement-Learning-via-Sequence-M/01_overview.md) — 2021 NeurIPS.
+17. [Denoising Diffusion Probabilistic Models](../2020/NeurIPS/2020_NeurIPS_Denoising-Diffusion-Probabilistic-Models/01_overview.md) — 2020 NeurIPS.
+18. [Flow Matching for Generative Modeling](../2023/ICLR/2023_ICLR_Flow-Matching-for-Generative-Modeling/01_overview.md) — 2023 ICLR.
+19. [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](../2023/RSS/2023_RSS_Diffusion-Policy-Visuomotor-Policy-Learning-via-Action-Dif/01_overview.md) — 2023 RSS.
+20. [Q-Transformer: Scalable Offline Reinforcement Learning via Autoregressive Q-Functions](../2024/CoRL/2024_CoRL_Q-Transformer-Scalable-Offline-Reinforcement-Learning-via/01_overview.md) — 2024 CoRL.
 
-### Manipulation, contact, tactile, and dexterity — 8
+### Manipulation, contact, tactile, and dexterity — 10
 
-1. [Contact-Invariant Optimization for Hand Manipulation](../2014/SIGGRAPH/2014_SIGGRAPH_Contact-Invariant-Optimization-for-Hand-Manipulation/01_overview.md) — 2014 SIGGRAPH.
-2. [GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping](../2020/CVPR/2020_CVPR_GraspNet-1Billion-A-Large-Scale-Benchmark-for-General-Obje/01_overview.md) — 2020 CVPR.
-3. [Contact-GraspNet: Efficient 6-DoF Grasp Generation in Cluttered Scenes](../2021/ICRA/2021_ICRA_Contact-GraspNet-Efficient-6-DoF-Grasp-Generation-in-Clutt/01_overview.md) — 2021 ICRA.
-4. [Factory: Fast Contact for Robotic Assembly](../2022/RSS/2022_RSS_Factory-Fast-Contact-for-Robotic-Assembly/01_overview.md) — 2022 RSS.
-5. [Global Planning for Contact-Rich Manipulation via Local Smoothing of Quasi-Dynamic Contact Models](../2023/T-RO/2023_T-RO_Global-Planning-for-Contact-Rich-Manipulation-via-Local-Sm/01_overview.md) — 2023 T-RO.
-6. [Tactile-Driven Non-Prehensile Object Manipulation via Extrinsic Contact Mode Control](../2024/RSS/2024_RSS_Tactile-Driven-Non-Prehensile-Object-Manipulation-via-Extr/01_overview.md) — 2024 RSS.
-7. [RoboPack: Learning Tactile-Informed Dynamics Models for Dense Packing](../2024/RSS/2024_RSS_RoboPack-Learning-Tactile-Informed-Dynamics-Models-for-Den/01_overview.md) — 2024 RSS.
-8. [DexTrack: Towards Generalizable Neural Tracking Control for Dexterous Manipulation from Human References](../2025/ICLR/2025_ICLR_DexTrack-Towards-Generalizable-Neural-Tracking-Control-for/01_overview.md) — 2025 ICLR Poster.
+1. [Planning Optimal Grasps](../1992/ICRA/1992_ICRA_Planning-Optimal-Grasps/01_overview.md) — 1992 ICRA.
+2. [GelSight: High-Resolution Robot Tactile Sensors for Estimating Geometry and Force](../2017/Sensors/2017_Sensors_GelSight-High-Resolution-Robot-Tactile-Sensors-for-Estimat/01_overview.md) — 2017 Sensors.
+3. [Contact-Invariant Optimization for Hand Manipulation](../2014/SIGGRAPH/2014_SIGGRAPH_Contact-Invariant-Optimization-for-Hand-Manipulation/01_overview.md) — 2014 SIGGRAPH.
+4. [GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping](../2020/CVPR/2020_CVPR_GraspNet-1Billion-A-Large-Scale-Benchmark-for-General-Obje/01_overview.md) — 2020 CVPR.
+5. [Contact-GraspNet: Efficient 6-DoF Grasp Generation in Cluttered Scenes](../2021/ICRA/2021_ICRA_Contact-GraspNet-Efficient-6-DoF-Grasp-Generation-in-Clutt/01_overview.md) — 2021 ICRA.
+6. [Factory: Fast Contact for Robotic Assembly](../2022/RSS/2022_RSS_Factory-Fast-Contact-for-Robotic-Assembly/01_overview.md) — 2022 RSS.
+7. [Global Planning for Contact-Rich Manipulation via Local Smoothing of Quasi-Dynamic Contact Models](../2023/T-RO/2023_T-RO_Global-Planning-for-Contact-Rich-Manipulation-via-Local-Sm/01_overview.md) — 2023 T-RO.
+8. [Tactile-Driven Non-Prehensile Object Manipulation via Extrinsic Contact Mode Control](../2024/RSS/2024_RSS_Tactile-Driven-Non-Prehensile-Object-Manipulation-via-Extr/01_overview.md) — 2024 RSS.
+9. [RoboPack: Learning Tactile-Informed Dynamics Models for Dense Packing](../2024/RSS/2024_RSS_RoboPack-Learning-Tactile-Informed-Dynamics-Models-for-Den/01_overview.md) — 2024 RSS.
+10. [DexTrack: Towards Generalizable Neural Tracking Control for Dexterous Manipulation from Human References](../2025/ICLR/2025_ICLR_DexTrack-Towards-Generalizable-Neural-Tracking-Control-for/01_overview.md) — 2025 ICLR Poster.
 
 ### VLA and generalist robot policies — 11
 
@@ -235,118 +265,148 @@ Batch exit artifact를 채우기 전에는 해당 계보를 `SYNTHESIZED`로 올
 4. [Control Barrier Function Based Quadratic Programs for Safety Critical Systems](../2017/TAC/2017_TAC_Control-Barrier-Function-Based-Quadratic-Programs-for-Safe/01_overview.md) — 2017 TAC.
 5. [Recovery RL: Safe Reinforcement Learning with Learned Recovery Zones](../2020/RA-L/2020_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/01_overview.md) — 2020 RA-L.
 
-### Locomotion, mobile manipulation, and humanoid systems — 6
+### Locomotion, mobile manipulation, and humanoid systems — 8
 
-1. [RMA: Rapid Motor Adaptation for Legged Robots](../2021/RSS/2021_RSS_RMA-Rapid-Motor-Adaptation-for-Legged-Robots/01_overview.md) — 2021 RSS.
-2. [Learning Robust Perceptive Locomotion for Quadrupedal Robots in the Wild](../2022/Science-Robotics/2022_Science-Robotics_Learning-Robust-Perceptive-Locomotion-for-Quadrupedal-Robo/01_overview.md) — 2022 Science Robotics.
-3. [ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots](../2024/Science-Robotics/2024_Science-Robotics_ANYmal-Parkour-Learning-Agile-Navigation-for-Quadrupedal-R/01_overview.md) — 2024 Science Robotics.
-4. [HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation](../2024/RSS/2024_RSS_HumanoidBench-Simulated-Humanoid-Benchmark-for-Whole-Body/01_overview.md) — 2024 RSS.
-5. [OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning](../2024/CoRL/2024_CoRL_OmniH2O-Universal-and-Dexterous-Human-to-Humanoid-Whole-Bo/01_overview.md) — 2024 CoRL.
-6. [Mobile ALOHA: Learning Bimanual Mobile Manipulation using Low-Cost Whole-Body Teleoperation](../2024/CoRL/2024_CoRL_Mobile-ALOHA-Learning-Bimanual-Mobile-Manipulation-using-L/01_overview.md) — 2024 CoRL.
+1. [Biped Walking Pattern Generation by using Preview Control of Zero-Moment Point](../2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/01_overview.md) — 2003 ICRA.
+2. [AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control](../2021/ACM-Transactions-on-Grap/2021_ACM-Transactions-on-Grap_AMP-Adversarial-Motion-Priors-for-Stylized-Physics-Based-C/01_overview.md) — 2021 ACM Transactions on Graphics.
+3. [RMA: Rapid Motor Adaptation for Legged Robots](../2021/RSS/2021_RSS_RMA-Rapid-Motor-Adaptation-for-Legged-Robots/01_overview.md) — 2021 RSS.
+4. [Learning Robust Perceptive Locomotion for Quadrupedal Robots in the Wild](../2022/Science-Robotics/2022_Science-Robotics_Learning-Robust-Perceptive-Locomotion-for-Quadrupedal-Robo/01_overview.md) — 2022 Science Robotics.
+5. [ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots](../2024/Science-Robotics/2024_Science-Robotics_ANYmal-Parkour-Learning-Agile-Navigation-for-Quadrupedal-R/01_overview.md) — 2024 Science Robotics.
+6. [HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation](../2024/RSS/2024_RSS_HumanoidBench-Simulated-Humanoid-Benchmark-for-Whole-Body/01_overview.md) — 2024 RSS.
+7. [OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning](../2024/CoRL/2024_CoRL_OmniH2O-Universal-and-Dexterous-Human-to-Humanoid-Whole-Bo/01_overview.md) — 2024 CoRL.
+8. [Mobile ALOHA: Learning Bimanual Mobile Manipulation using Low-Cost Whole-Body Teleoperation](../2024/CoRL/2024_CoRL_Mobile-ALOHA-Learning-Bimanual-Mobile-Manipulation-using-L/01_overview.md) — 2024 CoRL.
 
-### Robotics-enabling 3D perception — 6
+### Robotics-enabling 3D perception — 7
 
-1. [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](../2017/CVPR/2017_CVPR_PointNet-Deep-Learning-on-Point-Sets-for-3D-Classification/01_overview.md) — 2017 CVPR.
-2. [DROID-SLAM: Deep Visual SLAM for Monocular, Stereo, and RGB-D Cameras](../2021/NeurIPS/2021_NeurIPS_DROID-SLAM-Deep-Visual-SLAM-for-Monocular-Stereo-and-RGB-D/01_overview.md) — 2021 NeurIPS.
-3. [3D Gaussian Splatting for Real-Time Radiance Field Rendering](../2023/SIGGRAPH/2023_SIGGRAPH_3D-Gaussian-Splatting-for-Real-Time-Radiance-Field-Renderi/01_overview.md) — 2023 SIGGRAPH.
-4. [ConceptFusion: Open-set Multimodal 3D Mapping](../2023/RSS/2023_RSS_ConceptFusion-Open-set-Multimodal-3D-Mapping/01_overview.md) — 2023 RSS.
-5. [RVT: Robotic View Transformer for 3D Object Manipulation](../2023/CoRL/2023_CoRL_RVT-Robotic-View-Transformer-for-3D-Object-Manipulation/01_overview.md) — 2023 CoRL.
-6. [DUSt3R: Geometric 3D Vision Made Easy](../2024/CVPR/2024_CVPR_DUSt3R-Geometric-3D-Vision-Made-Easy/01_overview.md) — 2024 CVPR.
+1. [A Method for Registration of 3-D Shapes](../1992/IEEE-Transactions-on-Pat/1992_IEEE-Transactions-on-Pat_A-Method-for-Registration-of-3-D-Shapes/01_overview.md) — 1992 IEEE Transactions on Pattern Analysis and Machine Intelligence.
+2. [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](../2017/CVPR/2017_CVPR_PointNet-Deep-Learning-on-Point-Sets-for-3D-Classification/01_overview.md) — 2017 CVPR.
+3. [DROID-SLAM: Deep Visual SLAM for Monocular, Stereo, and RGB-D Cameras](../2021/NeurIPS/2021_NeurIPS_DROID-SLAM-Deep-Visual-SLAM-for-Monocular-Stereo-and-RGB-D/01_overview.md) — 2021 NeurIPS.
+4. [3D Gaussian Splatting for Real-Time Radiance Field Rendering](../2023/SIGGRAPH/2023_SIGGRAPH_3D-Gaussian-Splatting-for-Real-Time-Radiance-Field-Renderi/01_overview.md) — 2023 SIGGRAPH.
+5. [ConceptFusion: Open-set Multimodal 3D Mapping](../2023/RSS/2023_RSS_ConceptFusion-Open-set-Multimodal-3D-Mapping/01_overview.md) — 2023 RSS.
+6. [RVT: Robotic View Transformer for 3D Object Manipulation](../2023/CoRL/2023_CoRL_RVT-Robotic-View-Transformer-for-3D-Object-Manipulation/01_overview.md) — 2023 CoRL.
+7. [DUSt3R: Geometric 3D Vision Made Easy](../2024/CVPR/2024_CVPR_DUSt3R-Geometric-3D-Vision-Made-Easy/01_overview.md) — 2024 CVPR.
 
-## NEXT — 89 papers
+## NEXT — 113 papers
 
-### RL, IL, offline learning, and robot data — 13
+### Planning, control, simulation, and TAMP extensions — 2
 
-1. [Continuous Control with Deep Reinforcement Learning](../2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning/01_overview.md) — 2016 ICLR.
-2. [Addressing Function Approximation Error in Actor-Critic Methods](../2018/ICML/2018_ICML_Addressing-Function-Approximation-Error-in-Actor-Critic-Me/01_overview.md) — 2018 ICML.
-3. [Hindsight Experience Replay](../2017/NeurIPS/2017_NeurIPS_Hindsight-Experience-Replay/01_overview.md) — 2017 NeurIPS.
-4. [Constrained Policy Optimization](../2017/ICML/2017_ICML_Constrained-Policy-Optimization/01_overview.md) — 2017 ICML.
-5. [Conservative Q-Learning for Offline Reinforcement Learning](../2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/01_overview.md) — 2020 NeurIPS.
-6. [MOPO: Model-based Offline Policy Optimization](../2020/NeurIPS/2020_NeurIPS_MOPO-Model-based-Offline-Policy-Optimization/01_overview.md) — 2020 NeurIPS.
-7. [A Minimalist Approach to Offline Reinforcement Learning](../2021/NeurIPS/2021_NeurIPS_A-Minimalist-Approach-to-Offline-Reinforcement-Learning/01_overview.md) — 2021 NeurIPS.
-8. [Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations](../2018/RSS/2018_RSS_Learning-Complex-Dexterous-Manipulation-with-Deep-Reinforc/01_overview.md) — 2018 RSS.
-9. [Learning Latent Plans from Play](../2020/CoRL/2020_CoRL_Learning-Latent-Plans-from-Play/01_overview.md) — 2020 CoRL.
-10. [Relay Policy Learning: Solving Long-Horizon Tasks via Imitation and Reinforcement Learning](../2020/CoRL/2020_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita/01_overview.md) — 2020 CoRL.
-11. [RLBench: The Robot Learning Benchmark & Learning Environment](../2020/RA-L/2020_RA-L_RLBench-The-Robot-Learning-Benchmark-and-Learning-Environm/01_overview.md) — 2020 RA-L.
-12. [MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations](../2023/CoRL/2023_CoRL_MimicGen-A-Data-Generation-System-for-Scalable-Robot-Learn/01_overview.md) — 2023 CoRL.
-13. [DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset](../2024/RSS/2024_RSS_DROID-A-Large-Scale-In-The-Wild-Robot-Manipulation-Dataset/01_overview.md) — 2024 RSS.
+1. [Logic-Geometric Programming: An Optimization-Based Approach to Combined Task and Motion Planning](../2015/IJCAI/2015_IJCAI_Logic-Geometric-Programming-An-Optimization-Based-Approach/01_overview.md) — 2015 IJCAI.
+2. [FFRob: Leveraging Symbolic Planning for Efficient Task and Motion Planning](../2018/The-International-Journa/2018_The-International-Journa_FFRob-Leveraging-Symbolic-Planning-for-Efficient-Task-and/01_overview.md) — 2018 The International Journal of Robotics Research.
 
-### Contact-rich, deformable, force, and dexterous manipulation — 21
+### RL, IL, offline learning, and robot data — 21
 
-1. [Control-Limited Differential Dynamic Programming](../2014/ICRA/2014_ICRA_Control-Limited-Differential-Dynamic-Programming/01_overview.md) — 2014 ICRA.
-2. [In-Hand Manipulation via Motion Cones](../2019/RSS/2019_RSS_In-Hand-Manipulation-via-Motion-Cones/01_overview.md) — 2019 RSS.
-3. [Towards Tight Convex Relaxations for Contact-Rich Manipulation](../2024/RSS/2024_RSS_Towards-Tight-Convex-Relaxations-for-Contact-Rich-Manipula/01_overview.md) — 2024 RSS.
-4. [Physics-Driven Data Generation for Contact-Rich Manipulation via Trajectory Optimization](../2025/RSS/2025_RSS_Physics-Driven-Data-Generation-for-Contact-Rich-Manipulati/01_overview.md) — 2025 RSS.
-5. [Complementarity-Free Multi-Contact Modeling and Optimization for Dexterous Manipulation](../2025/RSS/2025_RSS_Complementarity-Free-Multi-Contact-Modeling-and-Optimizati/01_overview.md) — 2025 RSS.
-6. [SoftGym: Benchmarking Deep Reinforcement Learning for Deformable Object Manipulation](../2020/CoRL/2020_CoRL_SoftGym-Benchmarking-Deep-Reinforcement-Learning-for-Defor/01_overview.md) — 2020 CoRL.
-7. [DiffSkill: Skill Abstraction from Differentiable Physics for Deformable Object Manipulations with Tools](../2022/ICLR/2022_ICLR_DiffSkill-Skill-Abstraction-from-Differentiable-Physics-fo/01_overview.md) — 2022 ICLR.
-8. [Neural Descriptor Fields: SE(3)-Equivariant Object Representations for Manipulation](../2021/CoRL/2021_CoRL_Neural-Descriptor-Fields-SE3-Equivariant-Object-Representa/01_overview.md) — 2021 CoRL.
-9. [Diffusion-EDFs: Bi-equivariant Denoising Generative Modeling on SE(3) for Visual Robotic Manipulation](../2024/CVPR/2024_CVPR_Diffusion-EDFs-Bi-equivariant-Denoising-Generative-Modelin/01_overview.md) — 2024 CVPR.
-10. [IndustReal: Transferring Contact-Rich Assembly Tasks from Simulation to Reality](../2023/RSS/2023_RSS_IndustReal-Transferring-Contact-Rich-Assembly-Tasks-from-S/01_overview.md) — 2023 RSS.
-11. [Binding Touch to Everything: Learning Unified Multimodal Tactile Representations](../2024/CVPR/2024_CVPR_Binding-Touch-to-Everything-Learning-Unified-Multimodal-Ta/01_overview.md) — 2024 CVPR.
-12. [DenseMatcher: Learning 3D Semantic Correspondence for Category-Level Manipulation from a Single Demo](../2025/ICLR/2025_ICLR_DenseMatcher-Learning-3D-Semantic-Correspondence-for-Categ/01_overview.md) — 2025 ICLR Spotlight.
-13. [G3Flow: Generative 3D Semantic Flow for Pose-aware and Generalizable Object Manipulation](../2025/CVPR/2025_CVPR_G3Flow-Generative-3D-Semantic-Flow-for-Pose-aware-and-Gene/01_overview.md) — 2025 CVPR.
-14. [Reactive Diffusion Policy: Slow-Fast Visual-Tactile Policy Learning for Contact-Rich Manipulation](../2025/RSS/2025_RSS_Reactive-Diffusion-Policy-Slow-Fast-Visual-Tactile-Policy/01_overview.md) — 2025 RSS.
-15. [AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models](../2026/CVPR/2026_CVPR_AT-VLA-Adaptive-Tactile-Injection-for-Enhanced-Feedback-Re/01_overview.md) — 2026 CVPR.
-16. [ForceVLA2: Unleashing Hybrid Force-Position Control with Force Awareness for Contact-Rich Manipulation](../2026/CVPR/2026_CVPR_ForceVLA2-Unleashing-Hybrid-Force-Position-Control-with-Fo/01_overview.md) — 2026 CVPR.
-17. [Dexterous World Models](../2026/CVPR/2026_CVPR_Dexterous-World-Models/01_overview.md) — 2026 CVPR.
-18. [EquAct: An SE(3)-Equivariant Multi-Task Transformer for 3D Robotic Manipulation](../2026/ICLR/2026_ICLR_EquAct-An-SE3-Equivariant-Multi-Task-Transformer-for-3D-Ro/01_overview.md) — 2026 ICLR Poster.
-19. [Tabero: Learning Gentle Manipulation with Closed-Loop Force Feedback from Vision, Touch, and Language](../2026/ICML/2026_ICML_Tabero-Learning-Gentle-Manipulation-with-Closed-Loop-Force/01_overview.md) — 2026 ICML.
-20. [TactAlign: Human-to-Robot Policy Transfer via Tactile Alignment](../2026/RSS/2026_RSS_TactAlign-Human-to-Robot-Policy-Transfer-via-Tactile-Align/01_overview.md) — 2026 RSS.
-21. [DexterityGen: Foundation Controller for Unprecedented Dexterity](../2026/RSS/2026_RSS_DexterityGen-Foundation-Controller-for-Unprecedented-Dexte/01_overview.md) — 2026 RSS.
+1. [Behavior Transformers: Cloning k modes with one stone](../2022/NeurIPS/2022_NeurIPS_Behavior-Transformers-Cloning-k-modes-with-one-stone/01_overview.md) — 2022 NeurIPS.
+2. [R3M: A Universal Visual Representation for Robot Manipulation](../2022/CoRL/2022_CoRL_R3M-A-Universal-Visual-Representation-for-Robot-Manipulati/01_overview.md) — 2022 CoRL.
+3. [Where are we in the search for an Artificial Visual Cortex for Embodied Intelligence?](../2023/arXiv/2023_arXiv_Where-are-we-in-the-search-for-an-Artificial-Visual-Cortex/01_overview.md) — 2023 arXiv.
+4. [Maximum a Posteriori Policy Optimisation](../2018/ICLR/2018_ICLR_Maximum-a-Posteriori-Policy-Optimisation/01_overview.md) — 2018 ICLR.
+5. [MT-Opt: Continuous Multi-Task Robotic Reinforcement Learning at Scale](../2021/arXiv/2021_arXiv_MT-Opt-Continuous-Multi-Task-Robotic-Reinforcement-Learnin/01_overview.md) — 2021 arXiv.
+6. [Isaac Gym: High Performance GPU Based Physics Simulation For Robot Learning](../2021/NeurIPS-Datasets-and-Ben/2021_NeurIPS-Datasets-and-Ben_Isaac-Gym-High-Performance-GPU-Based-Physics-Simulation-Fo/01_overview.md) — 2021 NeurIPS Datasets and Benchmarks.
+7. [Eureka: Human-Level Reward Design via Coding Large Language Models](../2024/ICLR/2024_ICLR_Eureka-Human-Level-Reward-Design-via-Coding-Large-Language/01_overview.md) — 2024 ICLR.
+8. [DrEureka: Language Model Guided Sim-To-Real Transfer](../2024/Robotics-Science-and-Sys/2024_Robotics-Science-and-Sys_DrEureka-Language-Model-Guided-Sim-To-Real-Transfer/01_overview.md) — 2024 Robotics: Science and Systems.
+9. [Continuous Control with Deep Reinforcement Learning](../2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning/01_overview.md) — 2016 ICLR.
+10. [Addressing Function Approximation Error in Actor-Critic Methods](../2018/ICML/2018_ICML_Addressing-Function-Approximation-Error-in-Actor-Critic-Me/01_overview.md) — 2018 ICML.
+11. [Hindsight Experience Replay](../2017/NeurIPS/2017_NeurIPS_Hindsight-Experience-Replay/01_overview.md) — 2017 NeurIPS.
+12. [Constrained Policy Optimization](../2017/ICML/2017_ICML_Constrained-Policy-Optimization/01_overview.md) — 2017 ICML.
+13. [Conservative Q-Learning for Offline Reinforcement Learning](../2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/01_overview.md) — 2020 NeurIPS.
+14. [MOPO: Model-based Offline Policy Optimization](../2020/NeurIPS/2020_NeurIPS_MOPO-Model-based-Offline-Policy-Optimization/01_overview.md) — 2020 NeurIPS.
+15. [A Minimalist Approach to Offline Reinforcement Learning](../2021/NeurIPS/2021_NeurIPS_A-Minimalist-Approach-to-Offline-Reinforcement-Learning/01_overview.md) — 2021 NeurIPS.
+16. [Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations](../2018/RSS/2018_RSS_Learning-Complex-Dexterous-Manipulation-with-Deep-Reinforc/01_overview.md) — 2018 RSS.
+17. [Learning Latent Plans from Play](../2020/CoRL/2020_CoRL_Learning-Latent-Plans-from-Play/01_overview.md) — 2020 CoRL.
+18. [Relay Policy Learning: Solving Long-Horizon Tasks via Imitation and Reinforcement Learning](../2020/CoRL/2020_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita/01_overview.md) — 2020 CoRL.
+19. [RLBench: The Robot Learning Benchmark & Learning Environment](../2020/RA-L/2020_RA-L_RLBench-The-Robot-Learning-Benchmark-and-Learning-Environm/01_overview.md) — 2020 RA-L.
+20. [MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations](../2023/CoRL/2023_CoRL_MimicGen-A-Data-Generation-System-for-Scalable-Robot-Learn/01_overview.md) — 2023 CoRL.
+21. [DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset](../2024/RSS/2024_RSS_DROID-A-Large-Scale-In-The-Wild-Robot-Manipulation-Dataset/01_overview.md) — 2024 RSS.
 
-### VLA, cross-embodiment, and long-horizon planning — 18
+### Contact-rich, deformable, force, and dexterous manipulation — 24
 
-1. [BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning](../2022/CoRL/2022_CoRL_BC-Z-Zero-Shot-Task-Generalization-with-Robotic-Imitation/01_overview.md) — 2022 CoRL.
-2. [Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation](../2023/CoRL/2023_CoRL_Perceiver-Actor-A-Multi-Task-Transformer-for-Robotic-Manip/01_overview.md) — 2023 CoRL.
-3. [VIMA: General Robot Manipulation with Multimodal Prompts](../2023/ICML/2023_ICML_VIMA-General-Robot-Manipulation-with-Multimodal-Prompts/01_overview.md) — 2023 ICML.
-4. [Inner Monologue: Embodied Reasoning through Planning with Language Models](../2022/CoRL/2022_CoRL_Inner-Monologue-Embodied-Reasoning-through-Planning-with-L/01_overview.md) — 2022 CoRL.
-5. [SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning](../2023/CoRL/2023_CoRL_SayPlan-Grounding-Large-Language-Models-using-3D-Scene-Gra/01_overview.md) — 2023 CoRL.
-6. [XSkill: Cross Embodiment Skill Discovery](../2023/CoRL/2023_CoRL_XSkill-Cross-Embodiment-Skill-Discovery/01_overview.md) — 2023 CoRL.
-7. [Scaling Proprioceptive-Visual Learning with Heterogeneous Pre-trained Transformers](../2024/NeurIPS/2024_NeurIPS_Scaling-Proprioceptive-Visual-Learning-with-Heterogeneous/01_overview.md) — 2024 NeurIPS.
-8. [FAST: Efficient Action Tokenization for Vision-Language-Action Models](../2025/RSS/2025_RSS_FAST-Efficient-Action-Tokenization-for-Vision-Language-Act/01_overview.md) — 2025 RSS.
-9. [Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success](../2025/RSS/2025_RSS_Fine-Tuning-Vision-Language-Action-Models-Optimizing-Speed/01_overview.md) — 2025 RSS.
-10. [AtomicVLA: Unlocking the Potential of Atomic Skill Learning in Robots](../2026/CVPR/2026_CVPR_AtomicVLA-Unlocking-the-Potential-of-Atomic-Skill-Learning/01_overview.md) — 2026 CVPR.
-11. [PALM: Progress-Aware Policy Learning via Affordance Reasoning for Long-Horizon Robotic Manipulation](../2026/CVPR/2026_CVPR_PALM-Progress-Aware-Policy-Learning-via-Affordance-Reasoni/01_overview.md) — 2026 CVPR.
-12. [ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation](../2026/CVPR/2026_CVPR_ActiveVLA-Injecting-Active-Perception-into-Vision-Language/01_overview.md) — 2026 CVPR.
-13. [Spatial Memory for Out-of-Vision Manipulation in Vision-Language-Action](../2026/ICML/2026_ICML_Spatial-Memory-for-Out-of-Vision-Manipulation-in-Vision-La/01_overview.md) — 2026 ICML.
-14. [Counterfactual VLA: Self-Reflective Vision-Language-Action Model with Adaptive Reasoning](../2026/CVPR/2026_CVPR_Counterfactual-VLA-Self-Reflective-Vision-Language-Action/01_overview.md) — 2026 CVPR.
-15. [Any3D-VLA: Enhancing VLA Robustness via Diverse Point Clouds](../2026/ICML/2026_ICML_Any3D-VLA-Enhancing-VLA-Robustness-via-Diverse-Point-Cloud/01_overview.md) — 2026 ICML.
-16. [MomaGraph: State-Aware Unified Scene Graphs with Vision-Language Models for Embodied Task Planning](../2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan/01_overview.md) — 2026 ICLR Oral.
-17. [AVA-VLA: Improving Vision-Language-Action Models with Active Visual Attention](../2026/CVPR/2026_CVPR_AVA-VLA-Improving-Vision-Language-Action-Models-with-Activ/01_overview.md) — 2026 CVPR.
-18. [VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models](../2026/ICML/2026_ICML_VLA-Arena-An-Open-Source-Framework-for-Benchmarking-Vision/01_overview.md) — 2026 ICML.
+1. [Dense Object Nets: Learning Dense Visual Object Descriptors By and For Robotic Manipulation](../2018/CoRL/2018_CoRL_Dense-Object-Nets-Learning-Dense-Visual-Object-Descriptors/01_overview.md) — 2018 CoRL.
+2. [DIGIT: A Novel Design for a Low-Cost Compact High-Resolution Tactile Sensor with Application to In-Hand Manipulation](../2020/IEEE-Robotics-and-Automa/2020_IEEE-Robotics-and-Automa_DIGIT-A-Novel-Design-for-a-Low-Cost-Compact-High-Resolutio/01_overview.md) — 2020 IEEE Robotics and Automation Letters.
+3. [DeXtreme: Transfer of Agile In-hand Manipulation from Simulation to Reality](../2023/ICRA/2023_ICRA_DeXtreme-Transfer-of-Agile-In-hand-Manipulation-from-Simul/01_overview.md) — 2023 ICRA.
+4. [Control-Limited Differential Dynamic Programming](../2014/ICRA/2014_ICRA_Control-Limited-Differential-Dynamic-Programming/01_overview.md) — 2014 ICRA.
+5. [In-Hand Manipulation via Motion Cones](../2019/RSS/2019_RSS_In-Hand-Manipulation-via-Motion-Cones/01_overview.md) — 2019 RSS.
+6. [Towards Tight Convex Relaxations for Contact-Rich Manipulation](../2024/RSS/2024_RSS_Towards-Tight-Convex-Relaxations-for-Contact-Rich-Manipula/01_overview.md) — 2024 RSS.
+7. [Physics-Driven Data Generation for Contact-Rich Manipulation via Trajectory Optimization](../2025/RSS/2025_RSS_Physics-Driven-Data-Generation-for-Contact-Rich-Manipulati/01_overview.md) — 2025 RSS.
+8. [Complementarity-Free Multi-Contact Modeling and Optimization for Dexterous Manipulation](../2025/RSS/2025_RSS_Complementarity-Free-Multi-Contact-Modeling-and-Optimizati/01_overview.md) — 2025 RSS.
+9. [SoftGym: Benchmarking Deep Reinforcement Learning for Deformable Object Manipulation](../2020/CoRL/2020_CoRL_SoftGym-Benchmarking-Deep-Reinforcement-Learning-for-Defor/01_overview.md) — 2020 CoRL.
+10. [DiffSkill: Skill Abstraction from Differentiable Physics for Deformable Object Manipulations with Tools](../2022/ICLR/2022_ICLR_DiffSkill-Skill-Abstraction-from-Differentiable-Physics-fo/01_overview.md) — 2022 ICLR.
+11. [Neural Descriptor Fields: SE(3)-Equivariant Object Representations for Manipulation](../2021/CoRL/2021_CoRL_Neural-Descriptor-Fields-SE3-Equivariant-Object-Representa/01_overview.md) — 2021 CoRL.
+12. [Diffusion-EDFs: Bi-equivariant Denoising Generative Modeling on SE(3) for Visual Robotic Manipulation](../2024/CVPR/2024_CVPR_Diffusion-EDFs-Bi-equivariant-Denoising-Generative-Modelin/01_overview.md) — 2024 CVPR.
+13. [IndustReal: Transferring Contact-Rich Assembly Tasks from Simulation to Reality](../2023/RSS/2023_RSS_IndustReal-Transferring-Contact-Rich-Assembly-Tasks-from-S/01_overview.md) — 2023 RSS.
+14. [Binding Touch to Everything: Learning Unified Multimodal Tactile Representations](../2024/CVPR/2024_CVPR_Binding-Touch-to-Everything-Learning-Unified-Multimodal-Ta/01_overview.md) — 2024 CVPR.
+15. [DenseMatcher: Learning 3D Semantic Correspondence for Category-Level Manipulation from a Single Demo](../2025/ICLR/2025_ICLR_DenseMatcher-Learning-3D-Semantic-Correspondence-for-Categ/01_overview.md) — 2025 ICLR Spotlight.
+16. [G3Flow: Generative 3D Semantic Flow for Pose-aware and Generalizable Object Manipulation](../2025/CVPR/2025_CVPR_G3Flow-Generative-3D-Semantic-Flow-for-Pose-aware-and-Gene/01_overview.md) — 2025 CVPR.
+17. [Reactive Diffusion Policy: Slow-Fast Visual-Tactile Policy Learning for Contact-Rich Manipulation](../2025/RSS/2025_RSS_Reactive-Diffusion-Policy-Slow-Fast-Visual-Tactile-Policy/01_overview.md) — 2025 RSS.
+18. [AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models](../2026/CVPR/2026_CVPR_AT-VLA-Adaptive-Tactile-Injection-for-Enhanced-Feedback-Re/01_overview.md) — 2026 CVPR.
+19. [ForceVLA2: Unleashing Hybrid Force-Position Control with Force Awareness for Contact-Rich Manipulation](../2026/CVPR/2026_CVPR_ForceVLA2-Unleashing-Hybrid-Force-Position-Control-with-Fo/01_overview.md) — 2026 CVPR.
+20. [Dexterous World Models](../2026/CVPR/2026_CVPR_Dexterous-World-Models/01_overview.md) — 2026 CVPR.
+21. [EquAct: An SE(3)-Equivariant Multi-Task Transformer for 3D Robotic Manipulation](../2026/ICLR/2026_ICLR_EquAct-An-SE3-Equivariant-Multi-Task-Transformer-for-3D-Ro/01_overview.md) — 2026 ICLR Poster.
+22. [Tabero: Learning Gentle Manipulation with Closed-Loop Force Feedback from Vision, Touch, and Language](../2026/ICML/2026_ICML_Tabero-Learning-Gentle-Manipulation-with-Closed-Loop-Force/01_overview.md) — 2026 ICML.
+23. [TactAlign: Human-to-Robot Policy Transfer via Tactile Alignment](../2026/RSS/2026_RSS_TactAlign-Human-to-Robot-Policy-Transfer-via-Tactile-Align/01_overview.md) — 2026 RSS.
+24. [DexterityGen: Foundation Controller for Unprecedented Dexterity](../2026/RSS/2026_RSS_DexterityGen-Foundation-Controller-for-Unprecedented-Dexte/01_overview.md) — 2026 RSS.
 
-### World models, uncertainty, failure detection, and recovery — 14
+### VLA, cross-embodiment, and long-horizon planning — 23
 
-1. [Learning Latent Dynamics for Planning from Pixels](../2019/ICML/2019_ICML_Learning-Latent-Dynamics-for-Planning-from-Pixels/01_overview.md) — 2019 ICML.
-2. [Dream to Control: Learning Behaviors by Latent Imagination](../2020/ICLR/2020_ICLR_Dream-to-Control-Learning-Behaviors-by-Latent-Imagination/01_overview.md) — 2020 ICLR.
-3. [Mastering Diverse Domains through World Models](../2025/Nature/2025_Nature_Mastering-Diverse-Domains-through-World-Models/01_overview.md) — 2025 Nature.
-4. [PIN-WM: Learning Physics-INformed World Models for Non-Prehensile Manipulation](../2025/RSS/2025_RSS_PIN-WM-Learning-Physics-INformed-World-Models-for-Non-Preh/01_overview.md) — 2025 RSS.
-5. [Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets](../2025/RSS/2025_RSS_Unified-World-Models-Coupling-Video-and-Action-Diffusion-f/01_overview.md) — 2025 RSS.
-6. [FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation](../2025/arXiv/2025_arXiv_FlowDreamer-A-RGB-D-World-Model-with-Flow-based-Motion-Rep/01_overview.md) — 2025 arXiv.
-7. [Can We Detect Failures Without Failure Data? Uncertainty-Aware Runtime Failure Detection for Imitation Learning Policies](../2025/RSS/2025_RSS_Can-We-Detect-Failures-Without-Failure-Data-Uncertainty-Aw/01_overview.md) — 2025 RSS.
-8. [SAFE: Multitask Failure Detection for Vision-Language-Action Models](../2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md) — 2025 NeurIPS.
-9. [WorldGym: World Model as An Environment for Policy Evaluation](../2026/ICLR/2026_ICLR_WorldGym-World-Model-as-An-Environment-for-Policy-Evaluati/01_overview.md) — 2026 ICLR.
-10. [WMPO: World Model-based Policy Optimization for Vision-Language-Action Models](../2026/ICLR/2026_ICLR_WMPO-World-Model-based-Policy-Optimization-for-Vision-Lang/01_overview.md) — 2026 ICLR Poster.
-11. [FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation](../2026/CVPR/2026_CVPR_FLARE-A-Failure-Aware-Framework-for-Autonomous-Correction/01_overview.md) — 2026 CVPR.
-12. [Can VLMs Diagnose and Recover from VLA Manipulation Faults?](../2026/ICML/2026_ICML_Can-VLMs-Diagnose-and-Recover-from-VLA-Manipulation-Faults/01_overview.md) — 2026 ICML.
-13. [Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models](../2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/01_overview.md) — 2026 ICML.
-14. [Memory Retrieval in Visuomotor Policies for Long-Horizon Robot Control](../2026/RSS/2026_RSS_Memory-Retrieval-in-Visuomotor-Policies-for-Long-Horizon-R/01_overview.md) — 2026 RSS.
+1. [A Generalist Agent](../2022/arXiv/2022_arXiv_A-Generalist-Agent/01_overview.md) — 2022 arXiv.
+2. [AutoRT: Embodied Foundation Models for Large Scale Orchestration of Robotic Agents](../2024/arXiv/2024_arXiv_AutoRT-Embodied-Foundation-Models-for-Large-Scale-Orchestr/01_overview.md) — 2024 arXiv.
+3. [RT-H: Action Hierarchies Using Language](../2024/Robotics-Science-and-Sys/2024_Robotics-Science-and-Sys_RT-H-Action-Hierarchies-Using-Language/01_overview.md) — 2024 Robotics: Science and Systems.
+4. [Gemini Robotics: Bringing AI into the Physical World](../2025/arXiv/2025_arXiv_Gemini-Robotics-Bringing-AI-into-the-Physical-World/01_overview.md) — 2025 arXiv.
+5. [NVIDIA Isaac GR00T N1: An Open Foundation Model for Humanoid Robots](../2025/arXiv/2025_arXiv_NVIDIA-Isaac-GR00T-N1-An-Open-Foundation-Model-for-Humanoi/01_overview.md) — 2025 arXiv.
+6. [BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning](../2022/CoRL/2022_CoRL_BC-Z-Zero-Shot-Task-Generalization-with-Robotic-Imitation/01_overview.md) — 2022 CoRL.
+7. [Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation](../2023/CoRL/2023_CoRL_Perceiver-Actor-A-Multi-Task-Transformer-for-Robotic-Manip/01_overview.md) — 2023 CoRL.
+8. [VIMA: General Robot Manipulation with Multimodal Prompts](../2023/ICML/2023_ICML_VIMA-General-Robot-Manipulation-with-Multimodal-Prompts/01_overview.md) — 2023 ICML.
+9. [Inner Monologue: Embodied Reasoning through Planning with Language Models](../2022/CoRL/2022_CoRL_Inner-Monologue-Embodied-Reasoning-through-Planning-with-L/01_overview.md) — 2022 CoRL.
+10. [SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning](../2023/CoRL/2023_CoRL_SayPlan-Grounding-Large-Language-Models-using-3D-Scene-Gra/01_overview.md) — 2023 CoRL.
+11. [XSkill: Cross Embodiment Skill Discovery](../2023/CoRL/2023_CoRL_XSkill-Cross-Embodiment-Skill-Discovery/01_overview.md) — 2023 CoRL.
+12. [Scaling Proprioceptive-Visual Learning with Heterogeneous Pre-trained Transformers](../2024/NeurIPS/2024_NeurIPS_Scaling-Proprioceptive-Visual-Learning-with-Heterogeneous/01_overview.md) — 2024 NeurIPS.
+13. [FAST: Efficient Action Tokenization for Vision-Language-Action Models](../2025/RSS/2025_RSS_FAST-Efficient-Action-Tokenization-for-Vision-Language-Act/01_overview.md) — 2025 RSS.
+14. [Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success](../2025/RSS/2025_RSS_Fine-Tuning-Vision-Language-Action-Models-Optimizing-Speed/01_overview.md) — 2025 RSS.
+15. [AtomicVLA: Unlocking the Potential of Atomic Skill Learning in Robots](../2026/CVPR/2026_CVPR_AtomicVLA-Unlocking-the-Potential-of-Atomic-Skill-Learning/01_overview.md) — 2026 CVPR.
+16. [PALM: Progress-Aware Policy Learning via Affordance Reasoning for Long-Horizon Robotic Manipulation](../2026/CVPR/2026_CVPR_PALM-Progress-Aware-Policy-Learning-via-Affordance-Reasoni/01_overview.md) — 2026 CVPR.
+17. [ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation](../2026/CVPR/2026_CVPR_ActiveVLA-Injecting-Active-Perception-into-Vision-Language/01_overview.md) — 2026 CVPR.
+18. [Spatial Memory for Out-of-Vision Manipulation in Vision-Language-Action](../2026/ICML/2026_ICML_Spatial-Memory-for-Out-of-Vision-Manipulation-in-Vision-La/01_overview.md) — 2026 ICML.
+19. [Counterfactual VLA: Self-Reflective Vision-Language-Action Model with Adaptive Reasoning](../2026/CVPR/2026_CVPR_Counterfactual-VLA-Self-Reflective-Vision-Language-Action/01_overview.md) — 2026 CVPR.
+20. [Any3D-VLA: Enhancing VLA Robustness via Diverse Point Clouds](../2026/ICML/2026_ICML_Any3D-VLA-Enhancing-VLA-Robustness-via-Diverse-Point-Cloud/01_overview.md) — 2026 ICML.
+21. [MomaGraph: State-Aware Unified Scene Graphs with Vision-Language Models for Embodied Task Planning](../2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan/01_overview.md) — 2026 ICLR Oral.
+22. [AVA-VLA: Improving Vision-Language-Action Models with Active Visual Attention](../2026/CVPR/2026_CVPR_AVA-VLA-Improving-Vision-Language-Action-Models-with-Activ/01_overview.md) — 2026 CVPR.
+23. [VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models](../2026/ICML/2026_ICML_VLA-Arena-An-Open-Source-Framework-for-Benchmarking-Vision/01_overview.md) — 2026 ICML.
 
-### Locomotion, whole-body control, mobile manipulation, and humanoids — 12
+### World models, uncertainty, failure detection, and recovery — 16
 
-1. [DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills](../2018/TOG-SIGGRAPH/2018_TOG-SIGGRAPH_DeepMimic-Example-Guided-Deep-Reinforcement-Learning-of-Ph/01_overview.md) — 2018 TOG / SIGGRAPH.
-2. [Sim-to-Real: Learning Agile Locomotion For Quadruped Robots](../2018/RSS/2018_RSS_Sim-to-Real-Learning-Agile-Locomotion-For-Quadruped-Robots/01_overview.md) — 2018 RSS.
-3. [Learning Quadrupedal Locomotion over Challenging Terrain](../2020/Science-Robotics/2020_Science-Robotics_Learning-Quadrupedal-Locomotion-over-Challenging-Terrain/01_overview.md) — 2020 Science Robotics.
-4. [Extreme Parkour with Legged Robots](../2024/ICRA/2024_ICRA_Extreme-Parkour-with-Legged-Robots/01_overview.md) — 2024 ICRA.
-5. [Walk These Ways: Tuning Robot Control for Generalization with Multiplicity of Behavior](../2022/CoRL/2022_CoRL_Walk-These-Ways-Tuning-Robot-Control-for-Generalization-wi/01_overview.md) — 2022 CoRL.
-6. [HumanPlus: Humanoid Shadowing and Imitation from Humans](../2024/CoRL/2024_CoRL_HumanPlus-Humanoid-Shadowing-and-Imitation-from-Humans/01_overview.md) — 2024 CoRL.
-7. [ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills](../2025/RSS/2025_RSS_ASAP-Aligning-Simulation-and-Real-World-Physics-for-Learni/01_overview.md) — 2025 RSS.
-8. [LangWBC: Language-Directed Humanoid Whole-Body Control via End-to-End Learning](../2025/RSS/2025_RSS_LangWBC-Language-Directed-Humanoid-Whole-Body-Control-via/01_overview.md) — 2025 RSS.
-9. [RoboPanoptes: The All-Seeing Robot with Whole-body Dexterity](../2025/RSS/2025_RSS_RoboPanoptes-The-All-Seeing-Robot-with-Whole-body-Dexterit/01_overview.md) — 2025 RSS.
-10. [Demonstrating OK-Robot: What Really Matters in Integrating Open-Knowledge Models for Robotics](../2024/RSS/2024_RSS_Demonstrating-OK-Robot-What-Really-Matters-in-Integrating/01_overview.md) — 2024 RSS.
-11. [HWC-Loco: A Hierarchical Whole-Body Control Approach to Robust Humanoid Locomotion](../2026/ICLR/2026_ICLR_HWC-Loco-A-Hierarchical-Whole-Body-Control-Approach-to-Rob/01_overview.md) — 2026 ICLR Poster.
-12. [VIRAL: Visual Sim-to-Real at Scale for Humanoid Loco-Manipulation](../2026/CVPR/2026_CVPR_VIRAL-Visual-Sim-to-Real-at-Scale-for-Humanoid-Loco-Manipu/01_overview.md) — 2026 CVPR.
+1. [DreamGen: Unlocking Generalization in Robot Learning through Video World Models](../2025/CoRL/2025_CoRL_DreamGen-Unlocking-Generalization-in-Robot-Learning-throug/01_overview.md) — 2025 CoRL.
+2. [DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos](../2026/ICML/2026_ICML_DreamDojo-A-Generalist-Robot-World-Model-from-Large-Scale/01_overview.md) — 2026 ICML Spotlight.
+3. [Learning Latent Dynamics for Planning from Pixels](../2019/ICML/2019_ICML_Learning-Latent-Dynamics-for-Planning-from-Pixels/01_overview.md) — 2019 ICML.
+4. [Dream to Control: Learning Behaviors by Latent Imagination](../2020/ICLR/2020_ICLR_Dream-to-Control-Learning-Behaviors-by-Latent-Imagination/01_overview.md) — 2020 ICLR.
+5. [Mastering Diverse Domains through World Models](../2025/Nature/2025_Nature_Mastering-Diverse-Domains-through-World-Models/01_overview.md) — 2025 Nature.
+6. [PIN-WM: Learning Physics-INformed World Models for Non-Prehensile Manipulation](../2025/RSS/2025_RSS_PIN-WM-Learning-Physics-INformed-World-Models-for-Non-Preh/01_overview.md) — 2025 RSS.
+7. [Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets](../2025/RSS/2025_RSS_Unified-World-Models-Coupling-Video-and-Action-Diffusion-f/01_overview.md) — 2025 RSS.
+8. [FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation](../2025/arXiv/2025_arXiv_FlowDreamer-A-RGB-D-World-Model-with-Flow-based-Motion-Rep/01_overview.md) — 2025 arXiv.
+9. [Can We Detect Failures Without Failure Data? Uncertainty-Aware Runtime Failure Detection for Imitation Learning Policies](../2025/RSS/2025_RSS_Can-We-Detect-Failures-Without-Failure-Data-Uncertainty-Aw/01_overview.md) — 2025 RSS.
+10. [SAFE: Multitask Failure Detection for Vision-Language-Action Models](../2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md) — 2025 NeurIPS.
+11. [WorldGym: World Model as An Environment for Policy Evaluation](../2026/ICLR/2026_ICLR_WorldGym-World-Model-as-An-Environment-for-Policy-Evaluati/01_overview.md) — 2026 ICLR.
+12. [WMPO: World Model-based Policy Optimization for Vision-Language-Action Models](../2026/ICLR/2026_ICLR_WMPO-World-Model-based-Policy-Optimization-for-Vision-Lang/01_overview.md) — 2026 ICLR Poster.
+13. [FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation](../2026/CVPR/2026_CVPR_FLARE-A-Failure-Aware-Framework-for-Autonomous-Correction/01_overview.md) — 2026 CVPR.
+14. [Can VLMs Diagnose and Recover from VLA Manipulation Faults?](../2026/ICML/2026_ICML_Can-VLMs-Diagnose-and-Recover-from-VLA-Manipulation-Faults/01_overview.md) — 2026 ICML.
+15. [Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models](../2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/01_overview.md) — 2026 ICML.
+16. [Memory Retrieval in Visuomotor Policies for Long-Horizon Robot Control](../2026/RSS/2026_RSS_Memory-Retrieval-in-Visuomotor-Policies-for-Long-Horizon-R/01_overview.md) — 2026 RSS.
+
+### Locomotion, whole-body control, mobile manipulation, and humanoids — 16
+
+1. [Perpetual Humanoid Control for Real-time Simulated Avatars](../2023/ICCV/2023_ICCV_Perpetual-Humanoid-Control-for-Real-time-Simulated-Avatars/01_overview.md) — 2023 ICCV.
+2. [MaskedMimic: Unified Physics-Based Character Control Through Masked Motion Inpainting](../2024/ACM-Transactions-on-Grap/2024_ACM-Transactions-on-Grap_MaskedMimic-Unified-Physics-Based-Character-Control-Throug/01_overview.md) — 2024 ACM Transactions on Graphics.
+3. [HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots](../2025/ICRA/2025_ICRA_HOVER-Versatile-Neural-Whole-Body-Controller-for-Humanoid/01_overview.md) — 2025 ICRA.
+4. [SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control](../2026/Science-Robotics/2026_Science-Robotics_SONIC-Supersizing-Motion-Tracking-for-Natural-Humanoid-Who/01_overview.md) — 2026 Science Robotics.
+5. [DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills](../2018/TOG-SIGGRAPH/2018_TOG-SIGGRAPH_DeepMimic-Example-Guided-Deep-Reinforcement-Learning-of-Ph/01_overview.md) — 2018 TOG / SIGGRAPH.
+6. [Sim-to-Real: Learning Agile Locomotion For Quadruped Robots](../2018/RSS/2018_RSS_Sim-to-Real-Learning-Agile-Locomotion-For-Quadruped-Robots/01_overview.md) — 2018 RSS.
+7. [Learning Quadrupedal Locomotion over Challenging Terrain](../2020/Science-Robotics/2020_Science-Robotics_Learning-Quadrupedal-Locomotion-over-Challenging-Terrain/01_overview.md) — 2020 Science Robotics.
+8. [Extreme Parkour with Legged Robots](../2024/ICRA/2024_ICRA_Extreme-Parkour-with-Legged-Robots/01_overview.md) — 2024 ICRA.
+9. [Walk These Ways: Tuning Robot Control for Generalization with Multiplicity of Behavior](../2022/CoRL/2022_CoRL_Walk-These-Ways-Tuning-Robot-Control-for-Generalization-wi/01_overview.md) — 2022 CoRL.
+10. [HumanPlus: Humanoid Shadowing and Imitation from Humans](../2024/CoRL/2024_CoRL_HumanPlus-Humanoid-Shadowing-and-Imitation-from-Humans/01_overview.md) — 2024 CoRL.
+11. [ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills](../2025/RSS/2025_RSS_ASAP-Aligning-Simulation-and-Real-World-Physics-for-Learni/01_overview.md) — 2025 RSS.
+12. [LangWBC: Language-Directed Humanoid Whole-Body Control via End-to-End Learning](../2025/RSS/2025_RSS_LangWBC-Language-Directed-Humanoid-Whole-Body-Control-via/01_overview.md) — 2025 RSS.
+13. [RoboPanoptes: The All-Seeing Robot with Whole-body Dexterity](../2025/RSS/2025_RSS_RoboPanoptes-The-All-Seeing-Robot-with-Whole-body-Dexterit/01_overview.md) — 2025 RSS.
+14. [Demonstrating OK-Robot: What Really Matters in Integrating Open-Knowledge Models for Robotics](../2024/RSS/2024_RSS_Demonstrating-OK-Robot-What-Really-Matters-in-Integrating/01_overview.md) — 2024 RSS.
+15. [HWC-Loco: A Hierarchical Whole-Body Control Approach to Robust Humanoid Locomotion](../2026/ICLR/2026_ICLR_HWC-Loco-A-Hierarchical-Whole-Body-Control-Approach-to-Rob/01_overview.md) — 2026 ICLR Poster.
+16. [VIRAL: Visual Sim-to-Real at Scale for Humanoid Loco-Manipulation](../2026/CVPR/2026_CVPR_VIRAL-Visual-Sim-to-Real-at-Scale-for-Humanoid-Loco-Manipu/01_overview.md) — 2026 CVPR.
 
 ### Active and embodied 3D Vision — 11
 

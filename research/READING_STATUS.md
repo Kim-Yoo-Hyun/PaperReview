@@ -1,7 +1,9 @@
 # Reading Status Guide
 
+- Updated: 2026-08-28 KST
+
 - Canonical tracker: [READING_STATUS.csv](./READING_STATUS.csv)
-- Scope: CORE 61편 + NEXT 89편 = 150편
+- Scope: CORE 77편 + NEXT 113편 = 190편
 - PDF 보유 여부는 읽기 우선순위, 상태 전환, 완료 판단에 사용하지 않는다.
 
 ## Status

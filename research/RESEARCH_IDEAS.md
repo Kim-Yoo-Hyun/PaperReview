@@ -4,12 +4,12 @@
 - Research stance: Robotics가 주축이며 VLA와 3D perception은 실제 closed-loop behavior를 개선하는 구성요소로 다룬다.
 - Gap source: [RESEARCH_GAPS.md](./RESEARCH_GAPS.md)
 - Lineage source: [synthesis/](../synthesis/README.md)
-- Literature basis: 12개 아이디어는 기존 gap의 `READING-SUPPORTED` 원문 감사에 근거하며, 2026-08-26 gap closure audit의 venue-confirmed paper와 preprint collision check를 구분해 반영한다.
-- Gap-method alignment: 2026-08-26에 6개 macro-gap과 robotics `R-M-C-O-T-S` 범위로 재검토했다. 13개 gap 중 11개는 `narrowed`, 2개는 `partially addressed`이므로 broad novelty claim은 사용하지 않는다.
+- Literature basis: 12개 아이디어는 기존 gap의 `READING-SUPPORTED` 원문 감사에 근거하며, 2026-08-28 gap survival audit의 venue-confirmed paper, official system page, preprint collision check를 구분해 반영한다.
+- Gap-method alignment: 2026-08-28에 6개 macro-gap과 robotics `R-M-C-O-T-S` 범위를 원점에서 재검토했다. 13개 gap 모두 broad claim은 이미 상당 부분 해결된 `narrowed` 상태이므로 residual boundary만 hypothesis로 사용한다.
 - Hypothesis status: 모든 아이디어는 아직 `UNTESTED`다. 문헌 근거가 있다는 사실과 제안 가설이 실험적으로 지지됐다는 사실을 구분한다.
 - Project specs: [RP-2 Same-Onset Failure Recovery Arbitration](./projects/RP-2_FAILURE_RECOVERY.md), [RP-3 Phase-Aware Memory Expiry](./projects/RP-3_MEMORY_EXPIRY.md)
 - RP-2 reading spine: [P0–P4 priority reading sequence](#rp-2-i-02-priority-reading-spine) — 전체 dependency는 [READING_PLAN.md](./READING_PLAN.md#rp-2-i-02-priority-reading-sequence)를 canonical source로 둔다.
-- RP-2 novelty status: `CONDITIONALLY_FIT / CURRENT FOCUS` — 현재 가장 강한 P1 방향이지만, novelty는 same-onset counterfactual option crossing과 matched-budget selector regret로 입증해야 한다.
+- RP-2 novelty status: `HIGH-COLLISION / CONDITIONALLY_FIT / CURRENT FOCUS` — Agentic RL이 broad high-level selector를 이미 다룬다. novelty는 same-onset all-option supervision, vector-budget crossing, best-fixed regret 감소가 함께 확인될 때만 성립한다.
 
 ## 이 문서의 역할
 
@@ -22,18 +22,18 @@
 
 논문의 module 이름만 바꾸거나 이미 입증된 결합을 반복하지 않는다. 예를 들어 slow–fast tactile VLA 자체는 Reactive Diffusion Policy와 AT-VLA가, hybrid force–position VLA는 ForceVLA2가 이미 다룬다. 새 연구는 cross-sensor transfer, calibration, uncertainty 또는 safety처럼 원문에서 남긴 경계를 검증해야 한다.
 
-## 2026-08-26 gap-to-idea reassessment
+## 2026-08-28 gap-to-idea reassessment
 
 최신 논문이 이미 닫은 broad claim은 아이디어에서 제거했다. 아래 표의 `잔여 연구 단위`만 active hypothesis로 취급하며, 관련 최신 연구는 새 module의 motivation이 아니라 strong baseline 또는 novelty-collision evidence로 사용한다.
 
 | Macro / ideas | 최신 연구가 이미 해결한 범위 | 아이디어에 남긴 잔여 연구 단위 | Portfolio decision |
 |---|---|---|---|
 | M-1 / I-01 | AT-VLA·ForceVLA2·TACTIC은 fast/contact-centric control을, TactAlign·UniForce는 heterogeneous tactile alignment를 보여줌 | sensor-OOD에서 contact-state uncertainty에 따라 fast-control authority를 줄이거나 차단하는 calibration | `RETAIN / E1`, hardware dependency |
-| M-2 / I-02·I-12·I-06 | FLARE, ViFailback, AgentChord, UPS와 SPR·FAR·CoRe·VLCP가 서로 다른 recovery family를 직접 다룸 | 동일 cloned onset에서 abstraction-level option value를 비교하는 budgeted arbitration; option-outcome table과 common event schema | **`FOCUS`**: I-12 → I-02 → optional I-06 |
-| M-3 / I-03·I-07·I-09 | AFI/HALO가 drift·memory trap을, ActiveVLA·SaPaVe가 active view/camera action을 직접 완화 | memory expiry risk calibration, compute-matched 3D control utility, physical camera cost를 포함한 value-of-information stopping | `RETAIN`, I-07 E1 후 I-09 E2 |
-| M-4 / I-04 | WorldGym·PolaRiS·Interactive World Simulator가 policy ranking을, WMPO·RISE·Visual Verification이 policy improvement를 입증 | contact/rare-failure subgroup false-safe calibration과 predicted-real gain 기반 update abstention | `RETAIN / SECONDARY` |
-| M-5 / I-05·I-10 | WholeBodyVLA·Humanoid Pixel-to-Action·HAIC가 loco-manipulation을, KDMR·Rhythm이 dynamics/contact-aware retargeting을 직접 다룸 | transition-conditioned objective/risk allocation, cross-morphology feasibility–coverage–hardware-safety calibration | `DEFER / P2`; broad method claim 금지 |
-| M-6 / I-08·I-11 | large-scale co-training study와 human-to-robot transfer가 modality/diversity 효과를 직접 비교 | joint coverage allocation과 worst-group scaling; morphology adapter는 bottleneck 확인 후에만 | I-08 `RETAIN`, I-11 `CONDITIONAL BACKLOG` |
+| M-2 / I-02·I-12·I-06 | RT-H·FLARE·ViFailback·AgentChord·UPS뿐 아니라 Agentic RL·ActFovea·ProbeAct가 selector, verified observation recovery, safety net을 직접 다룸 | 동일 cloned onset의 all-option outcome table과 vector budget이 best-fixed·scalar·mode-policy regret를 줄이는 조건 | **`HIGH-COLLISION / FOCUS`**: Phase 0 gate → I-12 → I-02; optional I-06 |
+| M-3 / I-03·I-07·I-09 | AFI/HALO·POT-VLA가 memory trap·state verification을, ActiveVLA·SaPaVe가 active view/camera action을 다룸 | item-level memory expiry/unsafe-use calibration, compute-matched 3D control utility, physical camera cost를 포함한 value-of-information stopping | I-03 **`SCOPED / NEXT`**, I-07 E1 후 I-09 E2 |
+| M-4 / I-04 | DreamGen·DreamDojo가 synthetic/human-video prior를, WorldGym 계열이 ranking을, WMPO 계열이 improvement를 입증 | source-domain·contact·rare-failure subgroup false-safe calibration과 predicted-real gain 기반 update abstention | `RETAIN / SECONDARY` |
+| M-5 / I-05·I-10 | Gemini Robotics 2·GR00T N1.6·OpenHLM·GRAIL이 whole-body VLA를, AMP–SONIC·KDMR·Rhythm이 tracking/retargeting을 직접 다룸 | semantic command의 phase·termination·feasibility·authority contract; cross-morphology feasibility–coverage–hardware-safety calibration | I-05 `HYPOTHESIS / SECONDARY`, I-10 `DEFERRED`; broad method claim 금지 |
+| M-6 / I-08·I-11 | MT-Opt·AutoRT·Open X-Embodiment·GR00T와 large-scale co-training이 data engine·diversity 효과를 직접 비교 | joint coverage allocation과 worst-group scaling; morphology adapter는 bottleneck 확인 후에만 | I-08 `RETAIN`, I-11 `CONDITIONAL BACKLOG` |
 
 이 표의 최신 근거는 [RESEARCH_GAPS.md의 source/status audit](./RESEARCH_GAPS.md#evidence-audit-ledger)을 따른다. `SOURCE-VERIFIED` paper는 broad gap을 축소하는 근거로만 사용하며, method card의 `READING-SUPPORTED`를 자동 승격하지 않는다.
 
@@ -56,10 +56,10 @@
 | Program | Macro-gap | Decision experiments | 선행 관계 |
 |---|---|---|---|
 | RP-1 Contact feedback transfer | M-1 | I-01 | G-01의 dual-rate transfer와 G-05의 contact-state calibration을 하나의 controller audit에서 검사 |
-| RP-2 Failure-to-recovery loop | M-2 | I-12 → I-02 → I-06 optional | 공통 event/clone protocol과 option-outcome table을 만든 뒤 counterfactual recovery arbitration을 검증하고, 지지될 때만 policy reuse로 확장 |
+| RP-2 Failure-to-recovery loop | M-2 | Phase 0 gate → I-12 → I-02 → I-06 optional | branch-equivalent event/clone protocol과 all-option table에서 separability·crossing·best-fixed regret를 먼저 확인하고, 지지될 때만 selector와 policy reuse로 확장 |
 | RP-3 Task-effective state | M-3 | I-07 → I-09; I-03 parallel | representation의 순수 control value와 추가 관측을 먼저 연결하고, memory는 공통 state instrumentation으로 독립 검사 |
 | RP-4 Model-based decision | M-4 | I-04A → I-04B | world-model ranking calibration을 먼저 검증한 뒤 policy update로 진행 |
-| RP-5 Embodied deployment | M-5 | I-10; I-05 parallel, then integration | cross-morphology feasibility calibration과 transition-conditioned risk interface를 각각 검증한 뒤 결합 |
+| RP-5 Embodied deployment | M-5 | I-05; I-10 parallel, then optional integration | semantic-to-dynamic command contract와 cross-morphology feasibility calibration을 각각 검증한 뒤 둘 다 지지될 때만 결합 |
 | RP-6 Data and evidence | M-6 | I-08 → I-11 conditional | joint coverage audit 후 morphology가 실제 worst-group bottleneck일 때만 adapter로 확장 |
 
 ## Decision experiment portfolio
@@ -69,10 +69,10 @@
 | Idea | Program | Execution | Primary gap | 핵심 연구 단위 | 첫 검증 환경 |
 |---|---|---|---|---|---|
 | I-01 | RP-1 | E1 | G-01; G-05 secondary | slow–fast contact control의 sensor/embodiment transfer | contact-rich real robot 또는 high-fidelity setup |
-| I-02 | RP-2 | E1 | G-02; G-10 evaluation dependency | same-onset counterfactual option value → matched-budget recovery arbitration | LIBERO perturbation/clone wrapper, CALVIN transfer |
+| I-02 | RP-2 | E1 | G-02; G-10 evaluation dependency | same-onset all-option supervision → vector-budget recovery arbitration | pinned LIBERO-10/OpenVLA/SAFE; CALVIN은 confirmatory gate 뒤 transfer |
 | I-03 | RP-3 | E1 | G-04 | phase-aware memory update와 confidence-based expiry | RoboCasa/RLBench dynamic scene |
-| I-04 | RP-4 | E1→E2 | G-07 → G-08 | contact-calibrated ranking 후 policy update | existing rollout dataset + 소규모 real validation |
-| I-05 | RP-5 | E2 | G-09 | whole-body controller에 task risk budget 전달 | HumanoidBench |
+| I-04 | RP-4 | E1→E2 | G-07 → G-08 | source/contact/OOD-calibrated ranking 후 policy update | existing rollout dataset + 소규모 real validation |
+| I-05 | RP-5 | E1 | G-09; G-01 interface secondary | semantic command의 phase·termination·feasibility와 controller authority contract | HumanoidBench 또는 Isaac Lab simulator |
 | I-06 | RP-2 | E2 | G-06; G-02 data dependency | selected correction이 아니라 matched alternative option outcome을 이용한 conservative reuse | I-02 cloned-onset option table |
 | I-07 | RP-3 | E1 | G-03 | compute-matched 2D/3D control utility | RLBench/FlowBot-style articulation |
 | I-08 | RP-6 | E1 | G-12 | condition coverage를 최적화하는 data subset | DROID/OXE-style metadata |
@@ -99,20 +99,20 @@
 
 <a id="i-02-risk-budgeted-typed-recovery-for-vla"></a>
 
-### I-02. Same-onset counterfactual recovery arbitration for VLA
+### I-02. Same-onset all-option recovery arbitration for VLA
 
 - **Program / execution:** RP-2 / E1; [project spec](./projects/RP-2_FAILURE_RECOVERY.md)의 I-12 event protocol을 먼저 사용한다.
 - **Gap:** [G-02](./RESEARCH_GAPS.md#g-02-detection에서-recovery까지-닫히지-않은-loop), [G-10](./RESEARCH_GAPS.md#g-10-long-horizon-평가의-낮은-failure-resolution)
-- **`R-M-C-O-T-S`:** VLA manipulator / option-conditioned value와 risk-constrained budgeted selector / abort·retry·reobserve·state reset·subgoal rewind·task replan·human escalation / final completion·irreversible failure·intervention cost·regret-to-oracle / cloned failure onset에서 post-recovery까지 / LIBERO perturbation wrapper와 CALVIN transfer.
-- **방법론 근거:** POMDP의 belief-state와 finite-memory decision formulation, SAFE의 calibrated failure score, Recovery RL의 task/recovery policy 분리와 safety critic, PDDLStream의 symbolic–continuous replanning interface를 사용한다. FLARE의 Retry/Reset, ViFailback의 diagnosis/correction, AgentChord의 recovery-augmented task graph, UPS의 calibrated act/ask/intervene를 strong baseline으로 둔다. SPR의 rewind, FAR의 retry/adaptation, CoRe의 imagined realignment, VLCP의 code replan은 `PREPRINT-ONLY` novelty-collision set으로 비교한다.
-- **범위 경계:** RP-2는 torque/force law를 새로 학습하는 실로봇 저수준 제어 연구가 아니라, frozen VLA와 fixed skill/controller 위의 high-level runtime recovery supervisor다. LIBERO/CALVIN에서 C1/C2를 먼저 검증하고, hardware latency·contact force·emergency stop은 별도 `C3` real-robot phase에서만 주장한다.
-- **선행 연구가 해결한 것:** detection, Retry/Reset, visual correction, rollback/rewind, precompiled recovery branch, act/ask/intervene, retry adaptation은 각각 이미 다뤄졌다. 따라서 새 failure type을 정의하거나 기존 option 하나를 추가하는 것은 새 연구 단위가 아니다.
-- **새 연구 단위:** 동일한 cloned post-failure state에서 고정된 option library를 모두 실행해 `Q(o | belief, cause, recoverability, budget)`와 risk/cost를 관찰한다. 서로 다른 abstraction level의 option이 만드는 outcome crossing을 학습하고, 동일 정보·horizon·budget에서 하나를 선택한다. detector, option-value estimator, selector, skill-library 오류는 oracle decomposition으로 분리한다.
-- **가설:** scalar alert가 비슷한 failure 사이에서도 optimal option이 달라지고 remaining budget에 따라 option ranking이 교차한다. 이 crossing을 학습한 risk-constrained selector는 strongest non-privileged baseline보다 IFR을 악화시키지 않으면서 BRCR을 높이고 regret-to-oracle을 줄인다.
-- **최소 실험:** LIBERO-Long 4개 task에 observation, execution/contact, world-state, plan-semantic perturbation을 event landmark에서 삽입한다. fit/calibration/test task를 분리한 frozen-base rollout의 각 cloned onset에서 abort, blind retry, reobserve, state reset, subgoal rewind, privileged task replan을 모두 실행해 option-outcome table을 만든다. scalar trigger, FLARE-style Retry/Reset, type-only heuristic, uniform-feasible selector, learned option-value selector를 600-step native horizon과 동일한 vector recovery budget에서 비교한다. 이후 selector를 재학습하지 않고 CALVIN 또는 held-out failure family로 transfer한다.
-- **판정 지표:** primary는 `Budgeted Recovery Completion Rate (BRCR)`, safety gate는 `Irreversible Failure Rate (IFR)`다. secondary로 event-level detection delay/AUPRC, cause·recoverability macro-F1, per-option Brier/ECE, O3 대비 option regret, false intervention, recovery cost, p95 selector latency, task/cause/onset worst-group BRCR·IFR를 paired cluster-bootstrap CI와 함께 보고한다.
-- **Reject criterion:** 먼저 crossing prevalence가 사전 기준보다 낮거나 best fixed option의 regret가 learned selector와 동률이면 arbitration claim을 기각한다. crossing이 존재해도 strongest non-privileged baseline보다 BRCR이 5 pp 이상 개선되지 않거나 IFR upper CI가 baseline+1 pp를 초과하면 method claim을 기각한다. oracle option outcome에서도 이득이 없으면 selector가 아니라 skill-library/interface expressivity 문제로 판정한다.
-- **Paper basis:** [POMDP](../1998/Artificial-Intelligence/1998_Artificial-Intelligence_Planning-and-Acting-in-Partially-Observable-Stochastic-Dom/01_overview.md), [SAFE](../2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md), [Recovery RL](../2020/RA-L/2020_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/01_overview.md), [PDDLStream](../2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp/01_overview.md), [FAIL-Detect](../2025/RSS/2025_RSS_Can-We-Detect-Failures-Without-Failure-Data-Uncertainty-Aw/01_overview.md), [FLARE](../2026/CVPR/2026_CVPR_FLARE-A-Failure-Aware-Framework-for-Autonomous-Correction/01_overview.md), [VLA-FixBench/FaultEval](../2026/ICML/2026_ICML_Can-VLMs-Diagnose-and-Recover-from-VLA-Manipulation-Faults/01_overview.md), [TD calibration](../2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/01_overview.md). **External source-verified baselines:** [ViFailback](https://openaccess.thecvf.com/content/CVPR2026/html/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.html), [AgentChord](https://roboticsconference.org/program/papers/180/), [When to Act, Ask, or Learn](https://roboticsconference.org/program/papers/142/); preprint collision set은 [gap audit](./RESEARCH_GAPS.md#2026-preprint-only-novelty-collision-check)을 따른다.
+- **`R-M-C-O-T-S`:** frozen OpenVLA manipulator / grouped full-information cost-sensitive option-value estimation과 safety-first vector-budget selection / primary `O_core={CONTINUE, RETRY_CURRENT, REOBSERVE_WAIT, STATE_RESET, ABORT_STOP}` / completion·irreversible failure·time/action/query/restoration cost·best-fixed/oracle regret / alert당 1회 선택부터 post-recovery outcome까지 / pinned LIBERO-10/OpenVLA/SAFE stack. `O_graph={SUBGOAL_REWIND,TASK_REPLAN}`과 `O_assist={HUMAN_ESCALATE}`는 adapter acceptance 뒤 extension이다.
+- **방법론 근거:** POMDP의 history-conditioned belief/context와 finite-memory formulation, SAFE의 frozen VLA failure score, Recovery RL의 task/recovery 분리, full-information cost-sensitive decision learning을 사용한다. Agentic RL의 history-conditioned `Execute/Retry/Repair/Reset` PPO manager가 broad selector의 strongest collision이므로 matched X5 baseline으로 둔다. ActFovea의 short horizon·action clipping/smoothing·timestamp hold는 M0–M2 mechanism control, ProbeAct는 training-free probe/CBF safety-net baseline, CoRe는 imagined-continuation estimand로 분리한다.
+- **범위 경계:** RP-2는 새로운 low-level controller, detector, POMDP solver, recovery skill 또는 online-RL manager를 제안하지 않는다. fit/calibration onset의 모든 option outcome을 관찰하는 **grouped full-information supervised comparison**이 primary이며, inference에서는 선택하지 않은 option outcome을 볼 수 없다. Phase 0/1은 LIBERO와 `O_core`만 사용하고 CALVIN·graph replan·human escalation·real robot은 gate 뒤 extension이다.
+- **선행 연구가 해결한 것:** detection, Retry/Reset, visual correction, rollback/rewind, recovery graph, act/ask/intervene, verified re-observation, safety filter와 history-conditioned execution-mode selection은 이미 다뤄졌다. 따라서 “VLA recovery가 없다”, “multi-option selector가 처음이다”, “retry/reset을 학습한다”, “counterfactual recovery가 처음이다”는 주장하지 않는다.
+- **새 연구 단위:** branch-equivalent 동일 onset에서 모든 applicable `O_core` option을 seed-matched 반복 실행해 success, irreversibility와 vector cost의 empirical target을 만든다. 이 table에서 option separability, 동일 detector-score bin의 context crossing, budget crossing, best-fixed-per-budget regret가 실제로 존재할 때만 lightweight option-value model을 학습한다. prediction-only estimator를 primary로, decision-aware pairwise ranking을 sensitivity로 두며 cause/recoverability label은 auxiliary ablation이다.
+- **가설:** same-onset option table에 충분한 context/budget crossing이 있으면, all-option supervision을 사용한 selector는 best-fixed·scalar-risk·binary/type-only·uniform-feasible·Agentic-RL-style manager보다 IFR을 악화시키지 않으면서 BRCR을 높이고 best-fixed/empirical-oracle regret를 줄인다.
+- **최소 실험:** pinned stack에서 provisional visual-delay와 bounded action-noise perturbation으로 20–50개 valid onset을 만든다. simulator state뿐 아니라 controller, policy/cache, RNG 복원과 branch equivalence를 검사한 뒤 각 budget에서 `O_core`를 전수 sweep한다. gate를 통과하면 train/calibration/test onset을 분리하고 P1, best-fixed-per-budget, scalar risk, FLARE-style binary, type-only, uniform-feasible, Agentic RL X5, ActFovea/ProbeAct의 재현 가능한 mechanism subset을 동일 policy-visible input과 vector budget으로 비교한다.
+- **판정 지표:** primary `BRCR`, safety gate `IFR`; pre-method gate는 Option Separability, Context/Budget Crossing Prevalence, Best-Fixed Regret와 O3–B10 gap이다. secondary는 per-option Brier/ECE, pairwise ranking accuracy, Normalized Recovery Regret, autonomous coverage·risk–coverage, false intervention, physical restoration/query/action/time cost, p95 selector latency와 worst-group BRCR/IFR다.
+- **Reject criterion:** restore/branch equivalence가 실패하면 method 이전에 protocol을 수정한다. option separability·crossing·O3–best-fixed gap이 없으면 selector를 학습하지 않는다. gate가 있어도 strongest matched non-privileged baseline 대비 사전 등록 BRCR margin 또는 IFR non-inferiority를 통과하지 못하면 C1을 기각한다. Agentic RL X5를 공정하게 맞출 수 없으면 method novelty가 아니라 evaluation extension으로 축소한다.
+- **Paper basis:** [POMDP](../1998/Artificial-Intelligence/1998_Artificial-Intelligence_Planning-and-Acting-in-Partially-Observable-Stochastic-Dom/01_overview.md), [SAFE](../2025/NeurIPS/2025_NeurIPS_SAFE-Multitask-Failure-Detection-for-Vision-Language-Actio/01_overview.md), [Recovery RL](../2020/RA-L/2020_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/01_overview.md), [FAIL-Detect](../2025/RSS/2025_RSS_Can-We-Detect-Failures-Without-Failure-Data-Uncertainty-Aw/01_overview.md), [FLARE](../2026/CVPR/2026_CVPR_FLARE-A-Failure-Aware-Framework-for-Autonomous-Correction/01_overview.md), [VLA-FixBench/FaultEval](../2026/ICML/2026_ICML_Can-VLMs-Diagnose-and-Recover-from-VLA-Manipulation-Faults/01_overview.md), [TD calibration](../2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/01_overview.md). **Direct collision:** [Agentic RL](https://arxiv.org/html/2607.13818v1), [ActFovea](https://arxiv.org/abs/2607.29169), [ProbeAct](https://arxiv.org/abs/2606.09740), [CoRe](https://arxiv.org/abs/2608.14822), [ViFailback](https://openaccess.thecvf.com/content/CVPR2026/html/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.html), [AgentChord](https://roboticsconference.org/program/papers/180/), [When to Act, Ask, or Learn](https://roboticsconference.org/program/papers/142/).
 
 ## RP-2 I-02 priority reading spine
 
@@ -150,19 +150,22 @@
 7. [Counterfactual VLA: Self-Reflective Vision-Language-Action Model with Adaptive Reasoning](../2026/CVPR/2026_CVPR_Counterfactual-VLA-Self-Reflective-Vision-Language-Action/01_overview.md) — self-reflection과 test-time recovery comparison.
 8. [SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained Learning](../2025/NeurIPS/2025_NeurIPS_SafeVLA-Towards-Safety-Alignment-of-Vision-Language-Action/01_overview.md) — constrained VLA safety alignment.
 
-#### P1.5 — 2026 option-family collision check
+#### P1.5 — 2026 direct novelty-collision audit
 
-아래 자료는 현재 registry 정독 상태와 별개인 source-verified frontier check다. 각 논문을 “recovery system”으로 한데 묶지 말고, 어떤 option abstraction과 정보·budget·oracle을 쓰는지 표로 비교한다.
+아래 자료는 registry tier와 별개인 필수 frontier check다. `paper → policy-visible history → option set → decision timing → budget → supervision → outcome metric` 계약으로 비교한다. Agentic RL은 broad selector를 직접 선점한 strongest baseline이며 가장 먼저 읽고 재현 가능성을 확인한다.
 
-1. [ViFailback](https://openaccess.thecvf.com/content/CVPR2026/html/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.html) — diagnosis와 visual/text correction; real failure data.
-2. [AgentChord](https://roboticsconference.org/program/papers/180/) — precompiled recovery branch와 low-latency orchestration.
-3. [When to Act, Ask, or Learn](https://roboticsconference.org/program/papers/142/) — calibrated act/clarify/intervene selection; 가장 강한 selector counter-baseline.
-4. [See, Plan, Rewind](https://arxiv.org/abs/2603.09292) `PREPRINT` — progress-aware subgoal rewind.
-5. [FAR](https://arxiv.org/abs/2607.01111) `PREPRINT` — retry perturbation과 failure-preference adaptation.
-6. [Imagining Recovery / CoRe](https://arxiv.org/abs/2608.14822) `PREPRINT` — imagined continuation과 state realignment.
-7. [VLCP](https://arxiv.org/abs/2608.16978) `PREPRINT` — control-code abstraction에서 closed-loop replanning.
+1. [Learning Robust Execution with Agentic RL](https://arxiv.org/html/2607.13818v1) `PREPRINT / FULL-TEXT-CHECKED` — history-conditioned `Execute/Retry/Repair/Reset` PPO manager와 LIBERO evaluation.
+2. [ActFovea](https://arxiv.org/abs/2607.29169) `PREPRINT / FULL-TEXT-CHECKED` — verified observation recovery, bounded safe failure, short-horizon/action-smoothing controls.
+3. [ProbeAct](https://arxiv.org/abs/2606.09740) `PREPRINT / FULL-TEXT-CHECKED` — hidden-state probe, kinematic state machine, training-free CBF correction.
+4. [ViFailback](https://openaccess.thecvf.com/content/CVPR2026/html/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.html) `CVPR 2026 / FULL-TEXT-CHECKED` — diagnosis와 visual/text correction; real failure data.
+5. [AgentChord](https://roboticsconference.org/program/papers/180/) `RSS 2026 / SOURCE-VERIFIED` — precompiled recovery branch와 low-latency orchestration.
+6. [When to Act, Ask, or Learn](https://roboticsconference.org/program/papers/142/) `RSS 2026 / SOURCE-VERIFIED` — calibrated act/clarify/intervene와 selective autonomy.
+7. [See, Plan, Rewind](https://arxiv.org/abs/2603.09292) `PREPRINT` — progress-aware subgoal rewind.
+8. [FAR](https://arxiv.org/abs/2607.01111) `PREPRINT` — retry perturbation과 failure-preference adaptation.
+9. [Imagining Recovery / CoRe](https://arxiv.org/abs/2608.14822) `PREPRINT / FULL-TEXT-CHECKED` — imagined continuation과 state realignment; cloned branch outcome과 다른 estimand.
+10. [VLCP](https://arxiv.org/abs/2608.16978) `PREPRINT` — control-code abstraction에서 closed-loop replanning.
 
-이 collision check의 exit artifact는 `paper → detection signal → intervention abstraction → option set → budget → outcome → unavailable counterfactual` matrix다. 어떤 한 방법이 이미 same-onset matched-option comparison을 제공하면 I-02의 novelty claim을 다시 축소한다.
+구현 companion은 [SAFE official code](https://github.com/vla-safe/SAFE), [SAFE OpenVLA fork](https://github.com/vla-safe/openvla), [RP-2 freeze ledger](./projects/RP-2_FAILURE_RECOVERY.md)를 따른다. Agentic RL 또는 후속 공개본이 same-onset all-option sweep, matched vector budget, best-fixed comparison과 option regret를 이미 함께 제공하면 C1을 중단하거나 남은 한 축으로 더 축소한다.
 
 ### P2 — Benchmark and metric semantics (8)
 
@@ -211,15 +214,15 @@
 10. [MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations](../2023/CoRL/2023_CoRL_MimicGen-A-Data-Generation-System-for-Scalable-Robot-Learn/01_overview.md) — recovery-data augmentation.
 11. [Data Scaling Laws in Imitation Learning for Robotic Manipulation](../2025/ICLR/2025_ICLR_Data-Scaling-Laws-in-Imitation-Learning-for-Robotic-Manipu/01_overview.md) — data coverage and failure-data curation.
 
-P0–P2를 읽고 pilot을 수행한 뒤에도 `same alert score → different optimal recovery`, `remaining budget에 따른 option crossing`, `best fixed option 대비 selector regret 감소`를 관찰하지 못하면 I-02의 counterfactual arbitration formulation을 유지하지 않는다. 그 경우 scalar risk-triggered recovery 또는 event/option-outcome protocol contribution으로 범위를 축소한다.
+P0–P2와 P1.5를 읽고 Phase 0 pilot을 수행한 뒤에도 option separability, `same alert bin → different optimal option`, remaining budget에 따른 ranking crossing, O3–best-fixed regret gap을 관찰하지 못하면 learned arbitration을 시작하지 않는다. 그 경우 scalar risk-triggered recovery, direct execution-mode manager의 재현 또는 event/option-outcome protocol contribution으로 범위를 축소한다.
 
 ### RP-2 novelty audit
 
 [Motivation ≠ Novelty](https://gisbi-kim.github.io/motivation-is-not-novelty/)의 기준으로 보면, “VLA가 실패한다”, “여러 recovery가 필요하다”, “그래서 selector를 추가한다”는 아직 motivation이다. I-02가 연구 아이디어로 남으려면 다음 한 문장으로 설명할 수 있어야 한다.
 
-> 동일 post-failure state에서 recovery option의 success·risk·cost가 cause와 remaining budget에 따라 교차하므로, scalar alert나 fixed dispatcher로는 best option을 식별할 수 없다. cloned-state counterfactual outcome으로 학습한 risk-constrained selector는 matched-budget baseline보다 regret-to-oracle을 줄여야 한다.
+> 동일 cloned post-failure onset에서 모든 applicable option을 실행하면 success·irreversibility·vector cost의 ranking이 context와 budget에 따라 교차한다. 이 all-option supervision으로 학습한 selector는 best-fixed·scalar·binary/type-only·Agentic-RL-style manager보다 matched-budget regret를 줄여야 한다.
 
-이 문장이 실제 failure table·수식·ablation으로 지지되지 않으면 module 조합의 novelty를 주장하지 않는다. 최소 검증은 (1) naive baseline의 원인별 failure census, (2) same alert/different optimal option, (3) budget 감소에 따른 policy crossing, (4) scalar/type-only/heuristic selector와의 matched comparison, (5) hold-out failure family 또는 CALVIN transfer다. 이 조건을 통과하기 전까지 I-02의 상태는 `CONDITIONALLY_FIT`이다.
+이 문장이 branch-equivalent option table·cost contract·ablation으로 지지되지 않으면 module 조합의 novelty를 주장하지 않는다. 최소 검증은 (1) restore determinism과 branch equivalence, (2) option separability/context crossing, (3) vector-budget crossing, (4) best-fixed/scalar/binary/type-only/Agentic RL의 matched comparison, (5) held-out failure family다. CALVIN은 이 조건과 LIBERO confirmatory split을 통과한 뒤에만 C2 transfer로 사용한다. 그 전까지 상태는 `HIGH-COLLISION / CONDITIONALLY_FIT`이다.
 
 ### I-03. Phase-aware spatial memory with learned expiry
 
@@ -235,34 +238,34 @@ P0–P2를 읽고 pilot을 수행한 뒤에도 `same alert score → different o
 - **Reject criterion:** oracle phase label에서도 expiry가 persistent memory보다 이득이 없으면 memory update가 아니라 downstream policy의 memory usage가 병목이라고 판정한다.
 - **Paper basis:** [MomaGraph](../2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan/01_overview.md), [Spatial Memory for Out-of-Vision Manipulation](../2026/ICML/2026_ICML_Spatial-Memory-for-Out-of-Vision-Manipulation-in-Vision-La/01_overview.md), [Memory Retrieval/HALO](../2026/RSS/2026_RSS_Memory-Retrieval-in-Visuomotor-Policies-for-Long-Horizon-R/01_overview.md), [ConceptFusion](../2023/RSS/2023_RSS_ConceptFusion-Open-set-Multimodal-3D-Mapping/01_overview.md), [Affordance Field Intervention](https://openaccess.thecvf.com/content/CVPR2026/html/Xu_Affordance_Field_Intervention_Enabling_VLAs_to_Escape_Memory_Traps_in_CVPR_2026_paper.html).
 
-### I-04. Contact-calibrated world model for policy ranking and improvement
+### I-04. Source- and contact-calibrated world model for policy ranking and improvement
 
 - **Program / execution:** RP-4 / I-04A E1 ranking audit → I-04B E2 policy update.
 - **Gap:** [G-07](./RESEARCH_GAPS.md#g-07-world-model의-visual-fidelity와-control-fidelity-불일치), [G-08](./RESEARCH_GAPS.md#g-08-imagined-policy-improvement의-보수성과-calibration)
-- **`R-M-C-O-T-S`:** VLA checkpoints·candidate chunks / contact-event-calibrated world-model OPE·conservative update / visual-only ranking·no update·offline DPO / subgroup rank·false-safe·predicted-real gain / rollout horizon·update-size sweep / paired ID·OOD·contact rollouts and small real validation.
-- **방법론 근거:** WorldGym의 action-conditioned evaluation, PolaRiS의 paired real-to-sim ranking, Interactive World Simulator의 long-horizon interactive surrogate, MOPO의 uncertainty penalty, WMPO·RISE의 imagined update, Visual Verification의 verified-rollout improvement를 사용한다.
+- **`R-M-C-O-T-S`:** VLA checkpoints·candidate chunks / source-domain·contact-event-calibrated world-model OPE·conservative update / visual-only ranking·no update·offline DPO / subgroup rank·false-safe·predicted-real gain / rollout horizon·update-size sweep / paired human-video-prior·robot-data, ID·OOD·contact rollouts and small real validation.
+- **방법론 근거:** DreamGen의 synthetic experience, DreamDojo의 human-video latent proxy action과 robot-data grounding, WorldGym의 action-conditioned evaluation, PolaRiS의 paired real-to-sim ranking, Interactive World Simulator의 long-horizon surrogate, MOPO의 uncertainty penalty, WMPO·RISE의 imagined update, Visual Verification의 verified-rollout improvement를 사용한다.
 - **선행 연구가 해결한 것:** 평균 real-world success와 policy ranking 보존, world-model/verified data에 의한 policy improvement는 여러 method family에서 입증됐다. 따라서 world model을 evaluator나 trainer로 쓰는 것 자체는 contribution이 아니다.
-- **새 연구 단위:** pixel/reward uncertainty와 별도로 contact transition, jamming, slip, constraint violation의 event probability를 예측하고 이 uncertainty로 ranking과 policy update를 보수화한다.
-- **가설 A — ranking:** contact-event head와 subgroup calibration을 추가하면 visual-only WorldGym보다 contact-rich/OOD condition의 false-safe ranking을 낮춘다.
+- **새 연구 단위:** pretraining/source domain을 명시적으로 condition하고 pixel/reward uncertainty와 별도로 contact transition, jamming, slip, constraint violation의 event probability를 예측해 ranking과 policy update를 보수화한다.
+- **가설 A — ranking:** source-domain+contact-event subgroup calibration을 추가하면 global/visual-only calibration보다 contact-rich/OOD condition의 false-safe ranking을 낮춘다.
 - **가설 B — update:** A의 calibration이 성립한 subgroup에서만 update하고 나머지는 abstain하면, always-update WMPO/RISE-style procedure보다 false improvement와 predicted-real gain error를 낮춘다.
 - **최소 실험:** 먼저 여러 policy checkpoint의 action chunk를 동일 initial state에서 평가해 world-model/real pairwise ranking을 visual OOD, free-space, contact-rich subgroup으로 나눈다. A가 성립한 뒤에만 작은 trust-region update를 high-fidelity environment와 소규모 real trial에서 검증한다.
 - **판정 지표:** subgroup rank correlation, event calibration, false-safe/selective risk, update coverage, predicted gain–real gain error, false improvement, unsafe proposal rate.
 - **Reject criterion:** oracle contact label을 학습해도 ranking 또는 real-gain calibration이 개선되지 않으면 별도 contact model이 아니라 dynamics horizon/representation 문제로 축소한다.
-- **Paper basis:** [WorldGym](../2026/ICLR/2026_ICLR_WorldGym-World-Model-as-An-Environment-for-Policy-Evaluati/01_overview.md), [MOPO](../2020/NeurIPS/2020_NeurIPS_MOPO-Model-based-Offline-Policy-Optimization/01_overview.md), [WMPO](../2026/ICLR/2026_ICLR_WMPO-World-Model-based-Policy-Optimization-for-Vision-Lang/01_overview.md), [Unified World Models](../2025/RSS/2025_RSS_Unified-World-Models-Coupling-Video-and-Action-Diffusion-f/01_overview.md), [PolaRiS](https://roboticsconference.org/program/papers/62/), [Interactive World Simulator](https://roboticsconference.org/program/papers/18/), [RISE](https://roboticsconference.org/program/papers/12/), [Visual Verification](https://roboticsconference.org/program/papers/79/).
+- **Paper basis:** [DreamGen](../2025/CoRL/2025_CoRL_DreamGen-Unlocking-Generalization-in-Robot-Learning-throug/01_overview.md), [DreamDojo](../2026/ICML/2026_ICML_DreamDojo-A-Generalist-Robot-World-Model-from-Large-Scale/01_overview.md), [WorldGym](../2026/ICLR/2026_ICLR_WorldGym-World-Model-as-An-Environment-for-Policy-Evaluati/01_overview.md), [MOPO](../2020/NeurIPS/2020_NeurIPS_MOPO-Model-based-Offline-Policy-Optimization/01_overview.md), [WMPO](../2026/ICLR/2026_ICLR_WMPO-World-Model-based-Policy-Optimization-for-Vision-Lang/01_overview.md), [Unified World Models](../2025/RSS/2025_RSS_Unified-World-Models-Coupling-Video-and-Action-Diffusion-f/01_overview.md), [PolaRiS](https://roboticsconference.org/program/papers/62/), [Interactive World Simulator](https://roboticsconference.org/program/papers/18/), [RISE](https://roboticsconference.org/program/papers/12/), [Visual Verification](https://roboticsconference.org/program/papers/79/).
 
-### I-05. Risk-budget interface for whole-body loco-manipulation
+### I-05. Verifiable semantic-to-dynamic command contract for whole-body control
 
-- **Program / execution:** RP-5 / E2; I-10의 feasible prior가 없어도 G-09 interface를 독립 검사할 수 있어야 한다.
-- **Gap:** [G-09](./RESEARCH_GAPS.md#g-09-locomotion과-manipulation의-bandwidthobjective-충돌)
-- **`R-M-C-O-T-S`:** mobile manipulator/humanoid / transition-conditioned risk/objective budget to whole-body controller / decoupled·monolithic·fixed hierarchy / stage completion·fall·support margin·torque·latency·recovery / locomotion·pre-contact·contact·post-contact phases / HumanoidBench door·carry with payload·push.
-- **방법론 근거:** Whole-Body NMPC의 contact/timing optimization, WholeBodyVLA의 unified latent+locomotion-oriented controller, Humanoid Pixel-to-Action의 staged reset·closed-loop sim-to-real, HAIC의 dynamics-aware world model을 strong baselines로 사용한다.
-- **선행 연구가 해결한 것:** end-to-end vision-based humanoid loco-manipulation과 manipulation-aware locomotion은 이미 구현됐다. 따라서 hierarchy를 결합하거나 pixel-to-action policy를 만드는 것 자체는 contribution이 아니다.
-- **새 연구 단위:** locomotion→contact transition을 online 검출하고 phase마다 support margin, allowed base motion, peak torque/contact, perception/control latency, recovery reserve의 priority를 바꾸는 risk/objective budget을 전달한다.
-- **가설:** fixed-weight monolithic policy나 decoupled skill보다 risk-budget hierarchy가 disturbance와 payload 변화에서 fall을 줄이면서 manipulation progress를 유지한다.
-- **최소 실험:** HumanoidBench door/carry/reach 계열에서 decoupled, monolithic, fixed hierarchy, transition-conditioned risk-budget hierarchy를 비교하고 phase별 payload·external push·observation latency를 sweep한다.
-- **판정 지표:** stage completion, fall, support-margin violation, peak torque, recovery time, end-effector error, energy.
-- **Reject criterion:** oracle risk budget에서도 fixed hierarchy 대비 Pareto 개선이 없으면 high-level budget interface가 아니라 low-level controller capacity가 병목이다.
-- **Paper basis:** [Whole-Body NMPC](../2018/RA-L/2018_RA-L_Whole-Body-Nonlinear-Model-Predictive-Control-Through-Cont/01_overview.md), [HumanoidBench](../2024/RSS/2024_RSS_HumanoidBench-Simulated-Humanoid-Benchmark-for-Whole-Body/01_overview.md), [OmniH2O](../2024/CoRL/2024_CoRL_OmniH2O-Universal-and-Dexterous-Human-to-Humanoid-Whole-Bo/01_overview.md), [Mobile ALOHA](../2024/CoRL/2024_CoRL_Mobile-ALOHA-Learning-Bimanual-Mobile-Manipulation-using-L/01_overview.md), [WholeBodyVLA](https://openreview.net/pdf/3067651d96704608727027ec28fda2eb8c2a7c4a.pdf), [Humanoid Pixel-to-Action](https://openaccess.thecvf.com/content/CVPR2026/html/Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.html), [HAIC](https://roboticsconference.org/program/papers/13/).
+- **Program / execution:** RP-5 / E1 simulator-first; I-10의 feasible prior나 새 whole-body VLA 학습 없이 interface를 독립 검사한다.
+- **Gap:** [G-09](./RESEARCH_GAPS.md#g-09-semantic-command와-whole-body-dynamic-control의-contract), [G-01](./RESEARCH_GAPS.md#g-01-vla와-접촉-제어의-시간-척도-불일치) interface secondary.
+- **`R-M-C-O-T-S`:** fixed high-level policy와 fixed whole-body controller / phase·termination·feasibility·authority command contract / implicit handoff·fixed-rate handoff·phase contract·reject/verify contract / stage completion·invalid-command acceptance·fall·support margin·torque·latency·recovery / locomotion·pre-contact·contact·post-contact / HumanoidBench 또는 Isaac Lab door/fetch-place with command delay·phase error·unsafe goal·payload·push.
+- **방법론 근거:** RT-H의 language motion hierarchy, Whole-Body NMPC의 contact/timing optimization, HOVER/SONIC의 reusable whole-body control interface, GR00T N1.6의 state-relative action chunk, Gemini Robotics 2의 multi-step event tracking/self-correction, WholeBodyVLA·OpenHLM의 native whole-body VLA를 strong baseline/counter-evidence로 사용한다.
+- **선행 연구가 해결한 것:** scalable humanoid tracking, vision/language-conditioned whole-body loco-manipulation, multi-step progress와 self-correction은 이미 구현됐다. 따라서 새 VLA, 새 locomotion controller, hierarchy 결합 자체는 contribution이 아니다.
+- **새 연구 단위:** semantic command에 desired phase, completion condition, feasibility/confidence, allowed authority, rejection reason을 붙이고 low-level controller의 accept/reject/partial-complete acknowledgment를 상위 policy에 되돌린다. 새 policy를 학습하기 전에 이 contract의 causal value만 분리한다.
+- **가설:** phase·termination·feasibility를 명시하고 unsafe/stale command를 reject·verify하는 contract가 implicit/fixed-rate handoff보다 invalid-command acceptance와 fall/support violation을 줄이면서 task progress를 유지한다.
+- **최소 실험:** fixed high-level policy와 fixed controller 사이에 command delay, premature termination, stale phase, infeasible target을 독립 삽입한다. implicit handoff, fixed-rate handoff, explicit phase+termination contract, feasibility-aware reject/verify contract를 동일 command·control budget에서 비교한다.
+- **판정 지표:** task/stage completion, invalid-command acceptance, false rejection, support-margin violation, fall, peak torque, command/acknowledgment latency, recovery time, success–safety Pareto.
+- **Reject criterion:** oracle phase·feasibility label에서도 fixed-rate handoff 대비 invalid-command/fall을 줄이지 못하거나 progress 저하가 safety gain보다 크면 command contract claim을 기각하고 low-level controller capacity 또는 high-level command quality 문제로 환원한다.
+- **Paper basis:** [Whole-Body NMPC](../2018/RA-L/2018_RA-L_Whole-Body-Nonlinear-Model-Predictive-Control-Through-Cont/01_overview.md), [RT-H](../2024/Robotics-Science-and-Sys/2024_Robotics-Science-and-Sys_RT-H-Action-Hierarchies-Using-Language/01_overview.md), [HumanoidBench](../2024/RSS/2024_RSS_HumanoidBench-Simulated-Humanoid-Benchmark-for-Whole-Body/01_overview.md), [HOVER](../2025/ICRA/2025_ICRA_HOVER-Versatile-Neural-Whole-Body-Controller-for-Humanoid/01_overview.md), [GR00T N1](../2025/arXiv/2025_arXiv_NVIDIA-Isaac-GR00T-N1-An-Open-Foundation-Model-for-Humanoi/01_overview.md), [SONIC](../2026/Science-Robotics/2026_Science-Robotics_SONIC-Supersizing-Motion-Tracking-for-Natural-Humanoid-Who/01_overview.md), [WholeBodyVLA](https://openreview.net/pdf/3067651d96704608727027ec28fda2eb8c2a7c4a.pdf), [Gemini Robotics 2](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/), [GR00T N1.6](https://research.nvidia.com/labs/gear/gr00t-n1_6/), [OpenHLM](https://arxiv.org/abs/2606.22174) `PREPRINT`.
 
 ### I-06. Conservative policy reuse from counterfactual recovery outcomes
 
@@ -356,13 +359,13 @@ P0–P2를 읽고 pilot을 수행한 뒤에도 `same alert score → different o
 
 - **Program / execution:** RP-2 / INFRA; [구체 명세](./projects/RP-2_FAILURE_RECOVERY.md)를 따르며 I-02와 독립 논문으로 확대하기보다 공통 evaluator로 유지한다.
 - **Gap:** [G-02](./RESEARCH_GAPS.md#g-02-detection에서-recovery까지-닫히지-않은-loop), [G-10](./RESEARCH_GAPS.md#g-10-long-horizon-평가의-낮은-failure-resolution)
-- **`R-M-C-O-T-S`:** long-horizon manipulation/VLA / shared perturbation·event·clone·budget schema / native final-success·suite-specific recovery metric / onset consistency·option outcome·phase progress·irreversible event / full episode after first failure / LIBERO first, then one of CALVIN·FurnitureBench.
+- **`R-M-C-O-T-S`:** long-horizon manipulation/VLA / shared perturbation·event·clone·branch-equivalence·vector-budget schema / native final-success·suite-specific recovery metric / onset consistency·option outcome·phase progress·irreversible event·restoration/query cost / full episode after first failure / pinned LIBERO-10 first; second suite only after Phase 0/C1 gate.
 - **방법론 근거:** FurnitureBench의 phase progress, BEHAVIOR-1K의 failure taxonomy, AtomicVLA의 post-failure termination critique, VLA-Arena의 stress axes, SO-101의 recovery-aware evaluation, Beyond Binary Success의 sequential partial-progress comparison, Discounted Liveness OPE의 non-monotonic progress formulation을 사용한다.
 - **선행 연구가 해결한 것:** fine-grained progress, failure taxonomy, recovery-aware metric, statistically efficient comparison, non-monotonic progress evaluation은 이미 제시됐다. 따라서 “binary success를 넘는 metric” 자체는 contribution이 아니다.
 - **새 연구 단위:** 기존 benchmark에 공통 `event_id`, cloned `onset_state_id`, perturbation provenance, option abstraction, vector recovery budget, irreversibility, post-recovery outcome을 붙여 same-onset option comparison이 가능하게 한다.
 - **가설:** clean-start final-success ranking과 native recovery metric만으로는 option selector의 regret와 failure-family별 budget sensitivity를 설명하지 못하며, common onset/option schema가 그 차이를 재현 가능하게 분리한다.
-- **최소 실험:** LIBERO에서 occlusion, object displacement, grasp slip, sensor dropout, instruction correction을 event landmark에 삽입하고 deterministic clone/restore validity를 먼저 통과한다. 두 번째 suite는 I-02의 crossing과 selector signal이 확인된 뒤 동일 schema adapter만 추가한다.
-- **판정 지표:** restore determinism, onset consistency, event completeness, option-sweep stability, failure-conditioned completion, phase progress, recovery cost, irreversible failure, regret-to-oracle, adapter agreement.
+- **최소 실험:** pinned LIBERO/OpenVLA/SAFE runtime에서 visual delay와 bounded action noise부터 시작한다. simulator state, controller state, policy/cache, RNG를 함께 복원하고 option 실행 직전 observation/task-predicate/budget hash의 branch equivalence를 확인한다. 20–50개 valid onset에서 `O_core` 전 option을 seed-matched sweep하며 두 번째 suite는 I-02의 crossing과 confirmatory signal이 확인된 뒤 동일 schema adapter만 추가한다.
+- **판정 지표:** restore determinism, branch equivalence, onset consistency, event completeness, option-sweep stability, Option Separability, Context/Budget Crossing Prevalence, Best-Fixed Regret, failure-conditioned completion, recovery cost, irreversible failure, NRR, autonomous coverage와 adapter agreement.
 - **Reject criterion:** clone/restore와 event annotation 신뢰도가 기준을 통과하지 못하면 I-02 학습 전에 protocol을 수정한다. protocol이 유효해도 native metric이 option regret와 budget crossing을 충분히 설명하면 독립 evaluator contribution은 주장하지 않는다.
 - **산출물:** perturbation/clone wrapper, `rp2.event.v2` schema, vector-budget evaluator, option-outcome table, second-suite adapter template.
 - **Paper basis:** [FurnitureBench](../2023/RSS/2023_RSS_FurnitureBench-Reproducible-Real-World-Benchmark-for-Long/01_overview.md), [BEHAVIOR-1K](../2022/CoRL/2022_CoRL_BEHAVIOR-1K-A-Benchmark-for-Embodied-AI-with-1000-Everyday/01_overview.md), [AtomicVLA](../2026/CVPR/2026_CVPR_AtomicVLA-Unlocking-the-Potential-of-Atomic-Skill-Learning/01_overview.md), [VLA-Arena](../2026/ICML/2026_ICML_VLA-Arena-An-Open-Source-Framework-for-Benchmarking-Vision/01_overview.md), [RLBench](../2020/RA-L/2020_RA-L_RLBench-The-Robot-Learning-Benchmark-and-Learning-Environm/01_overview.md), [SO-101 Failure and Recovery](https://arxiv.org/abs/2606.08881) `PREPRINT`, [Beyond Binary Success](https://roboticsconference.org/program/papers/76/), [Discounted Liveness OPE](https://roboticsconference.org/program/papers/154/).
@@ -371,30 +374,30 @@ P0–P2를 읽고 pilot을 수행한 뒤에도 `same alert score → different o
 
 하나의 전체 순위를 고정하지 않는다. hardware·data·simulator 준비 상태에 따라 아래 dependency path 중 하나를 선택한다.
 
-1. **RP-2 Recovery:** I-12로 event·clone·budget schema와 option-outcome table을 고정한 뒤 I-02의 counterfactual option crossing과 selector regret를 검증한다. I-02가 지지될 때만 I-06 policy reuse로 확장한다.
+1. **RP-2 Recovery:** pinned manifest와 I-12의 event·clone·branch-equivalence·budget schema를 먼저 만든다. 20–50개 onset의 `O_core` sweep에서 separability·context/budget crossing·best-fixed regret gate를 통과한 뒤에만 I-02 selector를 학습하고, 지지될 때만 I-06 policy reuse로 확장한다.
 2. **RP-6 Data:** I-08로 joint coverage cell과 split을 고정한다. morphology가 실제 worst-group bottleneck일 때만 I-11로 확장한다.
 3. **RP-3 State:** I-07로 compute-matched representation baseline을 만든 뒤 I-09의 active-view value를 측정한다. I-03은 공통 state instrumentation을 쓰되 독립적으로 진행할 수 있다.
 4. **RP-4 World model:** I-04A ranking calibration이 subgroup에서 성립한 후에만 I-04B imagined policy update를 허용한다.
-5. **RP-5 Whole body:** I-10 retargeting과 I-05 runtime hierarchy를 각각 반증한 뒤, 둘 다 지지되는 경우에만 통합한다.
+5. **RP-5 Whole body:** I-05 command-contract audit는 fixed policy/controller의 simulator-first E1로 독립 수행한다. I-10 cross-morphology calibration도 별도로 반증하고, 둘 다 지지되는 경우에만 통합한다.
 6. **RP-1 Contact:** 두 종류 이상 sensor/contact setup을 준비할 수 있을 때 I-01을 시작한다. 단일 sensor만으로는 transfer claim을 검증할 수 없다.
 
-현재 우선 scoping 단위는 I-12의 LIBERO clone/restore validity와 20–50개 onset의 pilot option sweep이다. 여기서 option crossing이 관찰되어야 I-02 learned selector로 넘어간다. I-08 metadata coverage audit과 I-07 compute-matching protocol은 RP-2와 독립적으로 수행 가능한 secondary scoping이다.
+현재 우선 scoping 단위는 RP-2 freeze ledger의 실제 manifest/schema 생성, LIBERO clone/restore·branch-equivalence acceptance test와 20–50개 onset의 `O_core` pilot sweep이다. 여기서 option separability, context/budget crossing과 O3–best-fixed gap이 관찰되어야 learned selector로 넘어간다. 다음은 I-03 memory-causality pilot이다. I-05 command-contract, I-08 metadata coverage, I-07 compute-matching은 독립 secondary scoping이지만 동시에 여러 project를 시작하지 않는다.
 
 ## 아이디어 승격 기록
 
 | Idea | Program | Execution | Project state | Literature basis | Hypothesis evidence | 다음 결정 |
 |---|---|---|---|---|---|---|
 | I-01 | RP-1 | E1 | `HYPOTHESIS` | `READING-SUPPORTED` | `UNTESTED` | 두 sensor·contact shift와 safety authority 변수 확정 |
-| I-02 | RP-2 | E1 | `SCOPED / FOCUS` | `READING-SUPPORTED` | `UNTESTED` | LIBERO cloned onset에서 option crossing·best-fixed regret pilot |
+| I-02 | RP-2 | E1 | `SCOPED / HIGH-COLLISION / FOCUS` | `READING-SUPPORTED` | `UNTESTED` | pinned LIBERO에서 branch equivalence·option separability·crossing·best-fixed regret gate |
 | I-03 | RP-3 | E1 | `SCOPED / NEXT` | `READING-SUPPORTED` | `UNTESTED` | RoboCasa base-policy/memory competence와 20–50 onset causality pilot |
 | I-04 | RP-4 | E1→E2 | `HYPOTHESIS / SECONDARY` | `READING-SUPPORTED` | `UNTESTED` | subgroup false-safe ranking audit; update branch는 hold |
-| I-05 | RP-5 | E2 | `DEFERRED` | `READING-SUPPORTED` | `UNTESTED` | transition phase·risk vector와 strongest 2026 baseline 구현 가능성 확인 |
+| I-05 | RP-5 | E1 | `HYPOTHESIS / SECONDARY` | `READING-SUPPORTED` | `UNTESTED` | fixed policy/controller에서 phase·termination·feasibility perturbation과 contract baseline 구현 가능성 확인 |
 | I-06 | RP-2 | E2 | `CONDITIONAL` | `READING-SUPPORTED` | `UNTESTED` | I-02 crossing과 option-outcome signal 확인 전 hold |
 | I-07 | RP-3 | E1 | `HYPOTHESIS` | `READING-SUPPORTED` | `UNTESTED` | compute·view·parameter matching protocol 확정 |
 | I-08 | RP-6 | E1 | `HYPOTHESIS` | `READING-SUPPORTED` | `UNTESTED` | metadata coverage cell과 held-out split 정의 |
 | I-09 | RP-3 | E2 | `BACKLOG` | `READING-SUPPORTED` | `UNTESTED` | oracle value-of-information upper bound 확인 |
 | I-10 | RP-5 | E1 | `DEFERRED` | `READING-SUPPORTED` | `UNTESTED` | 3개 simulated morphology의 leave-one-out feasibility calibration 가능성 확인 |
 | I-11 | RP-6 | E2 | `BACKLOG` | `READING-SUPPORTED` | `UNTESTED` | I-08에서 morphology bottleneck 먼저 확인 |
-| I-12 | RP-2 | INFRA | `INFRASTRUCTURE / ACTIVE` | `READING-SUPPORTED` | `UNTESTED` | `rp2.event.v2` logger, LIBERO clone/restore, pilot option table 구현 |
+| I-12 | RP-2 | INFRA | `INFRASTRUCTURE / ACTIVE` | `READING-SUPPORTED` | `UNTESTED` | freeze manifest, `rp2.event.v2`, clone/branch acceptance report, `O_core` pilot table 구현 |
 
 Method card의 project state는 `HYPOTHESIS → SCOPED → RUNNING → SUPPORTED / REJECTED / REVISED` 순서로 갱신한다. `INFRASTRUCTURE`는 방법 가설이 아니라 공통 평가 산출물임을 뜻한다. `Literature basis`는 문헌 근거 수준이고, `Hypothesis evidence`는 직접 실험 근거다. 아이디어가 반증되면 삭제하지 않고 reject criterion과 결과를 기록해 `REJECTED` 또는 `REVISED`로 남긴다.
