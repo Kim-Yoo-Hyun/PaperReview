@@ -1,36 +1,75 @@
-# Insights
+# Insights — Mastering Diverse Domains through World Models
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: We present Dreamer, a general algorithm that outperforms specialized expert algorithms across a wide range of domains while using fixed hyperparameters, making reinforcement learning readily applicable to new ...
-- 출발 문제 단서: The actor and critic predict actions at and values vt and learn from trajectories of abstract representations predicted by the world model. problem without human data has been ...
-- 주장된 효과 단서: Minecraft Diamond Max Mean 100K 1M 10M 100M Env steps Unified configuration Figure 1: Benchmark summary. a, Using fixed hyperparameters across all domains, Dreamer outperforms tuned expert algorithms ...
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (40 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2301.04104; PDF retrieval source: https://arxiv.org/pdf/2301.04104. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- 논문이 제안한 representation/method를 3D scene understanding과 robot decision-making 사이의 중간 표현으로 재해석할 수 있다.
-- 핵심 단서를 그대로 쓰기보다 geometry, semantics, action constraint 중 무엇을 보강해야 하는지 확인하는 출발점으로 삼는다.
+## Paper-supported conclusion
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: Minecraft Diamond Max Mean 100K 1M 10M 100M Env steps Unified configuration Figure 1: Benchmark summary. a, Using fixed hyperparameters across all domains, Dreamer outperforms tuned expert algorithms ...
-- 저자가 남긴 확장 방향: As a high-performing algorithm that is based on a learned world model, Dreamer paves the way for future research directions, including teaching agents world knowledge from internet videos ...
-- 논문이 다룬 task 범위 밖의 3D consistency, robotics transfer, open-world generalization은 후속 연구 질문으로 남는다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
-## 다음 연구 질문
-- 이 방법의 핵심 representation이 3D geometry와 semantic grounding을 동시에 보존하는가?
-- 동일한 idea가 online robot perception/action setting에서도 유지되는가?
-- failure case가 data 부족, geometry mismatch, language ambiguity, policy limitation 중 어디에서 오는가?
+### What was actually new
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / 자동 추출에서 명확한 metric 단서 없음
-- 내 연구 확장 benchmark 후보: ScanNet, Matterport3D, nuScenes, CALVIN
-- 내 연구 확장 metric 후보: mIoU, accuracy, success rate, generalization gap
-- 검증 초점: paper task 성능과 3D/robotics downstream utility를 함께 확인한다.
+- **p. 1 / Abstract - extractive body cue:** We present DreamerV3, a general algorithm that outperforms specialized methods across over 150 diverse tasks, with a single configuration.
+- **p. 2 / Abstract - extractive body cue:** We present Dreamer, a general algorithm that outperforms specialized expert algorithms across a wide range of domains while using fixed hyperparameters, making reinforcement learning readily ...
+- **p. 3 / Abstract - extractive body cue:** Learning algorithm We present the third generation of the Dreamer algorithm21,22.
+- **p. 3 / Abstract - extractive body cue:** The algorithm consists of three neural networks: the world model predicts the outcomes of potential actions, the critic judges the value of each outcome, and ...
+- **p. 1 / Abstract - extractive body cue:** Our work allows solving challenging control problems without extensive experimentation, making reinforcement learning broadly applicable.
+- **p. 4 / Abstract - extractive body cue:** The world model learns an understanding of the underlying structure of each environment. ht and zt forms the model state from which we predict rewards ...
+- **p. 3 / Abstract - extractive body cue:** Then, a sequence model with recurrent state ht predicts the sequence of these representations given past actions at-1.
+- **Contribution anchor:** p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p. 4 (Abstract)
 
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+### Strongest assumption and failure boundary
 
-## 근거가 되는 논문 단서
-- Problem cue: The actor and critic predict actions at and values vt and learn from trajectories of abstract representations predicted by the world model. problem without human data has been ...
-- Method cue: We present Dreamer, a general algorithm that outperforms specialized expert algorithms across a wide range of domains while using fixed hyperparameters, making reinforcement learning readily applicable to new ...
-- Result cue: Minecraft Diamond Max Mean 100K 1M 10M 100M Env steps Unified configuration Figure 1: Benchmark summary. a, Using fixed hyperparameters across all domains, Dreamer outperforms tuned expert algorithms ...
+- **p. 3 / Abstract - extractive body cue:** The actor and critic predict actions at and values vt and learn from trajectories of abstract representations predicted by the world model. problem without human ...
+- **p. 2 / Abstract - extractive body cue:** This brittleness poses a bottleneck in applying reinforcement learning to new problems and also limits the applicability of reinforcement learning to computationally expensive models or ...
+- **p. 1 / Abstract - extractive body cue:** Developing a general algorithm that learns to solve tasks across a wide range of applications has been a fundamental challenge in artificial intelligence.
+- **p. 1 / Abstract - extractive body cue:** This achievement has been posed as a significant challenge in artificial intelligence that requires exploring farsighted strategies from pixels and sparse rewards in an open ...
+- **p. 2 / Abstract - extractive body cue:** Dreamer overcomes this challenge through a range of robustness techniques based on normalization, balancing, and transformations.
+- **p. 7 / Abstract - extractive body cue:** Importantly, the network can output any continuous value in the interval because the weighted average can fall between the buckets: ˆy .= softmax(f(x))TB B .= ...
+- **p. 6 / Abstract - extractive body cue:** In practice, substracting an offset from the returns does not change the actor gradient and thus dividing by the range S is sufficient.
+- **Boundary to test:** Importantly, the network can output any continuous value in the interval because the weighted average can fall between the buckets: ˆy .= softmax(f(x))TB B .= symexp(  -20 ... +20  ) ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | We present DreamerV3, a general algorithm that outperforms specialized methods across over 150 diverse tasks, with a single configuration. | p. 1 (Abstract), p. 2 (Abstract) |
+| Reported outcome | Figure 9: Item success rates as a percentage of episodes. Dreamer obtains items at substantially higher rates than the baselines and continues to improve until the 100M step budget. At the budget, ... | p. 24 (Figure/Table caption), p. 2 (Abstract) |
+| Failure/limitation | Importantly, the network can output any continuous value in the interval because the weighted average can fall between the buckets: ˆy .= softmax(f(x))TB B .= symexp(  -20 ... +20  ) ... | p. 7 (Abstract), p. 6 (Abstract) |
+
+## Researcher interpretation
+
+### Reusable lesson in the robotics loop
+
+- **Closed-loop position:** `observation, uncertainty/risk estimate와 task command → safe set, recovery state 또는 constraint margin → shielded, recovery 또는 safe action`.
+- 이 논문의 재사용 가능한 지점은 The world model encodes sensory inputs into discrete representations zt that are predicted by a sequence model with recurrent state ht given actions at.를 To consider rewards beyond the prediction horizon T = 16, the critic learns to approximate the distribution of returns28 for each state under the current actor behavior: Actor: at ∼πθ(at / st) ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 safe set, recovery state 또는 constraint margin가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Importantly, the network can output any continuous value in the interval because the weighted average can fall between the buckets: ˆy .= softmax(f(x))TB B .= symexp(  -20 ... +20  ) ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: We present DreamerV3, a general algorithm that outperforms specialized methods across over 150 diverse tasks, with a single configuration.
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+
+### Dependency and evolution
+
+- **Registry position:** `NEXT` in `World models, safety, uncertainty, and recovery`; tags: `Robotics, world model, generalist reinforcement learning, latent imagination`.
+- **Reading predecessor in the generated track queue:** Dream to Control: Learning Behaviors by Latent Imagination (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** PIN-WM: Learning Physics-INformed World Models for Non-Prehensile Manipulation (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Importantly, the network can output any continuous value in the interval because the weighted average can fall between the buckets: ˆy .= softmax(f(x))TB B .= symexp(  -20 ... +20  ) ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
+
+### Minimal reproduction
+
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: Dreamer sets a new state-of-the-art on this benchmark, outperforming D4PG, DMPO, and MPO33. • Visual Control This benchmark consists of 20 continuous control tasks where the agent receives only high-dimensional images as ....
+3. Compare against the body-reported baseline or a matched simpler baseline: Dreamer establishes a new state-of-the-art on this benchmark, outperforming DrQ-v2 and CURL47, which are specialized to visual environments and leverage data augmentation..
+4. Report the body metric and its denominator/aggregation: Figure 16: BSuite scores visualized by category48. Dreamer exceeds previous methods in the categories scale and memory. The scale category measure robustness to reward scales. 37.
+5. Re-run the body-reported ablation/failure condition: 0 50 100 Env steps (%) 0 50 100 Return (%) 14 task mean Dreamer No obs symlog No retnorm (advnorm) No symexp twohot (Huber) No KL balance & free bits Without ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 3 (Abstract), p. 4 (Abstract), p. 3 (Abstract); the primary result is directionally consistent at p. 24 (Figure/Table caption), p. 2 (Abstract), p. 2 (Abstract); and the failure boundary is measured rather than omitted.
+
+## Falsifiable research question
+
+고정된 observation/action/data/compute budget에서 present, DreamerV3, general mechanism이 Dreamer establishes a new state-of-the-art on this benchmark, outperforming DrQ-v2 and CURL47, which are specialized to ... 대비 Figure 16: BSuite scores visualized by category48. Dreamer exceeds previous methods in the categories scale and memory. The ...을 개선하고, Importantly, the network can output any continuous value in the interval because the weighted average can ... 조건에서도 closed-loop failure를 늘리지 않는가?
+
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

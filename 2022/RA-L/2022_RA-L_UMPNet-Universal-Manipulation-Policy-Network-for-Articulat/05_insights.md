@@ -1,35 +1,75 @@
-# Insights
+# Insights — UMPNet: Universal Manipulation Policy Network for Articulated Objects
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: — We introduce the Universal Manipulation Policy Network (UMPNet) – a single image-based policy network that infers closed-loop action sequences for manipulating articulated objects.
-- 출발 문제 단서: — We introduce the Universal Manipulation Policy Network (UMPNet) – a single image-based policy network that infers closed-loop action sequences for manipulating articulated objects.
-- 주장된 효과 단서: To achieve this goal, we formulate an action trajectory by its initial 3D position and a sequence of action directions, which allows the network to
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2109.05668; PDF retrieval source: https://arxiv.org/pdf/2109.05668. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- Language-conditioned perception을 바로 action/policy token으로 연결하는 방식을 3D object state, affordance, contact-aware manipulation으로 확장할 수 있다.
-- 2D image 중심 VLA가 놓치는 pose, metric distance, occlusion을 3D representation이나 scene memory로 보강하는 연구 질문으로 이어진다.
+## Paper-supported conclusion
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: To achieve this goal, we formulate an action trajectory by its initial 3D position and a sequence of action directions, which allows the network to
-- robot action까지 보인 경우에도 3D state grounding, closed-loop correction, force/tactile feedback, unseen embodiment generalization은 별도 검증이 필요하다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
-## 다음 연구 질문
-- 3D geometry token을 VLA policy에 넣을 때 action success와 language following 중 어느 부분이 실제로 개선되는가?
-- open-vocabulary instruction과 metric manipulation constraint를 같은 representation에서 안정적으로 맞출 수 있는가?
-- long-horizon task에서 memory/action token이 누적될 때 failure recovery를 어떻게 설계할 수 있는가?
+### What was actually new
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: PartNet, PartNet-Mobility / success rate, collision
-- 내 연구 확장 benchmark 후보: CALVIN, LIBERO, RLBench, Open X-Embodiment
-- 내 연구 확장 metric 후보: success rate, task completion, generalization gap, collision
-- 검증 초점: language-conditioned manipulation success, unseen object/task generalization, closed-loop recovery를 확인한다.
+- **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, we present a unified framework that discovers possible manipulation policies for an articulated object from visual observations.
+- **p. 3 / III. APPROACH - extractive body cue:** To address this issue, we proposes an "Arrow-of-Time" (AoT) action attribute that indicates
+- **p. 2 / I. INTRODUCTION - extractive body cue:** We validate our approach on two manipulation tasks (1) open-ended state exploration and (2) goal-conditioned manipulation.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** To achieve this goal, we formulate an action trajectory by its initial 3D position and a sequence of action directions, which allows the network to ...
+- **p. 3 / III. APPROACH - extractive body cue:** For single-step interaction, any action that changes the object's state would result in a novel state.
+- **p. 3 / III. APPROACH - extractive body cue:** We use a U-Net architecture for this task, the network is supervised by the outcome of the executed action (one out of W ×H pixels).
+- **p. 3 / III. APPROACH - extractive body cue:** DistDecoder is a fully-connected neural network trained using MSE loss Ldist for the executed action at.
+- **Contribution anchor:** p. 2 (I. INTRODUCTION), p. 3 (III. APPROACH), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. APPROACH), p. 3 (III. APPROACH)
 
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+### Strongest assumption and failure boundary
 
-## 근거가 되는 논문 단서
-- Problem cue: — We introduce the Universal Manipulation Policy Network (UMPNet) – a single image-based policy network that infers closed-loop action sequences for manipulating articulated objects.
-- Method cue: — We introduce the Universal Manipulation Policy Network (UMPNet) – a single image-based policy network that infers closed-loop action sequences for manipulating articulated objects.
-- Result cue: To achieve this goal, we formulate an action trajectory by its initial 3D position and a sequence of action directions, which allows the network to
+- **p. 1 / I. INTRODUCTION - extractive body cue:** However, such policies are often time-consuming to design and fail to generalize across objects with different articulation structures.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Extensive prior works have studied how to manually design or learn an object-specific policy for each type of interaction (e.g., opening doors).
+- **p. 2 / I. INTRODUCTION - extractive body cue:** By using self-guided exploration, the policy network is able to learn a wide range of action trajectories for a diverse set of objects and generalize ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** To address this issue, we use a closed-loop formulation where the network continues to predict the next action conditioned on the object's initial and current ...
+- **p. 7 / IV. EVALUATION - extractive body cue:** Limitations and failure cases Assumptions: To allow goal-conditioned manipulation with reversed AoT actions, we assume the action trajectories are bi-directional in time (i.e., they are ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7: Typical failure cases. UR5 robot, and a suction gripper. Fig. 8 (a) shows the real- world setup. In this experiment, we directly tested ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Open-ended state exploration. Arrow length indicates the inferred distance value, color indicates the inferred AoT label. We visualized the uniform samples to better ...
+- **Boundary to test:** Limitations and failure cases Assumptions: To allow goal-conditioned manipulation with reversed AoT actions, we assume the action trajectories are bi-directional in time (i.e., they are valid in either direction).
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | In summary, we present a unified framework that discovers possible manipulation policies for an articulated object from visual observations. | p. 2 (I. INTRODUCTION), p. 3 (III. APPROACH) |
+| Reported outcome | When combined with heuristic filter, the performance improves slightly. | p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION) |
+| Failure/limitation | Limitations and failure cases Assumptions: To allow goal-conditioned manipulation with reversed AoT actions, we assume the action trajectories are bi-directional in time (i.e., they are valid in either direction). | p. 7 (IV. EVALUATION), p. 7 (Figure/Table caption) |
+
+## Researcher interpretation
+
+### Reusable lesson in the robotics loop
+
+- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
+- 이 논문의 재사용 가능한 지점은 Problem formulation The task is defined as follows: given a visual observation of an articulated object in the form of an RGB-D image at the initial and current state o0,ot ∈RW×H×4, the ...를 The key idea for performing the goal-conditioned task is to swap out the initial observation with the goal state observation as the input to the policy.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Limitations and failure cases Assumptions: To allow goal-conditioned manipulation with reversed AoT actions, we assume the action trajectories are bi-directional in time (i.e., they are valid in either direction).에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: In summary, we present a unified framework that discovers possible manipulation policies for an articulated object from visual observations.
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+
+### Dependency and evolution
+
+- **Registry position:** `NEXT` in `Manipulation, contact, tactile, and dexterity`; tags: `Robotics, 3D Vision, active perception, articulated objects, manipulation policy`.
+- **Reading predecessor in the generated track queue:** Dense Object Nets: Learning Dense Visual Object Descriptors By and For Robotic Manipulation (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Limitations and failure cases Assumptions: To allow goal-conditioned manipulation with reversed AoT actions, we assume the action trajectories are bi-directional in time (i.e., they are valid in either direction).; this is the most direct route from the paper's reported scope to a falsifiable extension.
+
+### Minimal reproduction
+
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: Being able to effectively explore the possible states of an object without a specific goal is a critical first step for many robot learning algorithms since it is often used to collect ....
+3. Compare against the body-reported baseline or a matched simpler baseline: Compared to [ AoTOnly ], we can observe that by explicitly predicting the distance value for each action candidate, [ UMPNet ] can better differentiate.
+4. Report the body metric and its denominator/aggregation: (2) success rate, where a successful case is defined as the normalized distance to the goal state is smaller than 0.1..
+5. Re-run the body-reported ablation/failure condition: Being able to effectively explore the possible states of an object without a specific goal is a critical first step for many robot learning algorithms since it is often used to collect ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III. APPROACH); the primary result is directionally consistent at p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION); and the failure boundary is measured rather than omitted.
+
+## Falsifiable research question
+
+고정된 observation/action/data/compute budget에서 summary, present, unified mechanism이 Compared to [ AoTOnly ], we can observe that by explicitly predicting the distance value for ... 대비 (2) success rate, where a successful case is defined as the normalized distance to the goal state is ...을 개선하고, Limitations and failure cases Assumptions: To allow goal-conditioned manipulation with reversed AoT actions, we assume the ... 조건에서도 closed-loop failure를 늘리지 않는가?
+
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

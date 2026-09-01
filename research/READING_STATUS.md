@@ -1,9 +1,9 @@
 # Reading Status Guide
 
-- Updated: 2026-08-28 KST
+- Updated: 2026-09-02 KST
 
 - Canonical tracker: [READING_STATUS.csv](./READING_STATUS.csv)
-- Scope: CORE 77편 + NEXT 113편 = 190편
+- Scope: CORE 77편 + NEXT 206편 = 283편
 - PDF 보유 여부는 읽기 우선순위, 상태 전환, 완료 판단에 사용하지 않는다.
 
 ## Status
@@ -35,7 +35,7 @@
 
 | Field | What to record |
 |---|---|
-| `tier`, `track`, `sequence` | 자동 관리되는 읽기 위치 |
+| `tier`, `track`, `primary_track`, `paper_id`, `sequence` | 자동 관리되는 읽기 위치. `track`은 상세 reading subgroup, `primary_track`은 7개 canonical robotics track, `paper_id`는 manifest와 synthesis를 연결하는 stable ID |
 | `status` | 위 다섯 상태 중 하나 |
 | `evidence_level` | 위 네 단계 중 현재 claim 근거 수준 |
 | `started_on`, `completed_on` | `YYYY-MM-DD`; 완료일은 `SYNTHESIZED` 또는 `REPRODUCED` 시점 |

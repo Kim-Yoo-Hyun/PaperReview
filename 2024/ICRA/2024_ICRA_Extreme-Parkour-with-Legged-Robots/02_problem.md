@@ -1,23 +1,77 @@
-# Problem
+# Problem - Extreme Parkour with Legged Robots
 
-- Year/Venue: 2024 / ICRA
-- Category: Locomotion, Whole-Body, and Mobile Manipulation
-- Tags: Robotics, quadruped locomotion, parkour, Reinforcement Learning
-- Paper link: [paper.pdf](./paper.pdf)
-- Code/Project: https://extreme-parkour.github.io/
-- Source audit: regenerated from local `paper.pdf` on 2026-08-11; survey-keyword template text removed.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2309.14341; PDF retrieval source: https://arxiv.org/pdf/2309.14341. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 왜 문제인가
-- However, low cost poses a new challenge for parkour which is not as prominent in prior walking works.
-- Second, each parkour behavior from jumping to handstand are very different in nature, so combining them within a single neural network is a challenging learning problem.
-- In addition to precise control from noisy actuation, training extreme parkour controllers has two conceptual challenges as well.
+## Problem in One Sentence
 
-## 해결하려는 문제
-- We show how a single neural net policy operating directly from a camera image, trained in simulation with largescale RL, can overcome imprecise sensing and actuation to output ...
-- We show our robot can perform a high jump on obstacles 2x its height, long jump across gaps 2x its length, do a handstand and run across tilted ...
-- Getting robots to do the same task requires overcoming similar challenges.
+PDF body framing (p. 3 (1 Introduction), p. 3 (1 Introduction)): However, low cost poses a new challenge for parkour which is not as prominent in prior walking works.
 
-## 선행 연구 / 배경 단서
-- However, low cost poses a new challenge for parkour which is not as prominent in prior walking works.
-- In addition to precise control from noisy actuation, training extreme parkour controllers has two conceptual challenges as well.
-- Notably, our method is able to push the low-cost A1 robot to ever, these controllers can extreme scenarios which are twice the height and length of robot.
+## PDF Body Digest
+
+- **p. 1 / Abstract - extractive body cue:** Humans can perform parkour by traversing obstacles in a highly dynamic fashion requiring precise eye-muscle coordination and movement.
+- **p. 1 / Abstract - extractive body cue:** Getting robots to do the same task requires overcoming similar challenges.
+- **p. 1 / Abstract - extractive body cue:** Classically, this is done by independently engineering perception, actuation, and control systems to very low tolerances.
+- **p. 1 / Abstract - extractive body cue:** This restricts them to tightly controlled settings such as a predetermined obstacle course in labs.
+- **p. 1 / Abstract - extractive body cue:** In contrast, humans are able to learn parkour through practice without significantly changing their underlying biology.
+- **p. 3 / 1 Introduction - extractive body cue:** However, low cost poses a new challenge for parkour which is not as prominent in prior walking works.
+- **p. 3 / 1 Introduction - extractive body cue:** All these challenges are not feasible with such an approach.
+
+## System and Scope
+
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | However, low cost poses a new challenge for parkour which is not as prominent in prior walking works. | legged robot, terrain과 contact dynamics | body wording is the source claim |
+| Observation / input | As a result at deployment, the policy not only outputs agile motor commands but also rapidly adjusts heading directions all from input ... | proprioception, terrain/perception observation과 velocity command | exact sensor/frame/preprocessing from PDF |
+| State / latent | result, deployment, policy, only, outputs, agile, motor, commands, rapidly, adjusts | body/contact state, foothold 또는 behavior mode | notation and tensor shape require body check |
+| Output / action | exteroception, similar, RMA, architecture, replace, scandots, input, base | joint target, torque, footstep 또는 locomotion action | exact unit/frame/decoder require body check |
+| Target outcome | progress, balance and terrain robustness | velocity/progress, stability, energy와 terrain generalization | metric/denominator are in 04 evidence |
+
+## Formal Problem Formulation
+
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | body/proprioceptive/terrain state; body terms: result, deployment, policy, only, outputs, agile, motor, commands, rapidly, adjusts | p. 3 (1 Introduction), p. 6 (3 Method), p. 6 (3 Method) |
+| Decision / output variable | joint action/torque/footstep; body terms: allow, robot, adjust, itself, obstacle, type, deployment, novel | p. 3 (1 Introduction), p. 3 (1 Introduction), p. 5 (3 Method) |
+| Objective / loss / cost | return, tracking or stability objective; cue terms: While, above, reward, sufficient, diverse, parkour, behavior, challenging | p. 5 (3 Method) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 6 (3 Method), p. 6 (3 Method), p. 4 (3 Method) |
+| Success / guarantee | progress, balance and terrain robustness | p. 9 (4 Results), p. 9 (4 Results), p. 8 (4 Results) |
+
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 3 / 1 Introduction - extractive body cue:** All these challenges are not feasible with such an approach.
+
+## What the Paper Changes
+
+PDF contribution framing (p. 3 (1 Introduction), p. 3 (1 Introduction), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method)): To allow the robot to adjust itself as per the obstacle type at deployment, we propose a novel dual distillation method.
+
+- **p. 3 / 1 Introduction - extractive body cue:** Below, we summarize the main contributions: • A novel dual distillation method for distilling both agile motor commands and rapidly fluctuating heading directions from depth ...
+- **p. 5 / 3 Method - extractive body cue:** We present a simple, unified reward formulation from which diverse behaviors emerge automatically and are perfectly adapted to the terrain geometry.
+- **p. 6 / 3 Method - extractive body cue:** To overcome this issue, we propose to use a mixture of teacher and student (MTS).
+- **p. 6 / 3 Method - extractive body cue:** To explore this diversity, we introduce a term to track a desired forward vector using the same inner product design principle, which can be controlled ...
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 9 | Figure 7: For each terrain, we run 5 trials and record the number of successes. We find that ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 8 | Noisy is able to get some performance but has very large variance since it can rely on collisions ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 9 | These sudden adjustments are out-ofdistribution for the policy and it cannot adapt fast enough, causing it to fail. | reported limitation/failure wording; scope must be verified |
+| body cue at p. 8 | NoClear achieves slightly higher performance but it places feet close to the obstacle edges which is unstable in ... | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+locomotion writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (1 Introduction), p. 6 (3 Method), p. 6 (3 Method), p. 5 (3 Method). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 3 (1 Introduction), p. 3 (1 Introduction), interface p. 3 (1 Introduction), p. 6 (3 Method), p. 6 (3 Method), p. 5 (3 Method), objective p. 5 (3 Method).
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

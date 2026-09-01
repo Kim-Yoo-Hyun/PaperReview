@@ -1,6 +1,6 @@
 # RL, IL, Offline Learning, and Robot Data
 
-- Updated: 2026-08-28 KST
+- Updated: 2026-09-02 KST
 
 ## Scope
 
@@ -23,23 +23,23 @@ TD → Q-Learning → REINFORCE/Policy-Gradient Theorem → PILCO/TRPO/PPO/SAC/M
 | CORE | [Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning](../1992/Machine-Learning/1992_Machine-Learning_Simple-Statistical-Gradient-Following-Algorithms-for-Conne/01_overview.md) | 1992 / Machine Learning | `UNREAD` | `ABSTRACT_CHECKED` |
 | CORE | [Policy Gradient Methods for Reinforcement Learning with Function Approximation](../1999/NeurIPS/1999_NeurIPS_Policy-Gradient-Methods-for-Reinforcement-Learning-with-Fu/01_overview.md) | 1999 / NeurIPS | `UNREAD` | `ABSTRACT_CHECKED` |
 | CORE | [PILCO: A Model-Based and Data-Efficient Approach to Policy Search](../2011/ICML/2011_ICML_PILCO-A-Model-Based-and-Data-Efficient-Approach-to-Policy/01_overview.md) | 2011 / ICML | `UNREAD` | `ABSTRACT_CHECKED` |
-| CORE | [A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning](../2011/AISTATS/2011_AISTATS_A-Reduction-of-Imitation-Learning-and-Structured-Predictio/01_overview.md) | 2011 / AISTATS | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Learning Neural Network Policies with Guided Policy Search under Unknown Dynamics](../2016/JMLR/2016_JMLR_Learning-Neural-Network-Policies-with-Guided-Policy-Search/01_overview.md) | 2016 / JMLR | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Generative Adversarial Imitation Learning](../2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/01_overview.md) | 2016 / NeurIPS | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Trust Region Policy Optimization](../2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/01_overview.md) | 2015 / ICML | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Proximal Policy Optimization Algorithms](../2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms/01_overview.md) | 2017 / arxiv | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor](../2018/ICML/2018_ICML_Soft-Actor-Critic-Off-Policy-Maximum-Entropy-Deep-Reinforc/01_overview.md) | 2018 / ICML | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World](../2017/IROS/2017_IROS_Domain-Randomization-for-Transferring-Deep-Neural-Networks/01_overview.md) | 2017 / IROS | `UNREAD` | `CURATION_ONLY` |
-| CORE | [What Matters in Learning from Offline Human Demonstrations for Robot Manipulation](../2021/CoRL/2021_CoRL_What-Matters-in-Learning-from-Offline-Human-Demonstrations/01_overview.md) | 2021 / CoRL | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Implicit Behavioral Cloning](../2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/01_overview.md) | 2022 / CoRL | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Offline Reinforcement Learning with Implicit Q-Learning](../2022/ICLR/2022_ICLR_Offline-Reinforcement-Learning-with-Implicit-Q-Learning/01_overview.md) | 2022 / ICLR | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Decision Transformer: Reinforcement Learning via Sequence Modeling](../2021/NeurIPS/2021_NeurIPS_Decision-Transformer-Reinforcement-Learning-via-Sequence-M/01_overview.md) | 2021 / NeurIPS | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Denoising Diffusion Probabilistic Models](../2020/NeurIPS/2020_NeurIPS_Denoising-Diffusion-Probabilistic-Models/01_overview.md) | 2020 / NeurIPS | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Flow Matching for Generative Modeling](../2023/ICLR/2023_ICLR_Flow-Matching-for-Generative-Modeling/01_overview.md) | 2023 / ICLR | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](../2023/RSS/2023_RSS_Diffusion-Policy-Visuomotor-Policy-Learning-via-Action-Dif/01_overview.md) | 2023 / RSS | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Q-Transformer: Scalable Offline Reinforcement Learning via Autoregressive Q-Functions](../2024/CoRL/2024_CoRL_Q-Transformer-Scalable-Offline-Reinforcement-Learning-via/01_overview.md) | 2024 / CoRL | `UNREAD` | `CURATION_ONLY` |
+| CORE | [A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning](../2011/AISTATS/2011_AISTATS_A-Reduction-of-Imitation-Learning-and-Structured-Predictio/01_overview.md) | 2011 / AISTATS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Learning Neural Network Policies with Guided Policy Search under Unknown Dynamics](../2016/JMLR/2016_JMLR_Learning-Neural-Network-Policies-with-Guided-Policy-Search/01_overview.md) | 2016 / JMLR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Generative Adversarial Imitation Learning](../2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/01_overview.md) | 2016 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Trust Region Policy Optimization](../2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/01_overview.md) | 2015 / ICML | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Proximal Policy Optimization Algorithms](../2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms/01_overview.md) | 2017 / arXiv | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor](../2018/ICML/2018_ICML_Soft-Actor-Critic-Off-Policy-Maximum-Entropy-Deep-Reinforc/01_overview.md) | 2018 / ICML | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World](../2017/IROS/2017_IROS_Domain-Randomization-for-Transferring-Deep-Neural-Networks/01_overview.md) | 2017 / IROS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [What Matters in Learning from Offline Human Demonstrations for Robot Manipulation](../2021/CoRL/2021_CoRL_What-Matters-in-Learning-from-Offline-Human-Demonstrations/01_overview.md) | 2021 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Implicit Behavioral Cloning](../2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/01_overview.md) | 2022 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Offline Reinforcement Learning with Implicit Q-Learning](../2022/ICLR/2022_ICLR_Offline-Reinforcement-Learning-with-Implicit-Q-Learning/01_overview.md) | 2022 / ICLR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Decision Transformer: Reinforcement Learning via Sequence Modeling](../2021/NeurIPS/2021_NeurIPS_Decision-Transformer-Reinforcement-Learning-via-Sequence-M/01_overview.md) | 2021 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Denoising Diffusion Probabilistic Models](../2020/NeurIPS/2020_NeurIPS_Denoising-Diffusion-Probabilistic-Models/01_overview.md) | 2020 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Flow Matching for Generative Modeling](../2023/ICLR/2023_ICLR_Flow-Matching-for-Generative-Modeling/01_overview.md) | 2023 / ICLR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](../2023/RSS/2023_RSS_Diffusion-Policy-Visuomotor-Policy-Learning-via-Action-Dif/01_overview.md) | 2023 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Q-Transformer: Scalable Offline Reinforcement Learning via Autoregressive Q-Functions](../2024/CoRL/2024_CoRL_Q-Transformer-Scalable-Offline-Reinforcement-Learning-via/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### RL, IL, offline learning, and robot data — 21
+### RL, IL, offline learning, and robot data — 38
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
@@ -51,21 +51,42 @@ TD → Q-Learning → REINFORCE/Policy-Gradient Theorem → PILCO/TRPO/PPO/SAC/M
 | NEXT | [Isaac Gym: High Performance GPU Based Physics Simulation For Robot Learning](../2021/NeurIPS-Datasets-and-Ben/2021_NeurIPS-Datasets-and-Ben_Isaac-Gym-High-Performance-GPU-Based-Physics-Simulation-Fo/01_overview.md) | 2021 / NeurIPS Datasets and Benchmarks | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [Eureka: Human-Level Reward Design via Coding Large Language Models](../2024/ICLR/2024_ICLR_Eureka-Human-Level-Reward-Design-via-Coding-Large-Language/01_overview.md) | 2024 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [DrEureka: Language Model Guided Sim-To-Real Transfer](../2024/Robotics-Science-and-Sys/2024_Robotics-Science-and-Sys_DrEureka-Language-Model-Guided-Sim-To-Real-Transfer/01_overview.md) | 2024 / Robotics: Science and Systems | `UNREAD` | `ABSTRACT_CHECKED` |
-| NEXT | [Continuous Control with Deep Reinforcement Learning](../2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning/01_overview.md) | 2016 / ICLR | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [Addressing Function Approximation Error in Actor-Critic Methods](../2018/ICML/2018_ICML_Addressing-Function-Approximation-Error-in-Actor-Critic-Me/01_overview.md) | 2018 / ICML | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [Hindsight Experience Replay](../2017/NeurIPS/2017_NeurIPS_Hindsight-Experience-Replay/01_overview.md) | 2017 / NeurIPS | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [Constrained Policy Optimization](../2017/ICML/2017_ICML_Constrained-Policy-Optimization/01_overview.md) | 2017 / ICML | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [Conservative Q-Learning for Offline Reinforcement Learning](../2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/01_overview.md) | 2020 / NeurIPS | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [MOPO: Model-based Offline Policy Optimization](../2020/NeurIPS/2020_NeurIPS_MOPO-Model-based-Offline-Policy-Optimization/01_overview.md) | 2020 / NeurIPS | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [A Minimalist Approach to Offline Reinforcement Learning](../2021/NeurIPS/2021_NeurIPS_A-Minimalist-Approach-to-Offline-Reinforcement-Learning/01_overview.md) | 2021 / NeurIPS | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations](../2018/RSS/2018_RSS_Learning-Complex-Dexterous-Manipulation-with-Deep-Reinforc/01_overview.md) | 2018 / RSS | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [Learning Latent Plans from Play](../2020/CoRL/2020_CoRL_Learning-Latent-Plans-from-Play/01_overview.md) | 2020 / CoRL | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [Relay Policy Learning: Solving Long-Horizon Tasks via Imitation and Reinforcement Learning](../2020/CoRL/2020_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita/01_overview.md) | 2020 / CoRL | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [RLBench: The Robot Learning Benchmark & Learning Environment](../2020/RA-L/2020_RA-L_RLBench-The-Robot-Learning-Benchmark-and-Learning-Environm/01_overview.md) | 2020 / RA-L | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations](../2023/CoRL/2023_CoRL_MimicGen-A-Data-Generation-System-for-Scalable-Robot-Learn/01_overview.md) | 2023 / CoRL | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset](../2024/RSS/2024_RSS_DROID-A-Large-Scale-In-The-Wild-Robot-Manipulation-Dataset/01_overview.md) | 2024 / RSS | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [Continuous Control with Deep Reinforcement Learning](../2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning/01_overview.md) | 2016 / ICLR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Addressing Function Approximation Error in Actor-Critic Methods](../2018/ICML/2018_ICML_Addressing-Function-Approximation-Error-in-Actor-Critic-Me/01_overview.md) | 2018 / ICML | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Hindsight Experience Replay](../2017/NeurIPS/2017_NeurIPS_Hindsight-Experience-Replay/01_overview.md) | 2017 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Constrained Policy Optimization](../2017/ICML/2017_ICML_Constrained-Policy-Optimization/01_overview.md) | 2017 / ICML | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Conservative Q-Learning for Offline Reinforcement Learning](../2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/01_overview.md) | 2020 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [MOPO: Model-based Offline Policy Optimization](../2020/NeurIPS/2020_NeurIPS_MOPO-Model-based-Offline-Policy-Optimization/01_overview.md) | 2020 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [A Minimalist Approach to Offline Reinforcement Learning](../2021/NeurIPS/2021_NeurIPS_A-Minimalist-Approach-to-Offline-Reinforcement-Learning/01_overview.md) | 2021 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations](../2018/RSS/2018_RSS_Learning-Complex-Dexterous-Manipulation-with-Deep-Reinforc/01_overview.md) | 2018 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Learning Latent Plans from Play](../2020/CoRL/2020_CoRL_Learning-Latent-Plans-from-Play/01_overview.md) | 2020 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Relay Policy Learning: Solving Long-Horizon Tasks via Imitation and Reinforcement Learning](../2020/CoRL/2020_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita/01_overview.md) | 2020 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [RLBench: The Robot Learning Benchmark & Learning Environment](../2020/RA-L/2020_RA-L_RLBench-The-Robot-Learning-Benchmark-and-Learning-Environm/01_overview.md) | 2020 / RA-L | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations](../2023/CoRL/2023_CoRL_MimicGen-A-Data-Generation-System-for-Scalable-Robot-Learn/01_overview.md) | 2023 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset](../2024/RSS/2024_RSS_DROID-A-Large-Scale-In-The-Wild-Robot-Manipulation-Dataset/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots](../2024/RSS/2024_RSS_Universal-Manipulation-Interface-In-The-Wild-Robot-Teachin/01_overview.md) | 2024 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning](../2024/ICRA/2024_ICRA_SERL-A-Software-Suite-for-Sample-Efficient-Robotic-Reinfor/01_overview.md) | 2024 / ICRA | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Robot Fine-Tuning Made Easy: Pre-Training Rewards and Policies for Autonomous Real-World Reinforcement Learning](../2024/ICRA/2024_ICRA_Robot-Fine-Tuning-Made-Easy-Pre-Training-Rewards-and-Polic/01_overview.md) | 2024 / ICRA | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [RLDG: Robotic Generalist Policy Distillation via Reinforcement Learning](../2025/RSS/2025_RSS_RLDG-Robotic-Generalist-Policy-Distillation-via-Reinforcem/01_overview.md) | 2025 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Demonstrating GPU Parallelized Robot Simulation and Rendering for Generalizable Embodied AI with ManiSkill3](../2025/RSS/2025_RSS_Demonstrating-GPU-Parallelized-Robot-Simulation-and-Render/01_overview.md) | 2025 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [RoboVerse: A Unified Platform, Benchmark and Dataset for Scalable and Generalizable Robot Learning](../2025/RSS/2025_RSS_RoboVerse-A-Unified-Platform-Benchmark-and-Dataset-for-Sca/01_overview.md) | 2025 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [DexWild: Dexterous Human Interactions for In-the-Wild Robot Policies](../2025/RSS/2025_RSS_DexWild-Dexterous-Human-Interactions-for-In-the-Wild-Robot/01_overview.md) | 2025 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Dex1B: Learning with 1B Demonstrations for Dexterous Manipulation](../2025/RSS/2025_RSS_Dex1B-Learning-with-1B-Demonstrations-for-Dexterous-Manipu/01_overview.md) | 2025 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Sim-and-Real Co-Training: A Simple Recipe for Vision-Based Robotic Manipulation](../2025/RSS/2025_RSS_Sim-and-Real-Co-Training-A-Simple-Recipe-for-Vision-Based/01_overview.md) | 2025 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Novel Demonstration Generation with Gaussian Splatting Enables Robust One-Shot Manipulation](../2025/RSS/2025_RSS_Novel-Demonstration-Generation-with-Gaussian-Splatting-Ena/01_overview.md) | 2025 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [You Only Teach Once: Learn One-Shot Bimanual Robotic Manipulation from Video Demonstrations](../2025/RSS/2025_RSS_You-Only-Teach-Once-Learn-One-Shot-Bimanual-Robotic-Manipu/01_overview.md) | 2025 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [RoboMIND: Benchmark on Multi-embodiment Intelligence Normative Data for Robot Manipulation](../2025/RSS/2025_RSS_RoboMIND-Benchmark-on-Multi-embodiment-Intelligence-Normat/01_overview.md) | 2025 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Bridging Perception and Action: Spatially-Grounded Mid-Level Representations for Robot Generalization](../2025/RSS/2025_RSS_Bridging-Perception-and-Action-Spatially-Grounded-Mid-Leve/01_overview.md) | 2025 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [DemoGen: Synthetic Demonstration Generation for Data-Efficient Visuomotor Policy Learning](../2025/RSS/2025_RSS_DemoGen-Synthetic-Demonstration-Generation-for-Data-Effici/01_overview.md) | 2025 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems](../2025/IROS/2025_IROS_AgiBot-World-Colosseo-A-Large-scale-Manipulation-Platform/01_overview.md) | 2025 / IROS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning](../2024/arXiv/2024_arXiv_Precise-and-Dexterous-Robotic-Manipulation-via-Human-in-th/01_overview.md) | 2024 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [MP1: MeanFlow Tames Policy Learning in 1-step for Robotic Manipulation](../2026/AAAI/2026_AAAI_MP1-MeanFlow-Tames-Policy-Learning-in-1-step-for-Robotic-M/01_overview.md) | 2026 / AAAI | `UNREAD` | `ABSTRACT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
+
+## 2026-09-02 Curation Update
+
+이번 tier 재분류에서 이 track의 경계는 변경하지 않았다. 기존 CORE/NEXT queue를 새 전체 tier와 동기화했으며, robot data·simulator scaling·RL/IL frontier는 현재 `NEXT` 38편에서 계속 비교한다. 상태·근거 필드는 generator가 사용자 tracker 입력을 보존한 채 갱신했다.
 
 ## Comparison Matrix
 

@@ -1,17 +1,78 @@
-# Problem
+# Problem - ImagineNav: Prompting Vision-Language Models as Embodied Navigator through Scene Imagination
 
-- Year/Venue: 2025 / ICLR Poster
-- Category: Embodied Navigation and Mapping
-- Tags: Vision-Language Model, Robotics, Navigation
-- Paper link: ./2025/ICLR/2025_ICLR_ImagineNav-Prompting-Vision-Language-Models-as-Embodied-Na/paper.pdf
-- Code/Project: not identified from OpenReview
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-01 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=vQFw9ryKyK; PDF retrieval source: https://openreview.net/pdf/e349d69236fa6d97f504e96881ee34405d7de516.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 왜 문제인가
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## Problem in One Sentence
 
-## 해결하려는 문제
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+PDF body framing (p. 3 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION)): However, one limitation of LLMs is their difficulty in embedding the robot's state directly into the planning process.
 
-## 선행 연구 / 배경 단서
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## PDF Body Digest
+
+- **p. 1 / ABSTRACT - extractive PDF cue:** Visual navigation is an essential skill for home-assistance robots, providing the object-searching ability to accomplish long-horizon daily tasks.
+- **p. 1 / ABSTRACT - extractive PDF cue:** Many recent approaches use Large Language Models (LLMs) for commonsense inference to improve exploration efficiency.
+- **p. 1 / ABSTRACT - extractive PDF cue:** However, the planning process of LLMs is limited within texts and it is difficult to represent the spatial occupancy and geometry layout only by texts.
+- **p. 1 / ABSTRACT - extractive PDF cue:** Both are important for making rational navigation decisions.
+- **p. 1 / ABSTRACT - extractive PDF cue:** In this work, we seek to unleash the spatial perception and planning ability of VisionLanguage Models (VLMs), and explore whether the VLM, with only on-board ...
+- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** However, one limitation of LLMs is their difficulty in embedding the robot's state directly into the planning process.
+- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** Although such a pipeline achieves great success in recent years (Zhou et al., 2023; Kuang et al., 2024; Wu et al., 2024b; Zhang et al., ...
+
+## System and Scope
+
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | However, one limitation of LLMs is their difficulty in embedding the robot's state directly into the planning process. | mapped 3D environment과 mobile robot | body wording is the source claim |
+| Observation / input | As illustrated in Figure 3, the VLM receives the synthesized observations at future navigation waypoints and the navigation goal as inputs. | camera/depth stream, pose, map와 language goal | exact sensor/frame/preprocessing from PDF |
+| State / latent | illustrated, Figure, VLM, receives, synthesized, observations, future, navigation, waypoints, goal | robot pose, free-space/semantic map와 local goal | notation and tensor shape require body check |
+| Output / action | RGB, observation, relative, pose, predicted, Where2Imagine, jointly, input | collision-free trajectory 또는 velocity command | exact unit/frame/decoder require body check |
+| Target outcome | goal reach with collision-free execution | goal reach, safety, localization error와 replanning latency | metric/denominator are in 04 evidence |
+
+## Formal Problem Formulation
+
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | sensor/map state and goal; body terms: illustrated, Figure, VLM, receives, synthesized, observations, future, navigation, waypoints, goal | p. 5 (3 METHODOLOGY), p. 3 (1 INTRODUCTION), p. 16 (A.1 DECISION-MAKING DETAILS OF VISION-LANGUAGE MODELS) |
+| Decision / output variable | path/waypoint/velocity; body terms: summary, contributions, mapless, navigation, ImagineNav, provide, detailed, ablation | p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION) |
+| Objective / loss / cost | path cost, risk or goal utility; cue terms: Compared, larger, models, GPT-4o, GPT-4o-mini, lightweight, cost-effective, prompt | no optimization/equation sentence selected |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 6 (3 METHODOLOGY) |
+| Success / guarantee | goal reach with collision-free execution | p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS) |
+
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** Although such a pipeline achieves great success in recent years (Zhou et al., 2023; Kuang et al., 2024; Wu et al., 2024b; Zhang et al., ...
+- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** As most VLMs cannot understand the continuous physical world, it is infeasible to directly ask VLMs to generate navigable 3D waypoints.
+- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Thirdly, although the semantic information stored on the map can be easily expressed by text (e.g., list the categories of the observed objects), such pure ...
+- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** Although previous works (Yadav et al., 2023b; Ramrakhya et al., 2023; Chaplot et al., 2020; Ramakrishnan et al., 2022) can achieve high success rate in ...
+
+## What the Paper Changes
+
+PDF contribution framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 4 (3 METHODOLOGY)): In summary, our contributions are: • We propose a mapless navigation approach ImagineNav.
+
+- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** We also provide a detailed ablation analysis to help understand the important conclusions in our framework.
+- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** We propose a new decision-making paradigm based on imagined imagery, wherein decisions are made on imaginations, enabling more nuanced, context-aware interactions that better harness VLMs' ...
+- **p. 4 / 1 INTRODUCTION - extractive PDF cue:** In contrast, Our method operates in the RGB space to perform guided-imagination.
+- **p. 4 / 3 METHODOLOGY - extractive PDF cue:** The discrete action space consists of the following commands: {Stop, MoveAhead, TurnLeft, TurnRight, LookUp, LookDown}.
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 9 | We also present some failure examples at the bottom of Figure 5. | reported limitation/failure wording; scope must be verified |
+| body cue at p. 9 | We identified three key factors contributing to these navigation failures. | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 5 (3 METHODOLOGY), p. 3 (1 INTRODUCTION), p. 16 (A.1 DECISION-MAKING DETAILS OF VISION-LANGUAGE MODELS), p. 16 (A.1 DECISION-MAKING DETAILS OF VISION-LANGUAGE MODELS). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 3 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), interface p. 5 (3 METHODOLOGY), p. 3 (1 INTRODUCTION), p. 16 (A.1 DECISION-MAKING DETAILS OF VISION-LANGUAGE MODELS), p. 16 (A.1 DECISION-MAKING DETAILS OF VISION-LANGUAGE MODELS), objective no optimization/equation sentence selected.
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

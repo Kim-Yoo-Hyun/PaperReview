@@ -1,35 +1,53 @@
-# Insights
+# Insights — RoboCasa: Large-Scale Simulation of Everyday Tasks for Generalist Robots
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: We present RoboCasa, a large-scale simulation framework for training generalist robots in everyday environments.
-- 출발 문제 단서: In Robotics, scaling is hindered by the lack of access to massive robot datasets.
-- 주장된 효과 단서: Our experiments show a clear scaling trend in using synthetically generated robot data for large-scale imitation learning and show great promise in harnessing simulation data in real-world tasks.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `CURATION_ONLY`.
+> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-08-11; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- Dataset/benchmark 설계 방식을 연구 아이디어의 evaluation protocol과 failure taxonomy를 잡는 기준으로 사용할 수 있다.
-- 새 방법을 제안하기 전, 이 benchmark가 어떤 input, annotation, split, metric을 표준화했는지 확인해야 한다.
+## Paper-supported conclusion
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: Our experiments show a clear scaling trend in using synthetically generated robot data for large-scale imitation learning and show great promise in harnessing simulation data in real-world tasks.
-- benchmark는 task를 정의하지만, 실제 robot deployment나 open-world generalization을 완전히 대변하지 못할 수 있다.
+> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
 
-## 다음 연구 질문
-- 현재 benchmark metric이 3D CV 성능과 robotics task success 사이의 차이를 충분히 드러내는가?
-- 새로운 representation/method가 train/test split이 아니라 scene/object/task shift에서 강한지 어떻게 확인할 수 있는가?
-- annotation schema가 language, geometry, action failure를 분리해서 분석할 수 있는가?
+### What was actually new
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: Objaverse, Habitat, AI2-THOR / success rate
-- 내 연구 확장 benchmark 후보: paper-defined benchmark
-- 내 연구 확장 metric 후보: paper-defined metrics, generalization gap, failure rate
-- 검증 초점: benchmark coverage, split validity, metric-task alignment를 확인한다.
+- **Method cue:** We present RoboCasa, a large-scale simulation framework for training generalist robots in everyday environments.
+- **Problem cue:** In Robotics, scaling is hindered by the lack of access to massive robot datasets.
+- **Claim/result cue:** Our experiments show a clear scaling trend in using synthetically generated robot data for large-scale imitation learning and show great promise in harnessing simulation data in real-world tasks.
 
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+### Strongest assumption and failure boundary
 
-## 근거가 되는 논문 단서
-- Problem cue: In Robotics, scaling is hindered by the lack of access to massive robot datasets.
-- Method cue: We present RoboCasa, a large-scale simulation framework for training generalist robots in everyday environments.
-- Result cue: Our experiments show a clear scaling trend in using synthetically generated robot data for large-scale imitation learning and show great promise in harnessing simulation data in real-world tasks.
+- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+
+## Researcher interpretation
+
+### Reusable lesson in the robotics loop
+
+- **Closed-loop position:** `observation/language → task decision → action/control`.
+- **Registry interface:** `Robotics, Benchmark, simulation, household manipulation, long-horizon tasks` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
+- **Prior interpretation carried forward:**
+  - Dataset/benchmark 설계 방식을 연구 아이디어의 evaluation protocol과 failure taxonomy를 잡는 기준으로 사용할 수 있다.
+  - 새 방법을 제안하기 전, 이 benchmark가 어떤 input, annotation, split, metric을 표준화했는지 확인해야 한다.
+- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+
+### Dependency and evolution
+
+- Registry position: `Robot Learning and Data`; tags: `Robotics, Benchmark, simulation, household manipulation, long-horizon tasks`.
+- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
+- Recorded scope boundary/future cue:
+  - 논문이 도달한 지점: Our experiments show a clear scaling trend in using synthetically generated robot data for large-scale imitation learning and show great promise in harnessing simulation data in real-world tasks.
+  - benchmark는 task를 정의하지만, 실제 robot deployment나 open-world generalization을 완전히 대변하지 못할 수 있다.
+
+### Minimal reproduction
+
+- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
+  - 논문 내 evaluation 단서: Objaverse, Habitat, AI2-THOR / success rate
+  - 내 연구 확장 benchmark 후보: paper-defined benchmark
+  - 내 연구 확장 metric 후보: paper-defined metrics, generalization gap, failure rate
+  - 검증 초점: benchmark coverage, split validity, metric-task alignment를 확인한다.
+- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+
+## Falsifiable research question
+
+현재 benchmark metric이 3D CV 성능과 robotics task success 사이의 차이를 충분히 드러내는가?
+
+**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.

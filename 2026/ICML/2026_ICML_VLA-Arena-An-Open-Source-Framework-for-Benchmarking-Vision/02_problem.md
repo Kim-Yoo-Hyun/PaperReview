@@ -1,18 +1,79 @@
-# Problem — VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
+# Problem - VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
 
-> Evidence maturity: `CURATION_ONLY`. 이 문서는 정독 완료를 뜻하지 않는다.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://vla-arena.github.io/; PDF retrieval source: https://arxiv.org/pdf/2512.22539. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-- Year/Venue: 2026 / ICML 2026 regular
-- Category: Robot Learning and Data
-- Tags: Robotics, VLA, Benchmark, safety, distractor, extrapolation, long horizon, manipulation
-- Official paper: https://vla-arena.github.io/
-- Code/Project: https://vla-arena.github.io/
-- Source audit: metadata registration only; full-text claims are UNVERIFIED.
+## Problem in One Sentence
 
-## Target Problem and Assumptions
+PDF body framing (p. 2 (1. Introduction), p. 3 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction)): This lack of integration prevents understanding how models handle concurrent challenges across visual, linguistic, and structural dimensions of task.
 
-UNVERIFIED — 문제 formulation, bottleneck과 핵심 가정을 full text에서 확인한다.
+## PDF Body Digest
 
-## Closed-Loop Position
+- **p. 1 / Abstract - extractive body cue:** While Vision-Language-Action models (VLAs) are rapidly advancing toward generalist robot poli1Institute for Artificial Intelligence, Peking University.
+- **p. 1 / Abstract - extractive body cue:** 3Beijing Academy of Artificial Intelligence.
+- **p. 1 / Abstract - extractive body cue:** 5State Key Laboratory of General Artificial Intelligence, Peking University. ∗Equal contribution.
+- **p. 1 / Abstract - extractive body cue:** To address this, we introduce VLA-Arena, a comprehensive benchmark.
+- **p. 1 / Abstract - extractive body cue:** It features a novel structured task design framework to quantify difficulty across three orthogonal axes: (1) Task Structure, (2) Language Command, and (3) Visual Observation.
+- **p. 2 / 1. Introduction - extractive body cue:** This lack of integration prevents understanding how models handle concurrent challenges across visual, linguistic, and structural dimensions of task.
+- **p. 3 / 1. Introduction - extractive body cue:** Conducting an extensive study on VLA-Arena with leading models from the two dominant architectural paradigms: autoregressive and continuous action generation, our analysis surfaces three key ...
 
-`observation → state/world model → task & motion decision → policy/control → contact → feedback/recovery` 중 위치를 정독 후 기록한다.
+## System and Scope
+
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | This lack of integration prevents understanding how models handle concurrent challenges across visual, linguistic, and structural dimensions of task. | defined robot simulator/hardware task suite | body wording is the source claim |
+| Observation / input | VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models 0.0 0.25 0.5 0.75 1.0 Success Rate StatePreservation L0 OpenVLA OpenVLA-OFT Pi0 UniVLA L1 ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF |
+| State / latent | VLA-Arena, Open-Source, Framework, Benchmarking, Vision-Language-Action, Models, Success, Rate, StatePreservation, OpenVLA | benchmark state/goal와 method decision | notation and tensor shape require body check |
+| Output / action | features, novel, structured, task, design, framework, quantify, difficulty | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
+| Target outcome | comparable score and protocol validity | success metric, robustness, generalization과 reproducibility | metric/denominator are in 04 evidence |
+
+## Formal Problem Formulation
+
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | standardized episode e and interface; body terms: VLA-Arena, Open-Source, Framework, Benchmarking, Vision-Language-Action, Models, Success, Rate, StatePreservation, OpenVLA | p. 6 (3. Task Suites in VLA-Arena), p. 1 (2 Supported Trajectory), p. 1 (Abstract) |
+| Decision / output variable | method trajectory/action; body terms: introduce, VLA-Arena, first, benchmark, structurally, evaluate, performance, safety | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (2. Structured Task Design) |
+| Objective / loss / cost | benchmark score and failure cost; cue terms: dimension, evaluates, model, ability, only, complete, primary, objective | p. 5 (3. Task Suites in VLA-Arena), p. 1 (170 Tasks), p. 2 (Abstract), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (2. Structured Task Design) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (1. Introduction) |
+| Success / guarantee | comparable score and protocol validity | p. 7 (4.1. Experimental Setup), p. 8 (4.3. Diagnosing Semantic and Visual Grounding), p. 5 (Figure/Table caption) |
+
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 3 / 1. Introduction - extractive body cue:** Conducting an extensive study on VLA-Arena with leading models from the two dominant architectural paradigms: autoregressive and continuous action generation, our analysis surfaces three key ...
+- **p. 2 / 1. Introduction - extractive body cue:** However, existing benchmarks suffer from several limitations.
+- **p. 3 / 1. Introduction - extractive body cue:** (Graded difficulty levels, e.g., L0-L2).
+
+## What the Paper Changes
+
+PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (2. Structured Task Design), p. 3 (2. Structured Task Design), p. 1 (Abstract)): We introduce VLA-Arena, the first benchmark to structurally evaluate the performance and safety of VLAs.
+
+- **p. 2 / 1. Introduction - extractive body cue:** To address this challenge, we propose VLA-Arena, a comprehensive and accessible benchmark for evaluating VLA models.
+- **p. 3 / 2. Structured Task Design - extractive body cue:** To quantitatively measure the capability frontiers of VLA models, we propose a structured task design, as compared in Table 1.
+- **p. 3 / 2. Structured Task Design - extractive body cue:** Based on this classification, we propose the cumulative cost (CC) metric for a trajectory τ of length L: CC(τ) = L-1 X t=0 cinst(st, at) ...
+- **p. 1 / Abstract - extractive body cue:** 5State Key Laboratory of General Artificial Intelligence, Peking University. ∗Equal contribution.
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 22 | Figure 8. Visualization of Typical Failure Modes in Dynamic Distractors Tasks. The failure cases are categorized into three ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 20 | Figure 6. Attention Visualization for the Token "plate" Comparing OpenVLA and OpenVLA-OFT. The instruction is "pick up the ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 9 | Figure 4. Consistent Failure Modes Observed in Real-World Deployment. When deployed on a physical Franka Research 3 robot, ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 9 | By exposing critical failure modes, our research aims to steer the community toward developing robotic agents that are ... | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 6 (3. Task Suites in VLA-Arena), p. 1 (2 Supported Trajectory), p. 1 (Abstract), p. 3 (1. Introduction). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 2 (1. Introduction), p. 3 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction), interface p. 6 (3. Task Suites in VLA-Arena), p. 1 (2 Supported Trajectory), p. 1 (Abstract), p. 3 (1. Introduction), objective p. 5 (3. Task Suites in VLA-Arena), p. 1 (170 Tasks), p. 2 (Abstract), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (2. Structured Task Design).
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

@@ -1,17 +1,79 @@
-# Problem
+# Problem - WorldSplat: Gaussian-Centric Feed-Forward 4D Scene Generation for Autonomous Driving
 
-- Year/Venue: 2026 / ICLR Poster
-- Category: 3D Generative Modeling
-- Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
-- Paper link: ./2026/ICLR/2026_ICLR_WorldSplat-Gaussian-Centric-Feed-Forward-4D-Scene-Generati/paper.pdf
-- Code/Project: not identified
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-01 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=KWeX6tYno6; PDF retrieval source: https://openreview.net/pdf/26fbb3a9ef84175c8a2efe7918a32cd5a0082627.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 왜 문제인가
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## Problem in One Sentence
 
-## 해결하려는 문제
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+PDF body framing (p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION)): Existing video generators (Mao et al., 2024; Gao et al., 2023; Wen et al., 2024; Li et al., 2024a; Gao et al., 2024b) work in the 2D image domain and ...
 
-## 선행 연구 / 배경 단서
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## PDF Body Digest
+
+- **p. 1 / ABSTRACT - extractive PDF cue:** Recent advances in driving-scene generation and reconstruction have demonstrated significant potential for enhancing autonomous driving systems by producing scalable and controllable training data.
+- **p. 1 / ABSTRACT - extractive PDF cue:** Existing generation methods primarily focus on synthesizing diverse and high-fidelity driving videos; however, due to limited 3D consistency and sparse viewpoint coverage, they struggle to ...
+- **p. 1 / ABSTRACT - extractive PDF cue:** Conversely, recent 3D/4D reconstruction approaches have significantly improved NVS for real-world driving scenes, yet inherently lack generative capabilities.
+- **p. 1 / ABSTRACT - extractive PDF cue:** To overcome this dilemma between scene generation and reconstruction, we propose WorldSplat, a novel feed-forward framework for 4D driving-scene generation.
+- **p. 1 / ABSTRACT - extractive PDF cue:** Our approach effectively generates consistent multi-track videos through two key steps: (i) We introduce a 4D-aware latent diffusion model integrating multi-modal information to produce pixel-aligned ...
+- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** Existing video generators (Mao et al., 2024; Gao et al., 2023; Wen et al., 2024; Li et al., 2024a; Gao et al., 2024b) work in ...
+- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** Thus, bridging generative imagination with faithful 4D reconstruction remains an open challenge.
+
+## System and Scope
+
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | Existing video generators (Mao et al., 2024; Gao et al., 2023; Wen et al., 2024; Li et al., 2024a; Gao et al., ... | high-dimensional data 또는 robot action-trajectory distribution | body wording is the source claim |
+| Observation / input | 2, this design captures the spatio-temporal dynamics of 4D scenes and directly outputs pixel-aligned 3D Gaussians from the multi-modal latent input L. | conditioning observation와 noisy/intermediate sample | exact sensor/frame/preprocessing from PDF |
+| State / latent | design, captures, spatio-temporal, dynamics, scenes, directly, outputs, pixel-aligned, Gaussians, multi-modal | latent/noise variable와 conditional distribution | notation and tensor shape require body check |
+| Output / action | simply, adjust, input, output, channel, dimensions, suit, different | generated sample, action chunk 또는 trajectory | exact unit/frame/decoder require body check |
+| Target outcome | sample quality, diversity and latency | distribution fit, multimodality, sample quality와 latency | metric/denominator are in 04 evidence |
+
+## Formal Problem Formulation
+
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | data x₀, noisy state x_t, condition c; body terms: design, captures, spatio-temporal, dynamics, scenes, directly, outputs, pixel-aligned, Gaussians, multi-modal | p. 5 (3 METHOD), p. 6 (3 METHOD), p. 15 (A.1 ARCHITECTURES) |
+| Decision / output variable | sample/action x̂ or trajectory; body terms: framework, creates, dynamic, Gaussian, representation, renders, novel, views | p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 METHOD) |
+| Objective / loss / cost | distribution/denoising/flow objective; cue terms: overall, training, objective, defined, weighted, losses, Lrecon, Llpips | p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 6 (3 METHOD), p. 6 (3 METHOD), p. 16 (A.2 TRAINING DETAILS) |
+| Success / guarantee | sample quality, diversity and latency | p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS) |
+
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** Thus, bridging generative imagination with faithful 4D reconstruction remains an open challenge.
+- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** To address these challenges, we introduce WorldSplat, a feed-forward framework that combines generative diffusion with explicit 3D reconstruction for 4D driving-scene synthesis.
+- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** 1, prior driving world models (Gao et al., 2023; Mao et al., 2024; Jiang et al., 2024) produce realistic videos but often lose coherence when ...
+
+## What the Paper Changes
+
+PDF contribution framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD)): Our framework creates a dynamic 4D Gaussian representation and renders the novel views along any user-defined camera trajectory without per-scene optimization.
+
+- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** By embedding 3D awareness into the diffusion model and using an explicit Gaussian-centric world representation, our method ensures spatial and temporal consistency across novel trajectory ...
+- **p. 4 / 3 METHOD - extractive PDF cue:** Published as a conference paper at ICLR 2026 + + Static Gs Static Gs Surrounding-View Videos Dynamic Mask Depth Map RGB Train Noise E 4D-Aware ...
+- **p. 3 / 3 METHOD - extractive PDF cue:** 2, our framework comprises three key modules: a 4D-aware latent diffusion model (Sec.
+- **p. 4 / 3 METHOD - extractive PDF cue:** We introduce a continuous mixing parameter s ∈[0, 1] and define the interpolated state z(s) = (1 -s) ϵ + s x.
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 6 | Figure 3: Effectiveness of the enhanced diffusion model. During novel-view video synthesis, rendering quality may degrade due to ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 9 | As detailed in Section 3.4 and illustrated in Figure 3, this module addresses inherent limitations of Gaussian splatting-low-quality ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 4 | Figure 2: The overview of our framework. (1) Employing a 4D-aware diffusion model to generate a multi-modal latent ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 8 | These results demonstrate the robustness and fidelity of our 4D Gaussian representation for novel-view synthesis under varying viewpoint ... | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+generative writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 5 (3 METHOD), p. 6 (3 METHOD), p. 15 (A.1 ARCHITECTURES), p. 5 (3 METHOD). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), interface p. 5 (3 METHOD), p. 6 (3 METHOD), p. 15 (A.1 ARCHITECTURES), p. 5 (3 METHOD), objective p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD).
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

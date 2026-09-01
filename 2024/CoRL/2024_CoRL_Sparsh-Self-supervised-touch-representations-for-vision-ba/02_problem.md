@@ -1,23 +1,76 @@
-# Problem
+# Problem - Sparsh: Self-supervised touch representations for vision-based tactile sensing
 
-- Year/Venue: 2024 / CoRL
-- Category: Manipulation, Contact, and Dexterity
-- Tags: Robotics, tactile sensing, self-supervised learning, foundation model, contact
-- Paper link: [paper.pdf](./paper.pdf)
-- Code/Project: https://sparsh-ssl.github.io/
-- Source audit: regenerated from local `paper.pdf` on 2026-08-11; survey-keyword template text removed.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.24090; PDF retrieval source: https://arxiv.org/pdf/2410.24090. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 왜 문제인가
-- Specifically, we provide a recipe to adapt masking-based objectives from computer vision to the tactile domain, and train general-purpose touch encoders by curating a new Touch-Slide dataset and ...
-- Pulling together additional unlabeled data points from the existing datasets we train our models on a total of 460k+ tactile images.
-- For instance, properties like forces and slip require careful and expensive instrumentation in lab settings, while other properties like tracking deformations or extrinsic contact can be infeasible.
+## Problem in One Sentence
 
-## 해결하려는 문제
-- We present Sparsh, a family of SSL models that can support various vision-based tactile sensors, alleviating the need for custom labels through pre-training on 460k+ tactile images with ...
-- In evaluations, we find that SSL pre-training for touch representation outperforms task and sensor-specific end-to-end training by 95.1% on average over TacBench, and Sparsh (DINO) and Sparsh (IJEPA) ...
-- : In this work, we introduce general purpose touch representations for the increasingly accessible class of vision-based tactile sensors.
+PDF body framing (p. 2 (1 Introduction), p. 2 (1 Introduction)): Curation of new & existing datasets, unlabeled for SSL and labeled for benchmarking.
 
-## 선행 연구 / 배경 단서
-- Finally, we construct TacBench, a benchmark consisting of six touch-centric tasks that cover the space of relevant problems on tactile properties such as force estimation and slip detection, ...
-- Specifically, we provide a recipe to adapt masking-based objectives from computer vision to the tactile domain, and train general-purpose touch encoders by curating a new Touch-Slide dataset and ...
-- Pulling together additional unlabeled data points from the existing datasets we train our models on a total of 460k+ tactile images.
+## PDF Body Digest
+
+- **p. 1 / Abstract - extractive body cue:** In this work, we introduce general purpose touch representations for the increasingly accessible class of vision-based tactile sensors.
+- **p. 1 / Abstract - extractive body cue:** Such sensors have led to many recent advances in robot manipulation as they markedly complement vision, yet solutions today often rely on task and sensor ...
+- **p. 1 / Abstract - extractive body cue:** Collecting real data at scale with task centric ground truth labels, like contact forces and slip, is a challenge further compounded by sensors of various ...
+- **p. 1 / Abstract - extractive body cue:** To tackle this we turn to self-supervised learning (SSL) that has demonstrated remarkable performance in computer vision.
+- **p. 1 / Abstract - extractive body cue:** We present Sparsh, a family of SSL models that can support various vision-based tactile sensors, alleviating the need for custom labels through pre-training on 460k+ ...
+- **p. 2 / 1 Introduction - extractive body cue:** Curation of new & existing datasets, unlabeled for SSL and labeled for benchmarking.
+- **p. 2 / 1 Introduction - extractive body cue:** Pulling together additional unlabeled data points from the existing datasets we train our models on a total of 460k+ tactile images.
+
+## System and Scope
+
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | Curation of new & existing datasets, unlabeled for SSL and labeled for benchmarking. | contact-rich manipulation scene | body wording is the source claim |
+| Observation / input | Vision-based tactile sensors [1, 2, 3, 4] have emerged as the leading form factor capable of capturing images of physical interactions at ... | tactile image/force, vision과 proprioceptive history | exact sensor/frame/preprocessing from PDF |
+| State / latent | Vision-based, tactile, sensors, have, emerged, leading, form, factor, capable, capturing | contact geometry, force state 또는 latent dynamics | notation and tensor shape require body check |
+| Output / action | prevailing, incorporating, vision-based, tactile, sensors, robot, tasks, train | grasp/contact action, force command 또는 object motion | exact unit/frame/decoder require body check |
+| Target outcome | slip/contact success and safe interaction | slip/contact success, force/pose error와 robustness | metric/denominator are in 04 evidence |
+
+## Formal Problem Formulation
+
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | visual/tactile/proprioceptive contact history; body terms: Vision-based, tactile, sensors, have, emerged, leading, form, factor, capable, capturing | p. 2 (1 Introduction), p. 8 (8 Discussion), p. 2 (1 Introduction) |
+| Decision / output variable | contact-aware action/force; body terms: introduce, family, touch, representations, vision-based, tactile, sensors, trained | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract) |
+| Objective / loss / cost | contact prediction/control error; cue terms: Specifically, provide, recipe, adapt, masking-based, objectives, computer, vision | p. 2 (1 Introduction) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 8 (8 Discussion) |
+| Success / guarantee | slip/contact success and safe interaction | p. 28 (Figure/Table caption), p. 24 (Figure/Table caption), p. 24 (Figure/Table caption) |
+
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 2 / 1 Introduction - extractive body cue:** Pulling together additional unlabeled data points from the existing datasets we train our models on a total of 460k+ tactile images.
+
+## What the Paper Changes
+
+PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 8 (8 Discussion)): In this work, we introduce a family of touch representations for vision-based tactile sensors trained with SSL.
+
+- **p. 2 / 1 Introduction - extractive body cue:** Our contributions are as follows: 1.
+- **p. 1 / Abstract - extractive body cue:** We present Sparsh, a family of SSL models that can support various vision-based tactile sensors, alleviating the need for custom labels through pre-training on 460k+ ...
+- **p. 8 / 8 Discussion - extractive body cue:** We evaluated five SSL approaches (see Figure 2) comparing their performance against task and sensor specific models through TacBench, a benchmark of six touch-centric tasks ...
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 25 | Figure 13: Failure case where the ground truth does not reflect slip since it relies on an experimental ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 24 | Figure 12: Contrast between Sparsh (VJEPA) and E2E for a test trajectory with a spherical probe sliding on ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 28 | Table 11: Mean and variance of distance traversed (in cm) before failure for policies based on Sparsh and ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 8 | Both models perform similarly in bead maze test demonstrations, which require implicit knowledge of shear forces and slip. | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (1 Introduction), p. 8 (8 Discussion), p. 2 (1 Introduction), p. 8 (8 Discussion). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 2 (1 Introduction), p. 8 (8 Discussion), p. 2 (1 Introduction), p. 8 (8 Discussion), objective p. 2 (1 Introduction).
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

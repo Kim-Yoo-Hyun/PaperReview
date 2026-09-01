@@ -1,22 +1,77 @@
-# Problem
+# Problem - MimicPlay: Long-Horizon Imitation Learning by Watching Human Play
 
-- Year/Venue: 2023 / CoRL
-- Category: Robot Learning and Data
-- Tags: Robotics, Imitation Learning, human video, cross-embodiment, hierarchical policy, long-horizon manipulation
-- Paper link: [paper.pdf](./paper.pdf)
-- Code/Project: https://mimic-play.github.io/
-- Source audit: regenerated from local `paper.pdf` on 2026-08-11; survey-keyword template text removed.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-01 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2302.12422; PDF retrieval source: https://arxiv.org/pdf/2302.12422. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 왜 문제인가
-- Such latent plans provide rich 3D guidance (what to do and where to interact) at each time step, tackling the challenging long-horizon manipulation problem by converting it into ...
-- Efficiently teaching robots to perform general-purpose manipulation tasks is a long-standing challenge.
-- In this work, we argue that the data required for learning high-level plan and low-level control can come in different forms, and doing so could substantially reduce the ...
+## Problem in One Sentence
 
-## 해결하려는 문제
-- With systematic evaluations of 14 longhorizon manipulation tasks in the real world, we show that MIMICPLAY outperforms state-of-the-art imitation learning methods in task success rate, generalization ability, and ...
-- Motivated by this, we introduce a hierarchical learning framework named MIMICPLAY that learns latent plans from human play data to guide low-level visuomotor control trained on a small ...
+PDF body framing (p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction)): Efficiently teaching robots to perform general-purpose manipulation tasks is a long-standing challenge.
 
-## 선행 연구 / 배경 단서
-- Such latent plans provide rich 3D guidance (what to do and where to interact) at each time step, tackling the challenging long-horizon manipulation problem by converting it into ...
-- Efficiently teaching robots to perform general-purpose manipulation tasks is a long-standing challenge.
-- Prior works show that data collected this way covers more diverse behaviors and situations compared to typical task-oriented demonstrations .
+## PDF Body Digest
+
+- **p. 1 / Abstract - extractive PDF cue:** Imitation learning from human demonstrations is a promising paradigm for teaching robots manipulation skills in the real world.
+- **p. 1 / Abstract - extractive PDF cue:** However, learning complex long-horizon tasks often requires an unattainable amount of demonstrations.
+- **p. 1 / Abstract - extractive PDF cue:** To reduce the high data requirement, we resort to human play data-video sequences of people freely interacting with the environment using their hands.
+- **p. 1 / Abstract - extractive PDF cue:** Even with different morphologies, we hypothesize that human play data contain rich and salient information about physical interactions that can readily facilitate robot policy learning.
+- **p. 1 / Abstract - extractive PDF cue:** Motivated by this, we introduce a hierarchical learning framework named MIMICPLAY that learns latent plans from human play data to guide low-level visuomotor control trained ...
+- **p. 1 / 1 Introduction - extractive PDF cue:** Efficiently teaching robots to perform general-purpose manipulation tasks is a long-standing challenge.
+- **p. 2 / 1 Introduction - extractive PDF cue:** We show that such scalability plays a key role in strong policy generalization.
+
+## System and Scope
+
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | Efficiently teaching robots to perform general-purpose manipulation tasks is a long-standing challenge. | demonstration으로 정의된 robot task distribution | body wording is the source claim |
+| Observation / input | 2(b)), we specify the goal image gr t (gr t ∈Vr) as the frame H steps after the input observation or t ... | observation history와 expert trajectory/action | exact sensor/frame/preprocessing from PDF |
+| State / latent | specify, goal, image, frame, steps, after, input, observation, robot, demonstration | behavior policy와 temporal action context | notation and tensor shape require body check |
+| Output / action | inputs, latent, planner, generates, plan, feature, embedding, shape | predicted action 또는 action chunk | exact unit/frame/decoder require body check |
+| Target outcome | closed-loop task success and robustness | imitation error, task success, robustness와 compounding error | metric/denominator are in 04 evidence |
+
+## Formal Problem Formulation
+
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | observation history o_{t−H:t}; body terms: specify, goal, image, frame, steps, after, input, observation, robot, demonstration | p. 14 (A Implementation details), p. 2 (1 Introduction), p. 14 (A Implementation details) |
+| Decision / output variable | expert-like action/chunk a_{t:t+H}; body terms: summarize, main, contributions, follows, novel, paradigm, learning, D-aware | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 14 (A Implementation details) |
+| Objective / loss / cost | imitation or action-distribution loss; cue terms: not recovered | no optimization/equation sentence selected |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | 본문 anchor 없음 |
+| Success / guarantee | closed-loop task success and robustness | p. 7 (5 Results), p. 7 (5 Results), p. 15 (C Supplementary Experiment Results) |
+
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 2 / 1 Introduction - extractive PDF cue:** We show that such scalability plays a key role in strong policy generalization.
+- **p. 2 / 1 Introduction - extractive PDF cue:** Prior works show that data collected this way covers more diverse behaviors and situations compared to typical task-oriented demonstrations [5, 6].
+
+## What the Paper Changes
+
+PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 14 (A Implementation details), p. 14 (A Implementation details)): To summarize, the main contributions of our work are as follows: • A novel paradigm for learning 3D-aware latent plans from cheap human play data. • A hierarchical framework that ...
+
+- **p. 2 / 1 Introduction - extractive PDF cue:** Moreover, MIMICPLAY integrates human motion and robotic skills into a joint latent plan space, which enables an interface that allows using human videos directly as ...
+- **p. 14 / A Implementation details - extractive PDF cue:** The robot policy model is a GPT-style transformer [52], which consists of four multi-head layers with four heads.
+- **p. 14 / A Implementation details - extractive PDF cue:** For a fair comparison with our method, the baseline approaches trained without human play data have five more demonstrations during training the latent planner P ...
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 7 | Ours (w/o GMM) even fails to match the performance of Ours (0% human) in the generalization task settings. | reported limitation/failure wording; scope must be verified |
+| body cue at p. 8 | 6 Conclusion and Limitations Existing limitations of the MIMICPLAY include: 1) The current high-level latent plan is learned ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 8 | 2, we compared the model variants with 50% human play data (Ours (50% human)) and found it fails ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 7 | This result showcases that learning a latent plan space does not need to rely fully on teleoperated robot ... | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 14 (A Implementation details), p. 2 (1 Introduction), p. 14 (A Implementation details), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 14 (A Implementation details), p. 2 (1 Introduction), p. 14 (A Implementation details), p. 2 (1 Introduction), objective no optimization/equation sentence selected.
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

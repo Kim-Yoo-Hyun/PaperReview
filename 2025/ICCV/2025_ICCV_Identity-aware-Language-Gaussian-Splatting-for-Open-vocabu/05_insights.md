@@ -1,35 +1,53 @@
-# Insights
+# Insights — Identity-aware Language Gaussian Splatting for Open-vocabulary 3D Semantic Segmentation
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: To address this issue, we propose a simple yet powerful method that aligns language embeddings via the identity information.
-- 출발 문제 단서: This limitation still makes the practical use of open-vocabulary 3D semantic segmentation challenging.
-- 주장된 효과 단서: Experimental results on benchmark datasets demonstrate that our method delivers state-of-the-art performance in open-vocabulary 3D semantic segmentation. https://github.com/DCVL-3D/ILGS release view2 Cosine similarity Others Sheep view2 view1 Gaussian field ...
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `CURATION_ONLY`.
+> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- Differentiable 3D scene representation을 semantic map, view synthesis, robot memory, planning cost field로 재사용할 수 있다.
-- Geometry와 appearance를 함께 담는 표현은 language feature, object identity, dynamic state를 붙이는 기반이 된다.
+## Paper-supported conclusion
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: Experimental results on benchmark datasets demonstrate that our method delivers state-of-the-art performance in open-vocabulary 3D semantic segmentation. https://github.com/DCVL-3D/ILGS release view2 Cosine similarity Others Sheep view2 view1 Gaussian field ...
-- reconstruction/view synthesis 품질을 보인 뒤에도 real-time update, semantic consistency, dynamic interaction, robot-safe planning은 후속 과제로 남는다.
+> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
 
-## 다음 연구 질문
-- Gaussian/NeRF field에 language feature를 붙일 때 3D consistency와 open-vocabulary retrieval을 동시에 유지할 수 있는가?
-- robot이 움직이며 갱신하는 online field에서 drift와 hallucinated semantics를 어떻게 줄일 수 있는가?
-- rendering quality가 실제 navigation/manipulation success로 이어지는 조건은 무엇인가?
+### What was actually new
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: LERF / accuracy, mIoU, IoU, mAP, PSNR
-- 내 연구 확장 benchmark 후보: Replica, ScanNet, Mip-NeRF 360, Tanks and Temples
-- 내 연구 확장 metric 후보: PSNR, SSIM, LPIPS, mIoU
-- 검증 초점: view synthesis 품질뿐 아니라 semantic querying, map update, robot task success를 같이 확인한다.
+- **Method cue:** To address this issue, we propose a simple yet powerful method that aligns language embeddings via the identity information.
+- **Problem cue:** This limitation still makes the practical use of open-vocabulary 3D semantic segmentation challenging.
+- **Claim/result cue:** Experimental results on benchmark datasets demonstrate that our method delivers state-of-the-art performance in open-vocabulary 3D semantic segmentation. https://github.com/DCVL-3D/ILGS release view2 Cosine similarity Others Sheep view2 view1 Gaussian field ...
 
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+### Strongest assumption and failure boundary
 
-## 근거가 되는 논문 단서
-- Problem cue: This limitation still makes the practical use of open-vocabulary 3D semantic segmentation challenging.
-- Method cue: To address this issue, we propose a simple yet powerful method that aligns language embeddings via the identity information.
-- Result cue: Experimental results on benchmark datasets demonstrate that our method delivers state-of-the-art performance in open-vocabulary 3D semantic segmentation. https://github.com/DCVL-3D/ILGS release view2 Cosine similarity Others Sheep view2 view1 Gaussian field ...
+- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+
+## Researcher interpretation
+
+### Reusable lesson in the robotics loop
+
+- **Closed-loop position:** `observation/language → task decision → action/control`.
+- **Registry interface:** `3D Vision, Gaussian Splatting, semantic` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
+- **Prior interpretation carried forward:**
+  - Differentiable 3D scene representation을 semantic map, view synthesis, robot memory, planning cost field로 재사용할 수 있다.
+  - Geometry와 appearance를 함께 담는 표현은 language feature, object identity, dynamic state를 붙이는 기반이 된다.
+- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+
+### Dependency and evolution
+
+- Registry position: `Language-Grounded 3D Scene Representations`; tags: `3D Vision, Gaussian Splatting, semantic`.
+- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
+- Recorded scope boundary/future cue:
+  - 논문이 도달한 지점: Experimental results on benchmark datasets demonstrate that our method delivers state-of-the-art performance in open-vocabulary 3D semantic segmentation. https://github.com/DCVL-3D/ILGS release view2 Cosine similarity Others Sheep view2 view1 Gaussian field ...
+  - reconstruction/view synthesis 품질을 보인 뒤에도 real-time update, semantic consistency, dynamic interaction, robot-safe planning은 후속 과제로 남는다.
+
+### Minimal reproduction
+
+- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
+  - 논문 내 evaluation 단서: LERF / accuracy, mIoU, IoU, mAP, PSNR
+  - 내 연구 확장 benchmark 후보: Replica, ScanNet, Mip-NeRF 360, Tanks and Temples
+  - 내 연구 확장 metric 후보: PSNR, SSIM, LPIPS, mIoU
+  - 검증 초점: view synthesis 품질뿐 아니라 semantic querying, map update, robot task success를 같이 확인한다.
+- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+
+## Falsifiable research question
+
+Gaussian/NeRF field에 language feature를 붙일 때 3D consistency와 open-vocabulary retrieval을 동시에 유지할 수 있는가?
+
+**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.

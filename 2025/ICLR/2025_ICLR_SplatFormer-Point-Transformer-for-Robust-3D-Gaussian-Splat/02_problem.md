@@ -1,21 +1,80 @@
-# Problem
+# Problem - SplatFormer: Point Transformer for Robust 3D Gaussian Splatting
 
-- Year/Venue: 2025 / ICLR Spotlight
-- Category: Neural Scene Representations
-- Tags: Gaussian Splatting, point cloud, 3D Vision
-- Paper link: ./2025/ICLR/2025_ICLR_SplatFormer-Point-Transformer-for-Robust-3D-Gaussian-Splat/paper.pdf
-- Code/Project: not identified
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-01 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=9NfHbWKqMF; PDF retrieval source: https://openreview.net/pdf/b05fcaaffbc6f81e70f605c033bb30f44fe43513.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 왜 문제인가
-- V-dimensional feature vectors vk ∈ RV : K {vk }K k=1 = fθ ({Gk }k=1 ), (4) which encapsulate key details of the 3D primitives.
-- The feature decoder gθ then transforms this latent representation into splat attribute residuals K {∆Gk = (∆pk , ∆sk , ∆αk , ∆qk , ∆ak )}K k=1 = ...
-- Our 3DGS splat encoder is based on the PTv3 framework (Wu et al., 2024b).
+## Problem in One Sentence
 
-## 해결하려는 문제
-- The feature decoder gθ then transforms this latent representation into splat attribute residuals K {∆Gk = (∆pk , ∆sk , ∆αk , ∆qk , ∆ak )}K k=1 = ...
-- This hierarchical architecture models contextual relationships among ne
-- Then another 4 stages of attention blocks and upsampling grid pooling layers are used to restore the resolution.
+PDF body framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION)): 1, existing NVS methods perform poorly on the OOD views when restricted to low-elevation inputs, highlighting the need for a novel approach to address this problem.
 
-## 선행 연구 / 배경 단서
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## PDF Body Digest
+
+- **p. 1 / ABSTRACT - extractive PDF cue:** 3D Gaussian Splatting (3DGS) has recently transformed photorealistic reconstruction, achieving high visual fidelity and real-time performance.
+- **p. 1 / ABSTRACT - extractive PDF cue:** However, rendering quality significantly deteriorates when test views deviate from the camera angles used during training, posing a major challenge for applications in immersive free-viewpoint ...
+- **p. 1 / ABSTRACT - extractive PDF cue:** In this work, we conduct a comprehensive evaluation of 3DGS and related novel view synthesis methods under out-ofdistribution (OOD) test camera scenarios.
+- **p. 1 / ABSTRACT - extractive PDF cue:** By creating diverse test cases with synthetic and real-world datasets, we demonstrate that most existing methods, including those incorporating various regularization techniques and data-driven priors, ...
+- **p. 1 / ABSTRACT - extractive PDF cue:** To address this limitation, we introduce SplatFormer, the first point transformer model specifically designed to operate on Gaussian splats.
+- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** 1, existing NVS methods perform poorly on the OOD views when restricted to low-elevation inputs, highlighting the need for a novel approach to address this ...
+- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Existing NVS methods, including MipNeRF360 (Barron et al., 2022), and those designed for sparse inputs like LaRa (Chen et al., 2024a), face challenges in this ...
+
+## System and Scope
+
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | 1, existing NVS methods perform poorly on the OOD views when restricted to low-elevation inputs, highlighting the need for a novel approach ... | 3D scene/object와 robot coordinate frame | body wording is the source claim |
+| Observation / input | It outputs residuals that are added to the input Gaussian attributes. | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF |
+| State / latent | outputs, residuals, added, input, Gaussian, attributes, While, initial, representation, effectively | geometry, map, object/relationship state | notation and tensor shape require body check |
+| Output / action | Additionally, some, feed-forward, models, predict, primitives, input, views | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
+| Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
+
+## Formal Problem Formulation
+
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | image/point input I/P and pose; body terms: outputs, residuals, added, input, Gaussian, attributes, While, initial, representation, effectively | p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
+| Decision / output variable | geometry/map/query r; body terms: summary, make, following, contributions, introduce, OOD-NVS, experimental, protocol | p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
+| Objective / loss / cost | geometric/semantic reconstruction or matching loss; cue terms: reduce, computational, costs, terminate, optimization, early, steps, where | p. 16 (B IMPLEMENTATION DETAILS) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 16 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTATION DETAILS) |
+| Success / guarantee | spatial accuracy and downstream robot utility | p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS) |
+
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Existing NVS methods, including MipNeRF360 (Barron et al., 2022), and those designed for sparse inputs like LaRa (Chen et al., 2024a), face challenges in this ...
+- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** Our results demonstrate that existing methods struggle to generalize under the OOD-NVS protocol; • We propose SplatFormer, a novel learning-based model that refines flawed 3D ...
+- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** Traditionally, this problem has been approached using a standard novel view interpolation protocol, where test views are sampled at fixed intervals along the trajectory of ...
+- **p. 1 / 1 INTRODUCTION - extractive PDF cue:** A related research problem is 3D reconstruction from sparse input views, where methods often hallucinate unseen content (Liu et al., 2023a; Chan et al., 2023; ...
+
+## What the Paper Changes
+
+PDF contribution framing (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 15 (B IMPLEMENTATION DETAILS)): In summary, we make the following contributions: • We introduce OOD-NVS, a new experimental protocol specifically designed to evaluate the performance of NVS methods when rendering 3D scenes from novel ...
+
+- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** To meet these needs, we propose SplatFormer, a novel learning-based feed-forward 3D transformer designed to operate on Gaussian splats.
+- **p. 2 / 1 INTRODUCTION - extractive PDF cue:** Existing NVS methods, including MipNeRF360 (Barron et al., 2022), and those designed for sparse inputs like LaRa (Chen et al., 2024a), face challenges in this ...
+- **p. 3 / 1 INTRODUCTION - extractive PDF cue:** Our results demonstrate that existing methods struggle to generalize under the OOD-NVS protocol; • We propose SplatFormer, a novel learning-based model that refines flawed 3D ...
+- **p. 15 / B IMPLEMENTATION DETAILS - extractive PDF cue:** Each MLP branch consists of four linear layers, with hidden dimensions of 512 and ReLU activations for all but the last layer.
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 10 | In this work, we introduced a new out-of-distribution (OOD) novel view synthesis test scenario and demonstrated that most ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 10 | Our method has several limitations that provide directions for future work. | reported limitation/failure wording; scope must be verified |
+| body cue at p. 5 | Figure 2: Limitations of 3DGS in OOD-NVS setup. We observe that the quality of novel views obtained via ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 8 | Finally, we discuss the limitations of our approach and potential directions for future research. | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 16 (B IMPLEMENTATION DETAILS). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), interface p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 16 (B IMPLEMENTATION DETAILS), objective p. 16 (B IMPLEMENTATION DETAILS).
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

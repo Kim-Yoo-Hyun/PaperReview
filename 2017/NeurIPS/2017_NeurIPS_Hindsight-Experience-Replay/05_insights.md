@@ -1,36 +1,75 @@
-# Insights
+# Insights — Hindsight Experience Replay
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: Our approach is based on training universal policies (Schaul et al., 2015a) which take as input not only the current state, but also a goal state.
-- 출발 문제 단서: Reinforcement learning (RL) combined with neural networks has recently led to a wide range of successes in learning policies for sequential decision-making problems.
-- 주장된 효과 단서: 4.6 we show the results of the experiments on the physical robot.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1707.01495; PDF retrieval source: https://arxiv.org/pdf/1707.01495. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- 논문이 제안한 representation/method를 3D scene understanding과 robot decision-making 사이의 중간 표현으로 재해석할 수 있다.
-- 핵심 단서를 그대로 쓰기보다 geometry, semantics, action constraint 중 무엇을 보강해야 하는지 확인하는 출발점으로 삼는다.
+## Paper-supported conclusion
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: 4.6 we show the results of the experiments on the physical robot.
-- 논문 내 한계/논의 단서: We showed that HER allows training policies which push, slide and pick-and-place objects with a robotic arm to the specified positions while the vanilla RL algorithm fails to ...
-- 논문이 다룬 task 범위 밖의 3D consistency, robotics transfer, open-world generalization은 후속 연구 질문으로 남는다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
-## 다음 연구 질문
-- 이 방법의 핵심 representation이 3D geometry와 semantic grounding을 동시에 보존하는가?
-- 동일한 idea가 online robot perception/action setting에서도 유지되는가?
-- failure case가 data 부족, geometry mismatch, language ambiguity, policy limitation 중 어디에서 오는가?
+### What was actually new
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / success rate
-- 내 연구 확장 benchmark 후보: ScanNet, Matterport3D, nuScenes, CALVIN
-- 내 연구 확장 metric 후보: mIoU, accuracy, success rate, generalization gap
-- 검증 초점: paper task 성능과 3D/robotics downstream utility를 함께 확인한다.
+- **p. 2 / 1 Introduction - extractive body cue:** In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can ...
+- **p. 1 / Abstract - extractive body cue:** We present a novel technique called Hindsight Experience Replay which allows sample-efficient learning from rewards which are sparse and binary and therefore avoid the need ...
+- **p. 4 / 2 Background - extractive body cue:** In order to solve this problem we introduce the technique of Hindsight Experience Replay which is the crux of our approach.
+- **p. 2 / 2 Background - extractive body cue:** In this section we introduce reinforcement learning formalism used in the paper as well as RL algorithms we use in our experiments.
+- **p. 3 / 2 Background - extractive body cue:** Instead of shaping the reward we propose a different solution which does not require any domain knowledge.
+- **p. 4 / 2 Background - extractive body cue:** Notice that the goal being pursued influences the agent's actions but not the environment dynamics and therefore we can replay each trajectory with an arbitrary ...
+- **p. 3 / 2 Background - extractive body cue:** 2.3 Deep Deterministic Policy Gradients (DDPG) Deep Deterministic Policy Gradients (DDPG) (Lillicrap et al., 2015) is a model-free RL algorithm for continuous action spaces.
+- **Contribution anchor:** p. 2 (1 Introduction), p. 1 (Abstract), p. 4 (2 Background), p. 2 (2 Background), p. 3 (2 Background), p. 4 (2 Background)
 
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+### Strongest assumption and failure boundary
 
-## 근거가 되는 논문 단서
-- Problem cue: Reinforcement learning (RL) combined with neural networks has recently led to a wide range of successes in learning policies for sequential decision-making problems.
-- Method cue: Our approach is based on training universal policies (Schaul et al., 2015a) which take as input not only the current state, but also a goal state.
-- Result cue: 4.6 we show the results of the experiments on the physical robot.
+- **p. 5 / 2 Background - extractive body cue:** These results are indicative of the practical challenges with reward shaping, and that shaped rewards would often constitute a compromise on the metric we truly ...
+- **p. 1 / 1 Introduction - extractive body cue:** However, a common challenge, especially for robotics, is the need to engineer a reward function that not only reflects the task at hand but is ...
+- **p. 3 / 2 Background - extractive body cue:** While using a shaped reward solves the problem in our toy environment, it may be difficult to apply to more complicated problems.
+- **p. 3 / 2 Background - extractive body cue:** VIME (Houthooft et al., 2016), count-based exploration (Ostrovski et al., 2017) or bootstrapped DQN (Osband et al., 2016)) does not help here because the real ...
+- **p. 1 / 1 Introduction - extractive body cue:** Reinforcement learning (RL) combined with neural networks has recently led to a wide range of successes in learning policies for sequential decision-making problems.
+- **p. 6 / 4 Experiments - extractive body cue:** In this task a puck is placed on a long slippery table and the target position is outside of the robot's reach so that it ...
+- **p. 10 / 5 Related work - extractive body cue:** It does not have to be robust to noisy observations because it is not used during the deployment on the physical robot.
+- **Boundary to test:** In this task a puck is placed on a long slippery table and the target position is outside of the robot's reach so that it has to hit the puck with such ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can be combined with any off-policy RL algorithm. | p. 2 (1 Introduction), p. 1 (Abstract) |
+| Reported outcome | 4.3 we check if HER improves performance in the single-goal setup. | p. 5 (4 Experiments), p. 7 (4 Experiments) |
+| Failure/limitation | In this task a puck is placed on a long slippery table and the target position is outside of the robot's reach so that it has to hit the puck with such ... | p. 6 (4 Experiments), p. 10 (5 Related work) |
+
+## Researcher interpretation
+
+### Reusable lesson in the robotics loop
+
+- **Closed-loop position:** `state 또는 observation, action, reward와 transition history → policy/value state와 action-selection variable → action policy와 induced trajectory`.
+- 이 논문의 재사용 가능한 지점은 A deterministic policy is a mapping from states to actions: π : S →A.를 (2015a) show that in this setup it is possible to train an approximator to the Q-function using direct bootstrapping from the Bellman equation (just like in case of DQN) and that a ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 policy/value state와 action-selection variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In this task a puck is placed on a long slippery table and the target position is outside of the robot's reach so that it has to hit the puck with such ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can be combined with any off-policy RL algorithm.
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+
+### Dependency and evolution
+
+- **Registry position:** `NEXT` in `RL, IL, offline learning, and robot data`; tags: `Robotics, Reinforcement Learning, goal-conditioned RL, sparse rewards`.
+- **Reading predecessor in the generated track queue:** Addressing Function Approximation Error in Actor-Critic Methods (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** Constrained Policy Optimization (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** In this task a puck is placed on a long slippery table and the target position is outside of the robot's reach so that it has to hit the puck with such ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
+
+### Minimal reproduction
+
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: We decided to use manipulation environments based on an existing hardware robot to ensure that the challenges we face correspond as closely as possible to the real world..
+3. Compare against the body-reported baseline or a matched simpler baseline: 4.2 we compare the performance of DDPG with and without HER..
+4. Report the body metric and its denominator/aggregation: 0 50 100 150 200 0% 20% 40% 60% 80% 100% success rate pushing DDPG DDPG+HER 0 50 100 150 200 epoch number (every epoch = 800 episodes = 800x50 timesteps) 0% ....
+5. Re-run the body-reported ablation/failure condition: In this section we check how the performance of DDPG with and without HER changes if we replace this reward with one which is shaped..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 4 (2 Background), p. 2 (2 Background), p. 2 (1 Introduction); the primary result is directionally consistent at p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments); and the failure boundary is measured rather than omitted.
+
+## Falsifiable research question
+
+고정된 observation/action/data/compute budget에서 introduce, technique, called mechanism이 4.2 we compare the performance of DDPG with and without HER. 대비 0 50 100 150 200 0% 20% 40% 60% 80% 100% success rate pushing DDPG DDPG+HER 0 50 ...을 개선하고, In this task a puck is placed on a long slippery table and the target position ... 조건에서도 closed-loop failure를 늘리지 않는가?
+
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

@@ -1,6 +1,6 @@
 # PaperReview — Robotics-first Literature System
 
-- Snapshot verified: 2026-08-28 KST
+- Snapshot verified: 2026-09-02 KST
 
 `PaperReview`는 3D vision, robotics, VLA를 함께 다루되 **Robotics를 주 연구축**으로 삼는 장기 문헌 연구 저장소다. 논문을 모으는 데서 끝내지 않고, foundation → 최신 방법 → failure mode → 검증 가능한 연구 질문으로 연결한다.
 
@@ -34,6 +34,8 @@ Registry의 수집·정리 범위는 다음과 같다.
 | 목적 | 문서 |
 |---|---|
 | 전체 논문 registry | [PAPER.md](./PAPER.md) |
+| machine-readable identity/provenance | [work/sources/papers.json](./work/sources/papers.json), [registry.schema.json](./work/sources/registry.schema.json), [registry_meta.json](./work/sources/registry_meta.json) |
+| benchmark/metric navigation catalog | [benchmark_catalog.json](./work/sources/benchmark_catalog.json), [metric_catalog.json](./work/sources/metric_catalog.json) |
 | 우선순위·읽기 순서·CORE/NEXT | [research/READING_PLAN.md](./research/READING_PLAN.md) |
 | 전체 tier assignment | [research/READING_TIERS.csv](./research/READING_TIERS.csv) |
 | 정독 진행 상태 | [research/READING_STATUS.csv](./research/READING_STATUS.csv), [research/READING_STATUS.md](./research/READING_STATUS.md) |
@@ -41,23 +43,23 @@ Registry의 수집·정리 범위는 다음과 같다.
 | 연구 아이디어·가설 | [research/RESEARCH_IDEAS.md](./research/RESEARCH_IDEAS.md) |
 | 실행 단계 연구 프로젝트 문서 | [RP-2 Failure Recovery](./research/projects/RP-2_FAILURE_RECOVERY.md), [RP-3 Memory Expiry](./research/projects/RP-3_MEMORY_EXPIRY.md) |
 | 계보·트랙별 synthesis | [synthesis/README.md](./synthesis/README.md) |
-| 최신 변경 기록 | [work/update/UPDATES_2026-08-28.md](./work/update/UPDATES_2026-08-28.md) |
+| 최신 변경 기록 | [work/update/UPDATES_2026-09-02.md](./work/update/UPDATES_2026-09-02.md) |
 
 ## 현재 snapshot
 
 | 항목 | 수치 |
 |---|---:|
-| 전체 registry | **872편** |
-| CORE / NEXT | **77 / 113편** |
-| REFERENCE / ARCHIVE | **449 / 233편** |
-| intensive reading set | **190편** |
-| paper당 표준 Markdown note | **4,360개** |
+| 전체 registry | **924편** |
+| CORE / NEXT | **77 / 206편** |
+| REFERENCE / ARCHIVE | **399 / 242편** |
+| intensive reading set | **283편** |
+| paper당 표준 Markdown note | **4,620개** |
 | local PDF cache | 0개 |
-| canonical category | 23개 |
+| canonical category | 24개 |
 | 대상 연도 | 1960–2026 |
-| 2024–2026 논문 | 607편 |
-| 2025–2026 논문 | 475편 |
-| 2026 논문 | 179편 |
+| 2024–2026 논문 | 659편 |
+| 2025–2026 논문 | 523편 |
+| 2026 논문 | 181편 |
 
 `CORE/NEXT`는 논문 수를 맞추기 위한 quota가 아니다. 연구의 prerequisite와 현재 연구축에 따라 중요도가 바뀔 수 있다. PDF 보유 여부는 tier, 우선순위, 연구 relevance의 기준이 아니다.
 
@@ -67,16 +69,20 @@ Registry의 수집·정리 범위는 다음과 같다.
 
 | 트랙 | CORE | NEXT | 주로 다루는 질문 |
 |---|---:|---:|---|
-| Planning, decision, control foundations | 16 | 2 | belief/state, motion planning, task-and-motion planning, feasibility, whole-body constraint |
-| RL, IL, offline learning, robot data | 20 | 21 | expert distribution, policy/value learning, offline conservatism, data coverage |
-| Manipulation, contact, tactile, dexterity | 10 | 24 | grasp/contact dynamics, force/tactile feedback, deformable and dexterous interaction |
-| VLA, cross-embodiment, long horizon | 11 | 23 | generalist policy, action interface, memory, skill composition, feedback |
-| World models, safety, uncertainty, recovery | 5 | 16 | runtime monitoring, calibration, safety filter, failure diagnosis, recovery |
-| Locomotion, whole-body, mobile manipulation, humanoid | 8 | 16 | balance, contact switching, loco-manipulation, sim-to-real, humanoid execution |
-| Robotics-enabling 3D perception | 7 | 11 | geometry, SLAM, spatial memory, active perception, 3D-to-control utility |
-| **합계** | **77** | **113** | **Robotics-first intensive reading** |
+| Planning, decision, control foundations | 16 | 8 | belief/state, motion planning, task-and-motion planning, feasibility, whole-body constraint |
+| RL, IL, offline learning, robot data | 20 | 38 | expert distribution, policy/value learning, offline conservatism, data coverage |
+| Manipulation, contact, tactile, dexterity | 10 | 41 | grasp/contact dynamics, force/tactile feedback, deformable and dexterous interaction |
+| VLA, cross-embodiment, long horizon | 11 | 46 | generalist policy, action interface, memory, skill composition, feedback |
+| World models, safety, uncertainty, recovery | 5 | 30 | runtime monitoring, calibration, safety filter, failure diagnosis, recovery |
+| Locomotion, whole-body, mobile manipulation, humanoid | 8 | 24 | balance, contact switching, loco-manipulation, sim-to-real, humanoid execution |
+| Robotics-enabling 3D perception | 7 | 19 | geometry, SLAM, spatial memory, active perception, 3D-to-control utility |
+| **합계** | **77** | **206** | **Robotics-first intensive reading** |
 
-전체 registry의 canonical category는 더 세분화되어 VLA/generalist, 3D vision-language, scene representation, embodied navigation, robot data, world models/safety, locomotion, manipulation/contact, planning/control foundation 등 23개로 관리된다. 자세한 분류는 [PAPER.md](./PAPER.md)와 [READING_TIERS.csv](./research/READING_TIERS.csv)에서 검색한다.
+전체 registry의 canonical category는 더 세분화되어 VLA/generalist, 3D vision-language, scene representation, embodied navigation, robot data, world models/safety, locomotion, manipulation/contact, planning/control foundation 등 24개로 관리된다. 자세한 분류는 [PAPER.md](./PAPER.md)와 [READING_TIERS.csv](./research/READING_TIERS.csv)에서 검색한다.
+
+2026-09-01 3D-heavy `REFERENCE` audit에서는 실제 manipulation/navigation/control에 연결된 16편을 `NEXT`로 승격했다. FastSLAM·ORB-SLAM을 포함한 state-estimation foundation은 `REFERENCE`에 유지했고, 순수 Gaussian Splatting/NeRF reconstruction·scene rendering 계열 15편은 registry에서 삭제하지 않고 `ARCHIVE`로 분리했다. 세부 근거와 대상 목록은 [2026-09-01 update log](./work/update/UPDATES_2026-09-01.md)에 기록했다.
+
+2026-09-02 robotics-first 재분류에서는 direct planning/control 2편을 `ARCHIVE→NEXT`, SLAM·world-model·generic 3D foundation 4편을 `ARCHIVE→REFERENCE`, generic 3D foundation 3편을 `NEXT→REFERENCE`로 조정하고, 최근 manipulation/VLA/navigation/world-model/whole-body 논문 26편을 `REFERENCE→NEXT`로 승격했다. 현재 snapshot은 **CORE 77 / NEXT 206 / REFERENCE 399 / ARCHIVE 242**이며, intensive reading set은 **283편**이다. 세부 대상과 provenance는 [최신 update log](./work/update/UPDATES_2026-09-02.md)에 기록했다.
 
 ### 논문이 맡는 역할
 
@@ -111,24 +117,26 @@ Registry의 수집·정리 범위는 다음과 같다.
 └── 05_insights.md
 ```
 
-- `01_overview.md`: 문제, 핵심 아이디어, interface, contribution, limitation
-- `02_problem.md`: formulation, bottleneck, 가정, closed-loop 위치
-- `03_method.md`: pipeline, objective, state/action, temporal horizon, implementation
-- `04_evaluation.md`: robot, task, data, metric, baseline, ablation, failure, 재현성
-- `05_insights.md`: 선행/후속 연결, 연구 relevance, 최소 재현과 아이디어
+- `01_overview.md`: paper별 human-readable canonical metadata와 문제, 핵심 아이디어, interface, contribution, limitation
+- `02_problem.md`: `Problem in One Sentence` → `System and Scope` → `Formal Problem Formulation` → prior bottleneck/변경점 → assumption/failure boundary → closed-loop 위치; paper metadata는 `01_overview.md`를 참조
+- `03_method.md`: method one-liner/rationale, source cues, module별 pipeline(input→operation→output→benefit→evidence), objective/update rule, variable table, observation–state–action interface, horizon/rate/memory, training-vs-inference, 04 baseline/ablation link와 reproduction checklist; metadata는 `01_overview.md`를 참조
+- `04_evaluation.md`: evaluation type/scope, experimental matrix, dataset/benchmark role, embodiment/environment, metric/success definition, baseline fairness, ablation/sensitivity, claim–evidence map, generalization/failure, statistics/efficiency/reproducibility; 반복 metadata는 `01_overview.md`를 참조
+- `05_insights.md`: paper-supported conclusion과 researcher interpretation, 선행/후속 연결, 최소 재현과 반증 가능한 질문; metadata는 `01_overview.md`를 참조
 
-새 논문은 [work/sources/papers.json](./work/sources/papers.json)을 canonical manifest로 등록한다. PDF는 선택적 local cache이며 paper inclusion이나 priority를 결정하지 않는다.
+새 논문은 [work/sources/papers.json](./work/sources/papers.json)을 canonical manifest로 등록한다. 각 record는 `paper_id`를 내부 안정 ID로 사용하고, 가능한 경우 DOI/arXiv/OpenReview identifier와 `relations`에 version/same-work 관계를 기록한다. 출판 정보(`publication`), source URL(`sources`), artifact availability(`artifacts`), canonical `primary_track`, curation rationale와 provenance를 note의 분석 내용과 분리해 저장한다. PDF는 선택적 local cache이며 paper inclusion이나 priority를 결정하지 않는다.
+
+`benchmark_catalog.json`과 `metric_catalog.json`은 `04_evaluation.md`에서 발견된 이름을 paper ID에 연결하는 탐색용 catalog다. 모든 연결은 `cue_only`이므로 dataset의 실제 role/split이나 metric의 공식 정의는 각 paper note와 원문에서 다시 확인한다.
 
 ## 논문 추가와 provenance 규칙
 
 이 저장소는 exhaustive bibliography가 아니라 **근거와 연구 연결을 보존하는 curated registry**다. 새 논문은 다음 admission checklist를 통과해야 한다.
 
-1. `PAPER.md`, `READING_TIERS.csv`, `work/sources/papers.json`에서 제목·subtitle·conference version 중복을 확인한다.
+1. `PAPER.md`, `READING_TIERS.csv`, `work/sources/papers.json`에서 제목·subtitle·conference version과 DOI/arXiv/OpenReview identifier 중복을 확인한다.
 2. 공식 proceedings, publisher, OpenReview, CVF/PMLR/RSS page 또는 저자 project page에서 title·year·venue/status를 확인한다.
 3. primary category, tags, `foundation / frontier / benchmark / dataset / safety-recovery` 역할과 registry에 추가하는 이유를 기록한다.
-4. `register_papers.py`로 5개 표준 note를 만들고, 원문을 아직 확인하지 않은 내용은 `CURATION_ONLY` 또는 `UNVERIFIED`로 둔다.
+4. `register_papers.py`로 stable `paper_id`, structured source/publication/provenance field와 5개 표준 note를 만든다. human-readable metadata는 `01_overview.md`에 한 번만 기록하고, 나머지 note는 canonical metadata pointer만 둔다. 원문을 아직 확인하지 않은 내용은 `CURATION_ONLY` 또는 `UNVERIFIED`로 둔다.
 5. CORE/NEXT를 바꿀 때는 CSV를 직접 수정하지 않고 `build_reading_tiers.py`의 canonical group을 수정한다.
-6. `normalize_taxonomy.py`, `build_reading_tiers.py`, `audit_repository.py`, `git diff --check`를 순서대로 실행한다.
+6. `normalize_taxonomy.py`, `build_reading_tiers.py`, `build_registry_catalogs.py --apply`, `audit_repository.py`, `git diff --check`를 순서대로 실행한다. schema migration은 `migrate_registry_schema.py --apply`를 사용한다.
 
 논문을 정독한 뒤에는 `05_insights.md`, `READING_STATUS.csv`, 해당 synthesis matrix, 필요하면 `RESEARCH_GAPS.md`를 함께 갱신한다. 개인 note의 해석과 paper가 직접 보고한 결과를 분리한다. 구현 단계의 연구 문서는 literature collision, exact environment/checkpoint, method contract, baseline, metric, ablation, reject rule, pre-implementation freeze를 갖춘 실행 명세로 유지한다.
 
@@ -151,7 +159,7 @@ python3 work/scripts/build_reading_tiers.py
 python3 work/scripts/audit_repository.py
 ```
 
-현재 snapshot의 상세 변경은 [work/update/UPDATES_2026-08-28.md](./work/update/UPDATES_2026-08-28.md), 운영 규칙은 [AGENTS.md](./AGENTS.md)에 기록한다.
+현재 snapshot의 상세 변경은 [work/update/UPDATES_2026-09-02.md](./work/update/UPDATES_2026-09-02.md), 운영 규칙은 [AGENTS.md](./AGENTS.md)에 기록한다.
 
 ## 공개 registry 참고
 

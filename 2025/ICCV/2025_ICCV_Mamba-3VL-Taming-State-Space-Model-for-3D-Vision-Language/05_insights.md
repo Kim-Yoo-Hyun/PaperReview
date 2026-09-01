@@ -1,35 +1,53 @@
-# Insights
+# Insights — Mamba-3VL: Taming State Space Model for 3D Vision Language Learning
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: In this paper, we propose Mamba-3VL, a pioneering 3D-VL framework to model complex intra- and inter-modality correlations and enhance spatial relation reasoning, while guaranteeing top-tier performance, high efficiency, ...
-- 출발 문제 단서: The primary challenge of these tasks lies i
-- 주장된 효과 단서: Extensive results validate Mamba-3VL trumps other competitors on seven 3D-VL benchmarks and showcases versatile potentials for challenging Embodied AI tasks.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `CURATION_ONLY`.
+> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- 3D observation을 language model이 다룰 수 있는 token/memory/query interface로 바꾸는 방식을 spatial reasoning과 embodied planning에 사용할 수 있다.
-- LLM/VLM의 commonsense를 쓰되, 3D geometry가 제공하는 metric constraint로 hallucination을 제어하는 방향이 중요하다.
+## Paper-supported conclusion
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: Extensive results validate Mamba-3VL trumps other competitors on seven 3D-VL benchmarks and showcases versatile potentials for challenging Embodied AI tasks.
-- 3D QA/reasoning 성능 이후에도 metric grounding, benchmark leakage, embodied action validation은 별도 검증이 필요하다.
+> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
 
-## 다음 연구 질문
-- LLM이 답한 spatial reasoning이 실제 3D metric relation과 일치하는지 어떻게 자동 검증할 수 있는가?
-- 3D scene token과 language token 사이 alignment를 dense annotation 없이 학습할 수 있는가?
-- reasoning output을 robot planner/action policy로 넘길 때 필요한 intermediate representation은 무엇인가?
+### What was actually new
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: ScanNet200, Habitat, ScanRefer, ReferIt3D, Nr3D / BLEU, accuracy, IoU, AP, SPL
-- 내 연구 확장 benchmark 후보: ScanNet, SQA3D, EmbodiedScan, Matterport3D
-- 내 연구 확장 metric 후보: accuracy, mIoU, grounding accuracy, task success
-- 검증 초점: 3D spatial reasoning, answer grounding, embodied task transfer를 확인한다.
+- **Method cue:** In this paper, we propose Mamba-3VL, a pioneering 3D-VL framework to model complex intra- and inter-modality correlations and enhance spatial relation reasoning, while guaranteeing top-tier performance, high efficiency, ...
+- **Problem cue:** The primary challenge of these tasks lies i
+- **Claim/result cue:** Extensive results validate Mamba-3VL trumps other competitors on seven 3D-VL benchmarks and showcases versatile potentials for challenging Embodied AI tasks.
 
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+### Strongest assumption and failure boundary
 
-## 근거가 되는 논문 단서
-- Problem cue: The primary challenge of these tasks lies i
-- Method cue: In this paper, we propose Mamba-3VL, a pioneering 3D-VL framework to model complex intra- and inter-modality correlations and enhance spatial relation reasoning, while guaranteeing top-tier performance, high efficiency, ...
-- Result cue: Extensive results validate Mamba-3VL trumps other competitors on seven 3D-VL benchmarks and showcases versatile potentials for challenging Embodied AI tasks.
+- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+
+## Researcher interpretation
+
+### Reusable lesson in the robotics loop
+
+- **Closed-loop position:** `observation/language → task decision → action/control`.
+- **Registry interface:** `3D Vision` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
+- **Prior interpretation carried forward:**
+  - 3D observation을 language model이 다룰 수 있는 token/memory/query interface로 바꾸는 방식을 spatial reasoning과 embodied planning에 사용할 수 있다.
+  - LLM/VLM의 commonsense를 쓰되, 3D geometry가 제공하는 metric constraint로 hallucination을 제어하는 방향이 중요하다.
+- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+
+### Dependency and evolution
+
+- Registry position: `3D Vision-Language Understanding`; tags: `3D Vision`.
+- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
+- Recorded scope boundary/future cue:
+  - 논문이 도달한 지점: Extensive results validate Mamba-3VL trumps other competitors on seven 3D-VL benchmarks and showcases versatile potentials for challenging Embodied AI tasks.
+  - 3D QA/reasoning 성능 이후에도 metric grounding, benchmark leakage, embodied action validation은 별도 검증이 필요하다.
+
+### Minimal reproduction
+
+- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
+  - 논문 내 evaluation 단서: ScanNet200, Habitat, ScanRefer, ReferIt3D, Nr3D / BLEU, accuracy, IoU, AP, SPL
+  - 내 연구 확장 benchmark 후보: ScanNet, SQA3D, EmbodiedScan, Matterport3D
+  - 내 연구 확장 metric 후보: accuracy, mIoU, grounding accuracy, task success
+  - 검증 초점: 3D spatial reasoning, answer grounding, embodied task transfer를 확인한다.
+- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+
+## Falsifiable research question
+
+LLM이 답한 spatial reasoning이 실제 3D metric relation과 일치하는지 어떻게 자동 검증할 수 있는가?
+
+**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.

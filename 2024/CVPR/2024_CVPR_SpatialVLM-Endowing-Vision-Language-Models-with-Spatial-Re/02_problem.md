@@ -1,17 +1,77 @@
-# Problem
+# Problem - SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities
 
-- Year/Venue: 2024 / CVPR
-- Category: 3D Vision-Language Understanding
-- Tags: Vision-Language Model, spatial reasoning, Robotics
-- Paper link: ./2024/CVPR/2024_CVPR_SpatialVLM-Endowing-Vision-Language-Models-with-Spatial-Re/paper.pdf
-- Code/Project: https://spatial-vlm.github.io/
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-01 (29 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2401.12168; PDF retrieval source: https://arxiv.org/pdf/2401.12168. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 왜 문제인가
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## Problem in One Sentence
 
-## 해결하려는 문제
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction)): Automatic data generation and augmentation techniques are one approach to deal with the data limitation problem [38, 53, 56, 66].
 
-## 선행 연구 / 배경 단서
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## PDF Body Digest
+
+- **p. 2 / 1. Introduction - extractive PDF cue:** Vision language models (VLMs) have made significant progress in recent years across a variety of tasks including image captioning, visual question answering (VQA), embodied planning, ...
+- **p. 2 / 1. Introduction - extractive PDF cue:** While VLMs are powerful general-purpose models for a wide range of tasks, most state-of-the-art VLMs still struggle with spatial reasoning, i.e. tasks that require understanding ...
+- **p. 2 / 1. Introduction - extractive PDF cue:** Spatial reasoning capabilities are useful in their own right, but also for downstream applications such as in robotics or AR.
+- **p. 2 / 1. Introduction - extractive PDF cue:** For example, a spatial reasoning-imbued VLM can be used as a better general-purpose reward annotator [54] and success detector [19].
+- **p. 2 / 1. Introduction - extractive PDF cue:** The exploration of foundation models like VLMs is often inspired by human capabilities.
+- **p. 2 / 1. Introduction - extractive PDF cue:** Automatic data generation and augmentation techniques are one approach to deal with the data limitation problem [38, 53, 56, 66].
+- **p. 2 / 1. Introduction - extractive PDF cue:** This natural proficiency in direct spatial reasoning tasks contrasts with the current limitations of VLMs and thus prevents them from accomplishing real-world tasks that requires ...
+
+## System and Scope
+
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | Automatic data generation and augmentation techniques are one approach to deal with the data limitation problem [38, 53, 56, 66]. | 3D scene/object와 robot coordinate frame | body wording is the source claim |
+| Observation / input | Direct Spatial Reasoning is defined as following, a Vision-Language Model takes as input an image I and a query Q of a ... | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF |
+| State / latent | Direct, Spatial, Reasoning, defined, following, Vision-Language, Model, takes, input, image | geometry, map, object/relationship state | notation and tensor shape require body check |
+| Output / action | SpatialVLM, Endowing, Vision-Language, Models, Spatial, Reasoning, Capabilities, Object-centric | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
+| Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
+
+## Formal Problem Formulation
+
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | image/point input I/P and pose; body terms: Direct, Spatial, Reasoning, defined, following, Vision-Language, Model, takes, input, image | p. 6 (3.3. Learning Spatial Reasoning), p. 2 (1. Introduction), p. 5 (3.1. Spatial Grounding from 2D Images) |
+| Decision / output variable | geometry/map/query r; body terms: system, called, SpatialVLM, enables, data, generation, training, VLMs | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3. SpatialVLM) |
+| Objective / loss / cost | geometric/semantic reconstruction or matching loss; cue terms: example, spatial, reasoning-imbued, VLM, better, general-purpose, reward, annotator | p. 6 (3.2. Large-Scale Spatial Reasoning VQA Dataset), p. 7 (3.3. Learning Spatial Reasoning) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (1. Introduction), p. 6 (3.2. Large-Scale Spatial Reasoning VQA Dataset), p. 7 (3.3. Learning Spatial Reasoning) |
+| Success / guarantee | spatial accuracy and downstream robot utility | p. 8 (4.1. Spatial VQA performance), p. 8 (4.1. Spatial VQA performance), p. 9 (4.1. Spatial VQA performance) |
+
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 2 / 1. Introduction - extractive PDF cue:** This natural proficiency in direct spatial reasoning tasks contrasts with the current limitations of VLMs and thus prevents them from accomplishing real-world tasks that requires ...
+
+## What the Paper Changes
+
+PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3. SpatialVLM), p. 6 (3.3. Learning Spatial Reasoning), p. 6 (3.2. Large-Scale Spatial Reasoning VQA Dataset)): To this end, we propose a system called SpatialVLM that enables data generation and training of VLMs to enhance their spatial reasoning capabilities.
+
+- **p. 2 / 1. Introduction - extractive PDF cue:** Our main contributions are: • We endow VLMs quantitative spatial reasoning capability, which is a fundamental capability of humans.
+- **p. 4 / 3. SpatialVLM - extractive PDF cue:** To equip VLMs with both qualitatively and quantitatively spatial reasoning capabilities, we propose to generate a large-scale spatial VQA dataset, which is used to train ...
+- **p. 6 / 3.3. Learning Spatial Reasoning - extractive PDF cue:** Similar to PaLM-E, our method has the ability to perform VQA as well as basic embodied planning when combined.
+- **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive PDF cue:** Finally we introduce a human-aligned rounding mechanism in Appendix A.2 to make number roundings in a human-like way.
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 9 | Additionally, we find that state-of-the-art VLM GPT-4V often refrain from generating answers about distance in SI units with ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 7 | To verify whether VLM's limitation in spatial reasoning is a data problem, we choose the following state-of-the-art VLMs ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 9 | VLM answers that fall into half to twice of the ground truth value to represent how accurate the ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 10 | We train both models for 70k steps, and evaluate percentages of answers from both models that fall into ... | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 6 (3.3. Learning Spatial Reasoning), p. 2 (1. Introduction), p. 5 (3.1. Spatial Grounding from 2D Images), p. 6 (3.2. Large-Scale Spatial Reasoning VQA Dataset). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 6 (3.3. Learning Spatial Reasoning), p. 2 (1. Introduction), p. 5 (3.1. Spatial Grounding from 2D Images), p. 6 (3.2. Large-Scale Spatial Reasoning VQA Dataset), objective p. 6 (3.2. Large-Scale Spatial Reasoning VQA Dataset), p. 7 (3.3. Learning Spatial Reasoning).
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

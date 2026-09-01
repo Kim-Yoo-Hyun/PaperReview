@@ -1,36 +1,75 @@
-# Insights
+# Insights — HWC-Loco: A Hierarchical Whole-Body Control Approach to Robust Humanoid Locomotion
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: In this study, we propose HWCLoco, a robust whole-body control algorithm tailored for humanoid locomotion tasks.
-- 출발 문제 단서: To develop a reliable locomotion policy capable of generalizing from the training to the deployment environment, we propose formulating policy optimization as a robust optimization problem under misspecified ...
-- 주장된 효과 단서: To evaluate the performance of HWC-Loco, we conduct extensive comparisons against state-of-the-art humanoid control models, demonstrating HWC-Loco’s superior performance across diverse terrains, robot structures, and locomotion tasks under ...
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://iclr.cc/virtual/2026/poster/10011640; PDF retrieval source: https://arxiv.org/pdf/2503.00923. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- 논문이 제안한 representation/method를 3D scene understanding과 robot decision-making 사이의 중간 표현으로 재해석할 수 있다.
-- 핵심 단서를 그대로 쓰기보다 geometry, semantics, action constraint 중 무엇을 보강해야 하는지 확인하는 출발점으로 삼는다.
+## Paper-supported conclusion
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: To evaluate the performance of HWC-Loco, we conduct extensive comparisons against state-of-the-art humanoid control models, demonstrating HWC-Loco’s superior performance across diverse terrains, robot structures, and locomotion tasks under ...
-- 저자가 남긴 확장 방향: A promising direction for future research is integrating HWC-Loco with loco-manipulation skills, enabling safety-critical control across a broader range of tasks involving different objects.
-- 논문이 다룬 task 범위 밖의 3D consistency, robotics transfer, open-world generalization은 후속 연구 질문으로 남는다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
-## 다음 연구 질문
-- 이 방법의 핵심 representation이 3D geometry와 semantic grounding을 동시에 보존하는가?
-- 동일한 idea가 online robot perception/action setting에서도 유지되는가?
-- failure case가 data 부족, geometry mismatch, language ambiguity, policy limitation 중 어디에서 오는가?
+### What was actually new
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / success rate
-- 내 연구 확장 benchmark 후보: ScanNet, Matterport3D, nuScenes, CALVIN
-- 내 연구 확장 metric 후보: mIoU, accuracy, success rate, generalization gap
-- 검증 초점: paper task 성능과 3D/robotics downstream utility를 함께 확인한다.
+- **p. 2 / 1 Introduction - extractive body cue:** To develop a reliable locomotion policy capable of generalizing from the training to the deployment environment, we propose formulating policy optimization as a robust optimization ...
+- **p. 2 / 1 Introduction - extractive body cue:** To address this limitation, we propose a high-level planning policy that dynamically selects which policy to activate based on the scenario.
+- **p. 15 / A.2 Implementation Details - extractive body cue:** To address this, we introduce a terrain curriculum method [63].
+- **p. 15 / A.2 Implementation Details - extractive body cue:** The training terrain consists of various types, including flat planes, rough surfaces, steps, and slopes.
+- **p. 17 / A.2 Implementation Details - extractive body cue:** To further promote stable posture restoration and enable smooth transitions back to the goal-tracking policy, we introduce an additional stand reward, defined as: rstand = ...
+- **p. 15 / A.2 Implementation Details - extractive body cue:** Action Space: The policy outputs continuous actions at ∈Rn, which are utilized as target positions for a PD controller to compute joint torques.
+- **p. 16 / A.2 Implementation Details - extractive body cue:** During training, two trained low-level policies are loaded and rolled out to generate training data for optimizing the high-level policy.
+- **Contribution anchor:** p. 2 (1 Introduction), p. 2 (1 Introduction), p. 15 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 17 (A.2 Implementation Details), p. 15 (A.2 Implementation Details)
 
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+### Strongest assumption and failure boundary
 
-## 근거가 되는 논문 단서
-- Problem cue: To develop a reliable locomotion policy capable of generalizing from the training to the deployment environment, we propose formulating policy optimization as a robust optimization problem under misspecified ...
-- Method cue: In this study, we propose HWCLoco, a robust whole-body control algorithm tailored for humanoid locomotion tasks.
-- Result cue: To evaluate the performance of HWC-Loco, we conduct extensive comparisons against state-of-the-art humanoid control models, demonstrating HWC-Loco’s superior performance across diverse terrains, robot structures, and locomotion tasks under ...
+- **p. 2 / 1 Introduction - extractive body cue:** However, excessive regularization can greatly affect the efficiency of control policy, and unstructured randomization often fails to capture safety-critical patterns in real-world applications.
+- **p. 1 / 1 Introduction - extractive body cue:** These limitations significantly influence the scalability of these approaches.
+- **p. 2 / 1 Introduction - extractive body cue:** To address this limitation, we propose a high-level planning policy that dynamically selects which policy to activate based on the scenario.
+- **p. 7 / 5 Experiment - extractive body cue:** To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to ...
+- **p. 21 / Figure/Table caption - extractive body cue:** Figure 10: Climb Stairs Test. The blue segments indicate the activation of the goal-tracking policy, while the orange segments correspond to the safety recovery policy. ...
+- **p. 23 / Figure/Table caption - extractive body cue:** Figure 13: Robustness in Outdoor Settings: The robot responds to external disturbances in an outdoor environment by waving its arms and adjusting its gaits to ...
+- **p. 9 / 5 Experiment - extractive body cue:** 6 Limitation Our approach has three main limitations.
+- **Boundary to test:** To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing the sensitivity ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | To develop a reliable locomotion policy capable of generalizing from the training to the deployment environment, we propose formulating policy optimization as a robust optimization problem under misspecified environmental dynamics. | p. 2 (1 Introduction), p. 2 (1 Introduction) |
+| Reported outcome | Figure 9: Extreme State: Policy's state distribution in the extreme cases A.8 History Length Experiments We investigate the impact of observation history length on HWC-Loco's performance. Setting H = 10 achieves the ... | p. 20 (Figure/Table caption), p. 8 (5 Experiment) |
+| Failure/limitation | To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing the sensitivity ... | p. 7 (5 Experiment), p. 21 (Figure/Table caption) |
+
+## Researcher interpretation
+
+### Reusable lesson in the robotics loop
+
+- **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
+- 이 논문의 재사용 가능한 지점은 For the High-level policy, the input is the same set of observations as used by the low-level policies, with the output being a two-dimensional Q-value.를 Action Space: The policy outputs continuous actions at ∈Rn, which are utilized as target positions for a PD controller to compute joint torques.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing the sensitivity ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: To develop a reliable locomotion policy capable of generalizing from the training to the deployment environment, we propose formulating policy optimization as a robust optimization problem under misspecified environmental dynamics.
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+
+### Dependency and evolution
+
+- **Registry position:** `NEXT` in `Locomotion, whole-body, mobile manipulation, and humanoids`; tags: `Robotics, humanoid, whole-body control, robust locomotion, safety recovery`.
+- **Reading predecessor in the generated track queue:** Demonstrating OK-Robot: What Really Matters in Integrating Open-Knowledge Models for Robotics (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** VIRAL: Visual Sim-to-Real at Scale for Humanoid Loco-Manipulation (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing the sensitivity ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
+
+### Minimal reproduction
+
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: Second, the humanoid robot used in real-world deployment has only 19 degrees of freedom, which limits whole-body coordination and constrains the expression of complex recovery behaviors..
+3. Compare against the body-reported baseline or a matched simpler baseline: HWC-Loco reaches a success rate of 81.27%, outperforming all baselines by a significant margin..
+4. Report the body metric and its denominator/aggregation: Figure 9: Extreme State: Policy's state distribution in the extreme cases A.8 History Length Experiments We investigate the impact of observation history length on HWC-Loco's performance. Setting H = 10 achieves the ....
+5. Re-run the body-reported ablation/failure condition: To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to a lower value, thereby reducing the sensitivity ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 15 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 17 (A.2 Implementation Details); the primary result is directionally consistent at p. 20 (Figure/Table caption), p. 8 (5 Experiment), p. 8 (5 Experiment); and the failure boundary is measured rather than omitted.
+
+## Falsifiable research question
+
+고정된 observation/action/data/compute budget에서 develop, reliable, locomotion mechanism이 HWC-Loco reaches a success rate of 81.27%, outperforming all baselines by a significant margin. 대비 Figure 9: Extreme State: Policy's state distribution in the extreme cases A.8 History Length Experiments We investigate the ...을 개선하고, To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ... 조건에서도 closed-loop failure를 늘리지 않는가?
+
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

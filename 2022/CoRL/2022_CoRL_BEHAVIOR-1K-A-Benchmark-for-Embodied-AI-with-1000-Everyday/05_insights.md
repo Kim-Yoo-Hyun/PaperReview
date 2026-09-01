@@ -1,35 +1,53 @@
-# Insights
+# Insights — BEHAVIOR-1K: A Benchmark for Embodied AI with 1,000 Everyday Activities and Realistic Simulation
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: : We present BEHAVIOR-1K, a comprehensive simulation benchmark for human-centered robotics.
-- 출발 문제 단서: The most needed activities indicated by the survey range from ‘wash floor’ to ‘clean bathtub.’ Clearly, the diversity of these activities is far beyond what real-world robotics challenges ...
-- 주장된 효과 단서: Our experiments indicate that the activities in BEHAVIOR-1K are long-horizon and dependent on complex manipulation skills, both of which remain a challenge for even state-of-the-art robot learning solutions.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `CURATION_ONLY`.
+> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-08-11; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- Language/semantic goal을 metric 3D map, BEV, scene graph, frontier/map memory와 연결해 navigation state representation으로 사용할 수 있다.
-- Navigation의 핵심 병목을 visual-language matching만이 아니라 spatial memory, localization, graph planning 문제로 재정의할 수 있다.
+## Paper-supported conclusion
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: Our experiments indicate that the activities in BEHAVIOR-1K are long-horizon and dependent on complex manipulation skills, both of which remain a challenge for even state-of-the-art robot learning solutions.
-- navigation 성능을 보인 뒤에도 geometry-aware memory의 누적 오류, unseen scene transfer, semantic grounding failure는 후속 연구 지점으로 남는다.
+> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
 
-## 다음 연구 질문
-- 3D map/scene graph/gaussian map 중 어떤 representation이 language/semantic goal following에 가장 안정적인가?
-- semantic goal grounding과 metric path planning을 분리해야 하는가, 아니면 end-to-end로 결합해야 하는가?
-- online exploration 중 잘못된 language grounding을 어떻게 감지하고 수정할 수 있는가?
+### What was actually new
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: Habitat, HM3D, AI2-THOR, ManiSkill / mAP, success rate
-- 내 연구 확장 benchmark 후보: R2R, RxR, VLN-CE, Habitat
-- 내 연구 확장 metric 후보: SR, SPL, nDTW, collision
-- 검증 초점: instruction/semantic goal following, path efficiency, unseen environment generalization, online correction을 확인한다.
+- **Method cue:** : We present BEHAVIOR-1K, a comprehensive simulation benchmark for human-centered robotics.
+- **Problem cue:** The most needed activities indicated by the survey range from ‘wash floor’ to ‘clean bathtub.’ Clearly, the diversity of these activities is far beyond what real-world robotics challenges ...
+- **Claim/result cue:** Our experiments indicate that the activities in BEHAVIOR-1K are long-horizon and dependent on complex manipulation skills, both of which remain a challenge for even state-of-the-art robot learning solutions.
 
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+### Strongest assumption and failure boundary
 
-## 근거가 되는 논문 단서
-- Problem cue: The most needed activities indicated by the survey range from ‘wash floor’ to ‘clean bathtub.’ Clearly, the diversity of these activities is far beyond what real-world robotics challenges ...
-- Method cue: : We present BEHAVIOR-1K, a comprehensive simulation benchmark for human-centered robotics.
-- Result cue: Our experiments indicate that the activities in BEHAVIOR-1K are long-horizon and dependent on complex manipulation skills, both of which remain a challenge for even state-of-the-art robot learning solutions.
+- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+
+## Researcher interpretation
+
+### Reusable lesson in the robotics loop
+
+- **Closed-loop position:** `data/evaluation → policy/control comparison`.
+- **Registry interface:** `Robotics, Benchmark, Embodied AI, long-horizon tasks, simulation` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
+- **Prior interpretation carried forward:**
+  - Language/semantic goal을 metric 3D map, BEV, scene graph, frontier/map memory와 연결해 navigation state representation으로 사용할 수 있다.
+  - Navigation의 핵심 병목을 visual-language matching만이 아니라 spatial memory, localization, graph planning 문제로 재정의할 수 있다.
+- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+
+### Dependency and evolution
+
+- Registry position: `Robot Learning and Data`; tags: `Robotics, Benchmark, Embodied AI, long-horizon tasks, simulation`.
+- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
+- Recorded scope boundary/future cue:
+  - 논문이 도달한 지점: Our experiments indicate that the activities in BEHAVIOR-1K are long-horizon and dependent on complex manipulation skills, both of which remain a challenge for even state-of-the-art robot learning solutions.
+  - navigation 성능을 보인 뒤에도 geometry-aware memory의 누적 오류, unseen scene transfer, semantic grounding failure는 후속 연구 지점으로 남는다.
+
+### Minimal reproduction
+
+- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
+  - 논문 내 evaluation 단서: Habitat, HM3D, AI2-THOR, ManiSkill / mAP, success rate
+  - 내 연구 확장 benchmark 후보: R2R, RxR, VLN-CE, Habitat
+  - 내 연구 확장 metric 후보: SR, SPL, nDTW, collision
+  - 검증 초점: instruction/semantic goal following, path efficiency, unseen environment generalization, online correction을 확인한다.
+- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+
+## Falsifiable research question
+
+3D map/scene graph/gaussian map 중 어떤 representation이 language/semantic goal following에 가장 안정적인가?
+
+**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.

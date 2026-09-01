@@ -1,21 +1,78 @@
-# Problem
+# Problem - TokenSplat: Token-aligned 3D Gaussian Splatting for Feed-forward Pose-free Reconstruction
 
-- Year/Venue: 2026 / CVPR
-- Category: Neural Scene Representations
-- Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision
-- Paper link: ./2026/CVPR/2026_CVPR_TokenSplat-Token-aligned-3D-Gaussian-Splatting-for-Feed-fo/paper.pdf
-- Code/Project: not identified
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 왜 문제인가
-- Furthermore, most existing pose-free methods rely on pixel-aligned 3DGS heads that generate Gaussians at pixellevel gra
-- Pose estimation via structurefrom-motion (SfM) is computationally expensive and prone to failure in challenging environments, significantly impacting reconstruction stability.
-- However, these approaches typically entangle scene content and viewpoint cues in the same feature embeddings, making it difficult to disentangle camera parameters from scene content and causing pose ...
+## Problem in One Sentence
 
-## 해결하려는 문제
-- Extensive experiments demonstrate that TokenSplat achieves higher reconstruction fidelity and novel-view synthesis quality in pose-free settings, and significantly improves pose estimation accuracy compared to prior pose-free methods.
-- We present TokenSplat, a feed-forward framework for joint 3D Gaussian reconstruction and camera pose estimation from unposed multi-view images.
-- Furthermore, most existing pose-free methods rely on pixel-aligned 3DGS heads that generate Gaussians at pixellevel gra
+PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction)): However, these approaches typically entangle scene content and viewpoint cues in the same feature embeddings, making it difficult to disentangle camera parameters from scene content and causing pose errors to ...
 
-## 선행 연구 / 배경 단서
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## PDF Body Digest
+
+- **p. 1 / Abstract - extractive PDF cue:** We present TokenSplat, a feed-forward framework for joint 3D Gaussian reconstruction and camera pose estimation from unposed multi-view images.
+- **p. 1 / Abstract - extractive PDF cue:** At its core, TokenSplat introduces a Token-aligned Gaussian Prediction module that aligns semantically corresponding information across views directly in the feature space.
+- **p. 1 / Abstract - extractive PDF cue:** Guided by coarse token positions and fusion confidence, it aggregates multiscale contextual features to enable long-range cross-view reasoning and reduce redundancy from overlapping Gaussians.
+- **p. 1 / Abstract - extractive PDF cue:** To further enhance pose robustness and disentangle viewpoint cues from scene semantics, TokenSplat employs learnable camera tokens and an Asymmetric Dual-Flow Decoder (ADF-Decoder) that enforces ...
+- **p. 1 / Abstract - extractive PDF cue:** This maintains clean factorization within a feed-forward architecture, enabling coherent reconstruction and stable pose estimation without iterative refinement.
+- **p. 1 / 1. Introduction - extractive PDF cue:** However, these approaches typically entangle scene content and viewpoint cues in the same feature embeddings, making it difficult to disentangle camera parameters from scene content ...
+- **p. 1 / 1. Introduction - extractive PDF cue:** Despite this progress, most existing 3DGS-based reconstruction pipelines [3, 6, 21, 22, 25, 26, 45] rely on per-scene optimization, which restricts their *Corresponding author scalability ...
+
+## System and Scope
+
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | However, these approaches typically entangle scene content and viewpoint cues in the same feature embeddings, making it difficult to disentangle camera parameters ... | 3D scene/object와 robot coordinate frame | body wording is the source claim |
+| Observation / input | For camera pose estimation, the network predicts per-view poses Pi that transform each input image Ii into the canonical reference view I1. | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF |
+| State / latent | camera, pose, estimation, network, predicts, per-view, poses, transform, input, image | geometry, map, object/relationship state | notation and tensor shape require body check |
+| Output / action | input, view, first, encoded, image, tokens, shared, ViT | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
+| Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
+
+## Formal Problem Formulation
+
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | image/point input I/P and pose; body terms: camera, pose, estimation, network, predicts, per-view, poses, transform, input, image | p. 3 (3.1. Problem Formulation), p. 1 (1. Introduction), p. 3 (3.2. Architecture) |
+| Decision / output variable | geometry/map/query r; body terms: summary, main, contributions, follows, TokenSplat, feed-forward, pose-free, reconstruction | p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction) |
+| Objective / loss / cost | geometric/semantic reconstruction or matching loss; cue terms: overall, camera, pose, loss, Lpose, LMSE, Lalign, model | p. 5 (3.6. Loss Functions), p. 5 (3.6. Loss Functions), p. 3 (3.3. Asymmetric Dual-Flow Decoder), p. 4 (3.3. Asymmetric Dual-Flow Decoder) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (3.3. Asymmetric Dual-Flow Decoder), p. 4 (3.3. Asymmetric Dual-Flow Decoder), p. 4 (3.4. Token Fusion for Scene Reconstruction) |
+| Success / guarantee | spatial accuracy and downstream robot utility | p. 5 (4.1. Experimental Settings), p. 6 (4.2. Experimental Results), p. 5 (4.1. Experimental Settings) |
+
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 1 / 1. Introduction - extractive PDF cue:** Despite this progress, most existing 3DGS-based reconstruction pipelines [3, 6, 21, 22, 25, 26, 45] rely on per-scene optimization, which restricts their *Corresponding author scalability ...
+- **p. 2 / 1. Introduction - extractive PDF cue:** In summary, our main contributions are as follows: • We propose TokenSplat, a feed-forward pose-free reconstruction framework that jointly estimates camera poses and 3D Gaussian ...
+
+## What the Paper Changes
+
+PDF contribution framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.2. Architecture), p. 4 (3.3. Asymmetric Dual-Flow Decoder)): In summary, our main contributions are as follows: • We propose TokenSplat, a feed-forward pose-free reconstruction framework that jointly estimates camera poses and 3D Gaussian scenes from unposed multi-view images, ...
+
+- **p. 1 / 1. Introduction - extractive PDF cue:** To address these challenges, we propose TokenSplat, a feed-forward 3D Gaussian splatting framework that reconstructs 3D scenes from an arbitrary number of unposed images while ...
+- **p. 2 / 1. Introduction - extractive PDF cue:** To jointly optimize 3D reconstruction and camera pose estimation within a feed-forward architecture, we introduce learnable camera tokens and an Asymmetric DualFlow Decoder (ADF-Decoder) that ...
+- **p. 3 / 3.2. Architecture - extractive PDF cue:** 1, our method is a Transformer-based architecture for feed-forward 3D reconstruction from unposed images.
+- **p. 4 / 3.3. Asymmetric Dual-Flow Decoder - extractive PDF cue:** The ADF-Decoder consists of 12 decoder blocks.
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 8 | It yields consistent accuracy improvements and robust zero-shot generalization across diverse datasets. | reported limitation/failure wording; scope must be verified |
+| body cue at p. 5 | Despite the difference in view counts, TokenSplat maintains stable reconstruction quality, while competing methods, including AnySplat, which fuses ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 6 | FreeSplat generates numerous scattered Gaussians, while NoPoSplat and SPFSplat show poor scalability and fail to generalize to unseen ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 6 | On ScanNet, the model maintains accurate pose estimation under the 28-view setting, reducing ATE by 0.018 over AnySplat, ... | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (3.1. Problem Formulation), p. 1 (1. Introduction), p. 3 (3.2. Architecture), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 3 (3.1. Problem Formulation), p. 1 (1. Introduction), p. 3 (3.2. Architecture), p. 2 (1. Introduction), objective p. 5 (3.6. Loss Functions), p. 5 (3.6. Loss Functions), p. 3 (3.3. Asymmetric Dual-Flow Decoder), p. 4 (3.3. Asymmetric Dual-Flow Decoder).
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

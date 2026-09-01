@@ -1,21 +1,79 @@
-# Problem
+# Problem - Egocentric Action-aware Inertial Localization in Point Clouds with Vision-Language Guidance
 
-- Year/Venue: 2025 / ICCV
-- Category: 3D Vision-Language Understanding
-- Tags: Vision-Language Model
-- Paper link: ./2025/ICCV/2025_ICCV_Egocentric-Action-aware-Inertial-Localization-in-Point-Clo/paper.pdf
-- Code/Project: not identified
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 왜 문제인가
-- Localization: Acceleration This paper presents a novel inertial localization framework named Egocentric Action-aware Inertial Localization (EAIL), which leverages egocentric action cues from headmounted IMU signals to localize the ...
-- Human inertial localization is challenging due to IMU sensor noise that causes trajectory drift over time.
-- The diversity of human actions further complicates IMU signal processing by introducing various motion patterns.
+## Problem in One Sentence
 
-## 해결하려는 문제
-- Extensive experiments demonstrate the effectiveness of the proposed framework over state-of-the-art inertial localization and inertial action recognition baselines.
-- By assuming that the 3D point cloud of the environment is available, it contrastively learns modality encoders that align short-term egocentric action cues in IMU signals with local ...
-- The learned encoders are then used in reasoning the IMU data and the point cloud over time and space to perform inertial localization.
+PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Problem Setting)): The other challenge lies in the complexity of human actions.
 
-## 선행 연구 / 배경 단서
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## PDF Body Digest
+
+- **p. 1 / Abstract - extractive PDF cue:** This paper presents a novel inertial localization framework named Egocentric Action-aware Inertial Localization (EAIL), which leverages egocentric action cues from headmounted IMU signals to localize ...
+- **p. 1 / Abstract - extractive PDF cue:** Human inertial localization is challenging due to IMU sensor noise that causes trajectory drift over time.
+- **p. 1 / Abstract - extractive PDF cue:** The diversity of human actions further complicates IMU signal processing by introducing various motion patterns.
+- **p. 1 / Abstract - extractive PDF cue:** Nevertheless, we observe that some actions captured by the head-mounted IMU correlate with spatial environmental structures (e.g., bending down to look inside an oven, washing ...
+- **p. 1 / Abstract - extractive PDF cue:** The proposed EAIL framework learns such correlations via hierarchical multi-modal alignment with vision-language guidance.
+- **p. 1 / 1. Introduction - extractive PDF cue:** The other challenge lies in the complexity of human actions.
+- **p. 2 / 1. Introduction - extractive PDF cue:** motion signals can complicate IMU signal processing and make inertial localization further difficult.
+
+## System and Scope
+
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | The other challenge lies in the complexity of human actions. | 3D scene/object와 robot coordinate frame | body wording is the source claim |
+| Observation / input | In summary, our main contributions are as follows: • We introduce EAIL, a novel inertial localization framework that leverages egocentric action cues ... | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF |
+| State / latent | summary, main, contributions, follows, introduce, EAIL, novel, inertial, localization, framework | geometry, map, object/relationship state | notation and tensor shape require body check |
+| Output / action | EAIL, Action, Recognition, Washing, dishes, Stir-frying, Stove, Localization | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
+| Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
+
+## Formal Problem Formulation
+
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | image/point input I/P and pose; body terms: summary, main, contributions, follows, introduce, EAIL, novel, inertial, localization, framework | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction) |
+| Decision / output variable | geometry/map/query r; body terms: summary, main, contributions, follows, introduce, EAIL, novel, inertial | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction) |
+| Objective / loss / cost | geometric/semantic reconstruction or matching loss; cue terms: training, supervised, cross-entropy, loss, Finally, multi-layer, perceptron, maps | p. 5 (4.2.2. Location-aware action recognition) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (4.2.2. Location-aware action recognition), p. 5 (4.2.2. Location-aware action recognition) |
+| Success / guarantee | spatial accuracy and downstream robot utility | p. 6 (5.2. Inertial Localization Results), p. 5 (5.1. Experimental Setup), p. 5 (5.1. Experimental Setup) |
+
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 2 / 1. Introduction - extractive PDF cue:** motion signals can complicate IMU signal processing and make inertial localization further difficult.
+- **p. 2 / 1. Introduction - extractive PDF cue:** Nevertheless, we argue that human actions can rather act as a salient locational cue to mitigate the trajectory drift challenge if properly taken into account.
+- **p. 1 / 1. Introduction - extractive PDF cue:** Conventional step detection methods [3, 64] struggle to generalize to the noise of irregular movements, while recent data-driven approaches [22, 37, 54, 66], which predict ...
+- **p. 3 / 3. Problem Setting - extractive PDF cue:** Note that this problem setup is different from existing inertial navigation (e.g., [22]) and inertial localization [24].
+
+## What the Paper Changes
+
+PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Problem Setting)): In summary, our main contributions are as follows: • We introduce EAIL, a novel inertial localization framework that leverages egocentric action cues from headmounted IMU signals to localize target individuals ...
+
+- **p. 2 / 1. Introduction - extractive PDF cue:** In this work, we present a novel framework named Egocentric Action-aware Inertial Localization (EAIL; see also Fig.
+- **p. 1 / 1. Introduction - extractive PDF cue:** Compared to vision-based localization methods [28, 39], inertial localization enables user tracking in an energy-efficient and privacy-preserving manner.
+- **p. 3 / 3. Problem Setting - extractive PDF cue:** In contrast, our approach incorporates the 3D point cloud P, enabling localization without requiring environment-specific training.
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 7 | Furthermore, even in scenarios where action caption annotations are unavailable in the training set, our method does not ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 8 | While our method can robustly exploit head-mounted IMU signals for human localization within pre-built point clouds, it does ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 8 | Finally, our experiments are based on IMU data from head-mounted devices, and substantially different sensor placements (e.g., ankle ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 6 | Nevertheless, its lack of spatial awareness still leads to reduced accuracy, whereas our approach leverages point cloud structures ... | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Problem Setting), interface p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), objective p. 5 (4.2.2. Location-aware action recognition).
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

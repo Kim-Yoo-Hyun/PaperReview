@@ -1,35 +1,75 @@
-# Insights
+# Insights — Inner Monologue: Embodied Reasoning through Planning with Language Models
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: We propose that by leveraging environment feedback, LLMs are able to form an inner monologue that allows them to more richly process and plan in robotic control scenarios.
-- 출발 문제 단서: This raises an intriguing possibility: beyond their ability to interpret natural language instructions, can language models further serve as reasoning models that combine multiple sources of feedback and ...
-- 주장된 효과 단서: Below, we show results for a tabletop manipulation environment in sim (Sec 4.1) and real (Sec 4.2) as well as a mobile manipulation environment in real (Sec 4.3).
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v205/huang23c.html; PDF retrieval source: https://arxiv.org/pdf/2207.05608. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- Attention 기반 token interaction을 3D object, scene, map, trajectory token 사이의 long-range relation modeling에 사용할 수 있다.
-- Sequence modeling의 병렬화/장거리 의존성 처리를 embodied memory, planning history, multi-view observation aggregation으로 확장할 수 있다.
+## Paper-supported conclusion
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: Below, we show results for a tabletop manipulation environment in sim (Sec 4.1) and real (Sec 4.2) as well as a mobile manipulation environment in real (Sec 4.3).
-- 원 논문이 sequence/language task에서 보인 구조는 metric 3D geometry, SE(3) consistency, sensor noise, robot execution constraint를 직접 다루지 않는다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
-## 다음 연구 질문
-- 3D point/object/map/action token에 attention을 적용할 때 어떤 positional encoding이 metric geometry를 보존하는가?
-- long-horizon embodied task에서 full attention, sparse attention, graph attention 중 무엇이 memory와 planning에 유리한가?
-- language reasoning token과 3D geometry token을 어떤 intermediate representation으로 정렬해야 hallucination을 줄일 수 있는가?
+### What was actually new
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / mAP, success rate
-- 내 연구 확장 benchmark 후보: ScanNet, Matterport3D, R2R, CALVIN
-- 내 연구 확장 metric 후보: accuracy, mIoU, SR, success rate
-- 검증 초점: 3D relation reasoning, spatial memory, language-conditioned planning 성능을 확인한다.
+- **p. 1 / 1 Introduction - extractive body cue:** Inspired by the human thought process, we propose that such an inner monologue is a natural framework for incorporating feedback for LLMs.
+- **p. 2 / 1 Introduction - extractive body cue:** Robot Success Detector Scene Descriptor (b) (c) (a) Human Figure 1: Inner Monologue enables grounded closed-loop feedback for robot planning with large language models by ...
+- **p. 17 / A.2 Inner Monologue for Real-World Tabletop Rearrangement - extractive body cue:** The input to the model consists of: (1) o0, the initial image observation, (2) of, the final image observation after the policy chose to terminate ...
+- **p. 2 / 1 Introduction - extractive body cue:** Notably, we show that it can efficiently retry under observed stochastic failure, replan under systematic infeasibility, or request human feedback for ambiguous queries, resulting in ...
+- **p. 1 / 1 Introduction - extractive body cue:** We observe that similarly to recent work [19], natural language provides a universal and interpretable interface for such grounding of model communication and allows them ...
+- **p. 16 / A.2 Inner Monologue for Real-World Tabletop Rearrangement - extractive body cue:** Low-level Policies We use a single low-level policy for the real tabletop rearrangement environment that is responsible for performing object-centric pick and place actions as ...
+- **p. 17 / A.2 Inner Monologue for Real-World Tabletop Rearrangement - extractive body cue:** Given the first and last observation, the model outputs a probability distribution over all the possible skills.
+- **Contribution anchor:** p. 1 (1 Introduction), p. 2 (1 Introduction), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement)
 
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+### Strongest assumption and failure boundary
 
-## 근거가 되는 논문 단서
-- Problem cue: This raises an intriguing possibility: beyond their ability to interpret natural language instructions, can language models further serve as reasoning models that combine multiple sources of feedback and ...
-- Method cue: We propose that by leveraging environment feedback, LLMs are able to form an inner monologue that allows them to more richly process and plan in robotic control scenarios.
-- Result cue: Below, we show results for a tabletop manipulation environment in sim (Sec 4.1) and real (Sec 4.2) as well as a mobile manipulation environment in real (Sec 4.3).
+- **p. 1 / 1 Introduction - extractive body cue:** While conventionally these challenges have been approached from the perspective of planning (e.g., TAMP [1]) or hierarchical learning (e.g., HRL [2]), effective high-level reasoning about ...
+- **p. 2 / 1 Introduction - extractive body cue:** Notably, we show that it can efficiently retry under observed stochastic failure, replan under systematic infeasibility, or request human feedback for ambiguous queries, resulting in ...
+- **p. 1 / 1 Introduction - extractive body cue:** While prior work has investigated using language models as planners [20, 21] or incorporating arXiv:2207.05608v1 [cs.RO] 12 Jul 2022
+- **p. 9 / Figure/Table caption - extractive body cue:** Table 5. As for failure modes, Inner Monologue may fail due to several sources of errors: (1) success detections, (2) LLM planning errors, and (3) ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Table 3: Averaged success rate across 120 evaluations on several task families in our real-world mobile manipulation environment. We consider a standard setting and adversarial ...
+- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: Success rates for various methods, averaged across 50 episodes in Ravens-based environment with test-time disturbances. CLIPort + oracle indicates that CLIPort was provided ...
+- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Failure causes on 120 evaluations. When disturbances are added (red), only the Inner Mono- logue variants consistently complete the instructions. Analysis. The results ...
+- **Boundary to test:** Table 5. As for failure modes, Inner Monologue may fail due to several sources of errors: (1) success detections, (2) LLM planning errors, and (3) control errors. False negative predictions from the ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | Inspired by the human thought process, we propose that such an inner monologue is a natural framework for incorporating feedback for LLMs. | p. 1 (1 Introduction), p. 2 (1 Introduction) |
+| Reported outcome | Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and place robot exceeds the performance of baseline alternatives, as measured by average task success rates over ... | p. 6 (Figure/Table caption), p. 7 (Figure/Table caption) |
+| Failure/limitation | Table 5. As for failure modes, Inner Monologue may fail due to several sources of errors: (1) success detections, (2) LLM planning errors, and (3) control errors. False negative predictions from the ... | p. 9 (Figure/Table caption), p. 7 (Figure/Table caption) |
+
+## Researcher interpretation
+
+### Reusable lesson in the robotics loop
+
+- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
+- 이 논문의 재사용 가능한 지점은 As a demonstration of the versatility of LLMs and grounded closed-loop feedback, we additionally show several surprising capabilities emerging from the inner monologue formulation, including continued adaptation to new instructions, sel ...를 The policy is trained on 20000 pre-collected demonstrations, where each demonstration contains 1) language instruction of the format "pick up [x] and place it on [y]", 2) top-down view of RGB-D observation ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Table 5. As for failure modes, Inner Monologue may fail due to several sources of errors: (1) success detections, (2) LLM planning errors, and (3) control errors. False negative predictions from the ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: Inspired by the human thought process, we propose that such an inner monologue is a natural framework for incorporating feedback for LLMs.
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+
+### Dependency and evolution
+
+- **Registry position:** `NEXT` in `VLA and generalist robot policies`; tags: `Robotics, LLM planning, feedback, replanning, long-horizon manipulation`.
+- **Reading predecessor in the generated track queue:** VIMA: General Robot Manipulation with Multimodal Prompts (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Table 5. As for failure modes, Inner Monologue may fail due to several sources of errors: (1) success detections, (2) LLM planning errors, and (3) control errors. False negative predictions from the ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
+
+### Minimal reproduction
+
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: For the object sorting task, the scene description contains a list of currently visible objects and a list of objects that the robot has successfully moved into a plate..
+3. Compare against the body-reported baseline or a matched simpler baseline: Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and place robot exceeds the performance of baseline alternatives, as measured by average task success rates over ....
+4. Report the body metric and its denominator/aggregation: Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and place robot exceeds the performance of baseline alternatives, as measured by average task success rates over ....
+5. Re-run the body-reported ablation/failure condition: Table 1: Success rates for various methods, averaged across 50 episodes in Ravens-based environment with test-time disturbances. CLIPort + oracle indicates that CLIPort was provided a "termination" oracle. Although CLIPort can receive ....
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement); the primary result is directionally consistent at p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+
+## Falsifiable research question
+
+고정된 observation/action/data/compute budget에서 Inspired, human, thought mechanism이 Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and ... 대비 Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and place robot ...을 개선하고, Table 5. As for failure modes, Inner Monologue may fail due to several sources of errors: ... 조건에서도 closed-loop failure를 늘리지 않는가?
+
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

@@ -19,14 +19,17 @@ import subprocess
 import time
 import urllib.parse
 import xml.etree.ElementTree as ET
+from datetime import date
 from pathlib import Path
 
 import requests
 
 try:
     from taxonomy import canonicalize
+    from registry_schema import enrich_record, next_paper_id
 except ModuleNotFoundError:  # import as work.scripts.build_lit_survey
     from .taxonomy import canonicalize
+    from .registry_schema import enrich_record, next_paper_id
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -35,6 +38,7 @@ SOURCES = WORK / "sources"
 IMPORTS = SOURCES / "imports"
 CVF_CANDIDATES = SOURCES / "candidates" / "cvf_candidates.json"
 MANIFEST = SOURCES / "papers.json"
+REGISTRY_META = SOURCES / "registry_meta.json"
 EXTRA_PAPERS_FILES = [
     IMPORTS / "extra_papers_2025_2026.json",
     IMPORTS / "extra_papers_eccv_iccv_ral_iros.json",
@@ -732,90 +736,288 @@ def write_notes(p: dict, *, overwrite: bool = False) -> None:
 ## Contribution
 """ + "\n".join(f"- {b}" for b in contribution_bullets(p)) + "\n"
 
-    problem_md = f"""# Problem
+    problem_md = f"""# Problem — {p['title']}
 
-## 왜 문제인가
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `CURATION_ONLY`.
+> Analysis basis: abstract/metadata cue 기반 scaffold; exact formulation은 본문 수동 확인 필요. tracker의 reading status/evidence는 자동으로 올리지 않는다.
+
+## Problem in One Sentence
+
 {problem}
 
-## 해결하려는 문제
-- 연구 유형: {fam}
-- 목표: 3D geometry/semantics와 language/action 사이의 mismatch를 줄이고, 실제 embodied setting에서 쓸 수 있는 표현 또는 policy를 만드는 것.
-- 중요한 이유: 로봇은 closed-set category 인식보다 더 복합적인 공간 관계, affordance, 장기 계획, sensor noise를 다뤄야 한다.
-- Abstract problem cue: {cues.get('problem', '자동 추출 없음.')}
+## System and Scope
 
-## 선행 연구 분석
-- 2D VLM/LLM은 semantic prior가 강하지만 metric 3D 구조와 physical feasibility가 약하다.
-- 고전 3D geometry/SLAM은 구조적 안정성이 있지만 open-vocabulary language grounding과 high-level reasoning이 약하다.
-- 이 논문은 두 축을 결합하는 흐름 안에서, `{', '.join(tags[:4])}` 관점의 개선을 제안한다.
-"""
+- **Object / environment:** `{fam}`에 해당하는 논문의 robot/embodied task scope; 구체적인 embodiment와 환경은 본문 확인 필요.
+- **Observation / input:** {io}
+- **Latent state / decision variable:** state, geometry, semantic representation 또는 policy context의 정확한 정의는 본문 확인 필요.
+- **Output / action:** paper-specific representation, prediction 또는 robot action; exact interface는 본문 확인 필요.
+- **Horizon / evaluation target:** primary task metric과 closed-loop horizon은 본문 확인 필요.
 
-    method_md = f"""# Method
+## Formal Problem Formulation
 
-## Brief Method
+- **State / model:** abstract cue에서 확인되는 `{fam}` 문제의 state/model; equation과 transition은 본문 확인 필요.
+- **Objective / loss / cost:** paper-specific objective와 optimization target은 본문 확인 필요.
+- **Constraints / initial-boundary-terminal conditions:** sensing, geometry, action, contact와 task constraints는 본문 확인 필요.
+- **Success / guarantee:** abstract의 claim은 참고 cue로만 두고, 성공 정의와 보장은 본문 evaluation에서 확인한다.
+
+## Bottleneck in Prior Work
+
+{cues.get('problem', problem)}
+
+## What the Paper Changes
+
 {method}
 
-## Abstract Method Cue
-{cues.get('method', '자동 추출 없음.')}
+## Assumptions and Failure Boundary
 
-## 원리적 동기
-- 3D 구조는 물체 간 거리, pose, occlusion, affordance를 제공한다.
-- Vision-language/LLM prior는 open vocabulary와 commonsense를 제공한다.
-- 두 표현을 alignment하면 annotation-heavy 3D supervision 없이도 더 넓은 task로 확장할 수 있다.
+| Assumption | Why it is needed | Failure boundary |
+|---|---|---|
+| source의 observation/model/task cue가 유효하다고 가정 | abstract 수준의 문제를 구조화하기 위해 필요 | exact assumption과 negative result는 본문 확인 전 확정하지 않음 |
 
-## 핵심 방법론
-- Task family: {fam}
-- Representation: {', '.join([t for t in tags if any(k in t.lower() for k in ['3d', 'gaussian', 'nerf', 'graph', 'geometry', 'slam', 'semantic', 'vla', 'vlm', 'llm'])]) or 'paper-specific representation'}
-- Training/optimization: paper-specific; PDF의 method section에서 loss, supervision, inference pipeline 확인 필요.
-- Deployment assumption: sensor calibration, scene reconstruction quality, and action feasibility are likely critical when moved to real robots.
+## Position in the Robotics Loop
+
+observation → state/world model → task & motion decision → policy/control → contact → feedback 중 `{fam}` 관련 단계; paper-specific closed-loop 위치는 본문 확인 필요.
+
+## Verification Questions
+
+- **Evidence anchor:** abstract problem/method cue와 등록된 input/output cue.
+- **Still to verify:** state, objective/loss, constraints, initial/terminal condition, success metric과 실제 robot closed-loop 연결을 원문에서 확정한다.
 """
 
-    evaluation_md = f"""# Evaluation
+    method_md = f"""# Method — {p['title']}
 
-## Dataset
-{', '.join(datasets) if datasets else 'PDF/abstract 자동 추출에서 명확한 dataset 명칭을 찾지 못함. 본문의 experiment section 확인 필요.'}
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `CURATION_ONLY`. Full-text reading is not implied.
+> Analysis basis: abstract/metadata cue 기반 scaffold; exact method detail은 본문 수동 확인 필요.
 
-## Benchmark
-- 주요 benchmark는 task family `{fam}`에 맞춰 3D grounding, segmentation, reconstruction, navigation, manipulation success, 또는 VQA 형태로 구성된다.
+## Method in One Sentence
 
-## Metrics
-{', '.join(metrics) if metrics else '관련 후보: success rate, IoU/mIoU, Acc@k, SPL/nDTW, PSNR/SSIM/LPIPS, ATE/RPE 등 task별 확인 필요.'}
+{method}
 
-## Splits
-- 자동 추출로 split 세부사항은 안정적으로 확인하지 않았다.
-- 재현 시 train/val/test scene split, object split, instruction split, embodiment split을 분리해서 확인할 것.
+## Design Rationale
 
-## Baselines
-- 비교 기준은 보통 closed-set 3D model, 2D VLM projection, prior 3D grounding/model-free policy, classical geometry/SLAM, 또는 diffusion/action-policy baseline이다.
+{problem}
 
-## Main Results
-- Abstract result cue: {cues.get('result', '자동 추출 없음.')}
-- 정확한 수치는 paper.pdf의 tables를 기준으로 확인할 것.
+## Source Evidence Cues
 
-## Reproducibility Notes
-- Code/Project: {project}
-- 재현 난이도 체크포인트: data availability, pretrained model checkpoint, camera/depth calibration, GPU memory, simulator/real-robot dependency.
+- Method cue: {cues.get('method', '자동 추출 없음.')}
+- Task family cue: {fam}
+- Representation cue: {', '.join([t for t in tags if any(k in t.lower() for k in ['3d', 'gaussian', 'nerf', 'graph', 'geometry', 'slam', 'semantic', 'vla', 'vlm', 'llm'])]) or 'paper-specific representation'}
+
+## Pipeline
+
+| Module | Purpose | Input | Operation | Output | Interface / expected benefit | Evidence |
+|---|---|---|---|---|---|---|
+| Paper-specific method module | task-specific representation과 prediction/control을 연결 | {io} | {method} | paper-specific prediction/action | {fam} task utility는 04와 대조 | abstract/metadata cue; exact section/page 확인 필요 |
+
+## Objective / Update Rule
+
+- **Objective/loss/control law:** 본문 확인 필요.
+- **Optimization/update:** paper-specific; method section 확인 필요.
+- **Constraint/regularization:** sensor calibration, scene reconstruction quality, action feasibility와 task-specific constraints를 본문에서 확인한다.
+
+## Variables and Parameters
+
+| Symbol / parameter | Type / unit | Meaning | Used in | Source |
+|---|---|---|---|---|
+| oₜ / xₜ | observation/state | paper input or state | representation | method section 확인 필요 |
+| aₜ / yₜ | action/prediction | paper output | execution/evaluation | method section 확인 필요 |
+| θ | parameters | learned/optimized quantities | update | method section 확인 필요 |
+
+## Observation–State–Action Interface
+
+- **Observation / input:** {io}
+- **State / latent representation:** 본문 확인 필요.
+- **Action / output:** 본문 확인 필요.
+- **Planner–controller / policy–environment interface:** 본문 확인 필요.
+
+## Temporal and Runtime Contract
+
+- **Horizon:** 본문 확인 필요.
+- **Inference/control rate:** 본문 확인 필요.
+- **History / memory:** 본문 확인 필요.
+- **Compute / latency dependency:** data preprocessing, encoder/decoder, optimization/inference steps와 hardware dependency를 확인한다.
+
+## Training vs Inference
+
+- **Training / offline setup:** 본문 확인 필요.
+- **Inference / online execution:** 본문 확인 필요.
+- **Boundary to keep separate:** training, inference, control rate, horizon과 memory를 구분한다.
+
+## Method-Specific Formal Details
+
+- Exact equation/loss/control law와 variable meaning은 본문 확인 필요.
+
+## Evaluation Link
+
+- **Module-to-evaluation link:** [04_evaluation.md](./04_evaluation.md)의 baseline/ablation이 위 method module을 어떻게 isolate하는지 확인한다.
+- **Protocol/metric cue:** {cues.get('result', '자동 추출 없음.')}
+
+## Failure and Ablation Link
+
+- Strongest assumption, failure mode와 module ablation은 본문 및 04_evaluation.md에서 확인 필요.
+
+## Reproduction Checklist
+
+1. [ ] method section에서 module input/output와 exact objective를 확인한다.
+2. [ ] variable/unit, horizon, rate, memory와 implementation dependency를 기록한다.
+3. [ ] 04의 baseline, ablation, metric, split과 failure protocol을 대조한다.
+
+## Verification Questions
+
+- **Still to verify:** exact method equation, variable source, training/inference boundary, runtime contract과 module-level evaluation attribution.
 """
 
-    insights_md = f"""# Insights
+    dataset_cue = ', '.join(datasets) if datasets else 'not found in current registry/abstract cue'
+    metric_cue = ', '.join(metrics) if metrics else 'task-specific metric not found in current registry/abstract cue'
+    result_cue = cues.get('result', 'registry/abstract result cue not found')
+    evaluation_md = f"""# Evaluation — {p['title']}
 
-## Limitation
-{limitation}
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `CURATION_ONLY`. Full-text reading is not implied.
+> Analysis basis: registry/abstract cue 기반 evaluation scaffold; exact experiment detail은 본문 수동 확인 필요.
 
-## Strength
-- `{fam}` 문제를 3D geometry와 language/action prior를 함께 쓰는 방향으로 밀어붙인다.
-- 사용자의 연구 키워드 중 `{', '.join(tags[:5])}`와 직접적으로 연결된다.
+## Evaluation in One Sentence
 
-## Paper Claim
-- 논문의 중심 claim은 기존 2D-only, closed-set, 또는 task-specific 접근보다 더 일반화 가능한 3D-aware representation/policy/reasoning을 제공한다는 것이다.
-- Abstract result cue: {cues.get('result', '자동 추출 없음.')}
+{result_cue}
 
-## Future Work
-- dynamic scene, partial observation, sensor noise, cross-embodiment transfer, real-time inference, safety-aware planning을 추가 검증하는 것이 중요하다.
-- 3D scene graph/semantic Gaussian/SLAM map을 VLA policy의 persistent memory로 연결하는 방향이 유망하다.
+## Evaluation Type and Scope
 
-## 내 관점
-- 이 논문은 `{p['category']}` 축에서 읽어야 한다.
-- 후속 연구 아이디어: language-grounded 3D memory를 만들고, robot policy가 이를 action feasibility와 uncertainty까지 포함해 조회하도록 설계한다.
+- **Evaluation type:** provisional; theory, system, learning, simulation/real-robot 또는 benchmark 유형을 본문에서 확인한다.
+- **Target system/task:** task family `{fam}`에 해당하는 paper-specific task/system
+- **Input/observation boundary:** {io}
+- **Output/decision under evaluation:** paper-specific prediction, plan, control 또는 task outcome; 본문 확인 필요.
+- **Primary target:** {metric_cue}
+
+## Experimental Matrix
+
+| Experiment / claim | Type & setting | Dataset / split | Robot / system | Baseline | Metric / result cue | Trials / seeds | Source |
+|---|---|---|---|---|---|---|---|
+| primary evaluation claim | setting과 sim/real 여부는 본문 확인 필요 | {dataset_cue}; split/role not verified | embodiment/hardware not verified | baseline identity not verified | {metric_cue}; exact definition not verified | not reported | abstract/experiment section 확인 필요 |
+
+## Dataset / Benchmark Role
+
+| Resource | Role | Split / size | Source |
+|---|---|---|---|
+| {dataset_cue} | registry/abstract cue; train/eval/pretraining/auxiliary role은 본문 확인 필요 | not reported | dataset/experiment section 확인 필요 |
+
+- Dataset name이 언급됐다는 사실만으로 final evaluation dataset으로 확정하지 않는다.
+
+## Embodiment / Environment
+
+| Dimension | Recorded cue | Missing detail | Source |
+|---|---|---|---|
+| Robot / simulator / hardware | not reported | hardware, simulator/real 여부와 configuration 확인 필요 | evaluation section 확인 필요 |
+| Observation / sensor | {io} | sensor, calibration와 preprocessing 확인 필요 | method/evaluation section 확인 필요 |
+| Task / episode unit | not reported | task count, reset, timeout와 success denominator 확인 필요 | evaluation protocol 확인 필요 |
+| Generalization split/variation | not reported | scene/object/instruction/embodiment split 확인 필요 | dataset/protocol 확인 필요 |
+
+## Metrics and Success Definition
+
+| Metric / success signal | Direction / unit | Status | Source |
+|---|---|---|---|
+| {metric_cue} | not reported | registry/abstract cue; exact definition, direction와 aggregation 확인 필요 | evaluation table 확인 필요 |
+
+- **Success/failure/timeout definition:** 본문 확인 필요.
+
+## Baselines and Fairness
+
+| Baseline / comparison cue | What it should isolate | Same data/observation/compute? | Source |
+|---|---|---|---|
+| not found | comparison identity와 configuration 확인 필요 | not reported | baseline table 확인 필요 |
+
+**Baseline fairness audit**
+
+| Fairness dimension | Current record | Required check |
+|---|---|---|
+| Observation/action interface | not reported | modality, action space와 preprocessing을 맞춘다 |
+| Data/pretraining | not reported | demonstrations, pretraining과 additional labels를 맞춘다 |
+| Compute/runtime | not reported | parameter budget, inference steps, latency와 control rate를 맞춘다 |
+| Evaluation protocol | not reported | split, reset/timeout, seeds와 success denominator를 맞춘다 |
+
+## Ablations and Sensitivity
+
+| Ablation / sensitivity factor | Method component | Expected interpretation | Reported status / source |
+|---|---|---|---|
+| not reported | core method module | component attribution과 strongest assumption sensitivity 확인 필요 | ablation table 확인 필요 |
+
+## Main Results / Claim–Evidence Map
+
+| Claim / target | Evidence or result cue | Evaluation type | Strength | Source |
+|---|---|---|---|---|
+| primary evaluation claim | {result_cue} | provisional | registry/abstract cue; exact result와 condition은 본문 확인 필요 | result table/figure 확인 필요 |
+
+## Generalization and Failure Cases
+
+| Assumption / regime | Failure or stress test | Status | Source |
+|---|---|---|---|
+| source의 observation/model/task cue가 유효하다고 가정 | distribution shift, sensor failure, contact/long-horizon failure는 본문 확인 필요 | unverified | problem/evaluation section 확인 필요 |
+
+## Statistics, Efficiency, and Reproducibility
+
+| Reproducibility field | Recorded value/cue | Status | Source |
+|---|---|---|---|
+| Trials / episodes | not reported | count와 repeat unit 확인 필요 | protocol 확인 필요 |
+| Random seeds / repeats | not reported | seed/repeat policy 확인 필요 | protocol 확인 필요 |
+| Mean ± std / CI | not reported | uncertainty reporting 확인 필요 | result table 확인 필요 |
+| Latency / throughput | not reported | inference/control runtime 확인 필요 | method/evaluation 확인 필요 |
+| Compute / hardware dependency | not reported | hardware, checkpoint와 environment 확인 필요 | reproducibility section 확인 필요 |
+| Train/eval split and leakage control | not reported | split, preprocessing와 leakage control 확인 필요 | dataset section 확인 필요 |
+| Code / checkpoint / environment | canonical pointer는 01_overview.md 참조 | availability/configuration을 본문에서 확인 | 01_overview.md |
+
+## Limitations and Verification Questions
+
+- **Evidence boundary:** registry/abstract cue를 reported result로 승격하지 않는다. exact table/figure/page는 본문 확인이 필요하다.
+- **Current limitation cue:** {limitation}
+- **Claim–condition check:** 모든 수치는 task, embodiment/simulator, input/action interface, metric, baseline와 trial/seed 조건을 함께 기록한다.
+- **Reproduction check:** reset/timeout/success denominator, preprocessing, checkpoint, compute, inference/control rate와 failure handling을 별도로 확인한다.
+"""
+
+    insights_md = f"""# Insights — {p['title']}
+
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `CURATION_ONLY`.
+> Analysis basis: abstract/metadata cue와 자동 추출 결과를 정리한 curation scaffold; full-text manual review required.
+
+## Paper-supported conclusion
+
+> **Evidence boundary:** 아래 내용은 현재 확인 가능한 abstract/source cue의 범위다. 자동 추출이나 local PDF 보유를 수동 정독으로 간주하지 않으며, 상세 claim은 full-text 확인 전까지 확정하지 않는다.
+
+### What was actually new
+
+- **Problem cue:** {problem}
+- **Method cue:** {method}
+- **Result cue:** {cues.get('result', 'abstract에서 명시적 result cue를 확인하지 못함.')}
+
+### Strongest assumption and failure boundary
+
+- {limitation}
+- Exact assumptions, negative results, benchmark protocol, and transfer limits remain to be checked against the full text.
+
+## Researcher interpretation
+
+### Reusable lesson in the robotics loop
+
+- **Closed-loop position:** observation → state/world model → task decision → policy/control → feedback.
+- `{fam}` 논문의 input/output boundary를 유지한 채, downstream task success, failure, latency와 sensor/embodiment shift를 별도로 측정한다.
+
+### Dependency and evolution
+
+- `{p['category']}` / tags: `{', '.join(tags[:5])}`.
+- Direct citation predecessor/successor is not asserted until the references and related work are checked.
+
+### Minimal reproduction
+
+1. Confirm the paper-reported task, input/output, dataset or simulator, metric, baseline, and split from the full text.
+2. Implement the smallest paper-specific component and compare it with a matched simpler baseline.
+3. Report the primary metric together with failure rate, latency, and sensitivity to the strongest assumption.
+
+## Falsifiable research question
+
+At a matched data, compute, and action budget, does the paper's `{', '.join(tags[:4]) or fam}` interface improve its primary task metric and downstream robustness over a simpler baseline?
+
+**Reject the hypothesis if** the primary metric does not improve or the method adds latency, failures, or assumption sensitivity without a compensating benefit.
 """
 
     files = {
@@ -840,10 +1042,35 @@ def write_registry(papers: list[dict]) -> None:
 
 
 def write_manifest(papers: list[dict]) -> None:
+    existing = {}
+    if MANIFEST.exists():
+        existing = {
+            item["title"].casefold(): item
+            for item in json.loads(MANIFEST.read_text(encoding="utf-8"))
+        }
+    available = list(existing.values())
     manifest = []
-    for p in papers:
-        manifest.append({k: p.get(k) for k in ["title", "year", "venue", "category", "tags", "folder", "pdf", "page", "project"]})
+    for source in papers:
+        old = existing.get(source["title"].casefold(), {})
+        merged = dict(old)
+        for key in ["title", "year", "venue", "category", "tags", "folder", "pdf", "page", "project"]:
+            value = source.get(key)
+            if value is None or (isinstance(value, str) and not value.strip()):
+                continue
+            if key == "folder" and old.get("folder"):
+                continue
+            merged[key] = value
+        canonicalize(merged)
+        paper_id = merged.get("paper_id") or next_paper_id(available)
+        merged = enrich_record(merged, paper_id=paper_id, root=ROOT)
+        manifest.append(merged)
+        available.append(merged)
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if REGISTRY_META.exists():
+        meta = json.loads(REGISTRY_META.read_text(encoding="utf-8"))
+        meta["paper_count"] = len(manifest)
+        meta["generated_on"] = date.today().isoformat()
+        REGISTRY_META.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def parse_args() -> argparse.Namespace:

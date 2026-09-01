@@ -1,21 +1,75 @@
-# Problem
+# Problem - DINOv2: Learning Robust Visual Features without Supervision
 
-- Year/Venue: 2023 / TMLR
-- Category: Foundations: Vision and Language Models
-- Tags: self-supervised, representation
-- Paper link: ./2023/TMLR/2023_TMLR_DINOv2-Learning-Robust-Visual-Features-without-Supervision/paper.pdf
-- Code/Project: https://github.com/facebookresearch/dinov2
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-01 (32 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.07193; PDF retrieval source: https://arxiv.org/pdf/2304.07193. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 왜 문제인가
-- We revisit existing approaches and combine different techniques to scale our pretraining in terms of data and model size.
-- This work shows that existing pretraining methods, especially self-supervised methods, can produce such features if trained on enough curated data from diverse sources.
+## Problem in One Sentence
 
-## 해결하려는 문제
-- This work shows that existing pretraining methods, especially self-supervised methods, can produce such features if trained on enough curated data from diverse sources.
-- We revisit existing approaches and combine different techniques to scale our pretraining in terms of data and model size.
-- In terms of data, we propose an automatic pipeline to build a dedicated, diverse, and curated image dataset instead of uncurated data, as typically done in the self-supervised ...
+PDF body framing (p. 2 (1 Introduction), p. 2 (1 Introduction)): A major difficulty when dealing with images in the wild is to rebalance concepts and avoid overfitting on a few dominant modes.
 
-## 선행 연구 / 배경 단서
-- This success has been fueled by pretraining on large quantities of raw text using pretext objectives, such as language modeling (Radford et al., 2017) or word vectors (Devlin ...
-- Most promising efforts towards these foundation models focus on text-guided pretraining, i.e., using a form of textual supervision to guide the training of the features (Joulin et al., ...
+## PDF Body Digest
+
+- **p. 1 / Abstract - extractive PDF cue:** The recent breakthroughs in natural language processing for model pretraining on large quantities of data have opened the way for similar foundation models in computer ...
+- **p. 1 / Abstract - extractive PDF cue:** These models could greatly simplify the use of images in any system by producing generalpurpose visual features, i.e., features that work across image distributions and ...
+- **p. 1 / Abstract - extractive PDF cue:** This work shows that existing pretraining methods, especially self-supervised methods, can produce such features if trained on enough curated data from diverse sources.
+- **p. 1 / Abstract - extractive PDF cue:** We revisit existing approaches and combine different techniques to scale our pretraining in terms of data and model size.
+- **p. 1 / Abstract - extractive PDF cue:** Most of the technical contributions aim at accelerating and stabilizing the training at scale.
+- **p. 2 / 1 Introduction - extractive PDF cue:** A major difficulty when dealing with images in the wild is to rebalance concepts and avoid overfitting on a few dominant modes.
+- **p. 2 / 1 Introduction - extractive PDF cue:** This is explained by the lack of control over the data quality and diversity, which are essential to produce good features.
+
+## System and Scope
+
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | A major difficulty when dealing with images in the wild is to rebalance concepts and avoid overfitting on a few dominant modes. | 논문이 정의한 robot/embodied environment | body wording is the source claim |
+| Observation / input | Published in Transactions on Machine Learning Research (01/2024) 1010 1011 1012 flops 75 78 81 84 87 Accuracy Inet-1k 1010 1011 1012 ... | 논문이 명시한 observation과 task input | exact sensor/frame/preprocessing from PDF |
+| State / latent | Published, Transactions, Machine, Learning, Research, flops, Accuracy, Inet-1k, mIoU, Segmentation | task state 또는 decision variable | notation and tensor shape require body check |
+| Output / action | Published, Transactions, Machine, Learning, Research, Figure, Visualization, first | paper-specific output/action | exact unit/frame/decoder require body check |
+| Target outcome | source task metric; robot link not established | primary task objective와 closed-loop behavior | metric/denominator are in 04 evidence |
+
+## Formal Problem Formulation
+
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | source-defined input o; body terms: Published, Transactions, Machine, Learning, Research, flops, Accuracy, Inet-1k, mIoU, Segmentation | p. 3 (1 Introduction), p. 30 (B.1 Unsupervised pre-training), p. 2 (1 Introduction) |
+| Decision / output variable | prediction/embedding/sample ŷ; body terms: Most, technical, contributions, tailored, toward, stabilizing, accelerating, discriminative | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction) |
+| Objective / loss / cost | paper-specific objective; cue terms: models, iterations, optimizer, AdamW, initial, LayerScale, value, weight | p. 31 (B.1 Unsupervised pre-training), p. 31 (B.1 Unsupervised pre-training) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 31 (B.1 Unsupervised pre-training), p. 29 (B.1 Unsupervised pre-training), p. 31 (B.1 Unsupervised pre-training) |
+| Success / guarantee | source task metric; robot link not established | p. 9 (Figure/Table caption), p. 11 (7 Results), p. 31 (B.3 Linear probing evaluation) |
+
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 2 / 1 Introduction - extractive PDF cue:** This is explained by the lack of control over the data quality and diversity, which are essential to produce good features.
+
+## What the Paper Changes
+
+PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction)): Most of our technical contributions are tailored toward stabilizing and accelerating discriminative self-supervised learning when scaling in model and data sizes.
+
+- **p. 2 / 1 Introduction - extractive PDF cue:** We gathered a small but diverse corpus of 142M images to validate our approach.
+- **p. 3 / 1 Introduction - extractive PDF cue:** We show performance on eight types of vision tasks, as presented in Sec.
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 15 | This procedure is extremely simple but cannot easily produce high-resolution segmentations. +ms: a boosted version of the linear ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 16 | This observation supports the intuition that caption-based feature learning fails to learn subtle patterns like this one. | reported limitation/failure wording; scope must be verified |
+| body cue at p. 12 | When comparing with state-of-the-art SSL methods, our models shows drastically better robustness (+29.6% on A (Hendrycks et al., ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 12 | Table 5: Supervised finetuning on ImageNet-1k. We use the pipeline of Touvron et al. (2022) to finetune our ... | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+upstream writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (1 Introduction), p. 30 (B.1 Unsupervised pre-training), p. 2 (1 Introduction), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 3 (1 Introduction), p. 30 (B.1 Unsupervised pre-training), p. 2 (1 Introduction), p. 2 (1 Introduction), objective p. 31 (B.1 Unsupervised pre-training), p. 31 (B.1 Unsupervised pre-training).
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

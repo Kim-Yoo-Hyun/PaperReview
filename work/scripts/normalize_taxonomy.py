@@ -13,8 +13,10 @@ from zoneinfo import ZoneInfo
 
 try:
     from taxonomy import canonicalize
+    from registry_schema import canonical_venue, enrich_record
 except ModuleNotFoundError:
     from .taxonomy import canonicalize
+    from .registry_schema import canonical_venue, enrich_record
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -24,10 +26,7 @@ NOTES = ["01_overview.md", "02_problem.md", "03_method.md", "04_evaluation.md", 
 
 
 def venue_label(value: str) -> str:
-    value = re.sub(r"\b20\d{2}\b", "", value)
-    value = re.sub(r"\bregular\b", "", value, flags=re.I)
-    value = re.sub(r"\bSpotlightPoster\b", "Spotlight/Poster", value, flags=re.I)
-    return re.sub(r"\s+", " ", value).strip(" -_/")
+    return canonical_venue(value)
 
 
 def update_note(path: Path, paper: dict) -> bool:
@@ -52,7 +51,9 @@ def registry(papers: list[dict]) -> str:
         "- Long-term reading tiers: [READING_PLAN.md](./research/READING_PLAN.md) and [READING_TIERS.csv](./research/READING_TIERS.csv)",
         "- Reading progress and synthesis: [READING_STATUS.csv](./research/READING_STATUS.csv), [READING_STATUS.md](./research/READING_STATUS.md), [synthesis/README.md](./synthesis/README.md)",
         "- Scope: Robotics-first literature registry spanning robot learning/control, VLA, and robotics-enabling 3D vision.",
-        "- Taxonomy: one canonical category per paper; cross-cutting roles are represented with normalized tags.", "",
+        "- Machine-readable registry: [papers.json](./work/sources/papers.json), [registry.schema.json](./work/sources/registry.schema.json), and [registry_meta.json](./work/sources/registry_meta.json)",
+        "- Evaluation vocabularies: [benchmark_catalog.json](./work/sources/benchmark_catalog.json) and [metric_catalog.json](./work/sources/metric_catalog.json)",
+        "- Taxonomy: one canonical category per paper and one primary robotics track for CORE/NEXT; cross-cutting roles are represented with normalized tags.", "",
     ]
     for category in sorted(groups, key=str.casefold):
         lines += [f"## {category}", "", "| Year | Venue | Paper | Tags | PDF | Code/Project |", "|---:|---|---|---|---|---|"]
@@ -60,8 +61,11 @@ def registry(papers: list[dict]) -> str:
             folder = urllib.parse.quote(item["folder"])
             pdf = f"[paper.pdf](./{folder}/paper.pdf)" if (ROOT / item["folder"] / "paper.pdf").exists() else "missing"
             project = item.get("project") or "not identified"
+            project_source = (item.get("sources") or {}).get("project")
+            if isinstance(project_source, dict) and project_source.get("url"):
+                project = project_source["url"]
             project = f"[link]({project})" if project.startswith("http") else project
-            lines.append(f"| {item['year']} | {venue_label(item['venue'])} | [{item['title']}](./{folder}/01_overview.md) | {', '.join(item['tags'])} | {pdf} | {project} |")
+            lines.append(f"| {item['year']} | {venue_label(item.get('venue_canonical', item['venue']))} | [{item['title']}](./{folder}/01_overview.md) | {', '.join(item['tags'])} | {pdf} | {project} |")
         lines.append("")
     lines += ["## Keyword Index", ""]
     tags: dict[str, list[dict]] = {}
@@ -84,6 +88,8 @@ def main() -> None:
     for paper in papers:
         paper.pop("pdf_status", None)
         canonicalize(paper)
+        if "publication" in paper:
+            enrich_record(paper, root=ROOT)
         folder = ROOT / paper["folder"]
         for name in NOTES:
             changed_notes += update_note(folder / name, paper)

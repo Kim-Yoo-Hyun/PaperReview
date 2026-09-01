@@ -1,23 +1,80 @@
-# Problem
+# Problem - Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning
 
-- Year/Venue: 2021 / CoRL
-- Category: Robotics Foundations: Robot Learning
-- Tags: Robotics, locomotion, Reinforcement Learning, massively parallel simulation
-- Paper link: [paper.pdf](./paper.pdf)
-- Code/Project: https://leggedrobotics.github.io/legged_gym/
-- Source audit: regenerated from local `paper.pdf` on 2026-08-11; survey-keyword template text removed.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-01 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v164/rudin22a.html; PDF retrieval source: https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 왜 문제인가
-- The problem is exacerbated by the fact that deep 5th Conference on Robot Learning (CoRL 2021), London, UK. reinforcement learning requires hyper-parameter tuning to obtain a suitable solution ...
-- Additionally, we present a novel game-inspired curriculum which automatically adapts the task difficulty to the performance of the policy.
-- This represents a speedup of multiple orders of magnitude compared to previous work.
+## Problem in One Sentence
 
-## 해결하려는 문제
-- : In this work, we present and study a training set-up that achieves fast policy generation for real-world robotic tasks by using massive parallelism on a single workstation ...
-- In addition, we present a novel game-inspired curriculum that is well suited for training with thousands of simulated robots in parallel.
-- We evaluate the approach by training the quadrupedal robot ANYmal to walk on challenging terrain.
+PDF body framing (p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 3 (1 Introduction)): Additionally, we present a novel game-inspired curriculum which automatically adapts the task difficulty to the performance of the policy.
 
-## 선행 연구 / 배경 단서
-- The problem is exacerbated by the fact that deep 5th Conference on Robot Learning (CoRL 2021), London, UK. reinforcement learning requires hyper-parameter tuning to obtain a suitable solution ...
-- Additionally, we present a novel game-inspired curriculum which automatically adapts the task difficulty to the performance of the policy.
-- In this work, we use NVIDIA’s Isaac Gym simulation environment , which runs both the simulation and training on the GPU and is capable of simulating thousands of ...
+## PDF Body Digest
+
+- **p. 1 / Abstract - extractive PDF cue:** In this work, we present and study a training set-up that achieves fast policy generation for real-world robotic tasks by using massive parallelism on a ...
+- **p. 1 / Abstract - extractive PDF cue:** We analyze and discuss the impact of different training algorithm components in the massively parallel regime on the final policy performance and training times.
+- **p. 1 / Abstract - extractive PDF cue:** In addition, we present a novel game-inspired curriculum that is well suited for training with thousands of simulated robots in parallel.
+- **p. 1 / Abstract - extractive PDF cue:** We evaluate the approach by training the quadrupedal robot ANYmal to walk on challenging terrain.
+- **p. 1 / Abstract - extractive PDF cue:** The parallel approach allows training policies for flat terrain in under four minutes, and in twenty minutes for uneven terrain.
+- **p. 2 / 1 Introduction - extractive PDF cue:** Additionally, we present a novel game-inspired curriculum which automatically adapts the task difficulty to the performance of the policy.
+- **p. 3 / 1 Introduction - extractive PDF cue:** Resets based on failure or reaching a goal are not a problem because the critic can predict them.
+
+## System and Scope
+
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | Additionally, we present a novel game-inspired curriculum which automatically adapts the task difficulty to the performance of the policy. | legged robot, terrain과 contact dynamics | body wording is the source claim |
+| Observation / input | The observations are composed of: base linear and angular velocities, measurement of the gravity vector, joint positions and velocities, the previous actions ... | proprioception, terrain/perception observation과 velocity command | exact sensor/frame/preprocessing from PDF |
+| State / latent | observations, composed, base, linear, angular, velocities, measurement, gravity, vector, joint | body/contact state, foothold 또는 behavior mode | notation and tensor shape require body check |
+| Output / action | step, consists, policy, inference, simulation, reward, observation, calculation | joint target, torque, footstep 또는 locomotion action | exact unit/frame/decoder require body check |
+| Target outcome | progress, balance and terrain robustness | velocity/progress, stability, energy와 terrain generalization | metric/denominator are in 04 evidence |
+
+## Formal Problem Formulation
+
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | body/proprioceptive/terrain state; body terms: observations, composed, base, linear, angular, velocities, measurement, gravity, vector, joint | p. 5 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction) |
+| Decision / output variable | joint action/torque/footstep; body terms: Additionally, present, novel, game-inspired, curriculum, automatically, adapts, task | p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract) |
+| Objective / loss / cost | return, tracking or stability objective; cue terms: supplementary, material, effect, solution, total, reward, well, critic | p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction) |
+| Success / guarantee | progress, balance and terrain robustness | p. 7 (4 Results), p. 7 (4 Results), p. 6 (4 Results) |
+
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 3 / 1 Introduction - extractive PDF cue:** Resets based on failure or reaching a goal are not a problem because the critic can predict them.
+- **p. 4 / 1 Introduction - extractive PDF cue:** All robots are assigned a terrain type and a level that represents the difficulty of that terrain.
+- **p. 4 / 1 Introduction - extractive PDF cue:** Previous works have shown the benefits of using an automated curriculum of task difficulty to learn complex locomotion policies [28, 29, 16].
+- **p. 3 / 1 Introduction - extractive PDF cue:** Using a single simulation with thousands of robots presents some new challenges.
+
+## What the Paper Changes
+
+PDF contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 5 (1 Introduction), p. 1 (Abstract)): Additionally, we present a novel game-inspired curriculum which automatically adapts the task difficulty to the performance of the policy.
+
+- **p. 2 / 1 Introduction - extractive PDF cue:** Each step consists of policy inference, simulation, reward, and observation calculation.
+- **p. 1 / Abstract - extractive PDF cue:** In addition, we present a novel game-inspired curriculum that is well suited for training with thousands of simulated robots in parallel.
+- **p. 5 / 1 Introduction - extractive PDF cue:** Furthermore, our method doesn't require tuning and is straightforward to implement in a parallel manner with nearzero processing cost.
+- **p. 1 / Abstract - extractive PDF cue:** In this work, we present and study a training set-up that achieves fast policy generation for real-world robotic tasks by using massive parallelism on a ...
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 7 | As such, we can conclude that increasing the number of robots is beneficial for both final performance and ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 8 | The purpose of this work is not to obtain the absolute best-performing policy with the highest robustness. | reported limitation/failure wording; scope must be verified |
+| body cue at p. 8 | As part of future work, we plan to merge the two approaches. | reported limitation/failure wording; scope must be verified |
+| body cue at p. 7 | To that end, we perform robustness and traversability tests. | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+locomotion writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 5 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 3 (1 Introduction), interface p. 5 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), objective p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction).
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

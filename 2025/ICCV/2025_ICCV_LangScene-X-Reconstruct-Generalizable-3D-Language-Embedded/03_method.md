@@ -1,25 +1,138 @@
-# Method
+# Method - LangScene-X: Reconstruct Generalizable 3D Language-Embedded Scenes with TriMap Video Diffusion
 
-- Year/Venue: 2025 / ICCV
-- Category: 3D Vision-Language Understanding
-- Tags: 3D Vision, Diffusion
-- Paper link: ./2025/ICCV/2025_ICCV_LangScene-X-Reconstruct-Generalizable-3D-Language-Embedded/paper.pdf
-- Code/Project: not identified
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Liu_LangScene-X_Reconstruct_Generalizable_3D_Language-Embedded_Scenes_with_TriMap_Video_Diffusion_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Liu_LangScene-X_Reconstruct_Generalizable_3D_Language-Embedded_Scenes_with_TriMap_Video_Diffusion_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## Brief Method
-- Furthermore, we propose a Language Quantized Compressor (LQC), trained on largescale image datasets, to efficiently encode language embeddings, enabling cross-scene generalization without perscene retraining.
-- We visualize the training curve of our method and traditional autoencoder.
-- Ablations In this paper, we present LangScene-X, a generative framework that builds generalizable 3D language-embedded fields from only sparse views, which unify the information of reconstructing and understanding ...
+## Method in One Sentence
 
-## 원리적 동기
-- To reduce the memory cost and enhance scalability for large-scale data, we propose a generalizable Language Quantized Compressor (LQC) trained on largescale datasets, which encodes high-dimensional language features ...
-- Powered by the generative capability of creating more consistent novel observations, we can build generalizable 3D languageembedded scenes from only sparse views.
-- Furthermore, we propose a Language Quantized Compressor (LQC), trained on largescale image datasets, to efficiently encode language embeddings, enabling cross-scene generalization without perscene retraining.
+PDF body method statement (p. 5 (3.3. Language Quantized Compressor), p. 4 (3.2. Building the TriMap Video Diffusion), p. 5 (3.3. Language Quantized Compressor), p. 4 (3.2. Building the TriMap Video Diffusion), p. 3 (3.1. Overview of LangScene-X), p. 3 (3.1. Overview of LangScene-X)): For learnable embeddings training, we utilize classic dictionary learning algorithms that push embeddings E towards encoder outputs z_e(x ): \m a thc al {L}_ { emb } = \left \/\operatorname ...
 
-## 핵심 방법론
-- We visualize the training curve of our method and traditional autoencoder.
-- Ablations In this paper, we present LangScene-X, a generative framework that builds generalizable 3D language-embedded fields from only sparse views, which unify the information of reconstructing and understanding ...
-- Then we introduce a language quantized compressor to map high-dimensional language features into efficient feature representations.
-- Training Curve comparison between our LQC and regular autoencoder technique. gressive training in TriMap video diffusion, which achieves more matched points.
-- 8, where our method enable to perform sharper boundaries and more accurate activation scores within the query objects.
+## Method Body Digest
+
+- **p. 5 / 3.3. Language Quantized Compressor - extractive PDF cue:** For learnable embeddings training, we utilize classic dictionary learning algorithms that push embeddings E towards encoder outputs z_e(x ): \m a thc al {L}_ { ...
+- **p. 4 / 3.2. Building the TriMap Video Diffusion - extractive PDF cue:** Query Mask RGB Normal "Bear" View 2 Novel View VAE Encoder VAE Decoder + RGB & Semantic & Normal Latents Noise Latents * N Blocks ...
+- **p. 5 / 3.3. Language Quantized Compressor - extractive PDF cue:** To address it, we directly copy the gradient flow from decoder to encoder networks for encoder-decoder training, where : \ ma t hcal {L }_{\te ...
+- **p. 4 / 3.2. Building the TriMap Video Diffusion - extractive PDF cue:** Then, we encode the condition video with a causal VAE [49] encoder to get a latent vector concatenated with a Gaussian noise of the same ...
+- **p. 3 / 3.1. Overview of LangScene-X - extractive PDF cue:** Then we compress the high-dimensional language features into lowdimensional discrete space through a generalizable language quantized compressor (Sec.
+- **p. 3 / 3.1. Overview of LangScene-X - extractive PDF cue:** In our framework LangScene-X, we first build the TriMap video diffusion model to generate 3D consistent RGB images, normal maps, and semantic maps from sparse-view ...
+- **p. 6 / 3.4. Language-Embeded Surface Fields - extractive PDF cue:** LSeg [19] is a 2D open-vocabulary segmentation network, while other methods [20, 34] are per-scene optimized language field models.
+- **p. 5 / 3.4. Language-Embeded Surface Fields - extractive PDF cue:** In pratice, we leverage the powerful normal priors \ p rotect \mathbf {N}\in \mathbb {R}^{D\times H\times W\times 3} generated by the TriMap video diffusion, we ...
+
+## Design Rationale
+
+- **p. 2 / 1. Introduction - extractive PDF cue:** To address this, we propose LangScene-X, a novel generative paradigm to build generalizable 3D languageembedded scenes from very sparse views (i.e., as few as two ...
+- **p. 2 / 1. Introduction - extractive PDF cue:** To reduce the memory cost and enhance scalability for large-scale data, we propose a generalizable Language Quantized Compressor (LQC) trained on largescale datasets, which encodes ...
+- **p. 3 / 3.1. Overview of LangScene-X - extractive PDF cue:** In our framework LangScene-X, we first build the TriMap video diffusion model to generate 3D consistent RGB images, normal maps, and semantic maps from sparse-view ...
+
+## Source Evidence Cues
+
+- **p. 5 / 3.3. Language Quantized Compressor - extractive PDF cue:** For learnable embeddings training, we utilize classic dictionary learning algorithms that push embeddings E towards encoder outputs z_e(x ): \m a thc al {L}_ { ...
+- **p. 4 / 3.2. Building the TriMap Video Diffusion - extractive PDF cue:** Query Mask RGB Normal "Bear" View 2 Novel View VAE Encoder VAE Decoder + RGB & Semantic & Normal Latents Noise Latents * N Blocks ...
+- **p. 5 / 3.3. Language Quantized Compressor - extractive PDF cue:** To address it, we directly copy the gradient flow from decoder to encoder networks for encoder-decoder training, where : \ ma t hcal {L }_{\te ...
+- **p. 4 / 3.2. Building the TriMap Video Diffusion - extractive PDF cue:** Then, we encode the condition video with a causal VAE [49] encoder to get a latent vector concatenated with a Gaussian noise of the same ...
+- **p. 3 / 3.1. Overview of LangScene-X - extractive PDF cue:** Then we compress the high-dimensional language features into lowdimensional discrete space through a generalizable language quantized compressor (Sec.
+- **p. 3 / 3.1. Overview of LangScene-X - extractive PDF cue:** In our framework LangScene-X, we first build the TriMap video diffusion model to generate 3D consistent RGB images, normal maps, and semantic maps from sparse-view ...
+- **p. 6 / 3.4. Language-Embeded Surface Fields - extractive PDF cue:** LSeg [19] is a 2D open-vocabulary segmentation network, while other methods [20, 34] are per-scene optimized language field models.
+- **Detected method headings:** 2.2. Video Diffusion Models (p. 3); 3. Method (p. 3)
+
+## Pipeline
+
+| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+|---|---|---|---|---|---|---|
+| Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | For learnable embeddings training, we utilize classic dictionary learning algorithms that push embeddings E towards encoder outputs z_e(x ): \m a thc ... | p. 5 (3.3. Language Quantized Compressor), p. 4 (3.2. Building the TriMap Video Diffusion) |
+| Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Query Mask RGB Normal "Bear" View 2 Novel View VAE Encoder VAE Decoder + RGB & Semantic & Normal Latents Noise Latents ... | p. 4 (3.2. Building the TriMap Video Diffusion), p. 5 (3.3. Language Quantized Compressor) |
+| Robot query / planning handoff | 3D state를 task decision에 전달한다 | map/feature와 task query | target grounding, affordance, collision/free-space 또는 action cue를 생성 | goal, pose, path 또는 policy input | To address it, we directly copy the gradient flow from decoder to encoder networks for encoder-decoder training, where : \ ma t ... | p. 5 (3.3. Language Quantized Compressor), p. 4 (3.2. Building the TriMap Video Diffusion) |
+
+- Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
+
+## Objective / Update Rule
+
+- **p. 5 / 3.4. Language-Embeded Surface Fields - extractive PDF cue:** In pratice, we leverage the powerful normal priors \ p rotect \mathbf {N}\in \mathbb {R}^{D\times H\times W\times 3} generated by the TriMap video diffusion, we ...
+- **p. 4 / 3.2. Building the TriMap Video Diffusion - extractive PDF cue:** The overall training objective is: \ma t hcal {L}_{\text {d i ff } } = \m at hbb { E } _{\boldsymbol {x},\epsilon \sim \mathcal ...
+- **p. 5 / 3.3. Language Quantized Compressor - extractive PDF cue:** However, training such a compressor is non-trivial, as the look-up operation obstructs the gradient flow from the decoder to the encoder.
+- **p. 3 / 3.2. Building the TriMap Video Diffusion - extractive PDF cue:** Existing works like LERF [17] and LangSplat [34] essentially require very dense multi-view inputs with accurate calibration due to inherent per-scene optimization schemes from NeRF ...
+- **p. 4 / 3.2. Building the TriMap Video Diffusion - extractive PDF cue:** Then, we encode the condition video with a causal VAE [49] encoder to get a latent vector concatenated with a Gaussian noise of the same ...
+- **p. 6 / 3.4. Language-Embeded Surface Fields - extractive PDF cue:** LSeg [19] is a 2D open-vocabulary segmentation network, while other methods [20, 34] are per-scene optimized language field models.
+- **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
+- **Equation/algorithm anchors:** p. 4 (3.2. Building the TriMap Video Diffusion), p. 5 (3.3. Language Quantized Compressor), p. 5 (3.4. Language-Embeded Surface Fields).
+- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
+
+## Variables and Parameters
+
+| Role | PDF-derived terms | Normalized robotics interpretation | Status |
+|---|---|---|---|
+| Input/observation | Given, sparse, views, images, input, goal, reconstruct, understand, underlying, scene, construct, language-embedded, surface, fields | RGB-D, image set, point cloud, depth와 camera pose | body cue; exact tensor/frame verify |
+| State/latent | Given, sparse, views, images, input, goal, reconstruct, understand, underlying, scene | geometry, map, object/relationship state | body cue; notation verify |
+| Action/output | address, LangScene-X, novel, generative, paradigm, build, generalizable, languageembedded, scenes, very | point map, pose, scene graph, affordance 또는 query result | body cue; unit/decoder verify |
+| Objective/constraint | pratice, leverage, powerful, normal, priors, rotect, mathbf, mathbb, times, generated | geometric/semantic reconstruction or matching loss | equation anchor required |
+
+## Observation–State–Action Interface
+
+- **p. 3 / 3.1. Overview of LangScene-X - extractive PDF cue:** Given N sparse views (i.e., as few as two images) as input, our goal is to reconstruct and understand the underlying 3D scene (i.e., construct ...
+- **p. 3 / 3.1. Overview of LangScene-X - extractive PDF cue:** In our framework LangScene-X, we first build the TriMap video diffusion model to generate 3D consistent RGB images, normal maps, and semantic maps from sparse-view ...
+- **p. 4 / 3.2. Building the TriMap Video Diffusion - extractive PDF cue:** Before we train the TriMap video diffusion, we first modify the i2v architecture to support key-frame interpolation, which is more flexible for sparse-view input.
+- **p. 4 / 3.2. Building the TriMap Video Diffusion - extractive PDF cue:** This inspires us to unleash the strong generative prior of large pre-trained video diffusion models to generate frames that unify the information for reconstructing (RGB ...
+- **p. 5 / 3.4. Language-Embeded Surface Fields - extractive PDF cue:** (8) For semantic supervision, we utilize pre-trained dense CLIP extractor [51] to extract language features from generated images \protect \mathbf {C} and pass through our ...
+- **p. 2 / 1. Introduction - extractive PDF cue:** In contrast, constructing language-embedded fields from sparse views is inherently more challenging due to the scarcity of input information, yet it is critical for expanding ...
+- **p. 5 / 3.2. Building the TriMap Video Diffusion - extractive PDF cue:** hierarchy masks {Mh/h = s, m, l} at inference time from only two input views segmented by DS, where s, m, l represents small, medium, ...
+- **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
+- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
+
+## Temporal and Runtime Contract
+
+| Contract | Generic domain prior | PDF body cue | Unresolved detail |
+|---|---|---|---|
+| Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | Given two sparse-view images as input, we first generate a sequence of 3D consistent RGB images, normal maps, and segmentation maps from ... | episode/sequence/action-chunk boundary |
+| Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | Specifically, given the generated RGB sequences \ p rotect \mathbf {C}\in \mathbb {R}^{D\times H\times W\times 3}, we initialize the sparse point clouds ... | Hz/fps, inference time and control rate |
+| Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
+| Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | All videos are center-cropped and resized to 720 × 480 resolution with 49 frames. | hardware, batch and throughput |
+
+## Training vs Inference
+
+- **p. 5 / 3.3. Language Quantized Compressor - extractive PDF cue:** For learnable embeddings training, we utilize classic dictionary learning algorithms that push embeddings E towards encoder outputs z_e(x ): \m a thc al {L}_ { ...
+- **p. 5 / 3.3. Language Quantized Compressor - extractive PDF cue:** To address it, we directly copy the gradient flow from decoder to encoder networks for encoder-decoder training, where : \ ma t hcal {L }_{\te ...
+- **p. 6 / 4.1. Experiment Setup - extractive PDF cue:** Then, we train our model on large-scale open-world dataset COCO [23] with a batch size of 16 and 500,000 steps.
+- **p. 8 / 4.3. Ablations - extractive PDF cue:** We visualize the training curve of our method and traditional autoencoder.
+- **p. 8 / 4.2. Main Results - extractive PDF cue:** Training Curve comparison between our LQC and regular autoencoder technique. curacy in both mIoU and mAcc metrics with a large margin, i.e., a 10.58\ % ...
+- **p. 5 / 3.2. Building the TriMap Video Diffusion - extractive PDF cue:** hierarchy masks {Mh/h = s, m, l} at inference time from only two input views segmented by DS, where s, m, l represents small, medium, ...
+
+- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
+
+## Method-Specific Formal Details
+
+- **Body-defined terms:** learnable, embeddings, training, utilize, classic, dictionary, learning, algorithms, push, towards, encoder, outputs, left, operatorname, right, Query, Mask, RGB, Normal, Bear.
+- **Relevant PDF headings:** 2.2. Video Diffusion Models (p. 3); 3. Method (p. 3).
+- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
+
+## Evaluation Link
+
+| Method component | Evaluation evidence to inspect | PDF anchor |
+|---|---|---|
+| Geometry / pose extraction | The LERF dataset is an in-the-wild dataset captured by a handheld device, while ScanNet is a large scene dataset captured by RGB-D ... | p. 6 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup) |
+| Semantic / temporal fusion | To demonstrate our strong capability in building 3D language-embedded scenes from only sparse views, we compare our LangScene-X against four competitive baselines: ... | p. 6 (4.1. Experiment Setup), p. 6 (4.2. Main Results) |
+| Robot query / planning handoff | By comparing with existing state-of-the-art 3D language field techniques (e.g., LangSplat, LangSurf), unified 3D representation method (i.e., LSM), and open-vocabulary methods like ... | p. 6 (4.2. Main Results), p. 6 (4.1. Experiment Setup) |
+
+## Failure and Ablation Link
+
+- **p. 8 / 4.3. Ablations - extractive PDF cue:** Ablations of proposed module and losses.
+- **p. 8 / 4.3. Ablations - extractive PDF cue:** We conduct ablation experiments with our TriMap Video Diffusion and Language Quantized Compressor techniques.
+- **p. 6 / 4.1. Experiment Setup - extractive PDF cue:** Finally, we apply SAM2 to annotate 300 clips of semantic video clips to fine-tune with RGB and normal videos with 1000 steps.
+
+- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
+
+## Reproduction Checklist
+
+1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
+2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
+3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
+4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
+5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** method p. 5 (3.3. Language Quantized Compressor), p. 4 (3.2. Building the TriMap Video Diffusion), p. 5 (3.3. Language Quantized Compressor), p. 4 (3.2. Building the TriMap Video Diffusion), p. 3 (3.1. Overview of LangScene-X), p. 3 (3.1. Overview of LangScene-X), objective p. 5 (3.4. Language-Embeded Surface Fields), p. 4 (3.2. Building the TriMap Video Diffusion), p. 5 (3.3. Language Quantized Compressor), p. 3 (3.2. Building the TriMap Video Diffusion), p. 4 (3.2. Building the TriMap Video Diffusion), p. 6 (3.4. Language-Embeded Surface Fields), temporal p. 4 (3.2. Building the TriMap Video Diffusion), p. 5 (3.4. Language-Embeded Surface Fields), p. 4 (3.2. Building the TriMap Video Diffusion), p. 5 (3.4. Language-Embeded Surface Fields), p. 6 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup).
+- Which module is genuinely new, and which is inherited infrastructure or a baseline?
+- What exact computation consumes each observation and emits each action/output?
+- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
+- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -1,35 +1,85 @@
 # 3D Gaussian Splatting for Real-Time Radiance Field Rendering
 
-> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2308.04079.
+> PDF retrieval source: https://arxiv.org/pdf/2308.04079. Reading tracker status/evidence was not changed.
 
 - Year/Venue: 2023 / SIGGRAPH
-- Category: Neural Scene Representations
+- Authors: not duplicated here when not verified in the registry source
+- Primary track: Robotics-enabling 3D perception
+- Tier: CORE
 - Tags: Gaussian Splatting, 3D reconstruction, representation
-- Paper link: ./2023/SIGGRAPH/2023_SIGGRAPH_3D-Gaussian-Splatting-for-Real-Time-Radiance-Field-Renderi/paper.pdf
+- Official paper: https://arxiv.org/abs/2308.04079
+- Full-text retrieval: https://arxiv.org/pdf/2308.04079
 - Code/Project: https://github.com/graphdeco-inria/gaussian-splatting
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+- Paper type: method
+- Source audit: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
-## Problem
-- While the continuous nature of these methods helps optimization, the stochastic sampling required for rendering is costly and can result in noise.
-- 2006] and initialize the set of 3D Gaussians with the sparse point cloud produced for free as part of the SfM process.
+## Why This Paper Is Here
+
+Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 2022], but struggle to achieve the visual quality obtained by the current SOTA NeRF methods, i.e., Mip-NeRF360 [Barron et al.를 문제로 두고, To summarize, we provide the following contributions: • The introduction of anisotropic 3D Gaussians as a high-quality, unstructured representation of radiance fields. • An optimization method of 3D Gaussian properties, interleaved with ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+
+## Problem and Motivation
+
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** Meshes and points are the most common 3D scene representations because they are explicit and are a good fit for fast GPU/CUDA-based rasterization.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** In contrast, recent Neural Radiance Field (NeRF) methods build on continuous scene representations, typically optimizing a Multi-Layer Perceptron (MLP) using volumetric ray-marching for novel-view synthesis ...
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** Similarly, the most efficient radiance field solutions to date build on continuous representations by interpolating values stored in, e.g., voxel [Fridovich-Keil and Yu et al.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** While the continuous nature of these methods helps optimization, the stochastic sampling required for rendering is costly and can result in noise.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** We introduce a new approach that combines the best of both worlds: our 3D Gaussian representation allows optimization with state-of-the-art (SOTA) visual quality and competitive ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** 2022], but struggle to achieve the visual quality obtained by the current SOTA NeRF methods, i.e., Mip-NeRF360 [Barron et al.
 
 ## Core Idea
-- We introduce a new approach that combines the best of both worlds: our 3D Gaussian representation allows optimization with state-of-the-art (SOTA) visual quality and competitive training times, while ...
-- The second component of our method is optimization of the properties of the 3D Gaussians – 3D position, opacity 𝛼, anisotropic covariance, and spherical harmonic (SH) coefficients – ...
 
-## Input / Output
-- 본문 기반 자동 추출에서는 입력/출력 schema를 확정하지 않는다. 위 method/evaluation 단서와 `paper.pdf`의 method section을 함께 확인해야 한다.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** To summarize, we provide the following contributions: • The introduction of anisotropic 3D Gaussians as a high-quality, unstructured representation of radiance fields. • An optimization ...
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** We introduce a new approach that combines the best of both worlds: our 3D Gaussian representation allows optimization with state-of-the-art (SOTA) visual quality and competitive ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Note that for the NeRF-synthetic dataset, our method achieves high quality even with random initialization.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** In contrast, recent Neural Radiance Field (NeRF) methods build on continuous scene representations, typically optimizing a Multi-Layer Perceptron (MLP) using volumetric ray-marching for novel-view synthesis ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** We first introduce 3D Gaussians as a flexible and expressive scene representation.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** We also can achieve training speeds and quality similar to the fastest methods and importantly provide the first real-time rendering with high quality for novel-view ...
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** Our goal is to allow real-time rendering for scenes captured with multiple photos, and create the representations with optimization times as fast as the most ...
 
-## Main Claims
-- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.
+## Observation, State, and Output Interface
 
-## Limitation
-- Comparison of failure artifacts: Mip-NeRF360 has “floaters” and grainy appearance (left, foreground), while our method produces coarse, anisoptropic Gaussians resulting in low-detail visuals (right, background).
-- Our method is not without limitations.
-- This could be addressed by antialiasing, which we leave as future work.
+| Role | PDF body evidence | Robotics interpretation | Anchor |
+|---|---|---|---|
+| Observation/input | We introduce a new approach that combines the best of both worlds: our 3D Gaussian representation allows optimization with state-of-the-art (SOTA) visual quality and competitive training times, while our tile-based splatting solution ... | RGB-D, image set, point cloud, depth와 camera pose | p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
+| State/latent | introduce, combines, best, worlds, Gaussian, representation, allows, optimization, state-of-the-art, SOTA, visual, quality | geometry, map, object/relationship state | p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
+| Output/action | 2022], we achieve high-quality results with only SfM points as input. | point map, pose, scene graph, affordance 또는 query result | p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION) |
+| Objective/outcome | While the continuous nature of these methods helps optimization, the stochastic sampling required for rendering is costly and can result in noise. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
 
-## Contribution
-- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.
+## Main Claims and Actual Contribution
 
-## Abstract Cue
-- UNVERIFIED — full text의 해당 section을 정독한 뒤 근거와 위치를 기록한다.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** To summarize, we provide the following contributions: • The introduction of anisotropic 3D Gaussians as a high-quality, unstructured representation of radiance fields. • An optimization ...
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** We introduce a new approach that combines the best of both worlds: our 3D Gaussian representation allows optimization with state-of-the-art (SOTA) visual quality and competitive ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Note that for the NeRF-synthetic dataset, our method achieves high quality even with random initialization.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** In contrast, recent Neural Radiance Field (NeRF) methods build on continuous scene representations, typically optimizing a Multi-Layer Perceptron (MLP) using volumetric ray-marching for novel-view synthesis ...
+- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Our method achieves real-time rendering of radiance fields with quality that equals the previous method with the best quality [Barron et al. 2022], ...
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** 2022], we achieve high-quality results with only SfM points as input.
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our results on previously published datasets show that we can optimize our 3D Gaussians from multi-view captures and achieve equal or better quality than the ...
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** Recent methods achieve fast training [Fridovich-Keil ACM Trans.
+
+- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+
+## Evaluation Scope
+
+| Dimension | Body-grounded record | Boundary | Anchor |
+|---|---|---|---|
+| Evaluation type | SYSTEM / EVALUATION SCOPE UNRESOLVED | do not infer unreported downstream behavior | p. 1 (Figure/Table caption), p. 2 (1 INTRODUCTION) |
+| Embodiment/environment | For unbounded and complete scenes (rather than isolated objects) and 1080p resolution rendering, no current method can achieve real-time display rates. | hardware/simulator version and reset protocol | p. 1 (Front matter), p. 1 (Front matter) |
+| Dataset/benchmark | Note that for the NeRF-synthetic dataset, our method achieves high quality even with random initialization. | role, split, size and leakage | p. 1 (Front matter), p. 1 (Front matter), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
+| Metric | Table 2. PSNR scores for Synthetic NeRF, we start with 100K randomly initialized points. Competing metrics extracted from respective papers. Mic Chair Ship Materials Lego Drums | definition, denominator, direction and uncertainty | p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 14 (Figure/Table caption) |
+| Baseline/ablation | We introduce a new approach that combines the best of both worlds: our 3D Gaussian representation allows optimization with state-of-the-art (SOTA) visual quality and competitive training times, while our tile-based splatting solution ... | fair input/data/compute/action matching | p. 1 (1 INTRODUCTION), p. 5 (Figure/Table caption), p. 1 (Front matter) |
+
+## Explicit Limitations and Failure Boundary
+
+- **p. 9 / 2 RELATED WORK - extractive body cue:** We observe that our method performs relatively well, avoiding complete failure even without the SfM points.
+- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 9. If we limit the number of points that receive gradients, the effect on visual quality is significant. Left: limit of 10 Gaussians that ...
+- **p. 11 / 2 RELATED WORK - extractive body cue:** Comparison of failure artifacts: Mip-NeRF360 has "floaters" and grainy appearance (left, foreground), while our method produces coarse, anisoptropic Gaussians resulting in low-detail visuals (right, background).
+- **p. 2 / 1 INTRODUCTION - extractive body cue:** The fast - but lower-quality - radiance field methods can achieve interactive rendering times depending on the scene (10-15 frames per second), but fall short ...
+- **p. 9 / 2 RELATED WORK - extractive body cue:** Also in areas not well covered from training views, the random initialization method appears to have more floaters that cannot be removed by optimization.
+- **p. 10 / 2 RELATED WORK - extractive body cue:** 7.4 Limitations Our method is not without limitations.
+- **p. 1 / 1 INTRODUCTION - extractive body cue:** While the continuous nature of these methods helps optimization, the stochastic sampling required for rendering is costly and can result in noise.
+
+## Why Read It
+
+Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 2022], but struggle to achieve the visual quality obtained by the current SOTA NeRF methods, i.e., Mip-NeRF360 [Barron et al.를 문제로 두고, To summarize, we provide the following contributions: • The introduction of anisotropic 3D Gaussians as a high-quality, unstructured representation of radiance fields. • An optimization method of 3D Gaussian properties, interleaved with ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.

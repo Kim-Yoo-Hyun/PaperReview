@@ -1,6 +1,6 @@
 # PaperReview Agent Operating Guide
 
-- Updated: 2026-08-28 KST
+- Updated: 2026-09-02 KST
 
 이 파일은 `PaperReview/`와 모든 하위 디렉토리에 적용된다. 이 저장소에서 논문을 조사·추가·분류·요약·합성하는 에이전트는 아래 규칙을 기본 계약으로 따른다.
 
@@ -45,21 +45,24 @@ Humanoid는 별도 taxonomy로 만들지 않는다. Locomotion, whole-body contr
 
 | Artifact | Role | Editing rule |
 |---|---|---|
-| [PAPER.md](./PAPER.md) | 전체 872편 registry와 topic navigation | 구조를 유지한다. 논문 추가 시 row와 실제 folder가 일치해야 한다. |
+| [PAPER.md](./PAPER.md) | 전체 924편 registry와 topic navigation | 구조를 유지한다. 논문 추가 시 row와 실제 folder가 일치해야 한다. |
 | [READING_PLAN.md](./research/READING_PLAN.md) | 우선순위 기준, 연구 관점, 읽기 순서, CORE/NEXT 장기 정독 목록 | `build_reading_tiers.py`가 생성한다. 직접 수정하지 않는다. |
 | [READING_TIERS.csv](./research/READING_TIERS.csv) | 전체 registry의 단일 tier assignment | 생성 파일. 직접 수정하지 않는다. |
-| [READING_STATUS.csv](./research/READING_STATUS.csv) | 190편 정독 진행 상태와 사용자 분석 | 상태·분석 필드는 직접 편집 가능. 생성기는 기존 입력을 보존해야 한다. |
+| [READING_STATUS.csv](./research/READING_STATUS.csv) | 283편 정독 진행 상태와 사용자 분석 | 상태·분석 필드는 직접 편집 가능. 생성기는 기존 입력을 보존해야 한다. |
 | [READING_STATUS.md](./research/READING_STATUS.md) | 상태값과 완료 규칙 | 상태 정의 변경 시 tracker와 synthesis 규칙도 함께 점검한다. |
 | [synthesis/](./synthesis/) | 7개 트랙의 cross-paper comparison과 paper lineage | queue marker 내부는 자동 생성, 나머지는 수동 합성 영역이다. |
 | [RESEARCH_GAPS.md](./research/RESEARCH_GAPS.md) | 트랙을 가로지르는 failure·assumption·evaluation gap | gap 설명의 canonical source다. |
 | [RESEARCH_IDEAS.md](./research/RESEARCH_IDEAS.md) | gap에서 파생한 가설과 최소 실험 | gap 내용을 복제하지 않고 gap ID를 참조한다. |
 | [research/projects/](./research/projects/) | 구현 직전 scoped project의 executable specification | gap/idea보다 구체적인 환경·checkpoint·option/method contract·baseline·metric·ablation·reject rule·freeze artifact를 관리한다. |
-| [work/update/UPDATES_2026-08-28.md](./work/update/UPDATES_2026-08-28.md) | 최신 registry·frontier·gap 갱신 기록 | 날짜별 audit log로 유지하고 canonical gap/plan 내용을 중복 관리하지 않는다. 앞으로의 update log도 `work/update/`에 작성한다. |
+| [work/update/UPDATES_2026-09-02.md](./work/update/UPDATES_2026-09-02.md) | 최신 registry·frontier·gap 갱신 기록 | 날짜별 audit log로 유지하고 canonical gap/plan 내용을 중복 관리하지 않는다. 앞으로의 update log도 `work/update/`에 작성한다. |
 | [work/scripts/build_reading_tiers.py](./work/scripts/build_reading_tiers.py) | tier·plan·tracker·synthesis queue 생성 규칙 | CORE/NEXT membership의 canonical source다. |
-| [work/sources/papers.json](./work/sources/papers.json) | 전체 registry metadata의 canonical manifest | 신규 등록은 `register_papers.py`를 사용한다. |
+| [work/sources/papers.json](./work/sources/papers.json) | 전체 registry identity/publication/source/taxonomy/provenance의 canonical manifest | 신규 등록은 `register_papers.py`를 사용한다. `paper_id`가 내부 stable identity다. |
+| [work/sources/registry.schema.json](./work/sources/registry.schema.json) | manifest 구조와 허용 enum의 JSON Schema | schema 변경 시 migration, audit와 generator를 함께 갱신한다. |
+| [work/sources/registry_meta.json](./work/sources/registry_meta.json) | manifest schema/count/identity/version/evidence policy | manifest count와 schema version을 audit로 검증한다. |
+| [work/sources/benchmark_catalog.json](./work/sources/benchmark_catalog.json) / [metric_catalog.json](./work/sources/metric_catalog.json) | evaluation resource의 paper-ID 탐색 index | 모든 자동 연결은 `cue_only`; 실제 role/split/정의의 근거로 사용하지 않는다. |
 | [work/scripts/audit_repository.py](./work/scripts/audit_repository.py) | registry·tier·tracker·queue·note·taxonomy 무결성 검사 | read-only이며 주요 변경 전후에 실행한다. |
 
-현재 snapshot은 CORE 77편, NEXT 113편, REFERENCE 449편, ARCHIVE 233편이다. 이 숫자는 결과이지 목표 quota가 아니다. 논문 중요성 때문에 필요하면 CORE/NEXT를 늘릴 수 있으며, 장기 정독 규모 100–150편은 운영상 가이드일 뿐 hard cap이 아니다.
+현재 snapshot은 CORE 77편, NEXT 206편, REFERENCE 399편, ARCHIVE 242편이다. 이 숫자는 결과이지 목표 quota가 아니다. 논문 중요성 때문에 필요하면 CORE/NEXT를 늘릴 수 있으며, 장기 정독 규모 100–150편은 운영상 가이드일 뿐 hard cap이 아니다.
 
 ## 4. Canonical Robotics Taxonomy
 
@@ -103,7 +106,7 @@ NEXT는 CORE를 전제로 읽는 전문화·확장·frontier다.
 
 ### REFERENCE
 
-- 중요한 foundation, baseline, dataset, benchmark, survey이지만 현재 190편 정독 흐름의 prerequisite는 아니다.
+- 중요한 foundation, baseline, dataset, benchmark, survey이지만 현재 283편 정독 흐름의 prerequisite는 아니다.
 - 특정 실험이나 아이디어를 설계할 때 찾아 읽는다.
 - `READING_PLAN.md`의 CORE/NEXT와 비교해 중요한 논문이 REFERENCE에 남아 있지 않은지 정기적으로 승격 감사한다.
 
@@ -158,7 +161,7 @@ Tier 결정에서 PDF, 로컬 노트 개수, 다운로드 성공 여부는 절�
 
 논문을 추가하기 전에 다음을 모두 확인한다.
 
-1. `rg -i`로 exact title과 distinctive title phrase를 `PAPER.md`, `READING_TIERS.csv`, `work/sources/*.json`에서 검색한다.
+1. `rg -i`로 exact title과 distinctive title phrase를 `PAPER.md`, `READING_TIERS.csv`, `work/sources/*.json`에서 검색하고 DOI/arXiv/OpenReview identifier 충돌도 확인한다.
 2. punctuation, subtitle, `+`, Greek symbol, arXiv→conference version 차이를 정규화해 중복을 검사한다.
 3. Conference version이 생기면 별도 논문으로 중복 등록하기보다 기존 entry의 venue/status를 갱신하는 것을 우선한다.
 4. 같은 연구의 tech report와 peer-reviewed version을 모두 남겨야 한다면 차이와 이유를 명시한다.
@@ -370,11 +373,13 @@ python3 work/scripts/build_reading_tiers.py
 - `READING_STATUS.csv`의 자동 관리 필드
 - 각 synthesis 문서의 generated reading queue
 
-사용자가 tracker에 입력한 상태와 분석 필드는 같은 `overview_path`가 유지되는 한 보존되어야 한다. 생성기 수정 후 반드시 이를 검증한다.
+사용자가 tracker에 입력한 상태와 분석 필드는 같은 `overview_path`가 유지되는 한 보존되어야 한다. 생성기 수정 후 반드시 이를 검증한다. `paper_id`와 `primary_track`은 manifest에서 파생되는 자동 필드다.
 
 ### Paper registration and full rebuild safety
 
 - 신규 metadata는 `python3 work/scripts/register_papers.py --input <json>`으로 dry-run한 뒤 `--apply`로 등록한다.
+- 기존 manifest schema를 올릴 때는 `python3 work/scripts/migrate_registry_schema.py` dry-run 후 `--apply`를 사용하고, `registry.schema.json`과 `registry_meta.json`을 함께 갱신한다.
+- evaluation vocabulary는 `python3 work/scripts/build_registry_catalogs.py`로 생성한다. benchmark/metric catalog의 자동 연결은 `cue_only`로만 기록한다.
 - `build_lit_survey.py`는 인자 없이 read-only다. metadata refresh, PDF download, note overwrite, registry/manifest write는 각각 명시적 flag 없이는 실행되지 않아야 한다.
 - `--overwrite-notes`는 기존 수동 분석을 덮어쓰므로 사용자의 명시적 전체 재생성 요청 없이는 사용하지 않는다.
 - `work/scripts/archive/`의 one-off script와 `work/archive/reports/`의 과거 report는 실행하거나 현재 source of truth로 사용하지 않는다.
@@ -412,14 +417,16 @@ git diff --check
 - `PAPER.md`의 declared total과 table row 수가 일치하는가
 - 각 paper overview link가 실제 파일에 연결되는가
 - exact title 또는 normalized title 중복이 없는가
+- stable `paper_id`와 public identifier 중복이 없거나 명시적 version/same-work relation으로 설명되는가
 - Year/venue/path가 서로 일치하는가
+- manifest가 `registry.schema.json`과 `registry_meta.json`에 맞는가
 
 ### Tier integrity
 
 - 모든 registry paper가 정확히 하나의 `CORE/NEXT/REFERENCE/ARCHIVE` tier에 속하는가
 - CORE/NEXT 사이에 중복이 없는가
 - CORE/NEXT 모든 paper가 `READING_PLAN.md`와 `READING_STATUS.csv`에 나타나는가
-- 190편이 7개 synthesis queue에 정확히 한 번씩 배정되는가
+- 283편이 7개 synthesis queue에 정확히 한 번씩 배정되는가
 - Tier 판단에 PDF 상태가 들어가지 않았는가
 
 ### Tracker integrity
@@ -427,6 +434,7 @@ git diff --check
 - 허용된 status 값만 사용하는가
 - 허용된 evidence level만 사용하며 status와 최소 조합이 맞는가
 - 기존 사용자 입력이 재생성 후 보존되는가
+- tier/tracker의 `paper_id`와 `primary_track`이 manifest와 일치하는가
 - CORE와 NEXT sequence가 연속적인가
 - Tracker에 PDF 관련 column을 추가하지 않았는가
 
@@ -468,8 +476,8 @@ git diff --check
 
 질문의 기준을 먼저 분리한다.
 
-- Registry composition: 전체 872편 기준
-- Intensive reading: CORE+NEXT 기준 (현재 190편)
+- Registry composition: 전체 924편 기준
+- Intensive reading: CORE+NEXT 기준 (현재 283편)
 - Reading progress: `READING_STATUS.csv` 기준
 - Priority, reading order, detailed robotics coverage: `READING_PLAN.md` 기준
 

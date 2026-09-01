@@ -1,41 +1,75 @@
 # Insights — Mobile ALOHA: Learning Bimanual Mobile Manipulation using Low-Cost Whole-Body Teleoperation
 
-> Evidence maturity: `UNREAD`. 이 문서는 읽기 위치와 검증 질문을 정리한 curation note이며, 정독 완료를 뜻하지 않는다.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2401.02117; PDF retrieval source: https://arxiv.org/pdf/2401.02117. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## Why CORE
+## Paper-supported conclusion
 
-이 논문은 **Locomotion, mobile manipulation, and humanoid systems**에서 dynamics adaptation, contact-rich locomotion, whole-body coupling과 embodiment-specific deployment를 비교하기 위한 기반로 선정됐다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
-## Captured Source Cues — Not Yet Independently Verified
+### What was actually new
 
-- Problem cue: Using data collected with Mobile ALOHA, we then perform supervised behavior cloning and find that co-training with existing static ALOHA datasets boosts performance on mobile manipulation tasks.
-- Method cue: In this work, we develop a system for imitating mobile manipulation tasks that are bimanual and require whole-body control.
-- Result/evaluation cue: To further improve the imitation learning performance, we are inspired by the recent success of pre-training and co-training on diverse robot datasets, while noticing that there are few ...
+- **p. 2 / 1. Introduction - extractive body cue:** On the hardware front, we present Mobile ALOHA, a low-cost and whole-body teleoperation system for collecting bimanual mobile manipulation data.
+- **p. 2 / 1. Introduction - extractive body cue:** The main contribution of this paper is a system for learning complex mobile bimanual manipulation tasks.
+- **p. 1 / 1. Introduction - extractive body cue:** Imitation learning from human-provided demonstrations is a promising tool for developing generalist robots, as it allows people to teach arbitrary skills to robots.
+- **p. 4 / 3. Mobile ALOHA Hardware - extractive body cue:** Connecting the operator to the mobile manipulator directly also enables coarse haptic feedback when the robot collides with objects.
+- **p. 1 / Abstract - extractive body cue:** In this work, we develop a system for imitating mobile manipulation tasks that are bimanual and require whole-body control.
+- **p. 5 / 3. Mobile ALOHA Hardware - extractive body cue:** The training objective for a mobile manipulation policy πm for a task m is E(oi,aiarms,ai base)∼Dm mobile  L(ai arms, ai base, πm(oi))  + ...
+- **p. 2 / 1. Introduction - extractive body cue:** While many recent works demonstrate that highly expressive policy classes such as diffusion models and transformers can perform well on fine-grained, multi-modal manipulation tasks, it ...
+- **Contribution anchor:** p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3. Mobile ALOHA Hardware), p. 1 (Abstract), p. 5 (3. Mobile ALOHA Hardware)
 
-위 cue는 기존 official abstract 또는 local text extraction에서 보존한 것이다. 수치·조건·인과적 해석은 full-text 정독 전까지 `UNVERIFIED`다.
+### Strongest assumption and failure boundary
 
-## Dependency Position
+- **p. 2 / 1. Introduction - extractive body cue:** (1) We lack accessible, plug-and-play hardware for whole-body teleoperation.
+- **p. 2 / 1. Introduction - extractive body cue:** We seek to tackle the challenges of applying imitation learning to bimanual mobile manipulation in this paper.
+- **p. 10 / 8. User Studies - extractive body cue:** Despite Mobile ALOHA's simplicity and performance, there are still limitations that we hope to address in future works.
+- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Hardware Details. Left: Mobile ALOHA has two wrist cameras and one top camera, with onboard power and compute. Middle: The teleoperation setup can ...
+- **p. 8 / 6.1. Co-training Improves Performance - extractive body cue:** In all of these cases, compounding errors appear to be the main source of failure, either from the stochasticity of robot base velocity control or ...
+- **p. 9 / 6.1. Co-training Improves Performance - extractive body cue:** The main failure modes are imprecise grasping on Lift Glass and Wipe as well as jerky motion when switching between chunks.
+- **p. 8 / 6.1. Co-training Improves Performance - extractive body cue:** The only task that falls below 80% success is Cook Shrimp (40%), which is a 75-second long-horizon task for which we only collected 20 demonstrations.
+- **Boundary to test:** Despite Mobile ALOHA's simplicity and performance, there are still limitations that we hope to address in future works.
 
-`OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning → Mobile ALOHA: Learning Bimanual Mobile Manipulation using Low-Cost Whole-Body Teleoperation → 이 track의 frontier 연결`
+### Claim–evidence link
 
-이 화살표는 reading dependency다. 직접 citation 관계는 references와 related work를 확인한 뒤 synthesis 문서에만 확정한다.
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | On the hardware front, we present Mobile ALOHA, a low-cost and whole-body teleoperation system for collecting bimanual mobile manipulation data. | p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| Reported outcome | Co-training improves the whole-task success rate in 5 out of the 7 tasks, with a boost of 45%, 20%, 80%, 95% and 80% respectively. | p. 8 (6.1. Co-training Improves Performance), p. 7 (Figure/Table caption) |
+| Failure/limitation | Despite Mobile ALOHA's simplicity and performance, there are still limitations that we hope to address in future works. | p. 10 (8. User Studies), p. 3 (Figure/Table caption) |
 
-## Close-Reading Checklist
+## Researcher interpretation
 
-- state/action level, dynamics/contact handling, reward/reference, adaptation signal, sim-to-real protocol, stability와 task metric
-- 논문이 고정한 가정과 실제 deployment에서 깨질 조건
-- strongest baseline과 공정한 비교가 성립하는 조건
-- negative result, failure case, compute/data/hardware dependency
+### Reusable lesson in the robotics loop
 
-## Research Use
+- **Closed-loop position:** `egocentric RGB-D, language/task goal, base-arm proprioception → map/object/contact state와 base-arm coordination decision → base motion plus arm/gripper action`.
+- 이 논문의 재사용 가능한 지점은 This observation is also consistent across different class of state-of-the-art imitation learning methods, including ACT [104] and Diffusion Policy [18].를 We also record the joint positions of all 4 robot arms to be used as policy observations and actions.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 map/object/contact state와 base-arm coordination decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Despite Mobile ALOHA's simplicity and performance, there are still limitations that we hope to address in future works.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: On the hardware front, we present Mobile ALOHA, a low-cost and whole-body teleoperation system for collecting bimanual mobile manipulation data.
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
-- learned skill과 model-based whole-body constraint 사이의 interface를 설계한다.
-- 연결 gap: `G-09 / G-11` in [RESEARCH_GAPS.md](../../../research/RESEARCH_GAPS.md)
+### Dependency and evolution
 
-## Minimal Reproduction
+- **Registry position:** `CORE` in `Locomotion, whole-body, mobile manipulation, and humanoids`; tags: `Robotics, mobile manipulation, bimanual manipulation, teleoperation`.
+- **Reading predecessor in the generated track queue:** OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** Perpetual Humanoid Control for Real-time Simulated Avatars (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Despite Mobile ALOHA's simplicity and performance, there are still limitations that we hope to address in future works.; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
-동일 disturbance set에서 task completion, fall/contact violation, recovery time와 energy를 함께 측정한다.
+### Minimal reproduction
 
-## Promotion Rule
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: We then evaluate each policy in the real-world, with randomization of robot and objects configurations as described in Figure 3..
+3. Compare against the body-reported baseline or a matched simpler baseline: Co-train outperforms pre-train on the Wipe Wine task..
+4. Report the body metric and its denominator/aggregation: Table 1: Co-training improves ACT performance. Across 7 challenging mobile manipulation tasks, co-training with static ALOHA dataset consistently improve the success rate (%) of ACT. It is particularly important for sub-tasks like ....
+5. Re-run the body-reported ablation/failure condition: We start with ACT [104], the method introduced with ALOHA, and train it on all 7 tasks with and without co-training..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
 
-`READ`로 올리려면 method/evaluation 필드를 채우고, `SYNTHESIZED`로 올리려면 같은 track의 선행·후속 논문과 comparison matrix를 갱신한다.
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction), p. 5 (3. Mobile ALOHA Hardware); the primary result is directionally consistent at p. 8 (6.1. Co-training Improves Performance), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption); and the failure boundary is measured rather than omitted.
+
+## Falsifiable research question
+
+고정된 observation/action/data/compute budget에서 hardware, front, present mechanism이 Co-train outperforms pre-train on the Wipe Wine task. 대비 Table 1: Co-training improves ACT performance. Across 7 challenging mobile manipulation tasks, co-training with static ALOHA dataset consistently ...을 개선하고, Despite Mobile ALOHA's simplicity and performance, there are still limitations that we hope to address in ... 조건에서도 closed-loop failure를 늘리지 않는가?
+
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

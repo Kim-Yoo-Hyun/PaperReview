@@ -4,11 +4,18 @@
 from __future__ import annotations
 
 import csv
+import json
 import re
+import urllib.parse
 from collections import OrderedDict
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+
+try:
+    from registry_schema import DETAILED_TRACK_TO_PRIMARY
+except ModuleNotFoundError:
+    from .registry_schema import DETAILED_TRACK_TO_PRIMARY
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -295,6 +302,12 @@ NEXT_GROUPS = OrderedDict(
             [
                 "=Logic-Geometric Programming: An Optimization-Based Approach to Combined Task and Motion Planning",
                 "=FFRob: Leveraging Symbolic Planning for Efficient Task and Motion Planning",
+                "=Kinodynamic Trajectory Following with STELA: Simultaneous Trajectory Estimation & Local Adaptation",
+                "=Instruction-Augmented Long-Horizon Planning: Embedding Grounding Mechanisms in Embodied Mobile Manipulation",
+                "=Neural Assembler: Learning to Generate Fine-Grained Robotic Assembly Instructions from Multi-View Images",
+                "=Open-Vocabulary Spatio-Temporal Scene Graph for Robot Perception and Teleoperation Planning",
+                "=Lookahead Exploration with Neural Radiance Representation for Continuous Vision-Language Navigation",
+                "=FOCI: Trajectory Optimization on Gaussian Splats",
             ],
         ),
         (
@@ -321,12 +334,35 @@ NEXT_GROUPS = OrderedDict(
                 "RLBench:",
                 "MimicGen",
                 "DROID: A Large-Scale",
+                "=Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots",
+                "=SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning",
+                "=Robot Fine-Tuning Made Easy: Pre-Training Rewards and Policies for Autonomous Real-World Reinforcement Learning",
+                "=RLDG: Robotic Generalist Policy Distillation via Reinforcement Learning",
+                "=Demonstrating GPU Parallelized Robot Simulation and Rendering for Generalizable Embodied AI with ManiSkill3",
+                "=RoboVerse: A Unified Platform, Benchmark and Dataset for Scalable and Generalizable Robot Learning",
+                "=DexWild: Dexterous Human Interactions for In-the-Wild Robot Policies",
+                "=Dex1B: Learning with 1B Demonstrations for Dexterous Manipulation",
+                "=Sim-and-Real Co-Training: A Simple Recipe for Vision-Based Robotic Manipulation",
+                "=Novel Demonstration Generation with Gaussian Splatting Enables Robust One-Shot Manipulation",
+                "=You Only Teach Once: Learn One-Shot Bimanual Robotic Manipulation from Video Demonstrations",
+                "=RoboMIND: Benchmark on Multi-embodiment Intelligence Normative Data for Robot Manipulation",
+                "=Bridging Perception and Action: Spatially-Grounded Mid-Level Representations for Robot Generalization",
+                "=DemoGen: Synthetic Demonstration Generation for Data-Efficient Visuomotor Policy Learning",
+                "=AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems",
+                "=Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning",
+                "=MP1: MeanFlow Tames Policy Learning in 1-step for Robotic Manipulation",
             ],
         ),
         (
             "Contact-rich, deformable, force, and dexterous manipulation",
             [
                 "=Dense Object Nets: Learning Dense Visual Object Descriptors By and For Robotic Manipulation",
+                "=UMPNet: Universal Manipulation Policy Network for Articulated Objects",
+                "=Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation",
+                "=GaussianGrasper: 3D Language Gaussian Splatting for Open-vocabulary Robotic Grasping",
+                "=ManiGaussian: Dynamic Gaussian Splatting for Multi-task Robotic Manipulation",
+                "=Gaussian Splatting Visual MPC for Granular Media Manipulation",
+                "=Persistent Object Gaussian Splat (POGS) for Tracking Human and Robot Manipulation of Irregularly Shaped Objects",
                 "=DIGIT: A Novel Design for a Low-Cost Compact High-Resolution Tactile Sensor with Application to In-Hand Manipulation",
                 "=DeXtreme: Transfer of Agile In-hand Manipulation from Simulation to Reality",
                 "Control-Limited Differential",
@@ -350,6 +386,17 @@ NEXT_GROUPS = OrderedDict(
                 "Tabero:",
                 "TactAlign:",
                 "DexterityGen:",
+                "=V-HOP: Visuo-Haptic 6D Object Pose Tracking",
+                "=PP-Tac: Paper Picking Using Omnidirectional Tactile Feedback in Dexterous Robotic Hands",
+                "=GeoDEx: A Unified Geometric Framework for Tactile Dexterous and Extrinsic Manipulation under Force Uncertainty",
+                "=Demonstrating REASSEMBLE: A Multimodal Dataset for Contact-rich Robotic Assembly and Disassembly",
+                "=Robust Peg-in-Hole Assembly under Uncertainties via Compliant and Interactive Contact-Rich Manipulation",
+                "=FACTR: Force-Attending Curriculum Training for Contact-Rich Policy Learning",
+                "=CordViP: Correspondence-based Visuomotor Policy for Dexterous Manipulation in Real-World",
+                "=FlowPolicy: Enabling Fast and Robust 3D Flow-Based Policy via Consistency Flow Matching for Robot Manipulation",
+                "=Sparsh: Self-supervised touch representations for vision-based tactile sensing",
+                "=Octopi: Object Property Reasoning with Large Tactile-Language Models",
+                "=OPEN TEACH: A Versatile Teleoperation System for Robotic Manipulation",
             ],
         ),
         (
@@ -378,6 +425,29 @@ NEXT_GROUPS = OrderedDict(
                 "MomaGraph",
                 "AVA-VLA:",
                 "VLA-Arena:",
+                "=SpatialVLA: Exploring Spatial Representations for Visual-Language-Action Models",
+                "=From Spatial to Actions: Grounding Vision-Language-Action Model in Spatial Foundation Priors",
+                "=Uni-NaVid: A Video-based Vision-Language-Action Model for Unifying Embodied Navigation Tasks",
+                "=Learning to Act Anywhere with Task-centric Latent Actions",
+                "=CLIP-RT: Learning Language-Conditioned Robotic Policies from Natural Language Supervision",
+                "=NaVILA: Legged Robot Vision-Language-Action Model for Navigation",
+                "=ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy",
+                "=CodeDiffuser: Attention-Enhanced Diffusion Policy via VLM-Generated Code for Instruction Ambiguity",
+                "=PartInstruct: Part-level Instruction Following for Fine-grained Robot Manipulation",
+                "=Manual2Skill: Learning to Read Manuals and Acquire Robotic Skills for Furniture Assembly Using Vision-Language Models",
+                "=SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics",
+                "=Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots with Advanced Embodied Reasoning, Thinking, and Motion Transfer",
+                "=GR00T N1.5: An Improved Open Foundation Model for Generalist Humanoid Robots",
+                "=GR00T N1.6: An Improved Open Foundation Model for Generalist Humanoid Robots",
+                "=Grounding Actions in Camera Space: Observation-Centric Vision-Language-Action Policy",
+                "=ReKep: Spatio-Temporal Reasoning of Relational Keypoint Constraints for Robotic Manipulation",
+                "=VoxAct-B: Voxel-Based Acting and Stabilizing Policy for Bimanual Manipulation",
+                "=3DS-VLA: A 3D Spatial-Aware Vision Language Action Model for Robust Multi-Task Manipulation",
+                "=GraspVLA: a Grasping Foundation Model Pre-trained on Billion-scale Synthetic Action Data",
+                "=Long-VLA: Unleashing Long-Horizon Capability of Vision Language Action Model for Robot Manipulation",
+                "=RDT-1B: a Diffusion Foundation Model for Bimanual Manipulation",
+                "=AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic Manipulation",
+                "=SIMPACT: Simulation-Enabled Action Planning using Vision-Language Models",
             ],
         ),
         (
@@ -399,6 +469,20 @@ NEXT_GROUPS = OrderedDict(
                 "Can VLMs Diagnose and Recover",
                 "Temporal Difference Calibration",
                 "Memory Retrieval in Visuomotor Policies",
+                "=Demonstrating ViSafe: Vision-enabled Safety for High-speed Detect and Avoid",
+                "=Learned Perceptive Forward Dynamics Model for Safe and Platform-aware Robotic Navigation",
+                "=Certifiably-Correct Mapping for Safe Navigation Despite Odometry Drift",
+                "=Particle-Grid Neural Dynamics for Learning Deformable Object Models from RGB-D Videos",
+                "=Map Space Belief Prediction for Manipulation-Enhanced Mapping",
+                "=Unified Video Action Model",
+                "=From Foresight to Forethought: VLM-In-the-Loop Policy Steering via Latent Alignment",
+                "=Prompting with the Future: Open-World Model Predictive Control with Interactive Digital Twins",
+                "=Self-Correcting Robot Manipulation via Gaussian-Splatted Foresight",
+                "=WMNav: Integrating Vision-Language Models into World Models for Object Goal Navigation",
+                "=RoboDreamer: Learning Compositional World Models for Robot Imagination",
+                "=Learning Interactive Real-World Simulators",
+                "=SafeMimic: Towards Safe and Autonomous Human-to-Robot Imitation for Mobile Manipulation",
+                "=Ctrl-World: A Controllable Generative World Model for Robot Manipulation",
             ],
         ),
         (
@@ -420,6 +504,14 @@ NEXT_GROUPS = OrderedDict(
                 "Demonstrating OK-Robot",
                 "HWC-Loco",
                 "VIRAL",
+                "=Language-Grounded Dynamic Scene Graphs for Interactive Object Search with Mobile Manipulation",
+                "=Dynamic Open-Vocabulary 3D Scene Graphs for Long-term Language-Guided Mobile Manipulation",
+                "=AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control",
+                "=Demonstrating MOSART: Opening Articulated Structures in the Real World",
+                "=HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
+                "=Flying Hand: End-Effector-Centric Framework for Versatile Aerial Manipulation Teleoperation and Policy Learning",
+                "=SPIN: Simultaneous Perception, Interaction and Navigation",
+                "=WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts",
             ],
         ),
         (
@@ -429,13 +521,21 @@ NEXT_GROUPS = OrderedDict(
                 "FlowBot3D",
                 "Ditto: Building Digital Twins",
                 "VLMaps",
-                "Open3DSG",
-                "=VGGT: Visual Geometry Grounded Transformer",
                 "SUGAR: Pre-training 3D Visual Representations for Robotics",
                 "Splat-Nav",
-                "EmbodiedSplat",
                 "RoboSpatial:",
                 "PointVLA",
+                "=Vysics: Object Reconstruction Under Occlusion by Fusing Vision and Contact-Rich Physics",
+                "=Act the Part: Learning Interaction Strategies for Articulated Object Part Discovery",
+                "=Where2Explore: Few-shot Affordance Learning for Unseen Novel Categories of Articulated Objects",
+                "=Clio: Real-time Task-Driven Open-Set 3D Scene Graphs",
+                "=HAMMER: Heterogeneous, Multi-Robot Semantic Gaussian Splatting",
+                "=VISTA: Open-Vocabulary, Task-Relevant Robot Exploration with Online Semantic Gaussian Splatting",
+                "=RoboRefer: Towards Spatial Referring with Reasoning in Vision-Language Models for Robotics",
+                "=VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation",
+                "=Volumetric Environment Representation for Vision-Language Navigation",
+                "=IGL-Nav: Incremental 3D Gaussian Localization for Image-goal Navigation",
+                "=Move to Understand a 3D Scene: Bridging Visual Grounding and Exploration for Efficient and Versatile Embodied Navigation",
             ],
         ),
     ]
@@ -508,6 +608,51 @@ REFERENCE_TAG_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Explicit audit decisions for 3D-heavy reference papers. These papers remain
+# in the registry and are searchable, but their current contribution is
+# generic reconstruction/scene rendering rather than robot state estimation,
+# active perception, or closed-loop behavior. Keep this list ID-based so the
+# decision survives registry title/path formatting changes.
+ARCHIVE_3D_RECONSTRUCTION_IDS = frozenset(
+    {
+        "pr-0312",  # ReconFusion
+        "pr-0386",  # Generative Gaussian Splatting
+        "pr-0337",  # PartGen
+        "pr-0423",  # G4Splat
+        "pr-0361",  # HAD
+        "pr-0431",  # WorldSplat
+        "pr-0310",  # SuGaR
+        "pr-0382",  # DeGauss
+        "pr-0410",  # SplatFormer
+        "pr-0755",  # LangSplat
+        "pr-0225",  # CLIP-GS
+        "pr-0776",  # Dr. Splat
+        "pr-0790",  # SceneSplat
+        "pr-0807",  # LightSplat
+    }
+)
+
+# Explicit second-pass reclassification decisions. These papers are not pure
+# render/reconstruction entries: they either provide state-estimation/world
+# modeling foundations or expose a direct planning/control interface. Keep the
+# decisions ID-based so they survive title/path formatting changes.
+REFERENCE_RECLASSIFIED_IDS = frozenset(
+    {
+        "pr-0402",  # CG-SLAM: dense RGB-D tracking and mapping
+        "pr-0369",  # VarSplat: uncertainty-aware RGB-D SLAM
+        "pr-0463",  # Flow Equivariant World Models: action-conditioned memory
+        "pr-0233",  # PhysSplat: physics simulation rather than reconstruction only
+        "pr-0056",  # VGGT: generic visual-geometry foundation
+        "pr-0757",  # Open3DSG: open-vocabulary scene-graph foundation
+        "pr-0794",  # EmbodiedSplat: online semantic 3D perception without policy evaluation
+    }
+)
+
+# State-estimation foundations intentionally retained in REFERENCE by the
+# current audit rule. They are important comparison prerequisites, but are not
+# part of the active long-term CORE/NEXT sequence in this repository.
+REFERENCE_3D_STATE_FOUNDATION_IDS = frozenset({"pr-0554", "pr-0016"})
+
 
 def parse_registry() -> list[dict[str, str]]:
     registry_text = REGISTRY.read_text()
@@ -566,11 +711,50 @@ def resolve_priority_groups(
     return resolved
 
 
-def classify(rows: list[dict[str, str]]) -> tuple[dict[str, str], dict[str, str]]:
+def manifest_primary_tracks() -> dict[str, str | None]:
+    manifest = ROOT / "work" / "sources" / "papers.json"
+    if not manifest.exists():
+        return {}
+    items = json.loads(manifest.read_text(encoding="utf-8"))
+    tracks = {}
+    for item in items:
+        if not item.get("folder"):
+            continue
+        tracks[f"./{item['folder']}/01_overview.md"] = item.get("primary_track")
+        tracks[f"./{urllib.parse.quote(item['folder'])}/01_overview.md"] = item.get("primary_track")
+    return tracks
+
+
+def manifest_paper_ids() -> dict[str, str | None]:
+    manifest = ROOT / "work" / "sources" / "papers.json"
+    if not manifest.exists():
+        return {}
+    items = json.loads(manifest.read_text(encoding="utf-8"))
+    ids = {}
+    for item in items:
+        if not item.get("folder"):
+            continue
+        value = item.get("paper_id")
+        ids[f"./{item['folder']}/01_overview.md"] = value
+        ids[f"./{urllib.parse.quote(item['folder'])}/01_overview.md"] = value
+    return ids
+
+
+def classify(rows: list[dict[str, str]]) -> tuple[dict[str, str], dict[str, str], dict[str, str | None]]:
     core_groups = resolve_groups(rows, CORE_GROUPS)
     next_groups = resolve_groups(rows, NEXT_GROUPS)
     tier_by_path: dict[str, str] = {}
     track_by_path: dict[str, str] = {}
+    primary_track_by_path: dict[str, str | None] = {}
+    manifest_tracks = manifest_primary_tracks()
+    manifest_ids = manifest_paper_ids()
+    known_manifest_ids = {paper_id for paper_id in manifest_ids.values() if paper_id}
+    missing_archive_ids = sorted(ARCHIVE_3D_RECONSTRUCTION_IDS - known_manifest_ids)
+    if missing_archive_ids:
+        raise RuntimeError(
+            "3D archive audit IDs are missing from the manifest: "
+            + ", ".join(missing_archive_ids)
+        )
 
     for tier, groups in (("CORE", core_groups), ("NEXT", next_groups)):
         for track, papers in groups.items():
@@ -580,6 +764,7 @@ def classify(rows: list[dict[str, str]]) -> tuple[dict[str, str], dict[str, str]
                     raise RuntimeError(f"Duplicate curated paper: {paper['title']}")
                 tier_by_path[path] = tier
                 track_by_path[path] = track
+                primary_track_by_path[path] = DETAILED_TRACK_TO_PRIMARY[track]
 
     # Preserve established REFERENCE/ARCHIVE decisions from the generated index.
     # CORE/NEXT remain explicit in the groups above; new uncategorized papers fall
@@ -595,24 +780,60 @@ def classify(rows: list[dict[str, str]]) -> tuple[dict[str, str], dict[str, str]
         path = row["path"]
         if path in tier_by_path:
             continue
+        if manifest_ids.get(path) in REFERENCE_RECLASSIFIED_IDS:
+            tier_by_path[path] = "REFERENCE"
+            track_by_path[path] = "Curated reference"
+            primary_track_by_path[path] = manifest_tracks.get(path)
+            continue
+        if manifest_ids.get(path) in REFERENCE_3D_STATE_FOUNDATION_IDS:
+            tier_by_path[path] = "REFERENCE"
+            track_by_path[path] = "Curated reference"
+            primary_track_by_path[path] = manifest_tracks.get(path)
+            continue
+        if manifest_ids.get(path) in ARCHIVE_3D_RECONSTRUCTION_IDS:
+            tier_by_path[path] = "ARCHIVE"
+            track_by_path[path] = "Outside current robotics-first scope"
+            primary_track_by_path[path] = manifest_tracks.get(path)
+            continue
         existing_tier = existing_tiers.get(path)
         if existing_tier == "REFERENCE":
             tier_by_path[path] = "REFERENCE"
             track_by_path[path] = "Curated reference"
+            primary_track_by_path[path] = manifest_tracks.get(path)
         elif existing_tier == "ARCHIVE":
             tier_by_path[path] = "ARCHIVE"
             track_by_path[path] = "Outside current robotics-first scope"
+            primary_track_by_path[path] = manifest_tracks.get(path)
         elif REFERENCE_TAG_RE.search(row["tags"]):
             tier_by_path[path] = "REFERENCE"
             track_by_path[path] = "Robotics/VLA tag reference"
+            primary_track_by_path[path] = manifest_tracks.get(path)
         else:
             tier_by_path[path] = "ARCHIVE"
             track_by_path[path] = "Outside current robotics-first scope"
-    return tier_by_path, track_by_path
+            primary_track_by_path[path] = manifest_tracks.get(path)
+    assigned_archive_ids = {
+        manifest_ids.get(path)
+        for path, tier in tier_by_path.items()
+        if tier == "ARCHIVE"
+    }
+    missing_assigned_archive_ids = sorted(
+        ARCHIVE_3D_RECONSTRUCTION_IDS - assigned_archive_ids
+    )
+    if missing_assigned_archive_ids:
+        raise RuntimeError(
+            "3D archive audit IDs were not assigned ARCHIVE: "
+            + ", ".join(missing_assigned_archive_ids)
+        )
+    return tier_by_path, track_by_path, primary_track_by_path
 
 
 def write_index(
-    rows: list[dict[str, str]], tier_by_path: dict[str, str], track_by_path: dict[str, str]
+    rows: list[dict[str, str]],
+    tier_by_path: dict[str, str],
+    track_by_path: dict[str, str],
+    primary_track_by_path: dict[str, str | None],
+    paper_id_by_path: dict[str, str | None],
 ) -> None:
     order = {"CORE": 0, "NEXT": 1, "REFERENCE": 2, "ARCHIVE": 3}
     curated_rank: dict[str, int] = {}
@@ -638,6 +859,8 @@ def write_index(
             [
                 "tier",
                 "track",
+                "primary_track",
+                "paper_id",
                 "year",
                 "venue",
                 "title",
@@ -650,6 +873,8 @@ def write_index(
                 [
                     tier_by_path[row["path"]],
                     track_by_path[row["path"]],
+                    primary_track_by_path.get(row["path"]) or "",
+                    paper_id_by_path.get(row["path"]) or "",
                     row["year"],
                     row["venue"],
                     row["title"],
@@ -837,12 +1062,18 @@ def write_plan(
 
 
 def write_status(
-    rows: list[dict[str, str]], tier_by_path: dict[str, str], track_by_path: dict[str, str]
+    rows: list[dict[str, str]],
+    tier_by_path: dict[str, str],
+    track_by_path: dict[str, str],
+    primary_track_by_path: dict[str, str | None],
+    paper_id_by_path: dict[str, str | None],
 ) -> None:
     """Create/update the intensive-reading tracker while preserving user-entered fields."""
     fieldnames = [
         "tier",
         "track",
+        "primary_track",
+        "paper_id",
         "sequence",
         "status",
         "evidence_level",
@@ -920,6 +1151,8 @@ def write_status(
             {
                 "tier": tier,
                 "track": track_by_path[path],
+                "primary_track": primary_track_by_path.get(path) or "",
+                "paper_id": paper_id_by_path.get(path) or "",
                 "sequence": str(sequence_by_tier[tier]),
                 "status": old.get("status") or "UNREAD",
                 "evidence_level": evidence,
@@ -978,9 +1211,10 @@ def write_synthesis_queues() -> None:
 
 def main() -> None:
     rows = parse_registry()
-    tier_by_path, track_by_path = classify(rows)
-    write_status(rows, tier_by_path, track_by_path)
-    write_index(rows, tier_by_path, track_by_path)
+    tier_by_path, track_by_path, primary_track_by_path = classify(rows)
+    paper_id_by_path = manifest_paper_ids()
+    write_status(rows, tier_by_path, track_by_path, primary_track_by_path, paper_id_by_path)
+    write_index(rows, tier_by_path, track_by_path, primary_track_by_path, paper_id_by_path)
     write_plan(rows, tier_by_path)
     write_synthesis_queues()
     counts = {

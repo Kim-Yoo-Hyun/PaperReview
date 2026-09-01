@@ -1,35 +1,49 @@
-# Insights
+# Insights — Learning to Rearrange Deformable Cables, Fabrics, and Bags with Goal-Conditioned Transporter Networks
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: We propose embedding goal-conditioning into Transporter Networks, a recently proposed model architecture for learning robotic manipulation that rearranges deep features to infer displacements that can represent pick and ...
-- 출발 문제 단서: — Rearranging and manipulating deformable objects such as cables, fabrics, and bags is a long-standing challenge in robotic manipulation.
-- 주장된 효과 단서: In simulation and in physical experiments, we demonstrate that goal-conditioned Transporter Networks enable agents to manipulate deformable structures into flexibly specified configurations without test-time visual anchors for target ...
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `CURATION_ONLY`.
+> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-08-11; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- 논문이 제안한 representation/method를 3D scene understanding과 robot decision-making 사이의 중간 표현으로 재해석할 수 있다.
-- 핵심 단서를 그대로 쓰기보다 geometry, semantics, action constraint 중 무엇을 보강해야 하는지 확인하는 출발점으로 삼는다.
+## Paper-supported conclusion
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: In simulation and in physical experiments, we demonstrate that goal-conditioned Transporter Networks enable agents to manipulate deformable structures into flexibly specified configurations without test-time visual anchors for target ...
-- 논문이 다룬 task 범위 밖의 3D consistency, robotics transfer, open-world generalization은 후속 연구 질문으로 남는다.
+> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
 
-## 다음 연구 질문
-- 이 방법의 핵심 representation이 3D geometry와 semantic grounding을 동시에 보존하는가?
-- 동일한 idea가 online robot perception/action setting에서도 유지되는가?
-- failure case가 data 부족, geometry mismatch, language ambiguity, policy limitation 중 어디에서 오는가?
+### What was actually new
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / IoU, mAP, success rate
-- 내 연구 확장 benchmark 후보: ScanNet, Matterport3D, nuScenes, CALVIN
-- 내 연구 확장 metric 후보: mIoU, accuracy, success rate, generalization gap
-- 검증 초점: paper task 성능과 3D/robotics downstream utility를 함께 확인한다.
+- **Method cue:** We propose embedding goal-conditioning into Transporter Networks, a recently proposed model architecture for learning robotic manipulation that rearranges deep features to infer displacements that can represent pick and ...
+- **Problem cue:** — Rearranging and manipulating deformable objects such as cables, fabrics, and bags is a long-standing challenge in robotic manipulation.
+- **Claim/result cue:** In simulation and in physical experiments, we demonstrate that goal-conditioned Transporter Networks enable agents to manipulate deformable structures into flexibly specified configurations without test-time visual anchors for target ...
 
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+### Strongest assumption and failure boundary
 
-## 근거가 되는 논문 단서
-- Problem cue: — Rearranging and manipulating deformable objects such as cables, fabrics, and bags is a long-standing challenge in robotic manipulation.
-- Method cue: We propose embedding goal-conditioning into Transporter Networks, a recently proposed model architecture for learning robotic manipulation that rearranges deep features to infer displacements that can represent pick and ...
-- Result cue: In simulation and in physical experiments, we demonstrate that goal-conditioned Transporter Networks enable agents to manipulate deformable structures into flexibly specified configurations without test-time visual anchors for target ...
+- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+
+## Researcher interpretation
+
+### Reusable lesson in the robotics loop
+
+- **Closed-loop position:** `observation → state/world model`.
+- **Registry interface:** `Robotics, deformable object, cable manipulation, cloth manipulation, goal-conditioned learning` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
+- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+
+### Dependency and evolution
+
+- Registry position: `Manipulation, Contact, and Dexterity`; tags: `Robotics, deformable object, cable manipulation, cloth manipulation, goal-conditioned learning`.
+- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
+- Recorded scope boundary/future cue:
+  - 논문이 도달한 지점: In simulation and in physical experiments, we demonstrate that goal-conditioned Transporter Networks enable agents to manipulate deformable structures into flexibly specified configurations without test-time visual anchors for target ...
+
+### Minimal reproduction
+
+- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
+  - 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / IoU, mAP, success rate
+  - 내 연구 확장 benchmark 후보: ScanNet, Matterport3D, nuScenes, CALVIN
+  - 내 연구 확장 metric 후보: mIoU, accuracy, success rate, generalization gap
+  - 검증 초점: paper task 성능과 3D/robotics downstream utility를 함께 확인한다.
+- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+
+## Falsifiable research question
+
+고정된 sensor·compute budget에서 Robotics, deformable object, cable manipulation, cloth manipulation, goal-conditioned learning 기반 표현이 robot-relevant state 품질과 downstream task success를 sensor noise와 partial observation 아래 개선하는가?
+
+**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.

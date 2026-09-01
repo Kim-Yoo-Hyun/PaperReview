@@ -1,28 +1,76 @@
-# Problem — What Matters in Learning from Offline Human Demonstrations for Robot Manipulation
+# Problem - What Matters in Learning from Offline Human Demonstrations for Robot Manipulation
 
-> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v164/mandlekar22a.html; PDF retrieval source: https://proceedings.mlr.press/v164/mandlekar22a/mandlekar22a.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-- Year/Venue: 2021 / CoRL
-- Category: Robot Learning and Data
-- Tags: Robotics, Imitation Learning, offline learning, robot dataset, Benchmark, robomimic
-- Official paper: https://proceedings.mlr.press/v164/mandlekar22a.html
-- Official PDF: https://proceedings.mlr.press/v164/mandlekar22a/mandlekar22a.pdf
-- Code/Project: https://robomimic.github.io/
-- Source audit: official abstract/proceedings reviewed on 2026-08-12; full text manual review required for exact implementation and numeric claims.
+## Problem in One Sentence
 
-## Target Problem
+PDF body framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction)): Unfortunately, a lack of suitable benchmark and human datasets have made studying this setting difficult.
 
-Offline human demonstration에서 algorithm, history, data quality와 checkpoint selection 중 무엇이 실제 manipulation 성능을 좌우하는지 재현 가능하게 비교해야 한다.
+## PDF Body Digest
 
-## Core Assumptions
+- **p. 1 / Abstract - extractive body cue:** Imitating human demonstrations is a promising approach to endow robots with various manipulation capabilities.
+- **p. 1 / Abstract - extractive body cue:** While recent advances have been made in imitation learning and batch (offline) reinforcement learning, a lack of open-source human datasets and reproducible learning methods make ...
+- **p. 1 / Abstract - extractive body cue:** In this paper, we conduct an extensive study of six offline learning algorithms for robot manipulation on five simulated and three real-world multi-stage manipulation tasks ...
+- **p. 1 / Abstract - extractive body cue:** Our study analyzes the most critical challenges when learning from offline human data for manipulation.
+- **p. 1 / Abstract - extractive body cue:** Based on the study, we derive a series of lessons including the sensitivity to different algorithmic design choices, the dependence on the quality of the ...
+- **p. 2 / 1 Introduction - extractive body cue:** Unfortunately, a lack of suitable benchmark and human datasets have made studying this setting difficult.
+- **p. 2 / 1 Introduction - extractive body cue:** Studying these challenges in the context of robot manipulation and human-provided datasets could be a stepping stone to closing the gap between robot and human ...
 
-- Offline dataset이 deployment state와 task를 충분히 덮는다.
-- Simulation과 제한된 real-robot task에서 얻은 설계 결론이 다른 embodiment에도 유효하다.
+## System and Scope
 
-## Closed-Loop Position
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | Unfortunately, a lack of suitable benchmark and human datasets have made studying this setting difficult. | defined robot simulator/hardware task suite | body wording is the source claim |
+| Observation / input | Offline policy learning is sensitive to the state and action space coverage in the dataset, and by extension, the size of the ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF |
+| State / latent | Offline, policy, learning, sensitive, state, action, space, coverage, dataset, extension | benchmark state/goal와 method decision | notation and tensor shape require body check |
+| Output / action | Human, demonstrations, differ, machine-generated, datasets, recent, trend, benchmarks | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
+| Target outcome | comparable score and protocol validity | success metric, robustness, generalization과 reproducibility | metric/denominator are in 04 evidence |
 
-이 논문은 현재 robotics loop에서 `Behavior cloning / offline RL → RoboMimic → MimicGen / DROID / generalist robot data` 연결을 담당한다. 실제 정독 시 observation/state/action/control 중 어느 interface를 고정하고 어느 부분을 학습하는지 확인한다.
+## Formal Problem Formulation
 
-## Falsification Question
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | standardized episode e and interface; body terms: Offline, policy, learning, sensitive, state, action, space, coverage, dataset, extension | p. 3 (Dataset), p. 4 (Dataset), p. 2 (1 Introduction) |
+| Decision / output variable | method trajectory/action; body terms: present, success, rates, averaged, over, seeds, across, low-dim | p. 3 (Dataset) |
+| Objective / loss / cost | benchmark score and failure cost; cue terms: Unlike, traditional, supervised, learning, where, model, selection, achieved | p. 3 (Dataset), p. 1 (Abstract), p. 2 (1 Introduction), p. 5 (Dataset) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (1 Introduction), p. 3 (Dataset), p. 5 (Dataset) |
+| Success / guarantee | comparable score and protocol validity | p. 5 (Figure/Table caption), p. 3 (Dataset), p. 3 (Figure/Table caption) |
 
-현대 VLA scale과 cross-embodiment data를 직접 다루지는 않는다.
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 2 / 1 Introduction - extractive body cue:** Studying these challenges in the context of robot manipulation and human-provided datasets could be a stepping stone to closing the gap between robot and human ...
+- **p. 1 / 1 Introduction - extractive body cue:** What has inhibited the use of large human-provided datasets to address this gap?
+- **p. 1 / 1 Introduction - extractive body cue:** Despite these advances, the offline learning paradigm has not been nearly as disruptive in robotics as in other disciplines - there is a large gap ...
+
+## What the Paper Changes
+
+PDF contribution framing (p. 3 (Dataset)): We present success rates averaged over 3 seeds for each method across the low-dim Machine-Generated (MG), Proficient-Human (PH), and Multi-Human (MH) datasets.
+
+- additional contribution cue 없음
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 4 | We present success rates averaged over 3 seeds for each method across different subsets of the Multi-Human datasets, ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 6 | There is a strong expectation for batch RL algorithms to be able to distinguish between actions leading to ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 6 | The final row of Table 2 shows additional results on a diagnostic dataset termed Can-Paired, where a single ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 8 | In this section, we summarize the lessons from our study and make recommendations for future work. | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 3 (Dataset), p. 4 (Dataset), p. 2 (1 Introduction), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), interface p. 3 (Dataset), p. 4 (Dataset), p. 2 (1 Introduction), p. 2 (1 Introduction), objective p. 3 (Dataset), p. 1 (Abstract), p. 2 (1 Introduction), p. 5 (Dataset).
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

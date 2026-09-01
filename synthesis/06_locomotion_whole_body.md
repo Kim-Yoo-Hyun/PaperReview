@@ -1,6 +1,6 @@
 # Locomotion, Whole-Body, Mobile Manipulation, and Humanoids
 
-- Updated: 2026-08-28 KST
+- Updated: 2026-09-02 KST
 
 ## Scope
 
@@ -20,14 +20,14 @@ ZMP preview control → Dynamic WBC/HQP/NMPC → DeepMimic/AMP → PHC/MaskedMim
 |---|---|---|---|---|
 | CORE | [Biped Walking Pattern Generation by using Preview Control of Zero-Moment Point](../2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/01_overview.md) | 2003 / ICRA | `UNREAD` | `ABSTRACT_CHECKED` |
 | CORE | [AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control](../2021/ACM-Transactions-on-Grap/2021_ACM-Transactions-on-Grap_AMP-Adversarial-Motion-Priors-for-Stylized-Physics-Based-C/01_overview.md) | 2021 / ACM Transactions on Graphics | `UNREAD` | `ABSTRACT_CHECKED` |
-| CORE | [RMA: Rapid Motor Adaptation for Legged Robots](../2021/RSS/2021_RSS_RMA-Rapid-Motor-Adaptation-for-Legged-Robots/01_overview.md) | 2021 / RSS | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Learning Robust Perceptive Locomotion for Quadrupedal Robots in the Wild](../2022/Science-Robotics/2022_Science-Robotics_Learning-Robust-Perceptive-Locomotion-for-Quadrupedal-Robo/01_overview.md) | 2022 / Science Robotics | `UNREAD` | `CURATION_ONLY` |
-| CORE | [ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots](../2024/Science-Robotics/2024_Science-Robotics_ANYmal-Parkour-Learning-Agile-Navigation-for-Quadrupedal-R/01_overview.md) | 2024 / Science Robotics | `UNREAD` | `CURATION_ONLY` |
-| CORE | [HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation](../2024/RSS/2024_RSS_HumanoidBench-Simulated-Humanoid-Benchmark-for-Whole-Body/01_overview.md) | 2024 / RSS | `UNREAD` | `CURATION_ONLY` |
-| CORE | [OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning](../2024/CoRL/2024_CoRL_OmniH2O-Universal-and-Dexterous-Human-to-Humanoid-Whole-Bo/01_overview.md) | 2024 / CoRL | `UNREAD` | `CURATION_ONLY` |
-| CORE | [Mobile ALOHA: Learning Bimanual Mobile Manipulation using Low-Cost Whole-Body Teleoperation](../2024/CoRL/2024_CoRL_Mobile-ALOHA-Learning-Bimanual-Mobile-Manipulation-using-L/01_overview.md) | 2024 / CoRL | `UNREAD` | `CURATION_ONLY` |
+| CORE | [RMA: Rapid Motor Adaptation for Legged Robots](../2021/RSS/2021_RSS_RMA-Rapid-Motor-Adaptation-for-Legged-Robots/01_overview.md) | 2021 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Learning Robust Perceptive Locomotion for Quadrupedal Robots in the Wild](../2022/Science-Robotics/2022_Science-Robotics_Learning-Robust-Perceptive-Locomotion-for-Quadrupedal-Robo/01_overview.md) | 2022 / Science Robotics | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots](../2024/Science-Robotics/2024_Science-Robotics_ANYmal-Parkour-Learning-Agile-Navigation-for-Quadrupedal-R/01_overview.md) | 2024 / Science Robotics | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation](../2024/RSS/2024_RSS_HumanoidBench-Simulated-Humanoid-Benchmark-for-Whole-Body/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning](../2024/CoRL/2024_CoRL_OmniH2O-Universal-and-Dexterous-Human-to-Humanoid-Whole-Bo/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Mobile ALOHA: Learning Bimanual Mobile Manipulation using Low-Cost Whole-Body Teleoperation](../2024/CoRL/2024_CoRL_Mobile-ALOHA-Learning-Bimanual-Mobile-Manipulation-using-L/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### Locomotion, whole-body control, mobile manipulation, and humanoids — 16
+### Locomotion, whole-body control, mobile manipulation, and humanoids — 24
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
@@ -35,20 +35,32 @@ ZMP preview control → Dynamic WBC/HQP/NMPC → DeepMimic/AMP → PHC/MaskedMim
 | NEXT | [MaskedMimic: Unified Physics-Based Character Control Through Masked Motion Inpainting](../2024/ACM-Transactions-on-Grap/2024_ACM-Transactions-on-Grap_MaskedMimic-Unified-Physics-Based-Character-Control-Throug/01_overview.md) | 2024 / ACM Transactions on Graphics | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots](../2025/ICRA/2025_ICRA_HOVER-Versatile-Neural-Whole-Body-Controller-for-Humanoid/01_overview.md) | 2025 / ICRA | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control](../2026/Science-Robotics/2026_Science-Robotics_SONIC-Supersizing-Motion-Tracking-for-Natural-Humanoid-Who/01_overview.md) | 2026 / Science Robotics | `UNREAD` | `ABSTRACT_CHECKED` |
-| NEXT | [DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills](../2018/TOG-SIGGRAPH/2018_TOG-SIGGRAPH_DeepMimic-Example-Guided-Deep-Reinforcement-Learning-of-Ph/01_overview.md) | 2018 / TOG / SIGGRAPH | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [Sim-to-Real: Learning Agile Locomotion For Quadruped Robots](../2018/RSS/2018_RSS_Sim-to-Real-Learning-Agile-Locomotion-For-Quadruped-Robots/01_overview.md) | 2018 / RSS | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [Learning Quadrupedal Locomotion over Challenging Terrain](../2020/Science-Robotics/2020_Science-Robotics_Learning-Quadrupedal-Locomotion-over-Challenging-Terrain/01_overview.md) | 2020 / Science Robotics | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [Extreme Parkour with Legged Robots](../2024/ICRA/2024_ICRA_Extreme-Parkour-with-Legged-Robots/01_overview.md) | 2024 / ICRA | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [Walk These Ways: Tuning Robot Control for Generalization with Multiplicity of Behavior](../2022/CoRL/2022_CoRL_Walk-These-Ways-Tuning-Robot-Control-for-Generalization-wi/01_overview.md) | 2022 / CoRL | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [HumanPlus: Humanoid Shadowing and Imitation from Humans](../2024/CoRL/2024_CoRL_HumanPlus-Humanoid-Shadowing-and-Imitation-from-Humans/01_overview.md) | 2024 / CoRL | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills](../2025/RSS/2025_RSS_ASAP-Aligning-Simulation-and-Real-World-Physics-for-Learni/01_overview.md) | 2025 / RSS | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [LangWBC: Language-Directed Humanoid Whole-Body Control via End-to-End Learning](../2025/RSS/2025_RSS_LangWBC-Language-Directed-Humanoid-Whole-Body-Control-via/01_overview.md) | 2025 / RSS | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [RoboPanoptes: The All-Seeing Robot with Whole-body Dexterity](../2025/RSS/2025_RSS_RoboPanoptes-The-All-Seeing-Robot-with-Whole-body-Dexterit/01_overview.md) | 2025 / RSS | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [Demonstrating OK-Robot: What Really Matters in Integrating Open-Knowledge Models for Robotics](../2024/RSS/2024_RSS_Demonstrating-OK-Robot-What-Really-Matters-in-Integrating/01_overview.md) | 2024 / RSS | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [HWC-Loco: A Hierarchical Whole-Body Control Approach to Robust Humanoid Locomotion](../2026/ICLR/2026_ICLR_HWC-Loco-A-Hierarchical-Whole-Body-Control-Approach-to-Rob/01_overview.md) | 2026 / ICLR Poster | `UNREAD` | `CURATION_ONLY` |
-| NEXT | [VIRAL: Visual Sim-to-Real at Scale for Humanoid Loco-Manipulation](../2026/CVPR/2026_CVPR_VIRAL-Visual-Sim-to-Real-at-Scale-for-Humanoid-Loco-Manipu/01_overview.md) | 2026 / CVPR | `UNREAD` | `CURATION_ONLY` |
+| NEXT | [DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills](../2018/TOG-SIGGRAPH/2018_TOG-SIGGRAPH_DeepMimic-Example-Guided-Deep-Reinforcement-Learning-of-Ph/01_overview.md) | 2018 / TOG / SIGGRAPH | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Sim-to-Real: Learning Agile Locomotion For Quadruped Robots](../2018/RSS/2018_RSS_Sim-to-Real-Learning-Agile-Locomotion-For-Quadruped-Robots/01_overview.md) | 2018 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Learning Quadrupedal Locomotion over Challenging Terrain](../2020/Science-Robotics/2020_Science-Robotics_Learning-Quadrupedal-Locomotion-over-Challenging-Terrain/01_overview.md) | 2020 / Science Robotics | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Extreme Parkour with Legged Robots](../2024/ICRA/2024_ICRA_Extreme-Parkour-with-Legged-Robots/01_overview.md) | 2024 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Walk These Ways: Tuning Robot Control for Generalization with Multiplicity of Behavior](../2022/CoRL/2022_CoRL_Walk-These-Ways-Tuning-Robot-Control-for-Generalization-wi/01_overview.md) | 2022 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [HumanPlus: Humanoid Shadowing and Imitation from Humans](../2024/CoRL/2024_CoRL_HumanPlus-Humanoid-Shadowing-and-Imitation-from-Humans/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills](../2025/RSS/2025_RSS_ASAP-Aligning-Simulation-and-Real-World-Physics-for-Learni/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [LangWBC: Language-Directed Humanoid Whole-Body Control via End-to-End Learning](../2025/RSS/2025_RSS_LangWBC-Language-Directed-Humanoid-Whole-Body-Control-via/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [RoboPanoptes: The All-Seeing Robot with Whole-body Dexterity](../2025/RSS/2025_RSS_RoboPanoptes-The-All-Seeing-Robot-with-Whole-body-Dexterit/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Demonstrating OK-Robot: What Really Matters in Integrating Open-Knowledge Models for Robotics](../2024/RSS/2024_RSS_Demonstrating-OK-Robot-What-Really-Matters-in-Integrating/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [HWC-Loco: A Hierarchical Whole-Body Control Approach to Robust Humanoid Locomotion](../2026/ICLR/2026_ICLR_HWC-Loco-A-Hierarchical-Whole-Body-Control-Approach-to-Rob/01_overview.md) | 2026 / ICLR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [VIRAL: Visual Sim-to-Real at Scale for Humanoid Loco-Manipulation](../2026/CVPR/2026_CVPR_VIRAL-Visual-Sim-to-Real-at-Scale-for-Humanoid-Loco-Manipu/01_overview.md) | 2026 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Language-Grounded Dynamic Scene Graphs for Interactive Object Search with Mobile Manipulation](../2024/RA-L/2024_RA-L_Language-Grounded-Dynamic-Scene-Graphs-for-Interactive-Obj/01_overview.md) | 2024 / RA-L | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Dynamic Open-Vocabulary 3D Scene Graphs for Long-term Language-Guided Mobile Manipulation](../2025/RA-L/2025_RA-L_Dynamic-Open-Vocabulary-3D-Scene-Graphs-for-Long-term-Lang/01_overview.md) | 2025 / RA-L | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control](../2025/RSS/2025_RSS_AMO-Adaptive-Motion-Optimization-for-Hyper-Dexterous-Human/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Demonstrating MOSART: Opening Articulated Structures in the Real World](../2025/RSS/2025_RSS_Demonstrating-MOSART-Opening-Articulated-Structures-in-the/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit](../2025/RSS/2025_RSS_HOMIE-Humanoid-Loco-Manipulation-with-Isomorphic-Exoskelet/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Flying Hand: End-Effector-Centric Framework for Versatile Aerial Manipulation Teleoperation and Policy Learning](../2025/RSS/2025_RSS_Flying-Hand-End-Effector-Centric-Framework-for-Versatile-A/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [SPIN: Simultaneous Perception, Interaction and Navigation](../2024/CVPR/2024_CVPR_SPIN-Simultaneous-Perception-Interaction-and-Navigation/01_overview.md) | 2024 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts](../2024/CoRL/2024_CoRL_WoCoCo-Learning-Whole-Body-Humanoid-Control-with-Sequentia/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
+
+## 2026-09-02 Curation Update
+
+`AMO`, `MOSART`, `HOMIE`, `Flying Hand`, `SPIN`, `WoCoCo`를 `NEXT`에 반영했다. 이 논문들은 humanoid를 별도 taxonomy로 만들지 않고 whole-body control, contact switching, mobile/loco-manipulation, aerial manipulation의 실제 execution interface로 비교한다.
 
 ## Comparison Matrix
 

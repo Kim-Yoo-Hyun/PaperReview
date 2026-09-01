@@ -1,22 +1,137 @@
-# Method
+# Method - Global Planning for Contact-Rich Manipulation via Local Smoothing of Quasi-Dynamic Contact Models
 
-> Evidence maturity: `UNREAD`. 아래 내용은 source cue와 사전 구조화이며, 정독 전에는 paper-supported conclusion으로 인용하지 않는다.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2206.10787; PDF retrieval source: https://arxiv.org/pdf/2206.10787. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-- Year/Venue: 2023 / T-RO
-- Category: Manipulation, Contact, and Dexterity
-- Tags: Robotics, contact-rich manipulation, Planning, quasi-dynamic model
-- Paper link: [paper.pdf](./paper.pdf)
-- Code/Project: https://github.com/pangtao22/quasistatic_simulator
-- Source audit: regenerated from local `paper.pdf` on 2026-08-11; survey-keyword template text removed.
+## Method in One Sentence
 
-## Brief Method
-- Applying our method on several challenging contactrich manipulation tasks, we demonstrate that efficient modelbased motion planning can achieve results comparable to RL, but with dramatically less computation. https://sites.google.com/view/global-planning-contact/home ...
+PDF body method statement (p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5 (II. LOCAL THEORY OF SMOOTHING), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms related to velocity and acceleration, and focusing on ...
 
-## 원리적 동기
-- —The empirical success of Reinforcement Learning (RL) in contact-rich manipulation leaves much to be understood from a model-based perspective, where the key difficulties are often attributed to (i) ...
-- On the other hand, model-based methods have tackled the same challenges by smoothing contact dynamics analytically.
-- Applying our method on several challenging contactrich manipulation tasks, we demonstrate that efficient modelbased motion planning can achieve results comparable to RL, but with dramatically less computation. https://sites.google.com/view/global-planning-contact/home ...
+## Method Body Digest
 
-## 핵심 방법론
-- Exact PlanarPushing Cost Time(s) 11.74 2.17 11.73 4.64 12.86 4.61 31.64 1.88 PlanarHand Cost Time(s) 26.55 5.20 17.87 23.09 18.29 11.93 18.49 5.91 AllegroHand Cost Time(s) 5.78 19.59 ...
-- All methods are ran for 20 iterations across
+- **p. 6 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms related to velocity ...
+- **p. 5 / II. LOCAL THEORY OF SMOOTHING - extractive body cue:** 2) First-Order Randomized Smoothing: We use the following estimators for first-order randomized smoothing of dynamical systems, Aρ ≈1 N PN i=1  ∂ ∂xf(¯x + ...
+- **p. 7 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** As the derivatives (30) are discontinuous functions of (q, u) [16], they are not a good local approximation of the CQDC dynamics unless multiple gradients ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Specifically, we propose a convex implicit time-stepping contact model (Sec.III-B).
+- **p. 2 / I. INTRODUCTION - extractive body cue:** In addition, we propose an efficient extension step by computing actions that expand the tree using the local models (Sec.VII).
+- **p. 1 / I. INTRODUCTION - extractive body cue:** With model-based knowledge of the dynamic modes, these planners typically alternate between continuous-state planning in the current contact mode and a discrete search for the ...
+- **p. 1 / Abstract - extractive body cue:** The empirical success of Reinforcement Learning (RL) in contact-rich manipulation leaves much to be understood from a model-based perspective, where the key difficulties are often ...
+- **p. 4 / II. LOCAL THEORY OF SMOOTHING - extractive body cue:** Letting F(J, µ) denote the objective function, the gradients are ∂F/∂µ = Ew[f(¯x + w)] -µ∗, (10a) ∂F/∂J = Ew[ww⊺]J∗-Ew[f(¯x + w)w⊺].
+
+## Design Rationale
+
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Our first contribution is to establish the theoretical equivalence of the two smoothing schemes for simple systems under our framework (Sec.II,IV-C).
+- **p. 2 / I. INTRODUCTION - extractive body cue:** (ii) We present a convex, differentiable formulation of quasi-dynamic contact dynamics and its analytic smoothing, which we show to be highly effective for contact-rich manipulation ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** 1: Examples of contact-rich plans generated by our method.
+
+## Source Evidence Cues
+
+- **p. 6 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms related to velocity ...
+- **p. 5 / II. LOCAL THEORY OF SMOOTHING - extractive body cue:** 2) First-Order Randomized Smoothing: We use the following estimators for first-order randomized smoothing of dynamical systems, Aρ ≈1 N PN i=1  ∂ ∂xf(¯x + ...
+- **p. 7 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** As the derivatives (30) are discontinuous functions of (q, u) [16], they are not a good local approximation of the CQDC dynamics unless multiple gradients ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Specifically, we propose a convex implicit time-stepping contact model (Sec.III-B).
+- **p. 2 / I. INTRODUCTION - extractive body cue:** In addition, we propose an efficient extension step by computing actions that expand the tree using the local models (Sec.VII).
+- **p. 1 / I. INTRODUCTION - extractive body cue:** With model-based knowledge of the dynamic modes, these planners typically alternate between continuous-state planning in the current contact mode and a discrete search for the ...
+- **p. 1 / Abstract - extractive body cue:** The empirical success of Reinforcement Learning (RL) in contact-rich manipulation leaves much to be understood from a model-based perspective, where the key difficulties are often ...
+- **Detected method headings:** none reliably recovered
+
+## Pipeline
+
+| Module | Purpose | Input | Operation | Output | PDF cue | Anchor |
+|---|---|---|---|---|---|---|
+| Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms ... | p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5 (II. LOCAL THEORY OF SMOOTHING) |
+| Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | 2) First-Order Randomized Smoothing: We use the following estimators for first-order randomized smoothing of dynamical systems, Aρ ≈1 N PN i=1  ... | p. 5 (II. LOCAL THEORY OF SMOOTHING), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE) |
+| Contact execution / correction | interaction outcome으로 action을 닫힌 loop로 수정한다 | candidate와 visual/force/tactile feedback | tracking, regrasp, correction, termination 또는 recovery를 수행 | next action/task state | As the derivatives (30) are discontinuous functions of (q, u) [16], they are not a good local approximation of the CQDC dynamics ... | p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 2 (I. INTRODUCTION) |
+
+- Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
+
+## Objective / Update Rule
+
+- **p. 4 / II. LOCAL THEORY OF SMOOTHING - extractive body cue:** Letting F(J, µ) denote the objective function, the gradients are ∂F/∂µ = Ew[f(¯x + w)] -µ∗, (10a) ∂F/∂J = Ew[ww⊺]J∗-Ew[f(¯x + w)w⊺].
+- **p. 7 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** Remarkably, this implies that the quasi-dynamic equations of motion (23), together with the friction constraints (26), are the KKT optimality conditions [33, §5.9] of the ...
+- **p. 8 / IV. SMOOTHING OF CONTACT DYNAMICS - extractive body cue:** To perform analytic smoothing, we can convert the hard constraints in a convex program into costs using a penalty
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Each plan is generated online in the order of a minute of wall-clock time. iterative gradient-based optimization [4], [5], and samplingbased planning that rely on ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** We find that while optimization-based methods for planning through contact have employed smoothing schemes, all existing SBMP methods for contact planning explicitly consider modes instead ...
+- **p. 3 / II. LOCAL THEORY OF SMOOTHING - extractive body cue:** This gradient, commonly used in RL, is also referred to as the likelihood ratio, or the REINFORCE gradient [41].
+- **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
+- **Equation/algorithm anchors:** p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 4 (II. LOCAL THEORY OF SMOOTHING), p. 5 (II. LOCAL THEORY OF SMOOTHING), p. 8 (IV. SMOOTHING OF CONTACT DYNAMICS), p. 8 (IV. SMOOTHING OF CONTACT DYNAMICS), p. 1 (I. INTRODUCTION).
+- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
+
+## Variables and Parameters
+
+| Role | PDF-derived terms | Normalized robotics interpretation | Status |
+|---|---|---|---|
+| Input/observation | overload, notation, variables, convention, system, state, input, Moreover, derivatives, dynamics, respect, current, control, action | RGB-D/point cloud, object state와 contact/task observation | body cue; exact tensor/frame verify |
+| State/latent | overload, notation, variables, convention, system, state, input, Moreover, derivatives, dynamics | object geometry, affordance, contact mode 또는 end-effector state | body cue; notation verify |
+| Action/output | first, contribution, establish, theoretical, equivalence, smoothing, schemes, simple, systems, under | grasp, pose, force 또는 end-effector trajectory | body cue; unit/decoder verify |
+| Objective/constraint | Letting, denote, objective, function, gradients, Remarkably, implies, quasi-dynamic, equations, motion | task/contact/pose objective | equation anchor required |
+
+## Observation–State–Action Interface
+
+- **p. 5 / II. LOCAL THEORY OF SMOOTHING - extractive body cue:** We overload the notation on the variables for convention, and say the system has state x ∈Rn, input u ∈Rm, and map f : Rn ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** Moreover, the derivatives of the dynamics with respect to the current state and control action can be readily computed using sensitivity analysis for convex conic ...
+- **p. 7 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** As the derivatives (30) are discontinuous functions of (q, u) [16], they are not a good local approximation of the CQDC dynamics unless multiple gradients ...
+- **p. 8 / IV. SMOOTHING OF CONTACT DYNAMICS - extractive body cue:** Throughout this section, we assume we compute a local model of the smooth surrogate around some nominal state-input pair (¯q, ¯u).
+- **p. 8 / IV. SMOOTHING OF CONTACT DYNAMICS - extractive body cue:** In practice, due to the local nature of linearization, we use a low-variance distribution ρ to sample states, though higher variance can be used for ...
+- **p. 6 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms related to velocity ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** In addition, we propose an efficient extension step by computing actions that expand the tree using the local models (Sec.VII).
+- **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
+- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
+
+## Temporal and Runtime Contract
+
+| Contract | Generic domain prior | PDF body cue | Unresolved detail |
+|---|---|---|---|
+| Horizon | grasp/pose proposal에서 contact episode까지의 task horizon; trajectory chunk 여부 확인 필요. | Fortunately, as a result of the farsightedness of quasidynamic models, even an input sequence with T = 1 (i.e. a single time ... | episode/sequence/action-chunk boundary |
+| Rate / latency | perception/planning rate와 low-level contact control rate가 분리된다. | Furthermore, by throwing away kinetic energy at every time step, quasidynamic models are also simpler as they do not need variables for ... | Hz/fps, inference time and control rate |
+| Memory | object/contact state, current pose와 tactile/force history; exact window 확인 필요. | not recovered | window and reset |
+| Compute | point/pose encoding, candidate sampling/optimization과 collision/contact checking이 결정한다. | not recovered | hardware, batch and throughput |
+
+## Training vs Inference
+
+- **p. 15 / VIII. PLANNING RESULTS & DISCUSSION - extractive body cue:** In this section, we apply our algorithm on difficult 3D contactrich manipulation problems previously only tackled by heavy offline approaches in RL [2], [38], and ...
+
+- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
+
+## Method-Specific Formal Details
+
+- **Body-defined terms:** Quasi-dynamic, models, previous, works, have, extensively, robotic, manipulation, simplify, Newtonian, dynamics, removing, terms, related, velocity, acceleration, focusing, contact, forces, core.
+- **Relevant PDF headings:** not reliably recovered.
+- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
+
+## Evaluation Link
+
+| Method component | Evaluation evidence to inspect | PDF anchor |
+|---|---|---|
+| Geometry / affordance state | 2) Missed Contacts: Due to the non-smooth nature of contact dynamics, small discrepancies in object trajectory caused by the phase gap can ... | p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS) |
+| Grasp / trajectory generation | Rolling out u(·) on the real dynamics gives qreal : [0, T] →Rnu+na, which is compared against qsim(·) to evaluate the sim2real ... | p. 17 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS), p. 13 (Figure/Table caption) |
+| Contact execution / correction | Fig. 11: Planning performance for the tasks in Fig. 10. Results include running RRT with the enhancements proposed in Sec. VII using ... | p. 17 (Figure/Table caption), p. 18 (IX. SIM2REAL TRANSFER & HARDWARE RESULTS) |
+
+## Failure and Ablation Link
+
+- **p. 17 / Figure/Table caption - extractive body cue:** Fig. 11: Planning performance for the tasks in Fig. 10. Results include running RRT with the enhancements proposed in Sec. VII using the three smoothing ...
+- **p. 15 / Figure/Table caption - extractive body cue:** Fig. 9: (a-d) RRT trees, shown in the space of qu, at different iterations of a complete run of the enhanced RRT for the PlanarHandFixedY ...
+- **p. 18 / IX. SIM2REAL TRANSFER & HARDWARE RESULTS - extractive body cue:** 4) Hardware Setup: To verify results on actual hardware, we create a variant of the PlanarHand environment, where the object is replaced by a bucket, ...
+- **p. 18 / Figure/Table caption - extractive body cue:** Fig. 13: Hardware for the IiwaBimanual setup, where the goal is to rotate the bucket by 180◦. The left and right pictures correspond to the ...
+- **p. 17 / IX. SIM2REAL TRANSFER & HARDWARE RESULTS - extractive body cue:** These experiments further shed light on the efficacy and the limitations of our proposed method.
+- **p. 18 / IX. SIM2REAL TRANSFER & HARDWARE RESULTS - extractive body cue:** The collision geometries, robot controller stiffness and coefficients of friction are kept consistent between the CQDC dynamics and Drake.
+- **p. 18 / IX. SIM2REAL TRANSFER & HARDWARE RESULTS - extractive body cue:** However, the necessary damping to uphold the quasidynamic assumption does not always exist on 3D systems.
+
+- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
+
+## Reproduction Checklist
+
+1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
+2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
+3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
+4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
+5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** method p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5 (II. LOCAL THEORY OF SMOOTHING), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), objective p. 4 (II. LOCAL THEORY OF SMOOTHING), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 8 (IV. SMOOTHING OF CONTACT DYNAMICS), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (II. LOCAL THEORY OF SMOOTHING), temporal p. 14 (VII. RRT THROUGH CONTACT), p. 2 (I. INTRODUCTION), p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 10 (IV. SMOOTHING OF CONTACT DYNAMICS).
+- Which module is genuinely new, and which is inherited infrastructure or a baseline?
+- What exact computation consumes each observation and emits each action/output?
+- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
+- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

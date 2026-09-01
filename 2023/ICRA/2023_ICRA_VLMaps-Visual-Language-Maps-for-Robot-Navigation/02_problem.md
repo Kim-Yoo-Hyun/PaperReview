@@ -1,21 +1,77 @@
-# Problem
+# Problem - VLMaps: Visual-Language Maps for Robot Navigation
 
-- Year/Venue: 2023 / ICRA
-- Category: Embodied Navigation and Mapping
-- Tags: Vision-Language Navigation, semantic map, Robotics
-- Paper link: ./2023/ICRA/2023_ICRA_VLMaps-Visual-Language-Maps-for-Robot-Navigation/paper.pdf
-- Code/Project: https://vlmaps.github.io/
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2210.05714; PDF retrieval source: https://arxiv.org/pdf/2210.05714. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 왜 문제인가
-- To address this problem, we propose VLMaps, a spatial map representation that directly fuses pretrained visual-language features with a 3D reconstruction of the physical world.
-- Specifically, when combined with large language models (LLMs), VLMaps can be used to (i) translate natural language commands into a sequence of open-vocabulary navigation goals (which, beyond prior ...
-- While this is useful for matching images to natural language descriptions of object goals, it remains disjoint from the process of mapping the environment, so that it lacks ...
+## Problem in One Sentence
 
-## 해결하려는 문제
-- To address this problem, we propose VLMaps, a spatial map representation that directly fuses pretrained visual-language features with a 3D reconstruction of the physical world.
-- Extensive experiments carried out in simulated and real-world environments show that VLMaps enable navigation according to more complex language instructions than existing methods.
-- Meanwhile, recent works show that visual-language models (VLMs) , pretrained on Internet-scale data (e.g., image captions) can be used out-of-the-box to ground language to the visual observations of ...
+PDF body framing (p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): A key aspect of VLMaps is that they are spatial, which enables them to: • Localize spatial goals beyond object-centric ones, e.g., "in between the TV and sofa" or "to ...
 
-## 선행 연구 / 배경 단서
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## PDF Body Digest
+
+- **p. 1 / Abstract - extractive body cue:** Grounding language to the visual observations of a navigating agent can be performed using off-the-shelf visuallanguage models pretrained on Internet-scale data (e.g., image captions).
+- **p. 1 / Abstract - extractive body cue:** While this is useful for matching images to natural language descriptions of object goals, it remains disjoint from the process of mapping the environment, so ...
+- **p. 1 / Abstract - extractive body cue:** To address this problem, we propose VLMaps, a spatial map representation that directly fuses pretrained visual-language features with a 3D reconstruction of the physical world.
+- **p. 1 / Abstract - extractive body cue:** VLMaps can be autonomously built from video feed on robots using standard exploration approaches and enables natural language indexing of the map without additional labeled ...
+- **p. 1 / Abstract - extractive body cue:** Specifically, when combined with large language models (LLMs), VLMaps can be used to (i) translate natural language commands into a sequence of open-vocabulary navigation goals ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** A key aspect of VLMaps is that they are spatial, which enables them to: • Localize spatial goals beyond object-centric ones, e.g., "in between the ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** VLMaps with different language models as well as a discussion on limitations, which point to areas for future work.
+
+## System and Scope
+
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | A key aspect of VLMaps is that they are spatial, which enables them to: • Localize spatial goals beyond object-centric ones, e.g., ... | mapped 3D environment과 mobile robot | body wording is the source claim |
+| Observation / input | Zero-Shot Spatial Goal Navigation from Language In this section, we describe our approach to long-horizon (spatial) goal navigation, given a set of ... | camera/depth stream, pose, map와 language goal | exact sensor/frame/preprocessing from PDF |
+| State / latent | Zero-Shot, Spatial, Goal, Navigation, Language, section, describe, long-horizon, given, landmark | robot pose, free-space/semantic map와 local goal | notation and tensor shape require body check |
+| Output / action | re-purpose, models, mobile, robot, planning, priming, them, several | collision-free trajectory 또는 velocity command | exact unit/frame/decoder require body check |
+| Target outcome | goal reach with collision-free execution | goal reach, safety, localization error와 replanning latency | metric/denominator are in 04 evidence |
+
+## Formal Problem Formulation
+
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | sensor/map state and goal; body terms: Zero-Shot, Spatial, Goal, Navigation, Language, section, describe, long-horizon, given, landmark | p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD) |
+| Decision / output variable | path/waypoint/velocity; body terms: VLMaps, representation, constructed, off-the-shelf, visual-language, models, VLMs, standard | p. 2 (III. METHOD), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
+| Objective / loss / cost | path cost, risk or goal utility; cue terms: applying, argmax, operator, along, direction, reshaping, resulting, vector | p. 3 (III. METHOD), p. 3 (III. METHOD) |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | 본문 anchor 없음 |
+| Success / guarantee | goal reach with collision-free execution | p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
+
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 2 / I. INTRODUCTION - extractive body cue:** VLMaps with different language models as well as a discussion on limitations, which point to areas for future work.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Existing VLM-based solutions generalize to new object goals, but lose the spatial precision of classic geometric maps - is it possible to get the best ...
+
+## What the Paper Changes
+
+PDF contribution framing (p. 2 (III. METHOD), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. METHOD)): We propose VLMaps as one such representation, which can be constructed using off-the-shelf visual-language models (VLMs) and standard 3D reconstruction libraries.
+
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Extensive experiments show that using VLMaps enables more effective long-horizon multi-object goal navigation than baseline alternatives, e.g., CoW [12] and LM-Nav [13], and, in particular, ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** A key aspect of VLMaps is that they are spatial, which enables them to: • Localize spatial goals beyond object-centric ones, e.g., "in between the ...
+- **p. 2 / I. INTRODUCTION - extractive body cue:** 2: VLMaps enables a robot to perform complex zero-shot spatial goal navigation tasks given natural language commands, without additional data collection or model finetuning.
+- **p. 3 / III. METHOD - extractive body cue:** Generating Open-Vocabulary Obstacle Maps Building a VLMap enables us to generate obstacle maps that inherit the open-vocabulary nature of the VLMs used (LSeg and CLIP).
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 6 | We observe that failure cases are caused by: 1) inaccurate depth, which introduces noise during the map creation ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 2 | Fig. 2: VLMaps enables a robot to perform complex zero-shot spatial goal navigation tasks given natural language commands, ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 6 | This is because when the drone does not have access to a customized obstacle map, it fails to ... | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 1 (I. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 1 (I. INTRODUCTION), objective p. 3 (III. METHOD), p. 3 (III. METHOD).
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

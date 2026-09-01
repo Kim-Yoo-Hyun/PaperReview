@@ -1,36 +1,75 @@
-# Insights
+# Insights — Learning Latent Plans from Play
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: In this work, we propose self-supervising control on top of human teleoperated play data as a way to scale up skill learning.
-- 출발 문제 단서: Expert demonstrations, on the other hand, can be arbitrarily complex but are expensive to collect, and still typically form narrow training distributions over visited states, leading to an ...
-- 주장된 효과 단서: The motivation of the state experiments is to understand the how all methods compare on the control problem independent of visual representation learning, which could potentially be improved ...
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v100/lynch20a.html; PDF retrieval source: https://arxiv.org/pdf/1903.01973. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- 논문이 제안한 representation/method를 3D scene understanding과 robot decision-making 사이의 중간 표현으로 재해석할 수 있다.
-- 핵심 단서를 그대로 쓰기보다 geometry, semantics, action constraint 중 무엇을 보강해야 하는지 확인하는 출발점으로 삼는다.
+## Paper-supported conclusion
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: The motivation of the state experiments is to understand the how all methods compare on the control problem independent of visual representation learning, which could potentially be improved ...
-- 논문 내 한계/논의 단서: Future work includes exploring whether generalization is possible to novel objects or novel environments, as well as exploring the effects of imbalance in play data distributions as discussed ...
-- 논문이 다룬 task 범위 밖의 3D consistency, robotics transfer, open-world generalization은 후속 연구 질문으로 남는다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
-## 다음 연구 질문
-- 이 방법의 핵심 representation이 3D geometry와 semantic grounding을 동시에 보존하는가?
-- 동일한 idea가 online robot perception/action setting에서도 유지되는가?
-- failure case가 data 부족, geometry mismatch, language ambiguity, policy limitation 중 어디에서 오는가?
+### What was actually new
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: 자동 추출에서 명확한 dataset 단서 없음 / accuracy, mAP
-- 내 연구 확장 benchmark 후보: ScanNet, Matterport3D, nuScenes, CALVIN
-- 내 연구 확장 metric 후보: mIoU, accuracy, success rate, generalization gap
-- 검증 초점: paper task 성능과 3D/robotics downstream utility를 함께 확인한다.
+- **p. 2 / 1 Introduction - extractive body cue:** In this work, we propose an alternative means of obtaining task-agnostic control-self-supervising on top of unlabeled teleoperated play data: continuous logs of low-level observations and ...
+- **p. 3 / 1 Introduction - extractive body cue:** 3, we propose two self-supervised methods for learning task-agnostic control from play: Play-GCBC and Play-LMP.
+- **p. 12 / A.2 Architecture Details - extractive body cue:** Action space Our 8-DOF agent's action space state consists of: 3 cartesian coordinates for the position of its end effector, 3 Euler angles representing its ...
+- **p. 1 / 1 Introduction - extractive body cue:** Unfortunately, designing reward functions for robotic skills is very challenging, especially when learning from raw observations, typically requiring manually-designed perception systems.
+- **p. 12 / A.2 Architecture Details - extractive body cue:** 9 we show the layers with their sizes and depths of different sub-networks used in the model: the vision network, plan recognition network, plan proposal ...
+- **p. 17 / A.4.3 Coverage Analysis of Interaction Space - extractive body cue:** Our state models were trained on a smaller dataset, up to 180 minutes of play (see Fig 8). "Random": we collected a random exploration dataset ...
+- **p. 15 / A.3.4 Training Data - extractive body cue:** We model an 8-dof continuous action space representing agent end effector position, rotation, and gripper control.
+- **Contribution anchor:** p. 2 (1 Introduction), p. 3 (1 Introduction), p. 12 (A.2 Architecture Details), p. 1 (1 Introduction), p. 12 (A.2 Architecture Details), p. 17 (A.4.3 Coverage Analysis of Interaction Space)
 
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+### Strongest assumption and failure boundary
 
-## 근거가 되는 논문 단서
-- Problem cue: Expert demonstrations, on the other hand, can be arbitrarily complex but are expensive to collect, and still typically form narrow training distributions over visited states, leading to an ...
-- Method cue: In this work, we propose self-supervising control on top of human teleoperated play data as a way to scale up skill learning.
-- Result cue: The motivation of the state experiments is to understand the how all methods compare on the control problem independent of visual representation learning, which could potentially be improved ...
+- **p. 1 / 1 Introduction - extractive body cue:** This presents a challenge for conventional methods-if a slight variation of a skill is needed, e.g. opening a drawer by grasping the handle from the ...
+- **p. 1 / 1 Introduction - extractive body cue:** Additionally, using reinforcement learning in complex settings such as robotics requires overcoming significant exploration challenges, typically addressed by introducing manual scripting primitives to an unsupervised ...
+- **p. 2 / 1 Introduction - extractive body cue:** Unfortunately, it is difficult to obtain datasets with this sort of coverage (Fig.
+- **p. 2 / 1 Introduction - extractive body cue:** To generalize to the widest variety of tasks at test time (indexed by the pair (sc, sg)), it stands that the agent should see the ...
+- **p. 3 / 1 Introduction - extractive body cue:** (a) The ideal coverage is dense and broad over all regions of the space, providing statistical support for all pairs of (current state, goal state).
+- **p. 16 / Figure/Table caption - extractive body cue:** Figure 13: Naturally emerging retrying behavior: example run of Play-LMP policy on "grasp upright" task (grasping an object in upright position). The agent fails initially, ...
+- **p. 17 / A.5 Limitations - extractive body cue:** The question of out-of-distribution generalization-say, playing in the living room and generalizing to the kitchen-is left to future work.
+- **Boundary to test:** Figure 13: Naturally emerging retrying behavior: example run of Play-LMP policy on "grasp upright" task (grasping an object in upright position). The agent fails initially, missing the block at first then knocking ...
+
+### Claim–evidence link
+
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | In this work, we propose an alternative means of obtaining task-agnostic control-self-supervising on top of unlabeled teleoperated play data: continuous logs of low-level observations and actions collected while a human teleoperates the ... | p. 2 (1 Introduction), p. 3 (1 Introduction) |
+| Reported outcome | 3) Does decoupling latent plan inference and plan decoding into independent problems, as is done in Play-LMP, improve performance over goal-conditioned Behavioral Cloning (Play-GCBC), (which does no explicit latent plan inference)? | p. 7 (4 Experiments), p. 7 (4 Experiments) |
+| Failure/limitation | Figure 13: Naturally emerging retrying behavior: example run of Play-LMP policy on "grasp upright" task (grasping an object in upright position). The agent fails initially, missing the block at first then knocking ... | p. 16 (Figure/Table caption), p. 17 (A.5 Limitations) |
+
+## Researcher interpretation
+
+### Reusable lesson in the robotics loop
+
+- **Closed-loop position:** `observation history와 expert trajectory/action → behavior policy와 temporal action context → predicted action 또는 action chunk`.
+- 이 논문의 재사용 가능한 지점은 Algorithm 2 Training Play-LMP 1: Input: Play data D : {(s1, a1), · · · , (sT , aT )} 2: Randomly initialize model parameters θ = {θV , θCG, θπLMP , ...를 (a) Training: 1) sample a random window of experience from a memory of play data; 2) train to recognize and organize a repertoire of behaviors executed during play in a latent plan ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 behavior policy와 temporal action context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Figure 13: Naturally emerging retrying behavior: example run of Play-LMP policy on "grasp upright" task (grasping an object in upright position). The agent fails initially, missing the block at first then knocking ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: In this work, we propose an alternative means of obtaining task-agnostic control-self-supervising on top of unlabeled teleoperated play data: continuous logs of low-level observations and actions collected while a human teleoperates the ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
+
+### Dependency and evolution
+
+- **Registry position:** `NEXT` in `RL, IL, offline learning, and robot data`; tags: `Robotics, Imitation Learning, learning from play, latent plans`.
+- **Reading predecessor in the generated track queue:** Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** Relay Policy Learning: Solving Long-Horizon Tasks via Imitation and Reinforcement Learning (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** Figure 13: Naturally emerging retrying behavior: example run of Play-LMP policy on "grasp upright" task (grasping an object in upright position). The agent fails initially, missing the block at first then knocking ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
+
+### Minimal reproduction
+
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: To compare our play-supervised models to a conventional scenario, we collect a training set of 100 expert demonstrations per task in the environment, and train one behavioral cloning policy (BC, details in ....
+3. Compare against the body-reported baseline or a matched simpler baseline: (a) Play-LMP consistently outperforms the baselines, whether trained on groundtruth states or directly on pixels..
+4. Report the body metric and its denominator/aggregation: 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40 Perturbation amount (meters) 0 20 40 60 80 100 18 tasks average accuracy % Play-LMP (ours) Play-GCBC (ours) BC (b) Robustness to variations..
+5. Re-run the body-reported ablation/failure condition: These data ablation numbers were obtained from models trained on ground truth state observations..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
+
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 12 (A.2 Architecture Details), p. 12 (A.2 Architecture Details), p. 17 (A.4.3 Coverage Analysis of Interaction Space); the primary result is directionally consistent at p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments); and the failure boundary is measured rather than omitted.
+
+## Falsifiable research question
+
+고정된 observation/action/data/compute budget에서 alternative, means, obtaining mechanism이 (a) Play-LMP consistently outperforms the baselines, whether trained on groundtruth states or directly on pixels. 대비 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40 Perturbation amount (meters) 0 20 40 60 80 100 ...을 개선하고, Figure 13: Naturally emerging retrying behavior: example run of Play-LMP policy on "grasp upright" task (grasping ... 조건에서도 closed-loop failure를 늘리지 않는가?
+
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

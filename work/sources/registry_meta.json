@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "manifest": "work/sources/papers.json",
+  "schema": "work/sources/registry.schema.json",
+  "generated_on": "2026-09-01",
+  "paper_count": 924,
+  "identity_policy": "paper_id is the stable internal identity; DOI/arXiv/OpenReview identifiers are optional public identifiers.",
+  "version_policy": "Use relations with type=version_of or same_work_as when a preprint and publication must remain separate.",
+  "evidence_policy": "Manifest provenance records source scope; note evidence and reading status are not inferred from local PDF presence."
+}

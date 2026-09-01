@@ -1,20 +1,77 @@
-# Problem
+# Problem - VLABench: A Large-Scale Benchmark for Language-Conditioned Robotics Manipulation with Long-Horizon Reasoning Tasks
 
-- Year/Venue: 2025 / ICCV
-- Category: Benchmarks and Datasets
-- Tags: VLA, Benchmark, long-horizon
-- Paper link: ./2025/ICCV/2025_ICCV_VLABench-A-Large-Scale-Benchmark-for-Language-Conditioned/paper.pdf
-- Code/Project: not identified from primary page
-- Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-01 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## 왜 문제인가
-- Introduction Language-conditioned manipulation represents a fundamental challenge in embodied AI and a stepping stone toward Artificial General Intelligence .
-- The experimental results indicate that both the current state-of-theart pretrained VLAs and the workflow based on VLMs face challenges in our tasks.
+## Problem in One Sentence
 
-## 해결하려는 문제
-- To better define such general-purpose tasks in the context of LLMs and advance the research in VLAs, we present VLABench, an open-source benchmark for evaluating universal LCM task ...
-- The experimental results indicate that both the current state-of-theart pretrained VLAs and the workflow based on VLMs face challenges in our tasks.
-- To support the downstream finetuning, we provide high-quality training data collected via an automated framework incorporating heuristic skills and prior information.
+PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction)): The second task further intensifies the difficulty, requiring the robot to decompose the task into subtasks and execute the steps to operate a coffee machine-a long-horizon challenge that has previously ...
 
-## 선행 연구 / 배경 단서
-- 자동 추출 실패. `paper.pdf` 본문 수동 확인 필요.
+## PDF Body Digest
+
+- **p. 1 / Abstract - extractive PDF cue:** General-purposed embodied agents are designed to understand the users' natural instructions or intentions and act precisely to complete universal tasks.
+- **p. 1 / Abstract - extractive PDF cue:** Recently, methods based on foundation models especially Vision-LanguageAction models (VLAs) have shown a substantial potential to solve language-conditioned manipulation (LCM) tasks well.
+- **p. 1 / Abstract - extractive PDF cue:** However, existing benchmarks do not adequately meet the needs of VLAs and relative algorithms.
+- **p. 1 / Abstract - extractive PDF cue:** To better define such general-purpose tasks in the context of LLMs and advance the research in VLAs, we present VLABench, an open-source benchmark for evaluating ...
+- **p. 1 / Abstract - extractive PDF cue:** VLABench provides 100 carefully designed categories of tasks, with strong randomization in each category of task and a total of 2000+ objects.
+- **p. 2 / 1. Introduction - extractive PDF cue:** The second task further intensifies the difficulty, requiring the robot to decompose the task into subtasks and execute the steps to operate a coffee machine-a ...
+- **p. 2 / 1. Introduction - extractive PDF cue:** This automated data construction approach facilitates future research on pretraining robotics data. • Our experiments demonstrate that current pre-trained VLAs have yet to exhibit the ...
+
+## System and Scope
+
+| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
+|---|---|---|---|
+| Target problem | The second task further intensifies the difficulty, requiring the robot to decompose the task into subtasks and execute the steps to operate ... | defined robot simulator/hardware task suite | body wording is the source claim |
+| Observation / input | The strong generalization capabilities has inspired two main approaches in language-conditioned manipulation: pre-training visionlanguage-action models using large-scale robotics data, as demonstrated by ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF |
+| State / latent | strong, generalization, capabilities, inspired, main, approaches, language-conditioned, manipulation, pre-training, visionlanguage-action | benchmark state/goal와 method decision | notation and tensor shape require body check |
+| Output / action | Besides, performance, declines, significantly, when, linguistic, instructions, transition | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
+| Target outcome | comparable score and protocol validity | success metric, robustness, generalization과 reproducibility | metric/denominator are in 04 evidence |
+
+## Formal Problem Formulation
+
+| Formulation field | PDF-grounded record | Evidence anchor |
+|---|---|---|
+| State / observation variable | standardized episode e and interface; body terms: strong, generalization, capabilities, inspired, main, approaches, language-conditioned, manipulation, pre-training, visionlanguage-action | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 8 (4.3. Comprehensive Ability of VLMs) |
+| Decision / output variable | method trajectory/action; body terms: summarize, contributions, follows, VLABench, first, benchmark, designed, comprehensively | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 8 (4.3. Comprehensive Ability of VLMs) |
+| Objective / loss / cost | benchmark score and failure cost; cue terms: final, trajectory, smoothed, Bezier, curve, optimize, path, quality | no optimization/equation sentence selected |
+| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent), p. 8 (4.2. Zero-shot Ability of Agent) |
+| Success / guarantee | comparable score and protocol validity | p. 6 (3.3. Benchmark), p. 5 (3.3. Benchmark), p. 6 (Figure/Table caption) |
+
+- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF anchors.
+
+## Bottleneck in Prior Work
+
+- **p. 2 / 1. Introduction - extractive PDF cue:** This automated data construction approach facilitates future research on pretraining robotics data. • Our experiments demonstrate that current pre-trained VLAs have yet to exhibit the ...
+
+## What the Paper Changes
+
+PDF contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 8 (4.3. Comprehensive Ability of VLMs), p. 6 (3.4. Dataset Construction), p. 6 (3.4. Dataset Construction)): We summarize contributions as follows: • We propose VLABench, the first benchmark designed to comprehensively evaluate the capabilities of VLAs and VLMs in robotics manipulation tasks, covering multiple dimensions such ...
+
+- **p. 2 / 1. Introduction - extractive PDF cue:** To better define the types of language-conditioned manipulation tasks suited for foundation models and provide a standardized evaluation suite to advance robotics research, we introduce ...
+- **p. 8 / 4.3. Comprehensive Ability of VLMs - extractive PDF cue:** This dataset consists of a complex set of tasks designed to assess the VLM's ability to perceive visual stimuli and comprehend verbal instructions.
+- **p. 6 / 3.4. Dataset Construction - extractive PDF cue:** During the data construction process, we introduced diverse task variants and domain randomization across different episodes of the same task to ensure the diversity of ...
+- **p. 6 / 3.4. Dataset Construction - extractive PDF cue:** As human teleoperation is timeconsuming and not scalable [38, 47], we developed an efficient, scalable automated data collection pipeline based on our custom skill library.
+
+## Assumptions and Failure Boundary
+
+| Body anchor | Observed limitation/failure cue | Interpretation boundary |
+|---|---|---|
+| body cue at p. 6 | To enhance sample efficiency, reject sampling and failure-triggered early termination are applied. | reported limitation/failure wording; scope must be verified |
+| body cue at p. 8 | We hope that VLABench will inspire both the future research on robotics pertaining recipe and promote more robust ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 8 | Figure 5. Radar charts depicting the performance of all VLM mod- els across six dimensions. The reason why ... | reported limitation/failure wording; scope must be verified |
+| body cue at p. 5 | We also extend the evaluation to cover various skills and long-horizon tasks to assess the overall capability and ... | reported limitation/failure wording; scope must be verified |
+
+- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
+
+## Position in the Robotics Loop
+
+benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. PDF interface anchors: p. 2 (1. Introduction), p. 2 (1. Introduction), p. 8 (4.3. Comprehensive Ability of VLMs), p. 7 (4.2. Zero-shot Ability of Agent). The downstream handoff is claimed only when the body describes it.
+
+## Verification Questions
+
+- **PDF anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 2 (1. Introduction), p. 2 (1. Introduction), p. 8 (4.3. Comprehensive Ability of VLMs), p. 7 (4.2. Zero-shot Ability of Agent), objective no optimization/equation sentence selected.
+- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
+- What are the observation frame, state memory, output/action frame, horizon and termination rule?
+- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
+- Does the evaluation measure the stated target, or only an upstream proxy?

@@ -1,36 +1,54 @@
-# Insights
+# Insights — QuadricFormer: Scene as Superquadrics for 3D Semantic Occupancy Prediction
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: To address this, we propose to use geometrically expressive superquadrics as scene primitives, enabling efficient representation of complex structures with fewer primitives through their inherent shape diversity.
-- 출발 문제 단서: Despite promising applications, 3D semantic occupancy prediction faces efficiency challenges due to its dense 3D predictions .
-- 주장된 효과 단서: Extensive experiments on the nuScenes and KITTI-360 datasets demonstrate that QuadricFormer achieves state-of-the-art performance while maintaining superior efficiency.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `CURATION_ONLY`.
+> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- Camera/LiDAR/Radar/BEV/occupancy representation을 robot 또는 autonomous agent의 metric world model로 사용할 수 있다.
-- Sensor fusion의 핵심은 modality-specific noise와 calibration error를 줄이면서 semantics와 geometry를 같은 map으로 정렬하는 것이다.
+## Paper-supported conclusion
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: Extensive experiments on the nuScenes and KITTI-360 datasets demonstrate that QuadricFormer achieves state-of-the-art performance while maintaining superior efficiency.
-- 논문 내 한계/논의 단서: With random initialization, QuadricFormer cannot fully learn accurate superquadric positions, leaving some superquadrics in empty regions and reducing representation efficiency.
-- perception benchmark 성능 이후에도 open-vocabulary semantics, online calibration, planning-aware uncertainty는 후속 연구 지점으로 남는다.
+> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
 
-## 다음 연구 질문
-- multi-sensor 3D representation에 language/semantic feature를 붙이면 planning-relevant perception이 실제로 개선되는가?
-- calibration error나 missing modality 상황에서 fusion model의 uncertainty를 어떻게 표현하고 사용할 수 있는가?
-- occupancy/BEV representation을 navigation/manipulation planner가 바로 쓰기 좋은 구조로 바꿀 수 있는가?
+### What was actually new
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: ImageNet, KITTI, nuScenes / accuracy, mIoU, IoU
-- 내 연구 확장 benchmark 후보: nuScenes, Waymo, KITTI, Occ3D
-- 내 연구 확장 metric 후보: mAP, NDS, IoU, mIoU
-- 검증 초점: detection/occupancy 성능, robustness, calibration sensitivity, planning utility를 확인한다.
+- **Method cue:** To address this, we propose to use geometrically expressive superquadrics as scene primitives, enabling efficient representation of complex structures with fewer primitives through their inherent shape diversity.
+- **Problem cue:** Despite promising applications, 3D semantic occupancy prediction faces efficiency challenges due to its dense 3D predictions .
+- **Claim/result cue:** Extensive experiments on the nuScenes and KITTI-360 datasets demonstrate that QuadricFormer achieves state-of-the-art performance while maintaining superior efficiency.
 
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+### Strongest assumption and failure boundary
 
-## 근거가 되는 논문 단서
-- Problem cue: Despite promising applications, 3D semantic occupancy prediction faces efficiency challenges due to its dense 3D predictions .
-- Method cue: To address this, we propose to use geometrically expressive superquadrics as scene primitives, enabling efficient representation of complex structures with fewer primitives through their inherent shape diversity.
-- Result cue: Extensive experiments on the nuScenes and KITTI-360 datasets demonstrate that QuadricFormer achieves state-of-the-art performance while maintaining superior efficiency.
+- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+
+## Researcher interpretation
+
+### Reusable lesson in the robotics loop
+
+- **Closed-loop position:** `observation → state/world model`.
+- **Registry interface:** `sensor fusion, LiDAR, semantic, alignment, 3D Vision` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
+- **Prior interpretation carried forward:**
+  - Camera/LiDAR/Radar/BEV/occupancy representation을 robot 또는 autonomous agent의 metric world model로 사용할 수 있다.
+  - Sensor fusion의 핵심은 modality-specific noise와 calibration error를 줄이면서 semantics와 geometry를 같은 map으로 정렬하는 것이다.
+- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+
+### Dependency and evolution
+
+- Registry position: `Autonomous 3D Perception and Sensor Fusion`; tags: `sensor fusion, LiDAR, semantic, alignment, 3D Vision`.
+- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
+- Recorded scope boundary/future cue:
+  - 논문이 도달한 지점: Extensive experiments on the nuScenes and KITTI-360 datasets demonstrate that QuadricFormer achieves state-of-the-art performance while maintaining superior efficiency.
+  - 논문 내 한계/논의 단서: With random initialization, QuadricFormer cannot fully learn accurate superquadric positions, leaving some superquadrics in empty regions and reducing representation efficiency.
+  - perception benchmark 성능 이후에도 open-vocabulary semantics, online calibration, planning-aware uncertainty는 후속 연구 지점으로 남는다.
+
+### Minimal reproduction
+
+- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
+  - 논문 내 evaluation 단서: ImageNet, KITTI, nuScenes / accuracy, mIoU, IoU
+  - 내 연구 확장 benchmark 후보: nuScenes, Waymo, KITTI, Occ3D
+  - 내 연구 확장 metric 후보: mAP, NDS, IoU, mIoU
+  - 검증 초점: detection/occupancy 성능, robustness, calibration sensitivity, planning utility를 확인한다.
+- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+
+## Falsifiable research question
+
+multi-sensor 3D representation에 language/semantic feature를 붙이면 planning-relevant perception이 실제로 개선되는가?
+
+**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.

@@ -1,41 +1,75 @@
 # Insights — π0: A Vision-Language-Action Flow Model for General Robot Control
 
-> Evidence maturity: `UNREAD`. 이 문서는 읽기 위치와 검증 질문을 정리한 curation note이며, 정독 완료를 뜻하지 않는다.
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p010.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p010.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
-## Why CORE
+## Paper-supported conclusion
 
-이 논문은 **VLA and generalist robot policies**에서 vision-language prior를 robot state와 action으로 연결하는 data, architecture, action representation의 기준점로 선정됐다.
+> **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
 
-## Captured Source Cues — Not Yet Independently Verified
+### What was actually new
 
-- Problem cue: 다양한 robot embodiment와 dexterous task를 하나의 generalist policy로 다루면서 web-scale semantic prior를 continuous robot action으로 연결해야 한다.
-- Method cue: Pretrained VLM 위에 flow-matching action expert를 결합한다.
-- Result/evaluation cue: UNVERIFIED — full-text close reading에서 paper-supported cue를 기록한다.
+- **p. 4 / 1. INTRODUCTION - extractive body cue:** ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, ...
+- **p. 2 / 1. INTRODUCTION - extractive body cue:** In this paper, we present a prototype model and learning framework, which we call zo, that illustrates how each of these three bottlenecks could be ...
+- **p. 3 / 1. INTRODUCTION - extractive body cue:** The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an empirical investigation of ...
+- **p. 3 / 1. INTRODUCTION - extractive body cue:** This enables our model to control robots at frequencies of up to 50 Hz for dexterous tasks such as laundry folding (see Figure 1), To ...
+- **p. 4 / 1. INTRODUCTION - extractive body cue:** Note that we use PaliGemma for convenience and because of its comparatively small size (which is useful for real-time control), but our framework is compatible ...
+- **p. 5 / IV. THE x MODEL - extractive body cue:** Formally, we want to model the data distribution p(A,/o,), where Ar = [ar,r¢1,.rs 11-1] corresponds to an action chunk of future actions (we use H ...
+- **p. 5 / IV. THE x MODEL - extractive body cue:** In practice, the network is trained by sampling random noise « ~ \'(0, 1), computing the "noisy actions" Aj = rAy + (1 -r)e, and ...
+- **Contribution anchor:** p. 4 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 5 (IV. THE x MODEL)
 
-위 cue는 기존 official abstract 또는 local text extraction에서 보존한 것이다. 수치·조건·인과적 해석은 full-text 정독 전까지 `UNVERIFIED`다.
+### Strongest assumption and failure boundary
 
-## Dependency Position
+- **p. 2 / 1. INTRODUCTION - extractive body cue:** However, developing such generalist robot policies - ie., robot foundation models - involves a number of major challenges.
+- **p. 2 / 1. INTRODUCTION - extractive body cue:** Flexible and general-purpose models that can be tasked variety of robot behaviors have tremendous fications, but they may also offer solutions to some of the ...
+- **p. 3 / 1. INTRODUCTION - extractive body cue:** In contrast, our model employs a novel design that fine-tunes a VLM to produce actions via flow matching (52, 28], a variant of diffusion [20, ...
+- **p. 3 / 1. INTRODUCTION - extractive body cue:** ‘The complexity of the tasks we illustrate goes significantly beyond prior work.
+- **p. 4 / 1. INTRODUCTION - extractive body cue:** The pre-training phase (Section V-A) also uses diverse language labels, combining rask names and segment annotations (fine-grained labels for sub-trajectories, typically about 2 seconds in ...
+- **p. 11 / C. Learning new dexterous tasks - extractive body cue:** DISCUSSION, LIMITATIONS, AND FUTURE WORK
+- **p. 10 / C. Learning new dexterous tasks - extractive body cue:** This presents challenges due to the egg shape, slipperiness, and the need for careful placement.
+- **Boundary to test:** DISCUSSION, LIMITATIONS, AND FUTURE WORK
 
-`OpenVLA: An Open-Source Vision-Language-Action Model → π0: A Vision-Language-Action Flow Model for General Robot Control → π0.5: a Vision-Language-Action Model with Open-World Generalization`
+### Claim–evidence link
 
-이 화살표는 reading dependency다. 직접 citation 관계는 references와 related work를 확인한 뒤 synthesis 문서에만 확정한다.
+| Claim target | Body evidence | Anchor |
+|---|---|---|
+| Mechanism/contribution | ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, sometimes tens of, minutes in length, for ... | p. 4 (1. INTRODUCTION), p. 2 (1. INTRODUCTION) |
+| Reported outcome | Fig. 9: Language evaluation. We compare "flat" versions of ‘our policies, -#1at, which receive only the overall task com- mand (e.g, "bag the groceries") with a method that receives intermediate commands from ... | p. 9 (Figure/Table caption), p. 8 (Figure/Table caption) |
+| Failure/limitation | DISCUSSION, LIMITATIONS, AND FUTURE WORK | p. 11 (C. Learning new dexterous tasks), p. 10 (C. Learning new dexterous tasks) |
 
-## Close-Reading Checklist
+## Researcher interpretation
 
-- input/state, action representation, data/embodiment scale, control rate, horizon, fine-tuning protocol, unseen-task evaluation와 recovery
-- 논문이 고정한 가정과 실제 deployment에서 깨질 조건
-- strongest baseline과 공정한 비교가 성립하는 조건
-- negative result, failure case, compute/data/hardware dependency
+### Reusable lesson in the robotics loop
 
-## Research Use
+- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
+- 이 논문의 재사용 가능한 지점은 Formally, we want to model the data distribution p(A,/o,), where Ar = [ar,r¢1,.rs 11-1] corresponds to an action chunk of future actions (we use H ~ 50 for our tasks), and 0 ...를 We further augment this backbone with roboties-specific inputs and outputs - namely, proprioceptive state and robot actions.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 DISCUSSION, LIMITATIONS, AND FUTURE WORK에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- The paper-specific mechanism to preserve in a reproduction is: ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, sometimes tens of, minutes in length, for ...
+- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
-- semantic generalization과 low-level control 성능의 기여를 분리한다.
-- 연결 gap: `G-01 / G-02 / G-10 / G-12` in [RESEARCH_GAPS.md](../../../research/RESEARCH_GAPS.md)
+### Dependency and evolution
 
-## Minimal Reproduction
+- **Registry position:** `CORE` in `VLA and generalist robot policies`; tags: `Robotics, VLA, Flow Matching, generalist policy, cross-embodiment, dexterous manipulation`.
+- **Reading predecessor in the generated track queue:** OpenVLA: An Open-Source Vision-Language-Action Model (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** π0.5: a Vision-Language-Action Model with Open-World Generalization (queue adjacency, not a confirmed citation).
+- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
+- **Body-defined next pressure:** DISCUSSION, LIMITATIONS, AND FUTURE WORK; this is the most direct route from the paper's reported scope to a falsifiable extension.
 
-동일 robot/task split에서 representation, action head와 data recipe를 분리해 success, latency와 intervention을 비교한다.
+### Minimal reproduction
 
-## Promotion Rule
+1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
+2. Use the paper-reported resource/task cue: We study this question by directly evaluating 79, with comparisons to other robot foundation models..
+3. Compare against the body-reported baseline or a matched simpler baseline: Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates for baseline models, x-small, and three ....
+4. Report the body metric and its denominator/aggregation: Fig. 9: Language evaluation. We compare "flat" versions of ‘our policies, -#1at, which receive only the overall task com- mand (e.g, "bag the groceries") with a method that receives intermediate commands from ....
+5. Re-run the body-reported ablation/failure condition: How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ‘model without VLM initialization, to evaluate its performance ‘on following language commands..
+6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
 
-`READ`로 올리려면 method/evaluation 필드를 채우고, `SYNTHESIZED`로 올리려면 같은 track의 선행·후속 논문과 comparison matrix를 갱신한다.
+### What would count as a successful reproduction
+
+- The reported mechanism is present at p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 4 (IV. THE x MODEL); the primary result is directionally consistent at p. 9 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION); and the failure boundary is measured rather than omitted.
+
+## Falsifiable research question
+
+고정된 observation/action/data/compute budget에서 more, complex, dexterous mechanism이 Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version ... 대비 Fig. 9: Language evaluation. We compare "flat" versions of ‘our policies, -#1at, which receive only the overall task ...을 개선하고, DISCUSSION, LIMITATIONS, AND FUTURE WORK 조건에서도 closed-loop failure를 늘리지 않는가?
+
+**Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

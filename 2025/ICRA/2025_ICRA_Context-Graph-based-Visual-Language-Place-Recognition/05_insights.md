@@ -1,35 +1,53 @@
-# Insights
+# Insights — Context Graph-based Visual-Language Place Recognition
 
-## 이 논문에서 가져갈 핵심 개념
-- 핵심 방법 단서: In this paper, we introduce a novel VPR approach that remains robust to scene changes and does not require additional training.
-- 출발 문제 단서: However, these approaches still fail under drastic changes and require large amounts of labeled data to train models, presenting a significant limitation.
-- 주장된 효과 단서: To achieve this, a robot must have the ability to determine whether its current location has been previously visited by comparing the incoming sensor data with a database ...
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `CURATION_ONLY`.
+> Analysis basis: `CURATION_ONLY`; 01_overview의 source audit와 기존 insight cue를 이관했다: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 자동 추출 결과는 수동 정독으로 간주하지 않는다.
 
-## 내 연구 방향에서 어떻게 활용할 수 있나
-- 위 paper-specific cue를 논문 claim으로만 두지 말고, 3D Vision + Robotics에서 representation, memory, planning 설계 원리로 재사용한다.
-- Object, relation, room/scene hierarchy를 graph로 구조화해 3D perception 결과를 robot planning과 language reasoning에 넘기는 중간 표현으로 사용할 수 있다.
-- 관계 중심 표현은 단일 object detection보다 task-relevant affordance, spatial relation, commonsense reasoning을 붙이기 쉽다.
+## Paper-supported conclusion
 
-## 이 논문이 끝난 지점
-- 논문이 도달한 지점: To achieve this, a robot must have the ability to determine whether its current location has been previously visited by comparing the incoming sensor data with a database ...
-- static scene graph 품질을 보인 뒤에도 dynamic updates, uncertainty, open-vocabulary relation grounding, robot action coupling은 별도 문제로 남는다.
+> **Evidence boundary:** 현재 내용은 registry와 기존 curation cue를 정리한 것이다. 자동 추출이나 local PDF 보유는 정독 근거로 간주하지 않으며, 상세 claim은 full-text 확인이 필요하다.
 
-## 다음 연구 질문
-- 3D scene graph의 node/edge uncertainty를 planning cost나 action selection에 어떻게 반영할 수 있는가?
-- language query에 필요한 relation만 선택적으로 구성하면 dense graph보다 효율과 성능이 개선되는가?
-- dynamic manipulation/navigation 중 graph를 어떻게 갱신해야 consistency가 유지되는가?
+### What was actually new
 
-## 실험으로 확인할 방향
-- 논문 내 evaluation 단서: KITTI, SemanticKITTI / mAP
-- 내 연구 확장 benchmark 후보: ScanNet, 3RScan, Matterport3D
-- 내 연구 확장 metric 후보: mIoU, Recall@K, relation accuracy, task success
-- 검증 초점: relation prediction, open-vocabulary grounding, downstream planning utility를 확인한다.
+- **Method cue:** In this paper, we introduce a novel VPR approach that remains robust to scene changes and does not require additional training.
+- **Problem cue:** However, these approaches still fail under drastic changes and require large amounts of labeled data to train models, presenting a significant limitation.
+- **Claim/result cue:** To achieve this, a robot must have the ability to determine whether its current location has been previously visited by comparing the incoming sensor data with a database ...
 
-## 주의할 점
-- 이 파일의 활용 방향은 논문 claim이 아니라, 위 paper-specific cue를 3D Vision + Robotics 연구 방향으로 확장한 survey-level 해석이다.
-- 논문 내 explicit limitation/future cue가 부족한 경우, 후속 질문은 method scope와 evaluation scope의 빈틈에서 도출했다.
+### Strongest assumption and failure boundary
 
-## 근거가 되는 논문 단서
-- Problem cue: However, these approaches still fail under drastic changes and require large amounts of labeled data to train models, presenting a significant limitation.
-- Method cue: In this paper, we introduce a novel VPR approach that remains robust to scene changes and does not require additional training.
-- Result cue: To achieve this, a robot must have the ability to determine whether its current location has been previously visited by comparing the incoming sensor data with a database ...
+- Explicit assumptions and negative results are not recorded in the current source note; full-text review is required.
+
+## Researcher interpretation
+
+### Reusable lesson in the robotics loop
+
+- **Closed-loop position:** `observation/language → task decision → action/control`.
+- **Registry interface:** `Graph Reasoning` is the paper's recorded topic/interface, not evidence that the full robotics loop was evaluated.
+- **Prior interpretation carried forward:**
+  - Object, relation, room/scene hierarchy를 graph로 구조화해 3D perception 결과를 robot planning과 language reasoning에 넘기는 중간 표현으로 사용할 수 있다.
+  - 관계 중심 표현은 단일 object detection보다 task-relevant affordance, spatial relation, commonsense reasoning을 붙이기 쉽다.
+- Reuse the paper by preserving its input/output boundary and testing downstream success, failure, and latency under a matched baseline budget.
+
+### Dependency and evolution
+
+- Registry position: `3D Vision-Language Understanding`; tags: `Graph Reasoning`.
+- A direct citation predecessor/successor is not recorded in the legacy note; confirm it from references and the track synthesis before asserting lineage.
+- Recorded scope boundary/future cue:
+  - 논문이 도달한 지점: To achieve this, a robot must have the ability to determine whether its current location has been previously visited by comparing the incoming sensor data with a database ...
+  - static scene graph 품질을 보인 뒤에도 dynamic updates, uncertainty, open-vocabulary relation grounding, robot action coupling은 별도 문제로 남는다.
+
+### Minimal reproduction
+
+- **Protocol carried forward from the legacy note (candidate, not a verified paper evaluation):**
+  - 논문 내 evaluation 단서: KITTI, SemanticKITTI / mAP
+  - 내 연구 확장 benchmark 후보: ScanNet, 3RScan, Matterport3D
+  - 내 연구 확장 metric 후보: mIoU, Recall@K, relation accuracy, task success
+  - 검증 초점: relation prediction, open-vocabulary grounding, downstream planning utility를 확인한다.
+- Do not label a candidate benchmark, metric, or extension protocol as the paper's own evaluation until the experiment section is checked.
+
+## Falsifiable research question
+
+3D scene graph의 node/edge uncertainty를 planning cost나 action selection에 어떻게 반영할 수 있는가?
+
+**Reject the hypothesis if** the primary metric does not improve at a matched budget, or if the method adds latency, failure, or assumption sensitivity without a compensating closed-loop benefit.

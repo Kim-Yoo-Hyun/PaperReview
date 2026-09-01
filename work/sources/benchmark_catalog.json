@@ -1,0 +1,1298 @@
+{
+  "schema_version": "1.0",
+  "generated_on": "2026-09-01",
+  "catalog_type": "benchmark",
+  "evidence_policy": "Generated references are cue_only. Do not treat a token match as verified evaluation evidence; consult the paper's 04_evaluation.md and source location.",
+  "entries": [
+    {
+      "benchmark_id": "benchmark:scannet",
+      "name": "ScanNet",
+      "aliases": [
+        "ScanNet"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0053",
+          "source": "2024/CoRL/2024_CoRL_VLM-Grounder-A-VLM-Agent-for-Zero-Shot-3D-Visual-Grounding/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0201",
+          "source": "2024/ECCV/2024_ECCV_Uni3DL-A-Unified-Model-for-3D-Vision-Language-Understandin/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0204",
+          "source": "2024/ECCV/2024_ECCV_3D-Weakly-Supervised-Semantic-Segmentation-with-2D-Vision/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0213",
+          "source": "2024/ECCV/2024_ECCV_SGS-SLAM-Semantic-Gaussian-Splatting-For-Neural-Dense-SLAM/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0264",
+          "source": "2024/RA-L/2024_RA-L_FM-Fusion-Instance-aware-Semantic-Mapping-Boosted-by-Visio/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0267",
+          "source": "2025/RA-L/2025_RA-L_Search3D-Hierarchical-Open-Vocabulary-3D-Segmentation/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0320",
+          "source": "2024/CVPR/2024_CVPR_Total-Decom-Decomposed-3D-Scene-Reconstruction-with-Minima/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0346",
+          "source": "2026/CVPR/2026_CVPR_Uni3R-Unified-3D-Reconstruction-and-Semantic-Understanding/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0351",
+          "source": "2026/CVPR/2026_CVPR_PointGS-Semantic-Consistent-Unsupervised-3D-Point-Cloud-Se/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0364",
+          "source": "2026/CVPR/2026_CVPR_NG-GS-NeRF-guided-3D-Gaussian-Splatting-Segmentation/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0369",
+          "source": "2026/CVPR/2026_CVPR_VarSplat-Uncertainty-aware-3D-Gaussian-Splatting-for-Robus/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0386",
+          "source": "2025/ICCV/2025_ICCV_Generative-Gaussian-Splatting-Generating-3D-Scenes-with-Vi/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0406",
+          "source": "2024/ECCV/2024_ECCV_Surface-Reconstruction-for-3D-Gaussian-Splatting-via-Local/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0407",
+          "source": "2024/ECCV/2024_ECCV_Gaussian-Grouping-Segment-and-Edit-Anything-in-3D-Scenes/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0436",
+          "source": "2025/NeurIPS/2025_NeurIPS_SIU3R-Simultaneous-Scene-Understanding-and-3D-Reconstructi/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0447",
+          "source": "2025/NeurIPS/2025_NeurIPS_Point-MaDi-Masked-Autoencoding-with-Diffusion-for-Point-Cl/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0508",
+          "source": "2018/NeurIPS/2018_NeurIPS_PointCNN-Convolution-On-X-Transformed-Points/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0770",
+          "source": "2024/CVPR/2024_CVPR_RegionPLC-Regional-Point-Language-Contrastive-Learning-for/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "3D vision"
+    },
+    {
+      "benchmark_id": "benchmark:scannet200",
+      "name": "ScanNet200",
+      "aliases": [
+        "ScanNet200"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0033",
+          "source": "2023/NeurIPS/2023_NeurIPS_OpenMask3D-Open-Vocabulary-3D-Instance-Segmentation/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0212",
+          "source": "2024/ECCV/2024_ECCV_OpenIns3D-Snap-and-Lookup-for-3D-Open-vocabulary-Instance/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0235",
+          "source": "2025/ICCV/2025_ICCV_Details-Matter-for-Indoor-Open-vocabulary-3D-Instance-Segm/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0770",
+          "source": "2024/CVPR/2024_CVPR_RegionPLC-Regional-Point-Language-Contrastive-Learning-for/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "3D vision"
+    },
+    {
+      "benchmark_id": "benchmark:scanrefer",
+      "name": "ScanRefer",
+      "aliases": [
+        "ScanRefer"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0025",
+          "source": "2020/ECCV/2020_ECCV_ScanRefer-3D-Object-Localization-in-RGB-D-Scans-using-Natu/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0027",
+          "source": "2021/ICCV/2021_ICCV_3DVG-Transformer-Relation-Modeling-for-Visual-Grounding-on/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0053",
+          "source": "2024/CoRL/2024_CoRL_VLM-Grounder-A-VLM-Agent-for-Zero-Shot-3D-Visual-Grounding/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0771",
+          "source": "2024/CVPR/2024_CVPR_Towards-CLIP-driven-Language-free-3D-Visual-Grounding-via/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0778",
+          "source": "2025/CVPR/2025_CVPR_SeeGround-See-and-Ground-for-Zero-Shot-Open-Vocabulary-3D/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0792",
+          "source": "2025/ICCV/2025_ICCV_3DGraphLLM-Combining-Semantic-Graphs-and-Large-Language-Mo/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "3D vision-language"
+    },
+    {
+      "benchmark_id": "benchmark:nr3d",
+      "name": "Nr3D",
+      "aliases": [
+        "Nr3D"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0027",
+          "source": "2021/ICCV/2021_ICCV_3DVG-Transformer-Relation-Modeling-for-Visual-Grounding-on/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0771",
+          "source": "2024/CVPR/2024_CVPR_Towards-CLIP-driven-Language-free-3D-Visual-Grounding-via/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0777",
+          "source": "2025/CVPR/2025_CVPR_Chain-of-Semantics-Programming-in-3D-Gaussian-Splatting-Re/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0778",
+          "source": "2025/CVPR/2025_CVPR_SeeGround-See-and-Ground-for-Zero-Shot-Open-Vocabulary-3D/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "3D vision-language"
+    },
+    {
+      "benchmark_id": "benchmark:sr3d",
+      "name": "Sr3D",
+      "aliases": [
+        "Sr3D"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0027",
+          "source": "2021/ICCV/2021_ICCV_3DVG-Transformer-Relation-Modeling-for-Visual-Grounding-on/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0771",
+          "source": "2024/CVPR/2024_CVPR_Towards-CLIP-driven-Language-free-3D-Visual-Grounding-via/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0777",
+          "source": "2025/CVPR/2025_CVPR_Chain-of-Semantics-Programming-in-3D-Gaussian-Splatting-Re/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "3D vision-language"
+    },
+    {
+      "benchmark_id": "benchmark:referit3d",
+      "name": "ReferIt3D",
+      "aliases": [
+        "ReferIt3D"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0027",
+          "source": "2021/ICCV/2021_ICCV_3DVG-Transformer-Relation-Modeling-for-Visual-Grounding-on/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "3D vision-language"
+    },
+    {
+      "benchmark_id": "benchmark:scanqa",
+      "name": "ScanQA",
+      "aliases": [
+        "ScanQA"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0034",
+          "source": "2023/NeurIPS/2023_NeurIPS_3D-LLM-Injecting-the-3D-World-into-Large-Language-Models/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0145",
+          "source": "2025/ICML/2025_ICML_3D-Question-Answering-via-only-2D-Vision-Language-Models/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0792",
+          "source": "2025/ICCV/2025_ICCV_3DGraphLLM-Combining-Semantic-Graphs-and-Large-Language-Mo/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "3D vision-language"
+    },
+    {
+      "benchmark_id": "benchmark:s3dis",
+      "name": "S3DIS",
+      "aliases": [
+        "S3DIS"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0204",
+          "source": "2024/ECCV/2024_ECCV_3D-Weakly-Supervised-Semantic-Segmentation-with-2D-Vision/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0235",
+          "source": "2025/ICCV/2025_ICCV_Details-Matter-for-Indoor-Open-vocabulary-3D-Instance-Segm/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0351",
+          "source": "2026/CVPR/2026_CVPR_PointGS-Semantic-Consistent-Unsupervised-3D-Point-Cloud-Se/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0447",
+          "source": "2025/NeurIPS/2025_NeurIPS_Point-MaDi-Masked-Autoencoding-with-Diffusion-for-Point-Cl/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "3D vision"
+    },
+    {
+      "benchmark_id": "benchmark:replica",
+      "name": "Replica",
+      "aliases": [
+        "Replica"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0195",
+          "source": "2026/ICRA/2026_ICRA_Open-Vocabulary-Spatio-Temporal-Scene-Graph-for-Robot-Perc/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0196",
+          "source": "2026/ICRA/2026_ICRA_Semantically-Consistent-Language-Gaussian-Splatting-for-3D/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0212",
+          "source": "2024/ECCV/2024_ECCV_OpenIns3D-Snap-and-Lookup-for-3D-Open-vocabulary-Instance/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0213",
+          "source": "2024/ECCV/2024_ECCV_SGS-SLAM-Semantic-Gaussian-Splatting-For-Neural-Dense-SLAM/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0320",
+          "source": "2024/CVPR/2024_CVPR_Total-Decom-Decomposed-3D-Scene-Reconstruction-with-Minima/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0369",
+          "source": "2026/CVPR/2026_CVPR_VarSplat-Uncertainty-aware-3D-Gaussian-Splatting-for-Robus/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0407",
+          "source": "2024/ECCV/2024_ECCV_Gaussian-Grouping-Segment-and-Edit-Anything-in-3D-Scenes/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0769",
+          "source": "2024/CVPR/2024_CVPR_GS-SLAM-Dense-Visual-SLAM-with-3D-Gaussian-Splatting/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0878",
+          "source": "2025/RSS/2025_RSS_Certifiably-Correct-Mapping-for-Safe-Navigation-Despite-Od/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "3D vision / simulation"
+    },
+    {
+      "benchmark_id": "benchmark:matterport3d",
+      "name": "Matterport3D",
+      "aliases": [
+        "Matterport3D"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0500",
+          "source": "2019/ICCV/2019_ICCV_Habitat-A-Platform-for-Embodied-AI-Research/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "3D vision"
+    },
+    {
+      "benchmark_id": "benchmark:hm3d",
+      "name": "HM3D",
+      "aliases": [
+        "HM3D"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0029",
+          "source": "2023/RSS/2023_RSS_CLIP-Fields-Weakly-Supervised-Semantic-Fields-for-Robotic/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0120",
+          "source": "2025/NeurIPS/2025_NeurIPS_BeliefMapNav-3D-Voxel-Based-Belief-Map-for-Zero-Shot-Objec/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0279",
+          "source": "2025/IROS/2025_IROS_WMNav-Integrating-Vision-Language-Models-into-World-Models/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0793",
+          "source": "2026/CVPR/2026_CVPR_D3D-VLP-Dynamic-3D-Vision-Language-Planning-Model-for-Embo/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0799",
+          "source": "2026/CVPR/2026_CVPR_MSGNav-Unleashing-the-Power-of-Multi-modal-3D-Scene-Graph/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "embodied navigation"
+    },
+    {
+      "benchmark_id": "benchmark:habitat",
+      "name": "Habitat",
+      "aliases": [
+        "Habitat"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0500",
+          "source": "2019/ICCV/2019_ICCV_Habitat-A-Platform-for-Embodied-AI-Research/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "embodied navigation"
+    },
+    {
+      "benchmark_id": "benchmark:r2r",
+      "name": "R2R",
+      "aliases": [
+        "R2R"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0109",
+          "source": "2025/NeurIPS/2025_NeurIPS_Dynam3D-Dynamic-Layered-3D-Tokens-Empower-VLM-for-Vision-a/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0170",
+          "source": "2025/ICRA/2025_ICRA_MiniVLN-Efficient-Vision-And-Language-Navigation-by-Progre/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0198",
+          "source": "2026/ICRA/2026_ICRA_TagaVLM-Topology-Aware-Global-Action-Reasoning-for-Vision/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0768",
+          "source": "2024/CVPR/2024_CVPR_Volumetric-Environment-Representation-for-Vision-Language/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0785",
+          "source": "2025/ICCV/2025_ICCV_3D-Gaussian-Map-with-Open-Set-Semantic-Grouping-for-Vision/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "embodied navigation"
+    },
+    {
+      "benchmark_id": "benchmark:rxr",
+      "name": "RxR",
+      "aliases": [
+        "RxR"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0167",
+          "source": "2026/ICML/2026_ICML_MapDream-Task-Driven-Map-Learning-for-Vision-Language-Navi/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "embodied navigation"
+    },
+    {
+      "benchmark_id": "benchmark:vln-ce",
+      "name": "VLN-CE",
+      "aliases": [
+        "VLN-CE"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0191",
+          "source": "2026/ICRA/2026_ICRA_LaViRA-Language-Vision-Robot-Actions-Translation-for-Zero/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0541",
+          "source": "2020/ECCV/2020_ECCV_Beyond-the-Nav-Graph-Vision-and-Language-Navigation-in-Con/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "embodied navigation"
+    },
+    {
+      "benchmark_id": "benchmark:rlbench",
+      "name": "RLBench",
+      "aliases": [
+        "RLBench"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0037",
+          "source": "2023/CoRL/2023_CoRL_RVT-Robotic-View-Transformer-for-3D-Object-Manipulation/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0055",
+          "source": "2024/CoRL/2024_CoRL_VoxAct-B-Voxel-Based-Acting-and-Stabilizing-Policy-for-Bim/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0058",
+          "source": "2025/CoRL/2025_CoRL_3DS-VLA-A-3D-Spatial-Aware-Vision-Language-Action-Model-fo/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0114",
+          "source": "2025/NeurIPS/2025_NeurIPS_DynaRend-Learning-3D-Dynamics-via-Masked-Future-Rendering/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0143",
+          "source": "2025/ICML/2025_ICML_SAM2Act-Integrating-Visual-Foundation-Model-with-A-Memory/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0181",
+          "source": "2026/ICRA/2026_ICRA_Audio-VLA-Adding-Contact-Audio-Perception-to-Vision-Langua/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0208",
+          "source": "2024/ECCV/2024_ECCV_ManiGaussian-Dynamic-Gaussian-Splatting-for-Multi-task-Rob/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0577",
+          "source": "2024/CoRL/2024_CoRL_Learning-Robotic-Manipulation-Policies-from-Point-Clouds-w/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0774",
+          "source": "2025/CVPR/2025_CVPR_PDFactor-Learning-Tri-Perspective-View-Policy-Diffusion-Fi/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0921",
+          "source": "2025/AAAI/2025_AAAI_Self-Correcting-Robot-Manipulation-via-Gaussian-Splatted-F/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "robot manipulation"
+    },
+    {
+      "benchmark_id": "benchmark:calvin",
+      "name": "CALVIN",
+      "aliases": [
+        "CALVIN"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0041",
+          "source": "2022/RA-L/2022_RA-L_CALVIN-A-Benchmark-for-Language-Conditioned-Policy-Learnin/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0059",
+          "source": "2025/CoRL/2025_CoRL_Long-VLA-Unleashing-Long-Horizon-Capability-of-Vision-Lang/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0121",
+          "source": "2025/NeurIPS/2025_NeurIPS_DreamVLA-A-Vision-Language-Action-Model-Dreamed-with-Compr/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0132",
+          "source": "2025/ICML/2025_ICML_ReinboT-Amplifying-Robot-Visual-Language-Manipulation-with/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0133",
+          "source": "2025/ICML/2025_ICML_UP-VLA-A-Unified-Understanding-and-Prediction-Model-for-Em/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0252",
+          "source": "2025/ICCV/2025_ICCV_On-Device-Diffusion-Transformer-Policy-for-Efficient-Robot/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "robot manipulation"
+    },
+    {
+      "benchmark_id": "benchmark:libero",
+      "name": "LIBERO",
+      "aliases": [
+        "LIBERO"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0042",
+          "source": "2023/NeurIPS/2023_NeurIPS_Benchmarking-Knowledge-Transfer-for-Lifelong-Robot-Learnin/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0117",
+          "source": "2025/NeurIPS/2025_NeurIPS_Knowledge-Insulating-Vision-Language-Action-Models-Train-F/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0118",
+          "source": "2025/NeurIPS/2025_NeurIPS_VLA-Cache-Efficient-Vision-Language-Action-Manipulation-vi/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0119",
+          "source": "2025/NeurIPS/2025_NeurIPS_4D-VLA-Spatiotemporal-Vision-Language-Action-Pretraining-w/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0121",
+          "source": "2025/NeurIPS/2025_NeurIPS_DreamVLA-A-Vision-Language-Action-Model-Dreamed-with-Compr/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0152",
+          "source": "2026/ICML/2026_ICML_Discrete-Diffusion-VLA-Bringing-Discrete-Diffusion-to-Acti/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0181",
+          "source": "2026/ICRA/2026_ICRA_Audio-VLA-Adding-Contact-Audio-Perception-to-Vision-Langua/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0190",
+          "source": "2026/ICRA/2026_ICRA_EveryDayVLA-A-Vision-Language-Action-Model-for-Affordable/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0252",
+          "source": "2025/ICCV/2025_ICCV_On-Device-Diffusion-Transformer-Policy-for-Efficient-Robot/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0259",
+          "source": "2026/ECCV/2026_ECCV_LIBERO-Safety-A-Comprehensive-Benchmark-for-Physical-and-S/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0260",
+          "source": "2026/ECCV/2026_ECCV_VLA-Knows-Its-Limits-Adaptive-Execution-Horizons-for-Robot/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0261",
+          "source": "2026/ECCV/2026_ECCV_PolicyTrim-Boosting-Intrinsic-Policy-Efficiency-of-Vision/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0274",
+          "source": "2026/RA-L/2026_RA-L_CLARE-Continual-Learning-for-Vision-Language-Action-Models/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0750",
+          "source": "2025/RSS/2025_RSS_Fine-Tuning-Vision-Language-Action-Models-Optimizing-Speed/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0803",
+          "source": "2026/CVPR/2026_CVPR_SemanticVLA-Towards-Semantic-Reasoning-over-Action-Memoriz/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0883",
+          "source": "2025/RSS/2025_RSS_CLIP-RT-Learning-Language-Conditioned-Robotic-Policies-fro/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "robot manipulation"
+    },
+    {
+      "benchmark_id": "benchmark:libero-safety",
+      "name": "LIBERO-Safety",
+      "aliases": [
+        "LIBERO-Safety"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0259",
+          "source": "2026/ECCV/2026_ECCV_LIBERO-Safety-A-Comprehensive-Benchmark-for-Physical-and-S/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "robot safety"
+    },
+    {
+      "benchmark_id": "benchmark:bridgedata",
+      "name": "BridgeData",
+      "aliases": [
+        "BridgeData",
+        "BridgeData V2"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0090",
+          "source": "2026/ICLR/2026_ICLR_From-Seeing-to-Doing-Bridging-Reasoning-and-Decision-for-R/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "robot data"
+    },
+    {
+      "benchmark_id": "benchmark:open-x-embodiment",
+      "name": "Open X-Embodiment",
+      "aliases": [
+        "Open X-Embodiment",
+        "OXE"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0024",
+          "source": "2024/ICRA/2024_ICRA_Open-X-Embodiment-Robotic-Learning-Datasets-and-RT-X-Model/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0873",
+          "source": "2024/RSS/2024_RSS_Universal-Manipulation-Interface-In-The-Wild-Robot-Teachin/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0913",
+          "source": "2025/IROS/2025_IROS_AgiBot-World-Colosseo-A-Large-scale-Manipulation-Platform/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "robot data"
+    },
+    {
+      "benchmark_id": "benchmark:robomimic",
+      "name": "RoboMimic",
+      "aliases": [
+        "RoboMimic"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0252",
+          "source": "2025/ICCV/2025_ICCV_On-Device-Diffusion-Transformer-Policy-for-Efficient-Robot/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "robot manipulation"
+    },
+    {
+      "benchmark_id": "benchmark:meta-world",
+      "name": "Meta-World",
+      "aliases": [
+        "Meta-World"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0157",
+          "source": "2026/ICML/2026_ICML_LAGEA-Language-Guided-Embodied-Agents-for-Robotic-Manipula/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0920",
+          "source": "2026/AAAI/2026_AAAI_MP1-MeanFlow-Tames-Policy-Learning-in-1-step-for-Robotic-M/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0924",
+          "source": "2025/AAAI/2025_AAAI_FlowPolicy-Enabling-Fast-and-Robust-3D-Flow-Based-Policy-v/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "robot manipulation / simulation"
+    },
+    {
+      "benchmark_id": "benchmark:nuscenes",
+      "name": "nuScenes",
+      "aliases": [
+        "nuScenes"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0043",
+          "source": "2022/ECCV/2022_ECCV_BEVFormer-Learning-Bird-s-Eye-View-Representation-from-Mul/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0044",
+          "source": "2023/ICRA/2023_ICRA_BEVFusion-Multi-Task-Multi-Sensor-Fusion-with-Unified-Bird/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0045",
+          "source": "2023/CVPR/2023_CVPR_Planning-oriented-Autonomous-Driving/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0203",
+          "source": "2024/ECCV/2024_ECCV_3D-Open-Vocabulary-Panoptic-Segmentation-with-2D-3D-Vision/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0215",
+          "source": "2024/ECCV/2024_ECCV_GaussianFormer-Scene-as-Gaussians-for-Vision-Based-3D-Sema/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0223",
+          "source": "2025/ICCV/2025_ICCV_OV-SCAN-Semantically-Consistent-Alignment-for-Novel-Object/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0298",
+          "source": "2021/CVPR/2021_CVPR_CenterPoint-Center-based-3D-Object-Detection-and-Tracking/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0302",
+          "source": "2022/ECCV/2022_ECCV_PETR-Position-Embedding-Transformation-for-Multi-View-3D-O/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0303",
+          "source": "2023/AAAI/2023_AAAI_BEVDepth-Acquisition-of-Reliable-Depth-for-Multi-view-3D-O/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0333",
+          "source": "2025/CVPR/2025_CVPR_Rethinking-Temporal-Fusion-with-a-Unified-Gradient-Descent/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0362",
+          "source": "2026/CVPR/2026_CVPR_L3DR-3D-aware-LiDAR-Diffusion-and-Rectification/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0374",
+          "source": "2025/ICCV/2025_ICCV_RIOcc-Efficient-Cross-Modal-Fusion-Transformer-with-Collab/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0429",
+          "source": "2026/ICLR/2026_ICLR_UniSplat-Unified-Spatio-Temporal-Fusion-via-3D-Latent-Scaf/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0445",
+          "source": "2025/NeurIPS/2025_NeurIPS_ODG-Occupancy-Prediction-Using-Dual-Gaussians/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0474",
+          "source": "2025/3DV/2025_3DV_LangOcc-Open-Vocabulary-Occupancy-Estimation-via-Volume-Re/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0514",
+          "source": "2023/ICCV/2023_ICCV_OccFormer-Dual-path-Transformer-for-Vision-based-3D-Semant/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0547",
+          "source": "2023/NeurIPS/2023_NeurIPS_Occ3D-A-Large-Scale-3D-Occupancy-Prediction-Benchmark-for/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0549",
+          "source": "2021/CoRL/2021_CoRL_DETR3D-3D-Object-Detection-from-Multi-view-Images-via-3D-t/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0770",
+          "source": "2024/CVPR/2024_CVPR_RegionPLC-Regional-Point-Language-Contrastive-Learning-for/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "autonomous driving"
+    },
+    {
+      "benchmark_id": "benchmark:waymo",
+      "name": "Waymo",
+      "aliases": [
+        "Waymo"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0043",
+          "source": "2022/ECCV/2022_ECCV_BEVFormer-Learning-Bird-s-Eye-View-Representation-from-Mul/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0214",
+          "source": "2024/ECCV/2024_ECCV_TCLC-GS-Tightly-Coupled-LiDAR-Camera-Gaussian-Splatting-fo/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0298",
+          "source": "2021/CVPR/2021_CVPR_CenterPoint-Center-based-3D-Object-Detection-and-Tracking/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0301",
+          "source": "2020/CVPR/2020_CVPR_PV-RCNN-Point-Voxel-Feature-Set-Abstraction-for-3D-Object/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0362",
+          "source": "2026/CVPR/2026_CVPR_L3DR-3D-aware-LiDAR-Diffusion-and-Rectification/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0371",
+          "source": "2025/ICCV/2025_ICCV_Dream-to-Recon-Monocular-3D-Reconstruction-with-Diffusion/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0429",
+          "source": "2026/ICLR/2026_ICLR_UniSplat-Unified-Spatio-Temporal-Fusion-via-3D-Latent-Scaf/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0445",
+          "source": "2025/NeurIPS/2025_NeurIPS_ODG-Occupancy-Prediction-Using-Dual-Gaussians/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0547",
+          "source": "2023/NeurIPS/2023_NeurIPS_Occ3D-A-Large-Scale-3D-Occupancy-Prediction-Benchmark-for/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "autonomous driving"
+    },
+    {
+      "benchmark_id": "benchmark:kitti",
+      "name": "KITTI",
+      "aliases": [
+        "KITTI"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0215",
+          "source": "2024/ECCV/2024_ECCV_GaussianFormer-Scene-as-Gaussians-for-Vision-Based-3D-Sema/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0301",
+          "source": "2020/CVPR/2020_CVPR_PV-RCNN-Point-Voxel-Feature-Set-Abstraction-for-3D-Object/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0362",
+          "source": "2026/CVPR/2026_CVPR_L3DR-3D-aware-LiDAR-Diffusion-and-Rectification/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0371",
+          "source": "2025/ICCV/2025_ICCV_Dream-to-Recon-Monocular-3D-Reconstruction-with-Diffusion/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0395",
+          "source": "2025/WACV/2025_WACV_DepthSSC-Monocular-3D-Semantic-Scene-Completion-via-Depth/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0469",
+          "source": "2025/3DV/2025_3DV_Flash3D-Feed-Forward-Generalisable-3D-Scene-Reconstruction/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0497",
+          "source": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0504",
+          "source": "2018/CVPR/2018_CVPR_VoxelNet-End-to-End-Learning-for-Point-Cloud-Based-3D-Obje/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0519",
+          "source": "2014/NeurIPS/2014_NeurIPS_Depth-Map-Prediction-from-a-Single-Image-using-a-Multi-Sca/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0520",
+          "source": "2019/ICCV/2019_ICCV_Digging-Into-Self-Supervised-Monocular-Depth-Estimation/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "autonomous driving"
+    },
+    {
+      "benchmark_id": "benchmark:semantickitti",
+      "name": "SemanticKITTI",
+      "aliases": [
+        "SemanticKITTI"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0304",
+          "source": "2023/CVPR/2023_CVPR_VoxFormer-Sparse-Voxel-Transformer-for-Camera-based-3D-Sem/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0375",
+          "source": "2025/ICCV/2025_ICCV_Distilling-Diffusion-Models-to-Efficient-3D-LiDAR-Scene-Co/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0395",
+          "source": "2025/WACV/2025_WACV_DepthSSC-Monocular-3D-Semantic-Scene-Completion-via-Depth/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0514",
+          "source": "2023/ICCV/2023_ICCV_OccFormer-Dual-path-Transformer-for-Vision-based-3D-Semant/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "autonomous driving"
+    },
+    {
+      "benchmark_id": "benchmark:robotwin",
+      "name": "RoboTwin",
+      "aliases": [
+        "RoboTwin"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0154",
+          "source": "2026/ICML/2026_ICML_HALO-A-Unified-Vision-Language-Action-Model-for-Embodied-M/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0158",
+          "source": "2026/ICML/2026_ICML_RoboTwin-2.0-A-Scalable-Data-Generator-and-Benchmark-with/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0272",
+          "source": "2026/RA-L/2026_RA-L_PointVLA-Injecting-the-3D-World-into-Vision-Language-Actio/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "robot manipulation"
+    },
+    {
+      "benchmark_id": "benchmark:simplerenv",
+      "name": "SimplerEnv",
+      "aliases": [
+        "SimplerEnv"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0085",
+          "source": "2026/ICLR/2026_ICLR_MemoryVLA-Perceptual-Cognitive-Memory-in-Vision-Language-A/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0152",
+          "source": "2026/ICML/2026_ICML_Discrete-Diffusion-VLA-Bringing-Discrete-Diffusion-to-Acti/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0803",
+          "source": "2026/CVPR/2026_CVPR_SemanticVLA-Towards-Semantic-Reasoning-over-Action-Memoriz/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "robot manipulation / simulation"
+    },
+    {
+      "benchmark_id": "benchmark:furniturebench",
+      "name": "FurnitureBench",
+      "aliases": [
+        "FurnitureBench"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0182",
+          "source": "2026/ICRA/2026_ICRA_DAM-VLA-A-Dynamic-Action-Model-Based-Vision-Language-Actio/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "robot manipulation"
+    },
+    {
+      "benchmark_id": "benchmark:humanoidbench",
+      "name": "HumanoidBench",
+      "aliases": [
+        "HumanoidBench"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0599",
+          "source": "2024/RSS/2024_RSS_HumanoidBench-Simulated-Humanoid-Benchmark-for-Whole-Body/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "humanoid control"
+    },
+    {
+      "benchmark_id": "benchmark:behavior-1k",
+      "name": "BEHAVIOR-1K",
+      "aliases": [
+        "BEHAVIOR-1K"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0141",
+          "source": "2025/ICML/2025_ICML_EmbodiedBench-Comprehensive-Benchmarking-Multi-modal-Large/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0730",
+          "source": "2022/CoRL/2022_CoRL_BEHAVIOR-1K-A-Benchmark-for-Embodied-AI-with-1000-Everyday/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "embodied household tasks"
+    },
+    {
+      "benchmark_id": "benchmark:vlabench",
+      "name": "VLABench",
+      "aliases": [
+        "VLABench"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0159",
+          "source": "2026/ICML/2026_ICML_Bring-My-Cup-Personalizing-Vision-Language-Action-Models-w/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "VLA evaluation"
+    },
+    {
+      "benchmark_id": "benchmark:vla-arena",
+      "name": "VLA-Arena",
+      "aliases": [
+        "VLA-Arena"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0814",
+          "source": "2026/ICML/2026_ICML_VLA-Arena-An-Open-Source-Framework-for-Benchmarking-Vision/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "VLA evaluation"
+    },
+    {
+      "benchmark_id": "benchmark:droid",
+      "name": "DROID",
+      "aliases": [
+        "DROID"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0913",
+          "source": "2025/IROS/2025_IROS_AgiBot-World-Colosseo-A-Large-scale-Manipulation-Platform/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "robot data"
+    },
+    {
+      "benchmark_id": "benchmark:realestate10k",
+      "name": "RealEstate10K",
+      "aliases": [
+        "RealEstate10K"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0309",
+          "source": "2024/CVPR/2024_CVPR_pixelSplat-3D-Gaussian-Splats-from-Image-Pairs-for-Scalabl/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0386",
+          "source": "2025/ICCV/2025_ICCV_Generative-Gaussian-Splatting-Generating-3D-Scenes-with-Vi/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0391",
+          "source": "2025/ICCV/2025_ICCV_VideoRFSplat-Direct-Scene-Level-Text-to-3D-Gaussian-Splatt/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0398",
+          "source": "2024/ECCV/2024_ECCV_MVSplat-Efficient-3D-Gaussian-Splatting-from-Sparse-Multi/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0469",
+          "source": "2025/3DV/2025_3DV_Flash3D-Feed-Forward-Generalisable-3D-Scene-Reconstruction/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "view synthesis"
+    },
+    {
+      "benchmark_id": "benchmark:dtu",
+      "name": "DTU",
+      "aliases": [
+        "DTU"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0400",
+          "source": "2024/ECCV/2024_ECCV_MVSGaussian-Fast-Generalizable-Gaussian-Splatting-Reconstr/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0408",
+          "source": "2024/ECCV/2024_ECCV_SG-NeRF-Neural-Surface-Reconstruction-with-Scene-Graph-Opt/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0449",
+          "source": "2025/NeurIPS/2025_NeurIPS_VA-GS-Enhancing-the-Geometric-Representation-of-Gaussian-S/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0473",
+          "source": "2025/3DV/2025_3DV_SparseGS-Sparse-View-Synthesis-using-3D-Gaussian-Splatting/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-0511",
+          "source": "2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "multi-view reconstruction"
+    },
+    {
+      "benchmark_id": "benchmark:socialnav-sub",
+      "name": "SocialNav-SUB",
+      "aliases": [
+        "SocialNav-SUB"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0063",
+          "source": "2025/CoRL/2025_CoRL_SocialNav-SUB-Benchmarking-VLMs-for-Scene-Understanding-in/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "social navigation"
+    }
+  ]
+}
