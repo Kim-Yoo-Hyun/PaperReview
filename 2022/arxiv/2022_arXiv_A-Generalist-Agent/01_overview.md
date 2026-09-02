@@ -9,6 +9,7 @@
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, Generalist Agent, Transformer, Multimodal Learning, Google DeepMind
+- Aliases: Gato
 - Official paper: https://arxiv.org/abs/2205.06175
 - Full-text retrieval: https://arxiv.org/abs/2205.06175
 - Code/Project: https://deepmind.google/discover/blog/a-generalist-agent/

@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import urllib.parse
@@ -21,6 +22,7 @@ except ModuleNotFoundError:
 
 ROOT = Path(__file__).resolve().parents[2]
 MANIFEST = ROOT / "work" / "sources" / "papers.json"
+META = ROOT / "work" / "sources" / "registry_meta.json"
 REGISTRY = ROOT / "PAPER.md"
 NOTES = ["01_overview.md", "02_problem.md", "03_method.md", "04_evaluation.md", "05_insights.md"]
 
@@ -29,10 +31,27 @@ def venue_label(value: str) -> str:
     return canonical_venue(value)
 
 
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
 def update_note(path: Path, paper: dict) -> bool:
     text = path.read_text(encoding="utf-8")
     updated = re.sub(r"^- Category: .*?$", f"- Category: {paper['category']}", text, count=1, flags=re.M)
     updated = re.sub(r"^- Tags: .*?$", f"- Tags: {', '.join(paper['tags'])}", updated, count=1, flags=re.M)
+    aliases = paper.get("aliases") or []
+    if aliases:
+        alias_line = f"- Aliases: {', '.join(aliases)}"
+        if re.search(r"^- Aliases: .*?$", updated, flags=re.M):
+            updated = re.sub(r"^- Aliases: .*?$", alias_line, updated, count=1, flags=re.M)
+        else:
+            updated = re.sub(
+                r"^(- Tags: .*?$)",
+                rf"\1\n{alias_line}",
+                updated,
+                count=1,
+                flags=re.M,
+            )
     updated = re.sub(r"^- PDF status:.*?\n", "", updated, flags=re.M)
     if updated != text:
         path.write_text(updated, encoding="utf-8")
@@ -52,7 +71,8 @@ def registry(papers: list[dict]) -> str:
         "- Reading progress and synthesis: [READING_STATUS.csv](./research/READING_STATUS.csv), [READING_STATUS.md](./research/READING_STATUS.md), [synthesis/README.md](./synthesis/README.md)",
         "- Scope: Robotics-first literature registry spanning robot learning/control, VLA, and robotics-enabling 3D vision.",
         "- Machine-readable registry: [papers.json](./work/sources/papers.json), [registry.schema.json](./work/sources/registry.schema.json), and [registry_meta.json](./work/sources/registry_meta.json)",
-        "- Evaluation vocabularies: [benchmark_catalog.json](./work/sources/benchmark_catalog.json) and [metric_catalog.json](./work/sources/metric_catalog.json)",
+        "- Evaluation/resource view: [resources.json](./work/sources/resources.json) (the existing benchmark/metric cue catalogs are generation inputs)",
+        "- Generated search/index views: [REGISTRY_INDEX.csv](./research/REGISTRY_INDEX.csv) and [REGISTRY_STATS.md](./research/REGISTRY_STATS.md)",
         "- Taxonomy: one canonical category per paper and one primary robotics track for CORE/NEXT; cross-cutting roles are represented with normalized tags.", "",
     ]
     for category in sorted(groups, key=str.casefold):
@@ -78,6 +98,18 @@ def registry(papers: list[dict]) -> str:
             for p in tags[tag][:12]
         )
         lines.append(f"- **{tag}**: {refs}")
+    aliases: dict[str, list[dict]] = {}
+    for paper in papers:
+        for alias in paper.get("aliases", []):
+            aliases.setdefault(alias, []).append(paper)
+    if aliases:
+        lines += ["", "## Alias Index", ""]
+        for alias in sorted(aliases, key=str.casefold):
+            refs = ", ".join(
+                f"[{re.sub(r'[^A-Za-z0-9]+', '-', p['title']).strip('-')[:24]}](./{urllib.parse.quote(p['folder'])}/01_overview.md)"
+                for p in aliases[alias]
+            )
+            lines.append(f"- **{alias}**: {refs}")
     return "\n".join(lines) + "\n"
 
 
@@ -95,6 +127,12 @@ def main() -> None:
             changed_notes += update_note(folder / name, paper)
     MANIFEST.write_text(json.dumps(papers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     REGISTRY.write_text(registry(papers), encoding="utf-8")
+    if META.exists():
+        meta = json.loads(META.read_text(encoding="utf-8"))
+        meta["paper_count"] = len(papers)
+        meta["generated_on"] = datetime.now(ZoneInfo("Asia/Seoul")).date().isoformat()
+        meta["manifest_sha256"] = sha256(MANIFEST)
+        META.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print({
         "papers": len(papers),
         "categories_before": before_categories,

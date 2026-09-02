@@ -9,6 +9,7 @@
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, Imitation Learning, offline learning, robot dataset, Benchmark, robomimic
+- Aliases: RoboMimic
 - Official paper: https://proceedings.mlr.press/v164/mandlekar22a.html
 - Full-text retrieval: https://proceedings.mlr.press/v164/mandlekar22a/mandlekar22a.pdf
 - Code/Project: https://robomimic.github.io/

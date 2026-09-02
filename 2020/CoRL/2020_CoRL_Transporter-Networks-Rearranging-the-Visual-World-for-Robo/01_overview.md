@@ -2,7 +2,7 @@
 
 - Year/Venue: 2020 / CoRL
 - Category: Manipulation, Contact, and Dexterity
-- Tags: Robotics, Vision-Language Action, equivariance, Imitation Learning
+- Tags: Robotics, Vision-Language-Action, equivariance, Imitation Learning
 - Paper link: ./2020/CoRL/2020_CoRL_Transporter-Networks-Rearranging-the-Visual-World-for-Robo/paper.pdf
 - Code/Project: https://github.com/google-research/ravens
 - Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.

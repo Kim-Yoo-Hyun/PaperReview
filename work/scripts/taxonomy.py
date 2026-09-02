@@ -70,6 +70,7 @@ CATEGORY_MAP = {
     "Active 3D Perception and Articulated Object Interaction": "Robotics-Enabling 3D Perception",
     "Navigation and Embodied AI": "Embodied Navigation and Mapping",
     "Open-Vocabulary 3D Mapping": "Embodied Navigation and Mapping",
+    "Robotics-enabling 3D Perception": "Robotics-Enabling 3D Perception",
 }
 
 TAG_ALIASES = {
@@ -93,6 +94,8 @@ TAG_ALIASES = {
     "human video": "human video",
     "humanoid": "humanoid",
     "language": "language",
+    "long horizon": "long-horizon",
+    "long-horizon": "long-horizon",
     "locomotion": "locomotion",
     "manipulation": "manipulation",
     "model predictive control": "model predictive control",
@@ -104,6 +107,8 @@ TAG_ALIASES = {
     "policy optimization": "policy optimization",
     "q-learning": "Q-learning",
     "representation learning": "representation learning",
+    "real-time control": "real-time control",
+    "realtime control": "real-time control",
     "robot data": "robot data",
     "sim-to-real": "sim-to-real",
     "simulation": "simulation",
@@ -112,7 +117,10 @@ TAG_ALIASES = {
     "task and motion planning": "task and motion planning",
     "temporal difference": "temporal difference",
     "whole-body control": "whole-body control",
+    "video pretraining": "video pretraining",
     "world model": "world model",
+    "vision-language action": "Vision-Language-Action",
+    "vision-language-action": "Vision-Language-Action",
 }
 
 

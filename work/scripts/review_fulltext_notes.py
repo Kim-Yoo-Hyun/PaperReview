@@ -169,7 +169,13 @@ def normalize(value: str) -> str:
 
 
 def clean_sentence(value: str) -> str:
-    return re.sub(r"\s+", " ", normalize(value).replace("|", "/")).strip(" -")
+    value = normalize(value).replace("|", "/")
+    # PDF text layers often append author footnotes or acceptance stamps to a
+    # real sentence.  Keep the paper sentence prefix, but never let those
+    # front-matter fragments become evidence in a note.
+    value = re.sub(r"^\s*accepted\s+[a-z]+,?\s+20\d{2}\s+", "", value, flags=re.I)
+    value = re.split(r"\s*[\u2217*]?equal contribution\b", value, maxsplit=1, flags=re.I)[0]
+    return re.sub(r"\s+", " ", value).strip(" -")
 
 
 def short_cue(value: str, max_words: int = 25, max_chars: int = 240) -> str:
@@ -285,6 +291,11 @@ def sentence_list(value: str) -> list[str]:
     pieces = re.split(r"(?<=[.!?])\s+(?=[A-Z0-9(\[])", value)
     result = []
     for piece in pieces:
+        # The author-footnote marker is sometimes concatenated to the last
+        # line of a body paragraph.  Dropping that mixed fragment is safer
+        # than retaining a truncated sentence as evidence.
+        if re.search(r"\b equal contribution\b", piece, re.I):
+            continue
         piece = clean_sentence(piece)
         if 35 <= len(piece) <= 900:
             result.append(piece)
@@ -295,7 +306,10 @@ def looks_like_noise(value: str) -> bool:
     low = value.casefold()
     if "@" in value or "http://" in low or "https://" in low:
         return True
-    if low.startswith(("arxiv:", "copyright", "proceedings of", "figure ", "table ")):
+    if low.startswith((
+        "arxiv:", "copyright", "proceedings of", "figure ", "table ",
+        "manuscript received", "accepted ", "published ",
+    )):
         return True
     if re.fullmatch(r"[\W\d_]+", value) or sum(char.isalpha() for char in value) < 25:
         return True
@@ -319,7 +333,7 @@ def evidence_is_usable(value: Evidence, document: dict[str, Any]) -> bool:
             return False
     if section in {"references", "bibliography", "acknowledgements", "acknowledgments"}:
         return False
-    if section == "front matter" and document.get("extraction_method") != "tesseract OCR fallback":
+    if "front matter" in section and document.get("extraction_method") != "tesseract OCR fallback":
         return False
     if "reference" in section or "bibliograph" in section or "acknowledg" in section:
         return False
@@ -774,6 +788,7 @@ def infer_evidence(document: dict[str, Any]) -> dict[str, list[Evidence]]:
             value for value in document["sentences"]
             if "reference" not in value.section.casefold()
             and "bibliograph" not in value.section.casefold()
+            and "front matter" not in f"{value.section} {value.parent}".casefold()
             and not re.match(r"^\[\d{1,3}\]", value.text)
         ]
     captions = caption_evidence(document)
@@ -982,7 +997,7 @@ def note_header(kind: str, item: dict[str, Any], record: dict[str, Any]) -> str:
         f"canonical paper source: {canonical}; {retrieval_label}: {retrieval}. "
         f"The note is an evidence-anchored {evidence_label} analysis; {anchor_note}. "
         f"{boundary_note} "
-        "Reading tracker status/evidence was not changed.\n\n"
+        "Reading tracker status remains user-controlled; registry source evidence is reconciled separately.\n\n"
     )
 
 

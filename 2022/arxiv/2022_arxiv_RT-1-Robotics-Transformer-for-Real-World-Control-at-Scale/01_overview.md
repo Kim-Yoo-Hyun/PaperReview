@@ -9,6 +9,7 @@
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: VLA, Robotics, Imitation Learning
+- Aliases: RT-1, Robotics Transformer
 - Official paper: https://arxiv.org/abs/2212.06817
 - Full-text retrieval: https://arxiv.org/pdf/2212.06817
 - Code/Project: https://robotics-transformer1.github.io/

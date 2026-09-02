@@ -9,6 +9,7 @@
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: VLA, Vision-Language Model, Robotics
+- Aliases: RT-2
 - Official paper: https://arxiv.org/abs/2307.15818
 - Full-text retrieval: https://arxiv.org/pdf/2307.15818
 - Code/Project: https://robotics-transformer2.github.io/

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import re
 import sys
@@ -13,9 +14,9 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 try:
-    from registry_schema import PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape
+    from registry_schema import CURATION_ROLES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape, venue_id_for
 except ModuleNotFoundError:
-    from .registry_schema import PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape
+    from .registry_schema import CURATION_ROLES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape, venue_id_for
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -27,6 +28,9 @@ CATALOGS = {
     "benchmark": ROOT / "work" / "sources" / "benchmark_catalog.json",
     "metric": ROOT / "work" / "sources" / "metric_catalog.json",
 }
+RESOURCES = ROOT / "work" / "sources" / "resources.json"
+REGISTRY_INDEX = ROOT / "research" / "REGISTRY_INDEX.csv"
+REGISTRY_STATS = ROOT / "research" / "REGISTRY_STATS.md"
 
 
 def norm(value: str) -> str:
@@ -36,6 +40,10 @@ def norm(value: str) -> str:
 
 def valid_http(value: str | None) -> bool:
     return bool(value and re.match(r"^https?://", value, flags=re.IGNORECASE))
+
+
+def file_sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def audit_catalog(path: Path, kind: str, paper_ids: set[str], errors: list[str]) -> int:
@@ -70,6 +78,88 @@ def audit_catalog(path: Path, kind: str, paper_ids: set[str], errors: list[str])
     return len(entries)
 
 
+def audit_resources(path: Path, paper_ids: set[str], errors: list[str]) -> int:
+    if not path.exists():
+        errors.append(f"missing combined resource view: {path.relative_to(ROOT)}")
+        return 0
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        errors.append(f"invalid combined resource view JSON: {exc}")
+        return 0
+    if payload.get("schema_version") != SCHEMA_VERSION:
+        errors.append("invalid combined resource view schema metadata")
+    entries = payload.get("entries", [])
+    if not isinstance(entries, list):
+        errors.append("invalid combined resource view entries")
+        return 0
+    ids = []
+    allowed_types = {"benchmark_or_dataset", "metric", "code_or_project"}
+    for entry in entries:
+        resource_id = entry.get("resource_id", "")
+        ids.append(resource_id)
+        if not resource_id or entry.get("resource_type") not in allowed_types:
+            errors.append(f"invalid combined resource entry: {resource_id}")
+        if entry.get("resource_type") == "code_or_project" and not valid_http(entry.get("url")):
+            errors.append(f"invalid code/project resource URL: {resource_id}")
+        references = entry.get("paper_references", [])
+        references += [{"paper_id": value} for value in entry.get("paper_ids", [])]
+        for reference in references:
+            if reference.get("paper_id") not in paper_ids:
+                errors.append(f"resource points to unknown paper_id: {resource_id}")
+    duplicates = [value for value, count in Counter(ids).items() if count > 1]
+    if duplicates:
+        errors.append(f"duplicate combined resource ids: {duplicates}")
+    return len(entries)
+
+
+def audit_registry_index(path: Path, papers_by_id: dict[str, dict], errors: list[str]) -> int:
+    if not path.exists():
+        errors.append(f"missing generated registry index: {path.relative_to(ROOT)}")
+        return 0
+    try:
+        with path.open(newline="", encoding="utf-8") as handle:
+            rows = list(csv.DictReader(handle))
+    except (OSError, csv.Error) as exc:
+        errors.append(f"invalid generated registry index: {exc}")
+        return 0
+    required = {
+        "paper_id", "title", "year", "venue", "category", "tier", "roles",
+        "facets", "evidence_level", "reading_status", "primary_source",
+        "overview_path",
+    }
+    fields = set(rows[0]) if rows else set()
+    missing = sorted(required - fields)
+    if missing:
+        errors.append(f"generated registry index missing fields: {missing}")
+    ids = [row.get("paper_id", "") for row in rows]
+    if len(rows) != len(papers_by_id):
+        errors.append(f"generated registry index rows {len(rows)} != papers {len(papers_by_id)}")
+    if len(set(ids)) != len(ids):
+        errors.append("generated registry index has duplicate paper_id")
+    for row in rows:
+        item = papers_by_id.get(row.get("paper_id"))
+        if not item:
+            errors.append(f"generated registry index points to unknown paper_id: {row.get('paper_id')}")
+            continue
+        if row.get("title") != item.get("title") or row.get("year") != str(item.get("year")):
+            errors.append(f"generated registry index identity mismatch: {row.get('paper_id')}")
+        try:
+            facets = json.loads(row.get("facets", "{}"))
+        except json.JSONDecodeError:
+            errors.append(f"generated registry index has invalid facets JSON: {row.get('paper_id')}")
+            facets = {}
+        if not isinstance(facets, dict) or any(key not in FACET_KEYS for key in facets):
+            errors.append(f"generated registry index has invalid facets: {row.get('paper_id')}")
+    return len(rows)
+
+
+def note_evidence_for(path: Path) -> str:
+    match = re.search(r"Evidence maturity:\s*`([^`]+)`", path.read_text(encoding="utf-8", errors="ignore"))
+    value = match.group(1) if match else "MISSING"
+    return value if value in EVIDENCE else "MISSING"
+
+
 def main() -> None:
     errors: list[str] = []
     warnings: list[str] = []
@@ -87,6 +177,8 @@ def main() -> None:
         meta = json.loads(meta_path.read_text(encoding="utf-8"))
         if meta.get("schema_version") != SCHEMA_VERSION or meta.get("paper_count") != len(papers):
             errors.append("registry metadata schema/count mismatch")
+        if meta.get("manifest_sha256") and meta.get("manifest_sha256") != file_sha256(MANIFEST):
+            errors.append("registry metadata manifest_sha256 mismatch")
     schema_path = ROOT / "work" / "sources" / "registry.schema.json"
     if not schema_path.exists():
         errors.append("missing registry.schema.json")
@@ -118,6 +210,12 @@ def main() -> None:
         duplicates = [value for value, count in Counter(values).items() if count > 1]
         if duplicates:
             errors.append(f"duplicate {key}: {len(duplicates)} groups")
+    normalized_categories: dict[str, set[str]] = defaultdict(set)
+    for paper in papers:
+        normalized_categories[norm(paper.get("category", ""))].add(paper.get("category", ""))
+    category_aliases = [values for values in normalized_categories.values() if len(values) > 1]
+    if category_aliases:
+        errors.append(f"category aliases are not normalized: {category_aliases}")
     paper_by_path = {
         f"./{p['folder']}/01_overview.md": p
         for p in papers
@@ -126,6 +224,13 @@ def main() -> None:
 
     def paper_for_path(path: str) -> dict | None:
         return paper_by_path.get(path) or paper_by_path.get(urllib.parse.unquote(path))
+
+    primary_url_counts: Counter[str] = Counter()
+    for item in papers:
+        primary = (item.get("sources") or {}).get("primary")
+        if isinstance(primary, dict) and primary.get("url"):
+            primary_url_counts[primary["url"].casefold()] += 1
+    shared_primary_urls = {url for url, count in primary_url_counts.items() if count > 1}
 
     for item in papers:
         intensive = False
@@ -136,9 +241,19 @@ def main() -> None:
             errors.append(f"{item.get('title', '<untitled>')} registry schema: {', '.join(shape_errors)}")
         if item.get("page") and not valid_http(item.get("page")):
             errors.append(f"invalid primary source URL: {item.get('paper_id')}")
+        publication = item.get("publication") or {}
+        if publication.get("venue_id") and not isinstance(publication.get("venue_id"), str):
+            errors.append(f"invalid venue_id: {item.get('paper_id')}")
+        primary = (item.get("sources") or {}).get("primary")
+        if isinstance(primary, dict) and primary.get("url"):
+            expected_scope = "venue_index" if primary["url"].casefold() in shared_primary_urls else "paper_specific"
+            if primary.get("scope") != expected_scope:
+                errors.append(f"primary source scope mismatch: {item.get('paper_id')}")
         for relation in item.get("relations", []):
             if relation.get("paper_id") not in paper_ids:
                 errors.append(f"relation points to unknown paper_id: {item.get('paper_id')}")
+            if relation.get("source") and not valid_http(relation.get("source")):
+                errors.append(f"invalid relation source URL: {item.get('paper_id')}")
     identifier_values: dict[tuple[str, str], list[str]] = defaultdict(list)
     for item in papers:
         for namespace, identifier in (item.get("identifiers") or {}).items():
@@ -188,6 +303,40 @@ def main() -> None:
         errors.append("invalid evidence level")
     if len(status) != counts["CORE"] + counts["NEXT"]:
         errors.append("intensive tracker size mismatch")
+    tier_by_paper_id = {row.get("paper_id", ""): row for row in tiers}
+    status_by_paper_id = {row.get("paper_id", ""): row for row in status}
+    evidence_rank = {value: index for index, value in enumerate(["CURATION_ONLY", "ABSTRACT_CHECKED", "FULL_TEXT_CHECKED", "EXPERIMENT_CHECKED"])}
+    for item in papers:
+        provenance = item.get("provenance") or {}
+        note_map = provenance.get("note_evidence")
+        if not isinstance(note_map, dict):
+            errors.append(f"missing provenance.note_evidence: {item.get('paper_id')}")
+            continue
+        actual_values = {}
+        for name in NOTE_NAMES:
+            note_path = ROOT / item["folder"] / name
+            actual_values[name] = note_evidence_for(note_path) if note_path.exists() else "MISSING"
+            if note_map.get(name) != actual_values[name]:
+                errors.append(f"note evidence mismatch: {item.get('paper_id')} {name}")
+        max_note = max(
+            (value for value in actual_values.values() if value in evidence_rank),
+            key=evidence_rank.get,
+            default="CURATION_ONLY",
+        )
+        paper_evidence = provenance.get("content_evidence")
+        if paper_evidence not in EVIDENCE:
+            errors.append(f"invalid paper content evidence: {item.get('paper_id')}")
+        elif evidence_rank[paper_evidence] < evidence_rank[max_note]:
+            errors.append(f"paper evidence is below note evidence: {item.get('paper_id')}")
+        review = provenance.get("review")
+        if isinstance(review, dict) and review.get("manifest"):
+            review_path = ROOT / review["manifest"]
+            if not review_path.exists():
+                errors.append(f"review manifest path does not exist: {item.get('paper_id')}")
+        if item.get("paper_id") in status_by_paper_id:
+            tracker_evidence = status_by_paper_id[item["paper_id"]].get("evidence_level")
+            if tracker_evidence != paper_evidence:
+                errors.append(f"tracker/manifest evidence mismatch: {item.get('paper_id')}")
     tier_fields = set(tiers[0]) if tiers else set()
     status_fields = set(status[0]) if status else set()
     if "primary_track" not in tier_fields:
@@ -223,6 +372,10 @@ def main() -> None:
         kind: audit_catalog(path, kind, paper_ids, errors)
         for kind, path in CATALOGS.items()
     }
+    resource_count = audit_resources(RESOURCES, paper_ids, errors)
+    index_count = audit_registry_index(REGISTRY_INDEX, paper_by_id, errors)
+    if not REGISTRY_STATS.exists():
+        errors.append(f"missing generated registry statistics: {REGISTRY_STATS.relative_to(ROOT)}")
     queue_paths: list[str] = []
     for path in sorted((ROOT / "synthesis").glob("0*.md")):
         text = path.read_text(encoding="utf-8")
@@ -252,6 +405,8 @@ def main() -> None:
         "tier_counts": dict(counts), "intensive": len(status),
         "standard_note_files": len(papers) * len(NOTE_NAMES),
         "catalog_entries": catalog_counts,
+        "combined_resources": resource_count,
+        "registry_index_rows": index_count,
         "errors": errors, "warnings": warnings,
     })
     if errors:

@@ -8,7 +8,7 @@
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: Robotics, VLA, Benchmark, safety, distractor, extrapolation, long horizon
+- Tags: Robotics, VLA, Benchmark, safety, distractor, extrapolation, long-horizon, manipulation
 - Official paper: https://vla-arena.github.io/
 - Full-text retrieval: https://arxiv.org/pdf/2512.22539
 - Code/Project: https://vla-arena.github.io/

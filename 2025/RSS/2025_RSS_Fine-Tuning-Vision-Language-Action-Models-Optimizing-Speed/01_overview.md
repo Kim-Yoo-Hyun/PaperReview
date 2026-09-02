@@ -9,6 +9,7 @@
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, VLA, OpenVLA, fine-tuning, action chunking, inference efficiency
+- Aliases: OpenVLA-OFT, OFT
 - Official paper: https://www.roboticsproceedings.org/rss21/p017.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p017.pdf
 - Code/Project: https://openvla-oft.github.io/

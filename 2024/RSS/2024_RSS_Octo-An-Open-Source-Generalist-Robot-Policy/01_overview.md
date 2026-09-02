@@ -9,6 +9,7 @@
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: Robotics, generalist policy, Imitation Learning
+- Aliases: Octo
 - Official paper: https://arxiv.org/abs/2405.12213
 - Full-text retrieval: https://arxiv.org/pdf/2405.12213
 - Code/Project: https://octo-models.github.io/

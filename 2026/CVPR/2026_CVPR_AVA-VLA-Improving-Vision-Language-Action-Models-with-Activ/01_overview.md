@@ -8,7 +8,7 @@
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: Robotics, VLA, active perception, visual attention, POMDP, recurrent state, long horizon
+- Tags: Robotics, VLA, active perception, visual attention, POMDP, recurrent state, long-horizon
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf
 - Code/Project: not identified

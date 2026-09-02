@@ -40,6 +40,70 @@ PUBLICATION_STATUSES = {"peer_reviewed", "preprint", "technical_report", "unveri
 CODE_STATUSES = {"released", "project_only", "not_released", "not_identified"}
 DATA_STATUSES = {"released", "not_released", "not_identified", "not_recorded"}
 
+# These are intentionally small controlled vocabularies.  They are used for
+# navigation and filtering, not as substitutes for paper-level evidence.
+CURATION_ROLES = {
+    "foundation",
+    "method",
+    "system",
+    "benchmark_or_dataset",
+}
+FACET_KEYS = {
+    "embodiment",
+    "modality",
+    "learning",
+    "control_level",
+    "setting",
+    "interaction",
+}
+
+# Full venue names and legacy abbreviations cannot be classified reliably by
+# substring matching alone.  Keep the override table local to the registry so
+# the same mapping is used by registration, normalization, and audit.
+VENUE_KIND_OVERRIDES = {
+    "ieee robotics and automation letters": "journal",
+    "nature": "journal",
+    "nature machine intelligence": "journal",
+    "robotics: science and systems": "conference",
+    "naacl": "conference",
+    "tmlr": "journal",
+    "aistats": "conference",
+    "emnlp": "conference",
+    "ieee jra": "journal",
+    "ieee t-ra": "journal",
+    "ijhr": "journal",
+    "icaps": "conference",
+    "ijcai": "conference",
+}
+
+VENUE_IDS = {
+    "arxiv": "arxiv",
+    "neurips": "neurips",
+    "iclr": "iclr",
+    "icml": "icml",
+    "cvpr": "cvpr",
+    "eccv": "eccv",
+    "iccv": "iccv",
+    "icra": "icra",
+    "iros": "iros",
+    "rss": "rss",
+    "robotics: science and systems": "rss",
+    "corl": "corl",
+    "ral": "ral",
+    "ieee robotics and automation letters": "ral",
+    "t-ro": "t-ro",
+    "ijrr": "ijrr",
+    "science robotics": "science-robotics",
+    "nature": "nature",
+    "nature machine intelligence": "nature-machine-intelligence",
+    "tmlr": "tmlr",
+    "aistats": "aistats",
+    "emnlp": "emnlp",
+    "naacl": "naacl",
+    "icaps": "icaps",
+    "ijcai": "ijcai",
+}
+
 DETAILED_TRACK_TO_PRIMARY = {
     "Planning, control, and whole-body foundations": "Planning and control",
     "Planning, control, simulation, and TAMP extensions": "Planning and control",
@@ -97,6 +161,8 @@ def presentation_from_venue(value: Any) -> str:
 
 def publication_kind(venue: str) -> str:
     label = venue.casefold()
+    if label in VENUE_KIND_OVERRIDES:
+        return VENUE_KIND_OVERRIDES[label]
     if label == "arxiv":
         return "preprint"
     if "technical report" in label or label in {"tech report", "report"}:
@@ -144,6 +210,16 @@ def publication_kind(venue: str) -> str:
     if any(marker in label for marker in conference_markers):
         return "conference"
     return "other"
+
+
+def venue_id_for(venue: str) -> str:
+    """Return a stable compact venue key without creating another venue catalog."""
+
+    label = _text(venue).casefold()
+    if label in VENUE_IDS:
+        return VENUE_IDS[label]
+    value = re.sub(r"[^a-z0-9]+", "-", label).strip("-")
+    return value or "unknown"
 
 
 def publication_status(kind: str, venue: str) -> str:
@@ -343,6 +419,7 @@ def enrich_record(
             "kind": publication.get("kind") or kind,
             "status": publication.get("status") or publication_status(kind, canonical),
             "presentation": publication.get("presentation") or presentation_from_venue(raw_venue),
+            "venue_id": publication.get("venue_id") or venue_id_for(canonical),
         }
     )
     item["publication"] = publication
@@ -454,4 +531,15 @@ def validate_record_shape(item: dict[str, Any], *, intensive: bool = False) -> l
         errors.append("invalid provenance.schema_version")
     if not isinstance(item.get("relations"), list):
         errors.append("relations is not a list")
+    curation = item.get("curation") if isinstance(item.get("curation"), dict) else {}
+    roles = curation.get("roles")
+    if roles is not None:
+        if not isinstance(roles, list) or any(role not in CURATION_ROLES for role in roles):
+            errors.append("invalid curation.roles")
+    facets = item.get("facets")
+    if facets is not None:
+        if not isinstance(facets, dict) or any(key not in FACET_KEYS for key in facets):
+            errors.append("invalid facets")
+        elif any(not isinstance(values, list) or any(not isinstance(value, str) for value in values) for values in facets.values()):
+            errors.append("invalid facets values")
     return errors

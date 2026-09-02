@@ -145,156 +145,6 @@ CORE_GROUPS = OrderedDict(
 )
 
 
-# Project-specific reading order for the I-02/RP-2 failure-to-recovery study.
-# This is not a fourth tier: it is a dependency-based view over CORE/NEXT/
-# REFERENCE papers and is intentionally broader than the 100–150 paper
-# intensive-reading operating guide.
-RP2_PRIORITY_GROUPS = OrderedDict(
-    [
-        (
-            "P0 — Concept prerequisites",
-            [
-                ("=Planning and Acting in Partially Observable Stochastic Domains", "MDP/POMDP, belief state, finite-memory policy"),
-                ("A Reduction of Imitation Learning", "covariate shift and learner-induced failure states"),
-                ("Proximal Policy Optimization Algorithms", "policy optimization and trust-region intuition"),
-                ("Trust Region Policy Optimization", "stable constrained policy updates"),
-                ("Recovery RL:", "task policy, recovery policy, safety critic"),
-                ("Failure Prediction with Statistical Guarantees", "runtime monitoring and statistical failure prediction"),
-                ("Control Barrier Function Based", "safe set, constraint violation, irreversible event"),
-                ("Robots That Ask For Help", "uncertainty-aligned human escalation"),
-                ("PDDLStream:", "symbolic–continuous task-and-motion replanning"),
-                ("Relay Policy Learning", "long-horizon skill decomposition and relaying"),
-            ],
-        ),
-        (
-            "P1 — Direct detector, recovery, and selector baselines",
-            [
-                ("Can We Detect Failures Without Failure Data?", "uncertainty-aware detector without failure-data dependence"),
-                ("SAFE: Multitask", "VLA latent failure score and conformal alert threshold"),
-                ("FLARE:", "binary Retry/Reset recovery dispatcher"),
-                ("Can VLMs Diagnose and Recover", "fault taxonomy, diagnosis, rollback recovery"),
-                ("Temporal Difference Calibration", "sequential success-confidence calibration"),
-                ("AHA: A Vision-Language-Model", "VLM failure detection and reasoning alternative"),
-                ("Counterfactual VLA", "self-reflection and test-time recovery comparison"),
-                ("SafeVLA:", "constrained VLA safety alignment"),
-            ],
-        ),
-        (
-            "P2 — Benchmark and metric semantics",
-            [
-                ("Benchmarking Knowledge Transfer for Lifelong Robot Learning", "LIBERO fixed states and goal predicates"),
-                ("CALVIN:", "language-conditioned long-horizon sequence evaluation"),
-                ("AtomicVLA:", "termination semantics and post-failure continuation"),
-                ("FurnitureBench:", "phase/skill progress beyond final success"),
-                ("LIBERO-Safety:", "physical and semantic safety perturbations"),
-                ("VLA-Arena:", "safety, distractor, extrapolation, long-horizon stress axes"),
-                ("BEHAVIOR-1K:", "large-scale embodied long-horizon evaluation context"),
-                ("RLBench:", "task suite and simulator design comparison"),
-            ],
-        ),
-        (
-            "P3 — Frozen VLA and implementation branch",
-            [
-                ("OpenVLA", "recommended open frozen policy base for the first pilot"),
-                ("Octo: An Open", "generalist policy and action conditioning alternative"),
-                ("RT-1:", "robot policy/action-token lineage"),
-                ("RT-2:", "language-to-action VLA lineage"),
-                ("π0: A Vision-Language-Action Flow Model", "current flow-based VLA alternative"),
-                ("π0.5", "open-world VLA extension"),
-                ("Decision Transformer:", "trajectory-conditioned sequence modeling"),
-                ("Implicit Q-Learning", "chosen-action or partial-feedback sensitivity; not the primary all-option estimator"),
-                ("Conservative Q-Learning", "support-mismatch baseline for later policy reuse; not the primary all-option estimator"),
-                ("Implicit Behavioral Cloning", "multimodal behavior-cloning alternative"),
-                ("Q-Transformer:", "autoregressive action-value modeling extension"),
-            ],
-        ),
-        (
-            "P4 — Optional extensions and transfer checks",
-            [
-                ("Long-VLA:", "long-horizon VLA context"),
-                ("PALM:", "progress-aware policy state"),
-                ("Learning to Be Uncertain", "horizon-calibrated uncertainty context"),
-                ("WorldGym", "world-model policy evaluation alternative"),
-                ("WMPO", "imagined policy improvement and calibration context"),
-                ("Memory Retrieval in Visuomotor Policies", "memory/retrieval effects on long-horizon execution"),
-                ("Inner Monologue:", "language-mediated replanning and feedback"),
-                ("SayPlan", "scene-graph task planning extension"),
-                ("MimicPlay:", "long-horizon imitation and play data"),
-                ("MimicGen", "demonstration augmentation if recovery data is scarce"),
-                ("Data Scaling Laws", "data coverage and failure-data curation context"),
-            ],
-        ),
-    ]
-)
-
-
-# These fast-moving 2026 papers stay outside the registry-backed tier system
-# until their metadata admission is audited. They are still mandatory RP-2
-# reading because they directly constrain the project's novelty boundary.
-RP2_EXTERNAL_COLLISION_READING = [
-    (
-        "Learning Robust Execution with Agentic RL",
-        "https://arxiv.org/html/2607.13818v1",
-        "PREPRINT / FULL-TEXT-CHECKED",
-        "strongest collision: a history-conditioned Execute/Retry/Repair/Reset manager trained with PPO on LIBERO",
-    ),
-    (
-        "ActFovea",
-        "https://arxiv.org/abs/2607.29169",
-        "PREPRINT / FULL-TEXT-CHECKED",
-        "verified observation recovery, bounded safe failure, and short-horizon/action-smoothing controls",
-    ),
-    (
-        "ProbeAct",
-        "https://arxiv.org/abs/2606.09740",
-        "PREPRINT / FULL-TEXT-CHECKED",
-        "hidden-state probing, a kinematic failure state machine, and training-free CBF correction",
-    ),
-    (
-        "ViFailback",
-        "https://openaccess.thecvf.com/content/CVPR2026/html/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.html",
-        "CVPR 2026 / FULL-TEXT-CHECKED",
-        "diagnosis plus visual/text correction with real failure data",
-    ),
-    (
-        "AgentChord",
-        "https://roboticsconference.org/program/papers/180/",
-        "RSS 2026 / SOURCE-VERIFIED",
-        "precompiled recovery branches and low-latency orchestration",
-    ),
-    (
-        "When to Act, Ask, or Learn",
-        "https://roboticsconference.org/program/papers/142/",
-        "RSS 2026 / SOURCE-VERIFIED",
-        "calibrated act/clarify/intervene selection and selective autonomy",
-    ),
-    (
-        "See, Plan, Rewind",
-        "https://arxiv.org/abs/2603.09292",
-        "PREPRINT / SOURCE-VERIFIED",
-        "progress-aware subgoal rewind",
-    ),
-    (
-        "FAR",
-        "https://arxiv.org/abs/2607.01111",
-        "PREPRINT / SOURCE-VERIFIED",
-        "retry perturbation and failure-preference adaptation",
-    ),
-    (
-        "Imagining Recovery / CoRe",
-        "https://arxiv.org/abs/2608.14822",
-        "PREPRINT / FULL-TEXT-CHECKED",
-        "imagined continuation and state realignment; a different estimand from cloned same-onset branch outcomes",
-    ),
-    (
-        "VLCP",
-        "https://arxiv.org/abs/2608.16978",
-        "PREPRINT / SOURCE-VERIFIED",
-        "control-code abstraction and closed-loop replanning",
-    ),
-]
-
-
 NEXT_GROUPS = OrderedDict(
     [
         (
@@ -308,6 +158,11 @@ NEXT_GROUPS = OrderedDict(
                 "=Open-Vocabulary Spatio-Temporal Scene Graph for Robot Perception and Teleoperation Planning",
                 "=Lookahead Exploration with Neural Radiance Representation for Continuous Vision-Language Navigation",
                 "=FOCI: Trajectory Optimization on Gaussian Splats",
+                "=Partially Observable Task and Motion Planning with Uncertainty and Risk Awareness",
+                "=Parallel and Proximal Linear-Quadratic Methods for Real-Time Constrained Model-Predictive Control",
+                "=Differentiable Robust Model Predictive Control",
+                "=Linear-time Differential Inverse Kinematics: an Augmented Lagrangian Perspective",
+                "=NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration",
             ],
         ),
         (
@@ -351,6 +206,13 @@ NEXT_GROUPS = OrderedDict(
                 "=AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems",
                 "=Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning",
                 "=MP1: MeanFlow Tames Policy Learning in 1-step for Robotic Manipulation",
+                "=Efficient Online Reinforcement Learning with Offline Data",
+                "=Diffusion Meets DAgger: Supercharging Eye-in-hand Imitation Learning",
+                "=Consistency Policy: Accelerated Visuomotor Policies via Consistency Distillation",
+                "=Any-point Trajectory Modeling for Policy Learning",
+                "=Evaluating Real-World Robot Manipulation Policies in Simulation",
+                "=Benchmarking Knowledge Transfer for Lifelong Robot Learning",
+                "=MimicPlay: Long-Horizon Imitation Learning by Watching Human Play",
             ],
         ),
         (
@@ -397,12 +259,17 @@ NEXT_GROUPS = OrderedDict(
                 "=Sparsh: Self-supervised touch representations for vision-based tactile sensing",
                 "=Octopi: Object Property Reasoning with Large Tactile-Language Models",
                 "=OPEN TEACH: A Versatile Teleoperation System for Robotic Manipulation",
+                "=FurnitureBench: Reproducible Real-World Benchmark for Long-Horizon Complex Manipulation",
+                "=Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+                "=Learning Robotic Manipulation Policies from Point Clouds with Conditional Flow Matching",
+                "=3D Diffusion Policy: Generalizable Visuomotor Policy Learning via Simple 3D Representations",
             ],
         ),
         (
             "VLA, cross-embodiment, and long-horizon planning",
             [
                 "=A Generalist Agent",
+                "=CALVIN: A Benchmark for Language-Conditioned Policy Learning for Long-Horizon Robot Manipulation Tasks",
                 "=AutoRT: Embodied Foundation Models for Large Scale Orchestration of Robotic Agents",
                 "=RT-H: Action Hierarchies Using Language",
                 "=Gemini Robotics: Bringing AI into the Physical World",
@@ -448,6 +315,15 @@ NEXT_GROUPS = OrderedDict(
                 "=RDT-1B: a Diffusion Foundation Model for Bimanual Manipulation",
                 "=AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic Manipulation",
                 "=SIMPACT: Simulation-Enabled Action Planning using Vision-Language Models",
+                "=Vision-Language Foundation Models as Effective Robot Imitators",
+                "=Unleashing Large-Scale Video Generative Pre-training for Visual Robot Manipulation",
+                "=RoboMamba: Efficient Vision-Language-Action Model for Robotic Reasoning and Manipulation",
+                "=Latent Action Pretraining from Videos",
+                "=3D-VLA: A 3D Vision-Language-Action Generative World Model",
+                "=VLMimic: Vision Language Models are Visual Imitation Learner for Fine-grained Actions",
+                "=MIRAGE: Cross-Embodiment Zero-Shot Policy Transfer with Cross-Painting",
+                "=Pushing the Limits of Cross-Embodiment Learning for Manipulation and Navigation",
+                "=LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models",
             ],
         ),
         (
@@ -512,6 +388,8 @@ NEXT_GROUPS = OrderedDict(
                 "=Flying Hand: End-Effector-Centric Framework for Versatile Aerial Manipulation Teleoperation and Policy Learning",
                 "=SPIN: Simultaneous Perception, Interaction and Navigation",
                 "=WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts",
+                "=ViNT: A Foundation Model for Visual Navigation",
+                "=GOAT: GO to Any Thing",
             ],
         ),
         (
@@ -688,25 +566,6 @@ def resolve_groups(
                 titles = [row["title"] for row in hits]
                 raise RuntimeError(f"Query {query!r} resolved to {len(hits)} papers: {titles}")
             papers.append(hits[0])
-        resolved[group] = papers
-    return resolved
-
-
-def resolve_priority_groups(
-    rows: list[dict[str, str]], groups: OrderedDict[str, list[tuple[str, str]]]
-) -> OrderedDict[str, list[tuple[dict[str, str], str]]]:
-    resolved: OrderedDict[str, list[tuple[dict[str, str], str]]] = OrderedDict()
-    for group, entries in groups.items():
-        papers: list[tuple[dict[str, str], str]] = []
-        for query, rationale in entries:
-            if query.startswith("="):
-                hits = [row for row in rows if row["title"] == query[1:]]
-            else:
-                hits = [row for row in rows if query.lower() in row["title"].lower()]
-            if len(hits) != 1:
-                titles = [row["title"] for row in hits]
-                raise RuntimeError(f"RP-2 query {query!r} resolved to {len(hits)} papers: {titles}")
-            papers.append((hits[0], rationale))
         resolved[group] = papers
     return resolved
 
@@ -889,11 +748,13 @@ def plan_section(
 ) -> list[str]:
     total = sum(len(papers) for papers in groups.values())
     lines = [f"## {tier} — {total} papers", ""]
+    sequence = 0
     for track, papers in groups.items():
         lines.extend([f"### {track} — {len(papers)}", ""])
-        for index, paper in enumerate(papers, 1):
+        for paper in papers:
+            sequence += 1
             lines.append(
-                f"{index}. [{paper['title']}]({'.' + paper['path']}) "
+                f"{sequence}. [{paper['title']}]({'.' + paper['path']}) "
                 f"— {paper['year']} {paper['venue']}."
             )
         lines.append("")
@@ -920,78 +781,44 @@ def write_plan(
         f"(CORE {counts['CORE']} + NEXT {counts['NEXT']})",
         "- Research stance: Robotics is the main axis; 3D Vision is selected when it changes robot state estimation, planning, control, or evaluation.",
         "",
-        "## How to Use This Plan",
+        "## Default Reading Policy — Core First, Topic Independent",
         "",
-        "이 문서는 별도 priority 목록과 robotics roadmap을 합친 유일한 장기 reading roadmap이다. 논문은 다음 폐루프에서 맡는 역할을 기준으로 읽는다.",
+        "이 문서는 연구 주제와 무관하게 동일한 기본 순서를 제공한다. 먼저 공통 foundation과 canonical formulation을 읽고, 그 뒤에 연구 질문에 맞는 전문화 논문으로 분기한다.",
         "",
         "`observation → state/world model → task & motion decision → policy/control → contact → feedback/failure recovery`",
         "",
-        "- **Robotics:** planning, control, learning, physical interaction, deployment가 주 연구축이다.",
-        "- **VLA:** language 이해 자체보다 action representation, robot data, embodiment transfer, latency, memory, feedback, safety를 본다.",
-        "- **3D Vision:** 독립 benchmark보다 manipulation, navigation, SLAM, spatial memory, active perception에 주는 downstream 효과를 본다.",
-        "- **Humanoid:** 별도 축으로 분리하지 않고 locomotion, whole-body control, imitation, loco-manipulation 안에서 읽는다.",
+        f"1. **CORE {counts['CORE']}편:** 아래의 CORE 순서를 공통 spine으로 사용한다. 연구 주제가 VLA, manipulation, locomotion, 3D perception 중 무엇이든 CORE를 먼저 읽는다.",
+        f"2. **NEXT {counts['NEXT']}편:** CORE를 기본적으로 통과한 뒤 연구 질문과 직접 연결되는 branch를 선택한다. NEXT 내부의 track 순서는 탐색용이며 CORE보다 앞설 수 없다.",
+        f"3. **REFERENCE {counts['REFERENCE']}편:** CORE/NEXT를 읽는 중 필요한 정의·baseline·benchmark가 생길 때 on-demand로 조회한다.",
+        f"4. **ARCHIVE {counts['ARCHIVE']}편:** 현재 순서에는 넣지 않고 검색·역사 자료로 보존한다.",
         "",
-        "### Default reading budget",
+        "### 운영 원칙",
         "",
-        "| Research track | Share | Focus |",
-        "|---|---:|---|",
-        "| Robot learning and control | 25% | RL/IL/offline RL, planning, optimal control, sim-to-real |",
-        "| Manipulation and physical interaction | 25% | grasping, contact, tactile/force, dexterity, deformables, assembly |",
-        "| VLA, world models, safety, and long horizon | 20% | generalist policies, predictive models, uncertainty, recovery, replanning |",
-        "| Locomotion, whole-body, and mobile robotics | 15% | legged/humanoid control, loco-manipulation, navigation |",
-        "| Robotics-enabling 3D Vision | 15% | geometry, SLAM, active perception, semantic/spatial memory |",
-        "",
-        "이 비율은 registry 구성 비율이 아니라 장기 읽기·비교·재현 시간의 기본값이다. 연구 주제가 정해지면 해당 track을 50% 이상으로 높일 수 있다.",
+        "- 주제별 시간 배분은 CORE를 건너뛰는 근거가 아니다. 연구 주제는 CORE 이후 NEXT의 branch 선택에만 사용한다.",
+        f"- CORE의 track 제목은 taxonomy와 navigation을 위한 것이며, 논문을 골라 읽기 위한 선택지가 아니다. 기본적으로 1번부터 {counts['CORE']}번까지 진행한다.",
+        "- 특정 프로젝트에 필요한 논문을 먼저 읽어야 하면 canonical order를 수정하지 않고 별도 project overlay로 기록한다.",
         "",
         "## Priority Criteria",
         "",
-        "위에서 아래 순서로 판단하되 PDF 보유 여부는 고려하지 않는다.",
+        "읽기 순서와 tier를 정할 때는 아래 순서를 우선하며 PDF 보유 여부는 고려하지 않는다.",
         "",
-        "1. 실제 robot task와 closed-loop action/control에 직접 연결되는가",
-        "2. 해당 분야의 foundation 또는 후속 연구의 핵심 prerequisite인가",
-        "3. 해결하려는 연구 공백과 기존 접근의 한계가 명확한가",
-        "4. contact, partial observability, uncertainty, safety, failure recovery를 실질적으로 다루는가",
-        "5. real robot 또는 설득력 있는 physics evaluation이 있는가",
-        "6. 평가 protocol, metric, baseline이 명확하고 재검증 가능한가",
-        "7. 구현 난이도와 데이터·코드·하드웨어 접근성이 현실적인가",
-        "8. embodiment, task, object, environment generalization을 검증하는가",
-        "9. 최신 trend 중 후속 연구가 이어지는 핵심 flow를 형성하는가",
-        "10. 현재 연구에서 반박·재사용·확장 가능한 contribution이 있는가",
-        "",
-        "## RP-2 / I-02 Priority Reading Sequence",
-        "",
-        "아래 순서는 전체 registry tier가 아니라 `Same-Onset Failure Recovery Arbitration` 연구를 시작할 때의 project-specific dependency다. broad high-level recovery selector는 Agentic RL이 이미 직접 다루므로, RP-2는 same-onset all-option supervision, vector budget, best-fixed regret가 실제로 필요한지부터 반증한다. 15편 hard cap을 두지 않으며, 각 논문은 event schema, detector, option contract, budget, estimator, benchmark 중 어느 결정을 바꾸는지 기록한다.",
+        "1. 공통 foundation 또는 후속 연구의 핵심 prerequisite인가",
+        "2. 문제 formulation, state/action/control interface를 바꾸었는가",
+        "3. 여러 robotics 문제에 재사용 가능한 개념적 수명이 있는가",
+        "4. 실제 robot의 closed-loop decision, contact, adaptation, deployment와 연결되는가",
+        "5. 기존 접근의 bottleneck과 실패 조건을 명확히 드러내는가",
+        "6. evaluation protocol, metric, baseline이 비교 가능하고 재검증 가능한가",
+        "7. 최신 흐름에서 기존 foundation의 한계를 검증하거나 확장하는가",
+        "8. 현재 연구에서 반박·재사용·확장할 수 있는 명시적 contribution이 있는가",
         "",
     ]
-    for priority, entries in resolve_priority_groups(rows, RP2_PRIORITY_GROUPS).items():
-        lines.extend([f"### {priority} — {len(entries)} papers", ""])
-        for index, (paper, rationale) in enumerate(entries, 1):
-            lines.append(
-                f"{index}. [{paper['title']}]({'.' + paper['path']}) "
-                f"— {paper['year']} {paper['venue']}; {rationale}."
-            )
-        lines.append("")
-        if priority.startswith("P1 —"):
-            lines.extend([
-                f"#### P1.5 — 2026 direct novelty-collision audit — {len(RP2_EXTERNAL_COLLISION_READING)} papers",
-                "",
-                "아래 자료는 registry tier와 별개인 필수 frontier audit다. 특히 Agentic RL을 재현 가능한 최우선 비교군으로 두고, `paper → policy-visible history → option set → decision timing → budget → supervision → outcome metric` 계약을 표로 남긴다.",
-                "",
-            ])
-            for index, (title, url, status, rationale) in enumerate(RP2_EXTERNAL_COLLISION_READING, 1):
-                lines.append(f"{index}. [{title}]({url}) — `{status}`; {rationale}.")
-            lines.extend([
-                "",
-                "Implementation companion: [SAFE official code](https://github.com/vla-safe/SAFE), [SAFE OpenVLA fork](https://github.com/vla-safe/openvla), and the pinned manifests in [RP-2](./projects/RP-2_FAILURE_RECOVERY.md) define the detector/base-policy reproduction contract.",
-                "",
-            ])
     lines.extend([
         "## Tier Definitions",
         "",
         "| Tier | Papers | Use |",
         "|---|---:|---|",
-        f"| CORE | {counts['CORE']} | 공통 기반과 주력 연구축. 순서대로 정독하고 비교 노트를 남긴다. |",
-        f"| NEXT | {counts['NEXT']} | CORE 이후 트랙별로 정독한다. 연구 주제에 따라 내부 순서는 바꿀 수 있다. |",
+        f"| CORE | {counts['CORE']} | 연구 주제와 무관한 공통 spine. 기본 순서대로 먼저 정독한다. |",
+        f"| NEXT | {counts['NEXT']} | CORE 이후 연구 질문에 따라 branch를 선택한다. |",
         f"| REFERENCE | {counts['REFERENCE']} | 설계·실험 중 필요한 논문만 찾아 읽는다. 완독 목표가 아니다. |",
         f"| ARCHIVE | {counts['ARCHIVE']} | 현재 robotics-first 범위 밖의 검색·역사 자료. 삭제하지 않지만 읽기 큐에서 제외한다. |",
         "",
@@ -1006,15 +833,12 @@ def write_plan(
         "3. 실험의 embodiment, task, data, metric, failure mode",
         "4. 현재 연구에 재사용할 요소와 반박하거나 확장할 지점",
         "",
-        "## Long-Term Reading Sequence",
+        "## Canonical Execution Order",
         "",
-        "1. **Decision, mechanics, and control:** POMDP belief-state planning → Operational Space Control → PRM/RRT → CHOMP/TrajOpt → PDDLStream → whole-body/force control.",
-        "2. **Policy learning:** DAgger/GAIL → RoboMimic/RLBench → TRPO/PPO/SAC → offline RL → DDPM/Flow Matching → Diffusion Policy and scalable robot data.",
-        "3. **Physical interaction:** contact mechanics and grasping → tactile/force feedback → dexterous, deformable, tool, assembly tasks.",
-        "4. **Generalist policies:** CLIP/PaLM-E/CLIPort → RT-1/RT-2 → Open X-Embodiment → Octo/OpenVLA/π0 → FAST/OpenVLA-OFT/π0.5.",
-        "5. **Deployment:** World Models/Dreamer → DayDreamer/TD-MPC2 → FAIL-Detect/SAFE → safety filter and recovery.",
-        "6. **Embodiment specialization:** locomotion, whole-body, mobile manipulation을 선택하고 필요한 3D perception을 역으로 연결한다.",
-        "7. **Active spatial intelligence:** PointNet/3DGS/DUSt3R/VGGT → SLAM/semantic mapping → articulation, active perception, 3D-aware VLA.",
+        f"1. **CORE 1–{counts['CORE']}:** 아래 CORE 목록의 전 논문을 공통 foundation spine으로 읽는다. 각 track heading은 탐색용 분류이며, 주제에 따라 CORE 일부를 생략하지 않는다.",
+        f"2. **NEXT 1–{counts['NEXT']}:** CORE 완료 후에만 연구 질문에 맞는 전문화 branch를 고른다. 같은 branch 안에서는 목록 순서와 prerequisite를 우선한다.",
+        "3. **REFERENCE:** CORE/NEXT에서 생긴 구체적인 정의·baseline·benchmark 요구를 해결할 때만 추가한다.",
+        "4. **Project documents:** 특정 project의 detector, benchmark, implementation contract는 `research/projects/`에서 별도로 관리하며 canonical sequence를 바꾸지 않는다.",
         "",
         "## Dependency-Based Reading Batches",
         "",
@@ -1030,7 +854,7 @@ def write_plan(
         "| F. Embodiment specialization | 동일 학습 원리가 legged, humanoid와 mobile manipulation에서 무엇이 달라지는가? | RMA → perceptive locomotion/parkour → HumanoidBench/OmniH2O/Mobile ALOHA | LangWBC, ASAP, HWC-Loco, VIRAL | dynamics/contact/whole-body coupling 비교 표 |",
         "| G. Action-relevant 3D | 더 좋은 geometry가 실제 robot decision을 언제 개선하는가? | PointNet → DROID-SLAM/3DGS → ConceptFusion/RVT/DUSt3R | VGGT/SUGAR, active 3D, PointVLA/Any3D-VLA | representation 고정 ablation과 downstream metric |",
         "",
-        "Batch exit artifact를 채우기 전에는 해당 계보를 `SYNTHESIZED`로 올리지 않는다. 세부 paper sequence는 아래 CORE/NEXT 목록의 순서를 따른다.",
+        "Batch exit artifact를 채우기 전에는 해당 계보를 `SYNTHESIZED`로 올리지 않는다. Batch는 CORE-first 기본 순서를 보완하는 비교 단위이며, 연구 주제가 다르다는 이유로 CORE보다 앞세우지 않는다.",
         "",
         "## Research Lenses Across Tracks",
         "",
@@ -1045,6 +869,10 @@ def write_plan(
         "",
     ])
     lines.extend(plan_section("CORE", core_groups))
+    lines.extend([
+        f"CORE {counts['CORE']}편을 기본적으로 모두 읽은 뒤에 NEXT branch를 선택한다. 아래 NEXT track은 주제별 선택지이지 CORE를 대체하는 우선순위가 아니다.",
+        "",
+    ])
     lines.extend(plan_section("NEXT", next_groups))
     lines.extend(
         [

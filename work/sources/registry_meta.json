@@ -2,9 +2,12 @@
   "schema_version": "1.0",
   "manifest": "work/sources/papers.json",
   "schema": "work/sources/registry.schema.json",
-  "generated_on": "2026-09-01",
-  "paper_count": 924,
+  "generated_on": "2026-09-02",
+  "paper_count": 950,
   "identity_policy": "paper_id is the stable internal identity; DOI/arXiv/OpenReview identifiers are optional public identifiers.",
   "version_policy": "Use relations with type=version_of or same_work_as when a preprint and publication must remain separate.",
-  "evidence_policy": "Manifest provenance records source scope; note evidence and reading status are not inferred from local PDF presence."
+  "evidence_policy": "Manifest provenance records source scope; note evidence and reading status are not inferred from local PDF presence.",
+  "manifest_sha256": "b0c984699a0d08ee19c03393db2d243393facdd8577048c36fef5b112f5fb66f",
+  "last_reconciled_on": "2026-09-02",
+  "reconciliation_policy": "review manifest evidence is paper-level; per-note evidence is retained under provenance.note_evidence; tracker status remains user-controlled."
 }

@@ -2,7 +2,7 @@
 
 - Year/Venue: 2002 / ICRA
 - Category: Robotics Foundations: Planning and Control
-- Tags: Robotics, humanoid, bipedal locomotion, 3D linear inverted pendulum, realtime control
+- Tags: Robotics, humanoid, bipedal locomotion, 3D linear inverted pendulum, real-time control
 - Paper link: [paper.pdf](./paper.pdf)
 - Code/Project: not released
 - Source audit: regenerated from local `paper.pdf` on 2026-08-11; survey-keyword template text removed.

@@ -8,7 +8,7 @@
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
-- Tags: Robotics, VLA, tactile, force feedback, contact-rich manipulation, Benchmark, dexterity
+- Tags: Robotics, VLA, tactile, force feedback, contact-rich manipulation, Benchmark, dexterity, language-conditioned manipulation
 - Official paper: https://arxiv.org/abs/2605.27886
 - Full-text retrieval: https://arxiv.org/pdf/2605.27886
 - Code/Project: https://github.com/NathanWu7/Tabero

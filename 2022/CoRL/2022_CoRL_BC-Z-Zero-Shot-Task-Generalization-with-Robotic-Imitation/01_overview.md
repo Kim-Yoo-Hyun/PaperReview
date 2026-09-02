@@ -8,7 +8,7 @@
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: Robotics, Imitation Learning, Vision-Language Action
+- Tags: Robotics, Imitation Learning, Vision-Language-Action
 - Official paper: https://arxiv.org/abs/2202.02005
 - Full-text retrieval: https://arxiv.org/pdf/2202.02005
 - Code/Project: https://sites.google.com/view/bc-z/

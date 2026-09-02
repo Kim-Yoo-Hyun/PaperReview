@@ -8,7 +8,7 @@
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
-- Tags: Robotics, representation learning, Video Pretraining, manipulation
+- Tags: Robotics, representation learning, video pretraining, manipulation
 - Official paper: https://proceedings.mlr.press/v205/nair23a.html
 - Full-text retrieval: https://proceedings.mlr.press/v205/nair23a.html
 - Code/Project: https://r3m.cs.columbia.edu/

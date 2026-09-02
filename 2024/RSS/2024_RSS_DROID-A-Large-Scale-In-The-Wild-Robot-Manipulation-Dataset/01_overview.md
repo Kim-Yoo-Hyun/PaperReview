@@ -9,6 +9,7 @@
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Dataset, in-the-wild, robot manipulation, data diversity, generalist policy
+- Aliases: DROID
 - Official paper: https://arxiv.org/abs/2403.12945
 - Full-text retrieval: https://arxiv.org/pdf/2403.12945
 - Code/Project: https://droid-dataset.github.io/

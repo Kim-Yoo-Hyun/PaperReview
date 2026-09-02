@@ -9,6 +9,7 @@
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: Robotics, Dataset, Imitation Learning
+- Aliases: Open X-Embodiment, RT-X
 - Official paper: https://arxiv.org/abs/2310.08864
 - Full-text retrieval: https://arxiv.org/pdf/2310.08864
 - Code/Project: https://robotics-transformer-x.github.io/

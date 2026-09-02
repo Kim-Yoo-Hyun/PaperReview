@@ -35,9 +35,11 @@ def title_key(value: str) -> str:
 
 
 def notes(item: dict) -> dict[str, str]:
+    aliases = item.get("aliases") or []
     common = f"""- Year/Venue: {item['year']} / {item['venue']}
 - Category: {item['category']}
 - Tags: {', '.join(item['tags'])}
+- Aliases: {', '.join(aliases) if aliases else 'none recorded'}
 - Official paper: {item['page']}
 - Code/Project: {item.get('project', 'not identified')}
 - Source audit: {item.get('source_audit', 'metadata registration only; full-text claims are UNVERIFIED.')}

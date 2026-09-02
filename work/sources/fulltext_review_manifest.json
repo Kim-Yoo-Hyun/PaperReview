@@ -33289,5 +33289,18 @@
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-01"
     }
-  ]
+  ],
+  "registry_snapshot": {
+    "status": "historical",
+    "paper_count_at_reconciliation": 950,
+    "input_manifest_sha256_before_reconciliation": "92565d059dfcf4907cb2d606d1c5adc321ea02beec359690d9d34b916f13480f",
+    "tier_counts_in_review": {
+      "REFERENCE": 418,
+      "ARCHIVE": 248
+    },
+    "current_intensive_count": 311,
+    "reviewed_intensive_count": 36,
+    "unreviewed_intensive_count": 275,
+    "alignment_note": "Historical review scope; do not interpret as the current non-CORE/NEXT complement."
+  }
 }

@@ -13,7 +13,9 @@
       "required": ["url", "kind"],
       "properties": {
         "url": {"type": "string", "minLength": 1},
-        "kind": {"type": "string", "minLength": 1}
+        "kind": {"type": "string", "minLength": 1},
+        "scope": {"enum": ["paper_specific", "venue_index", "project_landing", "publisher_landing"]},
+        "verified_on": {"type": ["string", "null"]}
       },
       "additionalProperties": false
     },
@@ -40,6 +42,11 @@
       "properties": {
         "paper_id": {"type": "string", "pattern": "^pr-[0-9]{4,}$"},
         "title": {"type": "string", "minLength": 1},
+        "aliases": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
         "year": {"type": "integer", "minimum": 1900, "maximum": 2100},
         "venue": {"type": "string", "minLength": 1},
         "venue_as_recorded": {"type": "string"},
@@ -71,6 +78,7 @@
           "type": "object",
           "required": ["venue", "year", "venue_year", "kind", "status", "presentation"],
           "properties": {
+            "venue_id": {"type": "string", "minLength": 1},
             "venue": {"type": "string", "minLength": 1},
             "year": {"type": "integer", "minimum": 1900, "maximum": 2100},
             "venue_year": {"type": ["integer", "null"], "minimum": 1900, "maximum": 2100},
@@ -111,10 +119,31 @@
           "required": ["admission_reason", "rationale_status"],
           "properties": {
             "admission_reason": {"type": ["string", "null"]},
-            "rationale_status": {"enum": ["recorded", "pending"]}
+            "rationale_status": {"enum": ["recorded", "pending"]},
+            "tier_reason": {"type": ["string", "null"]},
+            "scope_status": {"enum": ["active", "adjacent", "archive"]},
+            "roles": {
+              "type": "array",
+              "items": {"enum": ["foundation", "method", "system", "benchmark_or_dataset"]},
+              "uniqueItems": true
+            },
+            "role_basis": {"type": "string"}
           },
           "additionalProperties": true
         },
+        "facets": {
+          "type": "object",
+          "properties": {
+            "embodiment": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+            "modality": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+            "learning": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+            "control_level": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+            "setting": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+            "interaction": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+          },
+          "additionalProperties": false
+        },
+        "facet_provenance": {"type": "string"},
         "provenance": {
           "type": "object",
           "required": ["metadata_source_kind", "content_evidence", "source_audit_status", "metadata_checked_on", "schema_version", "schema_migrated_on"],
@@ -134,7 +163,7 @@
             "type": "object",
             "required": ["type", "paper_id"],
             "properties": {
-              "type": {"enum": ["version_of", "same_work_as", "extends", "replicates", "baseline_for"]},
+              "type": {"enum": ["version_of", "same_work_as", "extends", "replicates", "baseline_for", "uses_dataset", "evaluates_on", "builds_on", "supersedes"]},
               "paper_id": {"type": "string", "pattern": "^pr-[0-9]{4,}$"},
               "confidence": {"enum": ["manual", "verified", "inferred"]}
             },

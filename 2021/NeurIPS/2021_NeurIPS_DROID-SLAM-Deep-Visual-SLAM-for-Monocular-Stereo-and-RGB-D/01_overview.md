@@ -9,6 +9,7 @@
 - Primary track: Robotics-enabling 3D perception
 - Tier: CORE
 - Tags: SLAM, RGB-D, geometry
+- Aliases: DROID-SLAM
 - Official paper: https://arxiv.org/abs/2108.10869
 - Full-text retrieval: https://arxiv.org/pdf/2108.10869
 - Code/Project: https://github.com/princeton-vl/DROID-SLAM

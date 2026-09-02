@@ -8,7 +8,7 @@
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
 - Tier: NEXT
-- Tags: Robotics, task and motion planning, PDDL, mobile manipulation, long horizon, language grounding, real-world
+- Tags: Robotics, task and motion planning, PDDL, mobile manipulation, long-horizon, language grounding, real-world
 - Official paper: https://ojs.aaai.org/index.php/AAAI/article/view/33610
 - Full-text retrieval: https://ojs.aaai.org/index.php/AAAI/article/view/33610
 - Code/Project: not identified

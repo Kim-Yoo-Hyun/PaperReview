@@ -3,6 +3,7 @@
 - Year/Venue: 2019 / ICCV
 - Category: Benchmarks and Datasets
 - Tags: Robotics, Navigation, Embodied AI, Benchmark
+- Aliases: Habitat, Habitat 1.0
 - Paper link: ./2019/ICCV/2019_ICCV_Habitat-A-Platform-for-Embodied-AI-Research/paper.pdf
 - Code/Project: https://aihabitat.org/
 - Source audit: regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.

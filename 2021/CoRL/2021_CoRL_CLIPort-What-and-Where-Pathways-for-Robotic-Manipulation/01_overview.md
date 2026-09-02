@@ -8,7 +8,7 @@
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
-- Tags: Robotics, Vision-Language Action, CLIP, manipulation
+- Tags: Robotics, Vision-Language-Action, CLIP, manipulation
 - Official paper: https://arxiv.org/abs/2109.12098
 - Full-text retrieval: https://arxiv.org/pdf/2109.12098
 - Code/Project: https://cliport.github.io/

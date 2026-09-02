@@ -140,6 +140,15 @@ PDF_FALLBACKS = {
     "pr-0922": "https://arxiv.org/pdf/2404.16423",
     "pr-0923": "https://ojs.aaai.org/index.php/AAAI/article/download/33610/35765",
     "pr-0924": "https://ojs.aaai.org/index.php/AAAI/article/download/33617/35772",
+    # RSS proceedings downloads can be large or terminate early under a
+    # long-lived chunked response.  These official arXiv versions are used
+    # only as retrieval fallbacks; the registry's proceedings source remains
+    # canonical.
+    "pr-0929": "https://arxiv.org/pdf/2403.10454.pdf",
+    "pr-0931": "https://arxiv.org/pdf/2402.17768.pdf",
+    "pr-0934": "https://arxiv.org/pdf/2402.19432.pdf",
+    # ICML's 2024 event page does not expose the article PDF directly.
+    "pr-0939": "https://arxiv.org/pdf/2403.09631.pdf",
     "pr-0156": "https://arxiv.org/pdf/2605.22283",
     "pr-0825": "https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/5/1384/files/2025/02/1985-impedance-control-an-approach-to-manipulation-part-I-theory.pdf",
     "pr-0826": "https://graphics.stanford.edu/courses/cs348a-21-winter/Handouts/Besl92.pdf",

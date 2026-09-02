@@ -9,6 +9,7 @@
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Imitation Learning, human video, cross-embodiment, action representation, bimanual
+- Aliases: UMI
 - Official paper: https://www.roboticsproceedings.org/rss20/p045.html
 - Full-text retrieval: https://arxiv.org/pdf/2402.10329
 - Code/Project: https://umi-gripper.github.io

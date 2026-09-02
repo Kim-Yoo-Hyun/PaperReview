@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rewrite all five standard notes for a selected CORE/NEXT full-text pass.
+"""Rewrite selected standard notes for a targeted full-text pass.
 
 The companion downloader keeps the PDFs in a task-scoped temporary directory.
 This reviewer extracts the body with the existing page-aware evidence parser,
@@ -256,7 +256,7 @@ def body_header(item: dict[str, Any], row: dict[str, str], record: dict[str, Any
         + f"canonical paper source: {source_url(item)}; {label}: {retrieved}. "
         + f"The note is an evidence-anchored {evidence_label} analysis; {anchor_note}. "
         + f"{boundary_note} "
-        + "Reading tracker status/evidence was not changed.\n\n"
+        + "Reading tracker status remains user-controlled; registry source evidence is reconciled separately.\n\n"
     )
 
 
@@ -335,7 +335,7 @@ def overview_note(
         f"# {item['title']}\n\n"
         f"> Evidence maturity: {BT}{evidence_level}{BT}.\n"
         f"> Analysis basis: {source_audit}; canonical paper source: {source_url(item)}.\n"
-        f"> {'PDF retrieval source' if source_kind == 'PDF' else 'Body source'}: {retrieval_source(record, item)[1]}. Reading tracker status/evidence was not changed.\n\n"
+        f"> {'PDF retrieval source' if source_kind == 'PDF' else 'Body source'}: {retrieval_source(record, item)[1]}. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.\n\n"
         f"> Evidence boundary: {boundary_note}.\n\n"
         f"- Year/Venue: {item.get('year', row.get('year', 'not recorded'))} / {item.get('venue', row.get('venue', 'not recorded'))}\n"
         f"- Authors: not duplicated here when not verified in the registry source\n"
@@ -515,6 +515,21 @@ def main() -> int:
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--start", type=int, default=0)
     parser.add_argument("--paper-ids", default="", help="comma-separated paper IDs for a targeted refresh")
+    parser.add_argument(
+        "--tiers",
+        default="CORE,NEXT",
+        help="comma-separated tiers eligible for this pass (default: CORE,NEXT)",
+    )
+    parser.add_argument(
+        "--notes",
+        default="01_overview.md,02_problem.md,03_method.md,04_evaluation.md,05_insights.md",
+        help="comma-separated standard note files to write",
+    )
+    parser.add_argument(
+        "--replace-manifest",
+        action="store_true",
+        help="replace a targeted review manifest instead of merging selected records into it",
+    )
     args = parser.parse_args()
 
     pdf_dir = args.pdf_dir if args.pdf_dir.is_absolute() else ROOT / args.pdf_dir
@@ -523,10 +538,25 @@ def main() -> int:
         download_path = ROOT / download_path
     review_path = args.review_manifest if args.review_manifest.is_absolute() else ROOT / args.review_manifest
     papers, tiers, rows = load_items()
+    selected_tiers = {value.strip().upper() for value in args.tiers.split(",") if value.strip()}
+    invalid_tiers = selected_tiers - {"CORE", "NEXT", "REFERENCE", "ARCHIVE"}
+    if not selected_tiers or invalid_tiers:
+        parser.error(f"invalid --tiers value: {sorted(invalid_tiers) or args.tiers}")
+    standard_notes = {
+        "01_overview.md",
+        "02_problem.md",
+        "03_method.md",
+        "04_evaluation.md",
+        "05_insights.md",
+    }
+    selected_notes = {value.strip() for value in args.notes.split(",") if value.strip()}
+    invalid_notes = selected_notes - standard_notes
+    if not selected_notes or invalid_notes:
+        parser.error(f"invalid --notes value: {sorted(invalid_notes) or args.notes}")
     all_selected = [
         papers[paper_id]
         for paper_id, row in sorted(tiers.items())
-        if row.get("tier") in {"CORE", "NEXT"}
+        if row.get("tier") in selected_tiers
     ]
     requested_ids = {value.strip() for value in args.paper_ids.split(",") if value.strip()}
     selected = [item for item in all_selected if item["paper_id"] in requested_ids] if requested_ids else all_selected
@@ -608,15 +638,15 @@ def main() -> int:
         review_records.append(record)
         folder = resolve_folder(unquote(item["folder"]))
         old_insights = (folder / "05_insights.md").read_text(encoding="utf-8")
-        outputs.extend(
-            [
-                (folder / "01_overview.md", overview_note(item, row, record, ev, document, domain)),
-                (folder / "02_problem.md", problem_note(item, domain, record, ev, document)),
-                (folder / "03_method.md", method_note(item, domain, record, ev, document)),
-                (folder / "04_evaluation.md", evaluation_note(item, domain, record, ev, document)),
-                (folder / "05_insights.md", insights_note(item, row, record, ev, document, domain, old_insights, rows)),
-            ]
-        )
+        note_outputs = {
+            "01_overview.md": overview_note(item, row, record, ev, document, domain),
+            "02_problem.md": problem_note(item, domain, record, ev, document),
+            "03_method.md": method_note(item, domain, record, ev, document),
+            "04_evaluation.md": evaluation_note(item, domain, record, ev, document),
+            "05_insights.md": insights_note(item, row, record, ev, document, domain, old_insights, rows),
+        }
+        outputs.extend((folder / name, note_outputs[name]) for name in sorted(selected_notes))
+        record["note_files_written"] = len(selected_notes)
         if index % 25 == 0 or index == len(selected):
             print(f"[{index}/{len(selected)}] extracted and rendered; tier={row['tier']} domain={domain}", flush=True)
 
@@ -636,7 +666,7 @@ def main() -> int:
         path.write_text(content.rstrip() + "\n", encoding="utf-8")
     review_path.parent.mkdir(parents=True, exist_ok=True)
     records_for_manifest = review_records
-    if (args.start or args.limit or requested_ids) and review_path.exists():
+    if (args.start or args.limit or requested_ids) and review_path.exists() and not args.replace_manifest:
         existing = json.loads(review_path.read_text(encoding="utf-8"))
         merged = {
             record["paper_id"]: record
@@ -645,11 +675,18 @@ def main() -> int:
         }
         merged.update({record["paper_id"]: record for record in review_records})
         records_for_manifest = [merged[key] for key in sorted(merged)]
+    if selected_tiers <= {"CORE", "NEXT"}:
+        manifest_scope = "CORE/NEXT papers selected from READING_TIERS.csv"
+    else:
+        manifest_scope = (
+            "Targeted full-text PDF review; selected tiers: "
+            + ",".join(sorted(selected_tiers))
+        )
     review_payload = {
         "review_date": date.today().isoformat(),
-        "scope": "CORE/NEXT papers selected from READING_TIERS.csv",
+        "scope": manifest_scope,
         "paper_count": len(records_for_manifest),
-        "note_file_count": len(records_for_manifest) * 5,
+        "note_file_count": sum(record.get("note_files_written", 5) for record in records_for_manifest),
         "pdf_cache": str(pdf_dir.relative_to(ROOT)),
         "tracker_changed": False,
         "tier_snapshot": dict(Counter(record["tier"] for record in records_for_manifest)),

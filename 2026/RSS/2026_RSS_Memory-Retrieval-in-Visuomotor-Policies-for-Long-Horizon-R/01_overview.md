@@ -8,7 +8,7 @@
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
-- Tags: Robotics, VLA, memory, long horizon, partial observability, Imitation Learning, retrieval
+- Tags: Robotics, VLA, memory, long-horizon, partial observability, Imitation Learning, retrieval
 - Official paper: https://roboticsconference.org/program/papers/10/
 - Full-text retrieval: https://roboticsconference.org/program/papers/10/
 - Code/Project: https://roboticsconference.org/program/papers/10/

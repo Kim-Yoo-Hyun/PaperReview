@@ -45,10 +45,10 @@ Humanoid는 별도 taxonomy로 만들지 않는다. Locomotion, whole-body contr
 
 | Artifact | Role | Editing rule |
 |---|---|---|
-| [PAPER.md](./PAPER.md) | 전체 924편 registry와 topic navigation | 구조를 유지한다. 논문 추가 시 row와 실제 folder가 일치해야 한다. |
+| [PAPER.md](./PAPER.md) | 전체 950편 registry와 topic navigation | 구조를 유지한다. 논문 추가 시 row와 실제 folder가 일치해야 한다. |
 | [READING_PLAN.md](./research/READING_PLAN.md) | 우선순위 기준, 연구 관점, 읽기 순서, CORE/NEXT 장기 정독 목록 | `build_reading_tiers.py`가 생성한다. 직접 수정하지 않는다. |
 | [READING_TIERS.csv](./research/READING_TIERS.csv) | 전체 registry의 단일 tier assignment | 생성 파일. 직접 수정하지 않는다. |
-| [READING_STATUS.csv](./research/READING_STATUS.csv) | 283편 정독 진행 상태와 사용자 분석 | 상태·분석 필드는 직접 편집 가능. 생성기는 기존 입력을 보존해야 한다. |
+| [READING_STATUS.csv](./research/READING_STATUS.csv) | 311편 정독 진행 상태와 사용자 분석 | 상태·분석 필드는 직접 편집 가능. 생성기는 기존 입력을 보존해야 한다. |
 | [READING_STATUS.md](./research/READING_STATUS.md) | 상태값과 완료 규칙 | 상태 정의 변경 시 tracker와 synthesis 규칙도 함께 점검한다. |
 | [synthesis/](./synthesis/) | 7개 트랙의 cross-paper comparison과 paper lineage | queue marker 내부는 자동 생성, 나머지는 수동 합성 영역이다. |
 | [RESEARCH_GAPS.md](./research/RESEARCH_GAPS.md) | 트랙을 가로지르는 failure·assumption·evaluation gap | gap 설명의 canonical source다. |
@@ -60,9 +60,11 @@ Humanoid는 별도 taxonomy로 만들지 않는다. Locomotion, whole-body contr
 | [work/sources/registry.schema.json](./work/sources/registry.schema.json) | manifest 구조와 허용 enum의 JSON Schema | schema 변경 시 migration, audit와 generator를 함께 갱신한다. |
 | [work/sources/registry_meta.json](./work/sources/registry_meta.json) | manifest schema/count/identity/version/evidence policy | manifest count와 schema version을 audit로 검증한다. |
 | [work/sources/benchmark_catalog.json](./work/sources/benchmark_catalog.json) / [metric_catalog.json](./work/sources/metric_catalog.json) | evaluation resource의 paper-ID 탐색 index | 모든 자동 연결은 `cue_only`; 실제 role/split/정의의 근거로 사용하지 않는다. |
+| [work/sources/resources.json](./work/sources/resources.json) | benchmark/dataset·metric·code/project를 합친 단일 resource view | 생성 파일. 기존 benchmark/metric 항목은 `cue_only`이며 code/project URL은 manifest link일 뿐 재현성 증거가 아니다. |
+| [research/REGISTRY_INDEX.csv](./research/REGISTRY_INDEX.csv) / [REGISTRY_STATS.md](./research/REGISTRY_STATS.md) | 전체 paper를 filter/search하고 registry 품질을 점검하는 생성 view | 직접 수정하지 않는다. manifest·tier·tracker에서 재생성한다. |
 | [work/scripts/audit_repository.py](./work/scripts/audit_repository.py) | registry·tier·tracker·queue·note·taxonomy 무결성 검사 | read-only이며 주요 변경 전후에 실행한다. |
 
-현재 snapshot은 CORE 77편, NEXT 206편, REFERENCE 399편, ARCHIVE 242편이다. 이 숫자는 결과이지 목표 quota가 아니다. 논문 중요성 때문에 필요하면 CORE/NEXT를 늘릴 수 있으며, 장기 정독 규모 100–150편은 운영상 가이드일 뿐 hard cap이 아니다.
+현재 snapshot은 CORE 77편, NEXT 234편, REFERENCE 397편, ARCHIVE 242편이다. 이 숫자는 결과이지 목표 quota가 아니다. 논문 중요성 때문에 필요하면 CORE/NEXT를 늘릴 수 있으며, 장기 정독 규모 100–150편은 운영상 가이드일 뿐 hard cap이 아니다.
 
 ## 4. Canonical Robotics Taxonomy
 
@@ -106,7 +108,7 @@ NEXT는 CORE를 전제로 읽는 전문화·확장·frontier다.
 
 ### REFERENCE
 
-- 중요한 foundation, baseline, dataset, benchmark, survey이지만 현재 283편 정독 흐름의 prerequisite는 아니다.
+- 중요한 foundation, baseline, dataset, benchmark, survey이지만 현재 311편 정독 흐름의 prerequisite는 아니다.
 - 특정 실험이나 아이디어를 설계할 때 찾아 읽는다.
 - `READING_PLAN.md`의 CORE/NEXT와 비교해 중요한 논문이 REFERENCE에 남아 있지 않은지 정기적으로 승격 감사한다.
 
@@ -375,6 +377,8 @@ python3 work/scripts/build_reading_tiers.py
 
 사용자가 tracker에 입력한 상태와 분석 필드는 같은 `overview_path`가 유지되는 한 보존되어야 한다. 생성기 수정 후 반드시 이를 검증한다. `paper_id`와 `primary_track`은 manifest에서 파생되는 자동 필드다.
 
+`reconcile_registry.py`는 review manifest와 실제 note header를 사용해 paper-level `content_evidence`와 note별 `note_evidence`를 정합화한다. 이는 사용자의 reading `status`를 의미하지 않는다. `build_registry_views.py`는 이 canonical 상태에서 통합 resource view와 filter-friendly index를 생성한다. 별도의 첫 10/25/50편 진입 경로는 만들지 않는다.
+
 ### Paper registration and full rebuild safety
 
 - 신규 metadata는 `python3 work/scripts/register_papers.py --input <json>`으로 dry-run한 뒤 `--apply`로 등록한다.
@@ -426,7 +430,7 @@ git diff --check
 - 모든 registry paper가 정확히 하나의 `CORE/NEXT/REFERENCE/ARCHIVE` tier에 속하는가
 - CORE/NEXT 사이에 중복이 없는가
 - CORE/NEXT 모든 paper가 `READING_PLAN.md`와 `READING_STATUS.csv`에 나타나는가
-- 283편이 7개 synthesis queue에 정확히 한 번씩 배정되는가
+- 311편이 7개 synthesis queue에 정확히 한 번씩 배정되는가
 - Tier 판단에 PDF 상태가 들어가지 않았는가
 
 ### Tracker integrity
@@ -476,8 +480,8 @@ git diff --check
 
 질문의 기준을 먼저 분리한다.
 
-- Registry composition: 전체 924편 기준
-- Intensive reading: CORE+NEXT 기준 (현재 283편)
+- Registry composition: 전체 950편 기준
+- Intensive reading: CORE+NEXT 기준 (현재 311편)
 - Reading progress: `READING_STATUS.csv` 기준
 - Priority, reading order, detailed robotics coverage: `READING_PLAN.md` 기준
 
